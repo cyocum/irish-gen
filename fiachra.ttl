@@ -1,0 +1,297 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+@prefix owl: <http://www.w3.org/2006/12/owl2/> .
+
+<#Fiachra>
+        a foaf:Person ;
+        foaf:name "Fiachra" ;
+        foaf:gender "male" ;
+        rel:childOf "Eochaidh Muighmheadhoin" .
+        
+<#EarcCulbhuidhe>
+        a foaf:Person ;
+        foaf:name "Earc Culbhuidhe" ;
+        foaf:gender "male" ;
+        rel:childOf <#Fiachra> .
+
+<#Breasal>
+        a foaf:Person ;
+        foaf:name "Breasal" ;
+        foaf:gender "male" ;            
+        rel:childOf <#Fiachra> ;
+        rel:siblingOf <#EarcCulbhuidhe> .
+
+<#Brian>
+        a foaf:Person ;
+        foaf:name "Brian" ;
+        foaf:gender "male" ;            
+        rel:siblingOf <#Fiachra> .
+
+<#Conaire>
+        a foaf:Person ;
+        foaf:name "Conaire" ;
+        foaf:gender "male" ;            
+        rel:childOf <#Fiachra> ;
+        rel:siblingOf <#Breasal> ;
+        rel:siblingOf <#EarcCulbhuidhe> ;
+        rel:siblingOf <#Amhalgaidh> .
+
+<#Amhalgaidh>
+        a foaf:Person ;
+        foaf:name "Amhalgaidh" ;
+        foaf:gender "male" ;            
+        rel:childOf <#Fiachra> ;
+        rel:siblingOf <#Breasal> ;
+        rel:siblingOf <#EarcCulbhuidhe> .
+
+<#Fedhlim>
+        a foaf:Person ;
+        foaf:name "Fedhlim" ;
+        foaf:gender "male" ;            
+        rel:childOf <#Amhalgaidh> ;
+        rel:ancestorOf "O'Ceallachain" ;
+        rel:ancestorOf "O'Caithniadh" ;
+        rel:ancestorOf "Mac Coinin" ;
+        rel:ancestorOf "O'Muimhneachain" ;
+        rel:ancestorOf "Mag-Fhionain" ;
+        rel:ancestorOf "O'Gearadhain" ;
+        rel:ancestorOf "O'Conboirne" .
+
+
+<#Eochaidh>
+        a foaf:Person ;
+        foaf:name "Eochaidh" ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:siblingOf <#Fedhlim> .
+
+<#FiachraFionn>
+        a foaf:Person ;
+        foaf:name "Fiachra Fionn" ;
+        rel:childOf <#Eochaidh>
+        rel:ancestorOf "O'Congaile" ;
+        rel:ancestorOf " O'Cathasaigh" ;
+        .
+
+<#Muireadhach>
+        a foaf:Person ;
+        foaf:name "Muireadhach" ;
+        rel:childOf <#Eochaidh> .
+
+<#Radubhan>
+        a foaf:Person ;
+        foaf:name "Radubhan" ;
+        rel:childOf <#Muireadhach> ;
+        rel:ancestorOf "O'Radubhan" .
+
+<#Aodh>
+        a foaf:Person ;
+        foaf:name "Aodh" ;
+        rel:childOf <#Muireadhach> .
+
+<#Culetreach>
+        a foaf:Person ;
+        foaf:name "Culetreach" ;
+        rel:childOf <#Aodh>
+        rel:ancestorOf "Mac Conletreach" .
+
+<#Eunda>
+        a foaf:Person ;
+        foaf:name "Eunda" ;
+        foaf:givenName "Crom" ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:siblingOf <#Eochaidh> ;
+        rel:siblingOf <#Fedhlim> .
+
+<#Conall>
+        a foaf:Person ;
+        foaf:name "Conall" ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Aongus>
+        a foaf:Person ;
+        foaf:name "Aongus" ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:ancestorOf "O'Muireadhaighs" ;
+        rel:ancestorOf "O'Cuinn" ;
+        rel:ancestorOf "O'Comhdhan" ;
+        rel:ancestorOf "O'Duibhlearga" ;
+        rel:ancestorOf "O'Bearga" ;
+        rel:ancestorOf "O'Blighe" ;
+        rel:ancestorOf [
+             foaf:name "O'Duanma" ;
+             owl:sameAs "Duanmaigh"
+        ] .
+
+
+<#Eoghan>
+        a foaf:Person ;
+        foaf:name "Eoghan" ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Cormac>
+        a foaf:Person ;
+        foaf:name "Cormac" ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Corrdubh>
+        a foaf:Person ;
+        foaf:name "Corrdubh" ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Natfraoch>
+        a foaf:Person ;
+        owl:sameAs "Nadfraoch" ;
+        rel:parentOf <#Tresi> ;
+        rel:parentOf <#Aongus> .
+        
+<#Tresi>
+        a foaf:Person ;
+        foaf:name "Tresi" ;
+        foaf:gender "female" ;
+        rel:childOf "Natfraoch" ;
+        rel:spouseOf <#Amhalgaidh> .
+
+<#Diucaill>
+        a foaf:Person ;
+        foaf:name "Diucaill" ;
+        rel:descendantOf <#Aongus> .
+
+<#Earca>
+        a foaf:Person ;
+        foaf:name "Earca" ;
+        foaf:gender "female" ;
+        rel:childOf "Eochaidh" ;
+        rel:spouseOf <#Amhalgaidh> .
+
+<#Fergus>
+        a foaf:Person ;
+        foaf:name "Fergus" ;
+        foaf:gender "male" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#CormacCeannfoda>
+        a foaf:Person;
+        foaf:name "Cormac Ceannfoda";
+        foaf:givenName "Ceannfoda" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Colom>
+        a foaf:Person ;
+        foaf:name "Colom" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Seudna>
+        a foaf:Person ;
+        foaf:name "Seudna" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Eochaidh-2e422539>
+        a foaf:Person ;
+        foaf:name "Eochaidh" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Aoldobhar>
+        a foaf:Person ;
+        foaf:name "Aoldobhar" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Emeach>
+        a foaf:Person ;
+        foaf:name "Emeach" ;
+        rel:childOf <#Earca> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#Conaing>
+        a foaf:Person ;
+        foaf:name "Conaing" ;
+        rel:childOf <#Fergus> ;
+        rel:ancestorOf "Hy-Airmeadhaigh" ;
+        rel:ancestorOf "Cumain Foda" .
+
+<#Muireadhach-ee382492>
+        a foaf:Person ;
+        foaf:name "Muireadhach" ;
+        rel:childOf <#Fergus>
+        rel:ancestorOf "O'Lachtna" ;
+        rel:ancestorOf "O'Dubhagain" ;
+        rel:ancestorOf "O'Maoilruaidh" ;
+        rel:ancestorOf "O'Cuimin" ;
+        rel:ancestorOf "O'Toghdha" ;
+        rel:ancestorOf "O'Glaimin" ;
+        rel:ancestorOf "O'Luachaibh" ;
+        rel:ancestorOf "O'Gilin" .
+
+
+<#Muirenn>
+        a foaf:Person ;
+        foaf:name "Muirenn" ;
+        foaf:gender "female" ;
+        rel:childOf "Dubhthach" ;
+        rel:spouseOf <#Amhalgaidh> .
+
+<#Caibre>
+        a foaf:Person ;
+        foaf:name "Caibre" ;
+        rel:childOf <#Muirenn> ;
+        rel:childOf <#Amhalgaidh> .
+
+<#StTighearnan>
+        a foaf:Person ;
+        foaf:name "Tighearnan" ;
+        rel:descendantOf <#Caibre> .
+
+<#AognusFionn>
+        a foaf:Person ;
+        foaf:name "Aognus Fionn" ;
+        rel:childOf <#Muirenn> ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:ancestorOf "O'Gaibhtheachain" ;
+        rel:ancestorOf "O'Flainn" ;
+        rel:ancestorOf "O'Maoilfhiona" .
+
+<#Duibhindracht>
+        a foaf:Person ;
+        foaf:name "Duibhindracht" ;
+        rel:childOf <#Muirenn> ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:ancestorOf "Muintir Fothaigh" ;
+        rel:ancestorOf "Muintir Culachan" ;
+        rel:ancestorOf "Muintir Duinncuan .
+
+<#Cucoingelt>
+        a foaf:Person ;
+        foaf:name "Cucoingelt" ;
+        rel:childOf <#Muirenn> ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:ancestorOf "Muintir Tomaltaigh" .
+
+<#Conchobhar>
+        a foaf:Person ;
+        foaf:name "Conchobhar" ;
+        rel:childOf <#Muirenn> ;
+        rel:childOf <#Amhalgaidh> ;
+        rel:ancestorOf "Muintir Ubain" .
+
+<#Colom>
+        a foaf:Person;
+        foaf:name "Colom";
+        foaf:gender "male";
+        rel:childOf <#CormacCeannfoda>.
+
+<#Seudna>
+        a foaf:Person;
+        foaf:name "Seudna";
+        
+        
+        
+        
+
+        
