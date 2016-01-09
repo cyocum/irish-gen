@@ -1,4 +1,4 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+﻿@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix rel: <http://purl.org/vocab/relationship/>.
@@ -2745,12 +2745,12 @@
 <#AodhBuidhe-c84cfd06>
 	a foaf:Person;
 	foaf:name "Aodh Buidhe";
-	rel:childOf <#Ciothruadh>.
+	rel:siblingOf <#Fearfeasa>.
 
 <#DiarmaidCaoch-4784702a>
 	a foaf:Person;
 	foaf:name "Diarmaid Caoch";
-	rel:childOf <#Ciothruadh>.
+	rel:siblingOf <#Fearfeasa>.
 
 <#Fearfeasa>
 	a foaf:Person;
@@ -2759,7 +2759,8 @@
 
 <#CiothruadhOg>
 	a foaf:Person;
-	foaf:name "Ciothruadh Og". # no clear indication of other relationships
+	foaf:name "Ciothruadh Og"; 
+	rel:childOf <#Fearfeasa>. # no clear indication of other relationships
 
 <#Fearbisigh>
 	a foaf:Person;
@@ -2768,16 +2769,20 @@
 
 <#Fearfeasa-8874561e>
 	a foaf:Person;
-	foaf:name "Fearfeasa". # no clear indication of other relationships
+	foaf:name "Fearfeasa";
+	rel:childOf <#CiothruadhOg>. # no clear indication of other relationships. EPT to consult Ó Muraíle's edition.
 
 <#Aodh-7858a1f9>
 	a foafPerson;
-	foaf:name "Aodh". # no clear indication of other relationships
+	foaf:name "Aodh";
+	rel:childOf <#CiothruadhOg>. # no clear indication of other relationships
 
 <#Maolmuire>
 	a foaf:Person;
-	foaf:name "Maolmuire". # no clear indication of other relationships
+	foaf:name "Maolmuire";
+	rel:childOf <#CiothruadhOg>. # no clear indication of other relationships
 
 <#Diarmaid-010af031>
 	a foaf:Person;
-	foaf:name "Diarmaid". # no clear indication of other relationships
+	foaf:name "Diarmaid";
+	rel:childOf <#CiothruadhOg>. # no clear indication of other relationships
