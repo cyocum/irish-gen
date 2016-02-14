@@ -3,18 +3,19 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix owl2: <http://www.w3.org/2006/12/owl2#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix irishRel: <earlyIrishRelationship.ttl#>
 
 <>
 	a owl:Ontology.
 
-<#heirOf>
+irishRel:heirOf
 	a owl:ObjectProperty;
 	rdfs:subPropertyOf foaf:knows;
 	rdfs:label "heirOf";
 	rdfs:domain foaf:Person;
 	rdfs:range foaf:Person.
 
-<#fosterChildOf>
+irishRel:fosterChildOf
 	a owl:ObjectProperty;
 	rdfs:subPropertyOf foaf:knows;
 	rdfs:label "fosterChildOf";
