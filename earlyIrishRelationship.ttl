@@ -21,3 +21,19 @@ irishRel:fosterChildOf
 	rdfs:label "fosterChildOf";
 	rdfs:domain foaf:Person;
 	rdfs:range foaf:Person.
+
+irishRel:fosterParentOf
+	a owl:ObjectProperty;
+	owl:inverseOf <irishRel:fosterChildOf>;
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "fosterParentOf";
+	rdfs:domain foaf:Person;
+	rdfs:range foaf:Person.
+
+irishRel:fosterSiblingOf
+	a owl:SymmetricProperty;	
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "fosterSiblingOf";
+	rdfs:domain foaf:Person;
+	rdfs:range foaf:Person.
+	
