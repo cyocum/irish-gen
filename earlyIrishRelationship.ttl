@@ -1,11 +1,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix irishRel: <earlyIrishRelationship.ttl#>
+@prefix irishRel: <earlyIrishRelationship.ttl#>.
+@prefix rel: <http://purl.org/vocab/relationship/>.
 
 <>
-	a owl:Ontology.
+	a owl:Ontology;
+	owl:imports <http://purl.org/vocab/relationship/>.
 
 irishRel:heirOf
 	a owl:ObjectProperty;
@@ -35,4 +38,8 @@ irishRel:fosterSiblingOf
 	rdfs:label "fosterSiblingOf";
 	rdfs:domain foaf:Person;
 	rdfs:range foaf:Person.
-	
+
+rel:ancestorOf a owl2:IrreflexiveProperty,
+	       	 owl:ObjectProperty.
+
+rel:ancestorOf owl:propertyChain (rel:parentOf rel:parentOf rel:parentOf).
