@@ -19,3 +19,13 @@ variants of a particular decendant line, the same technique is use
 where a new node with a uuidgen id is created but is connected to the
 original node by an owl sameAs property.  The alternate line is then
 attached to the uuidgen node.
+
+Each set of files are listed by the manuscript they derive from. For
+instance, files in the LL directory come from the Book of Leinster.
+LL comes from the standard scholarly abbreviation for the book.
+
+For the moment, until there is a proper URI to reference, all the
+turtle files use http://example.com as their base URI. This makes
+namespacing and linking easier over the files.  For instance,
+dáil_caiss.ttl is in the LL directory and has a base URI of
+http://example.com/LL/dáil_caiss.ttl.
