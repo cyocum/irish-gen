@@ -33,7 +33,7 @@
 	rdfs:range foaf:Person.
 
 :fosterSiblingOf
-	a owl:SymmetricProperty;	
+	a owl:SymmetricProperty, owl:TrasitiveProperty;	
 	rdfs:subPropertyOf foaf:knows;
 	rdfs:label "fosterSiblingOf";
 	rdfs:domain foaf:Person;
@@ -44,3 +44,4 @@ rel:ancestorOf a owl:IrreflexiveProperty,
 
 rel:grandparentOf owl:propertyChainAxiom (rel:parentOf rel:parentOf).
 rel:parentOf rdfs:subPropertyOf rel:ancestorOf.
+rel:siblingOf a owl:TransitivePoperty, owl:IrreflexiveProperty.
