@@ -44,4 +44,7 @@ rel:ancestorOf a owl:IrreflexiveProperty,
 
 rel:grandparentOf owl:propertyChainAxiom (rel:parentOf rel:parentOf).
 rel:parentOf rdfs:subPropertyOf rel:ancestorOf.
-rel:siblingOf a owl:TransitivePoperty, owl:IrreflexiveProperty.
+
+rel:siblingOf
+    a owl:TransitivePoperty, owl:IrreflexiveProperty;
+    owl:propertyChainAxiom (rel:parentOf [owl:inverseOf rel:parentOf]).
