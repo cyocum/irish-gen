@@ -1,0 +1,319 @@
+@base <http://example.com/LL/erand.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Corco Dubni"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text012.html>;
+    dcterms:format "text/turtle".
+
+<#Iar>
+    a foaf:Person;
+    foaf:name "Iar";
+    rel:childOf <#Dedad>.
+
+<#Dedad>
+    owl:sameAs <http://example.com/LL/erand.ttl#Dedad>.
+
+<#Fute>
+    foaf:name "Fute";
+    owl:sameAs <http://example.com/LL/erand.ttl#Futhi>;
+    rel:childOf <#Dedad>.
+
+<#CorcoDubni>
+    a foaf:Person;
+    foaf:name "Corco Dubni";
+    rel:childOf <#CarpriMúsc>.
+
+<#CarpriMúsc>
+    a foaf:Person;
+    foaf:name "Carpri Músc".
+
+<#Corc>
+    foaf:name "Corc";
+    owl:sameAs <#CorcoDubni>.
+
+<#CormacFind>
+    a foaf:Person;
+    foaf:name "Cormac Find".
+
+<#Irchond>
+    a foaf:Person;
+    foaf:name "Irchond";
+    rel:childOf <#CormacFind>.
+
+<#Nuden>
+    a foaf:Person;
+    foaf:name "Nuden";
+    rel:childOf <#Irchond>.
+
+<#Rathach>
+    a foaf:Person;
+    foaf:name "Rathach";
+    rel:childOf <#Irchond>.
+
+<#Erach>
+    a foaf:Person;
+    foaf:name "Erach";
+    rel:childOf <#Irchond>.
+
+<#Mael>
+    a foaf:Person;
+    foaf:name "Mael";
+    rel:childOf <#Irchond>.
+    
+<#Cró>
+    a foaf:Person;
+    foaf:name "Cró";
+    rel:childOf <#Irchond>.
+
+<#h-Er>
+    a foaf:Person;
+    foaf:name "h-Er";
+    rel:childOf <#Irchond>.
+
+<#Ség>
+    a foaf:Person;
+    foaf:name "Ség";
+    rel:childOf <#Irchond>.
+
+<#Nuidin>
+    foaf:name "Nuidin";
+    owl:sameAs <#Nuden>.
+
+<#Braccan>
+    a foaf:Person;
+    foaf:name "Braccan";
+    rel:childOf <#Nuidin>.
+
+<#Corcan>
+    a foaf:Person;
+    foaf:name "Corcan";
+    rel:childOf <#Nuidin>.
+
+<#Tarbanach>
+    a foaf:Person;
+    foaf:name "Tarbanach";
+    rel:childOf <#Nuidin>.
+
+<#Lugaid>
+    a foaf:Person;
+    foaf:name "Lugaid";
+    rel:childOf <#Nuidin>.
+
+<#Flannan>
+    a foaf:Person;
+    foaf:name "Flannan";
+    rel:childOf <#Nuidin>.
+
+<#Bracain>
+    foaf:name "Bracain";
+    owl:sameAs <#Braccan>.
+
+<#Olchobuir>
+    a foaf:Person;
+    foaf:name "Olchobuir";
+    rel:descendantOf <#Bracain>.
+
+<#Mugno>
+    a foaf:Person;
+    foaf:name "Mugno";
+    rel:childOf <#Olchobuir>.
+
+<#Fland>
+    a foaf:Person;
+    foaf:name "Fland";
+    rel:childOf <#Olchobuir>.
+
+<#Falbe>
+    a foaf:Person;
+    foaf:name "Falbe";
+    rel:childOf <#Anrothain>.
+
+<#Congal>
+    a foaf:Person;
+    foaf:name "Congal";
+    rel:childOf <#Anrothain>.
+
+<#Anrothain>
+    a foaf:Person;
+    foaf:name "Anrothain";
+    rel:childOf <#Longbardain>.
+
+<#Longbardain>
+    a foaf:Person;
+    foaf:name "Longbardain";
+    rel:childOf <#Fhlaind>.
+
+<#Fhlaind>
+    owl:sameAs <#Fland>;
+    foaf:name "Fhlaind";
+    rel:childOf <#Olchobuir-203bdb58>.
+
+<#Olchobuir-203bdb58>
+    owl:sameAs <#Olchobuir>;
+    rel:childOf <#Tipraite>.
+
+<#Tipraite>
+    a foaf:Person;
+    foaf:name "Tipraite";
+    rel:childOf <#Cathra>.
+
+<#Cathra>
+    a foaf:Person;
+    foaf:name "Cathra";
+    rel:childOf <#FirFeda>.
+
+<#FirFeda>
+    a foaf:Person;
+    foaf:name "Fir Feda";
+    rel:childOf <#Munechain>.
+
+<#Munechain>
+    a foaf:Person;
+    foaf:name "Munechain";
+    rel:childOf <#Falbe-acbce301>.
+    
+<#Falbe-acbce301>
+    a foaf:Person;
+    foaf:name "Falbe";
+    rel:childOf <#Ciarain>.
+
+<#Ciarain>
+    a foaf:Person;
+    foaf:name "Ciarain";
+    rel:childOf <#NadSaiglend>.
+
+<#NadSaiglend>
+    a foaf:Person;
+    foaf:name "Nad Saiglend";
+    rel:childOf <#Braccain-25c1700d>.
+
+<#Braccain-25c1700d>
+    owl:sameAs <#Bracain>;
+    rel:childOf <#Nuidin-73273e0c>.
+
+<#Nuidin-73273e0c>
+    owl:sameAs <#Nuidin>;
+    rel:childOf <#h-Irchuind-e3c15080>.
+
+<#h-Irchuind-e3c15080>
+    owl:sameAs <#Irchond>;
+    foaf:name "h-Irchuind";
+    rel:childOf <#CormaicFhind>.
+
+<#CormaicFhind>
+    owl:sameAs <#CormacFind>;
+    foaf:name "Cormaic Fhind";
+    rel:childOf <#CorcDuibne>.
+
+<#CorcDuibne>
+    owl:sameAs <#CorcoDubni>;
+    foaf:name "Corc Duibne";
+    rel:childOf <#CorpriMúsc>.
+
+<#CorpriMúsc>
+    owl:sameAs <#CarpriMúsc>;
+    foaf:name "Corpri Músc";
+    rel:childOf <#Conaire>.
+
+<#Conaire>
+    a foaf:Person;
+    foaf:name "Conaire".
+
+<#Irchuind>
+    foaf:name "Irchuind";
+    owl:sameAs  <#h-Irchuind-e3c15080>.
+
+<#Aera>
+    a foaf:Person;
+    foaf:name "Aera";
+    rel:childOf <#h-Irchuind-e3c15080>.
+
+<#Era>
+    foaf:name "Era";
+    owl:sameAs <#Aera>.
+
+<#Gaine>
+    a foaf:Person;
+    foaf:name "Gaine";
+    rel:childOf <#Era>.
+
+<#Corcán>
+    a foaf:Person;
+    foaf:name "Corcán";
+    rel:childOf <#Era>.
+
+<#Cailech>
+    a foaf:Person;
+    foaf:name "Cailech";
+    rel:childOf <#Era>.
+
+<#Thacain>
+    a foaf:Person;
+    foaf:name "Thacain".
+
+<#Nere>
+    a foaf:Person;
+    foaf:name "Nere";
+    rel:childOf <#Thacain>.
+
+<#Conaich>
+    a foaf:Person;
+    foaf:name "Conaich";
+    rel:childOf <#Thacain>.
+
+<#Tadcd>
+    a foaf:Person;
+    foaf:name "Tadcd";
+    rel:childOf <#Rectabrat>.
+
+<#Rectabrat>
+    a foaf:Person;
+    foaf:name "Rectabrat";
+    rel:childOf <#Tuadgaile>.
+
+<#Tuadgaile>
+    a foaf:Person;
+    foaf:name "Tuadgaile";
+    rel:childOf <#Nere-9c98a54d>.
+
+<#Nere-9c98a54d>
+    owl:sameAs <#Nere>;
+    rel:childOf <#Thacain-67aafbbc>.
+
+<#Thacain-67aafbbc>
+    a foaf:Person;
+    foaf:name "Thacain";
+    rel:childOf <#Enna>.
+
+<#Enna>
+    a foaf:Person;
+    foaf:name "Enna";
+    rel:childOf <#Echach>.
+
+<#Echach>
+    a foaf:Person;
+    foaf:name "Echach";
+    rel:childOf <#Gaine-29272cf1>.
+
+<#Gaine-29272cf1>
+    a foaf:Person;
+    foaf:name "Gaine";
+    rel:childOf <#Era-fdd72273>
+
+<#Era-fdd72273>
+    owl:sameAs <#Era>;
+    rel:childOf <#h-Irchond>.
+    
+<#h-Irchond>
+    owl:sameAs <#h-Irchuind-e3c15080>;
+    foaf:name "h-Irchond".
+    
