@@ -1,0 +1,924 @@
+@base <http://example.com/LL/corco_bascind.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Corco Bascind"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text013.html>;
+    dcterms:format "text/turtle".
+
+<#AedRoin>
+    a foaf:Person;
+    foaf:name "Aed Roin";
+    rel:childOf <#Rectabrat>.
+
+<#Rectabrat>
+    a foaf:Person;
+    foaf:name "Rectabrat";
+    rel:childOf <#Athechdai>.
+
+<#Athechdai>
+    a foaf:Person;
+    foaf:name "Athechdai";
+    rel:childOf <#Thalamnaig>.
+
+<#Thalamnaig>
+    a foaf:Person;
+    foaf:name "Thalamnaig";
+    rel:childOf <#Laidgcind>.
+
+<#Laidgcind>
+    a foaf:Person;
+    foaf:name "Laidgcind";
+    rel:childOf <#Báitain>.
+
+<#Báitain>
+    a foaf:Person;
+    foaf:name "Báitain";
+    rel:childOf <#Donnain>.
+
+<#Donnain>
+    a foaf:Person;
+    foaf:name "Donnain";
+    rel:childOf <#Mogain>.
+
+<#Mogain>
+    a foaf:Person;
+    foaf:name "Mogain";
+    rel:childOf <#Cuirp>.
+
+<#Cuirp>
+    a foaf:Person;
+    foaf:name "Cuirp";
+    rel:childOf <#Cett>.
+
+<#Cett>
+    a foaf:Person;
+    foaf:name "Cett";
+    rel:child [
+        a foaf:Person;
+        rel:childOf <#Decci>].
+
+<#Decci>
+    a foaf:Person;
+    foaf:name "Decci";
+    rel:childOf <#Imchada>.
+
+<#Imchada>
+    a foaf:Person;
+    foaf:name "Imchada";
+    rel:childOf <#CuirpLuigdech>.
+
+<#CuirpLuigdech>
+    a foaf:Person;
+    foaf:name "Cuirp Luigdech";
+    rel:childOf <#AilellaBascain>.
+
+<#AilellaBascain>
+    a foaf:Person;
+    foaf:name "AilellaBascain".
+
+<#OengusaCorpri>
+    a foaf:Person;
+    foaf:name "Oengusa Corpri";
+    rel:childOf <#ConaireMóir>;
+    rel:parentOf <#CuirpLuigdech>.
+
+<#ConaireMóir>
+    a foaf:Person;
+    foaf:name "Conaire Móir".
+
+<#Conaire>
+    a foaf:Person;
+    foaf:name "Conaire";
+    rel:childOf <#MogaLama>;
+    rel:parentOf <#CuirpLuigdech>.
+
+<#MogaLama>
+    a foaf:Person;
+    foaf:name "Moga Lama".
+
+
+<#Rectabra>
+    foaf:name "Rectabra";
+    owl:sameAs <#Rectabrat>.
+
+<#Fland>
+    a foaf:Person;
+    foaf:name "Fland";
+    rel:childOf <#Athechdai>.
+
+<#Décci>
+    foaf:name "Décci";
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    owl:sameAs <#Decci>.
+
+<#Bolg>
+    a foaf:Person;
+    foaf:name "Bolg";
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#Cett-8890c353>
+    owl:sameAs <#Cett>;
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#Conaire-8079ee9a>
+    a foaf:Person;
+    foaf:name "Conaire";
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#Dubthach>
+    a foaf:Person;
+    foaf:name "Dubthach";
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#MacThail>
+    a foaf:Person;
+    foaf:name "Mac Thail";
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#MacMoenaig>
+    a foaf:Person;
+    foaf:name "Mac Moenaig"; 
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#Conla>
+    a foaf:Person;
+    foaf:name "Conla"; 
+    foaf:knows <http://www.wikidata.org/entity/Q165479>;
+    rel:childOf <#Décci>.
+
+<#h-Uidriu>
+    a foaf:Person;
+    foaf:name "h-Uidriu";
+    foaf:title "epscop"@sga, "bishop"@en;
+    rel:childOf <#Cuain>.
+
+<#Cuain>
+    a foaf:Person;
+    foaf:name "Cuain";
+    rel:childOf <#Lugdech>.
+
+<#Lugdech>
+    a foaf:Person;
+    foaf:name "Lugdech";
+    rel:childOf <#Fintain>.
+
+<#Fintain>
+    a foaf:Person;
+    foaf:name "Fintain";
+    rel:childOf <#Mechair>.
+
+<#Mechair>
+    a foaf:Person;
+    foaf:name "Mechair";
+    rel:childOf <#Conaire-d3aa9c0f>.
+
+<#Conaire-d3aa9c0f>
+    owl:sameAs <#Conaire-8079ee9a>;
+    rel:childOf <#Decci-1b558d45>.
+
+<#Decci-1b558d45>
+    owl:sameAs <#Decci>.
+
+<#Imchad>
+    foaf:name "Imchad";
+    owl:sameAs <#Imchada>.
+
+<#Corpthe>
+    a foaf:Person;
+    foaf:name "Corpthe";
+    rel:childOf <#CuirpLuigdech>.
+
+<#Brocán>
+    a foaf:Person;
+    foaf:name "Brocán";
+    rel:childOf <#Corpthe>.
+    
+<#Cathbarr>
+    a foaf:Person;
+    foaf:name "Cathbarr";
+    rel:childOf <#Corpthe>.
+
+<#Dobthae>
+    a foaf:Person;
+    foaf:name "Dobthae";
+    rel:childOf <#Corpthe>.
+
+<#Lucta>
+    a foaf:Person;
+    foaf:name "Lucta";
+    rel:childOf <#Dobthae>.
+
+<#Carri>
+    a foaf:Person;
+    foaf:name "Carri";
+    rel:childOf <#Luctae>.
+
+<#Luctae>
+    foaf:name "Luctae";
+    owl:sameAs <#Lucta>.
+
+<#Daeron>
+    a foaf:Person;
+    foaf:name "Daeron";
+    rel:childOf <#Imchada>;
+    rel:childOf _:missing-eefa250f.
+
+<#Nemonchath>
+    a foaf:Person;
+    foaf:name "Nemonchath";
+    rel:childOf <#Imchada>;
+    rel:childOf _:missing-eefa250f.
+
+_:missing-eefa250f
+    a foaf:Person;
+    foaf:title "cumaile"@sga, "female slave"@en;
+    foaf:gender "female".
+
+<#Cerere>
+    a foaf:Person;
+    foaf:name "Cerere";
+    rel:childOf <#MailShenain>.
+
+<#MailShenain>
+    a foaf:Person;
+    foaf:name "Mail Shenain";
+    rel:childOf <#Bráin>.
+
+<#Bráin>
+    a foaf:Person;
+    foaf:name "Bráin";
+    rel:childOf <#ConChathrach>.
+
+<#ConChathrach>
+    a foaf:Person;
+    foaf:name "Con Chathrach";
+    rel:childOf <#Saergaile>.
+
+<#Saergaile>
+    a foaf:Person;
+    foaf:name "Saergaile";
+    rel:childOf <#Úargosa>.
+
+<#Úargosa>
+    a foaf:Person;
+    foaf:name "Úargosa";
+    rel:childOf <#Bricc>.
+
+<#Bricc>
+    a foaf:Person;
+    foaf:name "Bricc";
+    rel:childOf <#ConAbla>.
+
+<#ConAbla>
+    a foaf:Person;
+    foaf:name "Con Abla";
+    rel:childOf <#Tulchain>.
+
+<#Tulchain>
+    a foaf:Person;
+    foaf:name "Tulchain";
+    rel:childOf <#Bernaig>.
+
+<#Bernaig>
+    a foaf:Person;
+    foaf:name "Bernaig";
+    rel:childOf <#Thenni>.
+
+<#Thenni>
+    a foaf:Person;
+    foaf:name "Thenni";
+    rel:childOf <#Dubthaig>.
+
+<#Dubthaig>
+    a foaf:Person;
+    foaf:name "Dubthaig";
+    rel:childOf <#Becce>.
+
+<#Becce>
+    a foaf:Person;
+    foaf:name "Becce".
+# this looks like Decce instead. need to check edition - CY
+
+<#Lennan>
+    a foaf:Person;
+    foaf:name "Lennan";
+    rel:childOf <#Catharnaig>.
+
+<#Catharnaig>
+    a foaf:Person;
+    foaf:name "Catharnaig";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Rectabrat>.
+
+<#Rectabrat>
+    a foaf:Person;
+    foaf:name "Rectabrat";
+    rel:childOf <#Aithechdai>.
+
+<#Aithechdai>
+    a foaf:Person;
+    foaf:name "Aithechdai";
+    rel:childOf <#MaelBrigti>.
+
+<#MaelBrigti>
+    a foaf:Person;
+    foaf:name "Mael Brigti";
+    rel:childOf <#Athechdai>.
+
+<#Athechdai>
+    a foaf:Person;
+    foaf:name "Athechdai";
+    rel:childOf <#Thalamnaig>.
+
+<#Thalamnaig>
+    a foaf:Person;
+    foaf:name "Thalamnaig";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    owl:sameAs <#AedRoin>;
+    foaf:name "Aeda";
+    rel:childOf <#Rectabrat-47de58a0>.
+
+<#Rectabrat-47de58a0>
+    owl:sameAs <#Rectabrat>.
+
+<#Cathrannach>
+    a foaf:Person;
+    foaf:name "Cathrannach";
+    rel:childOf <#MeicRaith>.
+
+<#MeicRaith>
+    a foaf:Person;
+    foaf:name "Meic Raith";
+    rel:childOf <#Bascind>.
+
+<#Bascind>
+    a foaf:Person;
+    foaf:name "Bascind";
+    rel:childOf <#Briain>.
+
+<#Briain>
+    a foaf:Person;
+    foaf:name "Briain";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    foaf:name "Murchada";
+    rel:childOf <#Cathrannaig>.
+
+<#Cathrannaig>
+    a foaf:Person;
+    foaf:name "Cathrannaig";
+    rel:childOf <#Aeda-495e7673>.
+
+<#Aeda-495e7673>
+    owl:sameAs <#Aeda>;
+    rel:childOf <#Rectabrat-1ece04a7>.
+
+<#Rectabrat-1ece04a7>
+    owl:sameAs <#Rectabrat-47de58a0>.
+
+<#Oengus-46bfb0ac>
+    a foaf:Person;
+    foaf:name "Oengus";
+    rel:childOf <#Rectabrat>.
+
+<#Murthele>
+    a foaf:Person;
+    foaf:name "Murthele";
+    rel:childOf <#Rectabrat>.
+
+<#Art>
+    a foaf:Person;
+    foaf:name "Art";
+    rel:childOf <#Rectabrat>.
+
+<#Dubinrecht>
+    a foaf:Person;
+    foaf:name "Dubinrecht";
+    rel:childOf <#Rectabrat>.
+
+<#Carpre>
+    a foaf:Person;
+    foaf:name "Carpre";
+    rel:childOf <#Rectabrat>.
+
+<#Eoganan>
+    a foaf:Person;
+    foaf:name "Eoganan";
+    rel:childOf <#Rectabrat>.
+
+<#Fland-fe934716>
+    a foaf:Person;
+    foaf:name "Fland";
+    rel:childOf <#Rectabrat>.
+
+<#Niall>
+    a foaf:Person;
+    foaf:name "Niall";
+    rel:childOf <#Rectabrat>.
+
+<#Nectan>
+    a foaf:Person;
+    foaf:name "Nectan";
+    rel:childOf <#Longain>.
+
+<#Longain>
+    a foaf:Person;
+    foaf:name "Longain";
+    rel:childOf <#Coscraig>.
+
+<#Coscraig>
+    a foaf:Person;
+    foaf:name "Coscraig";
+    rel:childOf <#Dunchada>.
+
+<#Dunchada>
+    a foaf:Person;
+    foaf:name "Dunchada";
+    rel:childOf <#Oengusa-53625f82>.
+
+<#Oengusa-53625f82>
+    owl:sameAs <#Oengus-46bfb0ac>;
+    foaf:name "Oengusa";
+    rel:childOf <#Rectabrat-362c0be2>.
+
+<#Rectabrat-362c0be2>
+    owl:sameAs <#Rectabrat>.
+
+<#Cellach>
+    a foaf:Person;
+    foaf:name "Cellach";
+    rel:childOf <#Brain>.
+
+<#Brain>
+    a foaf:Person;
+    foaf:name "Brain";
+    rel:childOf <#Carpri>.
+
+<#Carpri>
+    a foaf:Person;
+    foaf:name "Carpri";
+    rel:childOf <#Rectabrat-97dd5028>.
+
+<#Rectabrat-97dd5028>
+    a foaf:Person;
+    foaf:name "Rectabrat";
+    rel:childOf <#Bressa>.
+
+<#Bressa>
+    a foaf:Person;
+    foaf:name "Bressa";
+    rel:childOf <#Brain>.
+
+<#Brain>
+    a foaf:Person;
+    foaf:name "Brain";
+    rel:childOf <#Fhlathniat>.
+
+<#Fhlathniat>
+    a foaf:Person;
+    foaf:name "Fhlathniat";
+    rel:childOf <#Murthile-50cbac03>.
+
+<#Murthile-50cbac03>
+    owl:sameAs <#Murthele>;
+    rel:childOf <#Rectabrat-880ef5af>.
+
+<#Rectabrat-880ef5af>
+    owl:sameAs <#Rectabrat>.
+
+<#Huathmar>
+    a foaf:Person;
+    foaf:name "Huathmar";
+    rel:childOf <#Uchain>.
+
+<#Uchain>
+    a foaf:Person;
+    foaf:name "Uchain";
+    rel:childOf <#Fiachae>.
+
+<#Fiachae>
+    a foaf:Person;
+    foaf:name "Fiachae";
+    rel:childOf <#Airt>.
+
+<#Airt>
+    owl:sameAs <#Art>;
+    rel:childOf <#Rectabrat-c0fb0dbf>.
+
+<#Rectabrat-c0fb0dbf>
+    owl:sameAs <#Rectabrat>.
+
+<#Sidechan>
+    a foaf:Person;
+    foaf:name "Sidechan";
+    rel:childOf <#Cathmoga>.
+
+<#Cathmoga>
+    a foaf:Person;
+    foaf:name "Cathmoga";
+    rel:childOf <#Neill>.
+
+<#Neill>
+    a foaf:Person;
+    foaf:name "Neill";
+    rel:childOf <#Rectabrat-9b082a54>.
+
+<#Rectabrat-e5a40bc9>
+    owl:sameAs <#Rectabrat>.
+
+<#Cigurán>
+    a foaf:Person;
+    foaf:name "Cigurán";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    foaf:name "Flaind";
+    rel:childOf <#Olchobuir>.
+
+<#Olchobuir>
+    a foaf:Person;
+    foaf:name "Olchobuir";
+    rel:childOf <#Dubinrecht>.
+
+<#Dubinrecht>
+    a foaf:Person;
+    foaf:name "Dubinrecht";
+    rel:childOf <#MeicLegind>.
+
+<#MeicLegind>
+    a foaf:Person;
+    foaf:name "Meic Legind";
+    rel:childOf <#Clerig>.
+
+<#Clerig>
+    a foaf:Person;
+    foaf:name "Clerig";
+    rel:childOf <#Fothaid>.
+
+<#Fothaid>
+    a foaf:Person;
+    foaf:name "Fothaid";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    foaf:name "Flaind";
+    rel:childOf <#Rectabrat-2d527dd0>.
+
+<#Rectabrat-2d527dd0>
+    a foaf:Person;
+    foaf:name "Rectabrat";
+    rel:childOf <#Inmain>.
+
+<#Inmain>
+    a foaf:Person;
+    foaf:name "Inmain";
+    rel:childOf <#BruicDuib>.
+
+<#BruicDuib>
+    a foaf:Person;
+    foaf:name "Bruic Duib";
+    rel:childOf <#Cachir>.
+
+<#Cachir>
+    a foaf:Person;
+    foaf:name "Cachir";
+    rel:childOf <#Eoganain>.
+
+<#Eoganain>
+    owl:sameAs <#Eoganan>;
+    foaf:name "Eoganain";
+    rel:childOf <#Rechtabrat-0b4439cc>.
+
+<#Rechtabrat-0b4439cc>
+    a foaf:Person;
+    foaf:name "Rechtabrat".
+
+<#Rectabra>
+    foaf:name "Rectabra";
+    owl:sameAs <#Rectabrat>;
+    rel:childOf <#Athechdai>.
+    
+<#Torpaid>
+    a foaf:Person;
+    foaf:name "Torpaid";
+    rel:childOf <#Athechdai>.
+
+<#DubDaLethi>
+    a foaf:Person;
+    foaf:name "Dub Da Lethi";
+    rel:childOf <#Athechdai>.
+
+<#Fland-1398338c>
+    a foaf:Person;
+    foaf:name "Fland";
+    rel:childOf <#Athechdai>.
+    
+<#Gallchobor>
+    a foaf:Person;
+    foaf:name "Gallchobor";
+    rel:childOf <#Athechdai>.
+
+<#MaelTuli>
+    a foaf:Person;
+    foaf:name "Mael Tuli";
+    rel:childOf <#Athechdai>.
+
+<#DubDurlais>
+    a foaf:Person;
+    foaf:name "Dub Durlais";
+    rel:childOf <#Athechdai>.
+
+<#Cualnge>
+    a foaf:Person;
+    foaf:name "Cualnge".
+
+<#DubDaire>
+    a foaf:Person;
+    foaf:name "Dub Daire";
+    rel:childOf <#Cualnge>.
+
+<#Dairbran>
+    a foaf:Person;
+    foaf:name "Dairbran";
+    rel:childOf <#Cualnge>.
+
+<#Beccan>
+    a foaf:Person;
+    foaf:name "Beccan";
+    rel:childOf <#Cualnge>.
+
+<#Oenu>
+    a foaf:Person;
+    foaf:name "Oenu";
+    rel:childOf <#Eogain>.
+
+<#Eogain>
+    a foaf:Person;
+    foaf:name "Eogain";
+    rel:childOf <#Mescill>.
+
+<#Mescill>
+    a foaf:Person;
+    foaf:name "Mescill";
+    rel:childOf <#Thipraite>.
+
+<#Thipraite>
+    a foaf:Person;
+    foaf:name "Thipraite";
+    rel:childOf <#Dondgaile>.
+
+<#Dondgaile>
+    a foaf:Person;
+    foaf:name "Dondgaile";
+    rel:childOf <#Snedgusa>.
+
+<#Snedgusa>
+    a foaf:Person;
+    foaf:name "Snedgusa";
+    rel:childOf <#Narchride>.
+
+<#Narchride>
+    a foaf:Person;
+    foaf:name "Narchride";
+    rel:childOf <#DubDaire>.
+
+<#DubDaire>
+    a foaf:Person;
+    foaf:name "Dub Daire";
+    rel:childOf <#Cualnge-8f99dfac>.
+
+<#Cualnge-8f99dfac>
+    owl:sameAs <#Cualnge>;
+    rel:childOf <#Lugdech-aaea4233>.
+
+<#Lugdech-aaea4233>
+    a foaf:Person;
+    foaf:name "Lugdech";
+    rel:childOf <#Mangain>.
+
+<#Mangain>
+    a foaf:Person;
+    foaf:name "Mangain";
+    rel:childOf <#CuirpCeit>.
+
+<#Donnan>
+    a foaf:Person;
+    foaf:name "Donnan";
+    rel:childOf <#CuirpCeit>.
+
+<#CuirpCeit>
+    a foaf:Person;
+    foaf:name "Cuirp Ceit";
+    rel:childOf <#Decci-385e640c>.
+
+<#Decci-385e640c>
+    owl:sameAs <#Decci>;
+    rel:childOf <#Imchada-a33124c7>.
+
+<#Imchada-a33124c7>
+    owl:sameAs <#Imchada>.
+
+<#Art-a69d4e3e>
+    a foaf:Person;
+    foaf:name "Art";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Bairich>.
+
+<#Bairich>
+    a foaf:Person;
+    foaf:name "Bairich";
+    rel:childOf <#Ainmchellaig>.
+
+<#Ainmchellaig>
+    a foaf:Person;
+    foaf:name "Ainmchellaig";
+    rel:childOf <#Shiadail>.
+
+<#Shiadail>
+    a foaf:Person;
+    foaf:name "Shiadail";
+    rel:childOf <#Fáelchinged>.
+
+<#Fáelchinged>
+    a foaf:Person;
+    foaf:name "Fáelchinged";
+    rel:childOf <#Ferchiss>.
+
+<#Ferchiss>
+    a foaf:Person;
+    foaf:name "Ferchiss";
+    rel:childOf <#Dairbrain>.
+
+<#Dairbrain>
+    a foaf:Person;
+    foaf:name "Dairbrain";
+    rel:childOf <#Cualngi>.
+
+<#Cualngi>
+    owl:sameAs <#Cualnge-8f99dfac>;
+    foaf:name "Cualngi".
+
+<#Longsech>
+    a foaf:Person;
+    foaf:name "Longsech";
+    rel:childOf <#Eoganain-14951f7d>.
+
+<#Eoganain-14951f7d>
+    a foaf:Person;
+    foaf:name "Eoganain";
+    rel:childOf <#Cernaig>.
+
+<#Cernaig>
+    a foaf:Person;
+    foaf:name "Cernaig";
+    rel:childOf <#Cellaig>.
+
+<#Cellaig>
+    a foaf:Person;
+    foaf:name "Cellaig";
+    rel:childOf <#Inrectaig>.
+
+<#Inrectaig>
+    a foaf:Person;
+    foaf:name "Inrectaig";
+    rel:childOf <#Beccain>.
+
+<#Beccain>
+    a foaf:Person;
+    foaf:name "Beccain";
+    rel:childOf <#Cualnge-dcf6848d>.
+
+<#Cualnge-dcf6848d>
+    a foaf:Person;
+    foaf:name "Cualnge".
+
+<#Uathmaran>
+    a foaf:Person;
+    foaf:name "Uathmaran";
+    rel:childOf <#Cathain>.
+
+<#Cathain>
+    a foaf:Person;
+    foaf:name "Cathain";
+    rel:childOf <#Brain-aa52d9b6>.
+
+<#Brain-aa52d9b6>
+    a foaf:Person;
+    foaf:name "Brain";
+    rel:childOf <#Flandabrat>.
+
+<#Flandabrat>
+    a foaf:Person;
+    foaf:name "Flandabrat";
+    rel:childOf <#Aeda-89f75493>.
+
+<#Aeda-89f75493>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Dunlaing>.
+
+<#Dunlaing>
+    a foaf:Person;
+    foaf:name "Dunlaing";
+    rel:childOf <#DuibChonna>.
+
+<#DuibChonna>
+    a foaf:Person;
+    foaf:name "Duib Chonna";
+    rel:childOf <#Cathail>.
+
+<#Cathail>
+    a foaf:Person;
+    foaf:name "Cathail";
+    rel:childOf <#Adgin>.
+
+<#Adgin>
+    a foaf:Person;
+    foaf:name "Adgin";
+    rel:childOf <#Dungain>.
+
+<#Dungain>
+    a foaf:Person;
+    foaf:name "Dungain";
+    rel:childOf <#DimmaeGairb>.
+
+<#DimmaeGairb>
+    a foaf:Person;
+    foaf:name "Dimmae Gairb";
+    rel:childOf <#Athail>.
+
+<#Athail>
+    a foaf:Person;
+    foaf:name "Athail";
+    rel:childOf <#Dallain>.
+
+<#Dallain>
+    a foaf:Person;
+    foaf:name "Dallain";
+    rel:childOf <#Noe>.
+
+<#Noe>
+    a foaf:Person;
+    foaf:name "Noe";
+    rel:childOf <#Imchada-afd7870b>.
+
+<#Imchada-afd7870b>
+    owl:sameAs <#Imchada>.
+
+<#Dunamail>
+    a foaf:Person;
+    foaf:name "Dunamail".
+
+<#DubConam>
+    a foaf:Person;
+    foaf:name "Dub Conam".
+
+<#Dungalach>
+    a foaf:Person;
+    foaf:name "Dungalach".
+
+<#Anmchad>
+    a foaf:Person;
+    foaf:name "Anmchad".
+
+<#DubDerg>
+    a foaf:Person;
+    foaf:name "Dub Derg".
+
+<#Dúnlainge>
+    a foaf:Person;
+    foaf:name "Dúnlainge".
+
+<#Uargusa>
+    a foaf:Person;
+    foaf:name "Uargusa".
+
