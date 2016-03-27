@@ -1,0 +1,132 @@
+@base <http://example.com/LL/n_echach.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. N-Echach"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text018.html>;
+    dcterms:format "text/turtle".
+
+<#Cais>
+    a foaf:Person;
+    foaf:name "Cais";
+    rel:childOf <#Cuirc>.
+
+<#Cuirc>
+    a foaf:Person;
+    foaf:name "Cuirc".
+
+<#Eocho>
+    a foaf:Person;
+    foaf:name "Eocho";
+    foaf:name "Echach";
+    rel:childOf <#Cais>.
+
+<#Crimthand>
+    a foaf:Person;
+    foaf:name "Crimthand";
+    rel:childOf <#Eocho>.
+
+<#LugaidCichech>
+    a foaf:Person;
+    foaf:name "Lugaid Cichech";
+    rel:childOf <#Eocho>.
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Crimthand>.
+
+<#Loegaire>
+    a foaf:Person;
+    foaf:name "Loegaire";
+    rel:childOf <#Crimthand>.
+
+<#DubDaBairend>
+    a foaf:Person;
+    foaf:name "Dub Da Bairend";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    foaf:name "Domnaill";
+    rel:childOf <#Oengusa>.
+
+<#Oengusa>
+    a foaf:Person;
+    foaf:name "Oengusa";
+    rel:childOf <#Lathniat>.
+
+<#Lathniat>
+    a foaf:Person;
+    foaf:name "Lathniat";
+    rel:childOf <#Anilte>.
+
+<#Anilte>
+    a foaf:Person;
+    foaf:name "Anilte";
+    rel:childOf <#Selbaig>.
+
+<#Selbaig>
+    a foaf:Person;
+    foaf:name "Selbaig";
+    rel:childOf <#Fergail>.
+
+<#Fergail>
+    a foaf:Person;
+    foaf:name "Fergail";
+    rel:childOf <#Elathaig>.
+
+<#Elathaig>
+    a foaf:Person;
+    foaf:name "Elathaig";
+    rel:childOf <#Dunlaing>.
+
+<#Dunlaing>
+    a foaf:Person;
+    foaf:name "Dunlaing";
+    rel:childOf <#Claranaig>.
+
+<#Claranaig>
+    a foaf:Person;
+    foaf:name "Claranaig";
+    rel:childOf <#CarpriRiastrai>.
+
+<#CarpriRiastrai>
+    a foaf:Person;
+    foaf:name "Carpri Riastrai";
+    rel:childOf <#AedaOsrig>.
+
+<#AedaOsrig>
+    a foaf:Person;
+    foaf:name "Aeda Osrig";
+    rel:childOf <#Loegaire-68f09183>.
+
+<#Loegaire-68f09183>
+    owl:sameAs <#Loegaire>;
+    rel:childOf <#Crimthaind-4b9fb669>.
+
+<#Crimthaind-4b9fb669>
+    owl:sameAs <#Crimthand>;
+    foaf:name "Crimthaind";
+    rel:childOf <#Echach-23fefa9e>.
+
+<#Echach-23fefa9e>
+    owl:sameAs <#Eocho>;
+    rel:childOf <#Caiss>.
+
+<#Caiss>
+    owl:sameAs <#Cais>;
+    foaf:name "Caiss";
+    rel:childOf <#Cuirc-94ccbfa6>.
+
+<#Cuirc-94ccbfa6>
+    owl:sameAs <#Cuirc>.
+    
