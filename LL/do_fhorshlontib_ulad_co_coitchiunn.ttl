@@ -1,0 +1,197 @@
+@base <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Fhorshlontib Ulad Co Coitchiunn So Sís"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text027.html>;
+    dcterms:format "text/turtle".
+
+<#FergnaGarb>
+    a foaf:Person;
+    foaf:name "Fergna Garb";
+    rel:childOf <#Salaich>.
+
+<#Salaich>
+    a foaf:Person;
+    foaf:name "Salaich";
+    rel:childOf <#LoairnMair>.
+
+<#LoairnMair>
+    a foaf:Person;
+    foaf:name "Loairn Mair".
+
+<#Buachaill>
+    a foaf:Person;
+    foaf:name "Buachaill".
+
+<#ConallCass>
+    a foaf:Person;
+    foaf:name "Conall Cass".
+
+<#Corc>
+    a foaf:Person;
+    foaf:name "Corc".
+    
+<#ChongetChonganchnes>
+    a foaf:Person;
+    foaf:name "Chonget Chonganchnes";
+    rel:siblingOf <#Corc>, <#ConallCass>, <#Corc>;
+    rel:childOf <#Dedad>.
+    
+<#Dedad>
+    a foaf:Person;
+    foaf:name "Dedad".
+
+<#Celtchair>
+    a foaf:Person;
+    foaf:name "Celtchair";
+    rel:childOf <#Uithechair>;
+    rel:childOf <#Lithechair>.
+
+<#Lithechair>
+    a foaf:Person;
+    foaf:name "Lithechair".
+
+<#Bél>
+    a foaf:Person;
+    foaf:name "Bél";
+    foaf:gender "female";
+    rel:childOf <#Celtchair>.
+
+<#Nemdaille>
+    a foaf:Person;
+    foaf:name "Nemdaille";
+    foaf:gender "female";
+    rel:childOf <#Celtchair>.
+
+<#ScadarcAngain>
+    a foaf:Person;
+    foaf:name "Scadarc Angain";
+    foaf:gender "female";
+    rel:childOf <#Celtchair-472a82f0>;
+    rel:spouseOf <#ChongetChonganchnis>.
+
+<#ChongetChonganchnis>
+    foaf:name "Chonget Chonganchnis";
+    owl:sameAs <#ChongetChonganchnes>.
+
+<#Uithechair>
+    a foaf:Person;
+    foaf:name "Uithechair".
+
+<#Dronae>
+    a foaf:Person;
+    foaf:name "Dronae";
+    rel:spouseOf <#Celtchair>;
+    foaf:gender "female";
+    rel:childOf <#Conchobuir>.
+
+<#Conchobuir>
+    a foaf:Person;
+    foaf:name "Conchobuir";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1124002>;
+    rel:childOf <#Nesa>.
+
+<#Nesa>
+    a foaf:Person;
+    foaf:name "Nesa".
+
+<#Lugdach>
+    a foaf:Person;
+    foaf:name "Lugdach";
+    rel:childOf <#OengusaFind>.
+
+<#OengusaFind>
+    a foaf:Person;
+    foaf:name "Oengusa Find".
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Lugdach>.
+
+<#Daig>
+    a foaf:Person;
+    foaf:name "Daig";
+    rel:childOf <#Lugdach>.
+
+<#Dallan>
+    a foaf:Person;
+    foaf:name "Dallan";
+    rel:childOf <#Lugdach>.
+
+<#Indiu>
+    a foaf:Person;
+    foaf:name "Indiu";
+    foaf:gender "female";
+    rel:childOf <#Lugdach>.
+
+<#Indiach>
+    a foaf:Person;
+    foaf:name "Indiach";
+    foaf:gender "female";
+    rel:childOf <#Lugdach>.
+
+<#Sciath>
+    a foaf:Person;
+    foaf:name "Sciath";
+    foaf:gender "female";
+    rel:childOf <#Lugdach>;
+    rel:spouseOf <#Taidc>.
+
+<#Néill>
+    a foaf:Person;
+    foaf:name "Néill";
+    rel:childOf <#Echach>;
+    rel:spouseOf <#Indiu>.
+
+<#Echach>
+    a foaf:Person;
+    foaf:name "Echach".
+
+<#Conaill>
+    a foaf:Person;
+    foaf:name "Conaill";
+    rel:childOf <#Indiu>.
+
+<#Eogain>
+    a foaf:Person;
+    foaf:name "Eogain";
+    rel:childOf <#Indiu>.
+
+<#Indecht>
+    foaf:name "Indecht";
+    owl:sameAs <#Indiach>;
+    rel:spouseOf <#Buti>.
+
+<#Buti>
+    a foaf:Person;
+    foaf:name "Buti".
+
+<#Colgu>
+    a foaf:Person;
+    foaf:name "Colgu";
+    rel:childOf <#Indecht>, <#Buti>.
+
+<#Crimthann>
+    a foaf:Person;
+    foaf:name "Crimthann";
+    rel:childOf <#Indecht>, <#Buti>.
+
+
+<#Taidc>
+    a foaf:Person;
+    foaf:name "Taidc";
+    rel:childOf <#Céin>.
+
+<#Céin>
+    a foaf:Person;
+    foaf:name "Céin".
