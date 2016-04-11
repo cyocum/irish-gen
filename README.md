@@ -24,8 +24,8 @@ Each set of files are listed by the manuscript they derive from. For
 instance, files in the LL directory come from the Book of Leinster.
 LL comes from the standard scholarly abbreviation for the book.
 
-For the moment, until there is a proper URI to reference, all the
-turtle files use http://example.com as their base URI. This makes
+For the moment, until there is a proper IRI to reference, all the
+turtle files use http://example.com as their base IRI. This makes
 namespacing and linking easier over the files.  For instance,
-dáil_caiss.ttl is in the LL directory and has a base URI of
+dáil_caiss.ttl is in the LL directory and has a base IRI of
 http://example.com/LL/dáil_caiss.ttl.
