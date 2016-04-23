@@ -1,0 +1,232 @@
+@base <http://example.com/LL/aisneidem_di_araill.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Aisneidem Di Araill"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text028.html>;
+    dcterms:format "text/turtle".
+
+<#Conchobuir>
+    a foaf:Person;
+    foaf:name "Conchobuir";
+    rel:childOf <#Fhactnai>.
+
+<#Fhactnai>
+    a foaf:Person;
+    foaf:name "Fhactnai".
+
+<#CormacCondLongas>
+    a foaf:Person;
+    foaf:name "Cormac Cond Longas";
+    rel:childOf <#Conchobuir>.
+
+<#CauscraidMendMacha>
+    a foaf:Person;
+    foaf:name "Causcraid Mend Macha";
+    rel:childOf <#Conchobuir>.
+
+<#FurbaideBern>
+    a foaf:Person;
+    foaf:name "Furbaide Bern";
+    rel:childOf <#Conchobuir>.
+
+<#FindchadFind>
+    a foaf:Person;
+    foaf:name "Findchad Find";
+    rel:childOf <#Conchobuir>.
+
+<#Fiacha>
+    a foaf:Person;
+    foaf:name "Fiacha";
+    rel:childOf <#Conchobuir>.
+
+<#Fiachna>
+    a foaf:Person;
+    foaf:name "Fiachna";
+    rel:childOf <#Conchobuir>.
+
+<#Conaing>
+    a foaf:Person;
+    foaf:name "Conaing";
+    rel:childOf <#Conchobuir>.
+
+<#Maine>
+    a foaf:Person;
+    foaf:name "Maine";
+    rel:childOf <#Conchobuir>.
+
+<#Follomon>
+    a foaf:Person;
+    foaf:name "Follomon";
+    rel:childOf <#Conchobuir>.
+
+<#Glaisne>
+    a foaf:Person;
+    foaf:name "Glaisne";
+    rel:childOf <#Conchobuir>.
+    
+<#Fergusa>
+    a foaf:Person;
+    foaf:name "Fergusa".
+
+<#ErcSláine>
+    a foaf:Person;
+    foaf:title "Epscop"@sga, "Bishop"@en;
+    rel:descendantOf <#Fergusa>.
+
+<#BrenaindBirra>
+    a foaf:Person;
+    foaf:name "Brenaind Birra";
+    rel:descendantOf <#Fergusa>.
+    
+<#Cainnech>
+    a foaf:Person;
+    foaf:name "Cainnech";
+    rel:childOf <#Daland>.
+
+<#Daland>
+    a foaf:Person;
+    foaf:name "Daland";
+    rel:descendantOf <#Fergusa>.
+
+<#Ellim>
+    a foaf:Person;
+    foaf:name "Ellim";
+    rel:childOf <#Conrach>.
+
+<#Conrach>
+    a foaf:Person;
+    foaf:name "Conrach";
+    rel:descendantOf <#Fergusa>.
+
+<#Olom>
+    a foaf:Person;
+    foaf:name "Olom";
+    rel:childOf <#Fhergusa>.
+
+<#Conri>
+    a foaf:Person;
+    foaf:name "Conri";
+    rel:childOf <#Fhergusa>.
+
+<#Fhergusa>
+    foaf:name "Fhergusa";
+    owl:sameAs <#Fergusa>.
+
+<#FerCéchech>
+    a foaf:Person;
+    foaf:name "Fer Céchech".
+
+<#Fergus>
+    a foaf:Person;
+    foaf:name "Fergus";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q387800>.
+    #same as <#Fergusa> - CY?
+
+<#Medba>
+    a foaf:Person;
+    foaf:name "Medba";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1141828>;
+    foaf:gender "female".
+
+<Ciar>
+    a foaf:Person;
+    foaf:name "Ciar";
+    rel:childOf <#Fergus>;
+    rel:childOf <#Medba>.
+
+<#Corc>
+    a foaf:Person;
+    foaf:name "Corc";
+    rel:childOf <#Fergus>;
+    rel:childOf <#Medba>.
+
+<#Conmac>
+    a foaf:Person;
+    foaf:name "Conmac";
+    rel:childOf <#Fergus>;
+    rel:childOf <#Medba>.
+
+<#MugRuith>
+    a foaf:Person;
+    foaf:name "Mug Ruith";
+    foaf:name "Moga Ruith";
+    rel:childOf <#Fergusa>.
+
+<#Símon>
+    a foaf:Person;
+    foaf:title "druí"@sga, "druid"@en;
+    rel:mentorOf <#MugRuith>.
+    
+<#Cacht>
+    a foaf:Person;
+    foaf:name "Cacht";
+    foaf:gender "female";
+    rel:childOf <#Cathmind>;
+    rel:parentOf <#MugRuith>.
+
+<#Cathmind>
+    a foaf:Person;
+    foaf:name "Cathmind";
+    foaf:title "ríg Bretan"@sga, "king of Britain"@en.
+
+<#Roth>
+    a foaf:Person;
+    foaf:name "Roth";
+    rel:childOf <#Roguill>.
+    
+<#Roguill>
+    a foaf:Person;
+    foaf:name "Roguill";
+    rel:descendantOf <#MugRuith>.
+
+<#Buan>
+    a foaf:Person;
+    foaf:name "Buan";
+    rel:childOf <#MugRuith>.
+
+<#FerCorb>
+    a foaf:Person;
+    foaf:name "Fer Corb";
+    rel:childOf <#MugRuith>.
+
+<#DerDraigen>
+    a foaf:Person;
+    foaf:gender "female";
+    rel:parentOf <#Buan>;
+    rel:parentOf <#FerCorb>;
+    rel:parentOf <#ChorpriLiphechair>.
+
+<#ChorpriLiphechair>
+    foaf:name "Chorpri Liphechair";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>.
+
+<#Dron>
+    a foaf:Person;
+    foaf:name "Dron";
+    foaf:gender "female";
+    rel:spouseOf <#MugRuith>;
+    rel:childOf <#Larine>.
+
+<#Larine>
+    a foaf:Person;
+    foaf:name "Larine".
+
+<#Tlachtga>
+    a foaf:Person;
+    foaf:name "Tlachtga";
+    foaf:gender "female";
+    rel:childOf <#MugRuith>.
+
+<#CoirtheCnamchaille>
+    a foaf:Person;
+    foaf:name "Coirthe Cnamchaille".
+
