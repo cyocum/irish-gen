@@ -1,0 +1,142 @@
+@base <http://example.com/LL/senchas_coitechenn_clainde_fergusa.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Is é So Senchas Coitchenn Clainde Fergus(a)"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text032.html>;
+    dcterms:format "text/turtle".
+
+<#Fhergusa>
+    a foaf:Person;
+    foaf:name "Fhergusa".
+    # same as fergus mac roích ?- CY
+
+<#FerDeoda>
+    a foaf:Person;
+    foaf:name "Fer Deoda";
+    rel:childOf <#Fhergusa>.
+
+<#FerTlactga>
+    a foaf:Person;
+    foaf:name "Fer Tlactga";
+    rel:childOf <#Fhergusa>.
+
+<#MugToeth>
+    a foaf:Person;
+    foaf:name "Mug Toeth";
+    foaf:name "Mug Doeth";
+    foaf:name "Mug Doet";
+    rel:childOf <#Fhergusa>.
+
+<#Uatu>
+    a foaf:Person;
+    foaf:name "Uatu";
+    rel:childOf <#Fhergusa>.
+
+<#Eithlend>
+    a foaf:Person;
+    foaf:name "Eithlend";
+    rel:childOf <#Fhergusa>.
+
+<#CorpAulaim>
+    a foaf:Person;
+    foaf:name "Corp Aulaim";
+    rel:childOf <#Fhergusa>.
+
+<#Celtchair>
+    a foaf:Person;
+    foaf:name "Celtchair";
+    rel:childOf <#Cuthechair>.
+
+<#Cuthechair>
+    a foaf:Person;
+    foaf:name "Cuthechair";
+    rel:childOf <#Fothaid>.
+
+<#Fothaid>
+    a foaf:Person;
+    foaf:name "Fothaid";
+    rel:childOf <#FhirFhiled>.
+
+<#FhirFhiled>
+    a foaf:Person;
+    foaf:name "Fhir Fhiled".
+
+<#Finnian>
+    a foaf:Person;
+    foaf:name "Finnian";
+    rel:childOf <#Fintain>.
+
+<#Fintain>
+    a foaf:Person;
+    foaf:name "Fintain";
+    rel:childOf <#Concraid>.
+
+<#Concraid>
+    a foaf:Person;
+    foaf:name "Concraid";
+    rel:childOf <#Dairchella>.
+
+<#Dairchella>
+    a foaf:Person;
+    foaf:name "Dairchella";
+    rel:childOf <#Senaig>.
+
+<#Senaig>
+    a foaf:Person;
+    foaf:name "Senaig";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Fhergusa>.
+
+<#Fhergusa>
+    a foaf:Person;
+    foaf:name "Fhergusa";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    foaf:name "Ailella";
+    rel:childOf <#Celtchair-c0ed9ca0>.
+
+<#Celtchair-c0ed9ca0>
+    a foaf:Person;
+    foaf:name "Celtchair";
+    rel:childOf <#Fothaid-bda94d40>.
+
+<#Fothaid-bda94d40>
+    owl:sameAs <#Fothaid>;
+    rel:childOf <#FhirFhiled-e1ad66d4>.
+
+<#FhirFhiled-e1ad66d4>
+    owl:sameAs <#FhirFhiled>;
+    rel:childOf <#Glais>.
+
+<#Glais>
+    a foaf:Person;
+    foaf:name "Glais";
+    rel:childOf <#Rosa>.
+
+<#Rosa>
+    owl:sameAs <http://example.com/LL/n_echach.ttl#Rosa>;
+    rel:childOf <#Rudraige>.
+
+<#Rudraige>
+    owl:sameAs <http://example.com/LL/n_echach.ttl#Rudraige>;
+    foaf:name "Rudraige".
