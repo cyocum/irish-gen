@@ -1,0 +1,49 @@
+@base <http://example.com/LL/clainde_aeda.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainde Aeda"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text035.html>;
+    dcterms:format "text/turtle".
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Falbe>.
+
+<#Falbe>
+    a foaf:Person;
+    foaf:name "Falbe";
+    rel:childOf <#Illaind>.
+
+<#Illaind>
+    a foaf:Person;
+    foaf:name "Illaind";
+    rel:childOf <#FhiachachLaeb>.
+
+<#FhiachachLaeb>
+    a foaf:Person;
+    foaf:name "Fhiachach Laeb";
+    rel:childOf <#Mane>.
+
+<#Mane>
+    a foaf:Person;
+    foaf:name "Mane";
+    rel:childOf <#Oengusa>.
+
+<#Oengusa>
+    a foaf:Person;
+    foaf:name "Oengusa";
+    rel:childOf <#CruindBaDrúi>.
+
+<#CruindBaDrúi>
+    owl:sameAs <http://example.com/LL/dáil_araide.ttl#CruindBaDrúi>;
+    foaf:name "Cruind Ba Drúi".
