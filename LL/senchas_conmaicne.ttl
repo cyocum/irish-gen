@@ -1,0 +1,81 @@
+@base <http://example.com/LL/senchas_conmaicne.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Senchas Conmaicne In So Sís"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text034.html>;
+    dcterms:format "text/turtle".
+
+<#Causcraid>
+    a foaf:Person;
+    foaf:name "Causcraid".
+
+<#Fraech>
+    a foaf:Person;
+    foaf:name "Fraech";
+    rel:childOf <#Causcraid>.
+
+<#Finder>
+    a foaf:Person;
+    foaf:name "Finder";
+    rel:childOf <#Causcraid>.
+
+<#Findchaem>
+    a foaf:Person;
+    foaf:name "Findchaem";
+    rel:childOf <#Causcraid>.
+
+<#Cofcass>
+    a foaf:Person;
+    foaf:name "Cofcass";
+    rel:childOf <#Causcraid>.
+
+<#Ciru>
+    a foaf:Person;
+    foaf:name "Ciru";
+    rel:childOf <#Causcraid>.
+
+<#Duban>
+    a foaf:Person;
+    foaf:name "Duban";
+    rel:childOf <#Fraech>.
+
+<#Luigne>
+    a foaf:Person;
+    foaf:name "Luigne";
+    rel:childOf <#Fraech>.
+
+<#Cass>
+    a foaf:Person;
+    foaf:name "Cass";
+    rel:childOf <#Fraech>.
+    
+<#Eithne>
+    a foaf:Person;
+    foaf:name "Eithne";
+    rel:descendantOf <#Findchaem>.
+
+<#Ailltine>
+    a foaf:Person;
+    foaf:name "Ailltine";
+    rel:descendantOf <#Findchaem>.
+
+<#Mrugech>
+    a foaf:Person;
+    foaf:name "Mrugech";
+    rel:descendantOf <#Findchaem>.
+
+<#Erc>
+    a foaf:Person;
+    foaf:name "Erc";
+    rel:descendantOf <#Findchaem>.
+
+
