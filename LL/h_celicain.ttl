@@ -1,0 +1,73 @@
+@base <http://example.com/LL/h_celicain.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach H. Celicain"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text042.html>;
+    dcterms:format "text/turtle".
+
+<#Lorcan>
+    a foaf:Person;
+    foaf:name "Lorcan";
+    rel:childOf <#GillaiPatric>.
+
+<#GillaiPatric>
+    a foaf:Person;
+    foaf:name "Gillai Patric";
+    rel:childOf <#Matudain>.
+
+<#Matudain>
+    a foaf:Person;
+    foaf:name "Matudain";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Trenfhir>.
+
+<#Trenfhir>
+    a foaf:Person;
+    foaf:name "Trenfhir";
+    rel:childOf <#Celicain>.
+
+<#Celicain>
+    a foaf:Person;
+    foaf:name "Celicain";
+    rel:childOf <#Garbith>.
+
+<#Garbith>
+    a foaf:Person;
+    foaf:name "Garbith";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#MaelDuin>.
+
+<#MaelDuin>
+    a foaf:Person;
+    foaf:name "Mael Duin";
+    rel:childOf <#Dondgail>.
+
+<#Dondgail>
+    a foaf:Person;
+    foaf:name "Dondgail";
+    rel:childOf <#Buachalla>.
+
+<#Buachalla>
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Buachail>;
+    foaf:name "Buachalla";
+    rel:childOf <#ConchobuirChorraig>.
+
+<#ConchobuirChorraig>
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#ConchobuirChorraig>.
