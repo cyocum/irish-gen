@@ -1,4 +1,5 @@
-# irish-gen
+# Digitising Medieval Irish Genealogies in RDF
+
 Traditional Irish genealogies represented as Turtle RDF graphs.
 
 This project is to transform the early Irish geneologies from HTML and
