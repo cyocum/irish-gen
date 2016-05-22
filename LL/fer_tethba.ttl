@@ -1,0 +1,97 @@
+@base <http://example.com/LL/fer_tethba.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Cairpri Móir"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text060.html>;
+    dcterms:format "text/turtle".
+
+<#Lachtnan>
+    a foaf:Person;
+    foaf:name "Lachtnan";
+    rel:childOf <#MaelChiarain>.
+
+<#MaelChiarain>
+    a foaf:Person;
+    foaf:name "Mael Chiarain";
+    rel:childOf <#Conaing>.
+
+<#Conaing>
+    a foaf:Person;
+    foaf:name "Conaing";
+    rel:childOf <#Congaile>.
+
+<#Congaile>
+    a foaf:Person;
+    foaf:name "Congaile";
+    rel:childOf <#BecceTethba>.
+
+<#BecceTethba>
+    a foaf:Person;
+    foaf:name "Becce Tethba";
+    rel:childOf <#Condlai>.
+
+<#Condlai>
+    a foaf:Person;
+    foaf:name "Condlai";
+    rel:childOf <#Congaile>.
+
+<#Congaile>
+    a foaf:Person;
+    foaf:name "Congaile";
+    rel:childOf <#Blaithmeic>.
+
+<#Blaithmeic>
+    a foaf:Person;
+    foaf:name "Blaithmeic";
+    rel:childOf <#Oengusa>.
+
+<#Oengusa>
+    a foaf:Person;
+    foaf:name "Oengusa";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Brenaind>.
+
+<#Brenaind>
+    a foaf:Person;
+    foaf:name "Brenaind";
+    rel:childOf _:missing-8f341073.
+
+_:missing-8f341073
+    a foaf:Person;
+    rel:childOf <#Broen>.
+
+<#Broen>
+    a foaf:Person;
+    foaf:name "Broen";
+    rel:childOf <#Fhiachach>.
+
+<#Fhiachach>
+    a foaf:Person;
+    foaf:name "Fhiachach";
+    rel:childOf <#Mane>.
+
+<#Mane>
+    a foaf:Person;
+    foaf:name "Mane";
+    rel:childOf <#NeilNoigiallaig>.
+
+<#NeilNoigiallaig>
+    owl:sameAs <http://example.com/LL/ríg_mide.ttl#NeillNoigiallaich>;
+    foaf:name "Neil Noigiallaig";
+    rel:childOf _:missing-fe3b9e96.
+
+_:missing-fe3b9e96 a foaf:Person.
+    
