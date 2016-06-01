@@ -1,0 +1,460 @@
+@base <http://example.com/LL/dáil_caiss.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Dáil Caiss"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text008.html>;
+    dcterms:format "text/turtle".
+
+<#Caiss>
+    a foaf:Person;
+    foaf:name "Caiss";
+    rel:childOf <#ConaillEchlúaith>.
+
+<#ConaillEchlúaith>
+    a foaf:Person;
+    foaf:name "Conaill Echlúaith";
+    rel:childOf <#LugdechMind>.
+
+<#LugdechMind>
+    a foaf:Person;
+    foaf:name "Lugdech Mind".
+
+<#Blat>
+    a foaf:Person;
+    foaf:name "Blat";
+    rel:childOf <#Caiss>.
+
+<#Cassin>
+    a foaf:Person;
+    foaf:name "Cassin";
+    rel:childOf <#Caiss>.
+
+<#Lugaid>
+    a foaf:Person;
+    foaf:name "Lugaid";
+    rel:childOf <#Caiss>.
+
+<#Setna>
+    a foaf:Person;
+    foaf:name "Setna";
+    rel:childOf <#Caiss>.
+
+<#OengusCendNathrach>
+    a foaf:Person;
+    foaf:name "Oengus Cend Nathrach";
+    rel:childOf <#Caiss>.
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Caiss>.
+
+<#Loscend>
+    a foaf:Person;
+    foaf:name "Loscend";
+    rel:childOf <#Caiss>.
+
+<#Noi>
+    a foaf:Person;
+    foaf:name "Noi";
+    rel:childOf <#Caiss>.
+
+<#Cormac>
+    a foaf:Person;
+    foaf:name "Cormac";
+    rel:childOf <#Caiss>.
+
+<#Cairthend>
+    a foaf:Person;
+    foaf:name "Cairthend";
+    rel:childOf <#Caiss>.
+
+<#Cainnech>
+    a foaf:Person;
+    foaf:name "Cainnech";
+    rel:childOf <#Caiss>.
+
+<#OengusCendAitin>
+    a foaf:Person;
+    foaf:name "Oengus Cend Aitin";
+    rel:childOf <#Caiss>.
+
+<#MeicLasre>
+    a foaf:Person;
+    foaf:title "Epscop"@sga, "Bishop"@en;
+    rel:descendantOf <#Cainnech>.
+
+<#Bec>
+    a foaf:Person;
+    foaf:name "Bec";
+    rel:childOf <#Dei>.
+
+<#Dei>
+    a foaf:Person;
+    foaf:name "Dei";
+    rel:descendantOf <#Nói>.
+
+<#Nói>
+    foaf:name "Nói";
+    owl:sameAs <#Noi>.
+
+<#Carthind>
+    foaf:name "Carthind";
+    owl:sameAs <#Cairthend>.
+
+<#OengusOllmaith>
+    a foaf:Person;
+    foaf:name "Oengus Ollmaith";
+    rel:childOf <#Carthind>.
+
+<#Eochaid>
+    a foaf:Person;
+    foaf:name "Eochaid";
+    foaf:nick "Ballderg";
+    rel:childOf <#Carthind>.
+
+<#Scandail>
+    a foaf:Person;
+    foaf:name "Scandail";
+    rel:childOf <#Carthind>.
+
+<#CormacCochinmeth> # there is a ? by the name - CY
+    a foaf:Person;
+    foaf:name "Cormac Cochinmeth";
+    rel:childOf <#Carthind>.
+
+<#Sinech>
+    a foaf:Person;
+    foaf:name "Sinech";
+    rel:childOf <#OengusaTuile>.
+
+<#OengusaTuile>
+    a foaf:Person;
+    foaf:name "Oengusa Tuile";
+    foaf:gender "female";
+    rel:descendantOf <#CormacCochinmeth>.
+
+<#EchachBalldeirg>
+    foaf:name "Echach Balldeirg";
+    owl:sameAs <#Eochaid>;
+    rel:childOf <#CarthindFind>.
+
+<#CarthindFind>
+    foaf:name "Carthind Find";
+    owl:sameAs <#Carthind>.
+
+<#Conall>
+    a foaf:Person;
+    foaf:name "Conall";
+    rel:childOf <#EchachBalldeirg>.
+
+<#Bresal>
+    a foaf:Person;
+    foaf:name "Bresal";
+    rel:childOf <#EchachBalldeirg>.
+
+<#Conaill>
+    foaf:name "Conaill";
+    owl:sameAs <#ConaillEchlúaith>.
+
+<#Aed-b02a7ca3>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Conaill>.
+
+<#Fianorb>
+    a foaf:Person;
+    foaf:name "Fianorb";
+    rel:childOf <#Conaill>.
+
+<#Aeda>
+    foaf:name "Aeda";
+    owl:sameAs <#Aed>.
+
+<#Congal>
+    a foaf:Person;
+    foaf:name "Congal";
+    rel:childOf <#Aed>.
+
+<#Athirne>
+    a foaf:Person;
+    foaf:name "Athirne";
+    rel:childOf <#Aed>.
+
+<#Carthend>
+    a foaf:Person;
+    foaf:name "Carthend";
+    rel:childOf <#Aed>.
+
+<#Dungalach>
+    a foaf:Person;
+    foaf:name "Dungalach";
+    rel:childOf <#MeicMurgile>.
+
+<#MeicMurgile>
+    a foaf:Person;
+    foaf:name "Meic Murgile";
+    rel:childOf <#Carthind-02e8a2c7>.
+
+<#Carthind-02e8a2c7>
+    foaf:name "Carthind";
+    owl:sameAs <#Carthend>;
+    rel:childOf <#Aeda-4511718c>.
+
+<#Aeda-4511718c>
+    owl:sameAs <#Aed>.
+
+<#Tairdelbach>
+    a foaf:Person;
+    foaf:name "Tairdelbach";
+    rel:childOf <#Athirni>.
+
+<#Athirni>
+    foaf:name "Athirni";
+    owl:sameAs <#Athirne>;
+    rel:childOf <#Aeda-038793c7>.
+
+<#Aeda-038793c7>
+    owl:sameAs <#Aed>.
+
+<#Congaile>
+    foaf:name "Congaile";
+    owl:sameAs <#Congal>.
+
+<#Toltanach>
+    a foaf:Person;
+    foaf:name "Toltanach";
+    rel:childOf <#Congaile>.
+
+<#Irchlossach>
+    a foaf:Person;
+    foaf:name "Irchlossach";
+    rel:childOf <#Congaile>.
+
+<#Fhlaind>
+    a foaf:Person;
+    foaf:name "Fhlaind";
+    rel:childOf <#Irchlosaig>.
+
+<#Irchlosaig>
+    foaf:name "Irchlosaig";
+    owl:sameAs <#Irchlossach>.
+
+<#Aurthole>
+    a foaf:Person;
+    foaf:name "Aurthole";
+    foaf:nick "ard áith"@sga;
+    rel:childOf <#Fhlaind>.
+
+<#Tuathal>
+    a foaf:Person;
+    foaf:name "Tuathal";
+    rel:childOf <#Fhlaind>.
+
+<#Cernach>
+    a foaf:Person;
+    foaf:name "Cernach";
+    rel:childOf <#Fhlaind>.
+
+<#Fogertach>
+    a foaf:Person;
+    foaf:name "Fogertach";
+    rel:childOf <#Fhlaind>.
+
+<#DubInrecht>
+    a foaf:Person;
+    foaf:name "Dub Inrecht";
+    rel:childOf <#Fhlaind>.
+
+<#MaelCáich>
+    a foaf:Person;
+    foaf:name "Mael Cáich";
+    rel:childOf <#Fhlaind>.
+
+<#Thuathail>
+    foaf:name "Thuathail";
+    owl:sameAs <#Tuathal>.
+
+<#Inrechtach>
+    a foaf:Person;
+    foaf:name "Inrechtach";
+    rel:childOf <#Thuathail>.
+
+<#Fland>
+    a foaf:Person;
+    foaf:name "Fland";
+    rel:childOf <#Thuathail>.
+
+<#MaelCoba>
+    a foaf:Person;
+    foaf:name "Mael Coba";
+    rel:childOf <#Thuathail>.
+
+
+<#Inrectaig>
+    foaf:name "Inrectaig";
+    owl:sameAs <#DubInrecht>.
+
+<#CúBage>
+    a foaf:Person;
+    foaf:name "Cú Bage";
+    rel:childOf <#Inrectaig>.
+
+<#Niall>
+    a foaf:Person;
+    foaf:name "Niall";
+    rel:childOf <#Inrectaig>.
+
+<#Tipraite>
+    a foaf:Person;
+    foaf:name "Tipraite";
+    rel:childOf <#Inrectaig>.
+    
+<#EochoInmaine>
+    a foaf:Person;
+    foaf:name "Eocho Inmaine";
+    rel:childOf <#Inrectaig>.
+
+<#Cacher>
+    a foaf:Person;
+    foaf:name "Cacher";
+    rel:childOf <#Inrectaig>.
+
+<#CulenDub>
+    a foaf:Person;
+    foaf:name "Culen Dub";
+    rel:childOf <#Inrectaig>.
+
+<#ConBáge>
+    foaf:name "Con Báge";
+    owl:sameAs <#CúBage>.
+
+<#Cadla>
+    a foaf:Person;
+    foaf:name "Cadla";
+    rel:childOf <#ConBáge>.
+
+<#Corc>
+    a foaf:Person;
+    foaf:name "Corc";
+    rel:childOf <#ConBáge>.
+
+<#Conall-31bc9f80>
+    a foaf:Person;
+    foaf:name "Conall";
+    rel:childOf <#ConBáge>.
+
+<#Tigernan>
+    a foaf:Person;
+    foaf:name "Tigernan";
+    rel:childOf <#ConBáge>.
+
+<#Anrothan>
+    a foaf:Person;
+    foaf:name "Anrothan";
+    rel:childOf <#ConBáge>.
+
+<#Cadlai>
+    foaf:name "Cadlai";
+    owl:sameAs <#Cadla>.
+
+<#Málle>
+    a foaf:Person;
+    foaf:name "Málle";
+    rel:childOf <#Cadlai>.
+
+<#Caddán>
+    a foaf:Person;
+    foaf:name "Caddán";
+    rel:childOf <#Cadlai>.
+
+<#Magair>
+    a foaf:Person;
+    foaf:name "Magair";
+    rel:childOf <#Cadlai>.
+
+<#Fursunnud>
+    a foaf:Person;
+    foaf:name "Fursunnud";
+    rel:childOf <#Cadlai>.
+
+<#CormacDub>
+    a foaf:Person;
+    foaf:name "Cormac Dub";
+    rel:childOf <#Cadlai>.
+
+<#Conaire>
+    a foaf:Person;
+    foaf:name "Conaire";
+    rel:childOf <#Cadlai>.
+
+<#Anrothain>
+    foaf:name "Anrothain";
+    owl:sameAs <#Anrothan>.
+
+<#Ánchinne>
+    a foaf:Person;
+    foaf:name "Ánchinne";
+    rel:childOf <#Anrothain>.
+
+<#Adnach>
+    a foaf:Person;
+    foaf:name "Adnach";
+    rel:childOf <#Anrothain>.
+
+<#Inrechtach-80fc5db5>
+    a foaf:Person;
+    foaf:name "Inrechtach";
+    rel:childOf <#Anrothain>.
+
+<#Culen>
+    a foaf:Person;
+    foaf:name "Culen";
+    rel:childOf <#Anrothain>.
+
+<#MaelFinne>
+    a foaf:Person;
+    foaf:name "Mael Finne";
+    rel:childOf <#Anrothain>.
+
+<#Tipraiti>
+    foaf:name "Tipraiti";
+    owl:sameAs <#Tipraite>.
+
+<#Find>
+    a foaf:Person;
+    foaf:name "Find";
+    rel:childOf <#Tipraiti>.
+
+<#Cennetig>
+    a foaf:Person;
+    foaf:name "Cennetig";
+    rel:childOf <#Tipraiti>.
+
+<#Currine>
+    a foaf:Person;
+    foaf:name "Currine";
+    rel:childOf <#ConCibil>.
+
+<#ConCibil>
+    a foaf:Person;
+    foaf:name "Con Cibil";
+    rel:childOf <#CulenDuib>.
+
+<#CulenDuib>
+    foaf:name "Culen Duib";
+    owl:sameAs <#CulenDub>;
+    rel:childOf <#Inrechtaig-9f5e7db5>.
+
+<#Inrechtaig-9f5e7db5>
+    owl:sameAs <#Inrectaig>.
+    

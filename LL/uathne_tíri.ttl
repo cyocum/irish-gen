@@ -1,0 +1,84 @@
+@base <http://example.com/LL/uathne_tíri.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Uathne Tíri"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text015.html>;
+    dcterms:format "text/turtle".
+
+<#Longsech>
+    a foaf:Person;
+    foaf:name "Longsech";
+    rel:childOf <#Setnai>;
+    rel:childOf <#Sestain>.
+    
+<#Sestain>
+    a foaf:Person;
+    foaf:name "Sestain";
+    rel:childOf <#Congeltaig>.
+    
+<#Setnai>
+    a foaf:Person;
+    foaf:name "Setnai";
+    rel:childOf <#Congeltaig>.
+
+<#Congeltaig>
+    a foaf:Person;
+    foaf:name "Congeltaig";
+    rel:childOf <#Donchada>.
+
+<#Donchada>
+    a foaf:Person;
+    foaf:name "Donchada";
+    rel:childOf <#Echach>.
+
+<#Echach>
+    a foaf:Person;
+    foaf:name "Echach";
+    rel:childOf <#Naennenaig>.
+
+<#Naennenaig>
+    a foaf:Person;
+    foaf:name "Naennenaig";
+    rel:childOf <#Brocain>.
+
+<#Brocain>
+    a foaf:Person;
+    foaf:name "Brocain";
+    rel:childOf <#Beraig>.
+
+<#Beraig>
+    a foaf:Person;
+    foaf:name "Beraig".
+
+<#Noennenaig>
+    foaf:name "Noennenaig";
+    owl:sameAs <#Naennenaig>.
+
+<#Echdach>
+    a foaf:Person;
+    foaf:name "Echdach";
+    rel:childOf <#Noennenaig>.
+
+<#Forbassach>
+    a foaf:Person;
+    foaf:name "Forbassach";
+    rel:childOf <#Noennenaig>.
+
+<#Fogartach>
+    a foaf:Person;
+    foaf:name "Fogartach";
+    rel:childOf <#Noennenaig>.
+
+<#Murgius>
+    a foaf:Person;
+    foaf:name "Murgius";
+    rel:childOf <#Noennenaig>.

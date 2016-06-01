@@ -1,0 +1,502 @@
+@base <http://example.com/LL/senchas_dáil_fiatach.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Ciarraige"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text024.html>;
+    dcterms:format "text/turtle".
+
+<#FhiatachFind>
+    a foaf:Person;
+    foaf:name "Fhiatach Find";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1272291>;
+    foaf:title "rig h-Erenn"@sga, "King of Ireland"@en.
+
+
+<#Sirchass>
+    a foaf:Person;
+    foaf:name "Sirchass";
+    rel:childOf <#FhiatachFind>.
+
+<#Ogman>
+    a foaf:Person;
+    foaf:name "Ogman";
+    rel:childOf <#FhiatachFind>.
+
+<#Imchada>
+    a foaf:Person;
+    foaf:name "Imchada";
+    rel:childOf <#Finchada>.
+
+<#Finchada>
+    a foaf:Person;
+    foaf:name "Finchada";
+    rel:childOf <#Fogamoin>.
+
+<#Fogamoin>
+    a foaf:Person;
+    foaf:name "Fogamoin".
+
+<#FergusFoltlebor>
+    a foaf:Person;
+    foaf:name "Fergus Foltlebor";
+    rel:childOf <#Imchada>.
+
+<#FergusTeni>
+    a foaf:Person;
+    foaf:name "Fergus Teni";
+    rel:childOf <#Imchada>.
+
+<#FergusDubdétach>
+    a foaf:Person;
+    foaf:name "Fergus Dubdétach";
+    rel:antagonistOf <#Cian>;
+    rel:antagonistOf <#EochoToebfhota>;
+    rel:childOf <#Imchada>.
+
+<#OengusFoscriche>
+    a foaf:Person;
+    foaf:name "Oengus Foscriche";
+    rel:childOf <#Imchada>.
+
+
+<#Cian>
+    a foaf:Person;
+    foaf:name "Cian";
+    rel:childOf <#AilellaOloimm>.
+
+<#AilellaOloimm>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#AilellaOloim>.
+
+<#EochoToebfhota>
+    a foaf:Person;
+    foaf:name "Eocho Toebfhota";
+    rel:childOf <#AilellaOloimm>.
+
+<#Dubthaig>
+    a foaf:Person;
+    foaf:name "Dubthaig";
+    rel:childOf <#Miannaig>.
+
+<#Miannaig>
+    a foaf:Person;
+    foaf:name "Miannaig";
+    rel:childOf <#Lugdach>.
+
+<#Lugdach>
+    a foaf:Person;
+    foaf:name "Lugdach".
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Dubthaig>.
+
+<#Daig>
+    a foaf:Person;
+    foaf:name "Daig";
+    rel:childOf <#Dubthaig>.
+
+<#Dallan>
+    a foaf:Person;
+    foaf:name "Dallan";
+    rel:childOf <#Dubthaig>.
+
+<#Aed-6777be6d>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Dubthaig>.
+
+<#Oengus>
+    a foaf:Person;
+    foaf:name "Oengus";
+    foaf:title "Epscop"@sga, "Bishop"@en;
+    rel:descendantOf <#Daig>.
+
+<#Forg>
+    a foaf:Person;
+    foaf:name "Forg";
+    rel:childOf <#Dallan>.
+
+<#Oengus-b6f4ab70>
+    a foaf:Person;
+    foaf:name "Oengus";
+    rel:childOf <#Dallan>.
+
+<#Murbran>
+    a foaf:Person;
+    foaf:name "Murbran";
+    rel:childOf <#Forg>.
+
+<#Muridach>
+    a foaf:Person;
+    foaf:name "Muridach";
+    rel:childOf <#Forg>.
+
+<#Combrat>
+    a foaf:Person;
+    foaf:name "Combrat";
+    rel:childOf <#Forg>.
+
+<#Connaid>
+    a foaf:Person;
+    foaf:name "Connaid";
+    rel:childOf <#Forg>.
+
+<#Nem>
+    a foaf:Person;
+    foaf:name "Nem";
+    rel:childOf <#Forg>.
+
+<#Lugaid>
+    a foaf:Person;
+    foaf:name "Lugaid";
+    rel:childOf <#Forg>.
+
+<#Bresal>
+    a foaf:Person;
+    foaf:name "Bresal";
+    rel:childOf <#Forg>.
+
+<#Longthe>
+    a foaf:Person;
+    foaf:name "Longthe";
+    rel:childOf <#Forg>.
+
+<#Conall>
+    a foaf:Person;
+    foaf:name "Conall";
+    rel:childOf <#Forg>.
+
+<#Crimthand>
+    a foaf:Person;
+    foaf:name "Crimthand";
+    rel:childOf <#Forg>.
+
+<#OengusIbtach>
+    a foaf:Person;
+    foaf:name "Oengus Ibtach";
+    rel:childOf <#Forg>;
+    rel:childOf [a foaf:Person;
+                 foaf:gender "female"].
+
+<#MuridachMunderg>
+    a foaf:Person;
+    foaf:name "Muridach Munderg";
+    foaf:knows <https://www.wikidata.org/entity/Q17019277>.
+
+<#Cairell>
+    a foaf:Person;
+    foaf:name "Cairell";
+    foaf:name "Cairill";
+    rel:childOf <#MuridachMunderg>.
+
+<#Eocho>
+    a foaf:Person;
+    foaf:name "Eocho";
+    rel:childOf <#MuridachMunderg>.
+
+<#Brenaind>
+    a foaf:Person;
+    foaf:name "Brenaind";
+    rel:childOf <#MuridachMunderg>.
+
+<#EoganMerchrom>
+    a foaf:Person;
+    foaf:name "Eogan Merchrom";
+    rel:childOf <#MuridachMunderg>.
+
+<#Maelodor>
+    a foaf:Person;
+    foaf:name "Maelodor";
+    rel:childOf <#MuridachMunderg>.
+
+<#Congal>
+    a foaf:Person;
+    foaf:name "Congal";
+    rel:childOf <#EoganMerchrom>.
+
+<#Blaithmac>
+    a foaf:Person;
+    foaf:name "Blaithmac";
+    rel:childOf <#EoganMerchrom>.
+
+<#Subni>
+    a foaf:Person;
+    foaf:name "Subni";
+    rel:childOf <#EoganMerchrom>.
+
+<#Finan>
+    a foaf:Person;
+    foaf:name "Finan";
+    rel:childOf <#EoganMerchrom>.
+
+<#Ronán>
+    a foaf:Person;
+    foaf:name "Ronán";
+    rel:childOf <#EoganMerchrom>.
+
+<#Érnine>
+    a foaf:Person;
+    foaf:name "Érnine";
+    rel:childOf <#EoganMerchrom>.
+
+<#Cummine>
+    a foaf:Person;
+    foaf:name "Cummine";
+    rel:childOf <#EoganMerchrom>.
+
+<#ConaillChostodaig>
+    a foaf:Person;
+    foaf:name "Conaill Chostodaig".
+
+<#Bassí>
+    a foaf:Person;
+    foaf:name "Bassí";
+    rel:childOf <#ConaillChostodaig>.
+
+<#OchtarCuillche>
+    a foaf:Person;
+    foaf:name "Ochtar Cuillche";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Cholland>
+    a foaf:Person;
+    foaf:name "Cholland";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Cablin>
+    a foaf:Person;
+    foaf:name "Cablin";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Ainmeri>
+    a foaf:Person;
+    foaf:name "Ainmeri";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Cormac>
+    a foaf:Person;
+    foaf:name "Cormac";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Fandleni>
+    a foaf:Person;
+    foaf:name "Fandleni";
+    rel:childOf <#ConaillChostodaig>.
+
+<#BruitBualid>
+    a foaf:Person;
+    foaf:name "Bruit Bualid";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Ginfhiach>
+    a foaf:Person;
+    foaf:name "Ginfhiach";
+    rel:childOf <#ConaillChostodaig>.
+
+<#Baetán>
+    a foaf:Person;
+    foaf:name "Baetán";
+    foaf:title "rí h-Erenn"@sga, "King of Ireland"@en;
+    rel:childOf <#Cairill>.
+
+<#Cairill>
+    a foaf:Person;
+    foaf:name "Cairill";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    foaf:name "Flaind";
+    rel:childOf <#Fergaile>.
+
+<#Fergaile>
+    a foaf:Person;
+    foaf:name "Fergaile";
+    rel:childOf <#Fergaile>.
+
+<#Fergaile>
+    a foaf:Person;
+    foaf:name "Fergaile";
+    rel:childOf <#Dairchello>.
+
+<#Dairchello>
+    a foaf:Person;
+    foaf:name "Dairchello";
+    rel:childOf <#Baetain>.
+
+<#Baetain>
+    a foaf:Person;
+    foaf:name "Baetain";
+    rel:childOf <#Cairill-3e1cc6a6>.
+
+<#Cairill-3e1cc6a6>
+    owl:sameAs <#Cairell>.
+
+<#Demmán>
+    a foaf:Person;
+    foaf:name "Demmán".
+
+<#Fingen>
+    a foaf:Person;
+    foaf:name "Fingen";
+    rel:childOf <#Demmán>.
+
+<#Glassan>
+    a foaf:Person;
+    foaf:name "Glassan";
+    rel:childOf <#Demmán>.
+
+<#Guare>
+    a foaf:Person;
+    foaf:name "Guare";
+    rel:childOf <#Demmán>.
+
+<#Colman>
+    a foaf:Person;
+    foaf:name "Colman";
+    rel:childOf <#Demmán>.
+
+<#Fiachna>
+    a foaf:Person;
+    foaf:name "Fiachna";
+    rel:childOf <#Demmán>.
+    
+<#Demmain>
+    foaf:name "Demmain";
+    owl:sameAs <#Demmán>;
+    rel:childOf <#Garbae>.
+
+<#Garbae>
+    a foaf:Person;
+    foaf:name "Garbae";
+    foaf:gender "female";
+    rel:childOf <#Nelline>.
+
+<#Nelline>
+    a foaf:Person;
+    foaf:name "Nelline".
+
+<#Fiachnai>
+    foaf:name "Fiachnai";
+    owl:sameAs <#Fiachna>.
+
+<#Dunchad>
+    a foaf:Person;
+    foaf:name "Dunchad";
+    rel:childOf <#Fiachnai>.
+
+<#MaelDuin>
+    a foaf:Person;
+    foaf:name "Mael Duin";
+    rel:childOf <#Fiachnai>.
+
+<#CumneDuibni>
+    a foaf:Person;
+    foaf:name "Cumne Duibni";
+    foaf:gender "Cumne Duibni";
+    rel:parentOf <#Baetain>;
+    rel:childOf <#Furudrain>.
+    
+<#Furudrain>
+    a foaf:Person;
+    foaf:name "Furudrain";
+    rel:childOf <#DuibTurtri>.
+
+<#DuibTurtri>
+    a foaf:Person;
+    foaf:name "Duib Turtri".
+
+<#Baetain>
+    foaf:name "Baetain";
+    owl:sameAs <#Baetán>.
+
+<#Demman>
+a foaf:Person;
+foaf:name "Demman";
+rel:childOf <#Conroch>.
+
+<#Conroch>
+a foaf:Person;
+foaf:name "Conroch";
+rel:childOf <#CongaileCendfhotai>.
+
+<#CongaileCendfhotai>
+a foaf:Person;
+foaf:name "Congaile Cendfhotai";
+rel:childOf <#Dunchada>.
+
+<#Dunchada>
+a foaf:Person;
+foaf:name "Dunchada";
+rel:childOf <#Fiachnai-45a1f042>.
+
+<#Fiachnai-45a1f042>
+    owl:sameAs <#Fiachnai>.
+
+<#DubLacha>
+    a foaf:Person;
+    foaf:name "Dub Lacha";
+    foaf:gender "female";
+    rel:childOf <#Fhiachnai>.
+
+<#Fhiachnai>
+    a foaf:Person;
+    foaf:name "Fhiachnai";
+    rel:childOf <#Demmain>.
+
+<#CumneDub>
+    a foaf:Person;
+    foaf:name "Cumne Dub";
+    rel:spouseOf <#Mongain>.
+
+<#Mongain>
+    a foaf:Person;
+    foaf:name "Mongain";
+    rel:childOf <#Fhiachnai>.
+
+<#Cholgan>
+    a foaf:Person;
+    foaf:name "Cholgan";
+    rel:childOf <#Mongain>;
+    rel:childOf <#CumneDub>.
+
+<#Conaill>
+    a foaf:Person;
+    foaf:name "Conaill";
+    rel:childOf <#Mongain>;
+    rel:childOf <#CumneDub>.
+
+<#Suibne-92960f13>
+    a foaf:Person;
+    foaf:name "Suibne";
+    rel:childOf <#Fhiachnae>.
+
+<#Fhiachnae>
+    foaf:name "Fhiachnae";
+    owl:sameAs <#Fhiachnai>.
+
+<#CumneFinne>
+    a foaf:Person;
+    foaf:name "Cumne Finne";
+    foaf:gender "female";
+    rel:spouseOf <#Fhiachnae>;
+    rel:childOf <#Baetain-ae991bf3>.
+
+<#Baetain-ae991bf3>
+    a foaf:Person;
+    foaf:name "Baetain";
+    rel:childOf <#Echach>.
+    
+<#Echach>
+    a foaf:Person;
+    foaf:name "Echach".

@@ -1,0 +1,274 @@
+@base <http://example.com/LL/h_airgialla.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Na H-Airgialla"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text040.html>;
+    dcterms:format "text/turtle".
+
+<#FiachaSroptene>
+    a foaf:Person;
+    foaf:title "rí"@sga, "king"@en;
+    foaf:name "Fiacha Sroptene";
+    rel:childOf <#CorpriLiphechair>.
+
+<#CorpriLiphechair>
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>.
+
+<#MuridachTirech>
+    a foaf:Person;
+    foaf:name "Muridach Tirech";
+    rel:childOf <#FiachaSroptene>.
+
+<#EochoDomlén>
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EochaidDomlen>;
+    foaf:name "Eocho Domlén";
+    rel:childOf <#CorpriLiphechair>.
+    
+<#MugdornDuib>
+    a foaf:Person;
+    foaf:name "Mugdorn Duib";
+    rel:childOf <#EochoDomlén>.
+
+<#Dubruig>
+    a foaf:Person;
+    foaf:name "Dubruig";
+    rel:childOf <#MugdornDuib>.
+
+<#Papa>
+    a foaf:Person;
+    foaf:name "Papa";
+    rel:childOf <#MugdornDuib>.
+
+<#Caira>
+    a foaf:Person;
+    foaf:name "Caira";
+    rel:childOf <#MugdornDuib>.
+
+<#Sord>
+    a foaf:Person;
+    foaf:name "Sord";
+    rel:childOf <#MugdornDuib>.
+
+<#Ibar>
+    a foaf:Person;
+    foaf:name "Ibar";
+    foaf:title "Epscop"@sga, "bishop"@en;
+    rel:descendantOf <#Sord>.
+
+<#Art>
+    a foaf:Person;
+    foaf:name "Art";
+    rel:childOf <#MugdornDuib>.
+
+<#Inhomomon>
+    a foaf:Person;
+    foaf:name "Inhomomon";
+    rel:childOf <#MugdornDuib>.
+
+<#LocheneMend>
+    a foaf:Person;
+    foaf:name "Lochene Mend";
+    foaf:title "in súi"@sga, "the sage"@en;
+    rel:descendantOf <#Inhomomon>.
+
+<#Mesnophe>
+    a foaf:Person;
+    foaf:name "Mesnophe";
+    rel:childOf <#MugdornDuib>.
+
+<#Ethern>
+    a foaf:Person;
+    foaf:name "Ethern";
+    foaf:title "Epscop"@sga, "bishop"@en;
+    rel:descendantOf <#Mesnophe>.
+
+
+<#CollaFochrich>
+    a foaf:Person;
+    foaf:name "Colla Fochrich";
+    rel:childOf <#EochoDomlén>.
+
+<#CollaFochri>
+    a foaf:Person;
+    foaf:name "Fochri";
+    rel:childOf <#EochoDomlén>.
+
+<#CollaOchre>
+    a foaf:Person;
+    foaf:name "Colla Ochre";
+    rel:childOf <#EochoDomlén>.
+
+<#Élige>
+    a foaf:Person;
+    foaf:name "Élige";
+    foaf:gender "female";
+    rel:spouseOf <#ChrindenCherdda>.
+
+<#ChrindenCherdda>
+    a foaf:Person;
+    foaf:name "Chrinden Cherdda".
+
+<#CollaFochrith>
+    foaf:name "Colla Fochrith";
+    owl:sameAs <#CollaFochrich>.
+
+<#Find>
+    a foaf:Person;
+    foaf:name "Find";
+    rel:childOf <#CollaFochrith>.
+
+<#FiachraCassan>
+    a foaf:Person;
+    foaf:name "Fiachra Cassan";
+    rel:childOf <#CollaFochrith>.
+
+<#Rochad>
+    a foaf:Person;
+    foaf:name "Rochad";
+    rel:childOf <#CollaFochrith>.
+
+<#Brian>
+    a foaf:Person;
+    foaf:name "Brian";
+    rel:childOf <#CollaFochrith>.
+
+<#Labraid>
+    a foaf:Person;
+    foaf:name "Labraid";
+    rel:childOf <#CollaFochrith>.
+
+<#Crimthand>
+    a foaf:Person;
+    foaf:name "Crimthand";
+    rel:descendantOf <#Sord>.
+    # ? not sure - CY
+
+<#Eocho>
+    a foaf:Person;
+    foaf:name "Eocho";
+    rel:childOf <#Crimthand>.
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#Crimthand>.
+
+<#FergusCendfhota>
+    a foaf:Person;
+    foaf:name "Fergus Cendfhota";
+    rel:childOf <#Crimthand>.
+
+<#Lugaid>
+    a foaf:Person;
+    foaf:name "Lugaid";
+    rel:childOf <#Crimthand>.
+
+<#Muridach>
+    a foaf:Person;
+    foaf:name "Muridach";
+    rel:childOf <#Crimthand>.
+
+<#EochaidAmainsen>
+    a foaf:Person;
+    foaf:name "Eochaid Amainsen";
+    rel:childOf <#Muridach>.
+
+<#EochaidAndgaine>
+    a foaf:Person;
+    foaf:name "Eochaid Andgaine";
+    rel:childOf <#Crimthand>.
+
+<#CairpreDamArgait>
+    a foaf:Person;
+    foaf:name "Cairpre Dam Argait";
+    rel:childOf <#EochaidAndgaine>.
+
+<#Daimine>
+    a foaf:Person;
+    foaf:name "Daimine";
+    rel:childOf <#CairpreDamArgait>.
+
+<#Cormac>
+    a foaf:Person;
+    foaf:name "Cormac";
+    rel:childOf <#CairpreDamArgait>.
+
+<#NadSluaig>
+    a foaf:Person;
+    foaf:name "Nad Sluaig";
+    rel:childOf <#CairpreDamArgait>.
+
+<#Feradach>
+    a foaf:Person;
+    foaf:name "Feradach";
+    rel:childOf <#CairpreDamArgait>.
+
+<#Fiacha>
+    a foaf:Person;
+    foaf:name "Fiacha";
+    rel:childOf <#CairpreDamArgait>.
+
+<#Brian>
+    a foaf:Person;
+    foaf:name "Brian";
+    rel:childOf <#CairpreDamArgait>.
+    
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed";
+    rel:childOf <#CairpreDamArgait>.
+
+<#Conall>
+    a foaf:Person;
+    foaf:name "Conall";
+    rel:childOf <#Daimine>.
+
+<#Ailill>
+    a foaf:Person;
+    foaf:name "Ailill";
+    rel:childOf <#Daimine>.
+
+<#Lochan>
+    a foaf:Person;
+    foaf:name "Lochan";
+    rel:childOf <#Daimine>.
+
+<#Tuathal>
+    a foaf:Person;
+    foaf:name "Tuathal";
+    rel:childOf <#Daimine>.
+
+<#DamanLaech>
+    a foaf:Person;
+    foaf:name "Daman Laech";
+    rel:childOf <#Daimine>.
+
+<#DamanClerech>
+    a foaf:Person;
+    foaf:name "Daman Clerech";
+    rel:childOf <#Daimine>.
+
+<#BennanBec>
+    a foaf:Person;
+    foaf:name "Bennan Bec";
+    rel:childOf <#Daimine>.
+
+<#BennanMór>
+    a foaf:Person;
+    foaf:name "Bennan Mór";
+    rel:childOf <#Daimine>.
+
+<#AedUach>
+    a foaf:Person;
+    foaf:name "Aed Uach";
+    rel:childOf <#Daimine>.
+

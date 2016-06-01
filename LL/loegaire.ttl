@@ -1,0 +1,115 @@
+@base <http://example.com/LL/loegaire.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Loegaire"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text058.html>;
+    dcterms:format "text/turtle".
+
+<#CuUlad>
+    a foaf:Person;
+    foaf:name "Cu Ulad";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    foaf:name "Domnaill";
+    rel:childOf <#GillaiUltain>.
+
+<#GillaiUltain>
+    a foaf:Person;
+    foaf:name "Gillai Ultain";
+    rel:childOf <#Oengusa>.
+
+<#Oengusa>
+    a foaf:Person;
+    foaf:name "Oengusa";
+    rel:childOf <#Cainelbain>.
+
+<#Cainelbain>
+    a foaf:Person;
+    foaf:name "Cainelbain";
+    rel:childOf <#MaelChróin>.
+
+<#MaelChróin>
+    a foaf:Person;
+    foaf:name "Mael Chróin";
+    rel:childOf <#Domnaill-cec68b0d>.
+
+<#Domnaill-cec68b0d>
+    a foaf:Person;
+    foaf:name "Domnaill";
+    rel:childOf <#ConRai>.
+
+<#ConRai>
+    a foaf:Person;
+    foaf:name "Con Rai";
+    rel:childOf <#Oengusa>.
+
+<#Oengusa>
+    a foaf:Person;
+    foaf:name "Oengusa";
+    rel:childOf <#FheradaigAraideBibre>.
+
+<#FheradaigAraideBibre>
+    a foaf:Person;
+    foaf:name "Fheradaig Araide Bibre".
+
+<#Cairech>
+    a foaf:Person;
+    foaf:name "Cairech";
+    foaf:gender "female";
+    rel:spouseOf <#FheradaigAraideBibre>.
+
+<#FiachaAraide>
+    a foaf:Person;
+    foaf:name "Fiacha Araide";
+    rel:childOf <#MaelDuinDergainig>.
+
+<#MaelDuinDergainig>
+    a foaf:Person;
+    foaf:name "Mael Duin Dergainig";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    foaf:name "Colmáin";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Libuir>.
+
+<#Libuir>
+    a foaf:Person;
+    foaf:name "Libuir";
+    rel:childOf <#Dalleni>.
+
+<#Dalleni>
+    a foaf:Person;
+    foaf:name "Dalleni";
+    rel:childOf <#Ennai>.
+
+<#Ennai>
+    a foaf:Person;
+    foaf:name "Ennai";
+    rel:childOf <#Loegaire>.
+
+<#Loegaire>
+    a foaf:Person;
+    foaf:name "Loegaire";
+    rel:childOf <#NeillNoigiallaig>.
+
+<#NeillNoigiallaig>
+    owl:sameAs <http://example.com/LL/ríg_mide.ttl#NeillNoigiallaich>;
+    foaf:name "Neill Noigiallaig".
+    

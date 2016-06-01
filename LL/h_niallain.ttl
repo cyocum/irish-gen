@@ -1,0 +1,99 @@
+@base <http://example.com/LL/h_niallain.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach H Niallain"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text044.html>;
+    dcterms:format "text/turtle".
+
+<#Flaithbertach>
+    a foaf:Person;
+    foaf:name "Flaithbertach";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    foaf:name "Flaind";
+    rel:childOf <#Anluain>.
+
+<#Anluain>
+    a foaf:Person;
+    foaf:name "Anluain";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Coscraig>.
+
+<#Coscraig>
+    a foaf:Person;
+    foaf:name "Coscraig";
+    rel:childOf <#Suibni>.
+
+<#Suibni>
+    a foaf:Person;
+    foaf:name "Suibni";
+    rel:childOf <#Ronain>.
+
+<#Ronain>
+    a foaf:Person;
+    foaf:name "Ronain";
+    rel:childOf <#Baetain>.
+
+<#Baetain>
+    a foaf:Person;
+    foaf:name "Baetain";
+    rel:childOf <#Muridaig>.
+
+<#Muridaig>
+    a foaf:Person;
+    foaf:name "Muridaig";
+    rel:childOf <#Eogain>.
+
+<#Eogain>
+    a foaf:Person;
+    foaf:name "Eogain";
+    rel:childOf <#Niallain>.
+
+<#Niallain>
+    a foaf:Person;
+    foaf:name "Niallain";
+    rel:childOf <#Feic>.
+
+<#Feic>
+    a foaf:Person;
+    foaf:name "Feic";
+    rel:childOf <#Feidlimthe>.
+
+<#Feidlimthe>
+    a foaf:Person;
+    foaf:name "Feidlimthe";
+    rel:childOf <#FiachrachCassain>.
+
+<#FiachrachCassain>
+    a foaf:Person;
+    foaf:name "Fiachrach Cassain";
+    rel:childOf <#CollaFocri>.
+
+<#CollaFocri>
+    owl:sameAs <http://example.com/LL/mbresail_macha.ttl#CollaFocri>.
+

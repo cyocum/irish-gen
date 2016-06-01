@@ -1,0 +1,50 @@
+@base <http://example.com/earlyIrishRelationship.ttl#>.
+@prefix : <http://example.com/earlyIrishRelationship.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+
+<>
+	a owl:Ontology;
+	owl:imports <http://purl.org/vocab/relationship/>.
+
+:heirOf
+	a owl:ObjectProperty;
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "heirOf";
+	rdfs:domain foaf:Person;
+	rdfs:range foaf:Person.
+
+:fosterChildOf
+	a owl:ObjectProperty;
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "fosterChildOf";
+	rdfs:domain foaf:Person;
+	rdfs:range foaf:Person.
+
+:fosterParentOf
+	a owl:ObjectProperty;
+	owl:inverseOf :fosterChildOf;
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "fosterParentOf";
+	rdfs:domain foaf:Person;
+	rdfs:range foaf:Person.
+
+:fosterSiblingOf
+	a owl:SymmetricProperty, owl:TransitiveProperty;	
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "fosterSiblingOf";
+	rdfs:domain foaf:Person;
+	rdfs:range foaf:Person.
+
+rel:ancestorOf a owl:IrreflexiveProperty,
+	       	 owl:ObjectProperty.
+
+rel:grandparentOf owl:propertyChainAxiom (rel:parentOf rel:parentOf).
+rel:parentOf rdfs:subPropertyOf rel:ancestorOf.
+
+rel:siblingOf
+    a owl:TransitivePoperty, owl:SymmetricProperty.
+    
