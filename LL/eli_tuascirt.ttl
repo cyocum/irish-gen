@@ -1,0 +1,174 @@
+@base <http://example.com/LL/eli_tuascirt.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Uathni"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text080.html>;
+    dcterms:format "text/turtle".
+
+<#Domnall>
+    a foaf:Person;
+    foaf:name "Domnall";
+    rel:childOf <#Rigbardain>.
+
+<#Rigbardain>
+    a foaf:Person;
+    foaf:name "Rigbardain";
+    rel:childOf <#ConCorne>.
+
+<#ConCorne>
+    a foaf:Person;
+    foaf:name "Con Corne";
+    rel:childOf <#Mainaig>.
+
+<#Mainaig>
+    a foaf:Person;
+    foaf:name "Mainaig";
+    rel:childOf <#Cerbaill>.
+
+<#Cerbaill>
+    a foaf:Person;
+    foaf:name "Cerbaill";
+    rel:childOf <#Dublaigi>.
+
+<#Dublaigi>
+    a foaf:Person;
+    foaf:name "Dublaigi";
+    rel:childOf <#Cnamin>.
+
+<#Cnamin>
+    a foaf:Person;
+    foaf:name "Cnamin";
+    rel:childOf <#Máinaig>.
+
+<#Máinaig>
+    a foaf:Person;
+    foaf:name "Máinaig";
+    rel:childOf <#Shechnasaig>.
+
+<#Shechnasaig>
+    a foaf:Person;
+    foaf:name "Shechnasaig";
+    rel:childOf <#Angeda>.
+
+<#Angeda>
+    a foaf:Person;
+    foaf:name "Angeda";
+    rel:childOf <#MaelRuanaid>.
+
+<#MaelRuanaid>
+    a foaf:Person;
+    foaf:name "Mael Ruanaid";
+    rel:childOf <#Ultain>.
+
+<#Ultain>
+    a foaf:Person;
+    foaf:name "Ultain";
+    rel:childOf <#Lonain>.
+
+<#Lonain>
+    a foaf:Person;
+    foaf:name "Lonain";
+    rel:childOf <#Indig>.
+
+<#Indig>
+    a foaf:Person;
+    foaf:name "Indig";
+    rel:childOf <#Fhéic>.
+
+<#Fhéic>
+    a foaf:Person;
+    foaf:name "Fhéic";
+    rel:childOf <#Tail>.
+
+<#Tail>
+    a foaf:Person;
+    foaf:name "Tail";
+    rel:childOf <#MeicCaire>.
+
+<#MeicCaire>
+    a foaf:Person;
+    foaf:name "Meic Caire";
+    rel:childOf <#Arad>.
+
+<#Arad>
+    a foaf:Person;
+    foaf:name "Arad";
+    rel:childOf <#Druad>.
+
+<#Druad>
+    a foaf:Person;
+    foaf:name "Druad";
+    rel:childOf <#EliRigdeirg>.
+
+<#EliRigdeirg>
+    a foaf:Person;
+    foaf:name "Eli Rigdeirg";
+    rel:childOf <#Imchad>.
+
+<#Imchad>
+    a foaf:Person;
+    foaf:name "Imchad";
+    rel:childOf [
+        a foaf:Person;
+    rel:childOf <#Findcha>;
+    ].
+
+<#Findcha>
+    a foaf:Person;
+    foaf:name "Findcha";
+    rel:childOf [
+        a foaf:Person;
+    rel:childOf <#Fheic-0eece92f>;
+    ].
+    
+
+<#Fheic-0eece92f>
+    a foaf:Person;
+    foaf:name "Fheic";
+    rel:childOf <#Findchain>.
+
+<#Findchain>
+    a foaf:Person;
+    foaf:name "Findchain";
+    rel:childOf <#Condlai>.
+
+<#Condlai>
+    a foaf:Person;
+    foaf:name "Condlai";
+    rel:childOf <#Taidc>.
+
+<#Taidc>
+    a foaf:Person;
+    foaf:name "Taidc";
+    rel:childOf <#Cein>.
+
+<#Cein>
+    a foaf:Person;
+    foaf:name "Cein".
+
+<#Colman>
+    a foaf:Person;
+    foaf:name "Colman";
+    foaf:title "ollam"@sga;
+    foaf:title "faid"@sga, "prophet"@eng;
+    foaf:title "suí senchasa Gaedel"@sga, "sage of stories of Gael"@eng;
+    foaf:title "sui ecnai"@sga, "sage of knowledge"@eng;
+    rel:childOf <#Duach>.
+
+<#Duach>
+    a foaf:Person;
+    foaf:name "Duach";
+    rel:childOf [
+        a foaf:Person;
+    foaf:title "rig Connacht"@sga, "king of Connacht"@eng;
+    ].
+    
