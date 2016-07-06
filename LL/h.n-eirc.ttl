@@ -1,0 +1,195 @@
+@base <http://example.com/LL/h.n-eirc.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "H. n-Eirc"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text125.html>;
+    dcterms:format "text/turtle".
+
+<#ERc>
+a foaf:Person;
+foaf:name "ERc";
+rel:childOf <#MaeliTuili>.
+
+<#MaeliTuili>
+a foaf:Person;
+foaf:name "Maeli Tuili";
+rel:childOf <#Duib Da Chrích>.
+
+<#DuibDaChrích>
+a foaf:Person;
+foaf:name "Duib Da Chrích";
+rel:childOf <#Eirc-7f84ab20>.
+
+<#Eirc-7f84ab20>
+a foaf:Person;
+foaf:name "Eirc";
+rel:childOf <#MaelDúin>.
+
+<#MaelDúin>
+a foaf:Person;
+foaf:name "Mael Dúin";
+rel:childOf <#Cóil>.
+
+<#Cóil>
+a foaf:Person;
+foaf:name "Cóil";
+rel:childOf <#Fheichini>.
+
+<#Fheichini>
+a foaf:Person;
+foaf:name "Fheichini";
+rel:childOf <#Threicdári>.
+
+<#Threicdári>
+a foaf:Person;
+foaf:name "Threicdári".
+
+<#Threicdari-9bb4b3d0>
+a foaf:Person;
+foaf:name "Threicdári";
+owl:sameAs <#Threicdári>.
+
+<#Garban>
+a foaf:Person;
+foaf:name "Garban";
+rel:childOf <#Threicdari-9bb4b3d0>.
+# "Da mc Threicdari" - <#Garban> and <#Fheichini>? 
+
+<#Treicheni>
+a foaf:Person;
+foaf:name "Treicheni";
+rel:childOf <#Eirc-07e81090>.
+
+<#Eirc-07e81090>
+a foaf:Person;
+foaf:name "Eirc";
+rel:childOf <#Conchind>.
+
+<#Conchind>
+a foaf:Person;
+foaf:name "Conchind";
+rel:childOf <#Dróida>.
+
+<#Dróida>
+a foaf:Person;
+foaf:name "Dróida";
+rel:childOf <#Buain>;
+owl:sameAs <http://example.com/LL/h.raithnen.ttl#Droida>.
+
+<#Buain>
+a foaf:Person;
+foaf:name "Buain";
+rel:childOf <#LoegairiBirnBuadaig>.
+
+<#LoegairiBirnBuadaig>
+a foaf:Person;
+foaf:name "Loegairi Birn Buadaig".
+
+<#Tuathchar>
+a foaf:Person;
+foaf:name "Tuathchar";
+rel:childOf <#Dúngalaig>.
+
+<#Dúngalaig>
+a foaf:Person;
+foaf:name "Dúngalaig";
+rel:childOf <#Murgile>.
+
+<#Murgile>
+a foaf:Person;
+foaf:name "Murgile";
+rel:childOf <#Bríain>.
+
+<#Bríain>
+a foaf:Person;
+foaf:name "Bríain";
+rel:childOf <#MaeleDúin-3c8dc720>.
+
+<#MaeleDúin-3c8dc720>
+a foaf:Person;
+foaf:name "Maele Dúin";
+rel:childOf <#Cóil-443576d0>.
+
+<#Cóil-443576d0>
+a foaf:Person;
+foaf:name "Cóil";
+rel:childOf <#Fhéichini-4dea82b0>.
+
+<#Fhéichini-4dea82b0>
+a foaf:Person;
+foaf:name "Fhéichini";
+rel:childOf <#Senaig>.
+# This string of three names also appears in the
+  first pedigree ("Mael Dúin mc Cóil mc Fheichini").
+  Possibly doublet? EPT
+
+<#Senaig>
+a foaf:Person;
+foaf:name "Senaig";
+rel:childOf <#NathÍ>.
+
+<#NathÍ>
+a foaf:Person;
+foaf:name "Nath Í";
+rel:childOf <#Treicheni>.
+
+<#Treicheni>
+a foaf:Person;
+foaf:name "Treicheni";
+rel:childOf <#Thréic>.
+
+<#Thréic>
+a foaf:Person;
+foaf:name "Thréic";
+rel:childOf <#Dári>.
+
+<#Dári>
+a foaf:Person;
+foaf:name "Dári";
+rel:childOf <#Eirc-6e290430>.
+
+<#Eirc-6e290430>
+a foaf:Person;
+foaf:name "Eirc";
+owl:sameAs <#Eirc-07e81090>.
+# Which Erc is this? <#ERc> or <#Eirc-6e290430>? EPT
+
+<#CendFaelad>
+a foaf:Person;
+foaf:name "Cend Faelad";
+rel:childOf <#Bruatair>.
+
+<#Bruatair>
+a foaf:Person;
+foaf:name "Bruatair";
+rel:childOf <#MeicÉitig>.
+
+<#MeicÉitig>
+a foaf:Person;
+foaf:name "Meic Éitig";
+rel:childOf <#Forbasaig>.
+
+<#Forbasaig>
+a foaf:Person;
+foaf:name "Forbasaig";
+rel:childOf <#Eirc>.
+
+<#Eirc>
+a foaf:Person;
+foaf:name "Eirc";
+rel:childOf <#MaelTuili-cd6dbfd0>;
+owl:sameAs <#ERc>.
+
+<#MaelTuili-cd6dbfd0>
+a foaf:Person;
+foaf:name "Mael Tuili";
+owl:sameAs <#MaeliTuili>. 
