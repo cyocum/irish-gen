@@ -1,0 +1,76 @@
+@base <http://example.com/LL/h_maele_cainag.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "H. Osráin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text123.html>;
+    dcterms:format "text/turtle".
+
+#CELT has two Section 123s. The link leads to H_Maele_Cainag. EPT
+
+<#Cellach>
+    a foaf:Person;
+    foaf:name "Cellach";
+    rel:childOf <#MeicLachtnai>.
+
+<#MeicLachtnai>
+    a foaf:Person;
+    foaf:name "Meic Lachtnai";
+    rel:childOf <#Faeláin>.
+
+<#Faeláin>
+    a foaf:Person;
+    foaf:name "Faeláin";
+    rel:childOf <#Rónáin>.
+
+<#Rónáin>
+    a foaf:Person;
+    foaf:name "Rónáin";
+    rel:childOf <#Fianngussa>.
+
+<#Fianngussa>
+    a foaf:Person;
+    foaf:name "Fianngussa";
+    rel:childOf <#MaeleCainig>.
+
+<#MaeleCainig>
+    a foaf:Person;
+    foaf:name "Maele Cainig";
+    rel:childOf <#Laidcgnen>.
+
+<#Laidcgnen>
+    a foaf:Person;
+    foaf:name "Laidcgnen";
+    rel:childOf <#Rónáin-7b9fdd3b>.
+
+<#Rónáin-7b9fdd3b>
+    a foaf:Person;
+    foaf:name "Rónáin";
+    rel:childOf <#Cobthaig>.
+
+<#Cobthaig>
+    a foaf:Person;
+    foaf:name "Cobthaig";
+    rel:childOf <#MeicCulind>.
+
+<#MeicCulind>
+    a foaf:Person;
+    foaf:name "Meic Culind";
+    rel:childOf <#Fhindchada>.
+
+<#Fhindchada>
+    a foaf:Person;
+    foaf:name "Fhindchada";
+    rel:childOf <#Dega>.
+
+<#Dega>
+    a foaf:Person;
+    foaf:name "Dega".
