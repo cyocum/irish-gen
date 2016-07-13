@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <>
 	a owl:Ontology;
@@ -33,11 +34,17 @@
 	rdfs:range foaf:Person.
 
 :fosterSiblingOf
-	a owl:SymmetricProperty, owl:TransitiveProperty;	
+	a owl:SymnonNegativeIntegermetricProperty, owl:TransitiveProperty;	
 	rdfs:subPropertyOf foaf:knows;
 	rdfs:label "fosterSiblingOf";
 	rdfs:domain foaf:Person;
 	rdfs:range foaf:Person.
+
+:numChild
+    a owl:DatatypeProperty;
+    rdfs:domain foaf:Person;
+    rdfs:range xsd:nonNegativeInteger;
+    rdfs:comment "this property relates to the stated number of children in a genaology of a particular individual in a manuscript. The individual may have more from other genealogies but this only refers to the number as stated in the manuscript in which this particular individual is found." 
 
 rel:ancestorOf a owl:IrreflexiveProperty,
 	       	 owl:ObjectProperty.
@@ -47,4 +54,6 @@ rel:parentOf rdfs:subPropertyOf rel:ancestorOf.
 
 rel:siblingOf
     a owl:TransitivePoperty, owl:SymmetricProperty.
+
+
     

@@ -1,0 +1,120 @@
+@base <http://example.com/LL/h_n_dróna.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Ríg .H. n-Dróna"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text085.html>;
+    dcterms:format "text/turtle".
+
+<#MaelSechnaill>
+    a foaf:Person;
+    foaf:name "Mael Sechnaill";
+    rel:childOf <#Dondchada>.
+
+<#Dondchada>
+    a foaf:Person;
+    foaf:name "Dondchada";
+    rel:childOf <#Taidg>.
+
+<#Taidg>
+    a foaf:Person;
+    foaf:name "Taidg";
+    rel:childOf <#Cairpre>.
+
+<#Cairpre>
+    a foaf:Person;
+    foaf:name "Cairpre";
+    rel:childOf [
+        a foaf:Person;
+        rel:childOf [
+            a foaf:Person;
+            rel:childOf <#Riain>
+        ]
+    ].
+
+<#Riain>
+    a foaf:Person;
+    foaf:name "Riain";
+    rel:childOf <#Dubgilla>.
+    
+<#Dubgilla>
+    a foaf:Person;
+    foaf:name "Dubgilla";
+    rel:childOf <#Bruatair>.
+
+<#Bruatair>
+    a foaf:Person;
+    foaf:name "Bruatair";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Corpri>.
+
+<#Corpri>
+    a foaf:Person;
+    foaf:name "Corpri";
+    rel:childOf <#Laidcnen>.
+
+<#Laidcnen>
+    a foaf:Person;
+    foaf:name "Laidcnen";
+    rel:childOf <#Colmain>.
+
+<#Colmain>
+    a foaf:Person;
+    foaf:name "Colmain";
+    rel:childOf <#AedaRoin>.
+
+<#AedaRoin>
+    a foaf:Person;
+    foaf:name "Aeda Roin";
+    rel:childOf <#Crunmael>.
+
+<#Crunmael>
+    a foaf:Person;
+    foaf:name "Crunmael";
+    rel:childOf <#Ronain>.
+
+<#Ronain>
+    a foaf:Person;
+    foaf:name "Ronain";
+    rel:childOf <#Colmain>.
+
+<#Colmain>
+    a foaf:Person;
+    foaf:name "Colmain";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    foaf:name "Cormaic";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/h_ndega.ttl#Cormaic>.
+
+<#NathÍ>
+    a foaf:Person;
+    foaf:name "Nath Í";
+    rel:childOf <#Crimthainn>;
+    owl:sameAs <http://example.com/LL/h_ndega.ttl#NathÍ>.
+
+<#Crimthainn>
+    a foaf:Person;
+    foaf:name "Crimthainn";
+    rel:childOf <#Ennae>;
+    owl:sameAs <http://example.com/LL/h_ndega.ttl#Crimthaind>.
+
+<#Ennae>
+    a foaf:Person;
+    foaf:name "Ennae";
+    owl:sameAs <http://example.com/LL/h_felmeda#EnnaeChenselaig>.
+    

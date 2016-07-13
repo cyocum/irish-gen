@@ -23,8 +23,9 @@
 <#Roig>
     owl:sameAs <http://example.com/LL/n_echach.ttl#Roig>;
     foaf:name "Roig";
-    foaf:gender "female";
-    rel:childOf <#Echach>.
+    rel:childOf [a foaf:Person;
+                 foaf:gender "female";
+		 rel:childOf <#Echach>].
 
 <#Echach>
     a foaf:Person;
@@ -162,13 +163,11 @@
     rel:childOf <#Corpri-033a63ee>.
 
 <#Corpri-033a63ee>
-    a foaf:Person;
-    foaf:name "Corpri";
+    owl:sameAs <#Corpri>;
     rel:childOf <#Lugdach-f41962a5>.
 
 <#Lugdach-f41962a5>
-    a foaf:Person;
-    foaf:name "Lugdach";
+    owl:sameAs <#Lugdach>;
     rel:childOf <#Lugair>.
 
 <#Lugair>
