@@ -1,0 +1,102 @@
+@base <http://example.com/LL/lugne.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Lugne"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text120.html>;
+    dcterms:format "text/turtle".
+
+
+<#AEd>
+a foaf:Person;
+foaf:name "AEd";
+rel:childOf <#Taichlig>.
+
+<#Taichlig>
+a foaf:Person;
+foaf:name "Taichlig";
+rel:childOf <#Murchada>.
+
+<#Murchada>
+a foaf:Person;
+foaf:name "Murchada";
+rel:childOf <#Domnaill>.
+
+<#Domnaill>
+a foaf:Person;
+foaf:name "Domnaill";
+rel:childOf <#Murchada>.
+
+<#Murchada>
+a foaf:Person;
+foaf:name "Murchada";
+rel:childOf <#Murgiusa>.
+
+<#Murgiusa>
+a foaf:Person;
+foaf:name "Murgiusa";
+rel:childOf <#Egra Faprig>.
+
+<#EgraFaprig>
+a foaf:Person;
+foaf:name "Egra Faprig";
+rel:childOf <#Soergusa>;
+rdfs:comment "a quo .h. Egra".
+
+<#Soergusa>
+a foaf:Person;
+foaf:name "Soergusa";
+rel:childOf <#Becce>.
+
+<#Becce>
+a foaf:Person;
+foaf:name "Becce";
+rel:childOf <#Lathgusa>.
+
+<#Lathgusa>
+a foaf:Person;
+foaf:name "Lathgusa";
+rel:childOf <#Cind Faelad>;
+rdfs:comment "a quo Cland Lathgus[a]".
+
+<#CindFaelad>
+a foaf:Person;
+foaf:name "Cind Faelad";
+rel:childOf <#Findbairr>.
+
+<#Findbairr>
+a foaf:Person;
+foaf:name "Findbairr";
+rel:childOf <#Diarmata>.
+
+<#Diarmata>
+a foaf:Person;
+foaf:name "Diarmata";
+rel:childOf <#Dala>.
+
+<#Dala>
+a foaf:Person;
+foaf:name "Dala";
+rel:childOf <#Eoin>.
+
+<#Eoin>
+a foaf:Person;
+foaf:name "Eoin";
+rel:childOf <#Ithchaire>.
+
+<#Ithchaire>
+a foaf:Person;
+foaf:name "Ithchaire";
+rel:childOf <#AirtChirp>.
+
+<#AirtChirp>
+a foaf:Person;
+foaf:name "Airt Chirp".
