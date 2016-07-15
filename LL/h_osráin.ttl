@@ -53,7 +53,7 @@
     a foaf:Person;
     foaf:name "Ossáin";
     rel:childOf <#Saráin>.
-# Recte Osráin? I've looked at the manuscript and I am pretty sure the second -s- is an -r-. Also, there needs to be an Osrán somewhere for the title to make sense! EPT
+    # Recte Osráin? I've looked at the manuscript and I am pretty sure the second -s- is an -r-. Also, there needs to be an Osrán somewhere for the title to make sense! EPT
 
 <#Saráin>
     a foaf:Person;
@@ -67,11 +67,11 @@
 <#Loegaire>
     a foaf:Person;
     foaf:name "Loegaire";
-    rel:childOf <#Duibéitig.>.
+    rel:childOf <#Duibéitig>.
 
-<#Duibéitig.>
+<#Duibéitig>
     a foaf:Person;
-    foaf:name "Duibéitig.";
+    foaf:name "Duibéitig";
     rel:childOf <#Ailléccain>.
 
 <#Ailléccain>
@@ -209,15 +209,23 @@
     foaf:name "Linga";
     rel:childOf <#Mail-b265b280>.
 
+# In Sil_Birn, Daiglinguae is one person but <#Daig> 
+  and <#Linga> are presented as separate names here. 
+  If <#Daig> and <#Linga> are separate people,
+  then, in each section, Mál has 8 sons, not 
+  7, as per the text on each occasion. I have
+  therefore linked them all together via owl:sameAs. EPT  
+
 <#Eidlech>
     a foaf:Person;
     foaf:name "Eidlech";
     rel:childOf <#Mail-b265b280>.
 
-<#Cass>
+<#Cass--267558e0>
     a foaf:Person;
     foaf:name "Cass";
-    rel:childOf <#Mail-b265b280>.
+    rel:childOf <#Mail-b265b280>;
+    owl:sameAs <#Caiss>.
 
 <#AedCaémchend>
     a foaf:Person;
@@ -430,6 +438,7 @@
 <#Fhothaid-2bed22c0>
     a foaf:Person;
     foaf:name "Fhothaid";
+    rel:childOf <#Dróida-321b78e0>;
     owl:sameAs <http://example.com/LL/h_raithnen.ttl#Fhothaid>.
 
 <#Dróida-321b78e0>
