@@ -1,0 +1,165 @@
+@base <http://example.com/LL/ríg_lagen.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Ríg Lagen"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text089.html>;
+    dcterms:format "text/turtle".
+
+<#Murchertach>
+    a foaf:Person;
+    foaf:name "Murchertach";
+    rel:childOf <#GillaiComgaill>;
+    rel:parentOf [
+        a foaf:Person;
+        foaf:gender "female";
+        rel:spouseOf <#Diarmata>
+    ].
+        
+
+<#GillaiComgaill>
+    a foaf:Person;
+    foaf:name "Gillai Comgaill";
+    rel:childOf <#DuindChuan>.
+
+<#DuindChuan>
+    a foaf:Person;
+    foaf:name "Duind Chuan";
+    rel:childOf <#GillaiChaemgin>.
+
+<#GillaiChaemgin>
+    a foaf:Person;
+    foaf:name "Gillai Chaemgin";
+    rel:childOf <#GillaiChomgaill>.
+
+<#GillaiChomgaill>
+    a foaf:Person;
+    foaf:name "Gillai Chomgaill";
+    rel:childOf <#DuindChuan>.
+
+<#DuindChuan>
+    a foaf:Person;
+    foaf:name "Duind Chuan";
+    rel:childOf <#Dunlaing>.
+
+<#Dunlaing>
+    a foaf:Person;
+    foaf:name "Dunlaing";
+    rel:childOf <#Thuathail>.
+
+<#Thuathail>
+    a foaf:Person;
+    foaf:name "Thuathail";
+    rel:childOf <#Ugaire>.
+
+<#Ugaire>
+    a foaf:Person;
+    foaf:name "Ugaire";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    foaf:name "Ailella";
+    rel:childOf <#Dunlaing>.
+
+<#Dunlaing>
+    a foaf:Person;
+    foaf:name "Dunlaing";
+    rel:childOf <#Muridaig>.
+
+<#Muridaig>
+    a foaf:Person;
+    foaf:name "Muridaig";
+    rel:childOf <#Brain>.
+
+<#Brain>
+    a foaf:Person;
+    foaf:name "Brain";
+    rel:childOf <#Muridaig>.
+
+<#Muridaig>
+    a foaf:Person;
+    foaf:name "Muridaig";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    foaf:name "Murchada";
+    rel:childOf <#BrainMúit>.
+
+<#BrainMúit>
+    a foaf:Person;
+    foaf:name "Brain Múit";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    foaf:name "Conaill";
+    rel:childOf <#Faelain>.
+
+<#Faelain>
+    a foaf:Person;
+    foaf:name "Faelain";
+    rel:childOf <#Colmain>.
+
+<#Colmain>
+    a foaf:Person;
+    foaf:name "Colmain".
+
+<#Lorcan>
+    a foaf:Person;
+    foaf:name "Lorcan";
+    foaf:title "ardepscop Lagen"@sga, "Archbishop of Leinster"@en;
+    rel:childOf <#Murchertaig>.
+
+<#Murchertaig>
+    foaf:name "Murchertaig";
+    owl:sameAs <#Murchertach>.
+
+<#GillaComgaill>
+    foaf:title "rí"@sga, "king"@en;
+    owl:sameAs <#GillaiComgaill>.
+
+<#Túathal>
+    foaf:name "Túathal";
+    owl:sameAs <#Thuathail>.
+
+
+<#AugaireRuad>
+    foaf:name "Augaire Ruad";
+    owl:sameAs <#Ugaire>.
+
+<#Dunlang>
+    foaf:name "Dunlang";
+    owl:sameAs <#Dunlaing>.
+
+<#Aed>
+    a foaf:Person;
+    foaf:name "Aed".
+    
+<#Conchobur>
+    a foaf:Person;
+    foaf:name "Conchobur".
+
+<#Diarmata>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Dondchada>.
+
+<#Dondchada>
+    a foaf:Person;
+    foaf:name "Dondchada";
+    rel:childOf <#Murchada-4ef02db9>.
+
+<#Murchada-4ef02db9>
+    a foaf:Person;
+    foaf:title "rig Lagen & Gall"@sga, "king of leinster and foreigners"@en;
+    foaf:name "Murchada".
