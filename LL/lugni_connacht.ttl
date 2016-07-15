@@ -1,0 +1,119 @@
+@base <http://example.com/LL/lugni_connacht.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Lugni Connacht"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text119.html>;
+    dcterms:format "text/turtle".
+
+<#Diarmait>
+    a foaf:Person;
+    foaf:name "Diarmait";
+    rel:childOf <#Finnachta>.
+
+<#Finnachta>
+    a foaf:Person;
+    foaf:name "Finnachta";
+    rel:childOf <#MaeleCotaid>.
+
+<#MaeleCotaid>
+    a foaf:Person;
+    foaf:name "Maele Cotaid";
+    rel:childOf <#MaeleDuin>.
+
+<#MaeleDuin>
+    a foaf:Person;
+    foaf:name "Maele Duin";
+    rel:childOf <#CindFhaelad>.
+
+<#CindFhaelad>
+    a foaf:Person;
+    foaf:name "Cind Fhaelad";
+    rel:childOf <#Dúngalaig>.
+
+<#Dúngalaig>
+    a foaf:Person;
+    foaf:name "Dúngalaig";
+    rel:childOf <#Thaiclig>.
+
+<#Thaiclig>
+    a foaf:Person;
+    foaf:name "Thaiclig";
+    rel:childOf <#CindFaelad-5e94bf20>.
+
+<#CindFaelad-5e94bf20>
+    a foaf:Person;
+    foaf:name "Cind Faelad";
+    rel:childOf <#Diarmata-3a460c90>.
+
+<#Diarmata-3a460c90>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Fhindbairr>.
+
+<#Fhindbairr>
+    a foaf:Person;
+    foaf:name "Fhindbairr";
+    rel:childOf <#Brenaind>.
+
+<#Brenaind>
+    a foaf:Person;
+    foaf:name "Brenaind";
+    rel:childOf <#NadFraich>.
+
+<#NadFraich>
+    a foaf:Person;
+    foaf:name "Nad Fraich";
+    rel:childOf <#Iden>.
+
+<#Iden>
+    a foaf:Person;
+    foaf:name "Iden";
+    rel:childOf <#Idchuir>; 
+    rdfs:comment "Iden nó Eoin".
+# I can't immediately think how to 
+# represent this point of uncertainty.
+# Could we make an entry for Iden and an
+# entry for Eoin and then make them 
+# owl:sameAs each other? Or does the 
+# comment suffice? EPT
+
+<#Idchuir>
+    a foaf:Person;
+    foaf:name "Idchuir";
+    rel:childOf <#NiadCorp>.
+
+<#NiadCorp>
+    a foaf:Person;
+    foaf:name "Niad Corp";
+    rel:childOf <#Loi>.
+
+<#Loi>
+    a foaf:Person;
+    foaf:name "Loi";
+    rel:childOf <#CormaicGaleng>;
+    owl:sameAs "o filet Lugni".
+
+<#CormaicGaleng>
+    a foaf:Person;
+    foaf:name "Cormaic Galeng";
+    rel:childOf <#Thaidc>.
+
+<#Thaidc>
+    a foaf:Person;
+    foaf:name "Thaidc";
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Tadc>;
+    rel:childOf <#Cein>.
+
+<#Cein>
+    a foaf:Person;
+    foaf:name "Cein";
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Cian>.
