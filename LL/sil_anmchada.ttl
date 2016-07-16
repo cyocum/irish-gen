@@ -1,0 +1,74 @@
+@base <http://example.com/LL/sil_anmchada.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Síl Anmchada"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text118.html>;
+    dcterms:format "text/turtle".
+
+<#Godra>
+a foaf:Person;
+foaf:name "Godra";
+rel:childOf <#Dunadaig>.
+
+<#Dunadaig>
+a foaf:Person;
+foaf:name "Dunadaig";
+rel:childOf <#Godrai-8b110cb0>.
+
+<#Godrai-8b110cb0>
+a foaf:Person;
+foaf:name "Godrai";
+rel:childOf <#Longsig>.
+
+<#Longsig>
+a foaf:Person;
+foaf:name "Longsig";
+rel:childOf <#Dunadaig>.
+
+<#Dunadaig>
+a foaf:Person;
+foaf:name "Dunadaig";
+rel:childOf <#Cobthaig>.
+
+<#Cobthaig>
+a foaf:Person;
+foaf:name "Cobthaig";
+rel:childOf <#MaelDuin>.
+
+<#MaelDuin>
+a foaf:Person;
+foaf:name "Mael Duin";
+rel:childOf <#Dondgalaig>.
+
+<#Dondgalaig>
+a foaf:Person;
+foaf:name "Dondgalaig";
+rel:childOf <#Anmchada>.
+
+<#Anmchada>
+a foaf:Person;
+foaf:name "Anmchada";
+rel:childOf <#EogainBúaic>.
+
+<#EogainBúaic>
+a foaf:Person;
+foaf:name "Eogain Búaic";
+rel:childOf <#Cormaic>.
+
+<#Cormaic>
+a foaf:Person;
+foaf:name "Cormaic";
+rel:childOf <#CorpriChruim>.
+
+<#CorpriChruim>
+a foaf:Person;
+foaf:name "Corpri Chruim".
