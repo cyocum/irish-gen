@@ -1,0 +1,141 @@
+@base <http://example.com/LL/h_fiachrach.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "H. Fiachrach"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text117.html>;
+    dcterms:format "text/turtle".
+    
+<#Aeda>
+    a foaf:Person;
+    foaf:name "m Aeda";
+    rel:childOf <#Diarmata>;
+    rel:parentOf [
+        a foaf:Person;
+        rdfs:comment "[gap: name omitted/extent: ? letters]"
+    ].
+    
+
+<#Diarmata>
+    a foaf:Person;
+    foaf:name "Diarmata";
+    rel:childOf <#Thaidc>.
+
+<#Thaidc>
+    a foaf:Person;
+    foaf:name "Thaidc";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    foaf:name "Murchada";
+    rel:childOf <#Aeda-57c74630>.
+
+<#Aeda-57c74630>
+    a foaf:Person;
+    foaf:name "Aeda";
+    rel:childOf <#Cellaig>.
+
+<#Cellaig>
+    a foaf:Person;
+    foaf:name "Cellaig";
+    rel:childOf <#Fhiannachtai>.
+
+<#Fhiannachtai>
+    a foaf:Person;
+    foaf:name "Fhiannachtai";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    foaf:name "Ailella";
+    rel:childOf <#Inrechtaig>.
+
+<#Inrechtaig>
+    a foaf:Person;
+    foaf:name "Inrechtaig";
+    rel:childOf <#Dluthaig>.
+
+<#Dluthaig>
+    a foaf:Person;
+    foaf:name "Dluthaig";
+    rel:childOf <#Fhithchellaig>.
+
+<#Fhithchellaig>
+    a foaf:Person;
+    foaf:name "Fhithchellaig";
+    rel:childOf <#Dicolla>.
+
+<#Dicolla>
+    a foaf:Person;
+    foaf:name "Dicolla";
+    rel:childOf <#EogainFhind>.
+
+<#EogainFhind>
+    a foaf:Person;
+    foaf:name "Eogain Fhind";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    foaf:name "Cormaic";
+    rel:childOf <#CorpriChruim>;
+    owl:sameAs <http://example.com/LL/sil_anmchada.ttl#Cormaic>.
+
+<#CorpriChruim>
+    a foaf:Person;
+    foaf:name "Corpri Chruim";
+    rel:childOf <#Fheradaig>;
+    owl:sameAs <http://example.com/LL/sil_anmchada.ttl#CorpriChruim>.
+
+<#Fheradaig>
+    a foaf:Person;
+    foaf:name "Fheradaig";
+    rel:childOf <#Lugdach>.
+
+<#Lugdach>
+    a foaf:Person;
+    foaf:name "Lugdach";
+    rel:childOf <#Dallain>.
+
+<#Dallain>
+    a foaf:Person;
+    foaf:name "Dallain";
+    rel:childOf <#Bresail>.
+
+<#Bresail>
+    a foaf:Person;
+    foaf:name "Bresail";
+    rel:childOf <#Mani>.
+
+<#Mani>
+    a foaf:Person;
+    foaf:name "Mani";
+    rel:childOf <#Echach>.
+
+<#Echach>
+    a foaf:Person;
+    foaf:name "Echach";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    foaf:name "Domnaill";
+    rel:childOf <#FhiachachSroptine>.
+
+<#FhiachachSroptine>
+    a foaf:Person;
+    foaf:name "Fhiachach Sroptine";
+    rel:childOf <#CarpriLifechair>.
+
+<#CarpriLifechair>
+    a foaf:Person;
+    foaf:name "Carpri Lifechair".
