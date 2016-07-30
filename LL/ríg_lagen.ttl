@@ -17,37 +17,36 @@
 <#Murchertach>
     a foaf:Person;
     foaf:name "Murchertach";
-    rel:childOf <#GillaiComgaill>;
-    rel:parentOf [
-        a foaf:Person;
-        foaf:gender "female";
-        rel:spouseOf <#Diarmata>
-    ].
-        
+    rel:childOf <#GillaiComgaill>.
 
 <#GillaiComgaill>
     a foaf:Person;
     foaf:name "Gillai Comgaill";
+    foaf:name "Gilla Comgaill";
     rel:childOf <#DuindChuan>.
 
 <#DuindChuan>
     a foaf:Person;
     foaf:name "Duind Chuan";
+    foaf:name "Dond Cuan";
     rel:childOf <#GillaiChaemgin>.
 
 <#GillaiChaemgin>
     a foaf:Person;
     foaf:name "Gillai Chaemgin";
+    foaf:name "Gilla Caemgin";
     rel:childOf <#GillaiChomgaill>.
 
 <#GillaiChomgaill>
     a foaf:Person;
     foaf:name "Gillai Chomgaill";
-    rel:childOf <#DuindChuan>.
+    foaf:name "Gilla Comgaill";
+    rel:childOf <#DuindChuan-d54abd20>.
 
-<#DuindChuan>
+<#DuindChuan-d54abd20>
     a foaf:Person;
     foaf:name "Duind Chuan";
+    foaf:name "Dond Cuan";
     rel:childOf <#Dunlaing>.
 
 <#Dunlaing>
@@ -58,6 +57,7 @@
 <#Thuathail>
     a foaf:Person;
     foaf:name "Thuathail";
+    foaf:name "Tuathal";
     rel:childOf <#Ugaire>.
 
 <#Ugaire>
@@ -68,9 +68,10 @@
 <#Ailella>
     a foaf:Person;
     foaf:name "Ailella";
-    rel:childOf <#Dunlaing>.
+    foaf:name "Ailill";
+    rel:childOf <#Dunlaing-0549e0f0>.
 
-<#Dunlaing>
+<#Dunlaing-0549e0f0>
     a foaf:Person;
     foaf:name "Dunlaing";
     rel:childOf <#Muridaig>.
@@ -78,14 +79,16 @@
 <#Muridaig>
     a foaf:Person;
     foaf:name "Muridaig";
+    foaf:name "Muiredach";
     rel:childOf <#Brain>.
 
 <#Brain>
     a foaf:Person;
     foaf:name "Brain";
-    rel:childOf <#Muridaig>.
+    foaf:name "Bran";
+    rel:childOf <#Muridaig-19a9ca60>.
 
-<#Muridaig>
+<#Muridaig-19a9ca60>
     a foaf:Person;
     foaf:name "Muridaig";
     rel:childOf <#Murchada>.
@@ -93,26 +96,31 @@
 <#Murchada>
     a foaf:Person;
     foaf:name "Murchada";
+    foaf:name "Murchad";
     rel:childOf <#BrainMúit>.
 
 <#BrainMúit>
     a foaf:Person;
     foaf:name "Brain Múit";
+    foaf:name "Bran Múit";
     rel:childOf <#Conaill>.
 
 <#Conaill>
     a foaf:Person;
     foaf:name "Conaill";
+    foaf:name "Conall";
     rel:childOf <#Faelain>.
 
 <#Faelain>
     a foaf:Person;
     foaf:name "Faelain";
+    foaf:name "Faelan";
     rel:childOf <#Colmain>.
 
 <#Colmain>
     a foaf:Person;
-    foaf:name "Colmain".
+    foaf:name "Colmain";
+    foaf:name "Colman".
 
 <#Lorcan>
     a foaf:Person;
@@ -122,32 +130,46 @@
 
 <#Murchertaig>
     foaf:name "Murchertaig";
+    foaf:name "Muirchertach";
+    rel:descendantOf <#Thuathail>; 
     owl:sameAs <#Murchertach>.
 
 <#GillaComgaill>
+    a foaf:Person;
     foaf:title "rí"@sga, "king"@en;
-    owl:sameAs <#GillaiComgaill>.
+    rel:childOf <#Murchertaig>.
 
 <#Túathal>
+    a foaf:Person;
     foaf:name "Túathal";
-    owl:sameAs <#Thuathail>.
-
+    rel:childOf <#Murchertaig>.
 
 <#AugaireRuad>
+    a foaf:Person;
     foaf:name "Augaire Ruad";
-    owl:sameAs <#Ugaire>.
+    rel:childOf <#Murchertaig>.
 
 <#Dunlang>
+    a foaf:Person;
     foaf:name "Dunlang";
-    owl:sameAs <#Dunlaing>.
+    rel:childOf <#Murchertaig>.
 
 <#Aed>
     a foaf:Person;
-    foaf:name "Aed".
+    foaf:name "Aed";
+    rel:childOf <#Murchertaig>.
     
 <#Conchobur>
     a foaf:Person;
-    foaf:name "Conchobur".
+    foaf:name "Conchobur";
+    rel:childOf <#Murchertaig>.
+
+<#Mór>
+    a foaf:Person;
+    foaf:name "Mór";
+    rel:spouseOf <#Diarmata>;
+    rel:childOf <#Murchertaig>;
+    foaf:gender "female".
 
 <#Diarmata>
     a foaf:Person;
