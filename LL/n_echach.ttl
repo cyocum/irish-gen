@@ -24,7 +24,8 @@
 <#Cuirc>
     a foaf:Person;
     foaf:name "Cuirc";
-    foaf:name "Corc".
+    foaf:name "Corc";
+    owl:sameAs <http://example.com/LL/rig_desmuman.ttl#Cuirc>.
 
 <#Eocho>
     a foaf:Person;
@@ -43,19 +44,23 @@
     a foaf:Person;
     foaf:name "Lugaid Cichech";
     rel:childOf <#Eocho>;
-    rdfs:comment "o tát .h. Lugdech";
-    rel:mentorOf <#Aed>;
-    rel:mentorOf <#Loegaire>.
+    rdfs:comment "o tát .h. Lugdech".
 
 <#Aed>
     a foaf:Person;
     foaf:name "Aed";
-    rel:childOf <#Crimthand>.
+    rel:childOf <#Crimthand>;
+    fosterChildOf <#LugaidCichech>.
 
 <#Loegaire>
     a foaf:Person;
     foaf:name "Loegaire";
+<<<<<<< HEAD
+    rel:childOf <#Crimthand>;
+    fosterChildOf <#LugaidCichech>.
+=======
     rel:childOf <#Crimthand>.
+>>>>>>> refs/remotes/cyocum/master
 
 <#DubDaBairend>
     a foaf:Person;
@@ -65,16 +70,19 @@
 <#Domnaill>
     a foaf:Person;
     foaf:name "Domnaill";
+    foaf:name "Domnall";
     rel:childOf <#Oengusa>.
 
 <#Oengusa>
     a foaf:Person;
     foaf:name "Oengusa";
+    foaf:name "Oengus";
     rel:childOf <#Lathniat>.
 
 <#Lathniat>
     a foaf:Person;
     foaf:name "Lathniat";
+    foaf:name "Lathna";
     rel:childOf <#Anilte>.
 
 <#Anilte>
@@ -85,36 +93,43 @@
 <#Selbaig>
     a foaf:Person;
     foaf:name "Selbaig";
+    foaf:name "Selbach";
     rel:childOf <#Fergail>.
 
 <#Fergail>
     a foaf:Person;
     foaf:name "Fergail";
+    foaf:name "Fergal";
     rel:childOf <#Elathaig>.
 
 <#Elathaig>
     a foaf:Person;
     foaf:name "Elathaig";
+    foaf:name "Elathach";
     rel:childOf <#Dunlaing>.
 
 <#Dunlaing>
     a foaf:Person;
     foaf:name "Dunlaing";
+    foaf:name "Dunlang";
     rel:childOf <#Claranaig>.
 
 <#Claranaig>
     a foaf:Person;
     foaf:name "Claranaig";
+    foaf:name "Claranach";
     rel:childOf <#CarpriRiastrai>.
 
 <#CarpriRiastrai>
     a foaf:Person;
     foaf:name "Carpri Riastrai";
+    foaf:name "Coirpri Riastra";
     rel:childOf <#AedaOsrig>.
 
 <#AedaOsrig>
     a foaf:Person;
     foaf:name "Aeda Osrig";
+    foaf:name "Aed Osrig";
     rel:childOf <#Loegaire-68f09183>.
 
 <#Loegaire-68f09183>
@@ -124,19 +139,28 @@
 <#Crimthaind-4b9fb669>
     owl:sameAs <#Crimthand>;
     foaf:name "Crimthaind";
-    rel:childOf <#Echach-23fefa9e>.
+    rel:childOf <#Echach-23fefa9e>;
+    rdfs:comment "Sund condrecat Cenel Aeda & Cenel Loegaire".
 
 <#Echach-23fefa9e>
     owl:sameAs <#Eocho>;
-    rel:childOf <#Caiss>.
+    rel:childOf <#Caiss>;
+    irishRel:numChild 7.
 
 <#Caiss>
     owl:sameAs <#Cais>;
     foaf:name "Caiss";
+    foaf:name "Cass";
     rel:childOf <#Cuirc-94ccbfa6>.
 
 <#Cuirc-94ccbfa6>
     owl:sameAs <#Cuirc>.
+
+<#Crimthand-e71f82a0>
+    a foaf:Person;
+    foaf:name "Crimthand";
+    owl:sameAs <#Crimthaind-4b9fb669>;
+    rel:childOf <#Echach-23fefa9e>.
 
 <#Lugaid>
     a foaf:Person;
@@ -151,6 +175,7 @@
 <#Aennae>
     a foaf:Person;
     foaf:name "Aennae";
+    foaf:name "Enna";
     rel:childOf <#Echach-23fefa9e>.
 
 <#Dam>
@@ -178,15 +203,26 @@
     foaf:name "Brian";
     rel:childOf <#Echach-23fefa9e>.
 
+<#Crimthand-6b9e1eb0>
+    a foaf:Person;
+    foaf:name "Crimthand";
+    owl:sameAs <#Crimthand>.
+
+<#Loegaire-b87ff960>
+    a foaf:Person;
+    foaf:name "Loegaire";
+    rel:childOf <#Crimthand-6b9e1eb0>;
+    owl:sameAs <#Loegaire>.
+
 <#AedUrgarb>
     a foaf:Person;
     foaf:name "Aed Urgarb";
-    rel:childOf <#Crimthand>.
+    rel:childOf <#Crimthand-6b9e1eb0>.
 
 <#Cormac>
     a foaf:Person;
     foaf:name "Cormac";
-    rel:childOf <#Crimthand>.
+    rel:childOf <#Crimthand-6b9e1eb0>.
 
 <#Duban>
     a foaf:Person;
@@ -206,11 +242,13 @@
 <#Diarmata>
     a foaf:Person;
     foaf:name "Diarmata";
+    foaf:name "Diarmait";
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     foaf:name "Cormaic";
+    foaf:name "Cormac";
     rel:childOf <#Eogain-ff364ad4>.
 
 <#Eogain-ff364ad4>
@@ -221,7 +259,11 @@
 <#LugdechCablini>
     a foaf:Person;
     foaf:name "Lugdech Cablini";
-    rel:childOf <#Echach-a84ef5d2>.
+    foaf:name "Lugaid Cablini";
+    rel:childOf <#Echach-a84ef5d2>;
+    owl:sameAs <#Lugaid>;
+    irishRel:numChild 12;
+    rdfs:comment "Xii. mc Lugdech Cablini e quibus heredes sunt octo".
 
 <#Echach-a84ef5d2>
     owl:sameAs <#Echach-23fefa9e>;
@@ -235,6 +277,7 @@
 <#Ailella>
     a foaf:Person;
     foaf:name "Ailella";
+    foaf:name "Ailill";
     rel:childOf <#Connath>.
 
 <#Connath>
@@ -245,33 +288,39 @@
 <#Artgaile>
     a foaf:Person;
     foaf:name "Artgaile";
+    foaf:name "Artgal";
     rel:childOf <#Bécce>.
 
 <#Bécce>
     a foaf:Person;
     foaf:name "Bécce";
+    foaf:name "Becc";
     rel:childOf <#Fhergusa>.
 
 <#Fhergusa>
     a foaf:Person;
     foaf:name "Fhergusa";
+    foaf:name "Fergus";
     rel:childOf <#CindFhaelad>.
 
 <#CindFhaelad>
     a foaf:Person;
     foaf:name "Cind Fhaelad";
+    foaf:name "Cend Faelad";
     rel:childOf <#Feildimid>.
 
 <#Feildimid>
     a foaf:Person;
     foaf:name "Feildimid";
+    foaf:name "Feidlimid";
     rel:childOf <#Tigernaig>.
 
 <#Scandal>
     a foaf:Person;
     foaf:name "Scandal";
     rel:siblingOf <#Feildimid>;
-    rel:childOf <#Sodailbe>.
+    rel:childOf <#Sodailbe>;
+    rdfs:comment "mc Sodailbe de Chorco Birnd. Hinc Cenel Sodailbe".
     
 <#Sodailbe>
     a foaf:Person;
@@ -280,6 +329,7 @@
 <#Tigernaig>
     a foaf:Person;
     foaf:name "Tigernaig";
+    foaf:name "Tigernach";
     rel:childOf <#AedaUrgairb>.
 
 <#AedaUrgairb>
@@ -289,7 +339,8 @@
 
 <#Crimthaind>
     owl:sameAs <#Crimthand>;
-    foaf:name "Crimthaind".
+    foaf:name "Crimthaind";
+    foaf:name "Crimthand".
 
 <#Ganimach>
     a foaf:Person;
@@ -299,26 +350,31 @@
 <#ConCuan>
     a foaf:Person;
     foaf:name "Con Cuan";
+    foaf:name "Cú Cuan";
     rel:childOf <#Congaile>.
 
 <#Congaile>
     a foaf:Person;
     foaf:name "Congaile";
+    foaf:name "Congal";
     rel:childOf <#Gaibenaig>.
 
 <#Gaibenaig>
     a foaf:Person;
     foaf:name "Gaibenaig";
+    foaf:name "Gaibenach";
     rel:childOf <#MaeliUmai>.
 
 <#MaeliUmai>
     a foaf:Person;
     foaf:name "Maeli Umai";
+    foaf:name "Mael Umai";
     rel:childOf <#Feidlimthi>.
 
 <#Feidlimthi>
     owl:sameAs <#Feildimid>;
-    foaf:name "Feidlimthi".
+    foaf:name "Feidlimthi";
+    foaf:name "Feidlimid".
 
 <#Slogedach>
     a foaf:Person;
@@ -333,16 +389,19 @@
 <#Foltaig>
     a foaf:Person;
     foaf:name "Foltaig";
+    foaf:name "Foltach";
     rel:childOf <#Subni>.
 
 <#Subni>
     a foaf:Person;
     foaf:name "Subni";
+    foaf:name "Suibne";
     rel:childOf <#Marcain>.
 
 <#Marcain>
     a foaf:Person;
     foaf:name "Marcain";
+    foaf:name "Marcan";
     rel:childOf <#Feidlimid>.
 
 <#Feidlimid>
@@ -351,11 +410,13 @@
 <#Hectgus>
     a foaf:Person;
     foaf:name "Hectgus";
+    foaf:name "Echtgus";
     rel:childOf <#Dungaile>.
 
 <#Dungaile>
     a foaf:Person;
     foaf:name "Dungaile";
+    foaf:name "Dungal";
     rel:childOf <#Gertaide>.
 
 <#Gertaide>
@@ -366,6 +427,7 @@
 <#Dicolla>
     a foaf:Person;
     foaf:name "Dicolla";
+    foaf:name "Dicuill";
     rel:childOf <#Corre>.
 
 <#Corre>
@@ -392,7 +454,8 @@
     rel:childOf <#Feidlimid-1f85e4ec>.
 
 <#Feidlimid-1f85e4ec>
-    owl:sameAs <#Feildimid>.
+    owl:sameAs <#Feildimid>;
+    irishRel:numChild 5.
 
 <#Combrat>
     owl:sameAs <#Conbraite>;
@@ -423,11 +486,12 @@
 <#Fergusa-c6398168>
     owl:sameAs <#Fergus-cb2ef5cd>;
     foaf:name "Fergusa";
+    foaf:name "Fergus";
     rel:childOf <#Feidlimid-cb1b09c4>.
 
 <#Feidlimid-cb1b09c4>
     a foaf:Person;
-    foaf:name "Feidlimid.";
+    foaf:name "Feidlimid";
     rel:childOf <#Tigernaig-22a56cf9>.
 
 <#Tigernaig-22a56cf9>
@@ -445,36 +509,43 @@
 <#Brain>
     a foaf:Person;
     foaf:name "Brain";
+    foaf:name "Bran";
     rel:childOf <#Cein>.
 
 <#Cein>
     a foaf:Person;
     foaf:name "Cein";
+    foaf:name "Cian";
     rel:childOf <#Spelain>.
 
 <#Spelain>
     a foaf:Person;
     foaf:name "Spelain";
+    foaf:name "Spelan";
     rel:childOf <#Cathniat>.
 
 <#Cathniat>
     a foaf:Person;
     foaf:name "Cathniat";
+    foaf:name "Cathnia";
     rel:childOf <#Conchobuir>.
 
 <#Conchobuir>
     a foaf:Person;
     foaf:name "Conchobuir";
+    foaf:name "Conchobar";
     rel:childOf <#ConChongelt>.
 
 <#ConChongelt>
     a foaf:Person;
     foaf:name "Con Chongelt";
+    foaf:name "Cú Congelt";
     rel:childOf <#AilellaBroga>.
 
 <#AilellaBroga>
     a foaf:Person;
     foaf:name "Ailella Broga";
+    foaf:name "Ailill Broga";
     rel:childOf <#Connath>.
 
 <#Connath>
@@ -485,27 +556,33 @@
 <#Artgaile>
     a foaf:Person;
     foaf:name "Artgaile";
+    foaf:name "Artgal";
     rel:childOf <#FhirDaLethi>.
 
 <#FhirDaLethi>
     a foaf:Person;
     foaf:name "Fhir Da Lethi";
+    foaf:name "Fer Da Lethi";
     rel:childOf <#Becce>.
 
 <#Becce>
     a foaf:Person;
     foaf:name "Becce";
+    foaf:name "Becc";
     rel:childOf <#Fhergusa-6b5bea7a>.
 
 <#Fhergusa-6b5bea7a>
     owl:sameAs <#Fergus-cb2ef5cd>;
     foaf:name "Fhergusa";
+    foaf:name "Fergus";
     rel:childOf <#Fheidlimthi>.
 
 <#Fheidlimthi>
     a foaf:Person;
     foaf:name "Fheidlimthi";
-    rel:childOf <#Tigernaig-55c7bf6f>.
+    foaf:name "Feidlimid";
+    rel:childOf <#Tigernaig-55c7bf6f>;
+    owl:sameAs <#Feildimid>.
 
 <#Tigernaig-55c7bf6f>
     owl:sameAs <#Tigernaig>;
@@ -518,25 +595,36 @@
 <#Crimthainn>
     owl:sameAs <#Crimthand>;
     foaf:name "Crimthainn";
+    foaf:name "Crimthann";
     rel:childOf <#Echach-8651fc07>.
 
 <#Echach-8651fc07>
     owl:sameAs <#Eocho>.
 
+<#AilellaBroga-0b35a750>
+    owl:sameAs <#AilellaBroga>;
+    irishRel:numChild 4.
+
+<#CuChongelt>
+    a foaf:Person;
+    foaf:name "Cu Chongelt";
+    rel:childOf <#AilellaBroga-0b35a750>;
+    owl:sameAs <#ConChongelt>.
+
 <#Fergus-b9700638>
     a foaf:Person;
     foaf:name "Fergus";
-    rel:childOf <#AilellaBroga>.
+    rel:childOf <#AilellaBroga-0b35a750>.
 
 <#Flandchad>
     a foaf:Person;
     foaf:name "Flandchad";
-    rel:childOf <#AilellaBroga>.
+    rel:childOf <#AilellaBroga-0b35a750>.
 
 <#DubConna>
     a foaf:Person;
     foaf:name "Dub Conna";
-    rel:childOf <#AilellaBroga>.
+    rel:childOf <#AilellaBroga-0b35a750>.
 
 <#Hinrechtach>
     a foaf:Person;
@@ -546,31 +634,37 @@
 <#Torptha>
     a foaf:Person;
     foaf:name "Torptha";
+    foaf:name "Torpaid";
     rel:childOf <#MindMache>.
 
 <#MindMache>
     a foaf:Person;
     foaf:name "Mind Mache";
+    foaf:name "Mend Mache";
     rel:childOf <#DuibDáBárc>.
 
 <#DuibDáBárc>
     a foaf:Person;
     foaf:name "Duib Dá Bárc";
+    foaf:name "Dub Dá Bárc";
     rel:childOf <#Moenchini>.
 
 <#Moenchini>
     a foaf:Person;
     foaf:name "Moenchini";
+    foaf:name "Moenchen";
     rel:childOf <#Crunmail>.
 
 <#Crunmail>
     a foaf:Person;
     foaf:name "Crunmail";
+    foaf:name "Crunmael";
     rel:childOf <#Conaill>.
 
 <#Conaill>
     a foaf:Person;
     foaf:name "Conaill";
+    foaf:name "Conall";
     rel:childOf <#Lasre>.
 
 <#Lasre>
@@ -581,45 +675,83 @@
 <#Moenchine>
     a foaf:Person;
     foaf:name "Moenchine";
+    foaf:name "Moenchen";
     rel:childOf <#MoenaigMóir>.
 
 <#MoenaigMóir>
     a foaf:Person;
     foaf:name "Moenaig Móir";
+    foaf:name "Moenach Mór";
     rel:childOf <#Echach-898b4c35>.
 
 <#Echach-898b4c35>
     a foaf:Person;
     foaf:name "Echach";
+    foaf:name "Eochu";
     rel:childOf <#Trena-d6a65de0>.
 
 <#Trena-d6a65de0>
     a foaf:Person;
     foaf:name "Trena";
+    foaf:name "Tren";
     rel:childOf <#MeicBróc>.
 
 <#MeicBróc>
     a foaf:Person;
-    foaf:name "Meic Bróc".
+    foaf:name "Meic Bróc";
+    foaf:name "Mac Bróc".
+
+<#Trena-4a36b3e0>
+    owl:sameAs <#Trena-d6a65de0>;
+    irishRel:numChild 2;
+    rel:spouseOf [
+        a foaf:Person;
+        rel:siblingOf <#Trena-4a36b3e0>;
+        foaf:gender "female";
+        rdfs:comment "Echaid & Fiachra da mc Trena quem genuit de sorore sue quam habuit uxorem"
+    ].
+
+
+<#Echaid>
+    a foaf:Person;
+    foaf:name "Echaid";
+    foaf:name "Eochaid";
+    rel:childOf <#Trena-4a36b3e0>;
+    rel:childOf [
+        a foaf:Person;
+        rel:siblingOf <#Trena-4a36b3e0>;
+        foaf:gender "female";
+        rdfs:comment "Echaid & Fiachra da mc Trena quem genuit de sorore sue quam habuit uxorem"
+    ].
 
 <#Fiachra>
     a foaf:Person;
     foaf:name "Fiachra";
-    rel:childOf <#Trena-d6a65de0>.
+    rel:childOf <#Trena-4a36b3e0>;
+    rel:childOf [
+        a foaf:Person;
+        rel:siblingOf <#Trena-4a36b3e0>;
+        foaf:gender "female";
+        rdfs:comment "Echaid & Fiachra da mc Trena quem genuit de sorore sue quam habuit uxorem"
+    ].
 
 <#Cendselach>
     a foaf:Person;
     foaf:name "Cendselach";
-    rel:childOf <#Labrada>.
+    rel:childOf <#Labrada>;
+    rdfs:comment "cuius genus in Lagnensi terra habitat".
     
 <#Labrada>
     a foaf:Person;
-    foaf:name "Labrada".
+    foaf:name "Labrada";
+    foaf:name "Labraid".
 
 <#Aires>
     a foaf:Person;
     foaf:name "Aires";
-    rel:childOf <#Censelaig>.
+    foaf:name "Dubchormac";
+    rel:childOf <#Censelaig>;
+    rdfs:comment "Aires m Censelaig quorum dux Dubchormac ab hoc nomine uocatus est ideo quia pater eius obiit. nascente illo. propter memoriam mortis patris eius uocatus est Dubchormac".
 
 <#Censelaig>
     foaf:name "Censelaig";
@@ -633,6 +765,7 @@
 <#Aeda-c30e8f52>
     a foaf:Person;
     foaf:name "Aeda";
+    foaf:name "Aed";
     rel:childOf <#Causan>.
 
 <#Causan>
@@ -643,6 +776,7 @@
 <#Ailella>
     a foaf:Person;
     foaf:name "Ailella";
+    foaf:name "Ailill";
     rel:childOf <#Echach-8f462400>.
 
 <#Echach-8f462400>
@@ -674,7 +808,8 @@
 <#Lapa>
     a foaf:Person;
     foaf:name "Lapa";
-    rel:childOf <#Aeda-c30e8f52>.
+    rel:childOf <#Aeda-c30e8f52>;
+    owl:sameAs <#Lapae>.
 
 <#h-Ulide>
     a foaf:Person;
@@ -689,14 +824,16 @@
 <#Airmedaig>
     a foaf:Person;
     foaf:name "Airmedaig";
+    foaf:name "Airmedach";
     rel:childOf <#Lapae>.
 
-<#Lapae>
+<#Lapae-370e46c0>
     owl:sameAs <#Lapae>.
 
 <#Subne>
     a foaf:Person;
     foaf:name "Subne";
+    foaf:name "Suibne";
     rel:childOf <#MaelUma-9294a9ca>.
 
 <#MaelUma-9294a9ca>
@@ -724,27 +861,33 @@
 <#Conaill-9a5a7c1a>
     a foaf:Person;
     foaf:name "Conaill";
+    foaf:name "Conall";
     rel:childOf <#Mane>.
 
 <#Mane>
     a foaf:Person;
     foaf:name "Mane";
+    foaf:name "Maine";
     rel:childOf <#Fergusa-638654fe>.
 
 <#Fergusa-638654fe>
     a foaf:Person;
     foaf:name "Fergusa";
+    foaf:name "Fergus";
     rel:childOf <#Scandail>.
 
 <#Scandail>
     a foaf:Person;
     foaf:name "Scandail";
+    foaf:name "Scandal";
     rel:childOf <#Moenaig>.
 
 <#Moenaig>
     a foaf:Person;
     foaf:name "Moenaig";
-    rel:childOf <#Echach-5f3fad94>.
+    foaf:name "Moenach";
+    rel:childOf <#Echach-5f3fad94>;
+    owl:sameAs <#MoenaigMóir>.
 
 <#Echach-5f3fad94>
     owl:same <#Echach-898b4c35>;
@@ -756,7 +899,8 @@
     rel:childOf <#MeicBroc-d0f2e4ca>.
 
 <#MeicBroc-d0f2e4ca>
-    a foaf:Person.
+    a foaf:Person;
+    owl:sameAs <#MeicBróc>.
 
 <#Domnall>
     a foaf:Person;
@@ -766,11 +910,13 @@
 <#Clerig>
     a foaf:Person;
     foaf:name "Clerig";
+    foaf:name "Cleirech";
     rel:childOf <#Cellaig>.
 
 <#Cellaig>
     a foaf:Person;
     foaf:name "Cellaig";
+    foaf:name "Cellach";
     rel:childOf <#MaelPatric>.
 
 <#MaelPatric>
@@ -781,16 +927,19 @@
 <#Aeda-2354dbe2>
     a foaf:Person;
     foaf:name "Aeda";
+    foaf:name "Aed";
     rel:childOf <#Cellaig-041aeb5b>.
 
 <#Cellaig-041aeb5b>
     a foaf:Person;
     foaf:name "Cellaig";
+    foaf:name "Cellach";
     rel:childOf <#Selbaig-629d4422>.
 
 <#Selbaig-629d4422>
     a foaf:Person;
     foaf:name "Selbaig";
+    foaf:name "Selbach";
     rel:childOf <#Maeludir>.
 
 <#Maeludir>
@@ -811,16 +960,19 @@
 <#Cellaig-ff86eddd>
     a foaf:Person;
     foaf:name "Cellaig";
+    foaf:name "Cellach";
     rel:childOf <#Fhalbe>.
 
 <#Fhalbe>
     a foaf:Person;
     foaf:name "Fhalbe";
+    foaf:name "Failbe";
     rel:childOf <#Conchind>.
 
 <#Conchind>
     a foaf:Person;
     foaf:name "Conchind";
+    foaf:name "Conchend";
     rel:childOf <#Indlide>.
 
 <#Indlide>
@@ -831,21 +983,25 @@
 <#Folain>
     a foaf:Person;
     foaf:name "Folain";
+    foaf:name "Folan";
     rel:childOf <#Coluim>.
 
 <#Coluim>
     a foaf:Person;
     foaf:name "Coluim";
+    foaf:name "Colum";
     rel:childOf <#Baithin>.
 
 <#Baithin>
     a foaf:Person;
     foaf:name "Baithin";
+    foaf:name "Baithene";
     rel:childOf <#Oengusa-195a1469>.
 
 <#Oengusa-195a1469>
     a foaf:Person;
     foaf:name "Oengusa";
+    foaf:name "Oengus";
     rel:childOf <#Corre-1f5d5a6d>.
 
 <#Corre-1f5d5a6d>
@@ -856,24 +1012,31 @@
 <#Iair>
     a foaf:Person;
     foaf:name "Iair";
+    foaf:name "Iar";
     rel:childOf <#Cuirc-ddafa652>.
 
 <#Cuirc-ddafa652>
     owl:sameAs <#Cuirc>.
 
+<#Iair-370e46c0>
+    a foaf:Person;
+    owl:sameAs <#Iair>;
+    irishRel:numChild 3.
+
 <#Lugaid-b2dec202>
     a foaf:Person;
     foaf:name "Lugaid";
-    rel:childOf <#Iair>.
+    rel:childOf <#Iair-370e46c0>.
 
 <#Corr-a124388d>
     foaf:name "Corr";
-    owl:sameAs <#Corre-1f5d5a6d>.
+    owl:sameAs <#Corre-1f5d5a6d>;
+    rel:childOf <#Iair-370e46c0>.
 
 <#Conall-f4aa5370>
     a foaf:Person;
     foaf:name "Conall";
-    rel:childOf <#Iair>.
+    rel:childOf <#Iair-370e46c0>.
     
 <#Domnall-429f439c>
     a foaf:Person;
@@ -883,11 +1046,13 @@
 <#Aeda-bfa83d80>
     a foaf:Person;
     foaf:name "Aeda";
+    foaf:name "Aed";
     rel:childOf <#Conchobuir-57709ffa>.
 
 <#Conchobuir-57709ffa>
     a foaf:Person;
     foaf:name "Conchobuir";
+    foaf:name "Conchobar";
     rel:childOf <#MaelDeclain>.
 
 <#MaelDeclain>
@@ -898,26 +1063,31 @@
 <#Diarmata-7fbe7ec0>
     a foaf:Person;
     foaf:name "Diarmata";
+    foaf:name "Diarmait";
     rel:childOf <#Aeda-f260b4f2>.
 
 <#Aeda-f260b4f2>
     a foaf:Person;
     foaf:name "Aeda";
+    foaf:name "Aed";
     rel:childOf <#Dubacain>.
 
 <#Dubacain>
     a foaf:Person;
     foaf:name "Dubacain";
+    foaf:name "Dubacan";
     rel:childOf <#Lommanaig>.
 
 <#Lommanaig>
     a foaf:Person;
     foaf:name "Lommanaig";
+    foaf:name "Lommanach";
     rel:childOf <#Muridaig>.
 
 <#Muridaig>
     a foaf:Person;
     foaf:name "Muridaig";
+    foaf:name "Muiredach";
     rel:childOf <#Dailgaile>.
 
 <#Dailgaile>
@@ -928,26 +1098,31 @@
 <#Cellaig-e96bd1df>
     a foaf:Person;
     foaf:name "Cellaig";
+    foaf:name "Cellach";
     rel:childOf <#ConcanGairm>.
 
 <#ConcanGairm>
     a foaf:Person;
     foaf:name "Con can Gairm";
+    foaf:name "Cú can Gairm";
     rel:childOf <#Dathail>.
 
 <#Dathail>
     a foaf:Person;
     foaf:name "Dathail";
+    foaf:name "Dathal";
     rel:childOf <#Matnáin>.
 
 <#Matnáin>
     a foaf:Person;
     foaf:name "Matnáin";
+    foaf:name "Matnán";
     rel:childOf <#Shíláin>.
 
 <#Shíláin>
     a foaf:Person;
     foaf:name "Shíláin";
+    foaf:name "Sílán";
     rel:childOf <#Lasri>.
 
 <#Lasri>
@@ -958,11 +1133,13 @@
 <#Dathail-f59ecdb8>
     a foaf:Person;
     foaf:name "Dathail";
+    foaf:name "Dathal";
     rel:childOf <#Sairi>.
 
 <#Sairi>
     a foaf:Person;
     foaf:name "Sairi";
+    foaf:name "Saire";
     rel:childOf <#Saiglend>.
 
 <#Saiglend>
@@ -978,6 +1155,7 @@
 <#Labrada-a5c9aacd>
     a foaf:Person;
     foaf:name "Labrada";
+    foaf:name "Labraid";
     rel:childOf <#Caes>.
 
 <#Caes>
@@ -988,36 +1166,44 @@
 <#Buain>
     a foaf:Person;
     foaf:name "Buain";
+    foaf:name "Buan";
     rel:childOf <#MogaRuith>.
 
 <#MogaRuith>
     a foaf:Person;
     foaf:name "Moga Ruith";
-    rel:childOf <#Cuinisc>.
+    foaf:name "Muig Ruith";
+    rel:childOf <#Cuinisc>;
+    owl:sameAs <http://example.com/LL/sil_birn.ttl#MogaRuith>.
 
 <#Cuinisc>
     a foaf:Person;
     foaf:name "Cuinisc";
+    foaf:name "Cuinesc";
     rel:childOf <#FhirDechet>.
 
 <#FhirDechet>
     a foaf:Person;
     foaf:name "Fhir Dechet";
+    foaf:name "Fer Dechet";
     rel:childOf <#Forgib>.
 
 <#Forgib>
     a foaf:Person;
     foaf:name "Forgib";
+    foaf:name "Forgeb";
     rel:childOf <#Fhirglain>.
 
 <#Fhirglain>
     a foaf:Person;
     foaf:name "Fhirglain";
+    foaf:name "Ferglan";
     rel:childOf <#Fhirfhalid>.
 
 <#Fhirfhalid>
     a foaf:Person;
     foaf:name "Fhirfhalid";
+    foaf:name "Fer Faelad";
     rel:childOf <#Caer>.
 
 <#Caer>
@@ -1028,21 +1214,31 @@
 <#Fhergusa-7bda6a24>
     a foaf:Person;
     foaf:name "Fhergusa";
-    rel:childOf <#Roig>.
+    foaf:name Fergus";
+    rel:childOf <#Roig>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Fhergusa>;
+    owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#Fergus>.
 
 <#Roig>
     a foaf:Person;
     foaf:name "Roig";
-    rel:childOf <#Rosa>.
+    foaf:name "Ró Ech";
+    rel:childOf <#Rosa>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Roig>
 
 <#Rosa>
     a foaf:Person;
     foaf:name "Rosa";
-    rel:childOf <#Rudraige>.
+    rel:childOf <#Rudraige>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Rosa>.
 
 <#Rudraige>
     a foaf:Person;
-    foaf:name "Rudraige".
+    foaf:name "Rudraige";
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Rudraige>;
+    owl:sameAs <http://example.com/LL/n_echach.ttl#Rudraige>.
+
+*****
 
 <#Cormac-91c8dc5f>
     a foaf:Person;
