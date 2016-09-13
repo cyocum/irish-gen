@@ -14,10 +14,92 @@
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text023.html>;
     dcterms:format "text/turtle".
 
+<#Sadb>
+a foaf:Person;
+foaf:name "Sadb";
+rel:childOf <#ChuindCetchataig>;
+rel:spouseOf <#AilillAulomm>;
+irishRel:numChild 7.
+
+<#ChuindCetchataig>
+a foaf:Person;
+foaf:name "Chuind Cetchataig";
+foaf:name "Conn Cetcathach";
+<http://example.com/LL/rig_ailig.ttl#CuindCetchathaig>.
+
+<#Cian>
+a foaf:Person;
+foaf:name "Cian";
+rel:childOf <#Sadb>;
+rel:childOf <#AilillAulomm>;
+owl:sameAs <#Cian-77585fd0>.
+
+<#Taidc>
+a foaf:Person;
+foaf:name "Taidc";
+foaf:name "Tadc";
+rel:childOf <#Cian>;
+<http://example.com/LL/ciannachta_glinni_gaimen.ttl#Taidc>.
+
+<#AilillAulomm>
+a foaf:Person;
+foaf:name "Ailill Aulomm";
+owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#AilellaUluimm>;
+owl:sameAs <http://example.com/LL/rig_desmuman.ttl#AilellaUluim>;
+owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#AilellaOloim>;
+owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#AilellaUluimm>.
+
+<#Imchada>
+a foaf:Person;
+foaf:name "Imchada";
+foaf:name "Imchad";
+rel:childOf <#Fhinnachta>;
+irishRel:numChild 3;
+owl:sameAs <http://example.com/LL/rig_ulad.ttl#Imchada>.
+
+<#Fhinnachta>
+a foaf:Person;
+foaf:name "Fhinnachta";
+foaf:name "Finnachta";
+rel:childOf <#Ogomain>;
+owl:sameAs <http://example.com/LL/rig_ulad.ttl#Fhinnchatha>.
+
+<#Ogomain>
+a foaf:Person;
+foaf:name "Ogomain";
+foaf:name "Ogoman";
+rel:childOf <#Fiatach>;
+owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#Ogman>;
+owl:sameAs <http://example.com/LL/rig_ulad.ttl#Ogamain>
+
+<#Fiatach>
+a foaf:Person;
+foaf:name "Fiatach";
+foaf:name "Fiata";
+owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#FhiatachFind>.
+
+<#FergusDubdetach>
+a foaf:Person;
+foaf:name "Fergus Dubdetach";
+rel:childOf <#Imchada>;
+owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#FhergusaDuib>.
+
+<#FergusCasfhiaclach>
+a foaf:Person;
+foaf:name "Fergus Casfhiaclach";
+rel:childOf <#Imchada>.
+
+<#FergusFoltlebor>
+a foaf:Person;
+foaf:name "Fergus Foltlebor";
+rel:childOf <#Imchada>.
+
 <#Tadc>
     a foaf:Person;
     foaf:name "Tadc";
-    irishRel:numChild 2.
+    irishRel:numChild 2;
+owl:sameAs <#Taidc>.
+
 
 <#Conla>
     a foaf:Person;
@@ -664,18 +746,18 @@ rel:childOf <#Druad>.
 <#Druad>
 a foaf:Person;
 foaf:name "Druad";
-rel:childOf <#Éli Rigdeirg>.
+rel:childOf <#ÉliRigdeirg>.
 
-<#Éli Rigdeirg>
+<#ÉliRigdeirg>
 a foaf:Person;
 foaf:name "Éli Rigdeirg";
 foaf:name "Éle Rigderg";
-rel:childOf <#Imchada>.
+rel:childOf <#Imchada-3927d2a0>.
 
-<#Imchada>
+<#Imchada-3927d2a0>
 a foaf:Person;
 foaf:name "Imchada";
-foaf:name "imchad";
+foaf:name "Imchad";
 rel:childOf <#Eirc>.
 
 <#Eirc>
@@ -1523,7 +1605,8 @@ rel:childOf <#Conrach>.
 
 <#Conrach>
 a foaf:Person;
-foaf:name "Conrach".
+foaf:name "Conrach";
+foaf:name "Conrai".
 
 <#FachtnaFathach-67ba8e40>
 a foaf:Person;
@@ -1547,3 +1630,660 @@ owl:sameAs <#RudraigeLett>.
 a foaf:Person;
 foaf:name "Caelbad";
 foaf:title "[king of Ireland]". 
+
+# The rubric for the list that follows ("It iatso immorro na rig ro gabsat o Chimbaeth co Conchobor")
+# seems to imply that these are all kings of Ireland too, but most of them are not recognisable as such.
+# Presumably they are to be taken as kings of Síl Ír/the Ulaid? EPT
+
+<#EochoEolechair>
+a foaf:Person;
+foaf:name "Eocho Eolechair";
+rel:childOf <#Fedaig>;
+foaf:title "[king of Ulster]".
+
+<#Fedaig>
+a foaf:Person;
+foaf:name "Fedaig";
+foaf:name "Fedach";
+rel:childOf <#Fómoir-8a552360>.
+
+<#Fómoir-8a552360>
+a foaf:Person;
+foaf:name "Fómoir";
+foaf:name "Fómor";
+rel:childOf <#Argetmair>;
+owl:sameAs <#Fomoir>.
+
+<#Argetmair>
+a foaf:Person;
+foaf:name "Argetmair";
+owl:sameAs <#Argatmair>.
+
+<#Huamanchend>
+a foaf:Person;
+foaf:name "Huamanchend";
+rel:childOf <#Caiss>;
+foaf:title "[king of Ulster]".
+
+<#Caiss>
+a foaf:Person;
+foaf:name "Caiss";
+rel:childOf <#Argetmair-ea91ac80>.
+
+<#Argetmair-ea91ac80>
+a foaf:Person;
+foaf:name "Argetmair";
+owl:sameAs <#Argatmair>.
+
+<#ConchoborRot>
+a foaf:Person;
+foaf:name "Conchobor Rot";
+rel:childOf <#Cathair>;
+foaf:title "[king of Ulster]".
+
+<#Cathair>
+a foaf:Person;
+foaf:name "Cathair";
+rel:childOf <#Corain>.
+
+<#Corain>
+a foaf:Person;
+foaf:name "Corain";
+foaf:name "Coran".
+
+<#Fiachra>
+a foaf:Person;
+foaf:name "Fiachra";
+rel:childOf <#Feidlimid>;
+foaf:title "[king of Ulster]".
+
+<#Feidlimid>
+a foaf:Person;
+foaf:name "Feidlimid".
+
+<#Dare>
+a foaf:Person;
+foaf:name "Dare";
+rel:childOf <#Forgo>;
+foaf:title "[king of Ulster]".
+
+<#Forgo>
+a foaf:Person;
+foaf:name "Forgo";
+rel:childOf <#Feidlimid-59ab3940>. 
+
+<#Feidlimid-59ab3940>
+a foaf:Person;
+foaf:name "Feidlimid";
+owl:sameAs <#Feidlimid>.
+# Can we assume this is the same Feidlimid? EPT
+
+<#Enna>
+a foaf:Person;
+foaf:name "Enna";
+rel:childOf <#Rochada>;
+foaf:title "[king of Ulster]".
+
+<#Rochada>
+a foaf:Person;
+foaf:name "Rochada";
+foaf:name "Rochaid";
+rel:childOf <#Feidlimid-a1781d10>.
+
+<#Feidlimid-a1781d10>
+a foaf:Person;
+foaf:name "Feidlimid";
+owl:sameAs <#Feidlimid>.
+
+<#Findchad-e0933430>
+a foaf:Person;
+foaf:name "Findchad";
+rel:childOf <#Baced>;
+foaf:title "[king of Ulster]".
+
+<#Baced>
+a foaf:Person;
+foaf:name "Baced";
+rel:childOf <#Dare-fa2623d0>.
+
+<#Dare-fa2623d0>
+a foaf:Person;
+foaf:name "Dare";
+owl:sameAs <#Dare>.
+
+<#ConchoborMael>
+a foaf:Person;
+foaf:name "Conchobor Mael";
+foaf:name "Conchobar Mael";
+rel:childOf <#Fortath>;
+foaf:title "[king of Ulster]".
+
+<#Fortath>
+a foaf:Person;
+foaf:name "Fortath";
+rel:childOf <#Forgo-366c4900>.
+
+<#Forgo-366c4900>
+a foaf:Person;
+foaf:name "Forgo";
+owl:sameAs <#Forgo>.
+
+<#Rudraige-594ef300>
+a foaf:Person;
+foaf:name "Rudraige";
+rel:childOf <#Sirthi>;
+owl:sameAs <#Rudraige>;
+foaf:title "[king of Ulster]".
+
+<#Sirthi>
+a foaf:Person;
+foaf:name "Sirthi";
+rel:childOf <#Duib-7612e1d0>;
+owl:sameAs <#Sithri>.
+
+<#Duib-7612e1d0>
+a foaf:Person;
+foaf:name "Duib";
+owl:sameAs <#Duib>.
+
+<#CormacLathig>
+a foaf:Person;
+foaf:name "Cormac Lathig";
+rel:childOf <#ConchobuirMael>;
+foaf:title "[king of Ulster]".
+
+<#ConchobuirMael>
+a foaf:Person;
+foaf:name "Conchobuir Mael";
+foaf:name "Conchobar Mael";
+owl:sameAs <#ConchoborMael>.
+
+<#Mochta>
+a foaf:Person;
+foaf:name "Mochta";
+rel:childOf <#Murchaid>;
+foaf:title "[king of Ulster]".
+
+<#Murchaid>
+a foaf:Person;
+foaf:name "Murchaid".
+
+<#Enna-c9783780>
+a foaf:Person;
+foaf:name "Enna";
+rel:childOf <#Dáire>;
+foaf:title "[king of Ulster]".
+
+<#Dáire>
+a foaf:Person;
+foaf:name "Dáire";
+rel:childOf <#Conchobuir-f31c01c0>.
+
+<#Conchobuir-f31c01c0>
+a foaf:Person;
+foaf:name "Conchobuir".
+
+<#EochuSalbude>
+a foaf:Person;
+foaf:name "Eochu Salbude";
+rel:childOf <#Lot>;
+foaf:title "[king of Ulster]".
+
+<#Lot>
+a foaf:Person;
+foaf:name "Lot".
+
+<#BresalBodíbad-68e1b210>
+a foaf:Person;
+foaf:name "Bresal Bodíbad";
+rel:childOf <#Rudraige-716ce3f0>;
+owl:sameAs <#BresalBódíbad>;
+foaf:title "[king of Ulster]".
+
+<#Rudraige-716ce3f0>
+a foaf:Person;
+foaf:name "Rudraige";
+owl:sameAs <#Rudraige>.
+
+<#Congal>
+a foaf:Person;
+foaf:name "Congal";
+rel:childOf <#Rudraige-d44ceec0>;
+owl:sameAs <#CongalCláringech>;
+foaf:title "[king of Ulster]".
+
+<#Rudraige-d44ceec0>
+a foaf:Person;
+foaf:name "Rudraige";
+owl:sameAs <#Rudraige>.
+
+<#FactnaFathach>
+a foaf:Person;
+foaf:name "Factna Fathach";
+rel:childOf <#Cais>;
+foaf:title "[king of Ulster]";
+owl:sameAs <#FachtnaFathach>.
+
+<#Cais>
+a foaf:Person;
+foaf:name "Cais";
+foaf:name "Cass";
+owl:sameAs <#Cass>.
+
+<#FergusLaeta>
+a foaf:Person;
+foaf:name "Fergus Laeta";
+rel:childOf <#Rudraigi>;
+foaf:title "[king of Ulster]";
+<#Fergus-c22ff810>.
+# I have tentatively taken this as a mangled form of "Fergus mac Leti". If so, he
+# is not a son but a grandson of <#Rudraige>. EPT
+
+<#Rudraigi>
+a foaf:Person;
+foaf:name "Rudraigi";
+foaf:name "Rudraige";
+owl:sameAs <#Rudraige>.
+
+<#Fergus>
+a foaf:Person;
+foaf:name "Fergus";
+rel:childOf <#Rosa-cd4436d0>;
+owl:sameAs <#MacRosa>;
+foaf:title "[king of Ulster]".
+
+<#Rosa-cd4436d0>
+a foaf:Person;
+foaf:name "Rosa";
+foaf:name "Ros";
+rel:childOf <#Rudraigi-e07dc8b0>;
+owl:sameAs <#Rosa>.
+
+<#Rudraigi-e07dc8b0>
+a foaf:Person;
+foaf:name "Rudraigi";
+foaf:name "Rudraige".
+
+<#Conchobor>
+a foaf:Person;
+foaf:name "Conchobor";
+rel:childOf <#Factna>;
+foaf:title "[king of Ulster]";
+owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#Conchobuir>.
+
+<#Factna>
+a foaf:Person;
+foaf:name "Factna";
+foaf:name "Fachtna";
+owl:sameAs <#FachtnaFathach>;
+owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#Fhactnai>.
+
+<#CauscraidMendMacha>
+a foaf:Person;
+foaf:name "Causcraid Mend Macha";
+owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#CauscraidMendMacha>;
+foaf:title "[king of Ulster]".
+
+<#Glasne>
+a foaf:Person;
+foaf:name "Glasne";
+rel:childOf <#Conchobuir-abda0690>;
+foaf:title "[king of Ulster]".
+
+<#Conchobuir-abda0690>
+a foaf:Person;
+foaf:name "Conchobuir";
+rel:childOf <#IarelGlúnmar>.
+
+<#IarelGlúnmar>
+a foaf:Person;
+foaf:name "Iarel Glúnmar";
+rel:childOf <#ConaillCernaich>;
+foaf:title "[king of Ulster]";
+owl:sameAs <http://example.com/LL/dail_araide.ttl#IrielGlúnmair>.
+
+<#ConaillCernaich>
+a foaf:Person;
+foaf:name "Conaill Cernaich";
+foaf:name "Conall Cernach";
+owl:sameAs <http://example.com/LL/dail_araide.ttl#ConaillCernaig>.
+
+<#FiachaFindmais>
+a foaf:Person;
+foaf:name "Fiacha Findmais";
+rel:childOf <#Iareoil>;
+foaf:title "[king of Ulster]".
+
+<#Iareoil>
+a foaf:Person;
+foaf:name "Iareoil";
+foaf:name "Iarel";
+owl:sameAs <#IarelGlúnmar>.
+
+<#FiachaFind>
+a foaf:Person;
+foaf:name "Fiacha Find";
+rdfs:comment "de Dál Fhíatach";
+foaf:title "[king of Ulster]".
+# Could this be <http://example.com/LL/senchas_dáil_fiatach.ttl#FhiatachFind>,
+# ancestor of Dál Fiatach? EPT
+
+<#Muredach>
+a foaf:Person;
+foaf:name "Muredach";
+rel:childOf <#FiachachFindmais>;
+foaf:title "[king of Ulster]".
+
+<#FiachachFindmais>
+a foaf:Person;
+foaf:name "Fiachach Findmais";
+foaf:name "Fiachu Findmas
+owl:sameAs <#FiachaFindmais>.
+
+<#Ellim-80cfee30>
+a foaf:Person;
+foaf:name "Ellim";
+rel:childOf <#Conrach-934b1210>;
+owl:sameAs <#Ellim>;
+foaf:title "[king of Ulster]".
+
+<#Conrach-934b1210>
+a foaf:Person;
+foaf:name "Conrach";
+foaf:name "Conrai";
+rel:childOf <#Fergusa-29a64810>;
+owl:sameAs <#Conrach>.
+
+<#Fergusa-29a64810>.
+a foaf:Person;
+foaf:name "Fergusa";
+foaf:name "Fergus";
+owl:sameAs <#MacRosa>.
+
+<#Ogman>
+a foaf:Person;
+foaf:name "Ogman";
+rel:childOf <#Fiatach-a357a920>;
+owl:sameAs <#Ogomain>;
+foaf:title "[king of Ulster]".
+
+<#Fiatach-a357a920>
+a foaf:Person;
+foaf:name "Fiatach";
+foaf:name "Fiata";
+owl:sameAs <#Fiatach>.
+
+<#Mal-78158310>
+a foaf:Person;
+foaf:name "Mal";
+rel:childOf <#Rochride-98fd2060>;
+owl:sameAs <#Mál>;
+foaf:title "[king of Ulster]".
+
+<#Rochride-98fd2060>
+a foaf:Person;
+foaf:name "Rochride";
+owl:sameAs <#Rochride>.
+
+<#Tipraite>
+a foaf:Person;
+foaf:name "Tipraite";
+rel:childOf <#Mail>;
+foaf:title "[king of Ulster]".
+
+<#Mail>
+a foaf:Person;
+foaf:name "Mail";
+foaf:name "Mal";
+owl:sameAs <#Mál>.
+
+<#Bresal>
+a foaf:Person;
+foaf:name ".Bresal";
+rel:childOf <#Briuin>;
+foaf:title "[king of Ulster]".
+
+<#Briuin>
+a foaf:Person;
+foaf:name "Briuin";
+foaf:name "Brion";
+rel:childOf <#Rocride>.
+
+<#Rocride>
+a foaf:Person;
+foaf:name "Rocride";
+owl:sameAs <#Rochride>.
+
+<#FergusDubdetach-28553930>
+a foaf:Person;
+foaf:name "Fergus Dubdetach";
+rel:childOf <#Imchada-2f61e160>;
+owl:sameAs <#FergusDubdetach>;
+owl:sameAs <http://example.com/LL/ríg_ulad.ttl#FhergusaDuib>.
+
+<#Imchada-2f61e160>
+a foaf:Person;
+foaf:name "Imchada";
+rel:childOf <#Findchada-b89a7bb0>;
+owl:sameAs <#Imchada>.
+
+<#Findchada-b89a7bb0>
+a foaf:Person;
+foaf:name "Findchada";
+owl:sameAs <#Fhinnachta>.
+
+<#EochuGunnat>
+a foaf:Person;
+foaf:name "Eochu Gunnat";
+rel:childOf <#Féic-2b4aaea0>;
+foaf:title "[king of Ulster]".
+
+<#Féic-2b4aaea0>
+a foaf:Person;
+foaf:name "Féic";
+rel:childOf <#Imchada-8c28cef0>.
+
+<#Imchada-8c28cef0>
+a foaf:Person;
+foaf:name "Imchada".
+
+<#OengusFind>
+a foaf:Person;
+foaf:name "OengusFind";
+rel:childOf <#FergusaDubdetaich>;
+foaf:title "[king of Ulster]";
+owl:sameAs <http://example.com/LL/ríg_ulad.ttl#OengusaFind>.
+
+<#FergusaDubdetaich>
+a foaf:Person;
+foaf:name "Fergusa Dubdetaich";
+owl:sameAs <#FergusDubdetach>.
+
+<#OengusGobnend>
+a foaf:Person;
+foaf:name "Oengus Gobnend";
+rel:childOf <#FergusaGallini>;
+foaf:title "[king of Ulster]".
+
+<#Fergusa Gallini>
+a foaf:Person;
+foaf:name "Fergusa Gallini".
+
+<#Lugaid>
+a foaf:Person;
+foaf:name "Lugaid";
+rel:childOf <#OengusaFind>;
+foaf:title "[king of Ulster]".
+
+<#OengusaFind>
+a foaf:Person;
+foaf:name "Oengusa Find";
+rel:childOf <#FiachaAraide>;
+owl:sameAs <#OengusFind>.
+
+<#FiachaAraide>
+a foaf:Person;
+foaf:name "Fiacha Araide".
+
+<#Feidlimid-1b9f5720>
+a foaf:Person;
+foaf:name "Feidlimid";
+rel:childOf <#Fiachach>;
+foaf:title "[king of Ulster]".
+
+<#Fiachach>
+a foaf:Person;
+foaf:name "Fiachach";
+owl:sameAs <#FiachaAraide>.
+
+<#Imchad-77340310>
+a foaf:Person;
+foaf:name "Imchad";
+rel:childOf <#Fedlimíd-91d49220>;
+foaf:title "[king of Ulster]".
+
+<#Fedlimíd-91d49220>
+a foaf:Person;
+foaf:name "Fedlimíd";
+owl:sameAs <#Feidlimid-1b9f5720>.
+
+<#Forgg>
+a foaf:Person;
+foaf:name "Forgg";
+rel:childOf <#Dallain>;
+foaf:title "[king of Ulster]";
+owl:sameAs <http://example.com/LL/ríg_ulad.ttl#Fhorgo>.
+
+<#Dallain>
+a foaf:Person;
+foaf:name "Dallain";
+foaf:name "Dallan";
+rel:childOf <#Dallain>;
+owl:sameAs <http://example.com/LL/ríg_ulad.ttl#Dallain>.
+
+<#Ros>
+a foaf:Person;
+foaf:name "Ros";
+rel:childOf <#Imchada-1178a840>;
+foaf:title "[king of Ulster]".
+
+<#Imchada-1178a840>
+a foaf:Person;
+foaf:name "Imchada";
+owl:sameAs <#Imchad-77340310>.
+
+<#MuridachMunderg>
+a foaf:Person;
+foaf:name "Muridach Munderg";
+foaf:name "Muiredach Muinderg";
+foaf:title "[king of Ulster]";
+owl:sameAs <http://example.com/LL/ríg_ulad.ttl#MuridaigMundeirg>.
+
+<#Eochu-9c3b1e40>
+a foaf:Person;
+foaf:name "Eochu";
+rel:childOf <#Lugdach>;
+foaf:title "[king of Ulster]".
+
+<#Lugdach>
+a foaf:Person;
+foaf:name "Lugdach";
+foaf:name "Lugaid";
+rel:childOf <#Rosa-b686d690>.
+
+<#Rosa-b686d690>
+a foaf:Person;
+foaf:name "Rosa";
+foaf:name "Ros";
+owl:sameAs <#Ros>.
+
+<#CruindBaDrui>
+a foaf:Person;
+foaf:name "Cruind Ba Drui";
+rel:childOf <#Echach-9f07b650>;
+foaf:title "[king of Ulster]".
+
+<#Echach-9f07b650>
+a foaf:Person;
+foaf:name "Echach";
+foaf:name "Eochu";
+owl:sameAs <#Eochu-9c3b1e40>.
+
+<#FroecharFortrén>
+a foaf:Person;
+foaf:name "Froechar Fortrén";
+rel:childOf <#Cruind>;
+foaf:title "[king of Ulster]".
+
+<#Cruind>
+a foaf:Person;
+foaf:name "Cruind".
+
+<#FergusFoga>
+a foaf:Person;
+foaf:name "Fergus Foga";
+rel:childOf <#Froechair>;
+foaf:title "[king of Ulster]".
+
+<#Froechair>
+a foaf:Person;
+foaf:name "Froechair";
+owl:sameAs <#FroecharFortrén>.
+
+<#Coelbad>
+a foaf:Person;
+foaf:name "Coelbad";
+rel:childOf <#Cruind-032c4f10>.
+
+<#Cruind-032c4f10>
+a foaf:Person;
+foaf:name "Cruind";
+sameAs <#Cruind>.
+
+<#Sárán>
+a foaf:Person;
+foaf:name "Sárán";
+rel:childOf <#Coelbad-49d37790>.
+
+<#Coelbad-49d37790>
+a foaf:Person;
+foaf:name "Coelbad";
+owl:sameAs <#Coelbad>.
+
+<#Baetan>
+a foaf:Person;
+foaf:name "Baetan";
+rel:childOf <#Cairill>;
+foaf:title "[king of Ireland]";
+foaf:title "[king of Scotland]".
+
+<#Cairill>
+a foaf:Person;
+foaf:name "Cairill";
+foaf:name "Cairell".
+# Is this <http://example.com/LL/rig_ulad.ttl#Cairill>, son of Muiredach Muinderg? 
+# This is nowhere stated but it looks credible chonologically. EPT
+
+<#FergusDubdetach-f50ec6b0>
+a foaf:Person;
+foaf:name "Fergus Dubdetach";
+foaf:title "[king of Ireland]";
+owl:sameAs <#FergusDubdetach>.
+
+<#EochuGunnat-806dcad0>
+a foaf:Person;
+foaf:name "Eochu Gunnat";
+foaf:title "[king of Ireland]";
+owl:sameAs <#EochuGunnat>.
+
+<#FiachaFind-d2296820>
+a foaf:Person;
+foaf:name "Fiacha Find";
+foaf:title "[king of Ireland]";
+owl:sameAs <#FiachaFind>.
+
+<#Daig>
+a foaf:Person;
+foaf:name "Daig";
+foaf:title "[king of Ireland]".
+# Who is this?! EPT
