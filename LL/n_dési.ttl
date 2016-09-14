@@ -15,7 +15,7 @@
     dcterms:format "text/turtle".
 
 <#Eogain>
-    a foaf:Person;
+    a foaf:Person;*
     foaf:name "Eogain";
     foaf:name "Eogan";
     rel:childOf <#Bregduilb>;
@@ -908,8 +908,6 @@
 <#Tigernaig-1846f876>
     owl:sameAs <#Tigernaig>.
 
-*****
-
 <#Cormac-8628487c>
     a foaf:Person;
     foaf:name "Cormac";
@@ -918,16 +916,19 @@
 <#Rosa-a1d212ea>
     a foaf:Person;
     foaf:name "Rosa";
+    foaf:name "Ros";
     rel:childOf <#MaeliFothartaig>.
 
 <#MaeliFothartaig>
     a foaf:Person;
     foaf:name "Maeli Fothartaig";
+    foaf:name "Mael Fothartaig";
     rel:childOf <#Fingein>.
 
 <#Fingein>
     a foaf:Person;
     foaf:name "Fingein";
+    foaf:name "Fingen";
     rel:childOf <#NadFoglaith>.
 
 <#NadFoglaith>
@@ -938,69 +939,79 @@
 <#Lugdech>
     a foaf:Person;
     foaf:name "Lugdech";
+    foaf:name "Lugaid";
     rel:childOf <#Echach-3b8ab5ec>.
 
 <#Echach-3b8ab5ec>
     a foaf:Person;
     foaf:name "Echach";
+    foaf:name "Eochu";
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     foaf:name "Echdach";
+    foaf:name "Eochaid";
     rel:childOf <#Cormaic-21f0d30b>.
 
 <#Cormaic-21f0d30b>
     a foaf:Person;
     foaf:name "Cormaic";
+    foaf:name "Cormac";
     rel:childOf <#Rosa-4cb1fc39>.
 
 <#Rosa-4cb1fc39>
     owl:sameAs <#Rosa>.
 
+<#Cormaic-7f967630>
+    irishRel:numChild 7;
+    owl:sameAs <#Cormac-8628487c>;
+    rdfs:comment "Is díb Ferta na Ríg i n-Airthiur Fhemin".
+
 <#Corpre>
     a foaf:Person;
     foaf:name "Corpre";
-    rel:childOf <#Cormaic-ba1bba9f>.
-
-<#Cormaic-ba1bba9f>
-    foaf:name "Cormaic";
-    owl:sameAs <#Cormac-8628487c>.
+    foaf:name "Coirpre";
+    rel:childOf <#Cormaic-7f967630>.
 
 <#MacTail>
     a foaf:Person;
     foaf:name "Mac Tail";
-    rel:childOf <#Cormaic-ba1bba9f>.
+    rel:childOf <#Cormaic-7f967630>.
 
 <#Dau>
     a foaf:Person;
     foaf:name "Dau";
-    rel:childOf <#Cormaic-ba1bba9f>.
+    rel:childOf <#Cormaic-7f967630>.
 
 <#Eochu-ec97e737>
     a foaf:Person;
     foaf:name "Eochu";
-    rel:childOf <#Cormaic-ba1bba9f>.
+    rel:childOf <#Cormaic-7f967630>.
 
 <#Mane>
     a foaf:Person;
     foaf:name "Mane";
-    rel:childOf <#Cormaic-ba1bba9f>.
+    rel:childOf <#Cormaic-7f967630>.
 
 <#Feidlimid-5070d885>
     a foaf:Person;
     foaf:name "Feidlimid";
-    rel:childOf <#Cormaic-ba1bba9f>.
+    rel:childOf <#Cormaic-7f967630>.
 
 <#Fheradaig>
     a foaf:Person;
     foaf:name "Fheradaig";
-    rel:childOf <#Fhingin>.
+    foaf:name "Feradach";
+    rel:childOf <#Fhingin>;
+    irishRel:numChild 6.
 
 <#Fhingin>
     a foaf:Person;
-    foaf:name "Fhingin".
+    foaf:name "Fhingin";
+    owl:sameAs <#Fingein>.
     # same as Fingein ? - CY
+    # that seems a safe bet? EPT
 
 <#MaelAthgen>
     a foaf:Person;
@@ -1010,6 +1021,7 @@
 <#MaelFhathartaig>
     a foaf:Person;
     foaf:name "Mael Fhathartaig";
+    foaf:name "Mael Fothartaig";    
     rel:childOf <#Fheradaig>.
 
 <#Becc>
@@ -1050,14 +1062,21 @@
 <#Fhingin>
     owl:sameAs <#Fhingin-8cf23f10>.
 
+<#Aeda-d9702450>
+    irishRel:numChild 2;
+    owl:sameAs <#Aeda-c2af1c7c>.
+
 <#MaelUma>
     foaf:name "Mael Uma";
+    rel:childOf <#Aeda-d9702450>.
     owl:sameAs <#MaelUmai>.
 
 <#MaelOctraig>
     a foaf:Person;
     foaf:name "Aeda";
     rel:childOf <#Aeda-c2af1c7c>.
+
+*****
 
 <#Heslesach>
     a foaf:Person;
