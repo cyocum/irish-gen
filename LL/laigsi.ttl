@@ -17,26 +17,36 @@
 <#LaegsechCendmor>
 	a foaf:Person;
 	foaf:name "Laegsech Cendmor";
-	rel:childOf <#ConaillCernaig>.
+	rel:childOf <#ConaillCernaig>;
+	rdfs:comment "Is uad atat Laigsi".
 
 <#ConaillCernaig>
 	owl:sameAs <http://example.com/LL/dimittamus_in_terim.ttl#ConaillCernaig>;
-	foaf:name "Conaill Cernaig".
+	owl:sameAs <http://example.com/LL/dail_araide.ttl#ConaillCernaig>;
+	foaf:name "Conaill Cernaig";
+	foaf:name "Conall Cernach".
 
 <#Milige>
 	a foaf:Person;
 	foaf:name "Milige";
-	rel:childOf <#LugdachLoegsi>.
+	rel:childOf <#Intait>;
+	irishRel:numChild 2.
+
+<#Intait>
+	a foaf:Person; 
+	foaf:name "Intait";
+	rel:childOf <#LugdachLoegsi> 
 
 <#LugdachLoegsi>
 	a foaf:Person;
 	foaf:name "Lugdach Loegsi";
+	foaf:name "Lugaid Loegsi";
 	rel:childOf <#LoechsigsCennmoir>.
 
 <#LoechsigsCennmoir>
 	a foaf:Person;
 	foaf:name "Loechsigs Cennmoir";
-	rel:descendantOf <#LaegsechCendmor>.
+	owl:sameAs <#LaegsechCendmor>.
 
 <#Erc>
 	a foaf:Person;
@@ -56,22 +66,29 @@
 <#Briain>
 	a foaf:Person;
 	foaf:name "Briain";
+	foaf:name "Brian";
 	rel:childOf <#Eirc>.
 
 <#Eirc>
 	a foaf:Person;
 	foaf:name "Eirc";
+	foaf:name "Erc";
 	rel:childOf <#Buabalchind>.
 
 <#Buabalchind>
 	a foaf:Person;
 	foaf:name "Buabalchind";
+	foaf:name "Buabalchend";
 	foaf:nick "cendmar"@sga;
 	rel:childOf <#Findchada>.
+
+# Could "cendmar" be a gloss on "buabalchend"
+# ("ox-head"), rather than a separate nickname? EPT
 
 <#Findchada>
 	a foaf:Person;
 	foaf:name "Findchada";
+	foaf:name "Findchad";
 	rel:childOf <#Feidlimid>.
 
 <#Feidlimid>
@@ -82,6 +99,7 @@
 <#Fhindchada>
 	a foaf:Person;
 	foaf:name "Fhindchada";
+	foaf:name "Findchad";
 	rel:childOf <#FiachachUamanchind>.
 
 <#FiachachUamanchind>
@@ -90,39 +108,49 @@
 	foaf:nick "cendbristi"@sga;
 	rel:childOf <#DaireDeirg>.
 
+# Again, is "cendbristi" a nickname or a gloss? EPT
+
 <#DaireDeirg>
 	a foaf:Person;
 	foaf:name "Daire Deirg";
+	foaf:name "Daire Derg";
 	rel:childOf <#Rosa>.
 
 <#Rosa>
 	a foaf:Person;
 	foaf:name "Rosa";
+	foaf:name "Ros";
 	rel:childOf <#Occomain>.
 
 <#Occomain>
 	a foaf:Person;
 	foaf:name "Occomain";
+	foaf:name "Occoman";
 	rel:childOf <#FhergusaMulcheist>.
 
 <#FhergusaMulcheist>
 	a foaf:Person;
-	foaf:name "Fhergusa Mulcheist".
+	foaf:name "Fhergusa Mulcheist";
+	foaf:name "Fergus Mulcheist";
+	rdfs:comment ".i. ceis & meill fo bragit".
 
 <#Factnai>
 	a foaf:Person;
 	foaf:name "Factnai";
+	foaf:name "Fachtna";
 	rel:childOf <#Milige-153a467f>.
 
 <#Milige-153a467f>
 	a foaf:Person;
 	foaf:name "Milige";
-	rel:childOf <#Intait>.
+	rel:childOf <#Intait-ffe14380>;
+	owl:sameAs <#Milige>.
 
-<#Intait>
+<#Intait-ffe14380>
 	a foaf:Person;
 	foaf:name "Intait";
-	rel:childOf <#LugdachLoigsi>.
+	rel:childOf <#LugdachLoigsi>;
+	owl:sameAs <#Intait>.
 
 <#LugdachLoigsi>
 	foaf:name "Lugdach Loigsi";
@@ -140,7 +168,9 @@
 <#Bacain>
 	foaf:name "Bacain";
 	owl:sameAs <#Bacan>;
-	rel:childOf <#LugdachLoigsi>.
+	rel:childOf <#LugdachLoigsi>;
+	rdfs:comment "a quo Sil Mescill";
+	rdfs:comment "Et do Síl Bácain Ú Dochlú. & Laiches Reta uile".
 
 <#LugdachLoigsi>
 	foaf:name "Lugdach Loigsi";
@@ -149,22 +179,27 @@
 <#Berach>
 	a foaf:Person;
 	foaf:name "Berach";
-	rel:childOf <#Mescill>.
+	rel:childOf <#Mescill>;
+	irishRel:numChild 12.
 
 <#Mescill>
 	a foaf:Person;
 	foaf:name "Mescill";
-	foaf:name "Mescell".
+	foaf:name "Mescell";
+	rel:descendantOf <#Bacain>.
+	
+# I am inferring that <#Mescill> is a descendant of
+# <#Bacain> from the phrase "Sil Bacain mc Lugdach 
+# Loigsi a quo Sil Mescill". But it is possible that
+# <#Bacain> actually descends from <#Mescill> and is
+# simply the apical figure for Síl Mescill. EPT
 
 <#Cathal>
 	a foaf:Person;
 	foaf:name "Cathal";
-	rel:childOf <#Bacain>.
-
-<#LaichesReta>
-	a foaf:Person;
-	foaf:name "Laiches Reta";
-	rel:childOf <#Bacain>.
+	rel:childOf <#Berach>;
+	rdfs:comment "a quo reges .c. alibi in hoc libro scripsimus";
+	owl:sameAs <http://example.com/LL/rig_laigsi_genelach_fl.ttl#Caithail>.
 
 <#Comgall>
 	a foaf:Person;
@@ -174,11 +209,13 @@
 <#Domangairt>
 	a foaf:Person;
 	foaf:name "Domangairt";
+	foaf:name "Domangart";
 	rel:childOf <#Bairr>.
 
 <#Bairr>
 	a foaf:Person;
 	foaf:name "Bairr";
+	foaf:name "Barr";
 	rel:childOf <#Sarbile>.
 
 <#Sarbile>
@@ -189,16 +226,19 @@
 <#Cormaic>
 	a foaf:Person;
 	foaf:name "Cormaic";
+	foaf:name "Cormac";
 	rel:childOf <#Lugnai>.
 
 <#Lugnai>
 	a foaf:Person;
 	foaf:name "Lugnai";
+	foaf:name "Lugna";
 	rel:childOf <#Eogain>.
 
 <#Eogain>
 	a foaf:Person;
 	foaf:name "Eogain";
+	foaf:name "Eogan";
 	rel:childOf <#Guaire>.
 
 <#Guaire>
@@ -209,6 +249,7 @@
 <#Eirc-db6eaa25>
 	a foaf:Person;
 	foaf:name "Eirc";
+	foaf:name "Erc";
 	rel:childOf <#Milige-02761bc5>.
 
 <#Milige-02761bc5>
@@ -220,15 +261,8 @@
 
 <#DiarmataLaigesRámne>
 	a foaf:Person;
-	foaf:name "Diarmata Laiges Rámne".
-
-<#SenaigBic>
-	a foaf:Person;
-	foaf:name "Senaig Bic".
-
-<#SenaigMóir>
-	a foaf:Person;
-	foaf:name "Senaig Móir".
+	foaf:name "Diarmata Laiges Rámne";
+	rdfs:comment "Síl Diarmata Laiges Rámne .i. nomen collis".
 
 <#Cummascach>
 	a foaf:Person;
@@ -238,11 +272,13 @@
 <#Cathniad>
 	a foaf:Person;
 	foaf:name "Cathniad";
+	foaf:name "Cathnia";
 	rel:childOf <#Dungusa>.
 
 <#Dungusa>
 	a foaf:Person;
 	foaf:name "Dungusa";
+	foaf:name "Dungus";
 	rel:childOf <#Narchon>.
 
 <#Narchon>
@@ -253,26 +289,35 @@
 <#Décsenaig>
 	a foaf:Person;
 	foaf:name "Décsenaig";
+	foaf:name "Décsenach";
 	rel:childOf <#Cúlini>.
 
 <#Cúlini>
 	a foaf:Person;
 	foaf:name "Cúlini";
+	foaf:name "Cúiline";
 	rel:childOf <#Brocain>.
 
 <#Brocain>
 	a foaf:Person;
 	foaf:name "Brocain";
+	foaf:name "Brocan";
 	rel:childOf <#Senaig>.
 
 <#Senaig>
 	a foaf:Person;
 	foaf:name "Senaig";
-	rel:childOf <#Comgaill>.
+	foaf:name "Senach";
+	rel:childOf <#Comgaill>;
+	rdfs:comment "Sil Senaig Bic .i. Laiges Fer na Cenel dano Dublaiches & Laiges Bregmon nomen collis";
+	rdfs:comment "Sil Senaig Móir: Laiges Lethnada & Laiges Cuile Buichle".
 	# senaig bic or móir ? - CY
+	# I read it as there being just one Senach and a Síl Mór 
+	# and a Síl Becc. But I am open to counter-argument. EPT
 
 <#Comgaill>
 	foaf:name "Comgaill";
+	foaf:name "Comgall";
 	owl:sameAs <#Comgall>;
 	rel:childOf <#Domongairt-b0393d00>.
 
@@ -287,11 +332,13 @@
 <#Snedgusa>
 	a foaf:Person;
 	foaf:name "Snedgusa";
+	foaf:name "Snedgus";
 	rel:childOf <#Ruidgiusa>.
 
 <#Ruidgiusa>
 	a foaf:Person;
 	foaf:name "Ruidgiusa";
+	foaf:name "Ruidgus";
 	rel:childOf <#Snedgaile>.
 
 <#Snedgaile>
@@ -301,16 +348,15 @@
 
 <#Déchsenaig>
 	a foaf:Person;
-	foaf:name "Déchsenaig".
-
-<#Secht>
-	a foaf:Person;
-	foaf:name "Secht";
-	rel:childOf <#Lugnai-3e81a1e4>.
+	foaf:name "Déchsenaig";
+	foaf:name "Déchsenach";
+	owl:sameAs <#Décsenaig>.
 
 <#Lugnai-3e81a1e4>
 	owl:sameAs <#Lugnai>;
-	rel:childOf <#Eogain-363faff6>.
+	foaf:name "Lugna";
+	rel:childOf <#Eogain-363faff6>;
+	irishRel:numChild 7.
 
 <#Eogain-363faff6>
 	owl:sameAs <#Eogain>.
@@ -318,37 +364,42 @@
 <#Ruadan>
 	a foaf:Person;
 	foaf:name "Ruadan";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>;
+	rdfs:comment "Ruadan & Garban & Columb is é a ferand .i. Ráth Ruadain & Caille Coluimb & Cell n-Eithne & Ard m-Bruchais. Nisi dano is é a orbba .i. Bile Methais. & Cluain Meic Nisse".
 
 <#Nise>
 	a foaf:Person;
 	foaf:name "Nise";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>.
 
 <#Lagnech>
 	a foaf:Person;
 	foaf:name "Lagnech";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>;
+	rdfs:commnt "a quo .h. Báith & .h. Brocain issed a orbba Loch Laignich & Cluain Connaid".
 
 <#Erc-4dd787fc>
 	a foaf:Person;
 	foaf:name "Erc";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>;
+	rdfs:comment "a quo .h. Diamrain & Dodecce & h. Forandla & h. Chormaic. Is é a ferand. Tech n-Declaín & Domnach Findchon & Caelbothar & Cluain Da Fiach & Cluain Dartada. Et in ferand forsat .h. Fhoranla".
 
 <#Columb>
 	a foaf:Person;
 	foaf:name "Columb";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>;
+	rdfs:comment "Ruadan & Garban & Columb is é a ferand .i. Ráth Ruadain & Caille Coluimb & Cell n-Eithne & Ard m-Bruchais. Nisi dano is é a orbba .i. Bile Methais. & Cluain Meic Nisse".
 
 <#Garbán>
 	a foaf:Person;
 	foaf:name "Garbán";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>;
+	rdfs:comment "Ruadan & Garban & Columb is é a ferand .i. Ráth Ruadain & Caille Coluimb & Cell n-Eithne & Ard m-Bruchais. Nisi dano is é a orbba .i. Bile Methais. & Cluain Meic Nisse".
 
 <#Comgall-08805def>
 	a foaf:Person;
 	foaf:name "Comgall";
-	rel:childOf <#Secht>.
+	rel:childOf <#Lugnai-3e81a1e4>.
 
 <#Comgall-4862629f>
 	owl:sameAs <#Comgall-08805def>.
@@ -373,37 +424,40 @@
 <#Colmán>
 	a foaf:Person;
 	foaf:name "Colmán";
-	rel:childOf <#Comgaill-16bfe5c3>.
+	rel:siblingOf <#Tulach>;
+	rdfs:comment ".i. erlam na cilli [Núachongbála]".
 
 <#BerachFind>
 	a foaf:Person;
 	foaf:name "Berach Find";
-	rel:childOf <#Domongairt-5b28054f>.
+	rel:childOf <#Domongairt-5b28054f>;
+	irishRel:numChild 4.
 
 <#Domongairt-5b28054f>
 	a foaf:Person;
 	foaf:name "Domongairt";
-	rel:childOf <#Bairr>.
+	foaf:name "Domongart";
+	rel:childOf <#Bairr-0225cfc0>.
 
-<#Bairr>
+<#Bairr-0225cfc0>
 	a foaf:Person;
 	foaf:name "Bairr";
+	foaf:name "Barr";
 	rel:childOf <#Sarbile>.
 
 <#Colman>
 	a foaf:Person;
 	foaf:name "Colman";
-	rel:childOf <#BerachFind>.
+	foaf:name "Comman";
+	rel:childOf <#BerachFind>;
+	rdfs:comment "Colman nó Comman".
 
-<#CommanColumb>
+<#Columb>
 	a foaf:Person;
-	foaf:name "Comman Columb";
-	rel:childOf <#BerachFind>.
-
-<#Subne>
-	a foaf:Person;
+	foaf:name "Columb";
 	foaf:name "Subne";
-	rel:childOf <#BerachFind>.
+	rel:childOf <#BerachFind>;
+	rdfs:comment "Columb nó Subne".
 
 <#Furudran>
 	a foaf:Person;
@@ -428,29 +482,34 @@
 	foaf:name "Senach";
 	rel:childOf <#Comgaill-8b35f9b4>.
 
+<#Comgaill-9b4a37e0>
+	owl:sameAs <#Comgaill-8b35f9b4>;
+	irishRel:numChild 5.
+
 <#Aed>
 	a foaf:Person;
 	foaf:name "Aed";
-	rel:childOf <#Comgaill-8b35f9b4>.
+	rel:childOf <#Comgaill-9b4a37e0>.
 
 <#Fínan>
 	a foaf:Person;
 	foaf:name "Fínan";
-	rel:childOf <#Comgaill-8b35f9b4>.
+	rel:childOf <#Comgaill-9b4a37e0>.
 
 <#Maelodor>
 	a foaf:Person;
 	foaf:name "Maelodor";
-	rel:childOf <#Comgaill-8b35f9b4>.
+	rel:childOf <#Comgaill-9b4a37e0>.
 
 <#Colman-face5fa2>
 	a foaf:Person;
 	foaf:name "Colman";
-	rel:childOf <#Comgaill-8b35f9b4>.
+	rel:childOf <#Comgaill-9b4a37e0>.
 
 <#Brocain-e5f05de0>
 	owl:sameAs <#Brocain>;
-	rel:childOf <#Shenaig>.
+	rel:childOf <#Shenaig>;
+	irishRel:numChild 5.
 
 <#Shenaig>
 	foaf:name "Shenaig";
@@ -484,7 +543,11 @@
 <#Ibar>
 	a foaf:Person;
 	foaf:title "Epscop"@sga, "Bishop"@en;
-	foaf:knows <#Bairr-4d968e16>, <#Cairthind>.
+	foaf:knows <#Bairr-4d968e16>, <#Cairthind>;
+	rdfs:comment "Epscop Ibar tra ro baiste da mc déc Bairr mc Cairthind".
+
+# Why are we saying that he knows <#Cairthind>, who is of the previous 
+# generation? EPT
 
 <#Bairr-4d968e16>
 	a foaf:Person;
@@ -493,7 +556,8 @@
 
 <#Cairthind>
 	a foaf:Person;
-	foaf:name "Cairthind".
+	foaf:name "Cairthind";
+	foaf:name "Carthend".
 
 _:missing-231433a2
 	a foaf:Person;
@@ -507,57 +571,80 @@ _:missing-231433a2
 <#Fergus>
 	a foaf:Person;
 	foaf:name "Fergus";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment ".i. i ferund a m-mathar ro gabsat ferand".
 
 <#Enna>
 	a foaf:Person;
 	foaf:name "Enna";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment ".i. i ferund a m-mathar ro gabsat ferand".
 
 <#NathÍ>
 	a foaf:Person;
 	foaf:name "Nath Í";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment ".i. i ferund a m-mathar ro gabsat ferand".
 
 <#Aed-6e5dabd6>
 	a foaf:Person;
 	foaf:name "Aed";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment ".i. i ferund a m-mathar ro gabsat ferand".
 
 <#Fechuir>
 	a foaf:Person;
 	foaf:name "Fechuir";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:commnt "i m-Maig Réta".
 
 <#Bresal>
 	a foaf:Person;
 	foaf:name "Bresal";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:commnt "i m-Maig Réta".
 
 <#Enna-6d1d03a0>
 	a foaf:Person;
 	foaf:name "Enna";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:commnt "i m-Maig Réta".
 
 <#Dubbronach>
 	a foaf:Person;
 	foaf:name "Dubbronach";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:commnt "i m-Maig Réta".
 
 <#Findech>
 	a foaf:Person;
 	foaf:name "Findech";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:commnt "i m-Maig Réta".
 
 <#Luchtigern>
 	a foaf:Person;
 	foaf:name "Luchtigern";
-	rel:childOf <#Bairr-4d968e16>.
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:commnt "i m-Maig Réta".
 
-<#BresailEogan>
+<#Eogan>
 	a foaf:Person;
-	foaf:name "Bresail Eogan";
-	rel:childOf <#Bairr-4d968e16>.
+	foaf:name "Eogan";
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment "i Feib. .i. i n.h. Bresail".
+
+<#Lugaid>
+	a foaf:Person;
+	foaf:name "Lugaid";
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment "i Feib. .i. i n.h. Bresail".
+
+<#Diarmait>
+	a foaf:Person;
+	foaf:name "Diarmait";
+	rel:childOf <#Bairr-4d968e16>;
+	rdfs:comment "i Feib. .i. i n.h. Bresail".
 
 <#Ronan>
 	a foaf:Person;
@@ -567,40 +654,49 @@ _:missing-231433a2
 <#Snedgusa-ca31746f>
 	a foaf:Person;
 	foaf:name "Snedgusa";
+	foaf:name "Snedgus";
 	rel:childOf <#DuibThiprat>.
 
 <#DuibThiprat>
 	a foaf:Person;
 	foaf:name "Duib Thiprat";
+	foaf:name "Dub Tiprait";
 	rel:childOf <#Faelbrain>.
 
 <#Faelbrain>
 	a foaf:Person;
 	foaf:name "Faelbrain";
+	foaf:name "Faelbran";
 	rel:childOf <#Comain>.
 
 <#Comain>
 	a foaf:Person;
 	foaf:name "Comain";
+	foaf:name "Coman";
 	rel:childOf <#Senaig-aad60e45>.
 
 <#Senaig-aad60e45>
 	a foaf:Person;
 	foaf:name "Senaig";
+	foaf:name "Senach";
 	rel:childOf <#Aeda>.
 
 <#Aeda>
 	a foaf:Person;
 	foaf:name "Aeda";
+	foaf:name "Aed";
 	rel:childOf <#Corpri>.
 
 <#Corpri>
 	a foaf:Person;
 	foaf:name "Corpri";
+	foaf:name "Coirpre";
 	rel:childOf <#Fhergusa>.
 
 <#Fhergusa>
+	a foaf:Person;
 	foaf:name "Fhergusa";
+	foaf:name "Fergus";
 	owl:sameAs <#Fergus>;
 	rel:childOf <#Bairr-cbd76324>.
 
@@ -612,34 +708,44 @@ _:missing-231433a2
 <#Ruidgiusa-c5c4471f>
 	a foaf:Person;
 	foaf:name "Ruidgiusa";
+	foaf:name "Ruidgus";
 	rel:childOf <#Ruadgusa>.
 
 <#Ruadgusa>
 	a foaf:Person;
 	foaf:name "Ruadgusa";
-	rel:childOf <#Snédgusa>.
+	foaf:name "Ruadgus";
+	rel:childOf <#Snédgusa-ec327840>.
 
-<#Snédgusa>
+<#Snédgusa-ec327840>
 	foaf:name "Snédgusa";
+	foaf:name "Snédgus";
 	owl:sameAs <#Snedgusa-ca31746f>.
 
-<#DuibThiprat>
+<#DuibThiprat-2b156860>
+	a foaf:Person;
 	foaf:name "Duib Thiprat";
-	owl:sameAs <#DuibThiprat>.
+	foaf:name "Dub Tiprait";
+	owl:sameAs <#DuibThiprat>;
+	irishRel:numChild 3.
 
 <#Snedgus-03828b0b>
+	a foaf:Person;
 	foaf:name "Snedgus";
-	owl:sameAs <#Snédgusa>.
-
+	owl:sameAs <#Snédgusa>;
+	rel:childOf <#DuibThiprat-2b156860>.
+	
 <#Oengus>
 	a foaf:Person;
 	foaf:name "Oengus";
-	rel:childOf <#DuibThiprat>.
+	rel:childOf <#DuibThiprat-2b156860>;
+	rdfs:comment "a quo Cland Fhlannacain i m-Bairrchiu".
 
 <#Forannan>
 	a foaf:Person;
 	foaf:name "Forannan";
-	rel:childOf <#DuibThiprat>.
+	rel:childOf <#DuibThiprat-2b156860>;
+	rdfs:comment "a quo Cland Elge".
 
 <#Cathnia>
 	a foaf:Person;
@@ -649,27 +755,34 @@ _:missing-231433a2
 <#Dungusa>
 	a foaf:Person;
 	foaf:name "Dungusa";
+	foaf:name "Dungus";
 	rel:childOf <#Narchon>.
 
 <#Narchon>
 	a foaf:Person;
 	foaf:name "Narchon";
-	rel:childOf <#Décsenaig>.
+	rel:childOf <#Décsenaig-c91d3010>.
 
-<#Décsenaig>
+<#Décsenaig-c91d3010>
 	a foaf:Person;
 	foaf:name "Décsenaig";
-	rel:childOf <#Cuileni>.
+	foaf:name "Décsenach";
+	rel:childOf <#Cuileni>;
+	owl:sameAs <#Décsenaig>.
 
 <#Cuileni>
 	a foaf:Person;
 	foaf:name "Cuileni";
-	rel:childOf <#Senaig-822badca>.
+	foaf:name "Cuilen";
+	rel:childOf <#Senaig-822badca>;
+	owl:sameAs <#Cúlini>.
 
 <#Senaig-822badca>
 	a foaf:Person;
 	foaf:name "Senaig";
-	rel:childOf <#Comgaill-14f5578b>.
+	foaf:name "Senach";
+	rel:childOf <#Comgaill-14f5578b>;
+	owl:sameAs <#Senaig>.
 
 <#Comgaill-14f5578b>
 	foaf:name "Comgaill";
@@ -685,24 +798,37 @@ _:missing-231433a2
 
 <#NiallNóigiallach>
 	a foaf:Person;
-	foaf:name "Niall Nóigiallach".
+	foaf:name "Niall Nóigiallach";
+	owl:sameAs <http://example.com/LL/rig_ailig.ttl#NeillNóigiallaig>;
+	rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
 
 <#CathairMár>
 	owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>;
+	owl:sameAs <http://example.com/LL/lagin.ttl#CathairMár>;
 	foaf:title "ardríg"@sga, "High King"@en;
-	rel:childOf <#Feidlimthe>.
+	rel:childOf <#Feidlimthe>;
+	rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
+
+# While all these individuals are indeed attested as High Kings, that is not what the text says at this point:
+# it states that all high kings, noblemen, and saints trace their lineages from these figures. Perhaps we should 
+# just quote the text in a rdfs:comment? Also, why isn't <#NiallNóigiallach> a High King? EPT
 
 <#Feidlimthe>
 	owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FeidlimidFerUrglas>;
 	foaf:title "ardríg"@sga, "High King"@en;
-	foaf:name "Feidlimthe".
+	foaf:name "Feidlimthe";
+	foaf:name "Feidlimid".
 
 <#FiachraAraide>
 	a foaf:Person;
 	foaf:title "ardríg"@sga, "High King"@en;
-	foaf:name "Fiachra Araide".
+	foaf:name "Fiachra Araide";
+	owl:sameAs <http://example.com/LL/dail_araide.ttl#FhiachachAraide>;
+	rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
 
 <#AilillOlom>
 	a foaf:Person;
 	foaf:title "ardríg"@sga, "High King"@en;
-	foaf:name "Ailill Olom".
+	foaf:name "Ailill Olom";
+	owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#AilellaOloimm>;
+	rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
