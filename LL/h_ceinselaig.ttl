@@ -25,16 +25,19 @@
 <#Dondchada>
     a foaf:Person;
     foaf:name "Dondchada";
+    foaf:name "Dondchad";
     rel:childOf <#MurchadaAthCliath>.
 
 <#MurchadaAthCliath>
     a foaf:Person;
     foaf:name "Murchada Ath Cliath";
+    foaf:name "Murchad Ath Cliath";
     rel:childOf <#Diarmata>.
 
 <#Diarmata>
     a foaf:Person;
     foaf:name "Diarmata";
+    foaf:name "Diarmait";
     rel:childOf [
         a foaf:Person;
         rel:childOf <#maelí>
@@ -47,21 +50,31 @@
 <#Dondchada-8289fc07>
     a foaf:Person;
     foaf:name "Dondchada";
+    foaf:name "Dondchad";
     rel:child <#Diarmata-90179f20>.
 
 <#Diarmata-90179f20>
     a foaf:Person;
     foaf:name "Diarmata";
+    foaf:name "Diarmait";
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     foaf:name "Domnaill";
+    foaf:name "Domnall";
     rel:childOf <#Cellaig>.
 
 <#Cellaig>
     a foaf:Person;
-    foaf:name "Cellaig".
+    foaf:name "Cellaig";
+    foaf:name "Cellach";
+    rel:descendantOf <#EnnaeCendselaig>.
+
+# While I can't make any sense of "[gap: illegible/extent: ? letters]
+# c-cath & Broen" either, we surely don't need to leave <#Cellaig> and descendants
+# unconnected to the genealogies. Presumably <#Cellaig> is rel:descendantOf <#EnnaeCendselaig>
+# otherwise he wouldn't be here? EPT
 
 <#Broen>
     a foaf:Person;
@@ -74,22 +87,26 @@
 
 <#Cinaeda>
     a foaf:Person;
-    foaf:name " Cinaeda";
+    foaf:name "Cinaeda";
+    foaf:name "Cinaed";
     rel:childOf <#Corpri>.
 
 <#Corpri>
     a foaf:Person;
     foaf:name "Corpri";
+    foaf:name "Coirpre";
     rel:childOf <#Diarmata-78ba3056>.
 
 <#Diarmata-78ba3056>
     a foaf:Person;
     foaf:name "Diarmata";
+    foaf:name "Diarmait";
     rel:childOf <#Aeda>.
 
 <#Aeda>
     a foaf:Person;
     foaf:name "Aeda";
+    foaf:name "Aed";
     rel:childOf <#Rudgaile>.
 
 <#Rudgaile>
@@ -100,11 +117,13 @@
 <#Onchon>
     a foaf:Person;
     foaf:name "Onchon";
+    foaf:name "Onchú";
     rel:childOf <#Faelain>.
 
 <#Faelain>
     a foaf:Person;
     foaf:name "Faelain";
+    foaf:name "Faelan";
     rel:childOf [
         a foaf:Person;
         rel:childOf <#Shilain>
@@ -113,48 +132,63 @@
 <#Shilain>
     a foaf:Person;
     foaf:name "Shilain";
+    foaf:name "Sílan";
     rel:childOf <#EogainCháech>.
 
 <#EogainCháech>
     a foaf:Person;
     foaf:name "Eogain Cháech";
-    rel:childOf <#NathÍ>.
+    foaf:name "Eogan Cáech";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Eogan-2f23aa46>.
 
 <#NathÍ>
     a foaf:Person;
     foaf:name "Nath Í";
-    rel:childOf <#Crimthaind>.
+    rel:childOf <#Crimthaind>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NathÍ-6c69a50e>.
 
 <#Crimthaind>
     a foaf:Person;
     foaf:name "Crimthaind";
-    rel:childOf <#EnnaeCendselaig>.
+    foaf:name "Crimthand";
+    rel:childOf <#EnnaeCendselaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Crimthand-70ddc258>.
 
 <#EnnaeCendselaig>
     a foaf:Person;
     foaf:name "Ennae Cendselaig";
-    rel:childOf <#Labrada>.
-    #sameAs http://example.com/LL/dal_corpri_arad.ttl#Chendselaig ? - CY
+    foaf:name "Enna Cennselach";
+    rel:childOf <#Labrada>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EnnaGensalach>.
+    
+# sameAs http://example.com/LL/dal_corpri_arad.ttl#Chendselaig ? - CY
+# Yup, but I found a more direct mention in that tract, hiding beneath 
+# a weird spelling variant. EPT
 
 <#Labrada>
     a foaf:Person;
     foaf:name "Labrada";
+    foaf:name "Labraid";
     rel:childOf <#BresailBelaig>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#LabradaLaidig>.
 
 <#BresailBelaig>
     a foaf:Person;
     foaf:name "Bresail Belaig";
+    foaf:name "Bresal Belach";
     rel:childOf <#FiachachBaccid>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#BresailBelaig>.
 
 <#FiachachBaccid>
     a foaf:Person;
     foaf:name "Fiachach Baccid";
-    rel:childOf <#CathairMoir>.
+    foaf:name "Fiachu Baccid";
+    rel:childOf <#CathairMoir>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FiachuBaccid>.
 
 <#CathairMoir>
     a foaf:Person;
     foaf:name "Cathair Moir";
+    foaf:name "Cathair Mór";
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>.
-
