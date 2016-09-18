@@ -22,6 +22,7 @@
 <#Aeda>
     a foaf:Person;
     foaf:name "Aeda";
+    foaf:name "Aed";
     rel:childOf <#MaelIsu>.
 
 <#MaelIsu>
@@ -32,6 +33,7 @@
 <#Amalgada-e5df2619>
     a foaf:Person;
     foaf:name "Amalgada";
+    foaf:name "Amalgaid";
     rel:childOf <#MaelMaire>.
 
 <#MaelMaire>
@@ -42,11 +44,13 @@
 <#Eochada>
     a foaf:Person;
     foaf:name "Eochada";
+    foaf:name "Eochaid";
     rel:childOf <#Cellaig>.
 
 <#Cellaig>
     a foaf:Person;
     foaf:name "Cellaig";
+    foaf:name "Cellach";
     rel:childOf <#Lán>.
 
 <#Lán>
@@ -57,41 +61,49 @@
 <#Coemain>
     a foaf:Person;
     foaf:name "Coemain";
+    foaf:name "Coeman";
     rel:childOf <#Airechtaig>.
 
 <#Airechtaig>
     a foaf:Person;
     foaf:name "Airechtaig";
+    foaf:name "Airechtach";
     rel:childOf <#DuibDaLethi>.
 
 <#DuibDaLethi>
     a foaf:Person;
     foaf:name "Duib Da Lethi";
+    foaf:name "Dub Da Leithe";
     rel:childOf <#Sínaig>.
 
 <#Sínaig>
     a foaf:Person;
     foaf:name "Sínaig";
+    foaf:name "Sínach";
     rel:childOf <#FeradaigCúlduib>.
 
 <#FeradaigCúlduib>
     a foaf:Person;
     foaf:name "Feradaig Cúlduib";
+    foaf:name "Feradach Cúldub";
     rel:childOf <#Amalgada-bd1bde7f>.
 
 <#Amalgada-bd1bde7f>
     a foaf:Person;
     foaf:name "Amalgada";
+    foaf:name "Amalgaig";
     rel:childOf <#Ailella>.
 
 <#Ailella>
     a foaf:Person;
     foaf:name "Ailella";
+    foaf:name "Ailill";
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     foaf:name "Echdach";
+    foaf:name "Eochaid";
     rel:childOf _:missing-d48779e1.
 
 _:missing-d48779e1
@@ -101,13 +113,35 @@ _:missing-d48779e1
 <#Murchad>
     a foaf:Person;
     foaf:name "Murchad";
-    rel:childOf <#Chennetig>;
     rel:childOf <#Find>.
+
+<#Murchad>
+    a foaf:Person;
+    foaf:name "Murchad";
+    rel:childOf [
+        a foaf:Person;
+        foaf:gender "female";
+        rel:childOf <#Chennetig> 
+].
 
 <#Chennetig>
     a foaf:Person;
     foaf:name "Chennetig";
-    foaf:gender "female".
+    foaf:name "Cennetig";
+    rel:descendantOf <#Briain>.
+
+<#Briain>
+    a foaf:Person;
+    foaf:name "Briain";
+    foaf:name "Brian";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Brian>.
+
+# I am tempted to identify this man with Brían Bóruma, as Cennetig
+# is also a Dál Caiss name and Armagh did align itself with Brían.
+# However, Cennetig was Brían's father and I can't find any descendants 
+# of Brían called Cennetig, although he did have a nephew called 
+# Cennetig via his brother, Dond Cuan (<http://example.com/LL/tairdelbaig.ttl#Cennetig>).
+# Could he be termed "h. Briain"? EPT
 
 <#Find>
     a foaf:Person;
@@ -117,21 +151,25 @@ _:missing-d48779e1
 <#Ruadrí>
     a foaf:Person;
     foaf:name "Ruadrí";
+    foaf:name "Ruaidri";
     rel:childOf <#Muridaig>.
 
 <#Muridaig>
     a foaf:Person;
     foaf:name "Muridaig";
+    foaf:name "Muiredach";
     rel:childOf <#Ailella>.
 
 <#Ailella>
     a foaf:Person;
     foaf:name "Ailella";
+    foaf:name "Ailill";
     rel:childOf <#Cummascaig>.
 
 <#Cummascaig>
     a foaf:Person;
     foaf:name "Cummascaig";
+    foaf:name "Cummuscach";
     rel:childOf <#Echoden>.
 
 <#Echoden>
@@ -142,21 +180,25 @@ _:missing-d48779e1
 <#Ruaduchain>
     a foaf:Person;
     foaf:name "Ruaduchain";
+    foaf:name "Ruaduchan";
     rel:childOf <#Cellaig>.
 
 <#Cellaig>
     a foaf:Person;
     foaf:name "Cellaig";
+    foaf:name "Cellach";
     rel:childOf <#Ruadrach>.
 
 <#Ruadrach>
     a foaf:Person;
     foaf:name "Ruadrach";
+    foaf:name "Ruaidri";
     rel:childOf <#Conmáil>.
 
 <#Conmáil>
     a foaf:Person;
     foaf:name "Conmáil";
+    foaf:name "Conmael";
     rel:childOf <#Conaing>.
 
 <#Conaing>
@@ -167,8 +209,139 @@ _:missing-d48779e1
 <#Fheradaig>
     a foaf:Person;
     foaf:name "Fheradaig";
+    foaf:name "Feradach";
     rel:childOf <#Amalgada-cdc21715>.
 
 <#Amalgada-cdc21715>
     a foaf:Person;
-    foaf:name "Amalgada".
+    foaf:name "Amalgada";
+    foaf:name "Amalgaid";
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Amalgaid>.
+    
+<#Conmáil-df4c9930>
+    a foaf:Person;
+    owl:sameAs <#Conmáil>;
+    irishRel:numChild 2.
+
+<#Ruadrí>
+    owl:sameAs <#Ruadrach>;
+    rel:childOf <#Conmáil-df4c9930>.
+
+<#Fraechan>
+    a foaf:Person;
+    foaf:name "Fraechan";
+    rel:childOf <#Conmáil-df4c9930>.
+
+<#Fheradaig-f8d424e0>
+    a foaf:Person;
+    foaf:name "Fheradaig";
+    foaf:name "Feradach";
+    owl:sameAs <#Fheradaig>;
+    irishRel:numChild 3.
+
+<#Sínach>
+    a foaf:Person;
+    foaf:name "Sínach";
+    rel:childOf <#Fheradaig-f8d424e0>.
+
+<#Conaing-2f1c2bb0>
+    owl:sameAs <#Conaing>;
+    rel:childOf <#Fheradaig-f8d424e0>.
+
+<#MaelodorCáech>
+    a foaf:Person;
+    foaf:name "Maelodor Cáech";
+    rel:childOf <#Fheradaig-f8d424e0>;
+    rdfs:comment "a quo .h. Brótaid i Cluain Fiacna".
+
+<#Orgnechan>
+    a foaf:Person;
+    foaf:name "Orgnechan";
+    rel:childOf <#Cathasaig>.
+
+<#Cathasaig>
+    a foaf:Person;
+    foaf:name "Cathasaig";
+    foaf:name "Cathasach";
+    rel:childOf <#Daimini>.
+
+<#Daimini>
+    a foaf:Person;
+    foaf:name "Daimini";
+    foaf:name "Daimine";
+    rel:childOf <#Dubgillai>.
+
+<#Dubgillai>
+    a foaf:Person;
+    foaf:name "Dubgillai";
+    foaf:name "Dubgilla";   
+    rel:childOf <#Bruaturain>.
+
+<#Bruaturain>
+    a foaf:Person;
+    foaf:name "Bruaturain";
+    foaf:name "Bruaturan";
+    rel:childOf <#Cinaeda>.
+
+<#Cinaeda>
+    a foaf:Person;
+    foaf:name "Cinaeda";
+    foaf:name "Cinaed";
+    rel:childOf <#Conaing-ece9cd00>.
+
+<#Conaing-ece9cd00>  
+    a foaf:Person;
+    foaf:name "Conaing";
+    rel:childOf <#Fheradaig-3c82b160>;
+    owl:sameAs <#Conaing>.
+
+<#Fheradaig-3c82b160>
+    a foaf:Person;
+    foaf:name "Fheradaig";
+    foaf:name "Feradach";
+    owl:sameAs <#Fheradaig>. 
+
+<#Domnallan>
+    a foaf:Person;
+    foaf:name "Domnallan";
+    rel:childOf <#Gillai Maire>.
+
+<#Gillai Maire>
+    a foaf:Person;
+    foaf:name "Gillai Maire";
+    foaf:name "Gilla Maire";
+    rel:childOf <#Cerbaill>.
+
+<#Cerbaill>
+    a foaf:Person;
+    foaf:name "Cerbaill";
+    foaf:name "Cerball";
+    rel:childOf <#Anfith>.
+
+<#Anfith>
+    a foaf:Person;
+    foaf:name "Anfith";
+    rel:childOf <#Bruaturain-f471f150>.
+
+<#Bruaturain-f471f150>
+    a foaf:Person;
+    foaf:name "Bruaturain";
+    foaf:name "Bruataran";
+    rel:childOf <#Cinaeda-fe294720>.
+
+<#Cinaeda-fe294720>
+    a foaf:Person;
+    foaf:name "Cinaeda";
+    foaf:name "Cinaed";
+    rel:childOf <#Ancellain>.
+
+<#Ancellain>
+    a foaf:Person;
+    foaf:name "Ancellain";
+    foaf:name "Ancellan";
+    rel:childOf <#Ruadrach-361735c0>.
+
+<#Ruadrach-361735c0>
+    a foaf:Person;
+    foaf:name "Ruadrach";
+    owl:sameAs <#Ruadrach>.
