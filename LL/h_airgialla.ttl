@@ -16,63 +16,122 @@
 
 <#FiachaSroptene>
     a foaf:Person;
-    foaf:title "rí"@sga, "king"@en;
+    foaf:title "rí i Temair"@sga, "king of Tara"@en;
     foaf:name "Fiacha Sroptene";
-    rel:childOf <#CorpriLiphechair>.
+    rel:childOf <#CorpriLiphechair>;
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#FhiachachSraptini>.
 
 <#CorpriLiphechair>
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>;
+    irishRel:numChild 2. 
 
 <#MuridachTirech>
     a foaf:Person;
     foaf:name "Muridach Tirech";
-    rel:childOf <#FiachaSroptene>.
+    rel:childOf <#FiachaSroptene>;
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#MuridaigTirig>.
 
 <#EochoDomlén>
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EochaidDomlen>;
     foaf:name "Eocho Domlén";
     rel:childOf <#CorpriLiphechair>.
+
+<#CollaOss>
+    a foaf:Person;
+    foaf:name "Colla Oss";
+    foaf:name "Colla Uais";
+    rel:childOf <#EochoDomlén>;
+    rdfs:comment "a quo .h Meic Uais. & h. Thurtri";
+    owl:sameAs <http://example.com/LL/h_fiachrach_arda_sratha.ttl#CollaUais>;
+    owl:sameAs <http://example.com/LL/rig_h_turtri.ttl#CollaUais>;
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#CollaUais>.
     
+<#CollaMend>
+    a foaf:Person;
+    foaf:name "Colla Mend";
+    rel:childOf <#EochoDomlén>;
+    rdfs:comment "o tát Mugdornai";
+    irishRel:fosterChildOf <#MennetChruithnech>;
+    irishRel:fosterChildOf <#MugdornDub>;
+    owl:sameAs <http://example.com/LL/mugdorn.ttl#CollaMind>.
+
+<#MennetChruithnech>
+    a foaf:Person;
+    foaf:gender "female";
+    foaf:name "Mennet Chruithnech";
+    rdfs:comment "o tá Dál Mennet la Mugdornaib".
+
+<#MugdornDub>
+    a foaf:Person;
+    foaf:name "Mugdorn Dub";
+    rdfs:comment "de Ultaib".
+
+# Does "de Ultaib" also apply to <#MennetChruithnech>? 
+# "Ron-alt Mennet Chruithnech & Mugdorn Dub de Ultaib". EPT
+
+<#MaelBresail>
+    a foaf:Person;
+    foaf:name "Mael Bresail";
+    rel:childOf <#MaeliDúin>;
+    owl:sameAs <http://example.com/LL/mugdorn.ttl#MaelBresail>.
+
+<#MaeliDúin>
+    a foaf:Person;
+    foaf:name "Maeli Dúin";
+    foaf:name "Mael Dúin";
+    rel:descendantOf <#MugdornDub>;
+    rel:descendantOf <#MennetChruithnech>;
+    owl:sameAs <http://example.com/LL/mugdorn.ttl#MaelDuin>.
+
 <#MugdornDuib>
     a foaf:Person;
     foaf:name "Mugdorn Duib";
-    rel:childOf <#EochoDomlén>.
+    foaf:name "Mugdorn Dub";
+    owl:sameAs <#MugdornDub>;
+    irishRel:numChild 7.
 
 <#Dubruig>
     a foaf:Person;
     foaf:name "Dubruig";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "a quo Dubraige oc Imliuch Chorcu Duib".
 
 <#Papa>
     a foaf:Person;
     foaf:name "Papa";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "o tát Papraige la Cremthannu".
 
 <#Caira>
     a foaf:Person;
     foaf:name "Caira";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "a quo Cairraige i Cuib".
 
 <#Sord>
     a foaf:Person;
     foaf:name "Sord";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "a quo Sordraige la Crimthannu".
 
 <#Ibar>
     a foaf:Person;
     foaf:name "Ibar";
     foaf:title "Epscop"@sga, "bishop"@en;
-    rel:descendantOf <#Sord>.
+    rel:descendantOf <#Sord>;
+    rdfs:comment "Epscop Ibar for Fobrech".
 
 <#Art>
     a foaf:Person;
     foaf:name "Art";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "a quo Artraige".
 
 <#Inhomomon>
     a foaf:Person;
     foaf:name "Inhomomon";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "a quo Corco Inmend la Luigniu".
 
 <#LocheneMend>
     a foaf:Person;
@@ -83,35 +142,35 @@
 <#Mesnophe>
     a foaf:Person;
     foaf:name "Mesnophe";
-    rel:childOf <#MugdornDuib>.
+    rel:childOf <#MugdornDuib>;
+    rdfs:comment "a quo Sobraige la Mugdornu".
 
 <#Ethern>
     a foaf:Person;
     foaf:name "Ethern";
     foaf:title "Epscop"@sga, "bishop"@en;
-    rel:descendantOf <#Mesnophe>.
-
+    rel:descendantOf <#Mesnophe>;
+    rdfs:comment "i n-Domnuch Mór Maige Laithbe". 
 
 <#CollaFochrich>
     a foaf:Person;
     foaf:name "Colla Fochrich";
-    rel:childOf <#EochoDomlén>.
-
-<#CollaFochri>
-    a foaf:Person;
-    foaf:name "Fochri";
-    rel:childOf <#EochoDomlén>.
-
-<#CollaOchre>
-    a foaf:Person;
+    foaf:name "Colla Fochri";
     foaf:name "Colla Ochre";
-    rel:childOf <#EochoDomlén>.
+    rel:childOf <#EochoDomlén>;
+    rdfs:comment "Is ón Chollasain atát .h. Crimthainn & int Airther & h. Méith".
 
 <#Élige>
     a foaf:Person;
     foaf:name "Élige";
     foaf:gender "female";
-    rel:spouseOf <#ChrindenCherdda>.
+    rel:spouseOf <#ChrindenCherdda>;
+    rel:parentOf <#CollaFochrich>;
+    rel:Relationship <#EochoDomlén>.
+
+# <#EochoDomlén> slept with <#Élige>, wife of <#ChrindenCherdda>, 
+# and then had to pay compensation. How do we represent his relationship
+# with <#ChrindenCherdda>? rel:antagonistOf seems a bit strong. EPT
 
 <#ChrindenCherdda>
     a foaf:Person;
@@ -119,38 +178,51 @@
 
 <#CollaFochrith>
     foaf:name "Colla Fochrith";
-    owl:sameAs <#CollaFochrich>.
+    owl:sameAs <#CollaFochrich>;
+    irishRel:numChild 4.
 
 <#Find>
     a foaf:Person;
     foaf:name "Find";
-    rel:childOf <#CollaFochrith>.
+    rel:childOf <#CollaFochrith>;
+    rdfs:comment "díbad".
 
 <#FiachraCassan>
     a foaf:Person;
     foaf:name "Fiachra Cassan";
-    rel:childOf <#CollaFochrith>.
+    rel:childOf <#CollaFochrith>;
+    rdfs:comment "a quo int Airther";
+    owl:sameAs <http://example.com/LL/h_mbresail.ttl#FiachrachCassan>;
+    owl:sameAs <http://example.com/LL/h_niallain.ttl#FhiachrachCassan>.
 
 <#Rochad>
     a foaf:Person;
     foaf:name "Rochad";
-    rel:childOf <#CollaFochrith>.
+    rel:childOf <#CollaFochrith>;
+    rdfs:comment "o tát .h. Chremthainn".
 
 <#Brian>
     a foaf:Person;
     foaf:name "Brian";
-    rel:childOf <#CollaFochrith>.
+    rel:childOf <#CollaFochrith>;
+    rdfs:comment "a quo h. Bríuin".
 
 <#Labraid>
     a foaf:Person;
     foaf:name "Labraid";
-    rel:childOf <#CollaFochrith>.
+    rel:childOf <#CollaFochrith>;
+    rdfs:comment "a quo h. Labrada".
 
 <#Crimthand>
     a foaf:Person;
     foaf:name "Crimthand";
-    rel:descendantOf <#Sord>.
-    # ? not sure - CY
+    rel:descendantOf <#Rochad>;
+    owl:sameAs <http://example.com/LL/fer_manach.ttl#CrimthainnLeith>;
+    irishRel:numChild 6.
+
+# ? not sure - CY
+# <#Rochad>, surely? He is the ancestor of Uí Chremthainn.
+# The Sordaige just live among them. EPT
 
 <#Eocho>
     a foaf:Person;
@@ -165,12 +237,14 @@
 <#FergusCendfhota>
     a foaf:Person;
     foaf:name "Fergus Cendfhota";
-    rel:childOf <#Crimthand>.
+    rel:childOf <#Crimthand>;
+    rdfs:comment "a quo .h. Chendfhotai".
 
 <#Lugaid>
     a foaf:Person;
     foaf:name "Lugaid";
-    rel:childOf <#Crimthand>.
+    rel:childOf <#Crimthand>;
+    rdfs:comment "ó tá Leithrend".
 
 <#Muridach>
     a foaf:Person;
@@ -180,95 +254,120 @@
 <#EochaidAmainsen>
     a foaf:Person;
     foaf:name "Eochaid Amainsen";
-    rel:childOf <#Muridach>.
+    rel:childOf <#Muridach>;
+    rdfs:comment "o tát h. Meic Brócc".
 
 <#EochaidAndgaine>
     a foaf:Person;
     foaf:name "Eochaid Andgaine";
-    rel:childOf <#Crimthand>.
+    rel:childOf <#Crimthand>;
+    rdfs:comment "a quo Cland Slébine i Fernmaig et Cland Fhlannan";
+    irishRel:numChild 1;
+    owl:sameAs <http://example.com/LL/fer_manach.ttl#Echdach>.
 
 <#CairpreDamArgait>
     a foaf:Person;
     foaf:name "Cairpre Dam Argait";
-    rel:childOf <#EochaidAndgaine>.
+    rel:childOf <#EochaidAndgaine>;
+    irishRel:numChild 6;
+    owl:sameAs <http://example.com/LL/fer_manach.ttl#CorpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/síl_daimini.ttl#CarpriDaimArgait>.
 
 <#Daimine>
     a foaf:Person;
     foaf:name "Daimine";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    rdfs:comment "a quo Síl n-Daimine";
+    owl:sameAs <http://example.com/LL/síl_daimini.ttl#Daimine>.
 
 <#Cormac>
     a foaf:Person;
     foaf:name "Cormac";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    rdfs:comment "o tát Cland Cormaic .i. Cland Lugan".
 
 <#NadSluaig>
     a foaf:Person;
     foaf:name "Nad Sluaig";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    rdfs:comment "o tát Cland Nad Slúaig .i. Fir Fhernmaige".
 
 <#Feradach>
     a foaf:Person;
     foaf:name "Feradach";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    rdfs:comment "o tat Cland Fheradaig".
 
 <#Fiacha>
     a foaf:Person;
     foaf:name "Fiacha";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    rdfs:comment "o tát Cenel Fiachach".
 
 <#Brian>
     a foaf:Person;
     foaf:name "Brian";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    rdfs:comment "o tát Lethrind. Sil m-Baetain".
     
 <#Aed>
     a foaf:Person;
     foaf:name "Aed";
-    rel:childOf <#CairpreDamArgait>.
+    rel:childOf <#CairpreDamArgait>;
+    owl:sameAs <http://example.com/LL/fer_manach.ttl#Aeda>.
+
+<#Daimine-1e674840>
+    owl:sameAs <#Daimine>;
+    irishRel:numChild 9.
 
 <#Conall>
     a foaf:Person;
     foaf:name "Conall";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>;
+    rdfs:comment "o tá Lethrend Conaill for Doblu".
 
 <#Ailill>
     a foaf:Person;
     foaf:name "Ailill";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>;
+    rdfs:comment "a quo Leithrend [gap: illegible/extent: ? letters]".
 
 <#Lochan>
     a foaf:Person;
     foaf:name "Lochan";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>;
+    rdfs:comment "a quo Lethrend Lochain".
 
 <#Tuathal>
     a foaf:Person;
     foaf:name "Tuathal";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>;
+    rdfs:comment "a quo .h. Thuathail".
 
 <#DamanLaech>
     a foaf:Person;
     foaf:name "Daman Laech";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>.
 
 <#DamanClerech>
     a foaf:Person;
     foaf:name "Daman Clerech";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>;
+    rdfs:comment "dibaid".
 
 <#BennanBec>
     a foaf:Person;
     foaf:name "Bennan Bec";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>.
 
 <#BennanMór>
     a foaf:Person;
     foaf:name "Bennan Mór";
-    rel:childOf <#Daimine>.
+    rel:childOf <#Daimine-1e674840>.
 
 <#AedUach>
     a foaf:Person;
     foaf:name "Aed Uach";
-    rel:childOf <#Daimine>.
-
+    rel:childOf <#Daimine-1e674840>;
+    rdfs:comment "a quo Dál n-Oich int Shlébe".
