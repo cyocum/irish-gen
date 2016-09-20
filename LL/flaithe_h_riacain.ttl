@@ -17,21 +17,25 @@
 <#CuDulig>
     a foaf:Person;
     foaf:name "Cu Dulig";
-    rel:childOf <#Cerbaill>.
+    rel:childOf <#Cerbaill>;
+    rel:descendantOf <#Duind>.
 
 <#Cerbaill>
     a foaf:Person;
     foaf:name "Cerbaill";
+    foaf:name "Cerball";
     rel:childOf <#ConBladma>.
 
 <#ConBladma>
     a foaf:Person;
     foaf:name "Con Bladma";
+    foaf:name "Cú Bladma";
     rel:childOf <#ConAllaid>.
 
 <#ConAllaid>
     a foaf:Person;
     foaf:name "Con Allaid";
+    foaf:name "Cú Allaid";
     rel:childOf <#Fidallaid>.
 
 <#Fidallaid>
@@ -42,53 +46,71 @@
 <#Duind>
     a foaf:Person;
     foaf:name "Duind";
+    foaf:name "Dond";
     rel:childOf <#Dubgillai>.
 
 <#Dubgillai>
     a foaf:Person;
     foaf:name "Dubgillai";
+    foaf:name "Dubgilla";
     rel:childOf <#MaelFhinne>.
 
 <#MaelFhinne>
     a foaf:Person;
     foaf:name "Mael Fhinne";
+    foaf:name "Mael Finne";
     rel:childOf <#Riacain>.
 
 <#Riacain>
     a foaf:Person;
     foaf:name "Riacain";
+    foaf:name "Riacan";
     rel:childOf <#Cinaeda>.
 
 <#Cinaeda>
     a foaf:Person;
     foaf:name "Cinaeda";
+    foaf:name "Cinaed";
     rel:childOf <#Mugroin>.
 
 <#Mugroin>
     a foaf:Person;
     foaf:name "Mugroin";
+    foaf:name "Mugron";
     rel:childOf <#Oengusa>.
 
 <#Oengusa>
     a foaf:Person;
     foaf:name "Oengusa";
+    foaf:name "Oengus";
     rel:childOf <#FlaindDaChongal>.
 
 <#FlaindDaChongal>
     a foaf:Person;
     foaf:name "Flaind Da Chongal";
+    foaf:name "Fland Da Chongal";
     owl:sameAs <http://example.com/LL/flaith_clainde_colgan.ttl#FlaindDaChongal>.
 
 <#FaelanMor>
     a foaf:Person;
     foaf:name "Faelan Mor";
-    rel:childOf <#ChonFhafni>;
-    rel:childOf <#Cerbaill>.
+    rel:childOf <#Cerbaill>;
+    rel:childOf [
+        a foaf:Person;
+        foaf:gender "female";
+        rel:childOf <#ChonFhafni>;
+        rel:spouseOf <#Cerbaill>
+    ].
 
 <#ChonFhafni>
     a foaf:Person;
     foaf:name "Chon Fhafni";
-    foaf:gender "female".
+    foaf:name "Cú Faifne";
+    rel:descendantOf <#Conchobar>.
+
+<#Conchobar>
+    a foaf:Person;
+    foaf:name "Conchobar".
 
 <#Domnall>
     a foaf:Person;
@@ -98,7 +120,9 @@
 <#Cerbaill>
     a foaf:Person;
     foaf:name "Cerbaill";
-    rel:childOf <#Murchada>.
+    foaf:name "Cerball";
+    rel:childOf <#Murchada>;
+    irishRel:numChild 2.
 
 <#Murchada>
     a foaf:Person;
@@ -108,9 +132,9 @@
 <#MaelMorda>
     a foaf:Person;
     foaf:name "Mael Morda";
-    rel:childOf <#Cerbaill>.
+    rel:childOf <#Cerbaill-a36249c0>.
 
-<#Cerbaill>
+<#Cerbaill-a36249c0>
     a foaf:Person;
     foaf:name "Cerbaill";
     rel:childOf <#Faelain>.
@@ -118,19 +142,20 @@
 <#Faelain>
     a foaf:Person;
     foaf:name "Faelain";
-    rel:childOf <#Murchada>.
+    rel:childOf <#Murchada-f391efe0>.
 
-<#Murchada>
+<#Murchada-f391efe0>
     a foaf:Person;
     foaf:name "Murchada";
+    foaf:name "Murchad";
     rel:childOf <#Find>.
 
 <#Find>
     a foaf:Person;
     foaf:name "Find";
-    rel:childOf <#MaelMorda>.
+    rel:childOf <#MaelMorda-1bb0eee0>.
 
-<#MaelMorda>
+<#MaelMorda-1bb0eee0>
     a foaf:Person;
     foaf:name "Mael Morda";
     rel:childOf <#Muricain>.
@@ -138,24 +163,28 @@
 <#Muricain>
     a foaf:Person;
     foaf:name "Muricain";
+    foaf:name "Murican";
     rel:childOf <#Diarmata>.
 
 <#Diarmata>
     a foaf:Person;
     foaf:name "Diarmata";
+    foaf:name "Diarmait";
     rel:childOf <#Rudrach>.
 
 <#Rudrach>
     a foaf:Person;
     foaf:name "Rudrach";
-    rel:childOf <#Faelain>.
+    foaf:name "Ruaidri";
+    rel:childOf <#Faelain-47c3e460>.
 
-<#Faelain>
+<#Faelain-47c3e460>
     a foaf:Person;
     foaf:name "Faelain";
-    rel:childOf <#Murchada>.
+    foaf:name "Faelan";
+    rel:childOf <#Murchada-53bfabf0>.
 
-<#Murchada>
+<#Murchada-53bfabf0>
     a foaf:Person;
     foaf:name "Murchada";
     rel:childOf <#BrainMúit>.
@@ -163,42 +192,50 @@
 <#BrainMúit>
     a foaf:Person;
     foaf:name "Brain Múit";
+    foaf:name "Bran Mút";
     rel:childOf <#Conaill>.
 
 <#Conaill>
     a foaf:Person;
     foaf:name "Conaill";
-    rel:childOf <#Faeláin>.
+    foaf:name "Conall";
+    rel:childOf <#Faeláin-7f0edc40>.
 
-<#Faeláin>
+<#Faeláin-7f0edc40>
     a foaf:Person;
     foaf:name "Faeláin";
+    foaf:name "Faelan";
     rel:childOf <#Colmain>.
 
 <#Colmain>
     a foaf:Person;
     foaf:name "Colmain";
+    foaf:name "Colman";
     rel:childOf <#CoirpriDuib>.
 
 <#CoirpriDuib>
     a foaf:Person;
     foaf:name "Coirpri Duib";
+    foaf:name "Coirpre Dub";
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     foaf:name "Cormaic";
+    foaf:name "Cormac";
     rel:childOf <#Ailella>.
 
 <#Ailella>
     a foaf:Person;
     foaf:name "Ailella";
+    foaf:name "Ailill";
     rel:childOf <#Dunlainge>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Ailill-7bc2d2da>.
 
 <#Dunlainge>
     a foaf:Person;
     foaf:name "Dunlainge";
+    foaf:name "Dunlang";
     rel:childOf <#EnnaNíad>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Dunlang>.
 
@@ -211,40 +248,51 @@
 <#BresailBelaig>
     a foaf:Person;
     foaf:name "Bresail Belaig";
+    foaf:name "Bresal Belach";
     rel:childOf <#FiachachBaccid>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#BresalBelachsa>.
 
 <#FiachachBaccid>
     a foaf:Person;
     foaf:name "Fiachach Baccid";
+    foaf:name "Fiach Baccid";
     rel:childOf <#CathairMáir>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FiachuBaccid>.
 
 <#CathairMáir>
     a foaf:Person;
     foaf:name "Cathair Máir";
+    foaf:name "Cathair Már";
     rel:childOf <#FheidlimidFirAurglais>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>;
+    owl:sameAs <http://example.com/LL/rig_h_falge.ttl#CathairMáir>.
 
 <#FheidlimidFirAurglais>
     a foaf:Person;
     foaf:name "Fheidlimid Fir Aurglais";
+    foaf:name "Feidlimid Fer Aurglas";
     rel:childOf <#CormaicGeltaGaeth>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FeidlimidFerUrglas>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FeidlimidFerUrglas>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#FheidlimidFhirAurglais>.
 
 <#CormaicGeltaGaeth>
     a foaf:Person;
     foaf:name "Cormaic Gelta Gaeth";
-    rel:childOf <#NiadCuirb>.
+    foaf:name "Cormac Gelt Gaeth";
+    rel:childOf <#NiadCuirb>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#CormaicGeltaGaith>.
 
 <#NiadCuirb>
     a foaf:Person;
     foaf:name "Niad Cuirb";
+    foaf:name "Nia Corb";
     rel:childOf <#ConCorb>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NioCorbb>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NioCorbb>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#NiodCorp-51231790>.
 
 <#ConCorb>
     a foaf:Person;
     foaf:name "Con Corb";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#ConCorbb>.
-    
+    foaf:name "Cú Corb";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#ConCorbb>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#ConCorb-615d7330>.
