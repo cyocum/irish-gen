@@ -13,7 +13,7 @@
     dcterms:title "Genelach Corco Bascind"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text013.html>;
     dcterms:format "text/turtle".
-    
+
 <#AedRoin>
     a foaf:Person;
     foaf:name "Aed Roin";
@@ -84,13 +84,18 @@
     foaf:name "Imchada";
     foaf:name "Imchad";
     irishRel:numChild 5;
-    rel:childOf <#CuirpLuigdech>.
+    rel:childOf <#Cuirp>.
 
-<#CuirpLuigdech>
+<#Cuirp>
+  a foaf:Person;
+  foaf:name "Cuirp";
+  foaf:name "Corp";
+  rel:childOf <Luigdech>.
+
+<#Luigdech>
     a foaf:Person;
-    foaf:name "Cuirp Luigdech";
-    foaf:name "Corp Luigdaid";
-    irishRel:numChild 2;
+    foaf:name "Luigdech";
+    foaf:name "Luigdaid";
     rel:childOf <#AilellaBascain>.
 
 <#AilellaBascain>
@@ -103,25 +108,23 @@
     foaf:name "Oengusa Corpri";
     foaf:name "Oengus Corpre";
     rel:childOf <#ConaireMóir>;
-    rel:parentOf <#CuirpLuigdech>.
+    rel:parentOf <#Luigdech>;
+    rel:childOf <#Conaire>.
 
 <#ConaireMóir>
     a foaf:Person;
     foaf:name "Conaire Móir";
-    foaf:name "Conar Mór".
+    foaf:name "Conaire Mór".
 
 <#Conaire>
     a foaf:Person;
     foaf:name "Conaire";
-    foaf:name "Conar";
-    rel:childOf <#MogaLama>;
-    rel:parentOf <#CuirpLuigdech>.
+    rel:childOf <#MogaLama>.
 
 <#MogaLama>
     a foaf:Person;
     foaf:name "Moga Lama";
     foaf:name "Mog Lam".
-
 
 <#Rectabra>
     foaf:name "Rectabra";
@@ -137,7 +140,8 @@
     foaf:name "Décc";
     irishRel:numChild 7;
     foaf:knows <http://www.wikidata.org/entity/Q165479>;
-    owl:sameAs <#Decci>.
+    owl:sameAs <#Decci>;
+    rdfs:comment "quem Patricius baptizauit".
 
 <#Bolg>
     a foaf:Person;
@@ -170,13 +174,13 @@
 
 <#MacMoenaig>
     a foaf:Person;
-    foaf:name "Mac Moenaig"; 
+    foaf:name "Mac Moenaig";
     foaf:knows <http://www.wikidata.org/entity/Q165479>;
     rel:childOf <#Décci>.
 
 <#Conla>
     a foaf:Person;
-    foaf:name "Conla"; 
+    foaf:name "Conla";
     foaf:knows <http://www.wikidata.org/entity/Q165479>;
     rel:childOf <#Décci>.
 
@@ -217,21 +221,26 @@
 <#Decci-1b558d45>
     owl:sameAs <#Decci>.
 
-<#Imchad>
+<#Cuirp-255fe600>
+    irishRel:numChild 2;
+    owl:sameAs <#Cuirp>.
+
+<#Imchad-16716b50>
     foaf:name "Imchad";
-    owl:sameAs <#Imchada>.
+    owl:sameAs <#Imchada>;
+    rel:childOf <#Cuirp-255fe600>.
 
 <#Corpthe>
     a foaf:Person;
     foaf:name "Corpthe";
     irishRel:numChild 3;
-    rel:childOf <#CuirpLuigdech>.
+    rel:childOf <#Cuirp-255fe600>.
 
 <#Brocán>
     a foaf:Person;
     foaf:name "Brocán";
     rel:childOf <#Corpthe>.
-    
+
 <#Cathbarr>
     a foaf:Person;
     foaf:name "Cathbarr";
@@ -705,7 +714,7 @@ _:missing-eefa250f
     foaf:name "Rectabra";
     owl:sameAs <#Rectabrat>;
     rel:childOf <#Athechdai-fe1d78b3>.
-    
+
 <#Torpaid>
     a foaf:Person;
     foaf:name "Torpaid";
@@ -720,7 +729,7 @@ _:missing-eefa250f
     a foaf:Person;
     foaf:name "Fland";
     rel:childOf <#Athechdai-fe1d78b3>.
-    
+
 <#Gallchobor>
     a foaf:Person;
     foaf:name "Gallchobor";
@@ -1035,4 +1044,3 @@ _:missing-eefa250f
 <#Uargusa>
     a foaf:Person;
     foaf:name "Uargusa".
-
