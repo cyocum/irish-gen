@@ -45,7 +45,7 @@
     rdfs:domain foaf:Person;
     rdfs:range xsd:nonNegativeInteger;
     rdfs:comment "this property relates to the stated number of children in a genaology of a particular individual in a manuscript. The individual may have more from other genealogies but this only refers to the number as stated in the manuscript in which this particular individual is found.".
-
+    
 rel:ancestorOf a owl:IrreflexiveProperty,
 	       	 owl:ObjectProperty.
 
@@ -53,7 +53,7 @@ rel:grandparentOf owl:propertyChainAxiom (rel:parentOf rel:parentOf).
 rel:parentOf rdfs:subPropertyOf rel:ancestorOf.
 
 rel:siblingOf
-    a owl:TransitivePoperty, owl:SymmetricProperty.
-
-
+    a owl:TransitivePoperty, owl:SymmetricProperty;
+    owl:propertyChainAxiom (rel:parentOf [owl:inverseOf rel:parentOf]).
     
+
