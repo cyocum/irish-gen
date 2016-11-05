@@ -1,0 +1,89 @@
+@base <http://example.com/LL/de_rigaib_muman_iar_cretim_inso.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Rigaib Muman Iar Cretim Inso"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "text/turtle".
+
+<#Oengus>
+    a irishTitles:Rí ;
+    irishTitles:reignLength 36 ;
+    rel:childOf <#NathFraich>;
+    irishTitles:succeededBy <#Eocho>;
+    foaf:name "Oengus" ;
+    owl:sameAs <http://example.com/LL/eognachta_casil.ttl#Oengusa>.
+
+<#NathFraich>
+    owl:sameAs <http://example.com/LL/eognachta_casil.ttl#NathFraich-47cc38b6>.
+
+<#Eocho>
+    a irishTitles:Rí ;
+    irishTitles:succeededBy <#Feidlimid>;
+    rel:childOf <#Oengusa>;
+    foaf:name "Eocho";
+    irishTitles:reignEndedBy "marb"@sga .
+    
+<#Oengusa>
+    a foaf:Person ;
+    foaf:name "Oengusa" .
+
+<#Feidlimid>
+    a irishTitles:Rí ;
+    irishTitles:reignLength 6 ;
+    foaf:name "Feidlimid" ;
+    irishTitles:succeededBy <#Dubgilla>.
+
+<#Dubgilla>
+    a irishTitles:Rí ;
+    foaf:name "Dubgilla" ;
+    irishTitles:succeededBy <#CrimthannCrom>.
+
+<#CrimthannCrom>
+    a irishTitles:Rí ;
+    foaf:name "Crimthann Crom" ;
+    irishTitles:reignLength 22 ;
+    rel:childOf <#Echach> .
+
+<#Echach>
+    a foaf:Person ;
+    foaf:name "Echach" .
+    
+<#CorpreCrom>
+    a irishTitles:Rí ;
+    foaf:name "Corpre Crom" ;
+    irishTitles:reignLength 22 ;
+    rel:childOf <#CrimthannCrom>;
+    owl:sameAs <http://example.com/LL/sil_anmchada.ttl#CorpriChruim>;
+    irishTitles:succeededBy <#FergusScandail>.
+
+<#FergusScandail>
+    a irishTitles:Rí ;
+    foaf:name "Fergus Scandail" ;
+    rel:childOf <#CrimthannCrom> ;
+    irishTitles:reignLength 12 ;
+    irishTitles:reignEndedBy "ec"@sga ;
+    irishTitles:succeededBy <#Garban> ;
+    irishTitles:succeededBy <#Garbith>.
+
+<#Garban>
+    a irishTitles:Rí ;
+    foaf:name "Garban" ;
+    irishTitles:reignLength 7 ;
+    irishTitles:reignEndedBy "marb"@sga ;
+    irishTitles:succeededBy <#Amalgaid>.
+
+<#Garbith>
+    a irishTitles:Rí ;
+    foaf:name "Garbith" ;
+    irishTitles:reignLength 7 ;
+    irishTitles:reignEndedBy "marb"@sga ;
+    irishTitles:succeededBy <#Amalgaid>.
