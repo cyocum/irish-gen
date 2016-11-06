@@ -1,0 +1,150 @@
+@base <http://example.com/LL/senchas_síl_ébir.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Senchas Síl Ébir fó H-Erinn in so"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text005.html>;
+    dcterms:format "text/turtle".
+
+<#Eber>
+    a foaf:Person;
+    foaf:name "Eber";
+    irishGen:numChild 5;
+    rdfs:comment "ut alii putant";
+    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Ebir>.
+
+<#Conmael>
+    a foaf:Person;
+    foaf:name "Conmael";
+    rel:childOf <#Eber>;
+    rel:childOf <#Díl>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Conmáil>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Conmail>;
+    rdfs:comment "Conmael dí cétri h-Erenn a m-Mumain";
+    foaf:title "king of Ireland"@en;
+    rel:antagonistOf <#Éthriel>;
+    rel:antagonistOf <#Tigernmas>.
+
+<#Tigernmas>
+    a foaf:Person;
+    foaf:name "Tigernmas";
+    owl:sameAs <http://example.com/LL/lagin.ttl#Tigernmais>.
+
+<#Éthriel>
+    a foaf:Person;
+    foaf:name "Ethriel";
+    foaf:title "king of Ireland"@en;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Ethriuil>
+
+<#Aer>
+    a foaf:Person;
+    foaf:name "Aer";
+    rel:childOf <#Eber>;
+    rel:childOf <#Díl>;
+    irishGen:numChild 0;
+    rdfs:comment "Et isti tres regnum Hiberniae per dimedium anni tantum tenuerunt.".
+
+<#Orba>
+    a foaf:Person;
+    foaf:name "Orba";
+    rel:childOf <#Eber>;
+    rel:childOf <#Díl>;
+    irishGen:numChild 0;
+    rdfs:comment "Et isti tres regnum Hiberniae per dimedium anni tantum tenuerunt.".
+
+<#Feron>
+    a foaf:Person;
+    foaf:name "Feron";
+    rel:childOf <#Eber>;
+    rel:childOf <#Díl>;
+    irishGen:numChild 0;
+    rdfs:comment "Et isti tres regnum Hiberniae per dimedium anni tantum tenuerunt.".
+
+<#Fergna>
+    a foaf:Person;
+    foaf:name "Fergna";
+    rel:childOf <#Eber>;
+    rel:childOf <#Díl>;
+    irishGen:numChild 0;
+    rdfs:comment "Et isti tres regnum Hiberniae per dimedium anni tantum tenuerunt.".
+
+# This says "those three" but other sources have all four brothers as joint
+# kings of Ireland. EPT
+
+<#Díl>
+    a foaf:Person;
+    foaf:name "Díl";
+    rel:childOf <#Miled>;
+    rel:spouseOf <#Eber>;
+    rdfs:comment "is í ro báded oc tuidecht dóib i nh-Erinn".
+
+<#Miled>
+    a foaf:Person;
+    foaf:name "Miled";
+    foaf:name "Míl";
+    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#MiledEspain>.
+
+<#EochoFaeborglass>
+    a foaf:Person;
+    foaf:name "Eocho Faeborglass";
+    foaf:name "Eochu Faeberglas";
+    rel:childOf <#Conmael>;
+    irishGen:numChild 2;
+    rel:antagonistOf <#Chermna>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Eochu-5b81ecc0>.
+
+<#Chermna>
+    a foaf:Person;
+    foaf:name "Chermna";
+    foaf:name "Cermna";
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Cermna>.
+
+<#NuaduDeclam>
+    a foaf:Person;
+    foaf:name "Nuadu Declam";
+    rel:childOf <#EochoFaeborglass>;
+    rdfs:comment "Ó Nuadait atát Síl Ebir uile".
+
+<#MaFemis>
+    a foaf:Person;
+    foaf:name "Ma Femis";
+    rel:childOf <#EochoFaeborglass>.
+
+<#EochoMúmo>
+    a foaf:Person;
+    foaf:name "Eocho Múmo";
+    foaf:name "Eochu Garb";
+    rel:childOf <#MaFemis>;
+    rdfs:comment "a quo dicitur Mumu".
+
+<#MugaethMórólach>
+    a foaf:Person;
+    foaf:name "Mugaeth Mórólach";
+    rel:childOf <#MaFemis>;
+    rdfs:comment "Is é ropo mó ól do lind ro bói ina amsir".
+
+<#FhiachachLabrainne>
+    a foaf:Person;
+    foaf:name "Fhiachach Labrainne";
+    foaf:name "Fiachu Labrainne";
+    rel:spouseOf [
+                  a foaf:Person;
+                  foaf:gender "female";
+                  rel:childOf <#MugaethMórólach>;
+                  rel:parentOf <#OengusaÓlmugaetha>];
+    owl:sameAs <http://example.com/LL/lagin.ttl#FhiachachLabrinne>.
+
+<#OengusaÓlmugaetha>
+    a foaf:Person;
+    foaf:name "Oengusa Ólmugaetha";
+    foaf:name "Óengus Ólmuccaid";
+    rel:childOf <#FhiachachLabrainne>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#OengusaOlmugaeda>.
