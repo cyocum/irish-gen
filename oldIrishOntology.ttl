@@ -1,0 +1,36 @@
+@base <http://example.com/oldIrishOntology.ttl#>.
+@prefix : <http://example.com/earlyIrishRelationship.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> a  owl:Ontology .
+
+:Word
+    a owl:Class ;
+    rdfs:label "Word" .
+
+:Noun
+    owl:subClassOf :Word ;
+    rdfs:label "Noun" .
+
+:case
+    a owl:DatatypeProperty ;
+    rdfs:domain :Noun ;
+    rdfs:range xsd:string .
+    
+:nominative
+    rdfs:subPropertyOf :case ;
+    rdfs:label "nominative" .
+
+:genative
+    rdfs:subPropertyOf :case ;
+    rdfs:label "genative" .
+    
+
+
+
+

@@ -6,6 +6,7 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix rel: <http://purl.org/vocab/relationship/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oldIrish: <http://example.com/oldIrishOntology.ttl#>.
 
 <>
 	a owl:Ontology;
@@ -56,5 +57,10 @@ rel:siblingOf
     a owl:TransitivePoperty, owl:SymmetricProperty;
     owl:propertyChainAxiom (rel:childOf [owl:inverseOf rel:childOf]).
     
+rel:nomName
+    rdfs:subPropertyOf oldIrish:nominative, foaf:name .
+
+rel:genName
+    rdfs:subPropertyOf oldIrish:genative, foaf:name .
     
 
