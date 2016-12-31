@@ -7,6 +7,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 
 <>
     a dctype:Dataset;
@@ -16,10 +17,445 @@
 
 <#Adam>
     a foaf:Person;
-    irishRel:nomName "Adam";
+    irishRel:nomName "Adam";    
     rel:ancestorOf <#NuaduNecht>.
 
 <#NuaduNecht>
     a foaf:Person;
     irishRel:nomName "Nuadu Necht";
-    owl:sameAs <http://example.com/LL/lagin.ttl#NuaduNecht>.
+    rel:antagonistOf <#Eterscéla>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Nuadu>.
+
+<#Eterscéla>
+    a irishTitle:Rí;
+    irishRel:nomName "Eterscéla" .
+
+<#Lugdach>
+    a foaf:Person ;
+    irishRel:nomName "Lugaid" ;
+    irishRel:genName "Lugdach" ;
+    rel:ancestorOf <#Eterscéla>.
+
+<#FergusFairrce>
+    a foaf:Person ;
+    irishRel:nomName "Fergus Fairrce" .
+
+<#Airt>
+    a foaf:Person ;
+    irishRel:genName "Airt" ;
+    irishRel:nomName "Art" ;
+    rel:ancestorOf [
+        a foaf:Person ;        
+    ] .
+        
+<#SétnaiSithbaicc>
+    a foaf:Person ;
+    irishRel:genName "Sétnai Sithbaicc" ;
+    irishRel:nomName "Sétna Sithbacc" .
+
+<#Bricc>
+    a foaf:Person ;
+    irishRel:genName "Bricc" ;
+    irishRel:nomName "Brecc" ;
+    rel:ancestorOf [
+        a foaf:Person
+    ] .
+        
+<#Bressail>
+    a foaf:Person ;
+    irishRel:genName "Bressail" ;
+    irishRel:nomName "Bressal" .
+
+<#Sedrach>
+    a foaf:Person ;
+    irishRel:accName "Sedrach" .
+
+<#Fiachrai>
+    a foaf:Person ;
+    irishRel:genName "Fiachrai" ;
+    irishRel:nomName "Fiachra" .
+
+<#Ailill>
+    a foaf:Person ;
+    irishRel:nomName "Ailill" .
+
+<#Foglass>
+    a foaf:Person ;
+    irishRel:nomName "Foglass" .
+
+<#Nuadu>
+    a foaf:Person ;
+    irishRel:nomName "Nuadu" ;
+    rel:childOf <#Fuildon>.
+
+<#Fuildon>
+    a foaf:Person ;
+    irishRel:genName "Fuildon" ;
+    irishRel:nomName "Fuildiu" .
+    
+<#Artt-9b2acabd>
+    a foaf:Person ;
+    irishRel:nomName "Artt" .
+
+<#ArttMug>
+    a foaf:Person ;
+    irishRel:nomName "Artt Mug" .
+
+<#CrimthanCoscrach>
+    a foaf:Person ;
+    irishRel:nomName "Crimthan Coscrach" .
+
+<#FeradachFindFechtnach>
+    a foaf:Person ;
+    irishRel:nomName "Feradach Find Fechtnach" .
+
+<#FedelmidFortrén>
+    a foaf:Person ;
+    irishRel:nomName "Fedelmid Fortrén" .
+
+<#FergusFortamuil>
+    a foaf:Person ;
+    irishRel:nomName "Fergus Fortamuil" .
+
+<#BressalBregom>
+    a foaf:Person ;
+    irishRel:nomName "Bressal Bregom" .
+
+<#Ailill-bdddf533>
+    a foaf:Person ;
+    irishRel:nomName "Ailill" .
+
+<#Óengus>
+    a foaf:Person ;
+    irishRel:nomName "Óengus" .
+
+<#Labraid>
+    a foaf:Person ;
+    irishRel:genName "Labraid" ;
+    rel:antagonistOf <#Fergus>;
+    rel:descendantOf <#Luirc>. 
+
+<#Luirc>
+    a foaf:Person ;
+    irishRel:genName "Luirc" ;
+    irishRel:nomName "Loric" .
+    
+<#Fergus>
+    a foaf:Person ;
+    irishRel:nomName "Fergus" .
+
+<#Longsech>
+    a foaf:Person ;
+    irishRel:nomName "Longsech" .
+
+<#Feradach>
+    owl:sameAs <#FeradachFindFechtnach>.
+
+<#Fedilmid>
+    owl:sameAs <#FedelmidFortrén>.
+
+<#FergusFortamail>
+    irishRel:nomName "Fergus Fortamail";
+    owl:sameAs <#FergusFortamuil>.
+
+<#BresalBregom>
+    irishRel:nomName "Bresal Bregom" ;
+    owl:sameAs <#BressalBregom>.
+
+<#ÓengusOldam>
+    a foaf:Person ;
+    irishRel:nomName "Óengus Oldam" .
+    
+<#Aillil-7a00ec08>
+    a foaf:Person ;
+    irishRel:nomName "Aillil" .
+
+<#Úgaine>
+    a foaf:Person ;
+    foaf:name "Úgaine" .
+
+<#Eochu>
+    a foaf:Person ;
+    foaf:name "Eochu" .
+
+<#Ailill-5a7b095b>
+    a foaf:Person ;
+    owl:sameAs <#Aillil-7a00ec08>.
+
+<#Lorcc>
+    irishRel:nomName "Lorcc" ;
+    owl:sameAs <#Luirc>.
+
+<Labraid-e01ec923>
+    owl:sameAs <#Labraid>.
+
+<#DuachLadcrai>
+    a foaf:Person ;
+    irishRel:genName "Duach Ladcrai" ;
+    irishRel:nomName "Dui Ladcrai" .
+
+<#FiachraTolcrai>
+    a foaf:Person ;
+    irishRel:nomName "Fiachra Tolcrai" .
+
+<#Senén>
+    a foaf:Person ;
+    irishRel:nomName "Senén" .
+
+<#Ethén>
+    a foaf:Person ;
+    irishRel:nomName "Ethén" .
+
+<#Nuadu-e0721d4a>
+    a irishTitle:Rí ;
+    irishRel:nomName "Nuadu" .
+
+<#AilillOalchlóen>
+    a foaf:Person ;
+    irishRel:nomName "Ailill Oalchlóen" .
+
+<#Sírna>
+    a foaf:Person ;
+    irishRel:nomName "Sírna" .
+
+<#Déin>
+    a irishTitle:Rí ;
+    irishRel:genName "Déin" ;
+    irishRel:nomName "Dian" .
+
+<#Demál>
+    a foaf:Person ;
+    irishRel:nomName "Demál" .
+
+<#Rothait>
+    a foaf:Person ;
+    irishRel:nomName "Rothait" .
+
+<#Ogamuin>
+    a irishTitle:Rí ;
+    irishRel:nomName "Ogamuin" .
+
+<#Óengus-902e76c6>
+    a foaf:Person ;
+    irishRel:nomName "Óengus" ;
+    rel:childOf <#Eochu-71d7ebad>.
+    
+<#Eochu-71d7ebad>
+    a foaf:Person ;
+    irishRel:nomName "Eochu" .
+    #same as <#Eochu> above? CY
+
+<#Smirgnath>
+    a foaf:Person ;
+    irishRel:nomName "Smirgnath" .
+
+<#Smrith>
+    a foaf:Person ;
+    irishRel:nomName "Smrith" .
+
+<#Enbath>
+    a foaf:Person ;
+    irishRel:nomName "Enbath" .
+
+<#Tigernmas>
+    a foaf:Person ;
+    irishRel:nomName "Tigernmas" .
+
+<#Ethér>
+    a foaf:Person ;
+    irishRel:nomName "Ethér" .
+
+<#Éremón>
+    a foaf:Person ;
+    irishRel:nomName "Éremón" .
+
+<#Mílid>
+    a foaf:Person ;
+    irishRel:genName "Mílid" ;
+    irishRel:nomName "Míl" .
+    #same As http://example.com/LL/eoganachta_casil.ttl#MiledEspain ? CY
+
+<#Bile>
+    a foaf:Person ;
+    irishRel:nomName "Bile" .
+
+<#Bríga>
+    a foaf:Person ;
+    irishRel:nomName "Bríga" .
+
+<#Bráth>
+    a foaf:Person ;
+    irishRel:nomName "Bráth" .
+
+<#Deáith>
+    a foaf:Person ;
+    irishRel:nomName "Deáith" .
+
+<#Eirrgid>
+    a foaf:Person ;
+    irishRel:nomName "Eirrgid" .
+
+<#Alldóit>
+    a foaf:Person ;
+    irishRel:nomName "Alldóit" .
+
+<#Nuadu-6fb3c2be>
+    a foaf:Person ;
+    irishRel:nomName "Nuadu" .
+
+<#Nóenal>
+    a foaf:Person ;
+    irishRel:nomName "Nóenal" .
+
+<#Fáebar>
+    a foaf:Person ;
+    irishRel:nomName "Fáebar" .
+
+<#GáedelGlass>
+    a foaf:Person ;
+    irishRel:nomName "Gáedel Glass" .
+
+<#Glúnfhind>
+    a foaf:Person ;
+    irishRel:nomName "Glúnfhind" .
+
+<#Lámfhind>
+    a foaf:Person ;
+    irishRel:nomName "Lámfhind" .
+
+<#Ethéoir>
+    a foaf:Person ;
+    irishRel:nomName "Ethéoir" .
+
+<#Agnoman>
+    a foaf:Person ;
+    irishRel:nomName "Agnoman" .
+
+<#Tóe>
+    a foaf:Person ;
+    irishRel:nomName "Tóe" .
+
+<#Banb>
+    a foaf:Person ;
+    irishRel:nomName "Banb" .
+
+<#Séim>
+    a foaf:Person ;
+    irishRel:nomName "Séim" .
+
+<#Máir>
+    a foaf:Person ;
+    irishRel:nomName "Máir" .
+
+<#Ethecht>
+    a foaf:Person ;
+    irishRel:nomName "Ethecht" .
+
+<#Aurtacht>
+    a foaf:Person ;
+    irishRel:nomName "Aurtacht" .
+
+<#Boath>
+    a foaf:Person ;
+    irishRel:nomName "Boath" .
+
+<#Abor>
+    a foaf:Person ;
+    irishRel:nomName "Abor" .
+
+<#Ára>
+    a foaf:Person ;
+    irishRel:nomName "Ára" .
+
+<#Sara>
+    a foaf:Person ;
+    irishRel:nomName "Sara" .
+
+<#Séth>
+    a foaf:Person ;
+    irishRel:nomName "Séth" .
+
+<#Zrú>
+    a foaf:Person ;
+    irishRel:nomName "Zrú" .
+
+<#Esrú>
+    a foaf:Person ;
+    irishRel:nomName "Esrú" .
+
+<#Ethrocht>
+    a foaf:Person ;
+    irishRel:nomName "Ethrocht" .
+
+<#Baoth>
+    a foaf:Person ;
+    irishRel:nomName "Baoth" .
+
+<#Ibath>
+    a foaf:Person ;
+    irishRel:nomName "Ibath" .
+
+<#Gomér>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1148172> ;
+    irishRel:nomName "Gomér" .
+
+<#Iaféth>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q200637> ;
+    irishRel:nomName "Iaféth" .
+
+<#Noe>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q81422> ;
+    irishRel:nomName "Noe" .
+
+<#Lamiach>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q10921342> ;
+    irishRel:nomName "Lamiach" .
+
+<#Mathusalám>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q156290> ;
+    irishRel:nomName "Mathusalám" .
+
+<#Enóc>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q213027> ;
+    irishRel:nomName "Enóc" .
+
+<#Iaréth>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q927410> ;
+    irishRel:nomName "Iaréth" .
+
+<#Malalél>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q10297002> ;
+    irishRel:nomName "Malalél" .
+
+<#Cáinán>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q844433> ;
+    irishRel:nomName "Cáinán" .
+
+<#Enos>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q682531> ;
+    irishRel:nomName "Enos" .
+
+<#Séth-44de4e08>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q107626> ;
+    irishRel:nomName "Séth" .
+    #same as <#Séth> ? CY
+
+<#Ádam>
+    a foaf:Person ;
+    owl:sameAs <#Adam>;
+    irishRel:nomname "Ádam" ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q70899> .
+    
+    
+    
