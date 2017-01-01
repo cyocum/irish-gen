@@ -1,0 +1,50 @@
+@base <http://example.com/Rawl_B502/muinter_mínáin.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Muinter Mínáin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text024.html>;
+    dcterms:format "text/turtle".
+
+<#MáelMeda>
+    a foaf:Person;
+    irishRel:nomName "Máel Meda";
+    rel:childOf <#Mínáin>.
+
+<#Mínáin>
+    a foaf:Person;
+    irishRel:genName "Mínáin";
+    irishRel:nomName "Mínán";
+    rel:childOf <#Rechtabrat>.
+
+<#Rechtabrat>
+    a foaf:Person;
+    irishRel:genName "Rechtabrat";
+    irishRel:nomName "Rechtabra";
+    rel:childOf <#Flaithniad>.
+
+<#Flaithniad>
+    a foaf:Person;
+    irishRel:genName "Flaithniad" ;
+    irishRel:nomName "Flaithnia".
+
+<#Mugrón>
+    a foaf:Person;
+    irishRel:genName "Mugrón";
+    rel:childOf <#Flaithniad-e0a1d742>.
+
+<#Flaithniad-e0a1d742>
+    a foaf:Person;
+    irishRel:genName "Flaithniad";
+    rel:childOf <#Rechtabrat-064d0924>.
+
+<#Rechtabrat-064d0924>
+    owl:sameAs <#Rechtabrat>.
