@@ -1,0 +1,81 @@
+@base <http://example.com/Rawl_B502/clann_duinnd_cothaid.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Duinnd Cothaid"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Mescell>
+    a foaf:Person;
+    irishRel:nomName "Mescell";
+    rel:childOf <#Moínaich>.
+
+<#Moínaich>
+    a foaf:Person;
+    irishRel:genName "Moínaich";
+    irishRel:nomName "Moínach";
+    rel:childOf <#DuindCothaig>.
+
+<#DuindCothaig>
+    a foaf:Person;
+    irishRel:genName "Duind Cothaig" ;
+    irishRel:nomName "Dun Cothach" .
+
+<#Conchobur>
+    a foaf:Person;
+    irishRel:nomName "Conchobur";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Aurthuili>.
+
+<#Aurthuili>
+    a foaf:Person;
+    irishRel:genName "Aurthuili";
+    irishRel:nomName "Aurthuil";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Ruidnéill>.
+
+<#Ruidnéill>
+    a foaf:Person;
+    irishRel:genName "Ruidnéill";
+    irishRel:nomName "Ruidnéll";
+    rel:childOf <#Conchobuir>.
+
+<#Conchobuir>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobur";
+    rel:childOf <#Colmáin-ba9b7226>.
+
+<#Colmáin-ba9b7226>
+    a foaf:Person;
+    irishRel:genName "Colmáin" ;
+    irishRel:nomName "Colmán" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.ttl#Colmáin>.
+
+
