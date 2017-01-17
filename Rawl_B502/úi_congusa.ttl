@@ -1,0 +1,73 @@
+@base <http://example.com/Rawl_B502/úi_congusa.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Úi Angeda"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Scandlán>
+    a foaf:Person;
+    irishRel:nomName "Scandlán";
+    rel:childOf <#Gerruidir>.
+
+<#Gerruidir>
+    a foaf:Person;
+    irishRel:genName "Gerruidir";
+    irishRel:nomName "Gerruider";
+    rel:childOf <#Conbercaich>.
+
+<#Conbercaich>
+    a foaf:Person;
+    irishRel:genName "Conbercaich";
+    irishRel:nomName "Conbercach";
+    rel:childOf <#Ailgelaich>.
+
+<#Ailgelaich>
+    a foaf:Person;
+    irishRel:genName "Ailgelaich";
+    irishRel:nomName "Ailgelach";
+    rel:childOf <#Congalaich>.
+
+<#Congalaich>
+    a foaf:Person;
+    irishRel:genName "Congalaich";
+    irishRel:nomName "Congalach";
+    rel:childOf <#Congusa>.
+
+<#Congusa>
+    a foaf:Person;
+    irishRel:genName "Congusa";
+    irishRel:nomName "Congus";
+    rel:childOf <#Crundmaíl>.
+
+<#Crundmaíl>
+    a foaf:Person;
+    irishRel:genName "Crundmaíl";
+    rel:childOf <#Banbáin>.
+
+<#Banbáin>
+    a foaf:Person;
+    irishRel:genName "Banbáin";
+    irishRel:nomName "Banbán";
+    rel:childOf <#MeiccLaisre>.
+
+<#MeiccLaisre>
+    a foaf:Person;
+    irishRel:genName "Meicc Laisre" ;
+    irishRel:nomName "Macc Laisre".
