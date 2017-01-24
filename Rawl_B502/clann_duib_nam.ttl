@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/úi_chon_cuan.ttl>.
+@base <http://example.com/Rawl_B502/clann_taircheltaich.ttl>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -11,7 +11,7 @@
 
 <>
     a dctype:Dataset;
-    dcterms:title "Úi Chon Cuan"@sga;
+    dcterms:title "Clann Taircheltaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
     dcterms:format "text/turtle" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -21,36 +21,31 @@
         prov:hadRole [ a prov:Creator ]
     ] .
 
-<#Dínertach>
+<#Nechtain>
     a foaf:Person;
-    irishRel:nomName "Dínertach";
+    irishRel:nomName "Nechtain";
+    rel:childOf <#Airechtaich>.
+
+<#Airechtaich>
+    a foaf:Person;
+    irishRel:genName "Airechtaich";
+    irishRel:nomName "Airechtach";
+    rel:childOf <#Torptha>.
+
+<#Torptha>
+    a foaf:Person;
+    irishRel:genName "Torptha";
+    irishRel:nomName "Torpth";
+    rel:childOf <#DuibNam>.
+
+<#DuibNam>
+    a foaf:Person;
+    irishRel:genName "Duib Nam";
+    irishRel:nomName "Dub Nam";
+    owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.ttl#DubConam>;
     rel:childOf <#Dúngusa>.
 
 <#Dúngusa>
     a foaf:Person;
-    irishRel:genName "Dúngusa";
-    irishRel:nomName "Dúngus";
-    rel:childOf <#Fidchuire>.
-
-<#Fidchuire>
-    a foaf:Person;
-    irishRel:genName "Fidchuire";
-    rel:childOf <#ConChuan>.
-
-<#ConChuan>
-    a foaf:Person;
-    irishRel:genName "Con Chuan";
-    irishRel:nomName "Cu Chuan";
-    rel:childOf <#Dúngusa-7fc8ba3e>.
-
-<#Dúngusa-7fc8ba3e>
-    a foaf:Person;
-    irishRel:genName "Dúngusa";
-    irishRel:nomName "Dúngus";
-    rel:childOf <#MáelAnnaich>.
-
-<#MáelAnnaich>
-    a foaf:Person;
-    irishRel:genName "Máel Annaich" ;
-    irishRel:nomName "Máel Annaich" ;
-    owl:sameAs <http://example.com/Rawl_B502/clann_conchobuir.ttl#MáelAnnaich>.
+    irishRel:genName "Dúngusa" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.ttl#Flanngusa>.
