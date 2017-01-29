@@ -1,0 +1,126 @@
+@base <http://example.com/Rawl_B502/úi_chorbbáin.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Úi Chorbbáin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#DubInbe>
+    a foaf:Person;
+    irishRel:nomName "Dub Inbe";
+    rel:childOf <#Gaiscedaig>.
+
+<#Gaiscedaig>
+    a foaf:Person;
+    irishRel:genName "Gaiscedaig";
+    irishRel:nomName "Gaiscedach";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Échtgaile>.
+
+<#Échtgaile>
+    a foaf:Person;
+    irishRel:genName "Échtgaile";
+    irishRel:nomName "Échtgail";
+    rel:childOf <#Sírladaich>.
+
+<#Sírladaich>
+    a foaf:Person;
+    irishRel:genName "Sírladaich";
+    irishRel:nomName "Sírladach";
+    rel:childOf <#FhirShin>.
+
+<#FhirShin>
+    a foaf:Person;
+    irishRel:genName "Fhir Shin";
+    irishRel:nomName "Fer Shin";
+    rel:childOf <#Corbbáin>.
+
+<#Corbbáin>
+    a foaf:Person;
+    irishRel:genName "Corbbáin" ;
+    irishRel:nomName "Corbbán".
+
+<#Flaithnia>
+    a foaf:Person;
+    irishRel:nomName "Flaithnia";
+    rel:childOf <#Becenich>.
+
+<#Becenich>
+    a foaf:Person;
+    irishRel:genName "Becenich";
+    irishRel:nomName "Becenech";
+    rel:childOf <#Domdosna>.
+
+<#Domdosna>
+    a foaf:Person;
+    irishRel:genName "Domdosna";
+    rel:childOf <#Donnchaire>.
+
+<#Donnchaire>
+    a foaf:Person;
+    irishRel:genName "Donnchaire";
+    irishRel:nomName "Donnchair";        
+    rel:childOf <#FirSin>.
+
+<#FirSin>
+    a foaf:Person;
+    irishRel:genName "Fir Sin";
+    irishRel:nomName "Fer Sin";
+    owl:sameAs <#FhirShin>;
+    rel:childOf <#Corbbáin-f6754fbb>.
+
+<#Corbbáin-f6754fbb>
+    owl:sameAs <#Corbbáin>. 
+
+<#Banbán>
+    a foaf:Person;
+    irishRel:nomName "Banbán";
+    rel:childOf <#Donngaile>.
+
+<#Donngaile>
+    a foaf:Person;
+    irishRel:genName "Donngaile";
+    irishRel:nomName "Donngail";
+    rel:childOf <#Donngalaich>.
+
+<#Donngalaich>
+    a foaf:Person;
+    irishRel:genName "Donngalaich";
+    irishRel:nomName "Donngalach";
+    rel:childOf <#Aurchlosaich>.
+
+<#Aurchlosaich>
+    a foaf:Person;
+    irishRel:genName "Aurchlosaich";
+    irishRel:nomName "Aurchlosach";
+    rel:childOf <#FirSin-dd90a6db>.
+
+<#FirSin-dd90a6db>
+    a foaf:Person;
+    irishRel:genName "Fir Sin";
+    owl:sameAs <#FhirShin>;
+    rel:childOf <#Corbbáin-1a004406>.
+
+<#Corbbáin-1a004406>
+    owl:sameAs <#Corbbáin>.
