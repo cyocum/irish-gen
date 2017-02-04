@@ -1,0 +1,57 @@
+@base <http://example.com/Rawl_B502/clann_fogartaich.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Fogartaich"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Nechtain>
+    a foaf:Person;
+    irishRel:nomName "Nechtain";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#Flaithim>.
+
+<#Flaithim>
+    a foaf:Person;
+    irishRel:genName "Flaithim";
+    irishRel:nomName "Flaithem";
+    rel:childOf <#Flaithgiusa>.
+
+<#Flaithgiusa>
+    a foaf:Person;
+    irishRel:genName "Flaithgiusa";
+    irishRel:nomName "Flaithgius";
+    rel:childOf <#Fogartaich>.
+
+<#Fogartaich>
+    a foaf:Person;
+    irishRel:genName "Fogartaich";
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Báeth>;
+    owl:sameAs <http://example.com/Rawl_B502/úib_luchta.ttl#Fogartach>.
+
+<#Báeth>
+    a foaf:Person;
+    irishRel:genName "Báeth" ;
+    owl:sameAs <http://example.com/Rawl_B502/úib_luchta.ttl#Báeth>.
