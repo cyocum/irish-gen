@@ -1,0 +1,70 @@
+@base <http://example.com/Rawl_B502/clann_sétnae.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Sétnae"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Draignén>
+    a foaf:Person;
+    irishRel:genName "Draignén";
+    rel:childOf <#Cúáin>.
+
+<#Cúáin>
+    a foaf:Person;
+    irishRel:genName "Cúáin";
+    irishRel:nomName "Cúán";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Fergaile>.
+
+<#Fergaile>
+    a foaf:Person;
+    irishRel:genName "Fergaile";
+    irishRel:nomName "Fergail";
+    rel:childOf <#Léitmich>.
+
+<#Léitmich>
+    a foaf:Person;
+    irishRel:genName "Léitmich";
+    irishRel:nomName "Léitmech";
+    rel:childOf <#Sétnae>.
+
+<#Sétnae>
+    a foaf:Person;
+    irishRel:genName "Sétnae";
+    irishRel:nomName "Sétna";
+    rel:childOf <#Laidgneáin>.
+
+<#Laidgneáin>
+    a foaf:Person;
+    irishRel:genName "Laidgneáin";
+    irishRel:nomName "Laidgneán";
+    rel:childOf <#Mellrach>.
+
+<#Mellrach>
+    a foaf:Person;
+    irishRel:genName "Mellrach" ;
+    irishRel:nomName "Mellraid" ;
+    rdfs:comment "i sunn con-drecat fri Corco Láeglad" .
+    
