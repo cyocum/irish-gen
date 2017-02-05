@@ -1,0 +1,87 @@
+@base <http://example.com/Rawl_B502/úi_charaige.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Leáin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Céile>
+    a foaf:Person;
+    irishRel:genName "Céile";
+    rel:childOf <#Chiaráin>.
+
+<#Chiaráin>
+    a foaf:Person;
+    irishRel:genName "Chiaráin";
+    irishRel:nomName "Ciarán";
+    rel:childOf <#Rónáin>.
+
+<#Rónáin>
+    a foaf:Person;
+    irishRel:genName "Rónáin";
+    irishRel:nomName "Rónán";
+    rel:childOf <#Sétna>.
+
+<#Sétna>
+    a foaf:Person;
+    irishRel:genName "Sétna";
+    irishRel:nomName "Sétnae";
+    rel:childOf <#Fáelgusa>.
+
+<#Fáelgusa>
+    a foaf:Person;
+    irishRel:genName "Fáelgusa";
+    irishRel:nomName "Fáelgus";
+    rel:childOf <#CindFáelad>.
+
+<#CindFáelad>
+    a foaf:Person;
+    irishRel:genName "Cind Fáelad";
+    irishRel:nomName "Cend Fáelad";
+    rel:childOf <#Lerchon>.
+
+<#Lerchon>
+    a foaf:Person;
+    irishRel:genName "Lerchon";
+    irishRel:nomName "Lercu";
+    rel:childOf <#Sétna-ed6157cd>.
+
+<#Sétna-ed6157cd>
+    a foaf:Person;
+    irishRel:genName "Sétna";
+    irishRel:nomName "Sétnae";
+    rel:childOf <#Rithi>.
+
+<#Rithi>
+    a foaf:Person;
+    irishRel:genName "Rithi";
+    rel:childOf <#Rethach>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_gáethnemaig.ttl#Rithi>.
+
+<#Rethach>
+    a foaf:Person;
+    irishRel:genName "Rethach";
+    rel:childOf <#Ferba>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.ttl#Rethech>.
+
+<#Ferba>
+    a foaf:Person;
+    irishRel:genName "Ferba" ;
+    irishRel:nomName "Ferb" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.ttl#Ferbba>.

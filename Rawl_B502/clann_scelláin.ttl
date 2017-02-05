@@ -1,0 +1,80 @@
+@base <http://example.com/Rawl_B502/clann_scelláin.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Scelláin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Scandlán>
+    a foaf:Person;
+    irishRel:genName "Scandlán";
+    rel:childOf <#Tipraite>.
+
+<#Tipraite>
+    a foaf:Person;
+    irishRel:genName "Tipraite";
+    rel:childOf <#Gilluráin>.
+
+<#Gilluráin>
+    a foaf:Person;
+    irishRel:genName "Gilluráin";
+    irishRel:nomName "Gillurán";
+    rel:childOf <#ConCuaráin>.
+
+<#ConCuaráin>
+    a foaf:Person;
+    irishRel:genName "Con Cuaráin";
+    irishRel:nomName "Cu Cuaráin";
+    rel:childOf <#DuibDáMaige>.
+
+<#DuibDáMaige>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Maige";
+    irishRel:nomName "Dub Dá Maige";
+    rel:childOf <#Scelláin>.
+
+<#Scelláin>
+    a foaf:Person;
+    irishRel:genName "Scelláin";
+    irishRel:nomName "Scellán";
+    rel:childOf <#ConBile>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_amorgin.ttl#Scellán>.
+
+<#ConBile>
+    a foaf:Person;
+    irishRel:genName "Con Bile" ;
+    irishRel:nomName "Cu Bile" ;
+    owl:sameAs <http://example.com/Rawl_B502/clann_amorgin.ttl#ConBile>.
+
+<#Cúán>
+    a foaf:Person ;
+    irishRel:nomName "Cúán" ;
+    owl:sameAs <http://example.com/Rawl_B502/clann_amorgin.ttl#Chúán>;
+    irishRel:numChild 2 .
+
+<#Airmedach>
+    a foaf:Person ;
+    irishRel:nomName "Airmedach" ;
+    owl:sameAs <http://example.com/Rawl_B502/clann_amorgin.ttl#Airmedaich>;
+    rel:childOf <#Cúán>.
+
+<#Indargal>
+    a foaf:Person ;
+    irishRel:nomName "Indargal" ;
+    rel:childOf <#Cúán>.

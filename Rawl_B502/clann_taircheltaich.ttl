@@ -1,0 +1,69 @@
+@base <http://example.com/Rawl_B502/clann_taircheltaich.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Taircheltaich"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#MáelTuile>
+    a foaf:Person;
+    irishRel:nomName "Máel Tuile";
+    rel:childOf <#Flaithgile>.
+
+<#Flaithgile>
+    a foaf:Person;
+    irishRel:genName "Flaithgile";
+    irishRel:nomName "Flaithgil";
+    rel:childOf <#Sechnasaich>.
+
+<#Sechnasaich>
+    a foaf:Person;
+    irishRel:genName "Sechnasaich";
+    irishRel:nomName "Sechnasach";    
+    rel:childOf <#Tairceltaich>.
+
+<#Tairceltaich>
+    a foaf:Person;
+    irishRel:genName "Tairceltaich";
+    irishRel:nomName "Tairceltach";
+    owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.ttl#Tairchellach>;
+    rel:childOf <#Dúngusa>.
+
+<#Dúngusa>
+    a foaf:Person;
+    irishRel:genName "Dúngusa";
+    irishRel:nomName "Dúngus";
+    owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.ttl#Flanngusa>;
+    rel:childOf <#Fáeláin>.
+
+<#Fáeláin>
+    a foaf:Person;
+    irishRel:genName "Fáeláin";
+    irishRel:nomName "Fáelán";
+    rel:childOf <#Luigdech>.
+
+<#Luigdech>
+    a foaf:Person;
+    irishRel:genName "Luigdech";
+    irishRel:nomName "Luigaid";
+    rel:childOf <#Fiachnae>.
+
+<#Fiachnae>
+    a foaf:Person;
+    irishRel:genName "Fiachnae".
