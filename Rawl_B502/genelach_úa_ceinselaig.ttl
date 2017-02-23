@@ -1,0 +1,191 @@
+@base <http://example.com/Rawl_B502/genelach_úa_ceinselaig.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach úa Ceinselaig"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text002.html>;
+    dcterms:format "text/turtle".
+
+<#Énna>
+    a foaf:Person;
+    irishRel:nomName "Énna";
+    rel:childOf <#Donnchada>.
+
+<#Donnchada>
+    a foaf:Person;
+    irishRel:nomName "Donnchada";
+    irishRel:genName "Donnchad";
+    rel:childOf <#Murchada>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Dondchada>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:genName "Murchada";
+    irishRel:nomName "Murchad";
+    rel:childOf <#Diarmata>;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q3328054>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#MurchadaAthCliath>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Donnchada>;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q3026351>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Diarmata>.
+
+<#Donnchada>
+    a foaf:Person;
+    irishRel:genName "Donnchada";
+    irishRel:nomName "Donnchad";
+    rel:childOf <#Diarmata-8b95a540>;
+    rdfs:comment "qui fuit Máel na m-Bó";
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Dondchada-8289fc07>.
+
+<#Diarmata-8b95a540>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Domnaill>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Diarmata-90179f20>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Cellaig>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Domnaill>.
+
+<#Cellaig>
+    a foaf:Person;
+    irishRel:genName "Cellaig";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Cinaída>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Cellaig>.
+
+<#Cinaída>
+    a foaf:Person;
+    irishRel:genName "Cinaída";
+    irishRel:nomName "Cinaed";
+    rel:childOf <#Carpre>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Cinaeda>.
+
+<#Carpre>
+    a foaf:Person;
+    irishRel:genName "Carpre";
+    irishRel:nomName "Cairpre";
+    rel:childOf <#Diarmata>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Corpri>.
+
+<#Diarmata-e2238b20>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Rudgaile>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Diarmata-78ba3056>.
+
+<#Rudgaile>
+    a foaf:Person;
+    irishRel:genName "Rudgaile";
+    irishRel:nomName "Rudgaile";
+    rel:childOf <#Áeda>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Rudgaile>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#Onchon>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Aeda>.
+
+<#Onchon>
+    a foaf:Person;
+    irishRel:nomName "Onchú";
+    irishRel:genName "Onchon";
+    rel:childOf <#FáelchonTaulchatait>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Onchon>.
+
+<#FáelchonTaulchatait>
+    a foaf:Person;
+    irishRel:genName "Fáelchon Taulchatait";
+    irishRel:nomName "Fáelchu Taulchatait"
+    rel:childOf <#Fáeláin>.
+
+<#Fáeláin>
+    a foaf:Person;
+    irishRel:genName "Fáeláin";
+    irishRel:nomName "Fáelán";
+    rel:childOf <#Síláin>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Faelain>.
+
+<#Síláin>
+    a foaf:Person;
+    irishRel:genName "Síláin";
+    irishRel:nomName "Sílán";
+    rel:childOf <#ÉogainCáech>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Shilain>.
+
+<#ÉogainCáech>
+    a foaf:Person;
+    irishRel:genName "Éogain Cáech";
+    irishRel:nomName "Éogan Cáech";
+    rel:childOf <#Nath Í>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#EogainCháech>.
+
+<#NathÍ>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    irishRel:genName "Nath Í"
+    rel:childOf <#Crimthaind>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#NathÍ>.
+
+<#Crimthaind>
+    a foaf:Person;
+    irishRel:genName "Crimthaind";
+    irishRel:nomName "Crimthand";
+    rel:childOf <#ÉnnaiCeinnselaig>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Crimthaind>.
+
+<#ÉnnaiCeinnselaig>
+    a foaf:Person;
+    irishRel:genName "Énnai Ceinnselaig";
+    irishRel:nomName "Énna Cennselach";
+    rel:childOf <#Labrada>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#EnnaeCendselaig>.
+
+<#Labrada>
+    a foaf:Person;
+    irishRel:genName "Labrada";
+    irishRel:nomName "Labraid";
+    rel:childOf <#BresailBélaig>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#Labrada>.
+
+<#BresailBélaig>
+    a foaf:Person;
+    irishRel:genName "Bresail Bélaig";
+    irishRel:nomName "Bresal Bélach";
+    rel:childOf <#FiachachBaAiccid>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#BresailBelaig>.
+
+<#FiachachBaAiccid>
+    a foaf:Person;
+    irishRel:genName "Fiachach Ba Aiccid";
+    irishRel:nomName "Fiachu Ba Aiccid";
+    rel:childOf <#CathaírMáir>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#FiachachBaccid>.
+
+<#CathaírMáir>
+    a foaf:Person;
+    irishRel:genName "Cathaír Máir";
+    irishRel:nomName "Cathair Már";
+    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#CathairMoir>;
+    <http://example.com/Rawl_B502/minigud_senchassa_lagen_tuath_gabair_&_des_gabair.ttl#Cathaír>.
