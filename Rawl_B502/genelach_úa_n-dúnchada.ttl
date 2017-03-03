@@ -1,0 +1,100 @@
+@base <http://example.com/Rawl_B502/genelach_úa_n-dúnchada.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Úa n-Dúnchada"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text002.html>;
+    dcterms:format "text/turtle".
+
+<#Donnchad>
+    a foaf:Person;
+    irishRel:nomName "Donnchad";
+    rel:childOf <#Murchertaig>.
+
+<#Murchertaig>
+    a foaf:Person;
+    irishRel:nomName "Muirchertach";
+    irishRel:genName "Murchertaig";
+    rel:childOf <#GillaiChéile>.
+
+<#GillaiChéile>
+    a foaf:Person;
+    irishRel:nomName "Gilla Céile";
+    irishRel:genName "Gillai Chéile";
+    rel:childOf <#GillaiMoCholmóc>.
+
+<#GillaiMoCholmóc>
+    a foaf:Person;
+    irishRel:nomName "Gilla Mo Cholmóc";
+    irishRel:genName "Gillai Mo Cholmóc";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:nomName "Cellach";
+    irishRel:genName "Cellaich";
+    rel:childOf <#Dúnchada>.
+
+<#Dúnchada>
+    a foaf:Person;
+    irishRel:nomName "Dúnchad";
+    irishRel:genName "Dúnchada";
+    rel:childOf <#Lorccáin>.
+
+<#Lorccáin>
+    a foaf:Person;
+    irishRel:nomName "Lorccán";
+    irishRel:genName "Lorccáin";
+    rel:childOf <#Fáeláin>.
+
+<#Fáeláin>
+    a foaf:Person;
+    irishRel:nomName "Fáelán";
+    irishRel:genName "Fáeláin";
+    rel:childOf <#Muiredaig>.
+
+<#Muiredaig>
+    a foaf:Person;
+    irishRel:nomName "Muiredach";
+    irishRel:genName "Muiredaig";
+    rel:childOf <#Bróen>.
+
+<#Bróen>
+    a foaf:Person;
+    irishRel:nomName "Bróen";
+    irishRel:genName "Bróen";
+    rel:childOf <#Fáeláin>.
+
+<#Fáeláin-c23cc000>
+    a foaf:Person;
+    irishRel:nomName "Fáelán";
+    irishRel:genName "Fáeláin";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich-cba42110>
+    a foaf:Person;
+    irishRel:nomName "Cellach";
+    irishRel:genName "Cellaich";
+    rel:childOf <#Dúnchada>.
+
+<#Dúnchada-d4282700>
+    a foaf:Person;
+    irishRel:nomName "Dúnchad";
+    irishRel:genName "Dúnchada";
+    rel:childOf <#Murchada>;
+    owl:saemAs <http://example.com/Rawl_B502/genelach_úa_muiredaig.ttl#Dúnchad>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:nomName "Murchad";
+    irishRel:genName "Murchada";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_muiredaig.ttl#Murchada-3b821080>.
