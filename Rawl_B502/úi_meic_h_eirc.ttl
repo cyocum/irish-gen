@@ -1,0 +1,153 @@
+@base <http://example.com/Rawl_B502/úi_meic_h_eirc.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Úi Meic H-Eirc"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text020.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text020.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Threna>
+    a foaf:Person;
+    irishRel:genName "Threna";
+    owl:sameAs <http://example.com/Rawl_B502/úi_óengusa.ttl#Threna>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Treno>;
+    irishRel:numChild 2 ;
+    rel:childOf <#Duach>.
+
+<#Duach>
+    a foaf:Person;
+    owl:sameAs <http://example.com/Rawl_B502/úi_óengusa.ttl#Duach>;
+    irishRel:genName "Duach".
+
+<#MacEircc>
+    a foaf:Person ;
+    irishRel:nomName "Mac Eircc" ;
+    rel:childOf <#Threna>;
+    rel:childOf <#Conchinne>;
+    irishRel:numChild 3 ;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Mach-Irc>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_lugdach_meic_ítha.ttl#MacEircc>.
+
+<#Óengus>
+    owl:sameAs <http://example.com/Rawl_B502/úi_óengusa.ttl#Óengusa>;
+    rel:childOf <#Conchinne>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Oengus>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_lugdach_meic_ítha.ttl#Óengus>.
+
+<#Conchinne>
+    a foaf:Person ;
+    irishRel:genName "Conchinne" ;
+    irishRel:numChild 3 ;
+    foaf:gender "female" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_lugdach_meic_ítha.ttl#Conchinne>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Conchinni>;
+    rel:childOf <#Cathbad>.
+
+<#Cathbad>
+    a foaf:Person ;
+    irishRel:genName "Cathbad" ;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Cathboth>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_lugdach_meic_ítha.ttl#Cathbath>.
+
+<#ConallClóen>
+    a foaf:Person ;
+    irishRel:nomName "Conall Clóen" ;
+    rel:childOf <#Conchinne>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#ConallCloen>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_lugdach_meic_ítha.ttl#ConallClóen>.
+
+<#Cormac>
+    a foaf:Person ;
+    irishRel:nomName "Cormac" ;
+    rel:childOf <#MacEircc>.
+
+<#Balar>
+    a foaf:Person ;
+    irishRel:nomName "Balar" ;
+    rel:childOf <#MacEircc>.
+
+<#Russ>
+    a foaf:Person ;
+    irishRel:nomName "Russ" ;
+    rel:childOf <#MacEircc>.
+
+<#Fergus>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    rel:childOf <#Lapae>.
+
+<#Lapae>
+    a foaf:Person;
+    irishRel:genName "Lapae";
+    rel:childOf <#Fiachnae>.
+
+<#Fiachnae>
+    a foaf:Person;
+    irishRel:genName "Fiachnae";
+    irishRel:nomName "Fiachna";
+    rel:childOf <#Rossa>.
+
+<#Rossa>
+    a foaf:Person;
+    irishRel:genName "Rossa";
+    owl:sameAs <#Russ>;
+    rel:childOf <#MeicEircc>.
+
+<#MeicEircc>
+    a foaf:Person;
+    irishRel:genName "Meic Eircc";
+    owl:sameAs <#MacEircc>;
+    rel:childOf <#Threno>.
+
+<#Threno>
+    a foaf:Person;
+    irishRel:genName "Threno" ;
+    owl:sameAs <#Threna>.
+
+<#Fachtna>
+    a foaf:Person;
+    irishRel:nomName "Fachtna";
+    rel:childOf <#Moínaich>.
+
+<#Moínaich>
+    a foaf:Person;
+    irishRel:genName "Moínaich";
+    irishRel:nomName "Moínach";
+    rel:childOf <#Cairill>.
+
+<#Cairill>
+    a foaf:Person;
+    irishRel:genName "Cairill";
+    rel:childOf <#Fiachna-98a6c499>.
+
+<#Fiachna-98a6c499>
+    a foaf:Person;
+    irishRel:genName "Fiachna";
+    rel:childOf <#Rossa-d12cc9c3>.
+
+<#Rossa-d12cc9c3>
+    a foaf:Person;
+    irishRel:genName "Rossa";
+    owl:sameAs <#Russ>;
+    rel:childOf <#MeicEircc-30143dfe>.
+
+<#MeicEircc-30143dfe>
+    a foaf:Person;
+    irishRel:genName "Meic Eircc" ;
+    owl:sameAs <#MacEircc>.
