@@ -8,13 +8,27 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 <>
     a dctype:Dataset;
-    dcterms:title "Nuadu Necht ní dámair anfhlaith "@sga;
+    dcterms:title "Nuadu Necht ní dámair anfhlaith"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text001.html>;
     dcterms:format "text/turtle";
     rdfs:comment "BUNAD LAIGEN IMMORRO & A TINDREM CO ÁDAM do-rurim in ríg-fhile Find Rossa Ruaid isna fursaintib do-dergéne do rígaib Lagen & dia genelogaib ó Nuadait Necht co Ádam ut dixit:"@sga.
+
+<http://www.vanhamel.nl/codecs/Nuadu_Necht_n%C3%AD_d%C3%A1mair_anflaith>
+    prov:wasAttributedTo <#Find>.
+
+<#Find>
+    a foaf:Person;
+    irishRel:nomName "Find";
+    rel:childOf <#RossaRuaid>.
+
+<#RossaRuaid>
+    a foaf:Person;
+    irishRel:genName "Rossa Ruaid";
+    irishRel:nomName "Ros Ruad".
 
 <#Adam>
     a foaf:Person;
@@ -24,16 +38,22 @@
 <#NuaduNecht>
     a foaf:Person;
     irishRel:nomName "Nuadu Necht";
-    rel:antagonistOf <#EterscélaMoccuIair>;
+    rel:antagonistOf <#Eterscéla>;
     rel:descendantOf <#Lugdach>;
     owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#NuaduNecht>;
     owl:sameAs <http://example.com/LL/lagin.ttl#Nuadu>.
 
-<#EterscélaMoccuIair>
+<#Eterscéla>
     a irishTitle:Rí;
-    irishRel:genName "Eterscéla Moccu Iair";
-    irishRel:nomName "Eterscél Moccu Iair";
+    irishRel:genName "Eterscéla";
+    irishRel:nomName "Eterscél";
+    rel:descendantOf <#Iair>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ríg_n_alban.ttl#Eterscéla>.
+
+<#Iair>
+    a foaf:Person;
+    irishRel:genName "Iair";
+    irishRel:nomName "Iar".
 
 <#Lugdach>
     a foaf:Person ;
@@ -72,7 +92,7 @@
     irishRel:nomName "Bressal Brecc" ;
     owl:sameAs <#Bressail>;
     rel:ancestorOf <#NuaduNecht>;
-    rel:childOf <http://example.com/Rawl_B502/fursunnud_naile.ttl#BresalBrecc>.
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#BresalBrecc>.
 
 <#Lugaid-db5d2810>
     a foaf:Person;
@@ -212,7 +232,7 @@
 <#Aillil-7a00ec08>
     a foaf:Person ;
     irishRel:nomName "Aillil" ;
-    owl:sameAs <#AilillAine>.
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#AilillAine>.
 
 <#Úgaine>
     a foaf:Person ;
