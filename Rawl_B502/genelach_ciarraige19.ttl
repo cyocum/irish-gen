@@ -1,0 +1,284 @@
+@base <http://example.com/Rawl_B502/genelach_ciarraige19.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Ciarraige"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#MacRaith>
+    a foaf:Person;
+    irishRel:nomName "Mac Raith";
+    rel:childOf <#MeiccBethad>.
+
+<#MeiccBethad>
+    a foaf:Person;
+    irishRel:genName "Meicc Bethad";
+    irishRel:nomName "Macc Bethad";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#MeicBethad>;
+    rel:childOf <#Conchobuir>.
+
+<#Conchobuir>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobur";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Conchobuir>;
+    rel:childOf <#Cathail>.
+
+<#Cathail>
+    a foaf:Person;
+    irishRel:genName "Cathail";
+    irishRel:nomName "Cathal";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Cathail>;
+    rel:childOf <#Conchobuir-bf7f16fe>.
+
+<#Conchobuir-bf7f16fe>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobur";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Conchobuir-4a65ed99>;
+    rel:childOf <#Muiredaich>.
+
+<#Muiredaich>
+    a foaf:Person;
+    irishRel:genName "Muiredaich";
+    irishRel:nomName "Muiredach";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Muridaig>;
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmat";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Diarmata>;
+    rel:childOf <#Indrechtaich>.
+
+<#Indrechtaich>
+    a foaf:Person;
+    irishRel:genName "Indrechtaich";
+    irishRel:nomName "Indrechtach";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Indrechtaig>;
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Cobthaich>.
+
+<#Cobthaich>
+    a foaf:Person;
+    irishRel:genName "Cobthaich";
+    irishRel:nomName "Cobthaich";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Cobthaig>;
+    rel:childOf <#MáelCoba>.
+
+<#MáelCoba>
+    a foaf:Person;
+    irishRel:genName "Máel Coba";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#MaelChoba>;
+    rel:childOf <#FlaindFéornae>.
+
+<#FlaindFéornae>
+    a foaf:Person;
+    irishRel:genName "Flaind Féornae";
+    irishRel:nomName "Fland Féornae";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#FhlaindFeorna>; 
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Colmain>;
+    rel:childOf <#Rechtabrat>.
+
+<#Rechtabrat>
+    a foaf:Person;
+    irishRel:genName "Rechtabrat";
+    irishRel:nomName "Rechtabra";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Rechtabrat>;
+    rel:childOf <#MáelTule>.
+
+<#MáelTule>
+    a foaf:Person;
+    irishRel:genName "Máel Tule";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#MaeleTuile>;
+    rel:childOf <#Áedloga>.
+
+<#Áedloga>
+    a foaf:Person;
+    irishRel:genName "Áedloga";
+    irishRel:nomName "Áedloga";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Aidloga>;
+    rel:childOf <#Daurthecht>.
+
+<#Daurthecht>
+    a foaf:Person;
+    irishRel:genName "Daurthecht";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Dairthecht>;
+    rel:childOf <#Senaich>.
+
+<#Senaich>
+    a foaf:Person;
+    irishRel:genName "Senaich";
+    irishRel:nomName "Senach";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Shenaig>;
+    rel:childOf <#Rethaich>.
+
+<#Rethaich>
+    a foaf:Person;
+    irishRel:genName "Rethaich";
+    irishRel:nomName "Rethach";
+    rel:childOf <#Ferbba>.
+
+<#Ferbba>
+    a foaf:Person;
+    irishRel:genName "Ferbba";
+    irishRel:nomName "Ferbb";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Fherbba>;
+    rel:childOf <#Imchada>.
+
+<#Imchada>
+    a foaf:Person;
+    irishRel:genName "Imchada";
+    irishRel:nomName "Imchad";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Imchada>;
+    rel:childOf <#Ambrit>.
+
+<#Ambrit>
+    a foaf:Person;
+    irishRel:genName "Ambrit";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Ambrit>;
+    rel:childOf <#Mochon>.
+
+<#Mochon>
+    a foaf:Person;
+    irishRel:genName "Mochon";
+    irishRel:nomName "Mochu";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Mochon>;
+    rel:childOf <#Saulim>.
+
+<#Saulim>
+    a foaf:Person;
+    irishRel:genName "Saulim";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#M'Aulaim>;
+    rel:childOf <#MesseChon>.
+
+<#MesseChon>
+    a foaf:Person;
+    irishRel:genName "Messe Chon";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#MesoChon>;
+    rel:childOf <#Saulo>.
+
+<#Saulo>
+    a foaf:Person;
+    irishRel:genName "Saulo";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Saulo>;
+    rel:childOf <#MogoAirtt>.
+
+<#MogoAirtt>
+    a foaf:Person;
+    irishRel:genName "Mogo Airtt";
+    irishRel:nomName "Mog Airtt";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#MogaAirt>;
+    rel:childOf <#Orbbsa>.
+
+<#Orbbsa>
+    a foaf:Person;
+    irishRel:genName "Orbbsa";
+    rel:childOf <#Fiachna>.
+
+<#Fiachna>
+    a foaf:Person;
+    irishRel:genName "Fiachna";
+    rel:childOf <#Aithre>.
+
+<#Aithre>
+    a foaf:Person;
+    irishRel:genName "Aithre";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Aithri>;
+    rel:childOf <#Ailte>.
+
+<#Ailte>
+    a foaf:Person;
+    irishRel:genName "Ailte";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Ailti>;
+    rel:childOf <#Ochomon>.
+
+<#Ochomon>
+    a foaf:Person;
+    irishRel:genName "Ochomon";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Sogomain>;
+    rel:childOf <#Fidchuire>.
+
+<#Fidchuire>
+    a foaf:Person;
+    irishRel:genName "Fidchuire";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Fhidchori>;
+    rel:childOf <#Delbnae>.
+
+<#Delbnae>
+    a foaf:Person;
+    irishRel:genName "Delbnae";
+    irishRel:nomName "Delbna";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Delbnai>;
+    rel:childOf <#Einne>.
+
+<#Einne>
+    a foaf:Person;
+    irishRel:genName "Einne";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Euni>;
+    rel:childOf <#h-Uillriuch>.
+
+<#h-Uillriuch>
+    a foaf:Person;
+    irishRel:genName "h-Uillriuch";
+    rel:childOf <#Astomuin>.
+
+<#Astomuin>
+    a foaf:Person;
+    irishRel:genName "Astomuin";
+    irishRel:nomName "Astomun";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Astumain>;
+    rel:childOf <#MogaTuath>.
+
+<#MogaTuath>
+    a foaf:Person;
+    irishRel:genName "Moga Tuath";
+    irishRel:nomName "Mog Tuath";
+    rel:childOf <#Fergusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Fhergusa>;
+    rel:childOf <#Rosa>.
+
+<#Rosa>
+    a foaf:Person;
+    irishRel:genName "Rosa";
+    irishRel:nomName "Ros";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Rosa>;
+    rel:childOf <#Rudraige>.
+
+<#Rudraige>
+    a foaf:Person;
+    irishRel:genName "Rudraige";
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Rudraige>.
