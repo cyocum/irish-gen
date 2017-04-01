@@ -1,0 +1,155 @@
+@base <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Dáil Coirpri Arad"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
+    dcterms:format "text/turtle".
+
+<#CairpreCluichechair>
+    a foaf:Person;
+    irishRel:nomName "Cairpre Cluichechair";
+    rel:childOf <#ConCorb>;
+    rel:childOf <#EithneSithbaicce>;
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#CoirpreCruaid>;
+    rdfs:comment "is uad atá Dál Carpri Arad ut diximus".
+
+<#ConCorb>
+    a foaf:Person;
+    irishRel:nomName "Cú Corb";
+    irishRel:genName "Con Corb";
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#ConChorb>.
+
+<#EithneSithbaicce>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:genName "Eithne Sithbaicce";
+    irishRel:nomName "Eithne Sithbacc";
+    rel:childOf <#ÓengusaMúisc>;
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#Ethne>.
+
+<#ÓengusaMúisc>
+    a foaf:Person;
+    irishRel:genName "Óengusa Múisc";
+    irishRel:nomName "Óengus Músc";
+    owl:sameAs <http://example.com/LL/lagin.ttl#OengusaMúsc>.
+
+<#Eithne>
+    a foaf:Person;
+    irishRel:nomName "Eithne";
+    owl:sameAs <#EithneSithbaicce>;
+    rel:spouseOf <#ChoinCorp>;
+    rel:spouseOf <#Laider>;
+    irishRel:numChild 2.
+
+<#ChoinCorp>
+    a foaf:Person;
+    irishRel:datName "Choin Corp";
+    irishRel:nomName "Cú Corb";
+    owl:sameAs <#ConCorb>.
+
+<#MesinCorb>
+    a foaf:Person;
+    irishRel:nomName "Mesin Corb";
+    rel:childOf <#ChoinCorp>;
+    rel:childOf <#Eithne>;
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#MessinCorb>
+
+<#CoirpreDíchmaircc>
+    a foaf:Person;
+    irishRel:nomName "Coirpre Díchmaircc";
+    rel:childOf <#ChoinCorp>;
+    rel:childOf <#Eithne>.
+
+# owl:sameAs <#CairpreCluichechair>? EPT
+
+<#Laider>
+    a foaf:Person;
+    foaf:name "Laider";
+    foaf:title "ara"@sga, "charioteer"@eng;
+    rdfs:comment "do Ultaib";
+    rdfs:comment "a quo Dál n-Araidi";
+    rel:workedFor <#ConCorb-e24586c0>;
+    irishRel:numChild 4;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Laider>;
+    owl:sameAs <http://example.com/LL/do_thaicraige_arad.ttl#Laidir>.
+
+<#ConCorb-e24586c0>
+    owl:sameAs <#ConCorb>.
+
+<#Tecca>
+    a foaf:Person;
+    irishRel:nomName "Tecca";
+    rel:childOf <#Laider>;
+    rel:childOf <#Eithne>;
+    owl:sameAs <http://example.com/LL/do_thaicraige_arad.ttl#Thoeca>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Toeccae>;
+    rdfs:comment "i m-Mumain".
+
+<#AilbeImblecha>
+    a foaf:Person;
+    irishRel:nomName "Ailbe Imblecha";
+    rel:descendantOf <#Tecca>;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q4531465>.
+
+<#Énna>
+    a foaf:Person;
+    irishRel:nomName "Énna";
+    rel:childOf <#Laider>;
+    rel:childOf <#Eithne>;
+    owl:sameAs <http://example.com/LL/do_thaicraige_arad.ttl#Noene>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Ennae>;
+    rdfs:comment "i m-Mumain".
+
+<#Dila>
+    a foaf:Person;
+    irishRel:nomName "Dila";
+    rel:childOf <#Laider>;
+    rel:childOf <#Eithne>;
+    owl:sameAs <http://example.com/LL/do_thaicraige_arad.ttl#Dail>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Dila>;
+    rdfs:comment "i m-Mumain".
+
+<#Artta>
+    a foaf:Person;
+    irishRel:nomName "Artta";
+    rel:childOf <#Laider>;
+    rel:childOf <#Eithne>;
+    owl:sameAs <http://example.com/LL/do_thaicraige_arad.ttl#Arta>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Arta>;
+    rdfs:comment "i m-Mumain".
+
+<#Cairpre>
+    a foaf:Person;
+    irishRel:nomName "Cairpre";
+    rel:childOf [
+      a foaf:Person;
+      rel:childOf <#CairpreMúsc>;
+      owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#Ethne>
+    ];
+    foaf:title "fili"@sga, "poet"@eng;
+    owl:sameAs <#CairpreCluichechair>.
+
+<#CairpreMúsc>
+    a foaf:Person;
+    irishRel:accName "Cairpre Músc";
+    irishRel:nomName "Cairpre Músc";
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#CoirpreMúisc>;
+    rdfs:comment "LL: Luid iarum in Corpre siar iar tain do chungid cobra coa shenathair co Oengus Músc. Rawl.B.502: Luid iarum in Cairpre siar iar tain do chuingid chobrad coa senathair co Cairpre Músc.".
+
+<#Óengus>
+    a foaf:Person;
+    irishRel:nomName "Óengus";
+    owl:sameAs <#ÓengusaMúisc>;
+    rel:relationship <#Cairpre>;
+    rdfs:comment "Ní tárlaic iarum Óengus aniar acht do-bert ferann dó lais tiar .i. Tír n-Duais ar ba fili in Cairpre.".
