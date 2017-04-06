@@ -1,0 +1,381 @@
+@base <http://example.com/Rawl_B502/item_úi_máelhuidir_2.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Item Úi Máel hUidir [2]"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
+    dcterms:format "text/turtle".
+
+# This has the same title as a previous section.
+# <http://example.com/Rawl_B502/item_úi_máelhuidir.ttl>
+# This may be a scribal mistake, as Maelodor does not seem to be of relevance
+# here. But it is in the manuscript,so it is being retained. EPT
+
+<#Branán>
+    a foaf:Person;
+    irishRel:nomName "Branán";
+    rel:childOf <#Fintain>.
+
+<#Fintain>
+    a foaf:Person;
+    irishRel:nomName "Fintan";
+    irishRel:genName "Fintain";
+    rel:childOf <#Sencháin>.
+
+<#Sencháin>
+    a foaf:Person;
+    irishRel:nomName "Senchán";
+    irishRel:genName "Sencháin";
+    rel:childOf <#Ségíni>.
+
+<#Ségíni>
+    a foaf:Person;
+    irishRel:nomName "Ségéne";
+    irishRel:genName "Ségíni";
+    rel:childOf <#Conmarcáin>.
+
+<#Conmarcáin>
+    a foaf:Person;
+    irishRel:nomName "Conmarcán";
+    irishRel:genName "Conmarcáin";
+    rel:childOf <#ConDínisc>.
+
+<#ConDínisc>
+    a foaf:Person;
+    irishRel:nomName "Cú Dínisc";
+    irishRel:genName "Con Dínisc";
+    rel:childOf <#h-Uarchride>.
+
+<#h-Uarchride>
+    a foaf:Person;
+    irishRel:nomName "Uarchride";
+    irishRel:genName "h-Uarchride";
+    rel:childOf <#Thómíne>.
+
+<#Thómíne>
+    a foaf:Person;
+    irishRel:nomName "Tómine";
+    irishRel:genName "Thómíne";
+    rel:childOf <#Dúnamail>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Tommine>.
+
+<#Dúnamail>
+    a foaf:Person;
+    irishRel:nomName "Dúnamail";
+    irishRel:genName "Dúnamail";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Dunamla>.
+
+# There is a very similar pedigree in <http://example.com/LL/dal_corpri_arad.ttl>,
+# (p.1337) except, from <#h-Uarchride> onwards, it is in reverse order. I have thus
+# not added owl:sameAs links. Weird. EPT.
+
+# There follows a pedigree that is supposedly in very poor condition and virtually
+# unreadable. However, I cannot find it in the manuscript itself and I cannot
+# find any parralel to it in LL. EPT
+
+<#Flan(.)Fil(.)>
+    a foaf:Person;
+    irishRel:nomName "Flann File";
+    rel:childOf <#Ma(...)Mod(..)>.
+
+# = Flann File? EPT
+
+<#Ma(...)Mod(..)>
+    a foaf:Person;
+    irishRel:genName "<#Ma(...)Mod(..)>";
+    rel:childOf <#Dia(.....)>.
+
+<#Dia(.....)>
+    a foaf:Person;
+    irishRel:genName "Dia(.....)";
+    rel:childOf <#Ca(.....)>.
+
+<#Ca(.....)>
+    a foaf:Person;
+    irishRel:genName "<#Ca(.....)>";
+    rel:childOf <#Ca(...)saig>.
+
+<#Ca(...)saig>
+    a foaf:Person;
+    irishRel:genName "<#Ca(...)saig>".
+
+<#Coirpre>
+    a foaf:Person;
+    irishRel:nomName "Coirpre";
+    rel:childOf <#Cathasaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Corpre>;
+    owl:sameAs <#Ca(.....)>.
+
+<#Cathasaig>
+    a foaf:Person;
+    irishRel:nomName "Cathasach";
+    irishRel:genName "Cathasaig";
+    rel:childOf <#Muirgiusa>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cathasaig>;
+    owl:sameAs <#Ca(...)saig>.
+
+<#Muirgiusa>
+    a foaf:Person;
+    irishRel:nomName "Muirgius";
+    irishRel:genName "Muirgiusa";
+    rel:childOf <#Fergusa>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Murgiusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    irishRel:genName "Fergusa";
+    rel:childOf <#Snédgusa>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhergusa>.
+
+<#Snédgusa>
+    a foaf:Person;
+    irishRel:nomName "Snédgus";
+    irishRel:genName "Snédgusa";
+    rel:childOf <#Máelhuidir>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Shnedgusa>.
+
+<#Máelhuidir>
+    a foaf:Person;
+    irishRel:nomName "Máelodor";
+    irishRel:genName "Máelhuidir";
+    rel:childOf <#ColmáinEltíne>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Maeludir>.
+
+<#ColmáinEltíne>
+    a foaf:Person;
+    irishRel:nomName "Colmán Eltíne";
+    irishRel:genName "Colmáin Eltíne";
+    rel:childOf <#Blaithmeic>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#ColmainEltine-79e5e742>.
+
+<#Blaithmeic>
+    a foaf:Person;
+    irishRel:nomName "Blathmac";
+    irishRel:genName "Blaithmeic";
+    rel:childOf <#ÁedaIndén>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Blaithmeic>.
+
+<#ÁedaIndén>
+    a foaf:Person;
+    irishRel:nomName "Áed Indén";
+    irishRel:genName "Áeda Indén";
+    rel:childOf <#Cathbath>;
+    rdfs:comment "a quo Fuithirbi";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Aeda>.
+
+<#Cathbath>
+    a foaf:Person;
+    irishRel:nomName "Cathbad";
+    irishRel:genName "Cathbath";
+    rel:childOf <#Labrada>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cathuib>.
+
+<#Labrada>
+    a foaf:Person;
+    irishRel:nomName "Labraid";
+    irishRel:genName "Labrada";
+    rel:childOf <#Threna>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Labrada-a03ae63f>.
+
+<#Threna>
+    a foaf:Person;
+    irishRel:nomName "Tren";
+    irishRel:genName "Threna";
+    rel:childOf <#Imchatha>.
+
+<#Imchatha>
+    a foaf:Person;
+    irishRel:nomName "Imchad";
+    irishRel:genName "Imchatha";
+    rel:childOf <#Corbmaic>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Imchada-cae36390>.
+
+<#Corbmaic>
+    a foaf:Person;
+    irishRel:nomName "Corbmac";
+    irishRel:genName "Corbmaic";
+    rel:childOf <#ConCorb>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cormaic-4e04018b>.
+
+<#ConCorb>
+    a foaf:Person;
+    irishRel:nomName "Cú Corb";
+    irishRel:genName "Con Corb";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#ConCorb-986937fd>.
+
+<#Fothaid>
+    a foaf:Person;
+    irishRel:nomName "Fothad";
+    irishRel:genName "Fothaid";
+    rel:childOf <#Cethernaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fothaid>.
+
+<#Cethernaig>
+    a foaf:Person;
+    irishRel:nomName "Cethernach";
+    irishRel:genName "Cethernaig";
+    rel:childOf <#Colmáin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cethernaig>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:nomName "Colmán";
+    irishRel:genName "Colmáin";
+    rel:childOf <#h-Uargalaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Colmain>.
+
+<#h-Uargalaig>
+    a foaf:Person;
+    irishRel:nomName "Uargalach";
+    irishRel:genName "h-Uargalaig";
+    rel:childOf <#Snédgusa-5d97b3e0>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Uargalaig>;
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_máelhuidir.ttl#Uargalach>.
+
+<#Snédgusa-5d97b3e0>
+    a foaf:Person;
+    irishRel:nomName "Snédgus";
+    irishRel:genName "Snédgusa";
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_máelhuidir.ttl#Snédgusa>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Snedgusa>;
+    owl:sameAs <#Snédgusa>.
+
+<#h-Íracán>
+    a foaf:Person;
+    irishRel:nomName "Íracán";
+    irishRel:genName "h-Íracán";
+    rel:childOf <#Fiannérge>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Uarachan>.
+
+<#Fiannérge>
+    a foaf:Person;
+    irishRel:nomName "Fiannérge";
+    irishRel:genName "Fiannérge";
+    rel:childOf <#Fiannachtaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fiannergi>.
+
+<#Fiannachtaig>
+    a foaf:Person;
+    irishRel:nomName "Fiannachtach";
+    irishRel:genName "Fiannachtaig";
+    rel:childOf <#Tuathchair>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fiannachtaig>.
+
+<#Tuathchair>
+    a foaf:Person;
+    irishRel:nomName "Tuathchar";
+    irishRel:genName "Tuathchair";
+    rel:childOf <#Snédgussa>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Tuathchair>.
+
+<#Snédgussa>
+    a foaf:Person;
+    irishRel:nomName "Snédgus";
+    irishRel:genName "Snédgussa";
+    owl:sameAs <#Snédgusa-5d97b3e0>.
+
+<#NiaCuilind>
+    a foaf:Person;
+    irishRel:nomName "Nia Cuilind";
+    rdfs:comment "dia tát Úi Chuilinn. Is í a forbba Mag n-Abna .i. Síl m-Brain la Láechis.";
+    rel:childOf <#Labrada-e23469d0>;
+    rel:relationship <#ÉnnaCeinselach>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NioCulend>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.ttl#NioCuillenn>.
+
+<#Labrada-e23469d0>
+    a foaf:Person;
+    irishRel:nomName "Labraid";
+    irishRel:genName "Labrada";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Labraid>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.ttl#Labraid>.
+
+<#Brain>
+    a foaf:Person;
+    irishRel:genName "Brain";
+    irishRel:nomName "Bran";
+    rel:descendantOf <#NiaCuilind>.
+
+<#Melige>
+    a foaf:Person;
+    irishRel:nomName "Melige";
+    rel:childOf <#NiaCuilind>;
+    rel:antagonistOf <#CiarCúldub>;
+    rdfs:comment "It Úi Chuilin dano Úi Chon Ciriet. Melige mc Cuilinn a senathair.".
+
+<#CiarCúldub>
+    a foaf:Person;
+    irishRel:nomName "Ciar Cúldub";
+    rdfs:comment "de Úib Néill";
+    rel:descendantOf <#Néill>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomNAme "Níall";
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#NeillNóigiallaig>.
+
+<#ChonCiriet>
+    a foaf:Person;
+    irishRel:genName "Chon Ciriet";
+    irishRel:nomName "Cú Ciriet";
+    rel:descendantOf <#Melige>;
+    rdfs:comment "Úi Chon Ciriet".
+
+<#ÉnnaCeinselach>
+    a foaf:Person;
+    irishRel:nomName "Énna Ceinselach";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EnnaiCennselaig>.
+
+<#FergusCuth>
+    a foaf:Person;
+    irishRel:nomName "Fergus Cuth";
+    rel:descendantOf <#Labrada-e23469d0>;
+    rdfs:comment "Is Úi Labrada Cuthraige .i. Fergus Cuth a senathair.".
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    owl:sameAs <#Corbmaic>.
+
+<#Trena>
+    a foaf:Person;
+    irishRel:genName "Trena";
+    irishRel:nomName "Tren";
+    rdfs:comment "Úi Trena";
+    rel:descendantOf <#Cormaic>;
+    owl:sameAs <#Threna>.
+
+<#Chuircc>
+    a foaf:Person;
+    irishRel:genName "Chuircc";
+    irishRel:nomName "Corc";
+    rdfs:comment "Úi Chuircc";
+    rel:descendantOf <#Cormaic>.
+
+<#EithniGabulfhota>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Eithni Gabulfhota";
+    rdfs:comment "Úi Gabla Fini & Úi Gabla Roírenn .i. Eithni Gabulfhota óen-ingen Cormaicc mc Con Corp is h-í máthair Úa n-Gabla & a qua nominati suntt.".
+    rel:childOf <#Cormaic>;
+    rel:spouseOf [
+      a foaf:Person;
+      rdfs:comment "A díthriub Connacht immorro a n-athair .i. céile Eithni Gabulfhota."
+    ].
+
+# There is a cognate paragraph in LL (p.1335) that had not been added to
+# <http://example.com/LL/dal_corpri_arad.ttl>. This should be added, as it
+# contains some interesting variants. EPT
