@@ -1,0 +1,397 @@
+@base <http://example.com/Rawl_B502/genelach_úa_tairdelbaig.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Úa Tairdelbaig"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text017.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text017.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Thairdelbaig>
+    a foaf:Person;
+    irishRel:genName "Thairdelbaig";
+    irishRel:nomName "Thairdelbach";
+    irishRel:numChild 5 ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Tairdelbaig>
+
+<#Flannán>
+    a foaf:Person;
+    irishRel:nomName "Flannán";
+    foaf:title "sanctus" ;
+    rel:childOf <#Thairdelbaig>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Flannan>.
+
+<#Mathgamain>
+    a foaf:Person;
+    irishRel:nomName "Mathgamain";
+    irishRel:genName "Mathgamna" ;
+    rel:childOf <#Thairdelbaig>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Mathgamain>.
+
+<#Áed>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    rel:childOf <#Thairdelbaig>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Aed> .
+
+<#Eochu>
+    a foaf:Person;
+    irishRel:nomName "Eochu";
+    rel:childOf <#Thairdelbaig>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Eochu>.
+
+<#Ailgile>
+    a foaf:Person;
+    irishRel:nomName "Ailgile";
+    rel:childOf <#Thairdelbaig>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Algel>.
+
+<#Mathgamain>
+    a foaf:Person;
+    irishRel:genName "Mathgamain";
+    owl:sameAs <#Mathgamain>;
+    irishRel:numChild 4.
+
+<#Anluan>
+    a foaf:Person;
+    irishRel:nomName "Anluan";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Anlón>;
+    rel:childOf <#Mathgamain>.
+
+<#Áed-cebdabc0>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Aed-7942fff8>;
+    rel:childOf <#Mathgamain>.
+
+<#Sathgel>
+    a foaf:Person;
+    irishRel:nomName "Sathgel";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Sathgel>;
+    rel:childOf <#Mathgamain>.
+
+<#Fiangalach>
+    a foaf:Person;
+    irishRel:nomName "Fiangalach";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Fiangalach>;
+    irishRel:numChild 1 ;
+    rel:childOf <#Mathgamain>.
+
+<#Anluan-2296a62b>
+    a foaf:Person;
+    irishRel:genName "Anluan";
+    owl:sameAs <#Anluan>;
+    irishRel:numChild 1.
+
+<#Corcc>
+    a foaf:Person;
+    irishRel:nomName "Corcc";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Corc>;
+    rel:childOf <#Anluan-2296a62b>.
+
+<#Curcc>
+    a foaf:Person;
+    irishRel:genName "Curcc";
+    owl:sameAs <#Corcc>;
+    irishRel:numChild 1.
+
+<#Lachtna>
+    a foaf:Person;
+    irishRel:nomName "Lachtna";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Lachtna>;
+    irishRel:numChild 7 ;
+    rel:childOf <#Curcc>.
+
+<#Lachtna-3b43b80d>
+    a foaf:Person;
+    irishRel:genName "Lachtna";
+    owl:sameAs <#Lachtna>;
+    irishRel:numChild 1.
+
+<#Lorccán>
+    a foaf:Person;
+    irishRel:nomName "Lorccán";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Lorcan>;
+    rel:childOf <#Lachtna>.
+
+<#Lorccán-8bbbd10a>
+    a foaf:Person;
+    irishRel:genName "Lorccán";
+    irishRel:numChild 4.
+
+<#Cennéitich>
+    a foaf:Person;
+    irishRel:nomName "Cennéitich";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Cennétig>;
+    rdfs:comment "ó tát Muinter Ceinnétich" ;
+    irishRel:numChild 12 ;
+    rel:childOf <#Lorccán-8bbbd10a>.
+
+<#Coscrach>
+    a foaf:Person;
+    irishRel:nomName "Coscrach";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Coscrach>;
+    rdfs:comment "ó tát Úi Lonngargáin mc Lorccáin" ;
+    irishRel:numChild 12 ;
+    rel:childOf <#Lorccán-8bbbd10a>.
+
+<#Londgargán>
+    a foaf:Person;
+    irishRel:nomName "Londgargán";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Londgargan>;
+    rel:childOf <#Lorccán-8bbbd10a>.
+
+<#Congalach>
+    a foaf:Person;
+    irishRel:nomName "Congalach";
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Congalach>;
+    rel:childOf <#Lorccán-8bbbd10a>.
+
+<#Brian>
+    a foaf:Person ;
+    irishRel:nomName "Brian" ;
+    rel:childOf <#Cennéitich>;
+    irishRel:numChild 6 ;
+    rdfs:comment "a quo Síl m-Briain" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Brian>.
+
+<#Mathgamain-ee36ab18>
+    a foaf:Person ;
+    irishRel:nomName "Mathgamain" ;
+    rel:childOf <#Cennéitich>;
+    rdfs:comment "a quo Úi Mathgamna" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Mathgamain-39e4b6cf>.
+
+<#DonnCuan>
+    a foaf:Person ;
+    irishRel:nomName "Donn Cuan" ;
+    rel:childOf <#Cennéitich>;
+    rdfs:comment "a quo Muinter Duind Chuan" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#DondCuan>.
+
+<#Echthigern>
+    a foaf:Person ;
+    irishRel:nomName "Echthigern" ;
+    rel:childOf <#Cennéitich>;
+    rdfs:comment "a quo Úi Echthigirnn" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Echthigern>.
+
+<#Anluan-3e6c7c4e>
+    a foaf:Person ;
+    irishRel:nomName "Anluan" ;
+    rel:childOf <#Cennéitich>;
+    rdfs:comment "ó tát Úi Chuircc mc Anluain" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Anlón-68c6dadb>.
+
+<#Flaithbertach>
+    a foaf:Person ;
+    irishRel:nomName "Flaithbertach"
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Úi Sencháin" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Flaithbertach>.
+
+<#Congal>
+    a foaf:Person ;
+    irishRel:nomName "Congal" ;
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Úi Cnáimíne mc Congaile" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Congal>.
+
+<#Congaile>
+    a foaf:Person;
+    irishRel:genName "Congaile";
+    owl:sameAs <#Congal>.
+
+<#Cnáimíne>
+    a foaf:Person;
+    irishRel:nomName "Cnáimín";
+    irishRel:genName "Cnáimíne";
+    rel:childOf <#Congaile>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Chnamin>.
+
+<#Acher>
+    a foaf:Person ;
+    irishRel:nomName "Acher" ;
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó taat Muinter Ócáin" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Acher>.
+
+<#Alludach>
+    a foaf:Person ;
+    irishRel:nomName "Alludach" ;
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Muinter Alludaich" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Allothach>.
+
+<#MáelRuanaid>
+    a foaf:Person ;
+    irishRel:nomName "Máel Ruanaid"
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Úi Máel Ruanaid" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#MaelRuanaid>.
+
+<#Diarmait>
+    a foaf:Person ;
+    irishRel:nomName "Diarmait" ;
+    irishRel:genName "Diarmata" ;
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Úi Glonniairn m. Diarmata" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Diarmait>.
+
+<#Glonniairn>
+    a foaf:Person ;
+    irishRel:genName "Glonniairn" ;
+    rel:childOf <#Diarmait>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Gloiairn>.
+
+<#Aingid>
+    a foaf:Person ;
+    irishRel:nomName "Aingid" ;
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Úi Aingeda" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Angid>.
+
+<#Maine>
+    a foaf:Person ;
+    irishRel:nomName "Maine" ;
+    rel:childOf <#Coscrach>;
+    rdfs:comment "ó tát Úi Maine" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Mane>.
+
+<#MáelSechnaill>
+    a foaf:Person ;
+    irishRel:nomName "Máel Sechnaill" ;
+    rel:childOf <#Coscrach>;
+    irishRel:numChild 0 ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#MaelSechnaill>.
+
+<#Flann>
+    a foaf:Person ;
+    irishRel:nomName "Flann" ;
+    rel:childOf <#Coscrach>;
+    irishRel:numChild 0 ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Fland>.
+    
+<#CúMara>
+    a foaf:Person ;
+    irishRel:nomName "Cú Mara" ;
+    rel:childOf <#Coscrach>;
+    irishRel:numChild 0 ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#CúMara>.
+    
+<#Tadgc>
+    a foaf:Person ;
+    irishRel:nomName "Tadgc" ;
+    rel:childOf <#Brian>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Tadc>.
+
+<#Donnchad>
+    a foaf:Person ;
+    rel:childOf <#Brian>;
+    irishRel:nomName "Donnchad" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Dondchad>.
+
+<#Domnall>
+    a foaf:Person ;
+    irishRel:nomName "Domnall" ;
+    rel:childOf <#Brian>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Domnall>.
+
+<#Murchad>
+    a foaf:Person ;
+    irishRel:nomName "Murchad" ;
+    rel:childOf <#Brian>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Murchad>.
+
+<#Conchobor>
+    a foaf:Person ;
+    irishRel:nomName "Conchobor" ;
+    rel:childOf <#Brian>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Murchad>.
+
+<#Flann>
+    a foaf:Person ;
+    irishRel:nomName "Flann" ;
+    rel:childOf <#Brian>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Fland>;
+    rel:childOf [
+        a foaf:Person ;
+        foaf:gender "female" ;
+        rel:childOf <#Edind>
+    ] .
+
+<#Edind>
+    a foaf:Person ;
+    irishRel:genName "Edind" ;
+    irishRel:nomName "Edend" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Edind>;
+    rel:childOf <#Cléirich>.
+
+<#Cléirich>
+    a foaf:Person ;
+    irishRel:genName "Cléirich" ;
+    irishRel:nomName "Cléirech" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Clerig>.
+
+<#DundChuan>
+    a foaf:Person ;
+    irishRel:genName "Dund Chuan" ;
+    owl:sameAs <#DonnCuan>;
+    irishRel:numChild 6 .
+
+<#Conaing>
+    a foaf:Person ;
+    irishRel:nomName "Conaing" ;
+    rel:childOf <#DundChuan>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Conaing>;
+    rdfs:comment "ó tát Muinter Chonaing" .
+
+<#Riacán>
+    a foaf:Person ;
+    rel:childOf <#DundChuan>;
+    irishRel:nomName "Riacán" ;
+    rdfs:comment "ó tát Úi Riacáin" ;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Riacan>.
+
+<#Lonngargán>
+    a foaf:Person ;
+    irishRel:nomName "Lonngargán" ;
+    rdfs:comment "ó tát Úi Lonngargáin" ;
+    rel:childOf <#DundChuan>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Londgargán>.
+
+<#Ceinnétich>
+    a foaf:Person ;
+    irishRel:nomName "Ceinnétich" ;
+    rdfs:comment "ó tát Úi Cheinnétich" ;
+    rel:childOf <#DundChuan>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Cennetig>.
+
+<#Célechair>
+    a foaf:Person ;
+    irishRel:nomName "Célechair" ;
+    rdfs:comment "ó tát Úi Chélechair" ;
+    rel:childOf <#DundChuan>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Celechair>.
+
+<#Congalach>
+    a foaf:Person ;
+    irishRel:nomName "Congalach" ;
+    rel:childOf <#DundChuan>;
+    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Congalach-7d8c3e35>.
+
+
