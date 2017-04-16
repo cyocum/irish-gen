@@ -1476,7 +1476,7 @@
     irishRel:nomName "Laignech";
     rel:childOf <#Nazair>.
 
-<#Caeldub>
+<#Caeldub-9c29f330>
     a foaf:Person;
     irishRel:nomName "Caeldub";
     rel:childOf <#Nazair>.
@@ -1610,9 +1610,103 @@
 <#Maelodran>
     a foaf:Person;
     irishRel:nomName "Maelodran";
-    rel:childOf <#Dicolla>.
+    rel:childOf <#Dicolla-c9f2a810>.
 
-<#Dicolla>
+<#Shetnai-fe6cf6f0>
+    a foaf:Person;
+    irishRel:genName "Shetnai";
+    irishRel:nomName "Sétna";
+    owl:sameAs <#Shetnai>;
+    rdfs:comment "Aicmi Shetnai: .h. Con Corbb .h. Con Chainnig .h. Chuain .h. Alteni".
+
+<#ConCorbb-82447d90>
+    a foaf:Person;
+    irishRel:genName "Con Corbb";
+    irishRel:nomName "Cú Corbb";
+    rel:relationship <#Shetnai-fe6cf6f0>;
+    rdfs:comment ".h. Con Corbb".
+
+# owl:sameAs <#ConCorb>? EPT
+
+<#ConChainnig>
+    a foaf:Person;
+    irishRel:genName "Con Cainnig";
+    irishRel:nomName "Cú Cainnig";
+    rel:descendantOf <#Shetnai-fe6cf6f0>;
+    rdfs:comment ".h. Con Chainnig".
+
+<#Chuain>
+    a foaf:Person;
+    irishRel:genName "Chuain";
+    irishRel:nomName "Cuan";
+    rel:descendantOf <#Shetnai-fe6cf6f0>;
+    rdfs:comment ".h. Chuain".
+
+<#Alteni>
+    a foaf:Person;
+    irishRel:genName "Alteni";
+    irishRel:nomName "Altene";
+    rel:descendantOf <#Shetnai-fe6cf6f0>;
+    rdfs:comment ".h. Alteni".
+
+<#Connad-289e17a0>
+    a foaf:Person;
+    irishRel:nomName "Connad";
+    rdfs:comment "Connad a quo .h. Doccomláin .h. Brocáin";
+    owl:sameAs <#Connad>.
+
+<#Doccomláin>
+    a foaf:Person;
+    irishRel:genName "Doccomláin";
+    irishRel:nomName "Doccomlán";
+    rel:descendantOf <#Connad-289e17a0>;
+    rdfs:comment ".h. Doccomláin".
+
+<#Brocáin>
+    a foaf:Person;
+    irishRel:genName "Brocáin";
+    irishRel:nomName "Brocán";
+    rdfs:comment ".h. Brocáin";
+    rel:descendantOf <#Connad-289e17a0>.
+
+<#Amlomaid-b9f790a0>
+    a foaf:Person;
+    irishRel:nomName "Amlonaid";
+    rdfs:comment "a quo .h. Garbain";
+    owl:sameAs <#Amlomaid>.
+
+<#Garbain-4888cc70>
+    a foaf:Person;
+    irishRel:genName "Garbain";
+    irishRel:nomName "Garban";
+    rel:descendantOf <#Amlomaid-b9f790a0>;
+    rdfs:comment ".h. Garbain".
+
+<#Cendlachan-64996640>
+    a foaf:Person;
+    irishRel:nomName "Cendlachan";
+    rdfs:comment "a quo .h. Con Galand";
+    owl:sameAs <#Cendlachan>.
+
+<#ConGaland>
+    a foaf:Person;
+    irishRel:genName "Con Galand";
+    irishRel:nomName "Cú Galand";
+    rdfs:comment ".h. Con Galand";
+    rel:descendantOf <#Cendlachan-64996640>.
+
+<#MaeliTolai>
+    a foaf:Person;
+    irishRel:genName "Maeli Tolai";
+    irishRel:nomName "Mael Tolai";
+
+<#Dicholla>
+    a foaf:Person;
+    irishRel:genName "Dicholla";
+    irishRel:nomName "Dicuill";
+    owl:sameAs <#Dicolla-c9f2a810>.
+
+<#Dicolla-c9f2a810>
     a foaf:Person;
     irishRel:genName "Dicolla";
     irishRel:nomName "Dicoll";
@@ -1623,6 +1717,11 @@
     irishRel:genName "Gobbain";
     irishRel:nomName "Gobban";
     rel:childOf <#Caindera>.
+
+<#Caindera>
+    a foaf:Person;
+    irishRel:genName "Caindera";
+    rel:childOf <#DimmaeChróin>.
 
 <#DimmaeChróin>
     a foaf:Person;
@@ -1687,6 +1786,19 @@
     irishRel:genName "Fintain";
     irishRel:nomName "Fintan".
 
+<#Conall-8b7e5740>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rdfs:comment "a quo .h. Brócceni";
+    owl:sameAs <#Conall>.
+
+<#Brócceni>
+    a foaf:Person;
+    irishRel:nomName "Bróccene";
+    irishRel:genName "Brócceni";
+    rdfs:comment ".h. Brócceni";
+    rel:descendantOf <#Conall-8b7e5740>.
+
 <#Nazair-b99a9b26>
     a foaf:Person;
     irishRel:nomName "Nazair";
@@ -1725,7 +1837,7 @@
 <#Caille>
     a foaf:Person;
     irishRel:genName "Caille";
-    irishRel:nomName "Caill";
+    irishRel:nomName "Caille";
     rel:childOf <#Enáin>.
 
 <#Enáin>
@@ -1775,20 +1887,43 @@
     irishRel:nomName "Fothad";
     owl:sameAs <#Fhothaid-7fb47155>.
 
-# Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat
-#  (http://www.dil.ie/12134) Cill n-Garraisc. (for the seed of conall
-#  moreover three daughters of Eogan son of conall who contained Cill
-#  n-Garraisc) - CY
+<#Eogain-3d9ee870>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Conaill-4832bb90>;
+    rel:parentOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+    ];
+    rel:parentOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+    ];
+    rel:parentOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+    ].
+
+<#Conaill-4832bb90>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    owl:sameAs <#Conaill>.
 
 <#Findchad-d6245ea7>
-# same as <#findchad> - CY?
     a foaf:Person;
-    irishRel:nomName "Findchad".
+    irishRel:nomName "Findchad";
+    owl:sameAs <#Findchad>.
 
 <#Nia>
     a foaf:Person;
     irishRel:nomName "Nia";
-    rel:childOf <#BecceBernsa>.
+    rel:childOf <#BecceBernsa>;
+    rel:descendantOf <#Findchad-d6245ea7>.
 
 <#BecceBernsa>
     a foaf:Person;
@@ -1822,11 +1957,167 @@
     irishRel:nomName "Findchad";
     owl:sameAs <#Findchad-d6245ea7>.
 
+<#Daire-38ef6920>
+    a foaf:Person;
+    irishRel:nomName "Daire";
+    rdfs:comment "a quo Cenel Ciarain. Et .h. Techtaire";
+    owl:sameAs <#Dáre>.
+
+<#Ciarain>
+    a foaf:Person;
+    irishRel:nomName "Ciaran";
+    irishRel:genName "Ciarain";
+    rdfs:comment "Cenel Ciarain";
+    rel:descendantOf <#Daire-38ef6920>.
+
+<#Techtaire>
+    a foaf:Person;
+    irishRel:genName "Techtaire";
+    irishRel:nomName "Techtaire";
+    rdfs:comment ".h. Techtaire";
+    rel:descendantOf <#Daire-38ef6920>.
+
+<#Conlang-79304620>
+    a foaf:Person;
+    irishRel:nomName "Conlang";
+    rdfs:comment "a quo Meic Aird Maigne. Et .h. Máinaig & h. Condoid. & h. Fhechini. Et .h. Caichtangeni";
+    owl:sameAs <#Conlang>.
+
+<#Máinaig>
+    a foaf:Person;
+    irishRel:genName "Máinaig";
+    irishRel:nomName "Máenach";
+    rdfs:comment ".h. Máinaig";
+    rel:descendantOf <#Conlang-79304620>.
+
+<#Condoid>
+    a foaf:Person;
+    irishRel:genName "Condoid";
+    irishRel:nomName "Conndoeth";
+    rel:descendantOf <#Conlang-79304620>;
+    rdfs:comment ".h. Condoid".
+
+<#Fhechini>
+    a foaf:Person;
+    irishRel:genName "Fhechini";
+    irishRel:nomName "Feichíne";
+    rel:descendantOf <#Conlang-79304620>;
+    rdfs:comment ".h. Fhechini".
+
+<#Caichtangeni>
+    a foaf:Person;
+    irishRel:genName "Caichtangeni";
+    irishRel:nomName "Caechtangene";
+    rel:descendantOf <#Conlang-79304620>;
+    rdfs:comment ".h. Caichtangeni".
+
+<#CorpreMiloscan>
+    a foaf:Person;
+    irishRel:nomName "Corpre Miloscan";
+    owl:sameAs <#CoirpreMinloscan>;
+    rdfs:comment "a quo .h. Nathig. & h. Fallamain .h. Forandla i Cuil Eimre".
+
+<#Nathig>
+    a foaf:Person;
+    irishRel:genName "Nathig";
+    irishRel:nomName "Naithech";
+    rel:descendantOf <#CorpreMiloscan>;
+    rdfs:comment ".h. Nathig".
+
+<#Fallamain>
+    a foaf:Person;
+    irishRel:genName "Fallamain";
+    irishRel:nomName "Fallaman";
+    rel:descendantOf <#CorpreMiloscan>;
+    rdfs:comment ".h. Fallamain".
+
+<#Forandla>
+    a foaf:Person;
+    irishRel:genName "Forandla";
+    rel:descendantOf <#CorpreMiloscan>;
+    rdfs:comment ".h. Forandla i Cuil Eimre".
+
+<#Laignech-8220b790>
+    a foaf:Person;
+    irishRel:nomName "Laignech";
+    owl:sameAs <#Laignech>;
+    rdfs:comment "a quo .h. Dimmae Chuirr & h. Congnaid".
+
+<#DímmaeChuirr>
+    a foaf:Person;
+    irishRel:genName "Dímmae Cirr";
+    rdfs:comment "Úi Dímmae Cirr";
+    rel:descendantOf <#Laignech-8220b790>.
+
+<#Congnaid>
+    a foaf:Person;
+    irishRel:genName "Congnaid";
+    rdfs:comment "Úi Congnaid";
+    rel:descendantOf <#Laignech-8220b790>.
+
+<#Caeldub-7f1cf800>
+    a foaf:Person;
+    irishRel:nomName "Caeldub";
+    rdfs:comment "a quo .h. Dubchróin h. Beraig";
+    owl:sameAs <#Caeldub-9c29f330>.
+
+<#Dubchróin>
+    a foaf:Person;
+    irishRel:genName "Dubchróin";
+    irishRel:nomName "Dubchrón";
+    rel:descendantOf <#Caeldub-7f1cf800>;
+    rdfs:comment ".h. Dubchróin".
+
+<#Beraig>
+    a foaf:Person;
+    irishRel:genName "Beraig";
+    irishRel:nomName "Berach";
+    rel:descendantOf <#Caeldub-7f1cf800>;
+    rdfs:comment ".h. Beraig".
+
+<#Fachtna-5e40d6f0>
+    a foaf:Person;
+    irishRel:nomName "Fachtna";
+    rdfs:comment "a quo .h. Donnain & h. Sharáin mc Fachtnai eter Drummaib";
+    owl:sameAs <#Fachtna>.
+
+<#Donnain>
+    a foaf:Person;
+    irishRel:genName "Donnain";
+    irishRel:nomName "Donnan";
+    rdfs:comment ".h. Donnain";
+    rel:descendantOf <#Fachtna-5e40d6f0>.
+
+<#Sharáin>
+    a foaf:Person;
+    irishRel:genName "Sharáin";
+    irishRel:nomName "Sarán";
+    rdfs:comment "h. Sharáin";
+    rel:childOf <#Fachtnai>.
+
+<#Fachtnai>
+    a foaf:Person;
+    irishRel:genName "Fachtnai";
+    irishRel:nomName "Fachtna";
+    owl:sameAs <#Fachtna-5e40d6f0>.
+
+<#Findloga>
+    a foaf:Person;
+    irishRel:genName "Findloga";
+    irishRel:nomName "Findloeg";
+    rdfs:comment "FORSLONTI DÁIL MESSI CORB .i. Síl Findloga di Thechtrigu".
+
+<#Coil>
+    a foaf:Person;
+    irishRel:genName "Coil";
+    irishRel:nomName "Coel";
+    rdfs:comment "FORSLONTI DÁIL MESSI CORB .i. [...] h. Coil".
+
 <#Garrchon>
     a foaf:Person;
     irishRel:numChild 7;
-    irishRel:nomName "Garrchon".
-# sameAs <#Garrchu>? - CY
+    irishRel:nomName "Garrchon";
+    owl:sameAs <#Garrchu>.
 
 <#Findchad-a709cfcc>
     a foaf:Person;
@@ -1925,12 +2216,153 @@
     irishRel:nomName "Garrchon";
     owl:sameAs <#Garrchon>.
 
-#  Fergus Laebderg mc Fothaid a quo Coemgen Glinni da Locha. Et epscop
-#  Eogain Aird Sratha. Lochan & Enna i Cill Manach Escrach. Mu Shenoc
-#  Mugnai. Mo Choeme Tiri da Glas. Coeman Enaig Truimm. Petran Cilli
-#  Lainni. Epscop Étchaín mc Mane eices i Cluain Fota Baetain
-#  Aba. Condlaed craibdech epscop Cilli Dara. Nath Í Cúile Fothirbe. Mo
-#  Acru mc Bennain. A quo etiam .h. Chaili .h.
+<#FergusLamderg>
+    a foaf:Person;
+    irishrel:nomName "Fergus Lamderg";
+    rel:childof <#Fothaid-49b630b0>;
+    owl:sameAs <#FergusLaebderg>;
+    rdfs:comment "A quo etiam .h. Chaili .h. Flathechain .h. Fidrechain .h. Chathain .h. Gaimdechair .h. Dobrain. Síl Cruachi for Gabrán.".
+
+<#Fothaid-49b630b0>
+    owl:sameAs <#Fhothaid-7fb47155>.
+
+<#Coemgen>
+    a foaf:Person;
+    irishRel:nomName "Coemgen";
+    rdfs:comment "Glinni da Locha";
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q737198>;
+    rel:descendantOf <#FergusLamderg>.
+
+<#Eogain-f478a320>
+    a foaf:Person;
+    irishrel:genName "Eogain";
+    rdfs:comment "Aird Sratha";
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q8078337>;
+    rel:employerOf [
+      a foaf:Person;
+      foaf:title "epscop"@sga, "bishop"@eng;
+      rel:descendantOf <#FergusLamderg>
+    ].
+
+<#Lochan>
+    a foaf:Person;
+    irishRel:nomName "Lochan";
+    rdfs:comment "i Cill Manach Escrach";
+    rel:descendantOf <#FergusLamderg>.
+
+<#Enna-dbafa850>
+    a foaf:Person;
+    irishRel:nomName "Enna";
+    rdfs:comment "i Cill Manach Escrach";
+    rel:descendantOf <#FergusLamderg>.
+
+<#MuShenoc>
+    a foaf:Person;
+    irishRel:nomName "Mu Shenoc";
+    rdfs:comment "Mugnai";
+    rel:descendantOf <#FergusLamderg>.
+
+<#MoChoeme>
+    a foaf:Person;
+    irishRel:nomName "Mo Choeme";
+    rdfs:comment "Tiri da Glas";
+    rel:descendantOf <#FergusLamderg>.
+
+<#Coeman>
+    a foaf:Person;
+    irishRel:nomName "Coeman";
+    rdfs:comment "Enaig Truimm";
+    rel:descendantOf <#FergusLamderg>.
+
+<#Petran>
+    a foaf:Person;
+    irishRel:nomName "Petran";
+    rdfs:comment "Cilli Lainni";
+    rel:descendantOf <#FergusLamderg>.
+
+<#Étchaín>
+    a foaf:Person;
+    irishRel:genName "Étchaín";
+    irishRel:nomName "Étchán";
+    rel:employerOf [
+      a foaf:Person;
+      foaf:title "epscop"@sga, "bishop"@eng;
+      rel:descendantOf <#FergusLamderg>;
+      rdfs:comment "eices i Cluain Fota Baetain Aba"
+    ].
+
+<#Mane-69a21e90>
+    a foaf:Person;
+    irishRel:genName "Mane";
+    irishRel:nomName "Maine";
+    rel:descendantOf <#FergusLamderg>.
+
+<#Condlaed>
+    a foaf:Person;
+    foaf:nick "craibdech"@sga;
+    foaf:title "epscop"@sga, "bishop"@eng;
+    rdfs:comment "epscop Cilli Dara";
+    irishRel:nomName "Condlaed";
+    rel:descendantOf <#FergusLamderg>.
+
+<#NathÍ-f9faa250>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    rdfs:comment "Cúile Fothirbe";
+    rel:descendantOf <#FergusLamderg>.
+
+<#MoAcru>
+    a foaf:Person;
+    irishRel:nomName "Mo Acru";
+    rel:childOf <#Bennain>.
+
+<#Bennain>
+    a foaf:Person;
+    irishRel:genName "Bennain";
+    irishRel:nomName "Bennan";
+    rel:descendantOf <#FergusLamderg>.
+
+<#Chaili>
+    a foaf:Person;
+    irishRel:genName "Chaili";
+    irishRel:nomName "Caile";
+    rdfs:comment ".h. Chaili".
+
+<#Flathechain>
+    a foaf:Person;
+    irishRel:genName "Flathechain";
+    irishRel:nomName "Flathechan";
+    rdfs:comment ".h. Flathechain".
+
+<#Fidrechain>
+    a foaf:Person;
+    irishRel:genName "Fidrechain";
+    irishRel:nomName "Fidrechan";
+    rdfs:comment ".h. Fidrechain".
+
+<#Chathain>
+    a foaf:Person;
+    irishRel:genName "Chathain";
+    irishRel:nomName "Cathan";
+    rdfs:comment ".h. Chathain".
+
+<#Gaimdechair>
+    a foaf:Person;
+    irishRel:genName "Gaimdechair";
+    irishRel:nomName "Gaimdechair";
+    rdfs:comment ".h. Gaimdechair".
+
+<#Dobrain>
+    a foaf:Person;
+    irishRel:genName "Dobrain";
+    irishRel:nomName "Dobran";
+    rdfs:comment ".h. Dobrain".
+
+<#Cruachi>
+    a foaf:Person;
+    irishRel:genName "Cruachi";
+    irishRel:nomName "Cruaiche";
+    rdfs:comment "Síl Cruachi for Gabrán".
 
 <#Caitt>
     a foaf:Person;
