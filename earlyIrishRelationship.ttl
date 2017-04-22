@@ -69,3 +69,39 @@ rel:siblingOf
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf oldIrish:accusative, foaf:name .
 
+:PopulationGroup
+    a owl:Class .
+
+:populationGroupName
+    a owl:DatatypeProperty ;
+    rdfs:domain :PopulationGroup ;
+    rdfs:range xsd:string .
+
+:ancestorOfGroup
+    a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf owl:differentFrom ;
+    owl:inverseOf :descendantOfGroup ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :PopulationGroup .
+
+:descendantOfGroup
+    a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
+    owl:inverseOf :ancestorOfGroup ;
+    rdfs:subPropertyOf owl:differentFrom ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :PopulationGroup .
+
+:declaredAncestorOf
+    a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
+    owl:inverseOf :declaredDescendantOf ;
+    rdfs:subPropertyOf owl:differentFrom ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person .
+
+:declaredDescendantOf
+    a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
+    owl:inverseOf :declaredAncestorOf ;
+    rdfs:subPropertyOf owl:differentFrom ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person .
+
