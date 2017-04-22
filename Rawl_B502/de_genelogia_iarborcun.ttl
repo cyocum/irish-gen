@@ -1,0 +1,118 @@
+@base <http://example.com/Rawl_B502/de_genelogia_iarborcun.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Iarborcun"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text017.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text017.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Dedad>
+    a foaf:Person;
+    irishRel:nomName "Dedad";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Duinn>.
+
+<#Duinn>
+    a foaf:Person;
+    irishRel:genName "Duinn";
+    irishRel:nomName "Dunn";
+    rel:childOf <#DuibSlataich>.
+
+<#DuibSlataich>
+    a foaf:Person;
+    irishRel:genName "Duib Slataich";
+    irishRel:nomName "Dub Slatach";
+    rel:childOf <#Flandchada>.
+
+<#Flandchada>
+    a foaf:Person;
+    irishRel:genName "Flandchada";
+    irishRel:nomName "Flandchad";
+    rel:childOf <#FlainnScripuil>.
+
+<#FlainnScripuil>
+    a foaf:Person;
+    irishRel:genName "Flainn Scripuil";
+    irishRel:nomName "Flann Scripul";
+    rel:childOf <#Ferchinged>.
+
+<#Ferchinged>
+    a foaf:Person;
+    irishRel:genName "Ferchinged";
+    rel:childOf <#Fermaic>.
+
+<#Fermaic>
+    a foaf:Person;
+    irishRel:genName "Fermaic";
+    irishRel:nomName "Fermac";
+    rel:childOf <#ConAllaid>.
+
+<#ConAllaid>
+    a foaf:Person;
+    irishRel:genName "Con Allaid";
+    irishRel:nomName "Cu Allad";
+    rel:childOf <#Sléibíni>.
+
+<#Sléibíni>
+    a foaf:Person;
+    irishRel:genName "Sléibíni";
+    irishRel:nomName "Sléibín";
+    rel:childOf <#Dímae>.
+
+<#Dímae>
+    a foaf:Person;
+    irishRel:genName "Dímae";
+    irishRel:nomName "Díma";
+    rel:childOf <#Senaich>.
+
+<#Senaich>
+    a foaf:Person;
+    irishRel:genName "Senaich";
+    irishRel:nomName "Senaich";
+    rel:childOf <#Rithte>.
+
+<#Rithte>
+    a foaf:Person;
+    irishRel:genName "Rithte";
+    rel:childOf <#ÓengusaCindNathrach>.
+
+<#ÓengusaCindNathrach>
+    a foaf:Person;
+    irishRel:genName "Óengusa Cind Nathrach";
+    irishRel:nomName "Óengus Cend Nathraid";
+    rel:childOf <#Cais>;
+    owl:sameAs <http://example.com/LL/dáil_caiss.ttl#OengusCendNathrach>.
+
+<#Cais>
+    a foaf:Person;
+    irishRel:genName "Cais";
+    irishRel:nomName "Cas";
+    rel:childOf <#ConaillEchluaith>;
+    owl:sameAs <http://example.com/LL/dáil_caiss.ttl#Caiss>.
+
+<#ConaillEchluaith>
+    a foaf:Person;
+    irishRel:genName "Conaill Echluaith" ;
+    irishRel:nomName "Conall Echluath" ;
+    owl:sameAs <http://example.com/LL/dáil_caiss.ttl#ConaillEchlúaith>.
