@@ -930,15 +930,23 @@
     a foaf:Person;
     irishRel:nomName "Fiacha Fidgenid";
     rel:childOf <#DáreCerba>;
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Fidgenid>;
-    rdfs:comment "a quo h. Fidgenti".
+    irishRel:ancestorOfGroup <#hFidgenti>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Fidgenid>.
+
+<#hFidgenti>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Fidgenti" .
 
 <#EochoLiathán>
     a foaf:Person;
     irishRel:nomName "Eocho Liathán";
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Liathan>;
-    rdfs:comment "a quo h. Liathain";
+    irishRel:ancestorOfGroup <#hLiathain>;
     rel:childOf <#DáreCerba>.
+
+<#hLiathain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Liathain" .
 
 <#Fidach>
     a foaf:Person;
@@ -947,13 +955,37 @@
     rdfs:comment "a quo Crimthand Mór mc Fidaig & ba rí h-Erenn & Alban h-eside";
     rel:childOf <#DáreCerba>.
 
+<#Fidaig>
+    a foaf:Person ;
+    irishRel:genName "Fidaig" ;
+    owl:sameAs <#Fidach>.
+
+<#CrimthandMór>
+    a foaf:Person ;
+    irishRel:nomName "Crimthand Mór" ;
+    rdfs:comment "ba rí h-Erenn & Alban h-eside" ;
+    rel:childOf <#Fidach>.
+
 <#Dedaid>
     a foaf:Person;
     irishRel:nomName "Dedaid";
-    rdfs:comment "a quo .h. Dedaid .i. h. Braccain & h. Ailella i n-airthur Eoganachta Cassil";
     rel:childOf <#DáreCerba>;
+    irishRel:ancestorOfGroup <#hDedaid>, <#hBraccain>, <#hAilella>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Det>.
 
+<#hDedaid>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dedaid" .
+
+<#hBraccain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Braccain" .
+
+<#hAilella>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Ailella" ;
+    rdfs:comment "i n-airthur Eoganachta Cassil" .        
+        
 <#Dau>
     a foaf:Person;
     irishRel:nomName "Dau";
@@ -984,14 +1016,21 @@
     irishRel:nomName "Lugaid";
     rel:childOf <#Dúile>;
     rel:childOf <#Lugaid>;
-    rdfs:comment "a quo .h. Lugdech Éli".
+    irishRel:ancestorOfGroup <#hLugdechÉli>.
+
+<#hLugdechÉli>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Lugdech Éli" .        
 
 <#Cathbath>
     a foaf:Person;
     irishRel:nomName "Cathbath";
     rel:childOf <#Dúile>;
-    rel:childOf <#Lugaid>;
-    rdfs:comment "a quo .h. Cathbath Chuille".
+    rel:childOf <#Lugaid>.
+
+<#hCathbathChuille>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Cathbath Chuille" .        
 
 <#Corc>
     a foaf:Person;
@@ -1006,8 +1045,12 @@
     irishRel:nomName "Luachral";
     rel:childOf <#Corc>;
     rel:childOf <#Mongfhinne>;
-    rdfs:comment "A quo Eoganacht Locha Léin".
+    irishRel:ancestorOfGroup <#EoganachtLochaLéin>.
 
+<#EoganachtLochaLéin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Eoganacht Locha Léin" .
+        
 <#Mongfhinne>
     a foaf:Person;
     irishRel:nomName "Mongfhinne";
@@ -1039,24 +1082,49 @@
     irishRel:nomName "Nad Fraich";
     rel:childOf <#Aebinne>;
     rel:childOf <#Corc>;
+    irishRel:ancestorOfGroup <#EoganachtCassil>, <#EoganachtÁne>, <#EoganachtGlennamnach>, <#EoganachtDurlaisAirthirChliach>;
     rdfs:comment "a quo Eoganacht Cassil. & Eoganacht Áne. & Eoganacht Glennamnach. et Eoganacht Durlais Airthir Chliach";
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#NathFraich-17d2ed08>;
     irishRel:numChild 2.
+
+<#EoganachtCassil>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Eoganacht Cassil" .
+
+<#EoganachtÁne>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Eoganacht Áne" .
+
+<#EoganachtGlennamnach>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Eoganacht Glennamnach" .
+        
+<#EoganachtDurlaisAirthirChliach>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Eoganacht Durlais Airthir Chliach" .        
 
 <#MacCass>
     a foaf:Person;
     irishRel:nomName "Mac Cass";
     rel:childOf <#Aebinne>;
     rel:childOf <#Corc>;
-    rdfs:comment "a quo .h. Echach".
+    irishRel:ancestorOfGroup <#hEchach>.
 
+<#hEchach>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Echach" .
+        
 <#MacBrocc>
     a foaf:Person;
     irishRel:nomName "Mac Brocc";
     rel:childOf <#Aebinne>;
     rel:childOf <#Corc>;
-    rdfs:comment "a quo .h. Trena".
+    irishRel:ancestorOfGroup <#hTrena>.
 
+<#hTrena>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Trena" .
+        
 <#MacIair>
     a foaf:Person;
     irishRel:nomName "Mac Iair";
