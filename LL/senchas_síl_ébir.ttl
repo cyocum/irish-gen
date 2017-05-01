@@ -1083,7 +1083,6 @@
     rel:childOf <#Aebinne>;
     rel:childOf <#Corc>;
     irishRel:ancestorOfGroup <#EoganachtCassil>, <#EoganachtÁne>, <#EoganachtGlennamnach>, <#EoganachtDurlaisAirthirChliach>;
-    rdfs:comment "a quo Eoganacht Cassil. & Eoganacht Áne. & Eoganacht Glennamnach. et Eoganacht Durlais Airthir Chliach";
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#NathFraich-17d2ed08>;
     irishRel:numChild 2.
 
@@ -1179,8 +1178,8 @@
     a foaf:Person;
     irishRel:nomName "Ailill";
     rel:childOf <#NadFraich>;
-    rdfs:comment "a quo Eoganacht Áne".
-
+    irishTitles:ancestorOfGroup <#EoganachtÁne>.
+        
 <#Feidlimid>
     a foaf:Person;
     irishRel:nomName "Feidlimid";
@@ -1255,16 +1254,26 @@
 
 <#EithneUaithche>
     a foaf:Person;
-    irishRel:nomName "Eithne Uaithche";
-    rdfs:comment "a quo Cenel n-Eithne".
+    foaf:gender "female" ;
+    irishRel:numChild 3 ;        
+    irishRel:nomName "Eithne Uaithche" ;
+    irishRel:ancestorOfGroup <#Ceneln-Eithne>.
+
+<#Ceneln-Eithne>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel n-Eithne" .
 
 <#MacCarthind>
     a foaf:Person;
     irishRel:nomName "Mac Carthind";
-    rdfs:comment "a quo Dubi";
+    irishRel:ancestorOfGroup <#Dubi>;
     rel:childOf <#EithneUaithche>;
     rel:childOf <#Oengus>.
 
+<#Dubi>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dubi" .
+        
 <#DubConaind>
     a foaf:Person;
     irishRel:nomName "Dub Conaind";
