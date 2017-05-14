@@ -20,7 +20,7 @@ my ($numChild, $person) = split /\sm\s|\smc\s|\s\.?m\.?\s/, $head;
 
 my $output = "<#$person>\n a foaf:Person;\nirishRel:genName \"$person\";\nirishRel:numChild " . $num{$numChild} . ".\n\n";
 
-my @children = split /et|&|,|\./, $tail;
+my @children = split /\set\s|&|,|\./, $tail;
 
 foreach my $child (@children) {
     $child =~ s/^\s+|\s+$//g;
