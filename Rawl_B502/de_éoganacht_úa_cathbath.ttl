@@ -1,0 +1,125 @@
+@base <http://example.com/Rawl_B502/de_éoganacht_úa_cathbath.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Éoganacht Úa Cathbath"@sga ;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Conaic>
+    a foaf:Person;
+    irishRel:nomName "Conaic";
+    rel:childOf <#Lárchada>.
+
+<#Lárchada>
+    a foaf:Person;
+    irishRel:genName "Lárchada";
+    irishRel:nomName "Lárchad";
+    rel:childOf <#DuibRubai>.
+
+<#DuibRubai>
+    a foaf:Person;
+    irishRel:genName "Duib Rubai";
+    irishRel:nomName "Dub Rubae";
+    rel:childOf <#Fiangalaich>.
+
+<#Fiangalaich>
+    a foaf:Person;
+    irishRel:genName "Fiangalaich";
+    irishRel:nomName "Fiangalach";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Aurgnaid>.
+
+<#Aurgnaid>
+    a foaf:Person;
+    irishRel:genName "Aurgnaid";
+    irishRel:nomName "Aurgnad";
+    rel:childOf <#Thuircc>.
+
+<#Thuircc>
+    a foaf:Person;
+    irishRel:genName "Thuircc";
+    irishRel:nomName "Turcc";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Cathbath>.
+
+<#Cathbath>
+    a foaf:Person;
+    irishRel:genName "Cathbath";
+    irishRel:nomName "Cathbad";
+    rel:childOf <#Luigdech>.
+
+<#Luigdech>
+    a foaf:Person;
+    irishRel:genName "Luigdech";
+    irishRel:genName "Luigaid";
+    rel:childOf <#AilellaFlainnBic>.
+
+<#AilellaFlainnBic>
+    a foaf:Person;
+    irishRel:genName "Ailella Flainn Bic" ;
+    irishRel:nomName "Ailill Flann Bec" ;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_síl_ébir_16.ttl#AilillFlannBec>.
+
+<#Ailella-1adc1331>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:numChild 6;
+    rel:childOf <#Cathbath>;
+    owl:sameAs <#Ailella>.
+
+<#Cormac>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:childOf <#Ailella-1adc1331>.
+
+<#Torcc>
+    a foaf:Person;
+    irishRel:nomName "Torcc";
+    rel:childOf <#Ailella-1adc1331>.
+
+<#Trian>
+    a foaf:Person;
+    irishRel:nomName "Trian";
+    rel:childOf <#Ailella-1adc1331>.
+
+<#Énna>
+    a foaf:Person;
+    irishRel:nomName "Énna";
+    rel:childOf <#Ailella-1adc1331>.
+
+<#Ercc>
+    a foaf:Person;
+    irishRel:nomName "Ercc";
+    rel:childOf <#Ailella-1adc1331>.
+
+<#MacArde>
+    a foaf:Person;
+    irishRel:nomName "Mac Arde";
+    rel:childOf <#Ailella-1adc1331>.
