@@ -1,0 +1,327 @@
+@base <http://example.com/Rawl_B502/de_genelogia_éoganachta_caisil_i_cenél_fíngin.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Éoganachta Caisil .i. Cenél Fíngin"@sga ;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Dúngal>
+    a foaf:Person;
+    irishRel:nomName "Dúngal";
+    rel:childOf <#MáelFathardaig>.
+
+<#MáelFathardaig>
+    a foaf:Person;
+    irishRel:genName "Máel Fathardaig";
+    irishRel:nomName "Máel Fathardach";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    irishRel:genName "Flaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#Donnchada>.
+
+<#Donnchada>
+    a foaf:Person;
+    irishRel:genName "Donnchada";
+    irishRel:nomName "Donnchad";
+    rel:childOf <#MáelFathardaich>.
+
+<#MáelFathardaich>
+    a foaf:Person;
+    irishRel:genName "Máel Fathardaich";
+    irishRel:nomName "Máel Fathardach";
+    rel:childOf <#Braín>.
+
+<#Braín>
+    a foaf:Person;
+    irishRel:genName "Braín";
+    rel:childOf <#Moínaich>.
+
+<#Moínaich>
+    a foaf:Person;
+    irishRel:genName "Moínaich";
+    irishRel:nomName "Moínach";
+    rel:childOf <#Indrechtaich>.
+
+<#Indrechtaich>
+    a foaf:Person;
+    irishRel:genName "Indrechtaich";
+    irishRel:nomName "Indrechtach";
+    rel:childOf <#Flaind-5882affc>.
+
+<#Flaind-5882affc>
+    a foaf:Person;
+    irishRel:genName "Flaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#Rechtabrat>.
+
+<#Rechtabrat>
+    a foaf:Person;
+    irishRel:genName "Rechtabrat";
+    irishRel:nomName "Rechtabra";
+    rel:childOf <#Sechnasaich>.
+
+<#Sechnasaich>
+    a foaf:Person;
+    irishRel:genName "Sechnasaich";
+    irishRel:nomName "Sechnasach";
+    rel:childOf <#Fíngin>.
+
+<#Fíngin>
+    a foaf:Person;
+    irishRel:genName "Fíngin";
+    irishRel:nomName "Fíngen";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda" ;
+    irishRel:nomName "Áed".
+
+<#Rechtabrat-237a07ba>
+    a irishTitle:Rí ;
+    irishRel:nomName "Rechtabrat" ;
+    owl:sameAs <#Rechtabrat>;
+    rdfs:comment "in rígi"@sga, "the king"@eng ;
+    rel:childOf <#Sechnasaich>.
+
+<#Colmán>
+    a foaf:Person ;
+    irishRel:nomName "Colmán" ;
+    rdfs:comment "in chrábuid"@sga, "the pious"@eng ;
+    rel:childOf <#Sechnasaich>.
+
+<#Fíngin>
+    a foaf:Person ;
+    irishRel:nomName "Fíngin" ;
+    rdfs:comment "in gaiscid"@sga, "the valorous"@eng ;
+    rel:childOf <#Sechnasaich>.
+
+<#Feidelmid>
+    a foaf:Person;
+    irishRel:nomName "Feidelmid";
+    rel:childOf <#Crimthaind>.
+
+<#Crimthaind>
+    a foaf:Person;
+    irishRel:genName "Crimthaind";
+    irishRel:nomName "Crimthand";
+    rel:childOf <#DuibDáChrích>.
+
+<#DuibDáChrích>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Chrích";
+    irishRel:nomName "Dub Dá Chrích";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Sechnassaich>.
+
+<#Sechnassaich>
+    a foaf:Person;
+    irishRel:genName "Sechnassaich";
+    irishRel:nomName "Sechnassach";
+    rel:childOf <#Fíngin-7f0683d7>.
+
+<#Fíngin-7f0683d7>
+    a foaf:Person;
+    irishRel:genName "Fíngin";
+    rel:childOf <#ÁedaDuib>;
+    owl:sameAs <#Fíngin>.
+
+<#ÁedaDuib>
+    a foaf:Person;
+    irishRel:genName "Áeda Duib";
+    irishRel:nomName "Áed Dub";
+    rel:childOf <#Crimthaind>;
+    owl:sameAs <#Áeda>.
+
+<#Crimthaind>
+    a foaf:Person;
+    irishRel:genName "Crimthaind";
+    irishRel:nomName "Crimthand";
+    rel:childOf <#DuibDáChrích-8345bda4>.
+
+<#DuibDáChrích>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Chrích";
+    irishRel:nomName "Dub Dá Chrích";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Sechnassaich-fb88cede>.
+
+<#Sechnassaich-fb88cede>
+    a foaf:Person;
+    irishRel:genName "Sechnassaich";
+    irishRel:nomName "Sechnassach";
+    rel:childOf <#Fíngin-af273cc7>.
+
+<#Fíngin-af273cc7>
+    a foaf:Person;
+    irishRel:genName "Fíngin";
+    rel:childOf <#ÁedaDuib-f745291b>.
+
+<#ÁedaDuib-f745291b>
+    a foaf:Person;
+    irishRel:genName "Áeda Duib";
+    irishRel:nomName "Áed Dub";
+    rel:childOf <#Crimthaind-17d38d67>.
+
+<#Crimthaind-17d38d67>
+    a foaf:Person;
+    irishRel:genName "Crimthaind";
+    irishRel:nomName "Crimthand";
+    rel:childOf <#Feideilmid>.
+
+<#Feideilmid>
+    a foaf:Person;
+    irishRel:genName "Feideilmid";
+    irishRel:nomName "Feideilmid";
+    rel:childOf <#Óengusa>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    rel:childOf <#NadFraích>.
+    
+<#NadFraích>
+    a foaf:Person;
+    irishRel:genName "Nad Fraích".
+#same as http://example.com/Rawl_B502/de_eoganacht_áine.ttl#NadFraích? - CY
+#same as http://example.com/Rawl_B502/de_raind_h_érenn.ttl#NadFraích? - CY
+
+<#Súildubán>
+    a foaf:Person;
+    irishRel:nomName "Súildubán";
+    rel:childOf <#MáelAugrai>.
+
+<#MáelAugrai>
+    a foaf:Person;
+    irishRel:genName "Máel Augrai";
+    irishRel:nomName "Máel Augrae";
+    rel:childOf <#Echthigirn>.
+
+<#Echthigirn>
+    a foaf:Person;
+    irishRel:genName "Echthigirn";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:genName "Murchada";
+    irishRel:nomName "Murchad";
+    rel:childOf <#DuibIndrecht>.
+
+<#DuibIndrecht>
+    a foaf:Person;
+    irishRel:genName "Duib Indrecht";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    irishRel:genName "Flaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#Fiachrach>.
+
+<#Fiachrach>
+    a foaf:Person;
+    irishRel:genName "Fiachrach";
+    irishRel:nomName "Fiachraid";
+    rel:childOf <#Sechnassaich>.
+
+<#Sechnassaich>
+    a foaf:Person;
+    irishRel:genName "Sechnassaich";
+    irishRel:nomName "Sechnassach";
+    rel:childOf <#Fíngin-21e36b84>.
+
+<#Fíngin-21e36b84>
+    a foaf:Person;
+    irishRel:genName "Fíngin" ;
+    owl:sameAs <#Fíngin>.
+
+<#Móenach>
+    a foaf:Person;
+    irishRel:nomName "Móenach";
+    rel:childOf <#DuibDáBairenn>.
+
+<#DuibDáBairenn>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Bairenn";
+    irishRel:nomName "Dub Dá Bairenn";
+    rel:childOf <#Grífíne>.
+
+<#Grífíne>
+    a foaf:Person;
+    irishRel:genName "Grífíne";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Duinechda>.
+
+<#Duinechda>
+    a foaf:Person;
+    irishRel:genName "Duinechda";
+    irishRel:genName "Duinechaid";
+    rel:childOf <#Fiangusa>.
+
+<#Fiangusa>
+    a foaf:Person;
+    irishRel:genName "Fiangusa";
+    irishRel:nomName "Fiangus";
+    rel:childOf <#Échtgusa>.
+
+<#Échtgusa>
+    a foaf:Person;
+    irishRel:genName "Échtgusa";
+    irishRel:nomName "Échtgus";
+    rel:childOf <#Thipraiti>.
+
+<#Thipraiti>
+    a foaf:Person;
+    irishRel:genName "Thipraiti";
+    irishRel:nomName "Tipraite";
+    rel:childOf <#Moínaich>.
+
+<#Moínaich>
+    a foaf:Person;
+    irishRel:genName "Moínaich";
+    irishRel:nomName "Moínach";
+    rel:childOf <#Fíngin-b699b492>.
+
+<#Fíngin-b699b492>
+    a foaf:Person;
+    irishRel:genName "Fíngin" ;
+    owl:sameAs <#Fíngin>.
+
+    
