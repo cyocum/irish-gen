@@ -4373,6 +4373,23 @@
     irishRel:genName "Cormaic";
     owl:sameAs <#Cormaic-7cd002d8>.
 
+<#EchachGuinich>
+    a foaf:Person;
+    irishRel:genName "Echach Guinich";
+    irishRel:nomName "Eochu Guinech";
+    owl:sameAs <#EochuGuinech>.
+
+<#Domnaill-ac5c9900>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:descendantOf <#EchachGuinich>;
+    rel:childOf <#Shuibni>.
+
+<#Shuibni-b580d690>
+    a foaf:Person;
+    irishRel:genName "Shuibni";
+    irishRel:nomName "Suibne".
 
 <#Faelchad>
     a foaf:Person;
@@ -4393,22 +4410,47 @@
 
 <#Coibdenaig-2ed4fb1f>
     irishRel:nomName "Coibdenach";
+    rel:childOf <#MaelUmai-fd8aa163>;
     owl:sameAs <#Coibdenaig>.
 
 <#MaelUmai-fd8aa163>
     irishRel:nomName "Mael Umae";
+    rel:childOf <#Suibni>;
     owl:sameAs <#MaelUmai>.
 
 <#Suibni>
     irishRel:nomName "Suibne";
+    rel:childOf <#Domnaill-2ebe80dc>;
     owl:sameAs <#Suibne-b75b4de5>.
 
 <#Domnaill-2ebe80dc>
     irishRel:nomName "Domnall";
+    rel:childOf <#Cormaic-e1ec9ca7>;
     owl:sameAs <#Domnaill-0f4127e0>.
 
 <#Cormaic-e1ec9ca7>
     owl:sameAs <#Cormaic-7cd002d8>.
+
+<#Cormac-f49660b0>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:childOf <#Diarmata-f49660b1>;
+    owl:sameAs <#Cormaic-e1ec9ca7>;
+    foaf:knows <#ChomgallBennchair>;
+    rdfs:comment "Cormac mc Diarmata ro idbair do Chomgall Bennchair. Imlech Ech. Et is leo o Beluch Forgetail co Banna.".
+
+# gaveLandTo EPT
+
+<#Diarmata-f49660b1>
+    a foaf:Person;
+    irishRel:nomName "Diarmait";
+    irishRel:genName "Diarmata";
+    owl:sameAs <#Diarmata>.
+
+<#ChomgallBennchair>
+    a foaf:Person;
+    irishRel:nomName "Comgall Bennchair";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1282428>.
 
 <#RossFalgi>
     irishRel:numChild 6;
@@ -5072,9 +5114,9 @@
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
-    rel:childOf <#Diarmata>.
+    rel:childOf <#Diarmata-493d8531>.
 
-<#Diarmata>
+<#Diarmata-493d8531>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
