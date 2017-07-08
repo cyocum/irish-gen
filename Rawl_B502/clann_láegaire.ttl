@@ -1,0 +1,97 @@
+@base <http://example.com/Rawl_B502/clann_láegaire.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Láegaire"@sga ;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#CúChalma>
+    a foaf:Person;
+    irishRel:nomName "Cú Chalma";
+    rel:childOf <#CindFáelad>.
+
+<#CindFáelad>
+    a foaf:Person;
+    irishRel:genName "Cind Fáelad";
+    irishRel:nomName "Cend Fáelad";
+    rel:childOf <#Muiredaig>.
+
+<#Muiredaig>
+    a foaf:Person;
+    irishRel:genName "Muiredaig";
+    irishRel:nomName "Muiredach";
+    rel:childOf <#Lachtnai>.
+
+<#Lachtnai>
+    a foaf:Person;
+    irishRel:genName "Lachtnai";
+    irishRel:nomName "Lachtna";
+    rel:childOf <#Láegaire>.
+
+<#Láegaire>
+    a foaf:Person;
+    irishRel:genName "Láegaire";
+    rel:childOf <#MáelFínáin>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cerbaill.ttl#Láegaire>.
+
+<#MáelFínáin>
+    a foaf:Person;
+    irishRel:genName "Máel Fínáin";
+    irishRel:nomName "Máel Fínán";
+    rel:childOf <#Artgaile>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cerbaill.ttl#Cellaich>.
+
+<#Artgaile>
+    a foaf:Person;
+    irishRel:genName "Artgaile" ;
+    irishRel:nomName "Artgal" ;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cerbaill.ttl#Arttgaile>.
+
+<#Cuilén>
+    a foaf:Person;
+    irishRel:nomName "Cuilén";
+    rel:childOf <#Andiaraid>.
+
+<#Andiaraid>
+    a foaf:Person;
+    irishRel:genName "Andiaraid";
+    rel:childOf <#Dúnadaig>.
+
+<#Dúnadaig>
+    a foaf:Person;
+    irishRel:genName "Dúnadaig";
+    irishRel:nomName "Dúnadach";
+    rel:childOf <#Duind>.
+
+<#Duind>
+    a foaf:Person;
+    irishRel:genName "Duind";
+    irishRel:nomName "Dund";
+    rel:childOf <#Cóellaide>.
+
+<#Cóellaide>
+    a foaf:Person;
+    irishRel:genName "Cóellaide";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:genName "Conaill" ;
+    irishRel:nomName "Conall".
