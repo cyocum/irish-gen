@@ -1,0 +1,79 @@
+@base <http://example.com/Rawl_B502/clann_cerbaill.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Cerbaill"@sga ;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Écertach>
+    a foaf:Person;
+    irishRel:nomName "Écertach";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#MáelFínáin>.
+
+<#MáelFínáin>
+    a foaf:Person;
+    irishRel:genName "Máel Fínáin";
+    irishRel:nomName "Máel Fínán";
+    rel:childOf <#Arttgaile>.
+
+<#Arttgaile>
+    a foaf:Person;
+    irishRel:genName "Arttgaile" ;
+    irishRel:nomName "Arttgal".
+    #sameAs http://example.com/Rawl_B502/cenél_conaill.ttl#Arttgaile> ? - CY
+
+<#MáelFínáin-bef8e616>
+    a foaf:Person;
+    irishRel:genName "Máel Fínáin";
+    owl:sameAs <#MáelFínáin>;
+    irishRel:numChild 4.
+
+<#Fáelán>
+    a foaf:Person;
+    irishRel:nomName "Fáelán";
+    rel:childOf <#MáelFínáin-bef8e616>.
+
+<#Mugrón>
+    a foaf:Person;
+    irishRel:nomName "Mugrón";
+    rel:childOf <#MáelFínáin-bef8e616>.
+
+<#Cerball>
+    a foaf:Person;
+    irishRel:nomName "Cerball";
+    rel:childOf <#MáelFínáin-bef8e616>.
+
+<#Láegaire>
+    a foaf:Person;
+    irishRel:nomName "Láegaire";
+    rel:childOf <#MáelFínáin-bef8e616>.
+
