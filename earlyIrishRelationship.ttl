@@ -46,7 +46,16 @@
     rdfs:domain foaf:Person;
     rdfs:range xsd:nonNegativeInteger;
     rdfs:comment "this property relates to the stated number of children in a genaology of a particular individual in a manuscript. The individual may have more from other genealogies but this only refers to the number as stated in the manuscript in which this particular individual is found.".
+
+:givesLandTo
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf foaf:knows ;
+    rdfs:label "givesLandTo" ;
+    rdfs:range foaf:Person ;
+    rdfs:domain foaf:Person ;
+    rdfs:comment "this property relates a person who gives land to another." .
     
+
 rel:ancestorOf a owl:IrreflexiveProperty,
 	       	 owl:ObjectProperty.
 
@@ -68,6 +77,10 @@ rel:siblingOf
 :accName
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf oldIrish:accusative, foaf:name .
+
+:datname
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf oldIrish:dative, foaf:name .
 
 :PopulationGroup
     a owl:Class .
