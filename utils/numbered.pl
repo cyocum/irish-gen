@@ -16,7 +16,7 @@ my $str = $ARGV[0];
 
 my ($head, $tail) = split /:|\s+\.i\.\s+/, $str;
 
-my ($numChild, $person) = split /\sm\s|\smc\s|\s\.?m\.?\s/, $head;
+my ($numChild, $person) = split /\sm\s|\smc\s|\s\.?m\.?\s|\smeic\s/, $head;
 
 my $output = "<#$person>\n a foaf:Person;\nirishRel:genName \"$person\";\nirishRel:numChild " . $num{$numChild} . ".\n\n";
 

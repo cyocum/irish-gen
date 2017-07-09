@@ -3,7 +3,7 @@ use warnings;
 
 my $str = $ARGV[0];
 
-my @individuals = split(/\sm\s|\smc\s|\s\.?m\.?\s|\singen\s/, $str);
+my @individuals = split(/\sm\s|\smc\s|\s\.?m\.?\s|\singen\s|\singine\s|\smeic\s/, $str);
 my $output = '';
 
 my $len = @individuals;
