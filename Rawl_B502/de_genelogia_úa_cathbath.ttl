@@ -1,0 +1,78 @@
+@base <http://example.com/Rawl_B502/de_genelogia_úa_cathbath.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Cairpri Luachra"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" .
+    
+<#Gainemach>
+    a foaf:Person;
+    irishRel:nomName "Gainemach";
+    rel:childOf <#Brócáin>.
+
+<#Brócáin>
+    a foaf:Person;
+    irishRel:genName "Brócáin";
+    irishRel:nomName "Brócán";
+    rel:childOf <#Díbich>.
+
+<#Díbich>
+    a foaf:Person;
+    irishRel:genName "Díbich";
+    irishRel:nomName "Díbech";
+    rel:childOf <#Dícolla>.
+
+<#Dícolla>
+    a foaf:Person;
+    irishRel:genName "Dícolla";
+    irishRel:nomName "Dícoll";
+    rel:childOf <#Crunnmáel>.
+
+<#Crunnmáel>
+    a foaf:Person;
+    irishRel:genName "Crunnmáel";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Airgnaid>.
+
+<#Airgnaid>
+    a foaf:Person;
+    irishRel:genName "Airgnaid";
+    irishRel:nomName "Airgnad";
+    rel:childOf <#Cuircc>.
+
+<#Cuircc>
+    a foaf:Person;
+    irishRel:genName "Cuircc";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella".
+
+<#CorccLosat>
+    a foaf:Person ;
+    irishRel:nomName "Corcc Losat" ;
+    rdfs:comment "de Araib Tíre"@sga ;
+    rel:antagonistOf <#BebraeFiachrachTortchis>.
+    
+<#BebraeFiachrachTortchis>
+    a foaf:Person ;
+    irishRel:accName "Bebrae Fiachrach Tortchis" ;
+    irishRel:accName "Bebrae Fiachrach Tortchothis" ;
+    irishRel:accName "Bebrae Fiachrach Tortchoith" .
+    
