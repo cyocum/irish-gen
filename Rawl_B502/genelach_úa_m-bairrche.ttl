@@ -22,7 +22,8 @@
     rel:childOf <#Cathair>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#DareBarrach>;
     owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.ttl#DáreBarrach>;
-    rdfs:comment "a quo Úi Bairrche".
+    rdfs:comment "a quo Úi Bairrche";
+    irishRel:ancestorOfGroup <#Úam-Bairrchi>, <#ÚiLaigéni>, <#ÚiDuibCillíne>, <#ÚiMátaid>.
 
 <#Cathair>
     a foaf:Person;
@@ -353,22 +354,22 @@
     a foaf:Person;
     irishRel:nomName "Fiacc";
     rdfs:comment "Ó Fiacc Úi Maíli h-Umae & a quibus ind ríg";
-    owl:sameAs <#Féicc>.
+    owl:sameAs <#Féicc>;
+    irishRel:ancestorOfGroup <#ÚiMaílih-Umae>.
 
 <#ÚiMaílih-Umae>
-    a foaf:populationGroup
-    irishRel:populationGroupName "Úi Maíli h-Umae";
-    irishRel:ancestorOfGroup <#Fiacc-befd9400>.
+    a foaf:populationGroup;
+    irishRel:populationGroupName "Úi Maíli h-Umae".
 
 <#Eochu>
     a foaf:Person;
     irishRel:nomName "Eochu";
-    rdfs:comment "a quo Úi Briúin".
+    rdfs:comment "a quo Úi Briúin";
+    irishRel:ancestorOfGroup <#UíBriúin>.
 
 <#UíBriúin>
-    a foaf:populationGroup
-    irishRel:populationGroupName "Úi Briúin";
-    irishRel:ancestorOfGroup <#Eochu>.
+    a foaf:populationGroup;
+    irishRel:populationGroupName "Úi Briúin".
 
 <#Echach>
     a foaf:Person;
@@ -432,17 +433,16 @@
     irishRel:nomName "Móenach";
     rel:childOf <#MuiredachSníthe>;
     rdfs:comment "a quo Úi Móenaig a quibus Cenél n-Óengusa";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Moenach>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Moenach>;
+    irishRel:ancestorOfGroup <#ÚiMóenaig>, <#Cenéln-Óengusa>.
 
 <#ÚiMóenaig>
     a foaf:populationGroup
-    irishRel:populationGroupName "Úi Móenaig";
-    irishRel:ancestorOfGroup <#Móenach>.
+    irishRel:populationGroupName "Úi Móenaig".
 
 <#Cenéln-Óengusa>
     a foaf:populationGroup
-    irishRel:populationGroupName "Cenél n-Óengusa";
-    irishRel:ancestorOfGroup <#Móenach>.
+    irishRel:populationGroupName "Cenél n-Óengusa".
 #The text actually says that Cenél n-Óengusa descends from Úi Moenaig; they are
 #not two branches stemming from Móenach. Can one population group have another
 #as an ancestor, as we have formulated this? EPT
@@ -469,7 +469,6 @@
 <#CenélCróchnae>
     a foaf:populationGroup
     irishRel:populationGroupName "Cenél Cróchnae";
-    irishRel:ancestorOfGroup <#Breccáin-a5bf6e90>;
     rdfs:comment "Cenél Cróchnae in cethramad prím-aiccme Úa m-Bairrchi. Is fri Ú Breccáin a tóebud."
 #I'm not sure about this. "Is fri Ú Breccáin a tóebud" seems to mean literally
 # "They are near to Uí Breccáin", that is, they are closely related to Uí Breccáin.
@@ -479,21 +478,23 @@
     a foaf:Person;
     irishRel:genName "Breccáin";
     irishRel:nomName "Breccán";
-    owl:sameAs <#Breccáin>.
+    owl:sameAs <#Breccáin>;
+    irishRel:ancestorOfGroup <#CenélCróchnae>.
 
 <#ÚiBriúin-418e1150>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Briúin";
     owl:sameAs <#UíBriúin>;
     rdfs:comment "Teora sóer-chlanna Úa m- Barrche .i. Úi Briúin, Úi Breccáin, Úi Móenaig".
 
-<#ÚiBreccáin>
-    irishRel:populationGroup;
+<#ÚiBreccáin-07945290>
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Breccáin";
-    rdfs:comment "Teora sóer-chlanna Úa m- Barrche .i. Úi Briúin, Úi Breccáin, Úi Móenaig".
+    rdfs:comment "Teora sóer-chlanna Úa m- Barrche .i. Úi Briúin, Úi Breccáin, Úi Móenaig";
+    owl:sameAs <#ÚiBreccáin>
 
 <#ÚiMóenaig-83a885c0>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Móenaig";
     owl:sameAs <#ÚiMóenaig>;
     rdfs:comment "Teora sóer-chlanna Úa m- Barrche .i. Úi Briúin, Úi Breccáin, Úi Móenaig".
@@ -554,38 +555,38 @@
     owl:sameAs <#DáreBarrach>.
 
 <#ÚiNathÍ>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Nath Í";
     irishRel:ancestorOfGroup <#Bréoda>, <#Echu>, <#Brian-489688e0>.
     rdfs:comment "Is dia chlainn ind Echach-sa Úi Nath Í a quo Úi Connachtaig & Úi Máeláin & Úi Duib Loda & Úi Dognaid & Úi Noídenaig & Úi Brénaind.".
 
 <#ÚiConnachtaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Connachtaig";
     irishRel:ancestorOfGroup <#ÚiNathÍ>.
 
 <#ÚiMáeláin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Máeláin";
     irishRel:ancestorOfGroup <#ÚiNathÍ>.
 
 <#ÚiDuibLoda>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Duib Loda";
     irishRel:ancestorOfGroup <#ÚiNathÍ>.
 
 <#ÚiDognaid>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Dognaid";
     irishRel:ancestorOfGroup <#ÚiNathÍ>.
 
 <#ÚiNoídenaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Noídenaig";
     irishRel:ancestorOfGroup <#ÚiNathÍ>.
 
 <#ÚiBrénaind>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Brénaind";
     irishRel:ancestorOfGroup <#ÚiNathÍ>.
 
@@ -678,23 +679,23 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bairddine-41211f7c>.
 
 <#ÚiRónáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Rónáin";
     irishRel:ancestorOfGroup <#Derccn-Argit>;
     rdfs:comment "i Tig Mo Sacro".
 
 <#ÚiChoncertaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Choncertaig";
     irishRel:ancestorOfGroup <#Derccn-Argit>.
 
 <#ÚiMeicBarddíne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Meic Barddíne";
     irishRel:ancestorOfGroup <#Derccn-Argit>.
 
 <#ÚiBóeth>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Bóeth";
     irishRel:ancestorOfGroup <#Robartach>.
 
@@ -726,17 +727,17 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bairddeni>.
 
 <#ÚiEmelta>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Emelta";
     irishRel:ancestorOfGroup <#Crimthann>.
 
 <#ÚiChonchada>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Chonchada";
     irishRel:ancestorOfGroup <#Crimthann>.
 
 <#ÚiFidchellaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Fidchellaig";
     irishRel:ancestorOfGroup <#Crimthann>.
 
@@ -939,27 +940,27 @@
     owl:sameAs <#Echach>.
 
 <#ÓicCuillne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Óic Cuillne";
     irishRel:ancestorOfGroup <#Breoda-334fc370>.
 
 <#ÚiCrónéni>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Crónéni";
     irishRel:ancestorOfGroup <#Breoda-334fc370>.
 
 <#ÚiDuibChuilni>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Duib Chuilni";
     irishRel:ancestorOfGroup <#Breoda-334fc370>.
 
 <#ÚiFintain>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Fintain";
     irishRel:ancestorOfGroup <#Breoda-334fc370>.
 
 <#ÚiLaimnich>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Laimnich";
     irishRel:ancestorOfGroup <#Breoda-334fc370>.
 
@@ -1080,35 +1081,33 @@
     rel:siblingOf <#Duburchú>.
 
 <#Síln-Indercaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Síl n-Indercaig";
     rdfs:comment "la Ú Cellaig do Úib Briúin dóib".
 
 <#SílMancháin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Síl Mancháin";
     rdfs:comment "la Ú Cellaig do Úib Briúin dóib".
 
 <#SílDinetáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Síl Dinetáin";
     rdfs:comment "la Ú Cellaig do Úib Briúin dóib".
 
 <#SílDinetáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Síl Dinetáin";
     rdfs:comment "la Ú Cellaig do Úib Briúin dóib".
 
 <#ÚiEllaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Ellaig";
     rdfs:comment "i m-Maigib ó Chenél n- Ucha la h-Ú Bairrche Tíre. Fognamthaide Úa m-Briúin sin dar éssi trín a forbba.".
 
-<#ÚiBreccáin-969f3ed0>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Breccáin";
-    owl:sameAs <#ÚiBreccáin>;
-    irishRel:ancestorOfGroup <#Breccáin-f52146b0>.
+<#ÚiBreccáin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Breccáin".
 
 <#Mch-Eircce>
     a foaf:Person;
@@ -1122,7 +1121,8 @@
     irishRel:genName "Breccáin";
     irishRel:nomName "Breccán";
     owl:sameAs <#Breccán>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Breccain-40d71ca8>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Breccain-40d71ca8>;
+    irishRel:ancestorOfGroup <#ÚiBreccáin>.
 
 <#Cairpre-67849220>
     a foaf:Person;
@@ -1141,7 +1141,8 @@
 <#AilillMór>
     a foaf:Person;
     irishRel:nomName "Ailill Mór";
-    rel:childOf <#MeicEircce>.
+    rel:childOf <#MeicEircce>;
+    irishRel:ancestorOfGroup <#ÚiMaíláin>, <#ÚiChomaithig>.
 
 <#MeicEircce>
     a foaf:Person;
@@ -1187,14 +1188,12 @@
     rel:descendantOf <#AilillMór>.
 
 <#ÚiMaíláin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Maíláin";
-    irishRel:ancestorOfGroup <#AilillMór>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Maíláin".
 
 <#ÚiChomaithig>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Chomaithig";
-    irishRel:ancestorOfGroup <#AilillMór>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chomaithig".
 
 <#Breccán-f3d5ac80>
     a foaf:Person;
@@ -1220,7 +1219,8 @@
     a foaf:Person;
     irishRel:nomName "Etarscéla";
     rel:childOf <#MeiccErcca>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Etarscela>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Etarscela>;
+    irishRel:ancestorOfGroup <#ÚiMóenacháin>.
 
 <#MeiccErcca>
     a foaf:Person;
@@ -1230,9 +1230,8 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#MeicErca>.
 
 <#ÚiMóenacháin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Móenacháin";
-    irishRel:ancestorOfGroup <#Etarscéla>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Móenacháin".
 
 <#h-Uathgal>
     a foaf:Person;
@@ -1413,12 +1412,12 @@
     a foaf:Person;
     irishRel:genName "Ailella Máir";
     irishRel:nomName "Ailill Már";
-    owl:sameAs <#AilillMór>.
+    owl:sameAs <#AilillMór>;
+    irishRel:ancestorOfGroup <#ÚiChutlacháin>.
 
 <#ÚiChutlacháin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Chutlacháin";
-    irishRel:ancestorOfGroup <#AilellaMáir>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chutlacháin".
 
 <#Colggu-fee06cc0>
     a foaf:Person;
@@ -1521,42 +1520,37 @@
     a foaf:Person;
     irishRel:nomName "Móenach";
     rel:childOf <#MuiredaichSníthi>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Moenach>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Moenach>;
+    irishRel:ancestorOfGroup <#ÚiMóenaig>, <#ÚiBrócáin>, <#ÚiSenáin>, <#ÚiDímatáin>, <#ÚiAmsáin>, <#ÚiChrítáin>.
 
 <#ÚiMóenaig>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Móenaig";
-    irishRel:ancestorOfGroup <#Móenach>;
     rdfs:comment "h-i Cill Maigistrech".
 
 <#ÚiBrócáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Brócáin";
-    irishRel:ancestorOfGroup <#Móenach>;
     rdfs:comment "h-i Cill Maigistrech".
 
 <#ÚiSenáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Senáin";
-    irishRel:ancestorOfGroup <#Móenach>;
     rdfs:comment "h-i crích Úa m-Bairrchi Tíre".
 
 <#ÚiDímatáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Dímatáin";
-    irishRel:ancestorOfGroup <#Móenach>;
     rdfs:comment "h-i crích Úa m-Bairrchi Tíre".
 
 <#ÚiAmsáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Amsáin";
-    irishRel:ancestorOfGroup <#Móenach>;
     rdfs:comment "la Ú Bairrchi Maige in Dergráith".
 
 <#ÚiChrítáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Chrítáin";
-    irishRel:ancestorOfGroup <#Móenach>;
     rdfs:comment "la Ú Bairrchi Maige in Dergráith".
 
 <#Nárgal>
@@ -1722,7 +1716,8 @@
     irishRel:nomName "Cellachán";
     irishRel:genName "Cellacháin";
     rel:childOf <#Móenaig-8188bb30>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cellachain>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cellachain>;
+    irishRel:ancestorOfGroup <#ÚiNialláin>, <#ÚiChommáin>, <#ÚiNárbotha>, <#SílSaichtha>, <#ÚiGobbáin>.
 
 <#Móenaig-8188bb30>
     a foaf:Person;
@@ -1732,36 +1727,32 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Móinaig-57fff04a>.
 
 <#ÚiNialláin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Nialláin";
-    irishRel:ancestorOfGroup <#Cellacháin>;
     rdfs:comment "ónd Ardlius".
 
 <#ÚiChommáin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Chommáin";
-    irishRel:ancestorOfGroup <#Cellacháin>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chommáin".
 
 <#ÚiNárbotha>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Nárbotha";
-    irishRel:ancestorOfGroup <#Cellacháin>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Nárbotha".
 
 <#SílSaichtha>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Síl Saichtha";
-    irishRel:ancestorOfGroup <#Cellacháin>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Síl Saichtha".
 
 <#ÚiGobbáin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Gobbáin";
-    irishRel:ancestorOfGroup <#Cellacháin>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Gobbáin".
 
 <#Fiac>
     a foaf:Person;
     irishRel:nomName "Fiac";
     rel:childOf <#Muiredaig-8188bb30>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhiac>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhiac>;
+    irishRel:ancestorOfGroup <#SílCillíneScothbán>.
 
 <#Muiredaig-8188bb30>
     a foaf:Person;
@@ -1771,9 +1762,8 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Muredaig-11161ab0>.
 
 <#SílCillíneScothbán>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Síl Cillíne Scothbán";
-    irishRel:ancestorOfGroup <#Fiac>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Síl Cillíne Scothbán".
 
 <#Éitchíne>
     a foaf:Person;
@@ -1892,9 +1882,8 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Snedgus-04806a3c>.
 
 <#SílRossa>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Síl Rossa";
-    irishRel:ancestorOfGroup <#Rosa>;
     rdfs:comment "h-i Crích Úa m-Bairrchi Tíre".
 
 <#Móenach-4fd176e0>
@@ -1957,7 +1946,8 @@
     irishRel:nomName "Ros";
     irishRel:genName "Rosa";
     rel:childOf <#MuiredaichSníthi-c03bb170>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Rosa>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Rosa>;
+    irishRel:ancestorOfGroup <#SílRossa>.
 
 <#MuiredaichSníthi-c03bb170>
     a foaf:Person;
@@ -1967,20 +1957,19 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Muredaig-97502735>.
 
 <#ÚiBodbáin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Bodbáin";
-    irishRel:ancestorOfGroup <#Bodbáin>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Bodbáin".
 
 <#Síln-Góedeláin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Síl n-Góedeláin";
-    irishRel:ancestorOfGroup <#Góedelán>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Síl n-Góedeláin".
 
 <#Bodbáin>
     a foaf:Person;
     irishRel:nomName "Bodbán";
     rel:childOf <#Émíne-faf99e10>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bodban>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bodban>;
+    irishRel:ancestorOfGroup <#ÚiBodbáin>.
 
 <#Émíne-faf99e10>
     a foaf:Person;
@@ -1995,7 +1984,8 @@
     a foaf:Person;
     irishRel:nomName "Góedelán";
     rel:childOf <#Corpsalaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Gaedelan>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Gaedelan>;
+    irishRel:ancestorOfGroup <#Síln-Góedeláin>.
 
 <#Corpsalaig>
     a foaf:Person;
@@ -2012,19 +2002,18 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cormaic-a0563669>.
 
 <#ÚiChuilíne>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Chuilíne";
-    irishRel:ancestorOfGroup <#Fiac-5b5d1ab0>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chuilíne".
 
 <#ÚiChuaráin>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Chuaráin";
-    irishRel:ancestorOfGroup <#Fiac-5b5d1ab0>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chuaráin".
 
 <#Fiac-5b5d1ab0>
     a foaf:Person;
     irishRel:nomName "Fiac";
-    owl:sameAs <#Fiac>.
+    owl:sameAs <#Fiac>;
+    irishRel:ancestorOfGroup <#ÚiChuilíne>, <#ÚiChuaráin>.
 
 <#Suibne-c128fad0>
     a foaf:Person;
@@ -2129,30 +2118,29 @@
     a foaf:Person;
     irishRel:nomName "Trian";
     rel:childOf <#Oengusa>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Trien>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Trien>;
+    irishRel:ancestorOfGroup <#ÚiFólachtáin>, <#ÚiDobágu>.
 
 <#ÚiFólachtáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Fólachtáin";
-    irishRel:ancestorOfGroup <#Trian>;
     rdfs:comment "h-ic Lethglind".
 
 <#ÚiDobágu>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Dobágu";
-    irishRel:ancestorOfGroup <#Trian>;
     rdfs:comment "h-ic Lethglind".
 
 <#Rotha>
     a foaf:Person;
     irishRel:nomName "Rotha";
     rel:childOf <#Oengusa>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Rotha>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Rotha>;
+    irishRel:ancestorOfGroup <#ÚiFétháin>.
 
 <#ÚiFétháin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Fétháin";
-    irishRel:ancestorOfGroup <#Rotha>;
     rdfs:comment "i m-Maig Dá Chonn ro bí Áed di muin Chormaic ind ríg".
 
 <#Áed-4953a260>
@@ -2174,49 +2162,47 @@
     a foaf:Person;
     irishRel:nomName "Fintan Méth";
     rel:childOf <#Oengusa>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FintanMeth>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FintanMeth>;
+    irishRel:ancestorOfGroup <#ÚiCrítáin>, <#ÚiChonamla>, <#ÚiChanáin>, <#ÚiPecclíne>.
 
 <#ÚiCrítáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Crítáin";
-    irishRel:ancestorOfGroup <#FintanMéth>;
     rdfs:comment "h- ic Coíne".
 
 <#ÚiChonamla>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Chonamla";
-    irishRel:ancestorOfGroup <#FintanMéth>;
     rdfs:comment "h- ic Coíne".
 
 <#ÚiChanáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Chanáin";
-    irishRel:ancestorOfGroup <#FintanMéth>;
     rdfs:comment "h- ic Coíne".
 
 <#ÚiPecclíne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Pecclíne";
-    irishRel:ancestorOfGroup <#FintanMéth>;
     rdfs:comment "h- ic Coíne".
 
 <#LugaidOdor>
     a foaf:Person;
     irishRel:nomName "Lugaid Odor";
     rel:childOf <#Oengusa>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#LugainOdor>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#LugainOdor>;
+    irishRel:ancestorOfGroup <#ÚiÉmíne>.
 
 <#ÚiÉmíne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Émíne";
-    irishRel:ancestorOfGroup <#LugaidOdor>;
     rdfs:comment "h-i Coíne".
 
 <#Tadc>
     a foaf:Person;
     irishRel:nomName "Tadc";
     rel:childOf <#Oengusa-27d47540>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Tadg>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Tadg>;
+    irishRel:ancestorOfGroup <#ÚiTaidc>.
 
 <#Oengusa-27d47540>
     a foaf:Person;
@@ -2225,13 +2211,12 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Oengusa-622dc674>.
 
 <#ÚiTaidc>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Taidc";
-    irishRel:ancestorOfGroup <#Tadc>;
     rdfs:comment "h-i tóeb Conine".
 
 <#ÚiMincháin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Mincháin";
     irishRel:ancestorOfGroup <#Tadc>;
     rdfs:comment "h-i crích Úa m-Bairrchi Tíre".
@@ -2240,28 +2225,25 @@
     a foaf:Person;
     irishRel:genName "Mesin Corb";
     irishRel:nomName "Mesin Corb";
-    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.ttl#MesinCorb>.
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.ttl#MesinCorb>;
+    irishRel:ancestorOfGroup <#DálMesinCorb>, <#ÚiDrescáin>, <#ÚiGestain>, <#ChenéolChruaichne>, <#ÚiNémáin>, <#ÚiCanannáin>, <#ÚiBeccáin>, <#ÚiBeccáin>, <#ÚiScatháin>, <#ÚiBriccne>, <#ÚiAmsáin>, <#ÚiChrítáin-74133740>.
 
 <#DálMesinCorb>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Dál Mesin Corb";
-    irishRel:ancestorOfGroup <#MesinCorb>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Mesin Corb".
 
 <#ÚiDrescáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Drescáin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "h-i Coíniu ind Légi".
 
 <#ÚiGestain>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Gestain";
-    irishRel:ancestorOfGroup <#ChenéolChruaichne>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Gestain".
 
 <#ChenéolChruaichne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Chenéol Chruaichne";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "Úi Gestáin immorro do Chenéol Chruaichne dóib".
 
 # It is not clear what "dóib" ("of them") points to. Úi Gestain? Dál Mesin Corb?
@@ -2269,45 +2251,38 @@
 # emphatic? I have gone for Dál Mesin Corb as the overarching kin-group, for now. EPT
 
 <#ÚiNémáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Némáin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "h-i Scothbae".
 
 <#ÚiCanannáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Canannáin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "h-i Scothbae".
 
 <#ÚiBeccáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Beccáin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "h-i Scothbae".
 
 <#ÚiScatháin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Scatháin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "i m-Maig Ailbe".
 
 <#ÚiBriccne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Briccne";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "i m-Maig Ailbe".
 
 <#ÚiAmsáin>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Amsáin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "la Ú Bairrchi Maige in Dergráith".
 
-<#ÚiChrítáin>
-    irishRel:populationGroup;
+<#ÚiChrítáin-74133740>
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Chrítáin";
-    irishRel:ancestorOfGroup <#DálMesinCorb>;
     rdfs:comment "la Ú Bairrchi Maige in Dergráith".
 
 <#Cormaic-f94354d0>
@@ -2319,16 +2294,16 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl##Cormaic-7cd002d8>.
 
 <#Síln-ÁedaFind>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Síl n-Áeda Find";
-    irishRel:ancestorOfGroup <#ÁedFind>;
     rdfs:comment "h-i Lethráith".
 
 <#ÁedFind>
     a foaf:Person;
     irishRel:nomName "Áed Find";
     rel:childOf <#Cormaic-f94354d0>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#AedaFind>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#AedaFind>;
+    irishRel:ancestorOfGroup <#Síln-ÁedaFind>.
 
 <#Conchrad>
     a foaf:Person;
@@ -2522,7 +2497,8 @@
     irishRel:genName "Áeda Demuin";
     irishRel:nomName "Áed Demon";
     rel:childOf <#Cormaic-094cdea0>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#AedaDemnuin>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#AedaDemnuin>;
+    irishRel:ancestorOfGroup <#ÚiMóenaigCoisseScaible>.
 
 # So, above, in para. 222, we read "Rotha m. Óengusa a quo Úi Fétháin i m-Maig
 # Dá Chonn ro bí Áed di muin Chormaic ind ríg". There, I took "di muin Chormaic" to mean
@@ -2538,32 +2514,30 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cormaic-841cb060>.
 
 <#ÚiMóenaigCoisseScaible>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Móenaig Coisse Scaible";
-    irishRel:ancestorOfGroup <#ÁedaDemuin>;
     rdfs:comment "la Ú Bairrchi Tíre".
 
 <#CenélCruaichni>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Cenél Cruaichni";
-    irishRel:ancestorOfGroup [
-      a foaf:Person;
-      owl:sameAs <http://example.com/LL/senchas_síl_ébir.ttl#EoganMór>
-    ];
     owl:sameAs <#ChenéolChruaichne>;
     rdfs:comment "Cenél Cruaichni di Éoganacht dóib".
 
+<http://example.com/LL/senchas_síl_ébir.ttl#EoganMór>
+    irishRel:ancestorOfGroup <#CenélCruaichni>.
+
 <#ÚiDomnaill>
-    irishRel:populationGroup;
-    irishRel:populationGroupName "Úi Domnaill";
-    irishRel:ancestorOfGroup <#Domnaill-92d9abc0>.
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Domnaill".
 
 <#Domnaill-92d9abc0>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
     rel:descendantOf <#EchdachGuinich>;
-    rel:childOf <#Suibne-c16796e0>.
+    rel:childOf <#Suibne-c16796e0>;
+    irishRel:ancestorOfGroup <#Domnaill-92d9abc0>.
 
 <#EchdachGuinich>
     a foaf:Person;
@@ -2753,9 +2727,8 @@
     owl:sameAs <#Diarmata>.
 
 <#Úam-Bairrchi>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úa m-Bairrchi";
-    irishRel:ancestorOfGroup <#DáreBarrach>;
     rdfs:comment "It é ranna Úa m-Bairrchi la Laigniu .i. Cluain Conaire & Cell Auxilli & díb in Cróebán cita-conagab in cill & atát díb fine ocon chill .i. Úi Laigéni h-i Caisse & Úi Duib Cillíne & is díb Úi Mátaid la Ú Enechglais Maige & is leo ó Áth Truisten cosin n-Áth i Cill Corpnatan.".
 
 <#Cróebán>
@@ -2765,22 +2738,19 @@
     rdfs:comment ".i. Cluain Conaire & Cell Auxilli & díb in Cróebán cita-conagab in cill".
 
 <#ÚiLaigéni>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Laigéni";
-    irishRel:ancestorOfGroup <#Úam-Bairrchi>;
     rdfs:comment "h-i Caisse";
     rdfs:comment "is leo ó Áth Truisten cosin n-Áth i Cill Corpnatan".
 
 <#ÚiDuibCillíne>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Duib Cillíne";
-    irishRel:ancestorOfGroup <#Úam-Bairrchi>;
     rdfs:comment "is leo ó Áth Truisten cosin n-Áth i Cill Corpnatan".
 
 <#ÚiMátaid>
-    irishRel:populationGroup;
+    a irishRel:populationGroup;
     irishRel:populationGroupName "Úi Mátaid";
-    irishRel:ancestorOfGroup <#Úam-Bairrchi>;
     rdfs:comment "la Ú Enechglais Maige";
     rdfs:comment "is leo ó Áth Truisten cosin n-Áth i Cill Corpnatan".
 

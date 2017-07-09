@@ -4499,7 +4499,8 @@
 
 <#DuibdaChrích>
     a foaf:Person;
-    irishRel:nomName "Duib da Chrích";
+    irishRel:genName "Duib da Chrích";
+    irishRel:nomName "Dub da Chrích";
     rel:childOf <#DuibdaLeithi>.
 
 <#DuibdaLeithi>
@@ -4593,6 +4594,7 @@
 
 <#Mane>
     a foaf:Person;
+    irishRel:genName "Mane";
     irishRel:nomName "Mane";
     rel:childOf <#DuibEnaig>.
 
@@ -4695,6 +4697,68 @@
     irishRel:genName "Maíline";
     irishRel:nomName "Maílin";
     rel:descendantOf <#Coibdenach-2bfa3738>.
+
+<#OengusaBerraide>
+    a foaf:Person;
+    irishRel:genName "Oengusa Berraide";
+    irishRel:nomName "Oengus Berraide";
+    owl:sameAs <#OengusBerraide>;
+    irishRel:ancestorOfGroup <#ÚiBerraidi>.
+
+<#ÚiBerraidi>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName ".h. Berraide";
+    rdfs:comment "oc Leccuch".
+
+<#Berchan>
+    a foaf:Person;
+    irishRel:nomName "Berchan".
+
+<#IndRaithIComairInDiruda>
+    prov:wasAttributedTo <#Berchan>;
+    rdfs:comment "Berchan cecinit".
+
+<#Bruidgi-ba3600a7>
+    a irishTitle:rí;
+    irishRel:genName "Bruidgi";
+    irishRel:nomName "Bruidge";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
+
+<#Cathail-ba3600a6>
+    a irishTitle:rí;
+    irishRel:genName "Cathail";
+    irishRel:nomName "Cathal";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
+
+<#Aeda-ba3600a8>
+    a irishTitle:rí;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
+
+<#Ailella-ba3600a9>
+    a irishTitle:rí;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
+
+<#Conaing-a4758380>
+    a irishTitle:rí;
+    irishRel:genName "Conaing";
+    irishRel:nomName "Conaing";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
+
+<#Cuileni-a4758381>
+    a irishTitle:rí;
+    irishRel:genName "Cuileni";
+    irishRel:nomName "Cuilene";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
+
+<#MaelDúin-a4758382>
+    a irishTitle:rí;
+    irishRel:genName "Mael Dúin";
+    irishRel:nomName "Mael Dúin";
+    rdfs:seeAlso <#IndRáthH-iComairInDairFheda>.
 
 <#Conchobor>
     a foaf:Person;
@@ -6120,13 +6184,18 @@
     a foaf:Person;
     irishRel:genName "Gilla Ciarain";
     irishRel:nomName "Gilla Ciaran";
-    irishRel:heirOf <#Coluim-4e4c328e>.
+    irishRel:heirOf <#Coluim-4e4c328e>;
+    rel:childOf <#GillaiFhinneain>.
 
 <#Coluim-4e4c328e>
     a foaf:Person;
     irishRel:genName "Coluim";
     irishRel:nomName "Colum";
-    rel:childOf <#GillaiFhinneain>.
+    owl:sameAs <#Colum>.
+
+# Comarba usually means the heir of a saint (abbot of their monastery). Surely
+# this makes Gilla Ciarain the heir of a saint called Colum. What about <#Colum>,
+# i.e. Colum of Terryglas, who is of the same kin group? EPT.
 
 <#GillaiFhinneain>
     a foaf:Person;
@@ -6190,10 +6259,87 @@
 <#Carpre>
     a foaf:Person;
     irishRel:nomName "Carpre";
-    rel:childOf <#Nannida-86c5ba58>.
+    rel:childOf <#Nannida-86c5ba58>;
+    irishRel:ancestorOfGroup <#.h.MaeleTola>.
 
 <#Nannida-86c5ba58>
     owl:sameAs <#Nannida-334a35f0>.
+
+<#.h.MaeleTola>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName ".h. Maele Tola".
+
+<#Mongan>
+    a foaf:Person;
+    irishRel:nomName "Mongan";
+    foaf:title "eices"@sga, "sage"@eng;
+    rel:childOf <#Echac>.
+
+<#Echac>
+    a foaf:Person;
+    irishRel:nomName "Eochu";
+    irishRel:genName "Echac".
+
+# Mongán mac Fiachna might be expected as a source for this sort of thing. But
+# I have been unable to identify Mongán mac Echach. EPT
+
+<#Nibacraebcrínfheda>
+    prov:wasAttributedTo <#Mongan>;
+    rdfs:comment "Mongan eices mc Echac cecinit".
+
+<#Colum-ba3600a0>
+    a foaf:Person;
+    irishRel:nomName "Colum";
+    owl:sameAs <#Colum>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
+
+<#Nannida-ba3600a1>
+    a foaf:Person;
+    irishRel:nomName "Nainned"
+    irishRel:genName "Nannida";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Nannida>;
+    owl:sameAs <#Nannida-334a35f0>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
+
+<#Nazair-ba3600a5>
+    a foaf:Person;
+    irishRel:nomName "Nazar";
+    irishRel:genName "Nazair";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Nastáir>;
+    owl:sameAs <#Nazair-161e1bad>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
+
+<#CrimthainnBic-ba3600a4>
+    a foaf:Person;
+    irishRel:nomName "Crimthann Bec";
+    irishRel:genName "Crimthainn Bic";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#CrimthaindBic>;
+    owl:sameAs <#CrimthainnBic-ba3600a4>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
+
+<#Echach-ba3600a2>
+    a foaf:Person;
+    irishRel:nomName "Eochu";
+    irishRel:genName "Echach";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Echach>;
+    owl:sameAs <#Echach-84cda7bd>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
+
+<#Oengusa-ba3600a3>
+    a foaf:Person;
+    irishRel:nomName "Oengus";
+    irishRel:genName "Oengusa";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Óengusa>;
+    owl:sameAs <#Oengusa-e75452f7>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
+
+<#CrimthainnÁin>
+    a foaf:Person;
+    irishRel:nomName "Crimthann Án";
+    irishRel:genName "Crimthainn Áin";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#CrimthaindÁin>;
+    owl:sameAs <#CrimthainnÁinMoir>;
+    rdfs:seeAlso <#Nibacraebcrínfheda>.
 
 <#BresalEnechglas-f6d8f987>
     owl:sameAs <#BressalEnechglas>.
@@ -7531,10 +7677,11 @@ _:missing-ea1719cd
 <#Aithechdai>
     owl:sameAs <#Athechda>.
 
-<#Manchine>
+<#Manchine-6882ba00>
     a foaf:Person;
     irishRel:nomName "Manchine";
-    rel:childOf <#Corpri-ed3bec1f>.
+    rel:childOf <#Corpri-ed3bec1f>;
+    owl:sameAs <#Manchine>.
 
 <#Corpri-ed3bec1f>
     owl:sameAs <#CorpreMór>;
