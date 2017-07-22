@@ -1,0 +1,109 @@
+@base <http://example.com/Rawl_B502/de_genelogia_conaill_meic_echach_liatháin.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Conaill Meic Echach Liatháin";
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" .
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:numChild 3.
+
+<#Fachtna>
+    a foaf:Person;
+    irishRel:nomName "Fachtna";
+    rel:childOf <#Conaill>;
+    rel:ancestorOf <#Cúán>.
+
+<#Cúán>
+    a foaf:Person ;
+    irishRel:nomName "Cúán" .
+    
+<#Trian>
+    a foaf:Person;
+    irishRel:nomName "Trian";
+    rel:childOf <#Conaill>;
+    rel:ancestorOf <#Fínán>.
+
+<#Fínán>
+    a foaf:Person ;
+    irishRel:nomName "Fínán" .
+
+<#Maine>
+    a foaf:Person;
+    irishRel:nomName "Maine";
+    rel:childOf <#Conaill>;
+    rel:ancestorOf <#DubLasra>.
+
+<#DubLasra>
+    a foaf:Person ;
+    irishRel:nomName "Dub Lasra" .
+
+<#Finnán>
+    a foaf:Person;
+    irishRel:nomName "Finnán";
+    rel:childOf <#Díbchíne>.
+
+<#Díbchíne>
+    a foaf:Person;
+    irishRel:genName "Díbchíne";
+    rel:childOf <#Díbicháin>.
+
+<#Díbicháin>
+    a foaf:Person;
+    irishRel:genName "Díbicháin";
+    irishRel:nomName "Díbichán";
+    rel:childOf <#Mithigeáin>.
+
+<#Mithigeáin>
+    a foaf:Person;
+    irishRel:genName "Mithigeáin";
+    irishRel:nomName "Mithigeán";
+    rel:childOf <#Scelláin>.
+
+<#Scelláin>
+    a foaf:Person;
+    irishRel:genName "Scelláin";
+    irishRel:nomName "Scellán";
+    rel:childOf <#Finnáin>.
+
+<#Finnáin>
+    a foaf:Person;
+    irishRel:genName "Finnáin";
+    irishRel:nomName "Finnán";
+    rel:childOf <#Éogain>.
+
+<#Éogain>
+    a foaf:Person;
+    irishRel:genName "Éogain";
+    irishRel:nomName "Éogan";
+    rel:childOf <#Threna>.
+
+<#Threna>
+    a foaf:Person;
+    irishRel:genName "Threna";
+    irishRel:nomName "Tren";
+    rel:childOf <#Conaill-21cd6c76>.
+
+<#Conaill-21cd6c76>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#EchachLiatháin>.
+
+<#EchachLiatháin>
+    a foaf:Person;
+    irishRel:genName "Echach Liatháin" ;
+    irishRel:nomName "Eochu Liathán" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ceníuil_dalláin.ttl#EchachLiatháin>.
