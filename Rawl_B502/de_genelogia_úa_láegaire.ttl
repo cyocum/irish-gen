@@ -1,0 +1,105 @@
+@base <http://example.com/Rawl_B502/genelogia_úa_láegaire.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Úa Láegaire";
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "text/turtle" .
+
+<#Snéidgal>
+    a foaf:Person ;
+    irishRel:nomName "Snéidgal" ;
+    rel:childOf <#Conamla>.
+
+<#Éládach>
+    a foaf:Person ;
+    irishRel:nomName "Éládach" ;
+    rel:childOf <#Conamla>.
+
+<#Conamla>
+    a foaf:Person;
+    irishRel:genName "Conamla";
+    rel:childOf <#Rotáin>;
+    irishRel:numChild 2 .
+
+<#Rotáin>
+    a foaf:Person;
+    irishRel:genName "Rotáin";
+    irishRel:nomName "Rotán";
+    rel:childOf <#Áedáin>.
+
+<#Áedáin>
+    a foaf:Person;
+    irishRel:genName "Áedáin";
+    irishRel:nomName "Áedán";
+    rel:childOf <#Sinchill>.
+
+<#Sinchill>
+    a foaf:Person;
+    irishRel:genName "Sinchill";
+    irishRel:nomName "Sinchell";
+    rel:childOf <#Sétna>.
+
+<#Sétna>
+    a foaf:Person;
+    irishRel:genName "Sétna";
+    irishRel:nomName "Sétnae";
+    rel:childOf <#Threna>.
+
+<#Threna>
+    a foaf:Person;
+    irishRel:genName "Threna";
+    irishRel:nomName "Trena";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    rel:childOf <#Láegaire>.
+
+<#Láegaire>
+    a foaf:Person;
+    irishRel:genName "Láegaire";
+    rel:childOf <#FiachachFidgeinte>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgente.ttl#Láegaire>.
+
+<#FiachacFidgeinte>
+    a foaf:Person;
+    irishRel:genName "Fiachach Fidgeinte" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgente.ttl#FiachachFidgeinti>.
+
+<#Láegaire-8480bfdc>
+    a foaf:Person;
+    irishRel:genName "Láegaire";
+    irishRel:numChild 4 ;
+    owl:sameAs <#Láegaire>.
+
+<#Áed>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    rel:childOf <#Láegaire-8480bfdc>;
+    owl:sameAs <#Áeda>.
+
+<#Echen>
+    a foaf:Person;
+    irishRel:nomName "Echen";
+    rel:childOf <#Láegaire-8480bfdc>.
+
+<#Fiachra>
+    a foaf:Person;
+    irishRel:nomName "Fiachra";
+    rel:childOf <#Láegaire-8480bfdc>.
+
+<#Fergus>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    rel:childOf <#Láegaire-8480bfdc>.
