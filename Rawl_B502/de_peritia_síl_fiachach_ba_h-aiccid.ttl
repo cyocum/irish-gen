@@ -1,0 +1,218 @@
+@base <http://example.com/Rawl_B502/de_peritia_síl_fiachach_ba_h-aiccid.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Peritia Síl Fiachach Ba h-Aiccid"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
+    dcterms:format "text/turtle".
+
+<#CatháerMár>
+    a irishTitles:rí;
+    irishTitles:reignLength 50;
+    irishRel:nomName "Catháer Már";
+    rdfs:comment "cóeca bliadan dó h- i r-rígu h-Érenn h-i Temuir";
+    rdfs:comment "Cathaír h-i Temraig & Conn h- i Cenannas, cen chath cen chocad eturru díb línaib".
+    rdfs:seeAlso <#AittrebCathaírcóecabliadan>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>;
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#CathaírMáir>.
+
+<#Laidcenn>
+    a foaf:Person;
+    irishRel:nomName "Laidcenn";
+    owl:sameAs <http://example.com/Rawl_B502/nidu_dír_dermait.ttl#Laidcenn>.
+
+<#AittrebCathaírcóecabliadan>
+    prov:wasAttributedTo <#Laidcenn>;
+    rdfs:comment "ut Laidcenn affirmat";
+    owl:sameAs <http://www.vanhamel.nl/codecs/Nidu_d%C3%ADr_dermait>.
+
+<#ChunnCétchathach>
+    a foaf:Person;
+    irishRel:datName "Chunn Cétchathach";
+    irishRel:nomName "Conn Cétcatach";
+    rel:friendOf <#CatháerMár>;
+    owl:sameAs <http://example.com/Rawl_B502/clanna_ébeir_h_i_l_leith_chuind.ttl#ChuindCétchathaig>;
+    rdfs:comment "Cathaír h-i Temraig & Conn h- i Cenannas, cen chath cen chocad eturru díb línaib".
+
+<#LugairLánfile>
+    a foaf:Person;
+    irishRel:nomName "Lugair Lánfile".
+
+<#CathaírcóemConncomfebaib>
+    prov:wasAttributedTo <#LugairLánfile>;
+    rdfs:comment "ut Lugair Lánfile dixit".
+
+<#Cathaír>
+    a foaf:Person;
+    irishRel:nomName "Cathaír";
+    owl:sameAs <#CatháerMár>;
+    rel:childOf <#Fedelmithe-23c0ccc0>;
+    rdfs:seeAlso <#CathaírcóemConncomfebaib>.
+
+<#Conn>
+    a foaf:Person;
+    irishRel:nomName "Conn";
+    owl:sameAs <#ChunnCétchathach>;
+    rel:childOf <#Fedelmithe-23c0ccc0>;
+    rdfs:seeAlso <#CathaírcóemConncomfebaib>.
+
+<#Fedelmithe-23c0ccc0>
+    a foaf:Person;
+    irishRel:genName "Fedelmithe";
+    irishRel:nomName "Feidlimid";
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#FheidlimidRechtada>.
+
+<#Fedelmithe-e1468410>
+    a foaf:Person;
+    irishRel:genName "Fedelmithe";
+    irishRel:nomName "Feidlimid";
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.ttl#FedeilmidFerAurglas>.
+
+<#http://www.vanhamel.nl/codecs/Doss_d%C3%A1ile>
+    prov:wasAttributedTo <#Lugair>;
+    rdfs:comment "Lugair dixit".
+
+<#Lugair-55a406f0>
+    a foaf:Person;
+    irishRel:nomName "Lugair";
+    owl:sameAs <#LugairLánfile>.
+
+<#LuaigneTemra>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Luaigne Temra";
+    rel:antagonistOf <#Cathair-fb12e850>;
+    rdfs:seeAlso <#http://www.vanhamel.nl/codecs/Doss_d%C3%A1ile>.
+
+<#Cathair-fb12e850>
+    a irishTitles:rí;
+    irishTitles:reignLength 50;
+    irishRel:nomName "Cathair";
+    owl:sameAs <#Cathaír>;
+    rdfs:seeAlso <#http://www.vanhamel.nl/codecs/Doss_d%C3%A1ile>.
+
+<#Lugair-5fabc6b0>
+    a foaf:Person;
+    irishRel:nomName "Lugair";
+    owl:sameAs <#LugairLánfile>.
+
+<#Ósarerchlois>
+    prov:wasAttributedTo <#Lugair-5fabc6b0>;
+    rdfs:comment "ut idem ait".
+
+<#FiachuBah-Aiccid>
+    a foaf:Person;
+    irishRel:nomName "Fiachu Ba h-Aiccid";
+    rel:childOf <#Catháer>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FiachuBaccid>;
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.ttl#FiachuBah-Aiccid>.
+
+<#Catháer>
+    a foaf:Person;
+    irishRel:nomName "Catháer";
+    owl:sameAs <#Cathaír>.
+
+<#Sruithinsósarsainemail>
+    prov:wasAttributedTo <#Catháer>;
+    rdfs:comment "et dixit Cathaír";
+    owl:sameAs <http://www.vanhamel.nl/codecs/Timna_Chatha%C3%ADr_M%C3%A1ir>.
+
+<#Cóecafichetfiled>
+    prov:wasAttributedTo <#Lugair-f735d1d0>;
+    rdfs:comment "Item Lugair".
+
+<#Fiachaich>
+    a foaf:Person;
+    irishRel:datName "Fiachaich";
+    irishRel:nomName "Fiacha";
+    owl:sameAs <#FiachuBah-Aiccid>;
+    rdfs:seeAlso <#Cóecafichetfiled>.
+
+<#Lugair-f735d1d0>
+    a foaf:Person;
+    irishRel:nomName "Lugair";
+    owl:sameAs <#LugairLánfile>.
+
+<#FiachuBah-Aiccid-058c9900>
+    a foaf:Person;
+    irishRel:nomName "Fiachu Ba h-Aiccid";
+    owl:sameAs <#FiachuBah-Aiccid>;
+    irishRel:numChild 1.
+
+<#BresalBéolach>
+    a foaf:Person;
+    irishRel:nomName "Bresal Béolach";
+    rel:childOf <#FiachuBah-Aiccid-058c9900>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bresal-56a51ac3>.
+
+<#Ángriangríssach>
+    prov:wasAttributedTo <#Lugair-398db5b0>;
+    rdfs:comment "Inde Lugair".
+
+<#Lugair-398db5b0>
+    a foaf:Person;
+    irishRel:nomName "Lugair";
+    owl:sameAs <#LugairLánfile>.
+
+<#Bresuail>
+    a foaf:Person;
+    irishRel:accName "Bresuail";
+    irishRel:nomName "Bresal";
+    rel:descendantOf <#Luirc>;
+    owl:sameAs <#BresalBéolach>;
+    rdfs:seeAlso <#Ángriangríssach>.
+
+<#Luirc>
+    a foaf:Person;
+    irishRel:genName "Luirc";
+    irishRel:nomName "Lorc";
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#LóegaireLuirc>.
+
+<#CairpreLiphichair>
+    a foaf:Person;
+    irishRel:accName "Cairpre Liphichair"
+    irishRel:nomName "Cairpre Liphechair";
+    rel:childOf <#Cormaic>;
+    rel:antagonistOf <#BresalBéolach-6bb38d40>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriLifechair>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CormaicUlfhota>.
+
+<#BresalBéolach-6bb38d40>
+    a foaf:Person;
+    irishRel:nomName "Bresal Béolach";
+    owl:sameAs <#BresalBéolach>.
+
+<#Eochuid>
+    a foaf:Person;
+    irishRel:nomName "Eochuid";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Eochu-f830bdc2>.
+
+<#EochuidDomplén>
+    a foaf:Person;
+    irishRel:nomName "Eochuid Domplén";
+    owl:sameAs <http://example.com/LL/mugdorn.ttl#EchachDomlen>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EochaidDomlen>.
+
+<#FiachuSraptine>
+    a foaf:Person;
+    irishRel:nomName "Fiachu Sraptine".
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#FhiachachSraptini>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FiachuRoptine>.
+
+<#http://www.vanhamel.nl/codecs/M%C3%A1ra_galgata>
+    dc:title "Mára galgata"@sga;
+    rdfs:comment "Ut idem ait".
