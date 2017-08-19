@@ -17,7 +17,12 @@
 <#Iar>
     a foaf:Person;
     irishRel:nomName"Iar";
-    rel:childOf <#Dedad>.
+    rel:childOf <#Dedad>;
+    irishRel:populationGroupName "Síl Conaire" .
+    
+<#SílConaire>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Conaire" .    
 
 <#Dedad>
     owl:sameAs <http://example.com/LL/erand.ttl#Dedad>.
@@ -25,7 +30,12 @@
 <#Fute>
     irishRel:nomName"Fute";
     owl:sameAs <http://example.com/LL/erand.ttl#Futhi>;
-    rel:childOf <#Dedad>.
+    rel:childOf <#Dedad>;
+    irishRel:ancestorOfGroup <#Eraind>.
+
+<#Eraind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Population" .    
 
 <#CorcoDubni>
     a foaf:Person;
@@ -115,11 +125,21 @@
 <#Flannan>
     a foaf:Person;
     irishRel:nomName"Flannan";
-    rel:childOf <#Nuidin>.
+    rel:childOf <#Nuidin>;
+    irishRel:ancestorOfGroup <#CenelFlannain>.
+
+<#CenelFlannain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Flannain", "Aes Conchind" .
 
 <#Bracain>
     irishRel:nomName"Bracain";
-    owl:sameAs <#Braccan>.
+    owl:sameAs <#Braccan>;
+    irishRel:ancestorOfGroup <#MunterMunechain>.
+
+<#MunterMunechain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Munter Munechain" .
 
 <#Olchobuir>
     a foaf:Person;
@@ -165,6 +185,11 @@
     irishRel:genName "Fhlaind";
     irishRel:nomName "Fland";
     rel:childOf <#Olchobuir-203bdb58>.
+
+<#ClandFlaind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Flaind" .
+    
 
 <#Olchobuir-203bdb58>
     owl:sameAs <#Olchobuir>;
@@ -221,7 +246,13 @@
     owl:sameAs <#Irchond>;
     irishRel:genName "h-Irchuind";
     irishRel:nomName "Irchund";
-    rel:childOf <#CormaicFhind>.
+    rel:childOf <#CormaicFhind>;
+    irishRel:ancestorOfGroup <#AesIrruisTuascirt>.
+
+<#AesIrruisTuascirt>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Aes Irruis Tuascirt" .
+    
 
 <#CormaicFhind>
     owl:sameAs <#CormacFind>;

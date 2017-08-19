@@ -95,13 +95,30 @@ rel:siblingOf
     rdfs:subPropertyOf owl:differentFrom ;
     owl:inverseOf :descendantOfGroup ;
     rdfs:domain foaf:Person ;
-    rdfs:range :PopulationGroup .
+    rdfs:range :PopulationGroup ;
+    rdfs:comment "This connects individuals (foaf:Person) to groups (Population Group)" .
 
 :descendantOfGroup
     a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
     owl:inverseOf :ancestorOfGroup ;
     rdfs:subPropertyOf owl:differentFrom ;
     rdfs:domain foaf:Person ;
+    rdfs:range :PopulationGroup ;
+        rdfs:comment "This connects individuals (foaf:Person) to groups (Population Group)" .
+
+:ancestorGroupOf
+    a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
+    owl:inverseOf :descendantGroup ;
+    rdfs:subPropertyOf owl:differentFrom ;
+    rdfs:domain :PopulationGroup ;
+    rdfs:range :PopulationGroup ;
+    rdfs:comment "This connects groups (Population Groups) to other groups" .
+
+:descendantGroupOf
+    a owl:ObjectProperty, owl:IrreflexiveProperty, owl:TransitiveProperty ;
+    owl:inverseOf :ancestorGroup ;
+    rdfs:subPropertyOf owl:differentFrom ;
+    rdfs:domain :PopulationGroup ;
     rdfs:range :PopulationGroup .
 
 :declaredAncestorOf

@@ -130,7 +130,8 @@
     irishRel:genName "Echach Coba";
     irishRel:nomName "Echaid Cob";
     owl:sameAs <http://example.com/LL/dail_araide.ttl#Echach-f5b16dd9>;
-    rel:childOf <#Lugdach>.
+    rel:childOf <#Lugdach>;
+    irishRel:ancestorOfGroup <#hEchachCoba>.
 
 <#Lugdach>
     a foaf:Person;
@@ -469,7 +470,13 @@
     a irishTitles:Rí ;
     owl:sameAs <#CoelbadCoba>;
     foaf:title "rí h-Erenn"@sga, "king of Ireland"@en;
-    rel:childOf <#CruindBaDrúi>.
+    rel:childOf <#CruindBaDrúi>;
+    irishRel:ancestorOfGroup <#Dáln-Araide>.
+
+<#Dáln-Araide>
+    irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dál n-Araide" ;
+    irishRel:populationGroupName "Dal n-Araide" .
 
 <#EochoCoba>
     a foaf:Person;
@@ -503,7 +510,12 @@
 <#Baetain-7bc03e42>
     a foaf:Person;
     irishRel:nomName "Baetain";
-    rel:childOf <#OcEchaich>.
+    rel:childOf <#OcEchaich>;
+    irishRel:descendantOfGroup <#hEchachCoba>, <#Dáln-Araide>.
+
+<#hEchachCoba>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Echach Coba" .
 
 <#Cathassach>
     a foaf:Person;

@@ -465,20 +465,32 @@
 <#Laidcnén>
     a foaf:Person;
     irishRel:nomName "Laidcnén";
-    rdfs:comment "a quo h-Úi Buide";
-    rel:childOf <#Cummine>.
+    rel:childOf <#Cummine>;
+    irishRel:ancestorOfGroup <#h-ÚiBuide>.
+
+<#h-ÚiBuide>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Buide" .    
 
 <#Conandil>
     a foaf:Person;
     irishRel:nomName "Conandil";
-    rdfs:comment "a quo h-Úi Chonandla";
-    rel:childOf <#Cummine>.
+    rel:childOf <#Cummine>;
+    irishRel:ancestorOfGroup <#h-ÚiChonandla>.
+
+<#h-ÚiChonandla>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chonandla" .    
 
 <#Suibne>
     a foaf:Person;
     irishRel:nomName "Suibne";
     rdfs:comment "a quo h-Úi Shlogeni";
     rel:childOf <#Cummine>.
+
+<#h-ÚiShlogeni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Shlogeni" .    
 
 <#Dungus>
     a foaf:Person;
@@ -840,9 +852,14 @@
     rel:childOf <#Labrada-cfda4000>;
     rdfs:comment "dia tat h-Úi Chulind issí a foirb Mag n-Abna .i. Sil m-Brain.";
     rel:antagonistOf <#Ciar>;
-    foaf:knows <#EnnaCenselach>.
+    foaf:knows <#EnnaCenselach>;
+    irishRel:ancestorOfGroup <#h-ÚiChulind>.
 
 #rel:gaveLandTo ? EPT
+
+<#h-ÚiChulind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chulind" .
 
 <#Labrada-cfda4000>
     a foaf:Person;
@@ -899,13 +916,54 @@
     a foaf:Person;
     irishRel:nomName "Cairthend";
     rel:childOf <#Labrada-88b47560>;
-    owl:sameAs <#Cáirthend>.
+    owl:sameAs <#Cáirthend>;
+    irishRel:ancestorOfGroup <#h-ÚiMeicCairthind>, <#h-ÚiBróccain>, <#h-ÚiGedgain>, <#h-ÚiFiannáin>, <#h-ÚiDimmae>, <#h-ÚiLill>.
+
+<#h-ÚiMeicCairthind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Meic Cairthind" .
+
+<#h-ÚiBróccain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Bróccain" .
+
+<#h-ÚiGedgain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Gedgain" .
+
+<#h-ÚiFiannáin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Fiannáin" .
+
+<#h-ÚiDimmae>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Dimmae" .
+
+<#h-ÚiLill>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Lill" .
 
 <#Labrada-88b47560>
     a foaf:Person;
     irishRel:genName "Labrada";
     irishRel:nomName "Labraid";
-    owl:sameAs <#Labraid>.
+    owl:sameAs <#Labraid>;
+    irishRel:ancestorOfGroup <#ClandChaelbad>.
+
+<#h-ÚiEpscoipAeda>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Epscoip Aeda" ;
+    irishRel:descendantGroupOf <#ClandChaelbad>.
+
+<#h-ÚiCruthain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Cruthain" ;
+    irishRel:descendantGroupOf <#ClandChaelbad>.
+
+<#ClandChaelbad>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Chaelbad" ;
+    irishRel:ancestorGroupOf <#h-ÚiLill>.
 
 <#Chummini>
     a foaf:Person;
@@ -985,6 +1043,15 @@
     rdfs:comment "a quo h-Úi Dega Bic .i. h-Úi Muridaig. Is leo Ráith Dromma & Methuis h-Úa m-Bic & Tech mc Midnand & Cell Chlochair.";
     owl:sameAs <#DiagBec>.
 
+<#h-ÚiDegaBic>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Dega Bic" .
+
+<#h-ÚiMuridaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Muridaig" ;
+    irishRel:descendantGroupOf <#h-ÚiDegaBic>.
+
 <#Muridaig-4bf7e050>
     a foaf:Person;
     irishRel:genName "Muridaig";
@@ -996,229 +1063,367 @@
     irishRel:nomName "Cainnech";
     rel:childOf <#Labrada-88b47560>;
     owl:sameAs <#Cainnech>;
-    rdfs:comment "a quo h-Úi Chainnig .i. h-Úi Broceni h-Úi Cummeni h-Úi Thogae h-Úi Amalgaid h-Úi Dimmae h-Úi Chulén, h-Úi Attain h-Úi Gaimdegair".
+    irishRel:ancestorGroupOf <#h-ÚiChainnig>.
+
+<#h-ÚiChainnig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chainnig" ;
+    irishRel:ancestorGroupOf <#h-ÚiBroceni>, <#h-ÚiCummeni>, <#h-ÚiThogae>, <#h-ÚiAmalgaid>, <#h-ÚiDimmae>, <#h-ÚiChulén>, <#h-ÚiAttain>, <#h-ÚiGaimdegair>.
+
+<#h-ÚiBroceni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Broceni" .
+
+<#h-ÚiCummeni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Cummeni" .
+
+<#h-ÚiThogae>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Thogae" .
+
+<#h-ÚiAmalgaid>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Amalgaid" .
+
+<#h-ÚiDimmae>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Dimmae" .
+
+<#h-ÚiChulén>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chulén" .
+
+<#h-ÚiAttain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Attain" .
+
+<#h-ÚiGaimdegair>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Gaimdegair" .
+
+<#h-ÚaLabrada>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úa Labrada" ;
+    irishRel:ancestorGroupOf <#h-ÚiBerrain>, <#h-ÚiChormaccain>, <#h-ÚiLuchine>, <#h-ÚiCheolain>, <#h-ÚiLatharnaig>, <#h-ÚiAltbai>, <#h-ÚiEoganain>, <#h-ÚiChethirn>, <#h-ÚiDuirn>, <#h-ÚiManchain>, <#h-ÚiFhlannain>, <#h-ÚiChiru>, <#h-ÚiDicolla>, <#h-ÚiGarbine>, <#h-ÚiGerain>, <#h-ÚiDáire>, <#h-ÚiIarnain>, <#h-ÚiFidbadaig>, <#h-ÚiForannain>, <#h-ÚiMaelglais>, <#h-ÚiDuibRatha>, <#h-ÚiIngaind>, <#h-ÚiChellachain>, <#h-ÚiBruggais>.
+
+<#h-ÚiBerrain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Berrain" .
+
+<#h-ÚiChormaccain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chormaccain" .
+
+<#h-ÚiLuchine>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Luchine" .
+
+<#h-ÚiCheolain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Cheolain" .
+
+<#h-ÚiLatharnaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Latharnaig" .
+
+<#h-ÚiAltbai>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Altbai" .
+
+<#h-ÚiEoganain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Eoganain" .
+
+<#h-ÚiChethirn>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chethirn" .
+
+<#h-ÚiDuirn>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Duirn" .
+    
+<#h-ÚiManchain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Manchain" .
+    
+<#h-ÚiFhlannain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Fhlannain" .
+
+<#h-ÚiChiru>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Fhlannain" .
+
+<#h-ÚiDicolla>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Dicolla" .
+    
+<#h-ÚiGarbine>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Garbine" .
+    
+<#h-ÚiGerain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Gerain" .
+    
+<#h-ÚiDáire>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Dáire" .
+    
+<#h-ÚiIarnain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Iarnain" .
+    
+<#h-ÚiFidbadaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Iarnain" .
+    
+<#h-ÚiForannain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Forannain" .
+    
+<#h-ÚiMaelglais>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Forannain" .
+    
+<#h-ÚiDuibRatha>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Forannain" .
+    
+<#h-ÚiIngaind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Ingaind" .
+    
+<#h-ÚiChellachain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Chellachain" .
+    
+<#h-ÚiBruggais>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-ÚiBruggais" .
 
 <#Broceni>
     a foaf:Person;
     irishRel:nomName "Brocene";
     irishRel:genName "Broceni";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Broceni".
+    irishRel:ancestorOfGroup <#h-ÚiBroceni>.
 
 <#Cummeni>
     a foaf:Person;
     irishRel:nomName "Cummene";
     irishRel:genName "Cummeni";
     rel:descendantOf <#Cummeni>;
-    rdfs:comment "h-Úi Cummeni".
+    irishRel:ancestorOfGroup <#h-ÚiCummeni>.
 
 <#Thogae>
     a foaf:Person;
     irishRel:nomName "Toga";
     irishRel:genName "Thogae";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Thogae".
+    irishRel:ancestorOfGroup <#h-ÚiThogae>.
 
 <#Amalgaid>
     a foaf:Person;
     irishRel:nomName "Amalgaid";
     irishRel:genName "Amalgaid";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Amalgaid".
+    irishRel:ancestorOfGroup <#h-ÚiAmalgaid>.
 
 <#Dimmae>
     a foaf:Person;
     irishRel:nomName "Dimma";
     irishRel:genName "Dimmae";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Dimmae".
+    irishRel:ancestorOfGroup <#h-ÚiDimmae>.
 
 <#Chulén>
     a foaf:Person;
     irishRel:nomName "Culén";
     irishRel:genName "Chulén";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Chulén".
+    irishRel:ancestorOfGroup <#h-ÚiChulén>.
 
 <#Attain>
     a foaf:Person;
     irishRel:nomName "Attan";
     irishRel:genName "Attain";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Attain".
+    irishRel:ancestorOfGroup <#h-ÚiAttain>.
 
 <#Gaimdegair>
     a foaf:Person;
     irishRel:nomName "Gaimdegair";
     irishRel:genName "Gaimdegair";
     rel:descendantOf <#Cainnech-4bf7e051>;
-    rdfs:comment "h-Úi Gaimdegair".
+    irishRel:ancestorOfGroup <#h-ÚiGaimdegair>.
 
 <#Berrain>
     a foaf:Person;
     irishRel:nomName "Berran";
     irishRel:genName "Berrain,";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Berrain".
+    irishRel:ancestorOfGroup <#h-ÚiBerrain>.
 
 <#Chormaccain>
     a foaf:Person;
     irishRel:nomName "Cormaccan";
     irishRel:genName "Chormaccain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Chormaccain".
+    irishRel:ancestorOfGroup <#h-ÚiChormaccain>.
 
 <#Luchine>
     a foaf:Person;
     irishRel:nomName "Luchene";
     irishRel:genName "Luchine,";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Luchine".
+    irishRel:ancestorOfGroup <#h-ÚiLuchine>.
 
 <#Cheolain>
     a foaf:Person;
     irishRel:nomName "Ceolan";
     irishRel:genName "Cheolain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Cheolain".
+    irishRel:ancestorOfGroup <#h-ÚiCheolain>.
 
 <#Latharnaig>
     a foaf:Person;
     irishRel:nomName "Latharnach";
     irishRel:genName "Latharnaig";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Latharnaig" .
+    irishRel:ancestorOfGroup <#h-ÚiLatharnaig>.
 
 <#Altbai>
     a foaf:Person;
     irishRel:genName "Altbai";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Altbai".
+    irishRel:ancestorOfGroup <#h-ÚiAltbai>.
 
 <#Eoganain>
     a foaf:Person;
     irishRel:nomName "Eoganan";
     irishRel:genName "Eoganain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Eoganain" .
+    irishRel:ancestorOfGroup <#h-ÚiEoganain>.
 
 <#Chethirn>
     a foaf:Person;
     irishRel:nomName "Cethern";
     irishRel:genName "Chethirn";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Chethirn".
+    irishRel:ancestorOfGroup <#h-ÚiChethirn>.
 
 <#Duirn>
     a foaf:Person;
     irishRel:nomName "Dorn";
     irishRel:genName "Duirn";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Duirn".
+    irishRel:ancestorOfGroup <#h-ÚiDuirn>.
 
 <#Manchain-3bbcc380>
     a foaf:Person;
     irishRel:nomName "Manchan";
     irishRel:genName "Manchain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Manchain".
+    irishRel:ancestorOfGroup <#h-ÚiManchain>.
 
 <#Fhlannain>
     a foaf:Person;
     irishRel:nomName "Flannan";
     irishRel:genName "Fhlannain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Fhlannain".
+    irishRel:ancestorOfGroup <#h-ÚiFhlannain>.
 
 <#Chiru>
     a foaf:Person;
     irishRel:genName "Chiru";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Chiru".
+    irishRel:ancestorOfGroup <#h-ÚiChiru>.
 
 <#Dicolla>
     a foaf:Person;
     irishRel:nomName "Dicuil";
     irishRel:genName "Dicolla";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Dicolla".
+    irishRel:ancestorOfGroup <#h-ÚiDicolla>.
 
 <#Garbine>
     a foaf:Person;
     irishRel:nomName "Garbene";
     irishRel:genName "Garbine";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Garbine".
+    irishRel:ancestorOfGroup <#h-ÚiGarbine>.
 
 <#Gerain>
     a foaf:Person;
     irishRel:nomName "Geran";
     irishRel:genName "Gerain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Gerain".
+    irishRel:ancestorOfGroup <#h-ÚiGerain>.
 
 <#Dáire-319eaab0>
     a foaf:Person;
     irishRel:nomName "Dáire";
     irishRel:genName "Dáire";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Dáire".
+    irishRel:ancestorOfGroup <#h-ÚiDáire>.
 
 <#Iarnain-319eaab1>
     a foaf:Person;
     irishRel:nomName "Iarnan";
     irishRel:genName "Iarnain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Iarnain".
+    irishRel:ancestorOfGroup <#h-ÚiIarnain>.
 
 <#Fidbadaig>
     a foaf:Person;
     irishRel:nomName "Fidbadach";
     irishRel:genName "Fidbadaig";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Fidbadaig".
+    irishRel:ancestorOfGroup <#h-ÚiFidbadaig>.
 
 <#Forannain>
     a foaf:Person;
     irishRel:nomName "Forannan";
     irishRel:genName "Forannain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Forannain".
+    irishRel:ancestorOfGroup <#h-ÚiForannain>.
 
 <#Maelglais>
     a foaf:Person;
     irishRel:nomName "Maelglas";
     irishRel:genName "Maelglais";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Maelglais".
+    irishRel:ancestorOfGroup <#h-ÚiMaelglais>.
 
 <#DuibRatha>
     a foaf:Person;
     irishRel:nomName "Dub Ratha";
     irishRel:genName "Duib Ratha";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Duib Ratha".
+    irishRel:ancestorOfGroup <#h-ÚiDuibRatha>.
 
 <#Ingaind>
     a foaf:Person;
     irishRel:nomName "Ingand";
     irishRel:genName "Ingaind";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Ingaind".
+    irishRel:ancestorOfGroup <#h-ÚiIngaind>.
 
 <#Chellachain>
     a foaf:Person;
     irishRel:nomName "Cellachan";
     irishRel:genName "Chellachain";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Chellachain".
+    irishRel:ancestorOfGroup <#h-ÚiChellachain>.
 
 <#Bruggais>
     a foaf:Person;
     irishRel:nomName "Bruggas";
     irishRel:genName "Bruggais";
     rel:descendantOf <#Labrada-747b0c60>;
-    rdfs:comment "h-Úi Bruggais".
+    irishRel:ancestorOfGroup <#h-ÚiBruggais>.
 
 <#Labrada-747b0c60>
     owl:sameAs <#Labrada-88b47560>.
@@ -1228,7 +1433,27 @@
     irishRel:nomName "Cormac";
     irishRel:genName "Cormaic";
     rdfs:comment "IT é ranna h-Úa Cormaic la Laignib .i. an-gebthi h-Úi Gabla Fhini uile. & Cuthraige & h-Úi Gabla Roirend [...] Otá Culching co Dubathu et ó Glais Chriche i Cluanaib Cuada fri Laigis adiu. co Ath Lethnocht ic Sleibti. co téit i nUssin. fri Uib Bairrchi atuaid & angebthi .h. Trena & h. Chuirc. is la Cormac sin uile.";
-    owl:sameAs <#Cormac>.
+    owl:sameAs <#Cormac>;
+    irishRel:descendantOfGroup <#h-ÚaCormaic>.
+
+<#h-ÚaCormaic>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úa Cormaic" .
+    
+<#h-ÚiGablaFhini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Gabla Fhini" ;
+    irishRel:descendantGroupOf <#h-ÚaCormaic>.
+
+<#Cuthraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cuthraige" ;
+    irishRel:descendantGroupOf <#h-ÚaCormaic>.
+
+<#h-ÚiGablaRoirend>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-Úi Gabla Roirend" ;
+    irishRel:descendantGroupOf <#h-ÚaCormaic>.
 
 <#EithniGabulfhota>
     a foaf:Person;
@@ -1240,12 +1465,18 @@
       rdfs:comment "A diathrub Connacht athair h-Úa n-Gabla .i. ceile inna Eithni Gabulfhota"
     ];
     rdfs:comment "Is í mathair h-ua n-Gabla & is uadi ro h-ainmnigit";
-    owl:sameAs <http://example.com/Rawl_B502/item_úi_máelhuidir_2.ttl#EithniGabulfhota>.
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_máelhuidir_2.ttl#EithniGabulfhota>;
+    irishRel:ancestorOfGroup <#h-uan-Gabla>.
 
+<#h-uan-Gabla>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h-ua n-Gabla" .
+    
 <#Abban>
     a foaf:Person;
     irishRel:nomName "Abban";
-    rel:descendantOf <#Cormaic-319eaab2>.
+    rel:descendantOf <#Cormaic-319eaab2>;
+    irishRel:descendantOfGroup <#h-ÚaCormaic>.
 
 <#Choluim>
     a foaf:Person;
@@ -1620,7 +1851,24 @@
     irishRel:genName "Shetnai";
     irishRel:nomName "Sétna";
     owl:sameAs <#Shetnai>;
-    rdfs:comment "Aicmi Shetnai: .h. Con Corbb .h. Con Chainnig .h. Chuain .h. Alteni".
+    rdfs:comment "Aicmi Shetnai: .h. Con Corbb .h. Con Chainnig .h. Chuain .h. Alteni" ;
+    irishRel:ancestorOfGroup <#hConCorbb>, <#hConChainnig>, <#hChuain>, <#hAlteni>.
+
+<#hConCorbb>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Con Corbb" .
+
+<#hConChainnig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Con Chainnig" .
+
+<#hChuain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chuain" .
+
+<#hAlteni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Alteni" .
 
 <#ConCorbb-82447d90>
     a foaf:Person;
@@ -1655,8 +1903,15 @@
 <#Connad-289e17a0>
     a foaf:Person;
     irishRel:nomName "Connad";
-    rdfs:comment "Connad a quo .h. Doccomláin .h. Brocáin";
     owl:sameAs <#Connad>.
+
+<#hDoccomláin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Doccomláin" .
+
+<#hBrocáin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Brocáin" .
 
 <#Doccomláin>
     a foaf:Person;
@@ -1678,6 +1933,10 @@
     rdfs:comment "a quo .h. Garbain";
     owl:sameAs <#Amlomaid>.
 
+<#hGarbain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Garbain" .
+
 <#Garbain-4888cc70>
     a foaf:Person;
     irishRel:genName "Garbain";
@@ -1689,7 +1948,12 @@
     a foaf:Person;
     irishRel:nomName "Cendlachan";
     rdfs:comment "a quo .h. Con Galand";
-    owl:sameAs <#Cendlachan>.
+    owl:sameAs <#Cendlachan>;
+    irishRel:ancestorOfGroup <#hConGaland>.
+
+<#hConGaland>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Con Galand" .    
 
 <#ConGaland>
     a foaf:Person;
@@ -1701,13 +1965,16 @@
 <#MaeliTolai>
     a foaf:Person;
     irishRel:genName "Maeli Tolai";
-    irishRel:nomName "Mael Tolai" .
+    irishRel:nomName "Mael Tolai" ;
+    irishRel:ancestorOfGroup <#hConGaland>.
 
 <#Dicholla>
     a foaf:Person;
     irishRel:genName "Dicholla";
     irishRel:nomName "Dicuill";
-    owl:sameAs <#Dicolla-c9f2a810>.
+    owl:sameAs <#Dicolla-c9f2a810>;
+    irishRel:ancestorOfGroup <#hConGaland>.
+    rel:descendantOf <#Cendlachan-64996640>.
 
 <#Dicolla-c9f2a810>
     a foaf:Person;
@@ -1792,8 +2059,12 @@
 <#Conall-8b7e5740>
     a foaf:Person;
     irishRel:nomName "Conall";
-    rdfs:comment "a quo .h. Brócceni";
-    owl:sameAs <#Conall>.
+    owl:sameAs <#Conall>;
+    irishRel:ancestorOfGroup <#hBrócceni>.
+
+<#hBrócceni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Brócceni" .    
 
 <#Brócceni>
     a foaf:Person;
@@ -1896,20 +2167,27 @@
     irishRel:nomName "Eogan";
     rel:childOf <#Conaill-4832bb90>;
     rel:parentOf [
-      a foaf:Person;
-      foaf:gender "female";
-      rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
-    ];
-    rel:parentOf [
-      a foaf:Person;
-      foaf:gender "female";
-      rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
-    ];
-    rel:parentOf [
-      a foaf:Person;
-      foaf:gender "female";
-      rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+        a foaf:Person;
+        foaf:gender "female";
+        rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+        irishRel:ancestorOfGroup <#SílConaill>
+    ],
+    [
+        a foaf:Person;
+        foaf:gender "female";
+        rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+        irishRel:ancestorOfGroup <#SílConaill>
+    ],
+    [
+        a foaf:Person;
+        foaf:gender "female";
+        rdfs:comment "Do shíl Conaill dano teora ingena Eogain mc Conaill con-gabsat Cill n-Garraisc";
+        irishRel:ancestorOfGroup <#SílConaill>
     ].
+
+<#SílConaill>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Conaill" .
 
 <#Conaill-4832bb90>
     a foaf:Person;
@@ -1983,8 +2261,28 @@
 <#Conlang-79304620>
     a foaf:Person;
     irishRel:nomName "Conlang";
-    rdfs:comment "a quo Meic Aird Maigne. Et .h. Máinaig & h. Condoid. & h. Fhechini. Et .h. Caichtangeni";
-    owl:sameAs <#Conlang>.
+    owl:sameAs <#Conlang>;
+    irishRel:ancestorOfGroup <#MeicAirdMaigne>, <#hMáinaig>, <#hCondoid>, <#hFhechini>, <#hCaichtangeni>.
+
+<#MeicAirdMaigne>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Meic Aird Maigne" .
+
+<#hMáinaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Máinaig" .
+
+<#hCondoid>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Condoid" .
+
+<#hFhechini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Fhechini" .
+
+<#hCaichtangeni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Caichtangeni" .
 
 <#Máinaig>
     a foaf:Person;
@@ -2018,7 +2316,20 @@
     a foaf:Person;
     irishRel:nomName "Corpre Miloscan";
     owl:sameAs <#CoirpreMinloscan>;
-    rdfs:comment "a quo .h. Nathig. & h. Fallamain .h. Forandla i Cuil Eimre".
+    irishRel:ancestorOfGroup <#hNathig>, <#hFallamain>, <#hForandla>.
+    
+<#hNathig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Nathig" .
+
+<#hFallamain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Fallamain" .
+
+<#hForandla>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Forandla" ;
+    rdfs:comment "i Cuil Eimre" .
 
 <#Nathig>
     a foaf:Person;
@@ -2044,7 +2355,15 @@
     a foaf:Person;
     irishRel:nomName "Laignech";
     owl:sameAs <#Laignech>;
-    rdfs:comment "a quo .h. Dimmae Chuirr & h. Congnaid".
+    irishRel:ancestorOfGroup <#hDimmaeChuirr>, <#hCongnaid>, <#DímmaeChuirr>.
+
+<#hDimmaeChuirr>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dimmae Chuirr" .
+
+<#hCongnaid>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Congnaid" .
 
 <#DímmaeChuirr>
     a foaf:Person;
@@ -2061,8 +2380,16 @@
 <#Caeldub-7f1cf800>
     a foaf:Person;
     irishRel:nomName "Caeldub";
-    rdfs:comment "a quo .h. Dubchróin h. Beraig";
-    owl:sameAs <#Caeldub-9c29f330>.
+    owl:sameAs <#Caeldub-9c29f330>;
+    irishRel:ancestorOfGroup <#hDubchróin>, <#hBeraig>.
+
+<#hDubchróin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dubchróin" .
+
+<#hBeraig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Beraig" .
 
 <#Dubchróin>
     a foaf:Person;
@@ -2082,7 +2409,16 @@
     a foaf:Person;
     irishRel:nomName "Fachtna";
     rdfs:comment "a quo .h. Donnain & h. Sharáin mc Fachtnai eter Drummaib";
-    owl:sameAs <#Fachtna>.
+    owl:sameAs <#Fachtna>;
+    irishRel:ancestorOfGroup <#hDonnain>, <#hSharáin>.
+
+<#hDonnain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Donnain" .
+
+<#hSharáin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Sharáin" .
 
 <#Donnain>
     a foaf:Person;
@@ -2108,7 +2444,16 @@
     a foaf:Person;
     irishRel:genName "Findloga";
     irishRel:nomName "Findloeg";
-    rdfs:comment "FORSLONTI DÁIL MESSI CORB .i. Síl Findloga di Thechtrigu".
+    rdfs:comment "FORSLONTI DÁIL MESSI CORB .i. Síl Findloga di Thechtrigu" ;
+    irishRel:ancestorOfGroup <#SílFindlogadiThechtrigu>, <#hCoil>.
+
+<#SílFindlogadiThechtrigu>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Findloga di Thechtrigu" .
+
+<#hCoil>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Coil" .
 
 <#Coil>
     a foaf:Person;
@@ -2231,7 +2576,32 @@
     irishRel:genName "Fhinnachta`";
     irishRel:nomName "Findsnechta";
     owl:sameAs <#Fhindchada>;
-    rdfs:comment "Síl Fhinnachta. .h. Marcain .h. Digráid mc Maele Duin .h. Colmain Fortobuil .h. Furudrain .h. Damain".
+    rdfs:comment "Síl Fhinnachta. .h. Marcain .h. Digráid mc Maele Duin .h. Colmain Fortobuil .h. Furudrain .h. Damain" ;
+    irishRel:populationGroupName <#SílFhinnachta>, <#hMarcain>, <#hDigráid>, <#hColmainFortobuil>, <#hFurudrain>, <#hDamain>.
+
+<#SílFhinnachta>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Fhinnachta" .
+
+<#hMarcain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Marcain" .
+
+<#hDigráid>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Digráid" .
+
+<#hColmainFortobuil>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Colmain Fortobuil" .
+
+<#hFurudrain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Furudrain" .
+
+<#hDamain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Damain" .
 
 <#Marcain-63a8fd90>
     a foaf:Person;
@@ -2273,7 +2643,15 @@
 <#Findchu-2d7561c0>
     a foaf:Person;
     irishRel:nomName "Findchu";
-    rdfs:comment "a quo .h. Conalta .h. Srafain".
+    irishRel:ancestorOfGroup <#hConalta>, <#hSrafain>.
+
+<#hConalta>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Conalta" .
+
+<#hSrafain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Srafain" .
 
 <#Conalta>
     a foaf:Person;
@@ -2289,8 +2667,20 @@
     a foaf:Person;
     irishRel:nomName "Echen";
     owl:sameAs <#Echen>;
-    rdfs:comment "a quo .h. Sarain .h. Tormaig .hI. Leisc".
+    irishRel:ancestorOfGroup <#hSarain>, <#hTormaig>, <#hILeisc>.
 
+<#hSarain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Sarain" .
+
+<#hTormaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Tormaig" .
+
+<#hILeisc>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".hI. Leisc" .
+    
 <#Sarain-17e73c10>
     a foaf:Person;
     irishRel:genName "Sarain";
@@ -2312,8 +2702,20 @@
 <#Deilgene>
     a foaf:Person;
     irishRel:nomName "Deigene";
-    rdfs:comment "a quo .h. Chuind Chuane .h. Aithmit Caiss .h. Brain Delgna";
+    irishRel:ancestorOfGroup <#hChuindChuane>, <#hAithmitCaiss>, <#hBrainDelgna>;
     owl:sameAs <#Delgene>.
+
+<#hChuindChuane>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chuind Chuane" .
+
+<#hAithmitCaiss>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Aithmit Caiss" .
+
+<#hBrainDelgna>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Brain Delgna" .
 
 <#ChuindChuane>
     a foaf:Person;
@@ -2337,7 +2739,24 @@
     a foaf:Person;
     irishRel:nomName "Fergus";
     rdfs:comment "a quo Síl Tuatain mc Fordubain .h. Cosmi .h. Shárain .h. Dubthaig";
-    owl:sameAs <#Fergus-5999686d>.
+    owl:sameAs <#Fergus-5999686d>;
+    irishRel:ancestorOfGroup <#SílTuatain>, <#hCosmi>, <#hShárain>, <#hDubthaig>.
+
+<#SílTuatain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Tuatain" .
+
+<#hCosmi>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Cosmi" .
+
+<#hShárain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Shárain" .
+
+<#hDubthaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dubthaig" .
 
 <#Tuatain>
     a foaf:Person;
@@ -2349,8 +2768,9 @@
 <#Fordubain>
     a foaf:Person;
     irishRel:genName "Fordubain";
-    irishRel:nomName "Forduban".
-
+    irishRel:nomName "Forduban" ;
+    rel:descendantOf <#Fergus-0aaec3e0>.
+    
 <#Cosmi>
     a foaf:Person;
     irishRel:genName "Cosmi";
@@ -2371,8 +2791,20 @@
 <#Bresal-997e6840>
     a foaf:Person;
     irishRel:nomName "Bresal";
-    rdfs:comment "a quo .h. Cherdda .h. Ceille .h. Nioth Angle";
-    owl:sameAs <#Bresal>.
+    owl:sameAs <#Bresal>;
+    irishRel:ancestorOfGroup <#hCherdda>, <#hCeille>, <#hNiothAngle>.
+
+<#hCherdda>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Cherdda" .
+
+<#hCeille>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Ceille" .
+
+<#hNiothAngle>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Nioth Angle" .
 
 <#Cherdda>
     a foaf:Person;
@@ -2394,7 +2826,19 @@
     a foaf:Person;
     irishRel:nomName "Nath Í";
     owl:sameAs <#NathÍ-02b1cebd>;
-    rdfs:comment "a quo .h. Annacain .h. Gobbain .h. Dubain".
+    irishRel:ancestorOfGroup <#hAnnacain>, <#hGobbain>, <#hDubain>.
+
+<#hAnnacain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Annacain" .
+
+<#hGobbain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Gobbain" .
+
+<#hDubain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dubain" .
 
 <#Annacain>
     a foaf:Person;
@@ -2413,6 +2857,26 @@
     irishRel:genName "Dubain";
     irishRel:nomName "Duban";
     rdfs:comment ".h. Dubain".
+
+<#hn-Garrchon>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. n-Garrchon" .
+
+<#hButire>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Butire" .
+
+<#hNemain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Nemain" .
+
+<#hLonáindeFheraibMaigeFhene>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Lonáin de Fheraib Maige Fhene" .
+
+<#hMargginGaill>
+    irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Marggin Gaill" .
 
 <#Butire>
     a foaf:Person;
@@ -2448,7 +2912,7 @@
     a foaf:Person;
     irishRel:nomName "Mac Liac";
     rel:childOf <#Náir>.
-
+    
 <#MacTinni>
     a foaf:Person;
     irishRel:nomName "Mac Tinni";
@@ -2482,8 +2946,20 @@
 <#MacLiac-9c859220>
     a foaf:Person;
     irishRel:nomName "Mac Liac";
-    rdfs:comment "a quo .h. Berrini .h. Rodait .h. Fethlamda";
-    owl:sameAs <#MacLiac>.
+    owl:sameAs <#MacLiac>;
+    irishRel:ancestorOfGroup <#hBerrini>, <#hRodait>, <#hFethlamda>.
+
+<#hBerrini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Berrini" .
+
+<#hRodait>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Rodait" .
+
+<#hFethlamda>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Fethlamda" .
 
 <#Berrini>
     a foaf:Person;
@@ -2505,8 +2981,16 @@
 <#MacTinne>
     a foaf:Person;
     irishRel:nomName "Mac Tinne";
-    rdfs:comment "a quo .h. Cummini .h. Chraich Cualand";
-    owl:sameAs <#MacTinni>.
+    owl:sameAs <#MacTinni>;
+    irishRel:ancestorOfGroup <#hCummini>, <#hChraichCualand>.
+
+<#hCummini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Cummini" .
+
+<#hChraichCualand>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chraich Cualand" .    
 
 <#Cummini>
     a foaf:Person;
@@ -2547,8 +3031,16 @@
 <#Cobthach-c4320e50>
     a foaf:Person;
     irishRel:nomName "Cobthach";
-    rdfs:comment "a quo .h. Damain & h. Thian";
+    irishRel:ancestorOfGroup <#hDamain>, <#hThian>;
     owl:sameAs <#Cobthach>.
+
+<#hDamain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Damain" .
+
+<#hThian>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Thian" .
 
 <#Damain-e41ef7f0>
     a foaf:Person;
@@ -2565,8 +3057,13 @@
 <#Conall-4473eb10>
     a foaf:Person;
     irishRel:nomName "Conall";
-    rdfs:comment "a quo .h. Con Anróit";
-    owl:sameAs <#Conall-55dab9c0>.
+    owl:sameAs <#Conall-55dab9c0>;
+    irishRel:ancestorOfGroup <#hConAnróit>.
+
+<#hConAnróit>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Con Anróit" .
+    
 
 <#ConAnróit>
     a foaf:Person;
@@ -2577,14 +3074,26 @@
 <#Glasderc-beaf6c10>
     a foaf:Person;
     irishRel:nomName "Glasderc";
-    rdfs:comment "a quo .h. Glasdeirc";
-    owl:sameAs <#Glasderc>.
+    owl:sameAs <#Glasderc>;
+    irishRel:ancestorOfGroup <#hGlasdeirc>.
+
+<#hGlasdeirc>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Glasdeirc" .    
 
 <#Fubaide>
     a foaf:Person;
     irishRel:nomName "Fubaide";
     owl:sameAs <#Furbbaide>;
-    rdfs:comment "a quo .h. Fuachon .h. Baetain .&c".
+    irishRel:ancestorOfGroup <#hFuachon>, <#hBaetain>.
+
+<#hFuachon>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Fuachon" .
+
+<#hBaetain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Baetain" .
 
 <#Fuachon>
     a foaf:Person;
@@ -2602,7 +3111,36 @@
     irishRel:nomName "Fergus Lamderg";
     rel:childof <#Fothaid-49b630b0>;
     owl:sameAs <#FergusLaebderg>;
-    rdfs:comment "A quo etiam .h. Chaili .h. Flathechain .h. Fidrechain .h. Chathain .h. Gaimdechair .h. Dobrain. Síl Cruachi for Gabrán.".
+    irishRel:ancestorOfGroup <#hChaili>, <#hFlathechain>, <#hFidrechain>, <#hChathain>, <#hGaimdechair>, <#hDobrain>, <#SílCruachi>.
+
+<#hChaili>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chaili" .
+
+<#hFlathechain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Flathechain" .
+
+<#hFidrechain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Fidrechain" .
+
+<#hChathain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chathain" .
+
+<#hGaimdechair>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Gaimdechair" .
+
+<#hDobrain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dobrain" .
+
+<#SílCruachi>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Cruachi" ;
+    rdfs:comment "for Gabrán" .
 
 <#Fothaid-49b630b0>
     owl:sameAs <#Fhothaid-7fb47155>.
@@ -2761,7 +3299,15 @@
     a foaf:Person;
     irishRel:nomName "Oengus";
     rel:childOf <#Caitt>;
-    rdfs:comment "a quo .h. Dolbain. & h. Con Chiaráin".
+    irishRel:ancestorOfGroup <#hDolbain>, <#hConChiaráin>.
+
+<#hDolbain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Dolbain" .
+
+<#hConChiaráin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Con Chiaráin" .
 
 <#Dolbain>
     a foaf:Person;
@@ -2779,7 +3325,11 @@
     a foaf:Person;
     irishRel:nomName "Conall";
     rel:childOf <#Caitt>;
-    rdfs:comment "a quo .h. Foilleain".
+    irishRel:ancestorOfGroup <#hFoilleain>.
+
+<#hFoilleain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Foilleain" .
 
 <#Foilleain>
     a foaf:Person;
@@ -2791,7 +3341,15 @@
     a foaf:Person;
     irishRel:nomName "Decell";
     rel:childOf <#Caitt>;
-    rdfs:comment "a quo .h. Rechtabra et Berchan Senchilli. & h. Amsáin".
+    irishRel:ancestorOfGroup <#hRechtabra>, <#hAmsáin>.
+
+<#hRechtabra>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Rechtabra" .
+
+<#hAmsáin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Amsáin" .
 
 <#Rechtabra>
     a foaf:Person;
@@ -2813,7 +3371,15 @@
     a foaf:Person;
     irishRel:nomName "Muridach";
     rel:childOf <#Columbae>;
-    rdfs:comment "a quo .h. Mengain & h. Chaír".
+    irishRel:ancestorOfGroup <#hMengain>, <#hChaír>.
+
+<#hMengain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Mengain" .
+
+<#hChaír>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Chaír" .
 
 <#Mengain>
     a foaf:Person;
@@ -2899,7 +3465,15 @@
     a foaf:Person;
     irishRel:nomName "Senach";
     rel:childOf <#Emri>;
-    rdfs:comment "Sil Senaig. h. Loppini i Cill Rannairech".
+    irishRel:ancestorOfGroup <#SilSenaig>, <#hLoppini>.
+
+<#SilSenaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Sil Senaig" .
+
+<#hLoppini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Loppini" .
 
 <#Loppini>
     a foaf:Person;
@@ -2948,7 +3522,19 @@
     irishRel:nomName "Mane Mál";
     irishRel:numChild 4;
     rel:childOf <#FeidlimidFerUrglas>;
-    rdfs:comment "sen .h. Máil & h. Téig. & h. Cellaig Cualann".
+    irishRel:ancestorOfGroup <#hMáil>, <#hTéig>, <#hCellaigCualann>.
+
+<#hMáil>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Máil" .
+
+<#hTéig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Téig" .
+
+<#hCellaigCualann>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Cellaig Cualann" .
 
 <#CathairMár>
     a foaf:Person;
@@ -3212,8 +3798,30 @@
 <#Breoda>
     a foaf:Person;
     irishRel:nomName "Breoda";
-    rel:childOf <#Echach-d0a9b7a2>.
+    rel:childOf <#Echach-d0a9b7a2>;
+    irishRel:ancestorOfGroup <#ÓicCillini>.
 
+<#ÓicCillini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Óic Cillini" ;
+    irishRel:ancestorGroupOf <#hCrocheni>, <#hDuibChuilne>, <#hFintain>, <#hLamich>.
+
+<#hCrocheni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Crocheni" .
+
+<#hDuibChuilne>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Duib Chuilne" .
+
+<#hFintain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Fintain" .
+
+<#hLamich>
+    a irish:PopulationGroup ;
+    irishRel:populationGroupName ".h. Lamich" .
+    
 <#Echach-d0a9b7a2>
     owl:sameAs <#Eochu-631bc690>.
 
@@ -3540,6 +4148,22 @@
     irishRel:nomName "Cronan";
     foaf:title "sapiens"@la;
     rel:siblingOf <#Doborchu>.
+
+<#Siln-Indercaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Sil n-Indercaig" .
+
+<#SílManchain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Manchain" .
+
+<#SílDenetain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Denetain" .
+
+<#hBrandubain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Brandubain" .
 
 <#MacErcae>
     a foaf:Person;
@@ -4707,7 +5331,7 @@
     irishRel:ancestorOfGroup <#ÚiBerraidi>.
 
 <#ÚiBerraidi>
-    a irishRel:populationGroup;
+    a irishRel:PopulationGroup;
     irishRel:populationGroupName ".h. Berraide";
     rdfs:comment "oc Leccuch".
 
@@ -5632,7 +6256,7 @@
     rel:descendantOf <#MaelSinchill>.
 
 <#MeicGussain>
-    a irishRel:populationGroup;
+    a irishRel:PopulationGroup;
     irishRel:populationGroupName "Meic Gussain".
 
 <#Mugroin-f0fa9a31>
@@ -6260,13 +6884,13 @@
     a foaf:Person;
     irishRel:nomName "Carpre";
     rel:childOf <#Nannida-86c5ba58>;
-    irishRel:ancestorOfGroup <#.h.MaeleTola>.
+    irishRel:ancestorOfGroup <#hMaeleTola>.
 
 <#Nannida-86c5ba58>
     owl:sameAs <#Nannida-334a35f0>.
 
-<#.h.MaeleTola>
-    a irishRel:populationGroup;
+<#hMaeleTola>
+    a irishRel:PopulationGroup;
     irishRel:populationGroupName ".h. Maele Tola".
 
 <#Mongan>
