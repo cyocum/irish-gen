@@ -30,8 +30,23 @@
 <#ConaillCernaig>
     a foaf:Person;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1123545>;
-    irishRel:nomName "Conaill Cernaig".
+    irishRel:nomName "Conaill Cernaig" ;
+    irishRel:ancestorOfGroup <#ClannaConaillCernaig>.
     # same as eli_descirt.ttl and laigsi.ttl #ConaillCernaig ? - CY
+
+<#ClannaConaillCernaig>
+    a irish:PopulationGroup ;
+    irishRel:populationGroupName "Clanna Conaill Cernaig" ;
+    irishRel:ancestorGroupOf <#Dáln-Araide>, <#hEchachUlad>.
+
+<#Dáln-Araide>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dál n-Araide" .
+#same as dáil_araide.ttl Dál n-Araide? - CY
+
+<#hEchachUlad>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Echach Ulad" .
 
 <#Celtchair>
     a foaf:Person;
@@ -56,12 +71,17 @@
 <#Uathnia>
     a foaf:Person;
     irishRel:nomName "Uathnia";
-    rel:childOf <#Celtchair>.
+    rel:childOf <#Celtchair>.    
 
 <#Druthnia>
     a foaf:Person;
     irishRel:nomName "Druthnia";
-    rel:childOf <#Celtchair>.
+    rel:childOf <#Celtchair>;
+    irishRel:populationGroupName <#Dálm-Bundruini>.
+
+<#Dálm-Bundruini>
+    a irishTitles:PopulationGroup ;
+    irishRel:populationGroupName "Dál m-Bundruini" .
 
 <#UathneTire>
     a foaf:Person;
@@ -72,6 +92,66 @@
     a foaf:Person;
     irishRel:nomName "Uathne Chliach";
     rel:childOf <#Uathnia>.
+
+<#ClandSem>
+    a irishRel:PopulationGroup ;
+    irishTitles:populationGroupName "Cland Sem" ;
+    irishRel:ancestorGroupOf <#Semni>.
+
+<#Semni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Semni" ;
+    rdfs:comment "na n-Desi" .
+
+<#MoChuaróc>
+    a foaf:Person ;
+    irishRel:nomName "Mo Chuaróc" ;
+    foaf:title "sapiens"@lat, "the wise"@eng ;
+    irishRel:descendantOfGroup <#Semni>.
+
+<#ClandAilella>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Ailella" .
+
+<#Caenna>
+    a foaf:Person ;
+    irishRel:nomName "Caenna" ;
+    irishRel:descendantOfGroup <#ClandAilella>;
+    irishRel:ancestorOfGroup <#LuigneConnacht>, <#hIndFhochlai>.
+
+<#LuigneConnacht>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Luigne Connacht" .
+
+<#hIndFhochlai>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Ind Fhochlai" .
+
+<#ClandEogain>
+    a irish:PopulationGroup ;
+    irishRel:populationGroupName "Cland Eogain" ;
+    irishRel:ancestorOfGroup <#CorcoOlcindCruraich>, <#CorcoShoilcindDes>, <#CorcuSholcindDrochet>, <#CorcoMaigeLocha>, <#CorcuThethba>.
+
+<#CorcoOlcindCruraich>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corco Olcind Cruraich" .
+
+<#CorcoShoilcindDes>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corco Shoilcind Des" ;
+    rdfs:comment "fiud" .
+
+<#CorcuSholcindDrochet>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corcu Sholcind Drochet" .
+
+<#CorcoMaigeLocha>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corco Maige Locha" .
+
+<#CorcuThethba>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corcu Thethba" .
 
 <#Caenraige>
     a foaf:Person;
@@ -123,6 +203,10 @@
     irishRel:nomName "Láma";
     rel:childOf <#Conchobuir>.
 
+<#Lamraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Lamraige" .
+    
 <#Lama>
     a foaf:Person;
     irishRel:nomName "Lama";
