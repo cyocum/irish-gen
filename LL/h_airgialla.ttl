@@ -26,6 +26,14 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>;
     irishRel:numChild 2.
 
+<#hNéil>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Néil" .
+
+<#Airgiall>
+    a irishTitles:PopulationGroup ;
+    irishRel:populationGroupName "Airgiall" .
+
 <#MuridachTirech>
     a foaf:Person;
     irishRel:nomName "Muridach Tirech";
@@ -42,25 +50,44 @@
     irishRel:genName "Colla Oss";
     irishRel:nomName "Colla Uais";
     rel:childOf <#EochoDomlén>;
-    rdfs:comment "a quo .h Meic Uais. & h. Thurtri";
     owl:sameAs <http://example.com/LL/h_fiachrach_arda_sratha.ttl#CollaUais>;
     owl:sameAs <http://example.com/LL/rig_h_turtri.ttl#CollaUais>;
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#CollaUais>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#CollaUais>;
+    irishRel:ancestorOfGroup <#hMeicUais>, <#hThurtri>.
+
+<#hMeicUais>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h Meic Uais" .
+
+<#hThurtri>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Thurtri" .
+    
 
 <#CollaMend>
     a foaf:Person;
     irishRel:nomName "Colla Mend";
     rel:childOf <#EochoDomlén>;
-    rdfs:comment "o tát Mugdornai";
+    rdfs:comment "o tát ";
     irishRel:fosterChildOf <#MennetChruithnech>;
     irishRel:fosterChildOf <#MugdornDub>;
-    owl:sameAs <http://example.com/LL/mugdorn.ttl#CollaMind>.
+    owl:sameAs <http://example.com/LL/mugdorn.ttl#CollaMind>;
+    irishRel:ancestorOfGroup <#Mugdornai>.
+
+<#Mugdornai>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Mugdornai" .
 
 <#MennetChruithnech>
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Mennet Chruithnech";
-    rdfs:comment "o tá Dál Mennet la Mugdornaib".
+    irishRel:ancestorOfGroup <#DálMennet>.
+
+<#DálMennet>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dál Mennet" ;
+    rdfs:comment "la Mugdornaib" .    
 
 <#MugdornDub>
     a foaf:Person;
@@ -95,25 +122,45 @@
     a foaf:Person;
     irishRel:nomName "Dubruig";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "a quo Dubraige oc Imliuch Chorcu Duib".
+    irishRel:ancestorOfGroup <#Dubraige>.
+
+<#Dubraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dubraige" ;
+    rdfs:comment "oc Imliuch Chorcu Duib" .    
 
 <#Papa>
     a foaf:Person;
     irishRel:nomName "Papa";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "o tát Papraige la Cremthannu".
+    irishRel:ancestorOfGroup <#Papraige>.
+
+<#Papraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Papraige" ;
+    rdfs:comment "la Cremthannu" .
 
 <#Caira>
     a foaf:Person;
     irishRel:nomName "Caira";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "a quo Cairraige i Cuib".
+    irishRel:ancestorOfGroup <#Cairraige>.
+
+<#Cairraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cairraige" ;
+    rdfs:comment "i Cuib" .
 
 <#Sord>
     a foaf:Person;
     irishRel:nomName "Sord";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "a quo Sordraige la Crimthannu".
+    irishRel:ancestorOfGroup <#Sordraige>.
+
+<#Sordraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Sordraige" ;
+    rdfs:comment "la Crimthannu" .    
 
 <#Ibar>
     a foaf:Person;
@@ -126,13 +173,22 @@
     a foaf:Person;
     irishRel:nomName "Art";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "a quo Artraige".
+    irishRel:ancestorOfGroup <#Artraige>.
+
+<#Artraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Artraige" .
 
 <#Inhomomon>
     a foaf:Person;
     irishRel:nomName "Inhomomon";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "a quo Corco Inmend la Luigniu".
+    irishRel:ancestorOfGroup <#CorcoInmend>.
+
+<#CorcoInmend>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corco Inmend" ;
+    rdfs:comment "la Luigniu" .
 
 <#LocheneMend>
     a foaf:Person;
@@ -144,7 +200,12 @@
     a foaf:Person;
     irishRel:nomName "Mesnophe";
     rel:childOf <#MugdornDuib>;
-    rdfs:comment "a quo Sobraige la Mugdornu".
+    irishRel:ancestorOfGroup <#Sobraige>.
+
+<#Sobraige>
+    a irishTitles:PopulationGroup ;
+    irishRel:populationGroupName "Sobraige" ;
+    rdfs:comment "la Mugdornu" .
 
 <#Ethern>
     a foaf:Person;
@@ -159,7 +220,20 @@
     irishRel:genName "Colla Fochri";
     irishRel:nomName "Colla Ochre";
     rel:childOf <#EochoDomlén>;
-    rdfs:comment "Is ón Chollasain atát .h. Crimthainn & int Airther & h. Méith".
+    irishRel:ancestorOfGroup <#hCrimthainn>, <#intAirther>, <#hMéith>.
+    rdfs:comment "Is ón Chollasain".
+
+<#hCrimthainn>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Crimthainn" .
+
+<#intAirther>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "int Airther" .
+
+<#hMéith>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Méith" .
 
 <#Élige>
     a foaf:Person;
@@ -198,19 +272,31 @@
     a foaf:Person;
     irishRel:nomName "Rochad";
     rel:childOf <#CollaFochrith>;
-    rdfs:comment "o tát .h. Chremthainn".
+    irishRel:ancestorOfGroup <#hChremthainn>.
+
+<#hChremthainn>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chremthainn" .
 
 <#Brian>
     a foaf:Person;
     irishRel:nomName "Brian";
     rel:childOf <#CollaFochrith>;
-    rdfs:comment "a quo h. Bríuin".
+    irishRel:ancestorOfGroup <#Bríuin>.
+
+<#Bríuin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Bríuin" .    
 
 <#Labraid>
     a foaf:Person;
     irishRel:nomName "Labraid";
     rel:childOf <#CollaFochrith>;
-    rdfs:comment "a quo h. Labrada".
+    irishRel:ancestorOfGroup <#hLabrada>.
+
+<#hLabrada>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Labrada" .
 
 <#Crimthand>
     a foaf:Person;
@@ -237,13 +323,21 @@
     a foaf:Person;
     irishRel:nomName "Fergus Cendfhota";
     rel:childOf <#Crimthand>;
-    rdfs:comment "a quo .h. Chendfhotai".
+    irishRel:ancestorOfGroup <#hChendfhotai>.
+
+<#hChendfhotai>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chendfhotai" .
 
 <#Lugaid>
     a foaf:Person;
     irishRel:nomName "Lugaid";
     rel:childOf <#Crimthand>;
-    rdfs:comment "ó tá Leithrend".
+    irishRel:ancestorOfGroup <#Leithrend>.
+
+<#Leithrend>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Leithrend" .
 
 <#Muridach>
     a foaf:Person;
@@ -254,7 +348,11 @@
     a foaf:Person;
     irishRel:nomName "Eochaid Amainsen";
     rel:childOf <#Muridach>;
-    rdfs:comment "o tát h. Meic Brócc".
+    irishRel:ancestorOfGroup <#hMeicBrócc>.
+
+<#hMeicBrócc>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Meic Brócc" .
 
 <#EochaidAndgaine>
     a foaf:Person;
@@ -277,38 +375,61 @@
     a foaf:Person;
     irishRel:nomName "Daimine";
     rel:childOf <#CairpreDamArgait>;
-    rdfs:comment "a quo Síl n-Daimine";
+    irishRel:ancestorOfGroup <#Síln-Daimine>;
     owl:sameAs <http://example.com/LL/síl_daimini.ttl#Daimine>.
+
+<#Síln-Daimine>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl n-Daimine" .
 
 <#Cormac>
     a foaf:Person;
     irishRel:nomName "Cormac";
     rel:childOf <#CairpreDamArgait>;
-    rdfs:comment "o tát Cland Cormaic .i. Cland Lugan".
+
+<#ClandCormaic>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Cormaic", "Cland Lugan" .    
 
 <#NadSluaig>
     a foaf:Person;
     irishRel:nomName "Nad Sluaig";
     rel:childOf <#CairpreDamArgait>;
-    rdfs:comment "o tát Cland Nad Slúaig .i. Fir Fhernmaige".
+    irishRel:ancestorOfGroup <#ClandNadSlúaig>.
+
+<#ClandNadSlúaig>
+    a irishTitles:PopulationGroup ;
+    irishRel:populationGroupName "Cland Nad Slúaig", "Fir Fhernmaige" .
 
 <#Feradach>
     a foaf:Person;
     irishRel:nomName "Feradach";
     rel:childOf <#CairpreDamArgait>;
-    rdfs:comment "o tat Cland Fheradaig".
+    irishRel:ancestorOfGroup <#ClandFheradaig>.
+
+<#ClandFheradaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Fheradaig" .
 
 <#Fiacha>
     a foaf:Person;
     irishRel:nomName "Fiacha";
     rel:childOf <#CairpreDamArgait>;
-    rdfs:comment "o tát Cenel Fiachach".
+    irishRel:ancestorOfGroup <#CenelFiachach>.
+
+<#CenelFiachach>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Fiachach" .
 
 <#Brian>
     a foaf:Person;
     irishRel:nomName "Brian";
     rel:childOf <#CairpreDamArgait>;
-    rdfs:comment "o tát Lethrind. Sil m-Baetain".
+    irishRel:ancestorOfGroup <#Lethrind>.
+
+<#Lethrind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Lethrind", "Sil m-Baetain" .
 
 <#Aed>
     a foaf:Person;
@@ -324,7 +445,12 @@
     a foaf:Person;
     irishRel:nomName "Conall";
     rel:childOf <#Daimine-1e674840>;
-    rdfs:comment "o tá Lethrend Conaill for Doblu".
+    irishRel:ancestorOfGroup <#LethrendConaill>.
+
+<#LethrendConaill>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Lethrend Conaill" ;
+    rdfs:comment "for Doblu" .
 
 <#Ailill>
     a foaf:Person;
@@ -336,13 +462,21 @@
     a foaf:Person;
     irishRel:nomName "Lochan";
     rel:childOf <#Daimine-1e674840>;
-    rdfs:comment "a quo Lethrend Lochain".
+    irishRel:ancestorOfGroup <#LethrendLochain>.
+
+<#LethrendLochain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Lethrend Lochain" .
 
 <#Tuathal>
     a foaf:Person;
     irishRel:nomName "Tuathal";
     rel:childOf <#Daimine-1e674840>;
-    rdfs:comment "a quo .h. Thuathail".
+    irishRel:ancestorOfGroup <#Thuathail>.
+
+<#Thuathail>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Thuathail" .
 
 <#DamanLaech>
     a foaf:Person;
@@ -369,4 +503,9 @@
     a foaf:Person;
     irishRel:nomName "Aed Uach";
     rel:childOf <#Daimine-1e674840>;
-    rdfs:comment "a quo Dál n-Oich int Shlébe".
+    irishRel:ancestorOfGroup <#Dáln-OichintShlébe>.
+
+<#Dáln-OichintShlébe>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dál n-Oich int Shlébe" .
+    

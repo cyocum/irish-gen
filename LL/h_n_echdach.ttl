@@ -123,8 +123,9 @@ _:missing-d48779e1
     rel:childOf [
         a foaf:Person;
         foaf:gender "female";
-        rel:childOf <#Chennetig> 
-].
+        rel:childOf <#Chennetig>;
+        irishRel:descendantOfGroup <#hBriain>
+    ].
 
 <#Chennetig>
     a foaf:Person;
@@ -137,6 +138,10 @@ _:missing-d48779e1
     irishRel:genName "Briain";
     irishRel:nomName "Brian";
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Brian>.
+
+<#hBriain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Briain" .
 
 # I am tempted to identify this man with Brían Bóruma, as Cennetig
 # is also a Dál Caiss name and Armagh did align itself with Brían.
@@ -212,7 +217,13 @@ _:missing-d48779e1
     a foaf:Person;
     irishRel:genName "Fheradaig";
     irishRel:nomName "Feradach";
-    rel:childOf <#Amalgada-cdc21715>.
+    rel:childOf <#Amalgada-cdc21715>;
+    irishRel:ancestorOfGroup <#hBrótaid>.
+
+<#hBrótaid>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Brótaid" ;
+    rdfs:comment "i Cluain Fiacna" .
 
 <#Amalgada-cdc21715>
     a foaf:Person;
