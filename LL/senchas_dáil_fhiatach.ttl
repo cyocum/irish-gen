@@ -7,6 +7,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 
 <>
     a dctype:Dataset;
@@ -15,7 +16,7 @@
     dcterms:format "text/turtle".
 
 <#FhiatachFind>
-    a foaf:Person;
+    a irishTitle:Rí ;
     irishRel:genName "Fhiatach Find";
     irishRel:nomName "Fiatu Find";
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1272291>;
@@ -107,8 +108,7 @@
 <#Lugdach>
     a foaf:Person;
     irishRel:genName "Lugdach";
-    irishRel:nomName "Lugaid";
-    .
+    irishRel:nomName "Lugaid" .
 
 <#Aed>
     a foaf:Person;
@@ -131,7 +131,7 @@
     rel:childOf <#Dubthaig>.
 
 <#Oengus>
-    a foaf:Person;
+    a irithTitle:Epscop ;
     irishRel:nomName "Oengus";
     foaf:title "Epscop"@sga, "Bishop"@en;
     rel:descendantOf <#Daig>.
@@ -161,57 +161,98 @@
     a foaf:Person;
     irishRel:nomName "Combrat";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo Cenel Combraite".
+    irishRel:ancestorOfGroup <#CenelCombraite>.
+
+<#CenelCombraite>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Combraite" .
 
 <#Connaid>
     a foaf:Person;
     irishRel:nomName "Connaid";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo .h. Connaide Enna díbaidside".
+    irishRel:ancestorOfGroup <#hConnaideEnna>.
+    
+<#hConnaideEnna>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Connaide Enna" ;
+    rdfs:comment "díbaidside" .
 
 <#Nem>
     a foaf:Person;
     irishRel:nomName "Nem";
     rel:childOf <#Forg>;
-    rdfs:comment "á quo .h. Nemand la Crimthainniu".
+    irishRel:ancestorOfGroup <#hNemand>.
+
+<#hNemand>
+    a irishRel:PopulationGroup ;
+    irishRel:ancestorOfGroup ".h. Nemand" .
 
 <#Lugaid>
     a foaf:Person;
     irishRel:nomName "Lugaid";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo .h. Lugdech".
+    irishRel:ancestorOfGroup <#hLugdech>.
+
+<#hLugdech>
+    a irishRel:PopulationGroup ;
+    irishRel:ancestorOfGroup ".h. Lugdech" .
 
 <#Bresal>
     a foaf:Person;
     irishRel:nomName "Bresal";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo .h. Bresail".
+    irishRel:ancestorOfGroup <#hBresail>.
+
+<#hBresail>
+    a irishRel:PopulationGroup ;
+    irishRel:ancestorOfGroup ".h. Bresail" .
 
 <#Longthe>
     a foaf:Person;
     irishRel:nomName "Longthe";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo .h. Longthe".
+    irishRel:ancestorOfGroup <#hLongthe>.
+
+<#hLongthe>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Longthe" .
 
 <#Conall>
     a foaf:Person;
     irishRel:nomName "Conall";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo .h. Conaill".
+    irishRel:ancestorOfGroup <#hConaill>.
+
+<#hConaill>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Conaill" .
 
 <#Crimthand>
     a foaf:Person;
     irishRel:nomName "Crimthand";
     rel:childOf <#Forg>;
-    rdfs:comment "a quo Cenél Crimthainn".
+    irishRel:ancestorOfGroup <#CenélCrimthainn>.
+
+<#CenélCrimthainn>
+    a irishRel:PopulationGroup ;
+    irishRel:ancestorOfGroup "Cenél Crimthainn" .
+
 
 <#OengusIbtach>
     a foaf:Person;
     irishRel:nomName "Oengus Ibtach";
-    rdfs:comment "a quo .h. Ibtaig & mathair eius d'Íbtachaib fuit";
+    rdfs:comment "mathair eius d'Íbtachaib fuit";
     rel:childOf <#Forg>;
-    rel:childOf [a foaf:Person;
-                 foaf:gender "female"].
+    rel:childOf [
+        a foaf:Person;
+        foaf:gender "female"
+    ] ;
+    irishRel:ancestorOfGroup <#hIbtaig>.
+
+<#hIbtaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Ibtaig" .
 
 <#MuridachMunderg>
     a foaf:Person;
@@ -234,20 +275,32 @@
     a foaf:Person;
     irishRel:nomName "Brenaind";
     rel:childOf <#MuridachMunderg>;
-    rdfs:comment "a quo Cenel m-Brenaind".
+    irishRel:ancestorOfGroup <#Cenelm-Brenaind>.
+
+<#Cenelm-Brenaind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel m-Brenaind" .
 
 <#EoganMerchrom>
     a foaf:Person;
     irishRel:nomName "Eogan Merchrom";
     rel:childOf <#MuridachMunderg>;
-    rdfs:comment "a quo Cenel Merchroim";
+    irishRel:ancestorOfGroup <#CenelMerchroim>;
     irishRel:numChild 7.
+
+<#CenelMerchroim>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Merchroim" .
 
 <#Maelodor>
     a foaf:Person;
     irishRel:nomName "Maelodor";
     rel:childOf <#MuridachMunderg>;
-    rdfs:comment "a quo Cenel Maelodir".
+    irishRel:ancestorOfGroup <#CenelMaelodir>.
+
+<#CenelMaelodir>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Maelodir" .
 
 <#Congal>
     a foaf:Person;
@@ -308,7 +361,11 @@
     a foaf:Person;
     irishRel:nomName "Cablin";
     rel:childOf <#ConaillChostodaig>;
-    rdfs:comment "quo Cenel Caiblin".
+    irishRel:ancestorOfGroup <#CenelCaiblin>.
+
+<#CenelCaiblin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Caiblin" .
 
 <#Ainmeri>
     a foaf:Person;
@@ -337,11 +394,16 @@
     rdfs:comment "a quo Cenel n-Geno".
 
 <#Baetán>
-    a foaf:Person;
+    a irishTitle:Rí;
     irishRel:nomName "Baetán";
     foaf:title "rí h-Erenn"@sga, "King of Ireland"@en;
     rel:childOf <#Cairill>;
+    irishRel:ancestorOfGroup <#CuGabraige>;
     rdfs:comment "a quo Cu Gabraige".
+
+<#CuGabraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cu Gabraige" .
 
 <#Cairill>
     a foaf:Person;
@@ -381,9 +443,13 @@
 <#Demmán>
     a foaf:Person;
     irishRel:nomName "Demmán";
-    rdfs:comment "a quo Cenel Demmain";
+    irishRel:ancestorOfGroup <#CenelDemmain>;
     rdfs:comment "genus eius usque hodie regnat";
     irishRel:numChild 5.
+
+<#CenelDemmain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Demmain" .
 
 <#Domangart>
     a foaf:Person;
@@ -397,7 +463,7 @@
 # but maybe it will become apparent. EPT
 
 <#Fergaile>
-    a foaf:Person;
+    a irishTitle:Rí ;
     irishRel:nomName "Fergaile";
     foaf:title "rí Ulad"@sga, "King of Ulster"@en;
     irishRel:numChild 7;
@@ -407,7 +473,11 @@
     a foaf:Person;
     irishRel:nomName "Fingen";
     rel:childOf <#Demmán>;
-    rdfs:comment "a quo Cenel Fingin".
+    irishRel:ancestorOfGroup <#CenelFingin>.
+
+<#CenelFingin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Fingin" .
 
 <#Glassan>
     a foaf:Person;
@@ -459,8 +529,12 @@
     a foaf:Person;
     irishRel:nomName "Mael Duin";
     rel:childOf <#Fiachnai>;
-    rdfs:comment "a quo Cenel Murchada";
+    irishRel:ancestorOfGroup <#CenelMurchada>;
     rdfs:comment "Is é dano ro ort mccu Baetain mc Cairill & mccu a brathar i n-Dún Mugnae".
+
+<#CenelMurchada>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Murchada" .
 
 <#CumneDuibni>
     a foaf:Person;

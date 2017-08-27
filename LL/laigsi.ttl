@@ -172,8 +172,20 @@
     irishRel:nomName "Bacain";
     owl:sameAs <#Bacan>;
     rel:childOf <#LugdachLoigsi>;
-    rdfs:comment "a quo Sil Mescill";
-    rdfs:comment "Et do Síl Bácain Ú Dochlú. & Laiches Reta uile".
+    irishRel:ancestorOfGroup <#SilMescill>, <#SílBácain>, <#LaichesReta>.
+
+<#SilMescill>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Sil Mescill" .
+
+<#SílBácain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Bácain" .
+
+<#LaichesReta>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Laiches Reta" ;
+    rdfs:comment "uile" .    
 
 <#LugdachLoigsi>
     irishRel:nomName "Lugdach Loigsi";
@@ -265,7 +277,12 @@
 <#DiarmataLaigesRámne>
     a foaf:Person;
     irishRel:nomName "Diarmata Laiges Rámne";
-    rdfs:comment "Síl Diarmata Laiges Rámne .i. nomen collis".
+    irishRel:ancestorOfGroup <#SílDiarmataLaigesRámne>.
+
+<#SílDiarmataLaigesRámne>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Diarmata Laiges Rámne" ;
+    rdfs:comment ".i. nomen collis" .
 
 <#Cummascach>
     a foaf:Person;
@@ -313,11 +330,34 @@
     irishRel:genName "Senaig";
     irishRel:nomName "Senach";
     rel:childOf <#Comgaill>;
-    rdfs:comment "Sil Senaig Bic .i. Laiges Fer na Cenel dano Dublaiches & Laiges Bregmon nomen collis";
+    irishRel:ancestorOfGroup <#SilSenaigBic>, <#SilSenaigMóir>;
     rdfs:comment "Sil Senaig Móir: Laiges Lethnada & Laiges Cuile Buichle".
-# senaig bic or móir ? - CY
-# I read it as there being just one Senach and a Síl Mór
-# and a Síl Becc. But I am open to counter-argument. EPT
+
+<#SilSenaigBic>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Sil Senaig Bic" ;
+    irishRel:ancestorGroupOf <#LaigesFernaCenelDublaiches>, <#LaigesBregmon>.
+
+<#LaigesFernaCenelDublaiches>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Laiges Fer na Cenel dano Dublaiches" .    
+
+<#LaigesBregmon>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Laiges Bregmon" .
+
+<#SilSenaigMóir>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Sil Senaig Móir" ;
+    irishRel:ancestorGroupOf <#LaigesLethnada>, <#LaigesCuileBuichle>.
+    
+<#LaigesLethnada>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Laiges Lethnada" .
+
+<#LaigesCuileBuichle>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Laiges Cuile Buichle" .    
 
 <#Comgaill>
     irishRel:genName "Comgaill";
@@ -379,14 +419,41 @@
 <#Lagnech>
     a foaf:Person;
     irishRel:nomName "Lagnech";
-    rel:childOf <#Lugnai-3e81a1e4>;
-    rdfs:comment "a quo .h. Báith & .h. Brocain issed a orbba Loch Laignich & Cluain Connaid".
+    rel:childOf <#Lugnai-3e81a1e4>.
+
+<#hBáith>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Báith" ;
+    rdfs:comment "issed a orbba Loch Laignich & Cluain Connaid" .
+
+<#hBrocain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Brocain" . ;
+    rdfs:comment "issed a orbba Loch Laignich & Cluain Connaid" .
+
 
 <#Erc-4dd787fc>
     a foaf:Person;
     irishRel:nomName "Erc";
     rel:childOf <#Lugnai-3e81a1e4>;
-    rdfs:comment "a quo .h. Diamrain & Dodecce & h. Forandla & h. Chormaic. Is é a ferand. Tech n-Declaín & Domnach Findchon & Caelbothar & Cluain Da Fiach & Cluain Dartada. Et in ferand forsat .h. Fhoranla".
+    rdfs:comment "a quo .h. Diamrain & Dodecce & h. Forandla & h. Chormaic. Is é a ferand. Tech n-Declaín & Domnach Findchon & Caelbothar & Cluain Da Fiach & Cluain Dartada. Et in ferand forsat .h. Fhoranla" ;
+    irishRel:ancestorOfGroup <#hDiamrain>, <#Dodecce>, <#hForandla>, <#hChormaic>.
+
+<#hDiamrain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Diamrain" .
+
+<#Dodecce>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dodecce" .
+
+<#hForandla>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Forandla" .
+
+<#hChormaic>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Chormaic" .
 
 <#Columb>
     a foaf:Person;
@@ -558,7 +625,7 @@
     irishRel:nomName "Bairr";
     rel:childOf <#Cairthind>.
 
-    <#Cairthind>
+<#Cairthind>
     a foaf:Person;
     irishRel:genName "Cairthind";
     irishRel:nomName "Carthend".
@@ -636,19 +703,26 @@ _:missing-231433a2
     a foaf:Person;
     irishRel:nomName "Eogan";
     rel:childOf <#Bairr-4d968e16>;
+    irishRel:descendantOfGroup <#nhBresail>;
     rdfs:comment "i Feib. .i. i n.h. Bresail".
 
 <#Lugaid>
     a foaf:Person;
     irishRel:nomName "Lugaid";
     rel:childOf <#Bairr-4d968e16>;
+    irishRel:descendantOfGroup <#nhBresail>;
     rdfs:comment "i Feib. .i. i n.h. Bresail".
 
 <#Diarmait>
     a foaf:Person;
     irishRel:nomName "Diarmait";
     rel:childOf <#Bairr-4d968e16>;
+    irishRel:descendantOfGroup <#nhBresail>;
     rdfs:comment "i Feib. .i. i n.h. Bresail".
+
+<#nhBresail>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "n.h. Bresail" .
 
 <#Ronan>
     a foaf:Person;
@@ -743,13 +817,22 @@ _:missing-231433a2
     a foaf:Person;
     irishRel:nomName "Oengus";
     rel:childOf <#DuibThiprat-2b156860>;
-    rdfs:comment "a quo Cland Fhlannacain i m-Bairrchiu".
+    irishRel:ancestorOfGroup <#ClandFhlannacain>.
+
+<#ClandFhlannacain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Fhlannacain" ;
+    rdfs:comment "i m-Bairrchiu" .
 
 <#Forannan>
     a foaf:Person;
     irishRel:nomName "Forannan";
     rel:childOf <#DuibThiprat-2b156860>;
-    rdfs:comment "a quo Cland Elge".
+    irishRel:ancestorOfGroup <#ClandElge>.
+
+<#ClandElge>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Elge" .
 
 <#Cathnia>
     a foaf:Person;

@@ -7,6 +7,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 
 <>
     a dctype:Dataset;
@@ -51,7 +52,7 @@
     rdfs:comment "senathair Ossairgi".
 
 <#Domnall>
-    a foaf:Person;
+    a irishTitle:Rí;
     irishRel:nomName "Domnall";
     rel:childOf <#Cerbaill>;
     rdfs:comment "rí Ossairge".
@@ -390,13 +391,13 @@
     owl:sameAs <http://example.com/LL/rig_ossairge.ttl#BresailBric>.
 
 <#Dondchad>
-    a foaf:Person;
+    a irishTitle:Rí;
     irishRel:nomName "Dondchad";
     rel:childOf <#GillaiPatric-f9140150>;
     rdfs:comment "rí Ossairge cechtarde".
 
 <#Domnall-3f662c00>
-    a foaf:Person;
+    a irishTitle:Rí;
     irishRel:nomName "Domnall";
     rel:childOf <#GillaiPatric-f9140150>;
     rdfs:comment "rí Ossairge cechtarde".
@@ -885,9 +886,49 @@
     a foaf:Person;
     irishRel:nomName "Dega";
     owl:sameAs <#Daig>;
-    rdfs:comment "Síl Meic Culind dia tát .h. Scellain & .h. Cummín. Scellán & Cummin dá mc Dimma m Fhindchada mc Dega.".
-# There follow a series of population group names, only some of which
-# actually match names in the preceeding pedigrees. EPT
+
+<#SílMeicCulind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Meic Culind" ;
+    irishRel:ancestorGroupOf <#hScellain>, <#hCummín>.
+
+<#hScellain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Scellain" .
+
+<#hCummín>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Cummín" .    
+
+<#Cenelm-Báithéni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel m-Báithéni" .
+
+<#CenelCobthaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Cobthaig" .
+
+<#SílDúnlainge>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Dúnlainge" .
+
+<#CenelMeicInillH-úiDuinemla>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cenel Meic Inill H-úi Duinemla" .
+
+<#Síln-Echini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl n-Echini" .
+
+<#H-úiChaireni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "H-úi Chaireni" .
+
+<#Sílm-Barrind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl m-Barrind" ;
+    rdfs:comment "is díbad" ;
+    rdfs:comment "Is dí ro bói Mucceni & Broicceni." .
 
 <#Sárain>
     a foaf:Person;

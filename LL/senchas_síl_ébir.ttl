@@ -12,7 +12,7 @@
 <>
     a dctype:Dataset;
     dcterms:title "Senchas Síl Ébir fó H-Erinn in so"@sga;
-    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text005.html>;
+    dcterms:isFormatOf <http://celt.ucc.ie/published/G800011F/text005.html>;
     dcterms:format "text/turtle".
 
 <#Eber>
@@ -114,6 +114,10 @@
     rel:childOf <#EochoFaeborglass>;
     rdfs:comment "Ó Nuadait atát Síl Ebir uile".
 
+<#SílEbir>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Síl Ebir" .
+
 <#MaFemis>
     a foaf:Person;
     irishRel:nomName "Ma Femis";
@@ -205,7 +209,12 @@
     irishRel:nomName "Nuadu";
     rel:childOf <#EchachFaeburglais>;
     owl:sameAs <#NuaduDeclam>;
-    rdfs:comment "Cland Nuadat .i. na ríg ro gabsat h-Erinn a Mumain. Et is dia claind na h-Eoganachta uile.".
+    irishRel:ancestorOfGroup <#ClandNuadat>.
+
+<#ClandNuadat>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Cland Nuadat" ;
+    rdfs:comment "na ríg ro gabsat h-Erinn a Mumain. Et is dia claind na h-Eoganachta uile." .
 
 <#EchachFaeburglais>
     a foaf:Person ;
@@ -688,7 +697,7 @@
     a irishTitles:Rí;
     irishRel:nomName "Mog Nuadat";
     irishRel:nomName "Eogan Taidlech";
-    rdfs:comment "a quo Leth Moga Nuadat";
+    irishRel:ancestorOfGroup <#LethMogaNuadat>;
     rdfs:comment "I comlaith & Cond Cetchathach co torchair i m-Maig Lena.";
     rdfs:comment "Is de búi dosom Mog Nuadat .i. ara bith dalta do Nuadait mc Darine mc Barraig. dia m-bái oc denam a ratha. Is and ro gaired deseom Mug";
     rdfs:comment "Eogan Taidlech ainm aile. amal ro scribsamar i Tochmarc Momera ingine ríg Espaine.";
@@ -696,6 +705,10 @@
     irishRel:fosterChildOf <#Nuadait>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#EogainTaidlig>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1897509>.
+
+<#LethMogaNuadat>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Leth Moga Nuadat" .        
 
 <#CondCetcathach>
     a foaf:Person;
@@ -766,7 +779,11 @@
     rel:childOf <#AilillOlom-dd7a2e00>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#EogainMóir>;
     rel:childOf <#Sadbae>;
-    rdfs:comment "a quo Eoganachta".
+    irishRel:ancestorOfGroup <#Eoganachta>.
+        
+<#Eoganachta>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Eoganachta" .        
 
 <#Cian>
     a foaf:Person;
@@ -774,7 +791,11 @@
     rel:childOf <#AilillOlom-dd7a2e00>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Cein>;
     rel:childOf <#Sadbae>;
-    rdfs:comment "a quo Ciannachta".
+    irishRel:ancestorOfGroup <#Ciannachta>.
+
+<#Ciannachta>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Ciannachta" .        
 
 <#CormacCas>
     a foaf:Person;
@@ -782,7 +803,11 @@
     rel:childOf <#AilillOlom-dd7a2e00>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#CormaicCais>;
     rel:childOf <#Sadbae>;
-    rdfs:comment "a quo Dál Caiss .i. in Déis".
+    irishRel:ancestorOfGroup <#DálCaiss>.
+
+<#DálCaiss>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Dál Caiss", "in Déis" .
 
 <#TidellGlasscatha>
     a foaf:Person;
@@ -1006,7 +1031,7 @@
     rel:spouseOf <#Lugaid>.
 
 <#Fiachach>
-    a foaf:Person;
+    a irishTitles:Rí;
     irishRel:genName "Fiachach";
     irishRel:nomName "Fiacha";
     foaf:title "ríg Éli".
@@ -1168,7 +1193,7 @@
     rel:hasMet <#Patric>.
 
 <#Patric>
-    a foaf:Person ;
+    a irithTitles:Noíb ;
     irishRel:genName "Patric";
     irishRel:nomName "Patraic";
     foaf:title "Saint"@eng;
