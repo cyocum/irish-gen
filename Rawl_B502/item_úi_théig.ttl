@@ -1,0 +1,137 @@
+@base <http://example.com/Rawl_B502/item_úi_théig.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Item Úi Théig"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
+    dcterms:format "text/turtle".
+
+<#Murchad>
+    a foaf:Person;
+    irishRel:nomName "Murchad";
+    rel:childOf <#Duinechda>.
+
+<#Duinechda>
+    a foaf:Person;
+    irishRel:nomName "Duinechad";
+    irishRel:genName "Duinechda";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:nomName "Murchad";
+    irishRel:genName "Murchada";
+    rel:childOf <#Gairbíd>.
+
+<#Gairbíd>
+    a foaf:Person;
+    irishRel:nomName "Gairbed";
+    irishRel:genName "Gairbíd";
+    rel:childOf <#Duinechda-9808f9e0>.
+
+<#Duinechda-9808f9e0>
+    a foaf:Person;
+    irishRel:nomName "Duinechad";
+    irishRel:genName "Duinechda";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    irishRel:genName "Conaill";
+    rel:childOf <#Crundmaíl>.
+
+<#Crundmaíl>
+    a foaf:Person;
+    irishRel:nomName "Crundmáel";
+    irishRel:genName "Crundmaíl";
+    rel:childOf <#Duinechda-acb8b100>.
+
+<#Duinechda-acb8b100>
+    a foaf:Person;
+    irishRel:nomName "Duinechad";
+    irishRel:genName "Duinechda";
+    rel:childOf <#Congaile>.
+
+<#Congaile>
+    a foaf:Person;
+    irishRel:nomName "Congaile";
+    irishRel:genName "Congaile";
+    rel:childOf <#Fáeldobuir>.
+
+<#Fáeldobuir>
+    a foaf:Person;
+    irishRel:nomName "Fáeldobur";
+    irishRel:genName "Fáeldobuir".
+
+<#Fiannamail>
+    a irishTitle:rí;
+    foaf:title "ríg Lagen"@sga, "king of Leinster"@eng;
+    irishRel:nomName "Fiannamal";
+    rel:childOf <#MáelTuile>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_maine#2.ttl#Fiannamail>;
+    rdfs:seeAlso <#https://www.wikidata.org/entity/Q5446306>.
+
+<#MáelTuile>
+    a foaf:Person;
+    irishRel:nomName "Máel Tuile";
+    irishRel:genName "Máel Tuile";
+    rel:childOf <#RónáinChraich>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_maine#2.ttl#MáelTuile-cacc4990>.
+
+<#RónáinChraich>
+    a foaf:Person;
+    irishRel:nomName "Rónán Crach";
+    irishRel:genName "Rónáin Chraich";
+    rel:childOf <#Áeda>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_maine#2.ttl#RónáinCraich>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    irishRel:genName "Áeda";
+    rel:childOf <#Senaich>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_maine#2.ttl#ÁedaDíbchíne>.
+
+<#Senaich>
+    a foaf:Person;
+    irishRel:nomName "Senach";
+    irishRel:genName "Senaich";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_maine#2.ttl#SenaichDíbich>.
+
+<#Fochsechán>
+    a foaf:Person;
+    irishRel:nomName "Fochsechán";
+    foaf:title "famulus"@lat, "servant"@eng;
+    rel:employedBy <#Fiannamail>;
+    rel:employedBy <#FínsnechtaFledach>;
+    rdfs:seeAlso <#InTanCon-gairFínsnechta>.
+
+<#FínsnechtaFledach>
+    a irishTitle:rí;
+    foaf:title "rege Temoriae"@lat, "king of Tara"@eng;
+    irishRel:nomName "Fínsnechta Fledach";
+    rel:childOf <#Dúnchada>;
+    rel:antagonistOf <#Fiannamail>;
+    rdfs:seeAlso <#https://www.wikidata.org/entity/Q1154354>;
+    rdfs:seeAlso <#InTanCon-gairFínsnechta>.
+
+<#Dúnchada>
+    a foaf:Person;
+    irishRel:nomName "Dúnchad";
+    irishRel:genName "Dúnchada".
+
+<#InTanCon-gairFínsnechta>
+    dcterms:title "In tan con-gair Fínsnechta"@sga;
+    rdfs:comment "de quo dictum est";
+    rdfs:seeAlso <#http://celt.ucc.ie/published/T100017/text006.html>, <#http://bit.ly/2xeJu7J>.
