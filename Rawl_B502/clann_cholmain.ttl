@@ -1,0 +1,177 @@
+@base <http://example.com/Rawl_B502/clann_cholmain.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Cholmain"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
+    dcterms:format "text/turtle".
+
+<#Aililleán>
+    a foaf:Person;
+    irishRel:nomName "Aililleán";
+    rel:childOf <#Máel Chóemgin>.
+
+<#MáelChóemgin>
+    a foaf:Person;
+    irishRel:nomName "Máel Cóemgin";
+    irishRel:genName "Máel Chóemgin";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    irishRel:genName "Cormaic";
+    rel:childOf <#Crimthainn>.
+
+<#Crimthainn>
+    a foaf:Person;
+    irishRel:nomName "Crimthann";
+    irishRel:genName "Crimthainn";
+    rel:childOf <#Blaithmeic>.
+
+<#Blaithmeic>
+    a foaf:Person;
+    irishRel:nomName "Blathmac";
+    irishRel:genName "Blaithmeic";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:nomName "Colmán";
+    irishRel:genName "Colmáin";
+    rel:childOf <#Sechnassaich>.
+
+<#Sechnassaich>
+    a foaf:Person;
+    irishRel:nomName "Sechnassach";
+    irishRel:genName "Sechnassaich";
+    rel:childOf <#Ailella>;
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_théig.ttl#Sechnasaich>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    irishRel:genName "Ailella";
+    rel:childOf <#CrimthaindMóir>;
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_théig.ttl#Ailella>.
+
+<#CrimthaindMóir>
+    a foaf:Person;
+    irishRel:nomName "Crimthand Mór";
+    irishRel:genName "Crimthaind Móir";
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_théig.ttl#Crimthaind>.
+
+<#CúLóthur>
+    a foaf:Person;
+    irishRel:nomName "Cú Lóthur";
+    rel:childOf <#Mútáin>.
+
+<#Mútáin>
+    a foaf:Person;
+    irishRel:nomName "Mútán";
+    irishRel:genName "Mútáin";
+    rel:childOf <#Rogallaig>.
+
+<#Rogallaig>
+    a foaf:Person;
+    irishRel:nomName "Rogallach";
+    irishRel:genName "Rogallaig";
+    rel:childOf <#ConChongalt>.
+
+<#ConChongalt>
+    a foaf:Person;
+    irishRel:nomName "Cú Chongelt";
+    irishRel:genName "Con Chongalt";
+    rel:childOf <#Fiachrach>.
+
+<#Fiachrach>
+    a foaf:Person;
+    irishRel:nomName "Fiachra";
+    irishRel:genName "Fiachrach";
+    rel:childOf <#Thuathail>;
+    irishRel:numChild 2.
+
+<#Thuathail>
+    a foaf:Person;
+    irishRel:nomName "Tuathal";
+    irishRel:genName "Thuathail";
+    rel:childOf <#Crimthainn>;
+    irishRel:numChild 3.
+
+<#Crimthainn-af8d7ed0>
+    a foaf:Person;
+    irishRel:nomName "Crimthann";
+    irishRel:genName "Crimthainn".
+
+<#CúChongalt>
+    a foaf:Person;
+    irishRel:nomName "Cú Chongalt";
+    rel:childOf <#Fiachrach>;
+    owl:sameAs <#ConChongalt>.
+
+<#Ailill>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    rel:childOf <#Fiachrach>;
+    irishRel:ancestorOfGroup <#ClannAilella>.
+
+<#ClannAilella>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Ailella".
+
+<#Dochartach>
+    a foaf:Person;
+    irishRel:nomName "Dochartach";
+    rel:childOf <#MáelBresail>.
+
+<#MáelBresail>
+    a foaf:Person;
+    irishRel:nomName "Máel Bresail";
+    irishRel:genName "Máel Bresail";
+    rel:childOf <#Ailill>.
+
+<#Brótud>
+    a foaf:Person;
+    irishRel:nomName "Brótud";
+    rel:childOf <#Ailill>.
+
+<#Fiachraich>
+    a foaf:Person;
+    irishRel:nomName "Fiachrach";
+    irishRel:genName "Fiachraich";
+    owl:sameAs <#Fiachrach>.
+
+<#MáelTuile>
+    a foaf:Person;
+    irishRel:nomName "Máel Tuile";
+    rel:childOf <#Thuathail>.
+
+<#Coirpre>
+    a foaf:Person;
+    irishRel:nomName "Coirpre";
+    rel:childOf <#Thuathail>;
+    irishRel:numChild 0;
+    rdfs:comment "sed unus a Cairpre non remansit".
+
+<#CathaírMáir>
+    a foaf:Person;
+    irishRel:nomName "Cathair Már";
+    irishRel:genName "Cathair Máir";
+    rel:siblingOf <#MaineMáil>;
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.ttl#CathairMár>.
+
+<#MaineMáil>
+    a foaf:Person;
+    irishRel:nomName "Maine Máil";
+    irishRel:genName "Maine Mál";
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.ttl#MaineMál>.
