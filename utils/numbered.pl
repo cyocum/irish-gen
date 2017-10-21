@@ -9,7 +9,8 @@ my %num = (
     "Cóic" => 5,
     "Sé" => 6,
     "Secht" => 7,
-    "Ocht" => 8
+    "Ocht" => 8,
+    "Noí" => 9
     );
 
 my $str = $ARGV[0];
