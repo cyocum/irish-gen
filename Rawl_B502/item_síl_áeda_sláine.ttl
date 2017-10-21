@@ -1,0 +1,92 @@
+@base <http://example.com/Rawl_B502/item_síl_áeda_sláine.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Item Síl Áeda Sláine"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html> .
+
+<#GillaMoChonna>
+    a foaf:Person;
+    irishRel:nomName "Gilla Mo Chonna";
+    rel:childOf <#Fogartaich>.
+
+<#Fogartaich>
+    a foaf:Person;
+    irishRel:genName "Fogartaich";
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Ciarmeicc>.
+
+<#Ciarmeicc>
+    a foaf:Person;
+    irishRel:genName "Ciarmeicc";
+    irishRel:nomName "Ciarmacc";
+    rel:childOf <#Congalaich>.
+
+<#Congalaich>
+    a foaf:Person;
+    irishRel:genName "Congalaich";
+    irishRel:nomName "Congalach";
+    rel:childOf <#Fócarta>.
+
+<#Fócarta>
+    a foaf:Person;
+    irishRel:genName "Fócarta";
+    irishRel:nomName "Fócart";
+    rel:childOf <#MáelDúin>.
+
+<#MáelDúin>
+    a foaf:Person;
+    irishRel:genName "Máel Dúin";
+    irishRel:nomName "Máel Dún";
+    rel:childOf <#Fergusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Fogartaich>.
+
+<#Fogartaich>
+    a foaf:Person;
+    irishRel:genName "Fogartaich";
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Néill>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cernaich_sottail.ttl#Fogartach>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomName "Niall";
+    rel:childOf <#CernaichSottail>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cernaich_sottail.ttl#Néill>.
+
+<#CernaichSottail>
+    a foaf:Person;
+    irishRel:genName "Cernaich Sottail";
+    irishRel:nomName "Cernach Sottal";
+    rel:childOf <#Diarmata>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cernaich_sottail.ttl#CernaichSottail>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#ÁedaSláine>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_cernaich_sottail.ttl#DiarmataRuanada>.
+
+<#ÁedaSláine>
+    a foaf:Person;
+    irishRel:genName "Áeda Sláine" ;
+    irishRel:nomName "Áed Sláine" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_áeda_sláine.ttl#ÁedaSláine>.
