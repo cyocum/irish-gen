@@ -25,7 +25,8 @@ my @children = split /\set\s|&|,|\./, $tail;
 
 foreach my $child (@children) {
     $child =~ s/^\s+|\s+$//g;
-    $output .= "<#$child>\n a foaf:Person;\nirishRel:nomName \"$child\";\nrel:childOf <#$person>.\n\n";
+    my $person_space_removed = $person =~ s/\s+//gr;
+    $output .= "<#$child>\n a foaf:Person;\nirishRel:nomName \"$child\";\nrel:childOf <#$person_space_removed>.\n\n";
 }
 
 print $output;

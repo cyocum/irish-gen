@@ -18,7 +18,8 @@ for(my $i = 0; $i < $len; $i++) {
     my $next = $individuals[$i+1];
 
     if($next) {
-	$relationship = ";\nrel:childOf <#$next>.\n\n";
+	my $space_removed = $next =~ s/\s+//gr;
+	$relationship = ";\nrel:childOf <#$space_removed>.\n\n";
     } else { $relationship = "."; }
 
     $output .= "<#$person>\na foaf:Person;\n";
