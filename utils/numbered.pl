@@ -19,6 +19,8 @@ my ($head, $tail) = split /:|\s+\.i\.\s+/, $str;
 
 my ($numChild, $person) = split /\sm\s|\smc\s|\s\.?m\.?\s|\smeic\s/, $head;
 
+my $person_no_space = $person =~ s/\s+//gr;
+
 my $output = "<#$person>\n a foaf:Person;\nirishRel:genName \"$person\";\nirishRel:numChild " . $num{$numChild} . ".\n\n";
 
 my @children = split /\set\s|&|,|\./, $tail;

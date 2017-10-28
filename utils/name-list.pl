@@ -3,7 +3,7 @@ use warnings;
 
 my $str = $ARGV[0];
 
-my @individuals = split(/\sm\s|\smc\s|\s\.?m\.?\s|\singen\s|\singine\s|\smeic\s/, $str);
+my @individuals = split(/\smic\s|\sm\s|\smc\s|\s\.?m\.?\s|\singen\s|\singine\s|\smeic\s/, $str);
 my $output = '';
 
 my $len = @individuals;
@@ -22,7 +22,9 @@ for(my $i = 0; $i < $len; $i++) {
 	$relationship = ";\nrel:childOf <#$space_removed>.\n\n";
     } else { $relationship = "."; }
 
-    $output .= "<#$person>\na foaf:Person;\n";
+    my $person_no_space = $person =~ s/\s+//gr;
+    
+    $output .= "<#$person_no_space>\na foaf:Person;\n";
     
     if($i == 0) {
 	$output .= "irishRel:nomName \"$person\"";
