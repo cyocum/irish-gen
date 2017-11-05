@@ -1,5 +1,8 @@
 use strict;
 use warnings;
+use feature 'unicode_strings';
+
+binmode(STDOUT, ":utf8");
 
 my %num = (
     "Óenmc" => 1,
