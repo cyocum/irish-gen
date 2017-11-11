@@ -13,7 +13,7 @@ $lc_title =~ s/\s/_/g;
 $lc_title .= ".ttl";
 
 print <<"END_PROLOGUE"
-\@base <http://example.com/Rawl_B502/$lc_title>
+\@base <http://example.com/Rawl_B502/$lc_title>.
 \@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 \@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 \@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
