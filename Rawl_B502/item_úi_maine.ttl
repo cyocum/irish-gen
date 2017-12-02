@@ -1,0 +1,152 @@
+@base <http://example.com/Rawl_B502/item_úi_maine.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "ITEM ÚI MAINE"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#Áed>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmaid";
+    rel:childOf <#Taidgcc>.
+
+<#Taidgcc>
+    a foaf:Person;
+    irishRel:genName "Taidgcc";
+    irishRel:nomName "Tadgcc";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:genName "Murchada";
+    irishRel:nomName "Murchad";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Fínnachta>.
+
+<#Fínnachta>
+    a foaf:Person;
+    irishRel:genName "Fínnachta";
+    irishRel:nomName "Fínnacht";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Indrechtaich>.
+
+<#Indrechtaich>
+    a foaf:Person;
+    irishRel:genName "Indrechtaich";
+    irishRel:nomName "Indrechtach";
+    rel:childOf <#Dlúthaich>.
+
+<#Dlúthaich>
+    a foaf:Person;
+    irishRel:genName "Dlúthaich";
+    irishRel:nomName "Dlúthach";
+    rel:childOf <#Fidchellaich>.
+
+<#Fidchellaich>
+    a foaf:Person;
+    irishRel:genName "Fidchellaich";
+    irishRel:nomName "Fidchellach";
+    rel:childOf <#Dícolla>.
+
+<#Dícolla>
+    a foaf:Person;
+    irishRel:genName "Dícolla";
+    irishRel:nomName "Dícoll";
+    rel:childOf <#Coirpre>.
+
+<#Coirpre>
+    a foaf:Person;
+    irishRel:genName "Coirpre";
+    irishRel:Name "Corpre";
+    rel:childOf <#Cormaicc>.
+
+<#Cormaicc>
+    a foaf:Person;
+    irishRel:genName "Cormaicc" ;
+    irishRel:nomName "Cormaicc";
+    rel:childOf <#Feradaich>.
+
+<#Feradaich>
+    a foaf:Person;
+    irishRel:genName "Feradaich";
+    irishRel:nomName "Feradach";
+    rel:childOf <#Lugdach>.
+
+<#Lugdach>
+    a foaf:Person;
+    irishRel:genName "Lugdach";
+    irishRel:nomName "Lugaid";
+    rel:childOf <#Dalláin>.
+
+<#Dalláin>
+    a foaf:Person;
+    irishRel:genName "Dalláin";
+    irishRel:genName "Dallán";
+    rel:childOf <#Bressail>.
+
+<#Bressail>
+    a foaf:Person;
+    irishRel:genName "Bressail";
+    irishRel:nomName "Bressal";
+    rel:childOf <#Maine>.    
+
+<#Maine>
+    a foaf:Person;
+    irishRel:genName "Maine";
+    rel:childOf <#Echdach>;
+    irishRel:ancestorOfGroup <#ÚiMaine>.
+
+<#ÚiMaine>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Maine" .
+    
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#FiachachSraiptine>.
+
+<#FiachachSraiptine>
+    a foaf:Person;
+    irishRel:genName "Fiachach Sraiptine" ;
+    irishRel:nomName "Fiachu Sraiptine" ;
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#FhiachachSraptini>.
