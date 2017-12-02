@@ -1,0 +1,111 @@
+@base <http://example.com/Rawl_B502/genelach_clainne_domnaill.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainne Domnaill"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#Áed>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    rel:childOf <#Néill>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomName "Niall";
+    rel:childOf <#MáelSechnaill>.
+
+<#MáelSechnaill>
+    a foaf:Person;
+    irishRel:genName "Máel Sechnaill";
+    irishRel:nomName "Máel Sechnall";
+    rel:childOf <#MáelRuanaid>.
+
+<#MáelRuanaid>
+    a foaf:Person;
+    irishRel:genName "Máel Ruanaid";
+    irishRel:nomName "Máel Ruanad";
+    rel:childOf <#Flaind>.
+
+<#Flaind>
+    a foaf:Person;
+    irishRel:genName "Flaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#ÁedaFindléith>.
+
+<#ÁedaFindléith>
+    a foaf:Person;
+    irishRel:genName "Áeda Findléith";
+    irishRel:nomName "Áed Findléth";
+    rel:childOf <#NéillCaille>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.ttl#ÁedaFindléith>.
+
+<#NéillCaille>
+    a foaf:Person;
+    irishRel:genName "Néill Caille" ;
+    irishRel:nomName "Niall Calle" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.ttl#NéillKaille>.
+
+<#Áed-f19ebb49>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    rel:childOf <#Néill>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomName "Niall";
+    rel:childOf <#Flaithbertaich>.
+
+<#Flaithbertaich>
+    a foaf:Person;
+    irishRel:genName "Flaithbertaich";
+    irishRel:nomName "Flaithbertach";
+    rel:childOf <#Murchertaich>.
+
+<#Murchertaich>
+    a foaf:Person;
+    irishRel:genName "Murchertaich";
+    irishRel:nomName "Murchertach";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Murchertaich-fc8f4f5b>.
+
+<#Murchertaich-fc8f4f5b>
+    a foaf:Person;
+    irishRel:genName "Murchertaich";
+    irishRel:nomName "Murchertach";
+    rel:childOf <#NéillGlúnduib>.
+
+<#NéillGlúnduib>
+    a foaf:Person;
+    irishRel:genName "Néill Glúnduib";
+    irishRel:nomName "Niall Glúndub";
+    rel:childOf <#ÁedaFindléith-a3101c3b>.
+
+<#ÁedaFindléith-a3101c3b>
+    a foaf:Person;
+    irishRel:genName "Áeda Findléith" ;
+    owl:sameAs <#ÁedaFindléith>.
