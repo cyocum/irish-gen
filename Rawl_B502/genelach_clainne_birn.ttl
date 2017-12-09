@@ -1,0 +1,86 @@
+@base <http://example.com/Rawl_B502/genelach_clainne_birn.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainne Birn"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#CúLacha>
+    a foaf:Person;
+    irishRel:nomName "Cú Lacha";
+    rel:childOf <#ConChaille>.
+
+<#ConChaille>
+    a foaf:Person;
+    irishRel:genName "Con Chaille";
+    irishRel:nomName "Cu Calle";
+    rel:childOf <#Muredaich>.
+
+<#Muredaich>
+    a foaf:Person;
+    irishRel:genName "Muredaich";
+    irishRel:nomName "Muredach";
+    rel:childOf <#Fergail>.
+
+<#Fergail>
+    a foaf:Person;
+    irishRel:genName "Fergail";
+    irishRel:nomName "Fergal";
+    rel:childOf <#Muiredaich>.
+
+<#Muiredaich>
+    a foaf:Person;
+    irishRel:genName "Muiredaich";
+    irishRel:nomName "Muiredach";
+    rel:childOf <#Birnn>.
+
+<#Birnn>
+    a foaf:Person;
+    irishRel:genName "Birnn";
+    rel:childOf <#Ruadrach>.
+
+<#Ruadrach>
+    a foaf:Person;
+    irishRel:genName "Ruadrach";
+    irishRel:nomName "Ruadaid";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:genName "Murchada";
+    irishRel:nomName "Murchad";
+    rel:childOf <#MáelDúin>.
+
+<#MáelDúin>
+    a foaf:Person;
+    irishRel:genName "Máel Dúin";
+    irishRel:nomName "Máel Dún";
+    rel:childOf <#ÁedaAlláin>.
+
+<#ÁedaAlláin>
+    a foaf:Person;
+    irishRel:genName "Áeda Alláin";
+    irishRel:nomName "Áed Allán";
+    rel:childOf <#Fergaile>.
+
+<#Fergaile>
+    a foaf:Person;
+    irishRel:genName "Fergaile";
+    irishRel:nomName "Fergale";
+    rel:childOf <#MáelDúin-3df4160c>.
+
+<#MáelDúin-3df4160c>
+    a foaf:Person;
+    irishRel:genName "Máel Dúin" ;
+    irishRel:nomName "Máel Dún".
