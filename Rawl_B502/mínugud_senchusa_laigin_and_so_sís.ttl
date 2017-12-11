@@ -88,7 +88,13 @@
     irishRel:nomName "Cobthach Cóel";
     rel:antagonistOf <#LóegaireLorcc>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ríg_n_alban.ttl#Cobthaich>;
-    rdfs:comment "Is Cobthach Cóel ro h-ort Lóegaire Lorcc h-i tosuch conid ó h-shain le is chocad eter a clanna .i. Lagin & Leth Cuind ut Orthanach loquitur.".
+    rdfs:comment "Is Cobthach Cóel ro h-ort Lóegaire Lorcc h-i tosuch conid ó h-shain le is chocad eter a clanna .i. Lagin & Leth Cuind ut Orthanach loquitur.";
+    irishRel:ancestorOfGroup <#LethCuind>.
+
+<#LethCuind>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Leth Cuind";
+    owl:sameAs <http://example.com/Rawl_B502/geneleach_osrithe.ttl#LethCuind>.
 
 <#LóegaireLorcc>
     a foaf:Person;
@@ -257,7 +263,13 @@
     irishRel:nomName "Lugaid";
     rel:childOf <#BressalBrecc>;
     rdfs:comment "senathair Lagen";
+    irishRel:ancestorOfGroup <#Lagen>;
     owl:sameAs <http://example.com/LL/lagin.ttl#Lugaid>.
+
+<#Lagen>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Lagen";
+    owl:sameAs <#Lagin>.
 
 <#SétnaSithbaicc>
     a foaf:Person;
@@ -386,7 +398,8 @@
 
 <#Cenéln-Aucha>
     a irishRel:populationGroup;
-    irishRel:populationGroupName "Cenél n-Aucha".
+    irishRel:populationGroupName "Cenél n-Aucha";
+    irishRel:ancestorGroupOf <#ÚiFidchellaig>, <#ÚiMáeliDerir>, <#ÚiBroscae>, <#ÚiFólaing>, <#ÚiFithecháin>.
 
 <#ÚiFidchellaig>
     a irishRel:populationGroup;
@@ -494,48 +507,6 @@
     owl:sameAs <http://example.com/LL/lagin.ttl#Cáinmasc>;
     rdfs:seeAlso <#Eochu_Ferngen>.
 
-<#Aucha-2338dd40>
-    a foaf:Person;
-    irishRel:nomName "Aucha";
-    owl:sameAs <#Aucha>;
-    rdfs:comment "quo Cenél n-Aucha. Aicmi Ceníuil Aucha .i. Úi Fidchellaig & Úi Máeli Derir, Úi Báetáin Bic, Úi Broscae, Úi Fólaing, Úi Fithecháin.".
-
-<#Fidchellaig>
-    a foaf:Person;
-    irishRel:genName "Fidchellaig";
-    irishRel:nomName "Fidchellach";
-    rel:descendantOf <#Aucha-2338dd40>.
-
-<#MáeliDerir>
-    a foaf:Person;
-    irishRel:genName "Máeli Derir";
-    irishRel:nomName "Máel Derir";
-    rel:descendantOf <#Aucha-2338dd40>.
-
-<#BáetáinBic>
-    a foaf:Person;
-    irishRel:genName "Báetáin Bic";
-    irishRel:nomName "Báetán Bec";
-    rel:descendantOf <#Aucha-2338dd40>.
-
-<#Broscae>
-    a foaf:Person;
-    irishRel:genName "Broscae";
-    irishRel:nomName "Broscae";
-    rel:descendantOf <#Aucha-2338dd40>.
-
-<#Fólaing>
-    a foaf:Person;
-    irishRel:genName "Fólaing";
-    irishRel:nomName "Fólang";
-    rel:descendantOf <#Aucha-2338dd40>.
-
-<#Fithecháin>
-    a foaf:Person;
-    irishRel:genName "Fithecháin";
-    irishRel:nomName "Fithechán";
-    rel:descendantOf <#Aucha-2338dd40>.
-
 <#FindFili-7f8dd680>
     a foaf:Person;
     irishRel:nomName "Find Fili";
@@ -577,11 +548,11 @@
     irishRel:nomName "Nuadu Necht";
     rel:childOf <#SétnaiSithbaicc-90cc5ee0>;
     rdfs:comment "is uad atá bunad Lagen & ba rí Temro sé.";
-    irishRel:ancestorOfGroup <#Lagen>;
+    irishRel:ancestorOfGroup <#Lagen-9f8cce30>;
     rel:antagonistOf <#EterscélaMór>;
     rel:friendOf <#LugdaigReon-Derg>.
 
-<#Lagen>
+<#Lagen-9f8cce30>
     a irishRel:populationGroup;
     irishRel:populationGroupName "Lagen";
     owl:sameAs <#Lagin>.
@@ -957,7 +928,7 @@
     irishRel:nomName "Conall";
     rel:childOf <#EchachInmete>;
     rdfs:comment "senathair Úa n-Garrchon";
-    irishRel:ancestorOfGroup <#Úan-Garrchon>, <#ÚiSílain>, <#ÚiChraibdeilche>, <#FineCilliBicsige>, <#ÚiBáethallaig>, <#ÚiBrittáin>, <#SílMeldae>, <#ÚiChúáin>, <#ÚiDraignén>, <#ÚiSellaig>, <#ÚiForca>, <#ÚiInmete>, <#CenélNathÍ>.
+    irishRel:ancestorOfGroup <#Úan-Garrchon>, <#ÚiSílain>, <#ÚiChraibdeilche>, <#FineCilliBicsige>, <#ÚiInmete>, <#CenélNathÍ>.
 
 <#EchachInmete>
     a foaf:Person;
@@ -1019,7 +990,8 @@
 
 <#FineCilliBicsige>
     a irishRel:populationGroup;
-    irishRel:populationGroupName "Fine Cilli Bicsige".
+    irishRel:populationGroupName "Fine Cilli Bicsige";
+    irishRel:ancestorGroupOf <#ÚiBáethallaig>, <#ÚiBrittáin>, <#SílMeldae>, <#ÚiChúáin>, <#ÚiDraignén>, <#ÚiSellaig>, <#ÚiForca>.
 
 <#ÚiBáethallaig>
     a irishRel:populationGroup;
@@ -1104,7 +1076,7 @@
     a foaf:Person;
     irishRel:nomName "Cormac Losc";
     rel:childOf <#ConChorb>;
-    irishRel:ancestorOfGroup <#DálCormaicLuisc>, <#ÚiLabrada>, <#ÚiGabla>, <#ÚiChuilind>, <#Cuthraige>, <#SílFergusaCuthig>, <#CuircLibrén>.
+    irishRel:ancestorOfGroup <#DálCormaicLuisc>.
 
 <#MessinCorb>
     a foaf:Person;
@@ -1184,7 +1156,8 @@
 <#DálCormaicLuisc>
     a irishRel:populationGroup;
     irishRel:populationGroupName "Dál Cormaic Luisc";
-    rdfs:comment "in tres prím-slonnad. Eirrid cadesin ... Argat mar bés a n-enechclann.".
+    rdfs:comment "Dál Cormaic Luisc in tres prím-slonnad. Eirrid cadesin. It é a n-aicmi-side: Úi Labrada, Úi Gabla, Úi Chuilind & Cuthraige .i. Síl Fergusa Cuthig & Cuirc Librén. Argat mar bés a n-enechclann.";
+    irishRel:ancestorGroupOf <#ÚiLabrada>, <#ÚiGabla>, <#ÚiChuilind>, <#Cuthraige>.
 
 <#ÚiLabrada>
     a irishRel:populationGroup;
@@ -1200,7 +1173,8 @@
 
 <#Cuthraige>
     a irishRel:populationGroup;
-    irishRel:populationGroupName "Cuthraige".
+    irishRel:populationGroupName "Cuthraige";
+    irishRel:ancestorGroupOf <#SílFergusaCuthig>, <#CuircLibrén>.
 
 <#SílFergusaCuthig>
     a irishRel:populationGroup;
@@ -1214,6 +1188,8 @@
     a irishRel:populationGroup;
     irishRel:populationGroupName "Dál Cairpri Loingsig Bic";
     rdfs:comment "in cethramad prím-slonnud Lagen. La h-Aradu Cliach atát.".
+
+# Are the "Aradu Cliach" a populationGroup? EPT
 
 <#Corpri>
     a foaf:Person;
@@ -1380,7 +1356,12 @@
 <#Laíches>
     a irishRel:populationGroup;
     irishRel:populationGroupName "Laíches";
-    rdfs:comment "Dá phrím-forsluinniud Lagen Fothairt & Laíches [...] Laíchess dano Cenél Lugdach Laíchsig m. Conaill Cernaig. h-It h-é sin cliathaire Lagen díb línaib. Crédhuma a n-enechclann.".
+    rdfs:comment "Dá phrím-forsluinniud Lagen Fothairt & Laíches [...] Laíchess dano Cenél Lugdach Laíchsig m. Conaill Cernaig. h-It h-é sin cliathaire Lagen díb línaib. Crédhuma a n-enechclann.";
+
+<#CenélLugdachLaíchsig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cenél Lugdach Laíchsig";
+    owl:sameAs <#Laíches>.
 
 <#LugdachLaíchsig>
     a foaf:Person;
