@@ -216,7 +216,12 @@
     rel:childOf <#CrimthaindMáir>;
     rel:childOf <#Cingit>;
     owl:sameAs <http://example.com/LL/rig_ossairge.ttl#OengusaOsrethi>;
-    rdfs:comment "eter ossu alta fo-fríth a quo Osrithe".
+    rdfs:comment "eter ossu alta fo-fríth a quo Osrithe";
+    irishRel:ancestorOfGroup <#Osrithe>.
+
+<#Osrithe>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Osrithe".
 
 <#CrimthaindMáir>
     a foaf:Person;
@@ -415,7 +420,21 @@
     irishRel:genName "Labrada Loingsig Móen";
     rel:childOf <#AilellaÁine>;
     rdfs:comment "a quo Lagin & Ossraige & Úi Ceinselaig";
+    irishRel:ancestorOfGroup <#Lagin>, <#Ossraige>, <#ÚiCeinselaig>;
     owl:sameAs <http://example.com/LL/lagin.ttl#LabraidLongsechMoen>.
+
+<#Lagin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Lagin".
+
+<#Ossraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ossraige";
+    owl:sameAs <#Osrithe>.
+
+<#ÚiCeinselaig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Ceinselaig".
 
 <#AilellaÁine>
     a foaf:Person;
@@ -437,7 +456,18 @@
     irishRel:genName "Augaine Máir";
     rel:childOf <#EchachBuadaig>;
     rdfs:comment "i sunn condrecat Lagin & Leth Cuind";
+    irishRel:ancestorOfGroup <#Lagin-2c79b300>, <#LethCuind-3f43e140>;
     owl:sameAs <http://example.com/LL/lagin.ttl#ÚgaineMáir>.
+
+<#Lagin-2c79b300>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Lagin";
+    owl:sameAs <#Lagin>.
+
+<#LethCuind-3f43e140>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Leth Cuind";
+    owl:sameAs <#LethCuind>.
 
 <#EchachBuadaig>
     a foaf:Person;
@@ -597,7 +627,40 @@
     irishRel:genName "h-Érimóin";
     rel:childOf <#Míled>;
     owl:sameAs <http://example.com/LL/lagin.ttl#h-Erimoin>;
+    irishRel:ancestorOfGroup <#LethCuind>;
     rdfs:comment "i sunn condrecat Leth Cuind .i. cethri fini Temra & téora Connachta & Airgialla & Lagin & Osraige & na Déssi & Érnae dia m-baí Clanna Dedad.".
+
+<#LethCuind>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Leth Cuind";
+    irishRel:ancestorGroupOf <#Airgialla>, <#Lagin-d201c1b0>, <#Osraige-f9a5c450>, <#naDéssi>, <#Érnae>.
+
+<#Airgialla>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Airgialla".
+
+<#Lagin-d201c1b0>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Lagin";
+    owl:sameAs <#Lagin>.
+
+<#Osraige-f9a5c450>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Osraige";
+    owl:sameAs <#Osrithe>.
+
+<#naDéssi>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "na Déssi".
+
+<#Érnae>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Érnae";
+    irishRel:ancestorGroupOf <#ClannaDedad>.
+
+<#ClannaDedad>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clanna Dedad".
 
 <#Míled>
     a foaf:Person;

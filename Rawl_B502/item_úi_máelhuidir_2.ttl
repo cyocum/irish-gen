@@ -288,13 +288,22 @@
 <#NiaCuilind>
     a foaf:Person;
     irishRel:nomName "Nia Cuilind";
-    rdfs:comment "dia tát Úi Chuilinn. Is í a forbba Mag n-Abna .i. Síl m-Brain la Láechis.";
+    rdfs:comment "dia tát Úi Chuilinn.";
+    irishRel:ancestorOfGroup <#ÚiChuilinn>;
     rel:childOf <#Labrada-e23469d0>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NioCulend>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.ttl#NioCuillenn>;
-    foaf:knows <#ÉnnaCeinselach>.
+    irishRel:givenLandBy <#ÉnnaCeinselach>.
 
-# rel:givenLandBy ? EPT
+<#ÚiChuilinn>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chuilinn";
+    irishRel:ancestorGroupOf <#ÚiChonCiriet>
+    rdfs:comment "Is í a forbba Mag n-Abna .i. Síl m-Brain la Láechis.".
+
+<#ÚiChonCiriet>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chon Ciriet".
 
 <#Labrada-e23469d0>
     a foaf:Person;
@@ -303,18 +312,11 @@
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Labraid>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.ttl#Labraid>.
 
-<#Brain>
-    a foaf:Person;
-    irishRel:genName "Brain";
-    irishRel:nomName "Bran";
-    rel:descendantOf <#NiaCuilind>.
-
 <#Melige>
     a foaf:Person;
     irishRel:nomName "Melige";
     rel:childOf <#NiaCuilind>;
-    rel:antagonistOf <#CiarCúldub>;
-    rdfs:comment "It Úi Chuilin dano Úi Chon Ciriet. Melige mc Cuilinn a senathair.".
+    irishRel:ancestorGroup <#ÚiChuilinn>.
 
 <#CiarCúldub>
     a foaf:Person;
@@ -322,50 +324,59 @@
     rdfs:comment "de Úib Néill";
     rel:descendantOf <#Néill>.
 
+<#ÚibNéill>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Néill".
+
 <#Néill>
     a foaf:Person;
     irishRel:genName "Néill";
     irishRel:nomNAme "Níall";
+    irishRel:ancestorOfGroup <#ÚibNéill>;
     owl:sameAs <http://example.com/LL/rig_ailig.ttl#NeillNóigiallaig>.
-
-<#ChonCiriet>
-    a foaf:Person;
-    irishRel:genName "Chon Ciriet";
-    irishRel:nomName "Cú Ciriet";
-    rel:descendantOf <#Melige>;
-    rdfs:comment "Úi Chon Ciriet".
 
 <#ÉnnaCeinselach>
     a foaf:Person;
     irishRel:nomName "Énna Ceinselach";
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EnnaiCennselaig>.
 
+<#ÚiLabrada>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Labrada".
+
+<#Cuthraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cuthraige";
+    irishRel:ancestorGroupOf <#ÚiLabrada>;
+    owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#Cuthraige>.
+
 <#FergusCuth>
     a foaf:Person;
     irishRel:nomName "Fergus Cuth";
-    rel:descendantOf <#Labrada-e23469d0>;
-    rdfs:comment "Is Úi Labrada Cuthraige .i. Fergus Cuth a senathair.".
+    irishRel:ancestorOfGroup <#Cuthraige>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
-    owl:sameAs <#Corbmaic>.
+    owl:sameAs <#Corbmaic>;
+    irishRel:ancestorOfGroup <#ÚiThrena>, <#ÚiChuircc>.
 
-<#Trena>
-    a foaf:Person;
-    irishRel:genName "Trena";
-    irishRel:nomName "Tren";
-    rdfs:comment "Úi Trena";
-    rel:descendantOf <#Cormaic>;
-    owl:sameAs <#Threna>.
+<#ÚiThrena>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Threna".
 
-<#Chuircc>
-    a foaf:Person;
-    irishRel:genName "Chuircc";
-    irishRel:nomName "Corc";
-    rdfs:comment "Úi Chuircc";
-    rel:descendantOf <#Cormaic>.
+<#ÚiChuircc>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Chuircc".
+
+<#ÚiGablaFini>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Gabla Fini".
+
+<#ÚiGablaRoírenn>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Gabla Roírenn".
 
 <#EithniGabulfhota>
     a foaf:Person;
@@ -376,4 +387,5 @@
     rel:spouseOf [
       a foaf:Person;
       rdfs:comment "A díthriub Connacht immorro a n-athair .i. céile Eithni Gabulfhota."
-    ].
+    ];
+    irishRel:ancestorOfGroup <#ÚiGablaFini>, <#ÚiGablaRoírenn>.

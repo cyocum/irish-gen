@@ -22,7 +22,8 @@
     rel:childOf <#ConCorb>;
     rel:childOf <#EithneSithbaicce>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#CoirpreCruaid>;
-    rdfs:comment "is uad atá Dál Carpri Arad ut diximus".
+    rdfs:comment "is uad atá Dál Carpri Arad ut diximus";
+    irishRel:ancestorOfGroup <#DálCarpriArad>.
 
 <#ConCorb>
     a foaf:Person;
@@ -43,6 +44,10 @@
     irishRel:genName "Óengusa Múisc";
     irishRel:nomName "Óengus Músc";
     owl:sameAs <http://example.com/LL/lagin.ttl#OengusaMúsc>.
+
+<#DálCarpriArad>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Carpri Arad".
 
 <#Eithne>
     a foaf:Person;
@@ -71,7 +76,7 @@
     rel:childOf <#ChoinCorp>;
     rel:childOf <#Eithne>.
 
-# owl:sameAs <#CairpreCluichechair>? EPT
+# owl:sameAs <#CairpreCluichechair> or <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#CoirpreCruaid>? EPT
 
 <#Laider>
     a foaf:Person;
@@ -79,10 +84,15 @@
     foaf:title "ara"@sga, "charioteer"@eng;
     rdfs:comment "do Ultaib";
     rdfs:comment "a quo Dál n-Araidi";
+    irishRel:ancestorOfGroup <#Dáln-Araidi>;
     rel:workedFor <#ConCorb-e24586c0>;
     irishRel:numChild 4;
     owl:sameAs <http://example.com/LL/lagin.ttl#Laider>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.ttl#Laidir>.
+
+<#Dáln-Araidi>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál n-Araidi".
 
 <#ConCorb-e24586c0>
     owl:sameAs <#ConCorb>.
