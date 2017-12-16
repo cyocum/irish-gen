@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use feature 'unicode_strings';
+use utf8;
 
 binmode(STDOUT, ":utf8");
 
