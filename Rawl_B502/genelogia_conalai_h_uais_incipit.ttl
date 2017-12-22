@@ -1,0 +1,34 @@
+@base <http://example.com/Rawl_B502/genelogia_conalai_h_uais_incipit.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelogia Conalai h-Uais Incipit"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text12.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text12.html> .
+
+<#CollaÓss>
+    a foaf:Person ;
+    irishRel:nomName "Colla Óss" ;
+    rdfs:comment "ara déine nó combad h- é Óss sédguine no-dn-ailed nó h-Uais ara uaisle" ;
+    owl:sameAs <https://example.comment/Rawl_B502/de_peritia_cenéoil_cairpri_liphechair_incipit.ttl#Collah-Uais>;
+    irishRel:ancestorOfGroup <#ÚiMeicUais>, <#ÚiTuirtri>.
+
+<#ÚiMeicUais>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Meic Uais" ;
+    owl:sameAs <https://example.comment/Rawl_B502/de_peritia_cenéoil_cairpri_liphechair_incipit.ttl#ÚiMeichh-Uais>.
+
+<#ÚiTuirtri>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Tuirtri" .
+    
