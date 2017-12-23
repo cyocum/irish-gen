@@ -5,7 +5,7 @@ binmode(STDOUT, ":utf8");
 
 my $str = $ARGV[0];
 
-my @individuals = split(/\smic\s|\sm\s|\smc\s|\s\.?m\.?\s|\singen\s|\singine\s|\smeic\s/, $str);
+my @individuals = split(/\smic\s|\sm\s|\smc\s|\s\.?m\.?\s|\singen\s|\singine\s|\smeic\s|\smac-side\s/, $str);
 my $output = '';
 
 my $len = @individuals;
