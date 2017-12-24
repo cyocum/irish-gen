@@ -1,0 +1,743 @@
+@base <http://example.com/Duanaire_Finn.ttl/PoemXLIII.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Poem XLIII"@sga;
+    dcterms:isFormatOf <https://celt.ucc.ie/published/G402562/text008.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <https://celt.ucc.ie/published/G402562/text008.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Fionn>
+    a foaf:Person;
+    irishRel:nomName "Fionn";
+    rel:chiLdOf <#Cumaill>;
+    rel:childOf <#Muirne>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#FiondFile>.
+
+<#Cumaill>
+    a foaf:Person;
+    irishRel:genName "Cumaill";
+    rel:chiLdOf <#Tréinmóir>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Cumaill>.
+
+<#Tréinmóir>
+    a foaf:Person;
+    irishRel:genName "Tréinmóir";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Trenmór>.
+
+<#Muirne>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Muirne".
+
+<#Oisin>
+    a foaf:Person;
+    irishRel:nomName "Oisin";
+    rel:childOf <#Fionn>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Oisin>.
+
+<#Dearg>
+    a foaf:Person;
+    irishRel:nomName "Dearg";
+    rel:parentOf [
+        a foaf:Person;
+        foaf:gender "female";
+        rel:parentOf <#Oisin>
+        owl:sameAs <#Áine>
+    ].
+
+<#Áine>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Áine";
+    rel:childOf <#Dearg>.
+
+<#Feargusa>
+    a foaf:Person;
+    irishRel:genName "Feargusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Áine>.
+
+<#EathachGunat>
+    a foaf:Person;
+    irishRel:genName "Eathach Gunat";
+    irishRel:nomName "Eochaid Gunnat";
+    rel:spouseOf <#Áine>;
+    rdfs:comment "aga mboi Banba bliadhain";
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.ttl#EochuGunnat>.
+
+<#Goll>
+    a foaf:Person;
+    irishRel:nomName "Goll".
+
+<#Sgannlach>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Sgannlach";
+    rel:spouseOf <#Goll>;
+    rel:childOf <#Conall>.
+
+<#Conall>
+    a foaf:Person;
+    irishRel:nomName "Conall".
+
+<#Dearp>
+    a foaf:Person;
+    foad:gender "female";
+    rel:fostersiblingOf <#Cuinn>.
+
+<#Cuinn>
+    a foaf:Person;
+    irishRel:nomName "Conn";
+    irishRel:genName "Cuinn"
+
+<#Chuinn>
+    a foaf:Person;
+    irishRel:nomName "Conn";
+    irishRel:genName "Chuinn";
+    rel:childOf <#Dearp>.
+
+<#Chodnaigh>
+    a foaf:Person;
+    irishRel:nomName "Codnach";
+    irishRel:genName "Chodnaigh";
+    rel:childOf <#Dearp>.
+
+<#Lughach>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Lughach";
+    rel:childOf <#Fionn>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Lughach>.
+
+<#Gaine>
+    a foaf:Person;
+    irishRel:genName "Gaine";
+    irishRel:nomName "Gaine";
+    rel:childOf <#Lughach>;
+    rel:childOf <#Dáire>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Gaoine>.
+
+<#Dáire>
+    a foaf:Person;
+    irishRel:nomName "Dáire";
+    rel:childOf <#Fionn>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Dáire-0ec0f7c0>.
+
+<#Báine>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Báine";
+    rel:childOf [
+      a foaf:Person;
+      foaf:title "rí"@sg, "king"@eng;
+      rdfs:comment "righ Connacht"
+    ].
+
+<#Fheidhlimidh>
+    a foaf:Person;
+    irishRel:genName "Fheidhlimidh";
+    irishRel:nomName "Feidlimid";
+    rel:childOf <#Báine>.
+
+<#Cumaill-28f96dd0>
+    a foaf:Person;
+    irishRel:nomName "Cumall";
+    irishRel:genName "Cumaill";
+    rel:childOf <#Báine>;
+    owl:sameAs <#Cumaill>.
+
+<#Trénmhóir>
+    a foaf:Person;
+    irishRel:genName "Trénmhóir";
+    irishrel:nomName "Trénmór";
+    owl:sameAs <#Tréinmóir>.
+
+<#Dathchaoin>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Dathchaoin";
+    rel:childOf <#Taidg>;
+    rel:spouseOf <#LuaighdheachLaga>.
+
+<#Taidg>
+    a foaf:Person;
+    irishRel:genName "Taidg";
+    irishRel:nomName "Tadg".
+
+<#LuaighdheachLaga>
+    a foaf:Person;
+    irishRel:genName "Luaighdheach Laga"
+    irishRel:nomName "Lugaid Laga".
+
+<#Úain>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Úain";
+    rel:childOf <#Criomthain>.
+
+<#Criomthain>
+    a foaf:Person;
+    irishRel:genName "Criomthain";
+    irishRel:nomName "Crimthann".
+
+<#BhainbSionna>
+    a foaf:Person;
+    irishRel:genName "Bhainb Sionna";
+    irishRel:nomName "Banb Sionna";
+    rel:childOf <#Úain>.
+
+# Is Banb Sionna female? Both these names are female elsewhere. EPT
+
+<#Cruithgheal>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Cruithgheal";
+    rel:siblingOf <#Goll-f0765930>;
+
+<#Goll-f0765930>
+    a foaf:Person;
+    irishRel:nomName "Goll";
+    owl:sameAs <#Goll>.
+
+<#Áodha>
+    a foaf:Person;
+    irishRel:genName "Áodha";
+    irishRel:nomName "Áodh";
+    rel:childOf <#Ronáin>;
+    rel:childOf <#Cruithgheal>.
+
+<#Ronáin>
+    a foaf:Person;
+    irishRel:genName "Ronáin";
+    irishRel:nomName "Ronán".
+
+<#Aoiffe>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Aoiffe";
+    rel:childOf <#AodhaRinn>.
+
+<#AodhaRinn>
+    a foaf:Person;
+    irishRel:genName "Aodha Rinn";
+    irishRel:nomName "Áodh Rinn".
+
+<#LeithLuacra>
+    a foaf:Person;
+    irishRel:genName "Leith Luacra";
+    irishRel:nomName "Liath Luachra";
+    rel:parentOf [
+        a foaf:Person;
+        rel:spouseOf <#Aoiffe>
+    ].
+
+<#Cana>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Cana";
+    rel:childOf <#Chiothrúaidh>.
+
+<#Chiothrúaidh>
+    a foaf:Person;
+    irishRel:genName "Chiothrúaidh";
+    irishRel:nomName "Ciothruadh".
+
+<#FearghusFínbhél>
+    a foaf:Person;
+    irishRel:nomName "Fearghus Fínbhél";
+    rel:spouseOf <#Cana>.
+
+<#Loch>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Loch";
+    rel:childOf <#Maicníadh>.
+
+<#Maicníadh>
+    a foaf:Person;
+    irishRel:genName "Maicníadh"
+    irishRel:nomName "Mac Níadh".
+
+<#NúadhatFinn>
+    a foaf:Person;
+    irishRel:genName "Núadhat Finn";
+    irishRel:nomName "Núadhu Finn";
+    rel:spouseOf <#Loch>;
+    foaf:title "éigis"@sga, "poet"@eng.
+
+<#Lathoirt>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Lathoirt";
+    rel:childOF <#DháNeasa>;
+    rel:spouseOf <#Oisín>.
+
+<#DháNeasa>
+    a foaf:Person;
+    irishRel:genName "Dhá Neasa";
+    irishRel:nomName "Dá Neasa".
+
+<#Osgair>
+    a foaf:Person;
+    irishRel:genName "Osgair";
+    irishRel:nomName "Osgar";
+    rel:childOf <#Lathoirt>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Osgar>.
+
+<#Oisín>
+    a foaf:Person;
+    irishRel:nomName "Oisín";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXI.ttl#Oisin-18c1f630>.
+
+<#Muirionn>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Muirionn";
+    rel:spouseOf <#Oisín>;
+    rdfs:comment "mathair a thrí mac oile".
+
+<#ChúalannCíochmhuine>
+    a foaf:Person;
+    irishRel:genName "Chúalann Cíochmhuine";
+    irishRel:nomName "Cúalann Cíochmhuine".
+
+<#Cumhoill>
+    a foaf:Person;
+    irishRel:nomName "Cumall";
+    irishRel:genName "Cumhoill";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXXXVII.ttl#Cumaill>.
+
+<#Sídhe>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Sídhe";
+    rel:childOf <#Cumhoill>.
+
+<#Súanach>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Súanach";
+    rel:childOf <#Cumhoill>.
+
+<#Fhiachra>
+    a foaf:Person;
+    irishRel:genName "Fhiachra";
+    irishRel:nomName "Fiachra";
+    rel:childOf <#Súanach>.
+
+<#Chaoílte>
+    a foaf:Person;
+    irishRel:genName "Chaoílte";
+    irishRel:nomName "Caoílte";
+    rel:childOf <#Sídhe>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Cailte>.
+
+<#Ainnear>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Ainnear";
+    rel:childOf <#Bharráin>;
+    rel:spouseOf <#Chaoílte>.
+
+<#Bharráin>
+    a foaf:Person;
+    irishRel:genName "Bharráin";
+    irishRel:nomName "Barrán";
+    foaf:title "brughadh"@sga, "hospitaller"@eng.
+
+<#Teadhmaill>
+    a foaf:Person;
+    irishRel:genName "Teadhmaill";
+    irishRel:nomName "Teadhmaill";
+    rel:childOf <#Ainnear>.
+
+<#Fhailléin>
+    a foaf:Person;
+    irishRel:genName "Fhailléin";
+    irishRel:nomName "Faelán";
+    rel:childOf <#Ainnear>.
+
+<#Crochnaide>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:genName "Crochnaide";
+    irishRel:nomName "Crochnaide";
+    irishRel:numChild 2.
+
+<#Diarmaid>
+    a foaf:Person;
+    irishRel:nomName "Diarmaid";
+    rel:childOf <#Crochnaide>.
+
+<#Osgar>
+    a foaf:Person;
+    irishRel:nomName "Osgar";
+    rel:childOf <#Crochnaide>;
+    owl:sameAs <#Osgair>.
+
+<#Diarmada>
+    a foaf:Person;
+    irishRel:genName "Diarmada";
+    irishRel:nomName "Diarmaid";
+    owl:sameAs <#Diarmaid>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:parentOf [
+      a foaf:Person;
+      rel:parentOf <#Donnchadh>, <#Sealbach>, <#Eochaidh>, <#Irúath>;
+    ];
+    rel:descendantOf <#Chuinn-a6ee0590>;
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CormaicUlfhota>.
+
+<#Chuinn-a6ee0590>
+    a foaf:Person;
+    irishRel:genName "Chuinn";
+    irishRel:nomName "Conn";
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CuindCetchathaig>.
+
+<#Donnchadh>
+    a foaf:Person;
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#Diarmada>.
+
+<#Sealbach>
+    a foaf:Person;
+    irishRel:nomName "Sealbach";
+    rel:childOf <#Diarmada>.
+
+<#Eochaidh>
+    a foaf:Person;
+    irishRel:nomName "Eochaidh";
+    rel:childOf <#Diarmada>.
+
+<#Irúath>
+    a foaf:Person;
+    irishRel:nomName "Irúath";
+    rel:childOf <#Diarmada>.
+
+<#Connla>
+    a foaf:Person;
+    irishRel:nomName "Connla";
+    rel:childOf <#Diarmada>;
+    rel:childOf <#Dubhinbhir>.
+
+<#Aodh>
+    a foaf:Person;
+    irishRel:nomName "Aodh";
+    rel:childOf <#Diarmada>;
+    rel:childOf <#Dubhinbhir>.
+
+<#Iollann>
+    a foaf:Person;
+    irishRel:nomName "Iollann";
+    rel:childOf <#Diarmada>;
+    rel:childOf <#Dubhinbhir>.
+
+<#Dubhinbhir>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Dubhinbhir";
+    rel:childOf <#Fhúairbheóil>;
+    rel:spouseOf <#Diarmada>.
+
+<#Fhúairbheóil>
+    a foaf:Person;
+    irishRel:genName "Fhúairbheóil";
+    irishRel:nomName "Fúarbél".
+
+<#Luchar>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Luchar";
+    rel:childOf <#Maicníadh-6cd16530>;
+    rel:spouseOf <#Fionn-cf130d20>.
+
+<#Maicníadh-6cd16530>
+    a foaf:Person;
+    irishRel:genName "Maicníadh";
+    irishRel:nomName "Mac Níadh".
+
+# sameAs <#Maicníadh>? EPT
+
+<#Fionn-cf130d20>
+    a foaf:Person;
+    irishRel:nomName "Fionn";
+    owl:sameAs <#Fionn>.
+
+<#AodhBeag>
+    a foaf:Person;
+    irishRel:nomName "Aodh Beag";
+    rel:childOf <#Fionn-cf130d20>;
+    rel:childOf <#Luchar>.
+
+<#AodhFoda>
+    a foaf:Person;
+    irishRel:nomName "Aodh Foda";
+    rel:childOf <#Fionn-cf130d20>;
+    rel:childOf <#Luchar>.
+
+<#Áine-37c56b60>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Áine";
+    rel:spouseOf [
+        a foaf:Person;
+        rel:childOf <#Cumaill-82de45e0>;
+        owl:sameAs <#Fionn-cf130d20>;
+        rdfs:comment "ní tug mnaoí 'na deaghaid"
+    ];
+    rel:childOf <#Dáolghus>.
+
+<#Cumaill-82de45e0>
+    a foaf:Person;
+    irishRel:genName "Cumaill";
+    irishRel:nomName "Cumall";
+    owl:sameAs <#Cumaill>.
+
+<#Dáolghus>
+    a foaf:Person;
+    irishRel:nomName "Dáolghus";
+    rel:childOf <#Lir>.
+
+<#Lir>
+    a foaf:Person;
+    irishRel:genName "Lir";
+    irishRel:nomName "Ler";
+    rdfs:comment "Síthe Fionnachaidh".
+
+<#Trénmor>
+    a foaf:Person;
+    irishRel:nomName "Trénmor";
+    owl:sameAs <#Tréinmóir>;
+    irishRel:numChild 4.
+
+<#Criomall>
+    a foaf:Person;
+    irishRel:nomName "Criomall";
+    rel:childOf <#Trénmor>.
+
+<#Cumall>
+    a foaf:Person;
+    irishRel:nomName "Cumall";
+    owl:sameAs <#Cumaill-82de45e0>;
+    rel:childOf <#Trénmor>.
+
+<#Conall>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#Trénmor>.
+
+<#AodhEangach>
+    a foaf:Person;
+    irishRel:nomName "Aodh Eangach";
+    rel:childOf <#Trénmor>.
+
+<#Cumall-e98e9d20>
+    a foaf:Person;
+    irishRel:nomName "Cumall";
+    owl:sameAs <#Cumaill>;
+    irishRel:numChild 3.
+
+<#Fionn-1be593a0>
+    a foaf:Person;
+    irishRel:nomName "Fionn";
+    rel:childOf <#Cumall-e98e9d20>;
+    owl:sameAs <#Fionn>.
+
+<#Fiothal>
+    a foaf:Person;
+    irishRel:nomName "Fiothal";
+    rel:childOf <#Cumall-e98e9d20>.
+
+<#Feindidh>
+    a foaf:Person;
+    irishRel:nomName "Feindidh";
+    rel:childOf <#Cumall-e98e9d20>;
+    rel:childOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rel:childOf [
+        a foaf:Person;
+        foaf:title "righ"@sga, "king"@eng;
+        rdfs:comment "rígh Breatan"
+      ]
+    ].
+
+<#Chail>
+    a foaf:Person;
+    irishRel:genName "Chail";
+    irishRel:nomName "Cael";
+    rel:childOf <#Feindidh>;
+    rel:childOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rel:childOf [
+        a foaf:Person;
+        foaf:title "righ"@sga, "king"@eng;
+        rdfs:comment "righ Innsi Finnghall"
+      ]
+    ].
+
+<#Finn>
+    a foaf:Person;
+    irishRel:nomName "Finn";
+    rel:childOf <#Cúain>;
+    rel:parentOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rel:spouseOf <#Chail>;
+      rel:parentOf <#Dáolgus-ef2c8830>, <#Lodharn>
+    ].
+
+<#Cúain>
+    a foaf:Person;
+    irishRel:genName "Cúain";
+    irishRel:nomName "Cúan".
+
+<#Dáolgus-ef2c8830>
+    a foaf:Person;
+    irishRel:nomName "Dáolghus";
+    rel:childOf <#Chail>.
+
+<#Lodharn>
+    a foaf:Person;
+    irishRel:nomName "Lodharn";
+    rel:childOf <#Chail>.
+
+<#Bódhmann>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Bódhmann".
+
+<#Fithil>
+    a foaf:Person;
+    irishRel:genName "Fithil";
+    irishRel:nomName "Fithal";
+    owl:sameAs <#Fiothal>;
+    rel:childOf <#Cumhall>, <#Bódhmann>.
+
+<#Cumhall>
+    a foaf:Person;
+    irishRel:nomName "Cumhall";
+    owl:sameAs <#Cumaill>.
+
+<#EochaidhFionn-d2e98c60>
+    a foaf:Person;
+    irishRel:nomName "Eochaidh Fionn";
+    rdfs:comment "clann da dheirbhseatar";
+
+<#FiachaidhSuidhe>
+    a foaf:Person;
+    irishRel:nomName "Fiachaidh Suidhe";
+    rdfs:comment "clann da dheirbhseatar [Bodhmann and Ingean rígh Breatan?]";
+
+<#Crimall>
+    a foaf:Person;
+    irishRel:nomName "Crimall";
+    rdfs:comment "clann da dheirbhseatar [Bodhmann and Ingean rígh Breatan?]";
+    owl:sameAs <#Criomall>.
+
+<#Áodh-eaf3b920>
+    a foaf:Person;
+    irishRel:nomName "Aodh";
+    rdfs:comment "clann da dheirbhseatar [Bodhmann and Ingean rígh Breatan?]";
+    owl:sameAs <#AodhEangach>.
+
+<#Conall-f7d59af0>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rdfs:comment "clann da dheirbhseatar [Bodhmann and Ingean rígh Breatan?]";
+    owl:sameAs <#Conall>.
+
+<#Dhíengasa>
+    a foaf:Person;
+    irishRel:nomName "Díangus";
+    irishRel:genName "Dhíengasa";
+    rel:childOf <#Conall-f7d59af0>.
+
+<#Cnucha>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Cnucha";
+    rel:childOf [
+      a foaf:Person;
+      foaf:title "rígh"@sga, "king"@eng
+      rdfs:comment "rígh Alban"
+    ].
+
+<#Fhíacra>
+    a foaf:Person;
+    irishRel:genName "Fhíacra";
+    irishRel:nomName "Fíacra";
+    rel:childOf <#Cnucha>.
+
+<#Taisi>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Taisi";
+    rel:siblingOf <#Fhíacra>;
+    rel:parentOf [
+      a foaf:Person;
+      rel:childOf <#Trénmóir>
+    ]
+
+# Or, rel:siblingOf <#Cnucha> ("a siúir")? EPT
+
+<#Trénmóir>
+    a foaf:Person;
+    irishRel:nomName "Trénmór";
+    irishRel:genName "Trénmóir";
+    owl:sameAs <#Tréinmóir>.
+
+<#Cairill>
+    a foaf:Person;
+    irishRel:genName "Cairill";
+    irishRel:nomName "Cairell";
+    rel:childOf <#Maoin>.
+
+<#Maoin>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Maoin";
+    rel:childOf <#Smóil>;
+    rdfs:comment "a Mumhain".
+
+<#Smóil>
+    a foaf:Person;
+    irishRel:genName "Smóil";
+    irishRel:nomName "Smól".
+
+<#Áine-c4e4d8a0>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Áine";
+    rel:childOf <#Ealcmhair>.
+
+<#Ealcmhair>
+    a foaf:Person;
+    irishRel:genName "Ealcmhair";
+    irishRel:nomName "Elcmar".
+
+<#Fhearrdhomhain>
+    a foaf:Person;
+    irishRel:genName "Fhearrdhomhain";
+    irishRel:nomName "Feardhomhan";
+    rel:childOf <#Áine-c4e4d8a0>.
