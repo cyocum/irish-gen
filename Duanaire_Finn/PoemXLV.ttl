@@ -1,0 +1,116 @@
+@base <http://example.com/Duanaire_Finn.ttl/PoemXLV.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Poem XLV";
+    dcterms:isFormatOf <https://celt.ucc.ie/published/G402562/text010.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <https://celt.ucc.ie/published/G402562/text010.html>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+# I am omitting data from the Patrick-Oisín frame narrative. EPT
+
+<#CnúDeireoil>
+    a foaf:Person;
+    irishRel:nomName "Cnú CnúDeireoil";
+    rel:childOf <#Logha>.
+
+<#Logha>
+    a foaf:Person;
+    irishRel:genName "Logha";
+    irishRel:nomName "Lugh";
+    rel:childOf <#Eithlinn>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIV.ttl#Logha>.
+
+<#Eithlinn>
+    a foaf:Person;
+    irishRel:genName "Eithlinn";
+    irishRel:nomName "Eithne";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIV.ttl#Eithne>.
+
+<#Lugh>
+    a foaf:Person;
+    irishRel:nomName "Lugh";
+    rel:childOf <#Cein>;
+    owl:sameAs <#Logha>.
+
+<#Cein>
+    a foaf:Person;
+    irishRel:genName "Cein";
+    irishRel:nomName "Cian";
+    rel:childOf <#Cáinti>.
+
+<#Cáinti>
+    a foaf:Person;
+    irishRel:genName "Cáinti";
+    irishRel:nomName "Cáinte".
+
+<#Eithne-0e1475e0>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Eithne";
+    owl:sameAs <#Eithlinn>;
+    rel:childOf <#Bhaloir>.
+
+<#Bhaloir>
+    a foaf:Person;
+    irishRel:genName "Bhaloir";
+    irishRel:nomName "Balor";
+    rel:antagonistOf <#Lugh>.
+
+<#Taidg>
+    a foaf:Person;
+    irishRel:genName "Taidg";
+    irishRel:nomName "Tadg";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIV.ttl#Taidg>;
+    rel:childOf <#Nuadhat>.
+
+<#Nuadhat>
+    a foaf:Person;
+    irishRel:genName "Nuadhat";
+    irishRel:nomNAme "Nuadu";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIV.ttl#Nuadat>.
+
+<#Muirn>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Muirn";
+    rel:childOf <#Taidg>, <#Muirn>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIV.ttl#Muirn>.
+
+<#Eithne-600ce330>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Eithne";
+    owl:sameAs <#Eithlinn>;
+    rel:childOf <#Bhaloir>;
+    rel:parentOf [
+      a foaf:Person;
+      foaf:gender "female";
+      owl:sameAs <#Muirn>;
+      rel:parentOf [
+        a foaf:Person;
+        owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIV.ttl#Fionn>;
+        rel:childOf <#Cumaill>
+      ]
+    ].
+
+<#Cumaill>
+    a foaf:Person;
+    irishRel:nomName "Cumall";
+    irishRel:genName "Cumaill";
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIII.ttl#Cumaill>.

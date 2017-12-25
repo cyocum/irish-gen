@@ -12,7 +12,7 @@
 
 <>
     a dctype:Dataset;
-    dcterms:title "Poem XLIII"@sga;
+    dcterms:title "Poem XLIII";
     dcterms:isFormatOf <https://celt.ucc.ie/published/G402562/text008.html>;
     dcterms:format "text/turtle" ;
     prov:asDerivedFrom <https://celt.ucc.ie/published/G402562/text008.html>;
@@ -58,7 +58,6 @@
         a foaf:Person;
         foaf:gender "female";
         rel:parentOf <#Oisin>
-        owl:sameAs <#Áine>
     ].
 
 <#Áine>
@@ -741,3 +740,245 @@
     irishRel:genName "Fhearrdhomhain";
     irishRel:nomName "Feardhomhan";
     rel:childOf <#Áine-c4e4d8a0>.
+
+<#Teide>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Teide";
+    rel:childOf <#ChaílSmirrga>;
+    irishRel:numChild 13;
+    foaf:title "rioghan"@sga, "queen"@eng.
+
+<#ChaílSmirrga>
+    a foaf:Person;
+    irishRel:genName "Chaíl Smirrga";
+    irishRel:nomName "Cáel Smirrga";
+
+<#Guill>
+    a foaf:Person;
+    irishRel:nomName "Goll";
+    irishRel:genName "Guill";
+    rel:childOf <#Teide>, <#Cormac>.
+
+<#Cormac>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:spouseOf <#Teide>.
+
+# Cormac mac Airt? EPT
+
+<#Ailbhe>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Ailbhe";
+    rel:spouseOf <#Daighre>;
+    rel:childOf <#Labhraid>.
+
+<#Daighre>
+    a foaf:Person;
+    irishRel:nomName "Daighre".
+
+<#Labhraid>
+    a foaf:Person;
+    irishRel:nomName "Labhraid";
+    irishRel:genName "Labhraid".
+
+<#Samhaoir>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Samhaoir";
+    rel:spouseOf [
+      a foaf:Person;
+      rel:childOf <#Oileala>
+    ];
+    rel:childOf <#Finn-68ce9cd0>.
+
+<#Finn-68ce9cd0>
+    a foaf:Person;
+    irishRel:nomName "Fionn";
+    owl:sameAs <#Fionn>.
+
+<#Oileala>
+    a foaf:Person;
+    irishRel:genName "Oileala";
+    irishRel:nomName "Oillil".
+
+<#Tinnle>
+    a foaf:Person;
+    irishRel:nomName "Tinnle";
+    rel:childOf <#Samhaoir>.
+
+<#Cnodhbha>
+    a foaf:Person;
+    irishRel:nomName "Cnodhbha";
+    rel:childOf <#Samhaoir>.
+
+<#Connla>
+    a foaf:Person;
+    irishRel:nomName "Connla";
+    rel:childOf <#Samhaoir>.
+
+<#MoghCorb>
+    a foaf:Person;
+    irishRel:nomName "Mogh Corb";
+    rel:childOf <#Samhaoir>;
+    rdfs:comment "chatha Gabra".
+
+<#Caol>
+    a foaf:Person;
+    irishRel:nomName "Caol";
+    rel:descendantOf <#Neamhnainn>.
+
+<#Neamhnainn>
+    a foaf:Person;
+    irishRel:nomName "Neamhnann".
+
+<#Creidhe>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Creidhe";
+    rel:spouseOf <#Caol>;
+    rel:childOf <#Coirbre>.
+
+<#Coirbre>
+    a foaf:Person;
+    irishRel:nomName "Coirbre".
+
+<#Aoiffe>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Aoiffe";
+    rel:childOf <#Trenmoir-cb3674f0>;
+    rel:parentOf <#Caol>, [
+        a foaf:Person;
+        rel:siblingOf <#Caol>
+    ].
+
+<#Trenmoir-cb3674f0>
+    a foaf:Person;
+    irishRel:genName "Trenmoir"
+    irishRel:nomName "Trénmór";
+    owl:sameAs <#Tréinmóir>.
+
+<#Aillinn>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Aillinn";
+    rel:siblingOf <#Daigre>.
+
+# Murphy has "daughter of Daigre" but the text clearly has "siúr". EPT
+
+<#Daigre>
+    a foaf:Person;
+    irishRel:genName "Daigre";
+    irishRel:nomName "Daigre";
+    owl:sameAs <#Daighre>.
+
+<#Conall-45267890>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#Trenmoir>;
+    owl:sameAs <#Conall>.
+
+<#Trenmoir>
+    a foaf:Person;
+    irishRel:genName "Trenmoir";
+    irishRel:nomName "Trénmór";
+    owl:sameAs <#Tréinmóir>.
+
+# This is "Trénmór of the north", while <#Trenmoir-cb3674f0> is "Trénmór from the east". Could they be different people? EPT
+
+<#Diangus>
+    a foaf:Person;
+    irishRel:nomName "Diangus";
+    rel:childOf <#Aillinn>;
+    rel:childOf <#Conall-45267890>;
+    owl:sameAs <#Dhíengasa>.
+
+<#Ronán>
+    a foaf:Person;
+    irishRel:nomName "Ronán";
+    rel:childOf <#Aillinn>;
+    rel:childOf <#Conall-45267890>.
+
+<#Conbron>
+    a foaf:Person;
+    irishRel:nomName "Conbron";
+    rel:childOf <#ÁodhEangach>.
+
+<#ÁodhEangach-b075ac50>
+    a foaf:Person;
+    irishRel:nomName "Áodh Eangach";
+    owl:sameAs <#AodhEangach>.
+
+<#Dianghus>
+    a foaf:Person;
+    irishRel:nomName "Dianghus";
+    rel:childOf <#Conbron>.
+
+<#Cairioll>
+    a foaf:Person;
+    irishRel:nomName "Cairioll";
+    rel:descendantOf <#DiangusDonn>.
+
+<#DiangusDonn>
+    a foaf:Person;
+    irishRel:nomName "Diangus Donn".
+
+<#DiangusFionn>
+    a foaf:Person;
+    irishRel:nomName "Diangus Fionn";
+    rel:childOf <#Conall-f3dcf6a0>;
+    owl:sameAs <#Diangus>.
+
+<#Conall-f3dcf6a0>
+    a foaf:Person;
+    irishRel:nomName "Conall".
+    owl:sameAs <#Conall-45267890>.
+
+<#Fionn-720171a0>
+    owl:sameAs <#Fionn>;
+    rel:antagonistOf <#DiangusFionn>, [
+      a foaf:Person;
+      rel:childOf <#Cuinn-b5c17fc0>
+    ]
+
+<#Cuinn-b5c17fc0>
+    a foaf:Person;
+    irishRel:nomName "Conn".
+
+<#Finn-62a599b0>
+    a foaf:Person;
+    irishRel:nomName "Finn";
+    owl:sameAs <#Fionn>;
+    rdfs:comment "Bás Finn a mBroic ar ndul di".
+
+<#Dáire-7c008960>
+    a foaf:Person;
+    irishRel:nomName "Dáire";
+    owl:sameAs <#Dáire>;
+    rdfs:comment "do easgar um líg nDoire".
+
+<#Criomhall>
+    a foaf:Person;
+    irishRel:nomName "Criomhall";
+    owl:sameAs <#Criomall>;
+    rdfs:comment "bás Crimaill a Loch dhá Dhall".
+
+<#Cumhall>
+    a foaf:Person;
+    irishRel:nomName "Cumhall";
+    owl:sameAs <#Cumall>;
+    rdfs:comment "taoth a ccat Cnuch Cumall".
+
+<#Fithil-5a2da1b0>
+    a foaf:Person;
+    irishRel:nomName "Fithil";
+    owl:sameAs <#Fithil>;
+    rdfs:comment "comhlann da chéd leis gan lén";
+    rel:antagonistOf <#FeargusFínbhél>.
+
+<#FeargusFínbhél>
+    a foaf:Person;
+    irishRel:nomName "Feargus Fínbhél";
+    owl:sameAs <#FearghusFínbhél>.

@@ -1,0 +1,87 @@
+@base <http://example.com/NLSAdv.72.1.1.ttl/18vb1.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Pedigree of Finn (fol.14vb1-57)";
+    dcterms:isFormatOf <https://www.isos.dias.ie/libraries/NLS/NLS_Adv_MS_72_1_1/english/catalogue.html#34>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <https://www.isos.dias.ie/libraries/NLS/NLS_Adv_MS_72_1_1/english/catalogue.html#34>;
+    prov:qualifiedAssociation [
+        a prov:Association ;
+        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
+        prov:hadRole [ a prov:Creator ]
+    ] .
+
+<#Goll>
+    a foaf:Person;
+    irishRel:nomName "Goll";
+    rel:childOf <#Cormaic>;
+    owl:sameAs <http://example.com/Duanaire_Finn.ttl/PoemXLIII.ttl#Goll>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Nemaind>.
+
+<#Nemaind>
+    a foaf:Person;
+    irishRel:genName "Nemaind";
+    irishRel:nomName "Nemand";
+    rel:childOf <#MornaMoir>.
+
+<#MornaMoir>
+    a foaf:Person;
+    irishRel:genName "Morna Moir";
+    irishRel:nomName "Morna Mór";
+    rel:childOf <#GaraigGluinfind>.
+
+<#GaraigGluinfind>
+    a foaf:Person;
+    irishRel:genName "Garaig Gluinfind";
+    irishRel:nomName "Garad Gluinfind";
+    rel:childOf <#AedaDuanaig>.
+
+<#AedaDuanaig>
+    a foaf:Person;
+    irishRel:genName "Aeda Duanaig";
+    irishRel:nomName "Aed Duanach";
+    rel:childOf <#AedaChindclairi>.
+
+<#AedaChindclairi>
+    a foaf:Person;
+    irishRel:genName "Aeda Chindclairi";
+    irishRel:nomName "Aed Cendclaire";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#Sthainb>.
+
+<#Sthainb>
+    a foaf:Person;
+    irishRel:genName "Sthainb";
+    rel:childOf <#Ceit>.
+# Ms reading doubtful. EPT
+
+<#Ceit>
+    a foaf:Person;
+    irishRel:genName "Ceit";
+    irishRel:nomName "Cet"
+    rel:childOf <#Magach>.
+
+<#Magach>
+    a foaf:Person;
+    irishRel:genName "Magach".
