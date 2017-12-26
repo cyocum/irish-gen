@@ -9,18 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix nsl: <http://www.dbpedia.org/resource/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#>.
 
 <>
     a dctype:Dataset;
     dcterms:title "Poem XLIV";
     dcterms:isFormatOf <https://celt.ucc.ie/published/G402562/text009.html>;
     dcterms:format "text/turtle" ;
-    prov:asDerivedFrom <https://celt.ucc.ie/published/G402562/text009.html>;
-    prov:qualifiedAssociation [
-        a prov:Association ;
-        prov:agent <http://orcid.org/0000-0002-7241-3264> ;
-        prov:hadRole [ a prov:Creator ]
-    ] .
+    prov:asDerivedFrom <https://celt.ucc.ie/published/G402562/text009.html> .
 
 <#Logha>
     a foaf:Person;
@@ -65,13 +62,13 @@
     a foaf:Person;
     irishRel:nomName "Mac Lughach";
     rel:childOf <#Dáire>;
-    owl:sameAs <http://example.comPoemXI.ttl#Gaoine>.
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.ttl#Gaoine>.
 
 <#Gaoine>
     a foaf:Person;
     irishRel:nomName "Gaoine";
     rel:childOf <#Uirne>;
-    owl:sameAs <http://example.comPoemXI.ttl#Gaoine>.
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.ttl#Gaoine>.
 
 <#Uirne-46dd6060>
     a foaf:Person;
@@ -105,16 +102,14 @@
     irishRel:nomName "Feargus Finnliath".
 
 <#Bran>
-    a foaf:Person;
-    irishRel:nomName "Bran";
-    rel:childOf <#Uirne-46dd6060>.
-# i.e. "a foaf:Dog" EPT
+    a nsl:Dog ;
+    nsl:name "Bran";
+    vaem:hasOwner <#Uirne-46dd6060>.
 
 <#Sgeólang>
     a foaf:Person;
-    irishRel:nomName "Sgeólang";
-    rel:childOf <#Uirne-46dd6060>.
-# i.e. "a foaf:Dog" EPT
+    nsl:name "Sgeólang";
+    vaem:hasOwner <#Uirne-46dd6060>.
 
 <#LughaidhLagha>
     a foaf:Person;
@@ -156,26 +151,26 @@
 <#Muirn>
     a foaf:Person;
     irishRel:nomName "Muirn";
-    owl:sameAs <http://example.comPoemXLIII.ttl#Muirne>.
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.ttl#Muirne>.
 
 <#Fionn>
     a foaf:Person;
     irishRel:nomName "Fionn";
     rel:childOf <#Muirn>;
-    owl:sameAs <http://example.comPoemXLIII.ttl#Fionn>.
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.ttl#Fionn>.
 
 <#Cumaill>
     a foaf:Person;
     irishRel:genName "Cumaill";
     irishRel:nomName "Cumall";
     rel:childOf <#Trénmhóir>;
-    owl:sameAs <http://example.comPoemXLIII.ttl#Cumaill>.
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.ttl#Cumaill>.
 
 <#Trénmhóir>
     a foaf:Person;
     irishRel:genName "Trénmhór";
     irishRel:nomName "Trénmór";
-    owl:sameAs <http://example.comPoemXLIII.ttl#Tréinmóir>.
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.ttl#Tréinmóir>.
 
 <#Taidg>
     a foaf:Person;
