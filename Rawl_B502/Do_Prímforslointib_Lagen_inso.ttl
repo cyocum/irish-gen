@@ -1,0 +1,83 @@
+@base <http://example.com/Rawl_B502/Do_Primforslointib_Lagen_inso.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Do Primforslointib Lagen inso"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text005.html>;
+    dcterms:format "text/turtle";
+
+<#Lagen>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Lagen";
+    irishRel:ancestorGroupOf <#Fothairtt>, <#Laíchsi>;
+    owl:sameAs <http://example.com/Rawl_B502/alia_peritia_de_genelogiis_&_de_generibus_hibernensium.ttl#Laigin>.
+
+<#Fothairtt>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Fothairtt";
+    owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#Fotharta>.
+
+<#Laíchsi>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Laíchsi";
+    owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#Laigsi>.
+
+<#EochaidFuathn-Airt>
+    a foaf:Person;
+    irishRel:nomName "Eochaid Fuath n-Airt";
+    rel:childOf <#FeidelmidRechtada>;
+    rdfs:comment "a quo Fothairt nominantur & progeniti sunt";
+    irishRel:ancestorOfGroup <#Fothairtt>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#EchachFindFuathAirt>.
+
+<#FeidelmidRechtada>
+    a foaf:Person;
+    irishRel:datName "Feidelmid Rechtada";
+    irishRel:nomName "Feidlimid Rechtada";
+    rel:childOf <#ThuathailTechtmair>;
+    owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#FeidlimidRechtaid>.
+
+<#ThuathailTechtmair>
+    a foaf:Person;
+    irishRel:nomName "Tuathal Techtmar";
+    irishRel:genName "Thuathail Techtmair";
+    owl:sameAs <http://example.com/LL/n_dési.ttl#TuathalTechtmar>;
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#TuathailTectmair>.
+
+<#ConnCétchathach>
+    a foaf:Person;
+    irishRel:nomName "Conn Cétchathach";
+    rel:siblingOf <#EochaidFuathn-Airt>;
+    rel:childOf <#FeidelmidRechtada>;
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CuindCetchathaig>.
+
+<#Eochaid>
+    a foaf:Person;
+    irishRel:nomName "Eochaid";
+    owl:sameAs <#EochaidFuathn-Airt>;
+    rel:childOf <#Airtt>;
+    rdfs:comment "ut imperiti dicunt".
+
+<#Airtt>
+    a foaf:Person;
+    irishRel:genName "Airtt";
+    irishRel:nomName "Artt";
+    rdfs:comment "ut imperiti dicunt";
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#ArtOenfhir>.
+
+<#Cuind>
+    a foaf:Person;
+    irishRel:genName "Cuind";
+    irishRel:nomName "Cond";
+    rdfs:comment "ut imperiti dicunt";
+    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CuindCetchathaig>.

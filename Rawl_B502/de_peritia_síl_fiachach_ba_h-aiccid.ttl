@@ -390,12 +390,13 @@
     irishRel:nomName "Bruidge";
     rel:childOf <#NadBuidb>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bruidge>;
-    irishRel:ancestorOfGroup <#ÚiBlaithmeic>, <#ÚiFíngein>, <#ÚiThegdais>, <#SílSétnaeMóir>, <#ÚiBuide>, <#Sílm-Bruidge>;
-    rel:ancestorOf [
-      a foaf:Person;
-      irishRel:ancestorOfGroup <#Sílm-Bruidge>;
-      rel:ancestorOf <#ÁedCluanaMóir>
-    ].
+    irishRel:ancestorOfGroup <#ClannBruidge>;
+    rel:ancestorOf <#ÁedCluanaMóir>.
+
+<#ClannBruidge>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Bruidge";
+    irishRel:ancestorGroupOf <#ÚiBlaithmeic>, <#ÚiFíngein>, <#ÚiThegdais>, <#SílSétnaeMóir>, <#ÚiFonascaig>, <#ÚiDícollaDresáin>, <#ÚiSubacháin>, <#ÚiFínáin>, <#ÚiChuanáin>.
 
 <#ÚiBlaithmeic>
     a irishRel:populationGroup;
@@ -415,7 +416,12 @@
     a irishRel:populationGroup;
     irishRel:populationGroupName "Síl Sétnae Móir";
     irishRel:populationGroupName "Úi Óelide";
-    rdfs:comment ".i. Úi Óelide".
+    rdfs:comment ".i. Úi Óelide";
+    irishRel:ancestorGroupOf <#ÚiBuide>, <#Sílm-Bruidge>, <#ÚiÓelide>.
+
+<#ÚiÓelide>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Oelide".
 
 <#ÚiBuide>
     a irishRel:populationGroup;
@@ -430,7 +436,8 @@
     a foaf:Person;
     irishRel:nomName "Áed Cluana Móir";
     rel:childOf <#Éogain>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Aed-8c7e5857>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Aed-8c7e5857>;
+    irishRel:descendantOfGroup <#Sílm-Bruidge>.
 
 <#Éogain>
     a foaf:Person;
@@ -523,10 +530,6 @@
     irishRel:genName "Nad Buidb";
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bruidge-06cecf07>;
     owl:sameAs <#NadBuidb>.
-
-<#Bruidge-d95828c0>
-    owl:sameAs <#Bruidge-a6c88b80>;
-    irishRel:ancestorOfGroup <#ÚiFonascaig>, <#ÚiDícollaDresáin>, <#ÚiSubacháin>.
 
 <#ÚiFonascaig>
     a irishRel:populationGroup;
