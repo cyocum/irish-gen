@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/Do_Primforslointib_Lagen_inso.ttl>.
+@base <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.ttl>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -81,3 +81,60 @@
     irishRel:nomName "Cond";
     rdfs:comment "ut imperiti dicunt";
     owl:sameAs <http://example.com/LL/rig_ailig.ttl#CuindCetchathaig>.
+
+<#MoccuMugairne>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Moccu Mugairne".
+
+<#Huaitameic>
+    dcterms:title "Huait a meic"@sga;
+    prov:wasAttributedTo <#EochaidFuathn-Airt>.
+
+<#ClannaCairpri>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clanna Cairpri";
+    rdfs:seeAlso <#Huaitameic>.
+
+<#AEochaidAirttFuath>
+    dcterms:title "A Eochaid Airtt Fuath ";
+    rdfs:seeAlso <https://doi.org/10.1515/zcph.1927.16.1.395>;
+    prov:wasAttributedTo [
+      a foaf:Person;
+      foaf:title "poeta"@la, "poet"@eng
+    ].
+
+<#CuCorb>
+    a foaf:Person;
+    irishRel:nomName "Cu Corb";
+    owl:sameAs <http://example.com/LL/lagin.ttl#CúCorb>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#ConCorbb>;
+    rel:collaboratesWith <#EochaidFuathn-Airt>;
+    rdfs:seeAlso <#AEochaidAirttFuath>.
+
+<#Fothart>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Fothart";
+    rdfs:seeAlso <#AEochaidAirttFuath>;
+    owl:sameAs <#Fothairtt>.
+
+<#Brig>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Brig";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Brigit>.
+
+<#h-EochaidFindFuathn-Airtt>
+    a foaf:Person;
+    irishRel:accName "Eochaid Find Fuath n-Airtt";
+    irishRel:nomName "Eochaid Find Fuath Airtt";
+    irishRel:numChild 2.
+
+<#ÓengusMend>
+    a foaf:Person;
+    irishRel:nomName "Óengus Mend";
+    rel:childOf <#h-EochaidFindFuathn-Airtt>.
+
+<#CianCúldub>
+    a foaf:Person;
+    irishRel:nomName "Cian Cúldub";
+    rel:childOf <#h-EochaidFindFuathn-Airtt>.
