@@ -1,0 +1,43 @@
+@base <http://example.com/Rawl_B502/de_genelogia_loíchse_cuile_&_réta.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Loíchse Cuile & Réta"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text006.html> .
+
+<#Cathnia>
+    a foaf:Person;
+    irishRel:nomName "Cathnia";
+    rel:childOf <#Dúngusa>;
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_et_genelogia_loíchsi.ttl#Cathniad>.
+
+<#Dúngusa>
+    a foaf:Person;
+    irishRel:nomName "Dúngus";
+    irishRel:genName "Dúngusa";
+    rel:childOf <#Nárchon>;
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_et_genelogia_loíchsi.ttl#Dúngusa>.
+
+<#Nárchon>
+    a foaf:Person;
+    irishRel:nomName "Nárchú";
+    irishRel:genName "Nárchon";
+    rel:childOf <#Déicsenaich>;
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_et_genelogia_loíchsi.ttl#Nárchon>.
+
+<#Déicsenaich>
+    a foaf:Person;
+    irishRel:nomName "Décsenach";
+    irishRel:genName "Déicsenaich";
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_et_genelogia_loíchsi.ttl#Déicsenaich>.
