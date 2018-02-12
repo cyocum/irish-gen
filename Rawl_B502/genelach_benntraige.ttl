@@ -1,0 +1,175 @@
+@base <http://example.com/Rawl_B502/genelach_benntraige.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Benntraige"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text006.html> .
+
+    <#Cillíne>
+    a foaf:Person;
+    irishRel:nomName "Cillíne";
+    rel:childOf <#Dochartaich>.
+
+<#Dochartaich>
+    a foaf:Person;
+    irishRel:nomName "Dochartach";
+    irishRel:genName "Dochartaich";
+    rel:childOf <#Eóin>.
+
+<#Eóin>
+    a foaf:Person;
+    irishRel:nomName "Eóin";
+    irishRel:genName "Eóin";
+    rel:childOf <#Feromuin>.
+
+<#Feromuin>
+    a foaf:Person;
+    irishRel:nomName "Feromun";
+    irishRel:genName "Feromuin";
+    rel:childOf <#Aildíne>.
+
+<#Aildíne>
+    a foaf:Person;
+    irishRel:nomName "Aildéne";
+    irishRel:genName "Aildíne";
+    rel:childOf <#Oirenn>.
+
+<#Oirenn>
+    a foaf:Person;
+    irishRel:nomName "Oiriu";
+    irishRel:genName "Oirenn";
+    rel:childOf <#Mágach>.
+
+<#Mágach>
+    a foaf:Person;
+    irishRel:nomName "Mág";
+    irishRel:genName "Mágach";
+    rel:childOf <#Cellaich Croto>.
+
+<#CellaichCroto>
+    a foaf:Person;
+    irishRel:nomName "Cellach Croto";
+    irishRel:genName "Cellaich Croto";
+    rel:childOf <#Nechta>.
+
+<#Nechta>
+    a foaf:Person;
+    irishRel:nomName "Necht";
+    irishRel:genName "Nechta";
+    rel:childOf <#Lugna>.
+
+<#Lugna>
+    a foaf:Person;
+    irishRel:nomName "Lugain";
+    irishRel:genName "Lugna";
+    rel:childOf <#Inomuin>.
+
+<#Inomuin>
+    a foaf:Person;
+    irishRel:nomName "Inoman";
+    irishRel:genName "Inomuin";
+    rel:childOf <#Benta-83fcd460>.
+
+<#Benta>
+    a foaf:Person;
+    irishRel:nomName "Benta";
+    irishRel:genName "Benta";
+    rdfs:comment "a quo Bentraige nominantur";
+    irishRel:ancestorOfGroup <#Benntraige>;
+    rel:childOf <#Conchobuir>;
+    owl:sameAs <http://example.com/LL/dimittamus_in_terim.ttl#Benna>.
+
+<#Benntraige>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Benntraige".
+
+<#Conchobuir>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobar";
+    rel:childOf <#Nessa>;
+    owl:sameAs <http://example.com/LL/dimittamus_in_terim.ttl#Chonchobuir>.
+
+<#Nessa>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Nessa";
+    irishRel:genName "Nessa";
+    owl:sameAs <http://example.com/LL/dimittamus_in_terim.ttl#Nessa>.
+
+<#Benta-83fcd460>
+    a foaf:Person;
+    irishRel:nomName "Benta";
+    irishRel:genName "Benta";
+    irishRel:ancestorOfGroup <#Benntraige>;
+    rel:childOf <#Máil>.
+
+<#Máil>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Máil";
+    rel:childOf <#Formáil>.
+
+<#Formáil>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Formáil";
+    rel:childOf <#Sírnae>.
+
+<#Sírnae>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Sírnae";
+    rel:childOf <#Forich>.
+
+<#Forich>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Forich";
+    rel:childOf <#Rochada>.
+
+<#Rochada>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Rochada";
+    rel:childOf <#Clothnai>.
+
+<#Clothnai>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Clothnai";
+    rel:childOf <#Coirbb>.
+
+<#Coirbb>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Coirbb";
+    rel:childOf <#Sethrann>.
+
+<#Sethrann>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Sethrann";
+    rel:childOf <#Loga>.
+
+<#Loga>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Loga";
+    rel:childOf <#Cethnenn>.
+
+<#Cethnenn>
+    a foaf:Person;
+    irishRel:nomName ;
+    irishRel:genName "Cethnenn".
