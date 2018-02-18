@@ -117,59 +117,512 @@
 
 <#Máil>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Mál";
     irishRel:genName "Máil";
     rel:childOf <#Formáil>.
 
 <#Formáil>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Formál";
     irishRel:genName "Formáil";
     rel:childOf <#Sírnae>.
 
 <#Sírnae>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Sírna";
     irishRel:genName "Sírnae";
     rel:childOf <#Forich>.
 
 <#Forich>
     a foaf:Person;
-    irishRel:nomName ;
     irishRel:genName "Forich";
     rel:childOf <#Rochada>.
 
 <#Rochada>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Rochaid";
     irishRel:genName "Rochada";
     rel:childOf <#Clothnai>.
 
 <#Clothnai>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Clothna";
     irishRel:genName "Clothnai";
     rel:childOf <#Coirbb>.
 
 <#Coirbb>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Corbb";
     irishRel:genName "Coirbb";
     rel:childOf <#Sethrann>.
 
 <#Sethrann>
     a foaf:Person;
-    irishRel:nomName ;
     irishRel:genName "Sethrann";
     rel:childOf <#Loga>.
 
 <#Loga>
     a foaf:Person;
-    irishRel:nomName ;
+    irishRel:nomName "Lug";
     irishRel:genName "Loga";
-    rel:childOf <#Cethnenn>.
+    rel:childOf <#Cethnenn>;
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLV.ttl#Logha>.
 
 <#Cethnenn>
     a foaf:Person;
-    irishRel:nomName ;
-    irishRel:genName "Cethnenn".
+    irishRel:nomName "Ceithniu";
+    irishRel:genName "Cethnenn";
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLV.ttl#Eithlinn>.
+
+<#AmalgaidRéta>
+    a foaf:Person;
+    irishRel:nomName "Amalgaid Réta";
+    rdfs:comment "Ó Amalgaid Réta trá ro fodailte secht Laíchsi Lagen .i. ó Licc Réta & lia ríg a cathróe & a n-dúnad & a cáin & a n- dliged.".
+
+# Who even is this?! EPT
+
+<#SílBairr>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Bairr";
+    rdfs:comment "Sóerchlanna Laíchsi trá Síl Bairr mc Cáirthind uile cip sí áitt i Loíchis do-s-fail.".
+
+<#Bairr>
+    a foaf:Person;
+    irishRel:genName "Bairr";
+    irishRel:nomName "Barr";
+    rel:childOf <#Cairthind>;
+    irishRel:ancestorOfGroup <#SílBairr>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_loíchse_raimne.ttl#Bairr>.
+
+<#Cairthind>
+    a foaf:Person;
+    irishRel:genName "Caithind";
+    irishRel:nomName "Cairthend";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_loíchse_raimne.ttl#Cáirthind>.
+
+<#Sílm-Beraich>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl m-Beraich";
+    rdfs:comment "Síl m-Beraich immorro m. Mescill ind rígrad a quo sunt reges".
+
+<#Beraich>
+    a foaf:Person;
+    irishRel:genName "Beraich";
+    irishRel:nomName "Berach";
+    rel:childOf <#Mescill>;
+    irishRel:ancestorOfGroup <#Sílm-Beraich>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_loíchse_cuile_&_réta.ttl#Beraig>;
+    rdfs:comment "Berach na bennachtan".
+
+<#Mescill>
+    a foaf:Person;
+    irishRel:genName "Mescill";
+    irishRel:nomName "Mescell";
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_loíchse_cuile_&_réta.ttl#Mescill>.
+
+<#SóergusDoithnennach>
+    a foaf:Person;
+    irishRel:nomName "Sóergus Doithnennach";
+    rdfs:comment "Sóergus Doithnennach do-rat bennachtain for dá mc déc Beraich m. Meiscill";
+    foaf:knows <#Beraich>.
+
+<#Cathal>
+    a foaf:Person;
+    irishRel:nomName "Cathal";
+    rel:childOf <#Beraich>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_loíchse_cuile_&_réta.ttl#Cathail>;
+    rdfs:comment ".i. Cathal a quo reges".
+
+<#Gáethíne>
+    a foaf:Person;
+    irishRel:nomName "Gáethíne";
+    rel:descendantOf <#Cathal>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_loíchse_cuile_&_réta.ttl#Gáethíne>.
+
+<#Fachtna>
+    a foaf:Person;
+    irishRel:nomName "Fachtna";
+    rel:childOf <#Beraich>;
+    rdfs:comment "a quo Clann Beraich";
+    irishRel:ancestorOfGroup <#ClannBeraich>.
+
+<#ClannBeraich>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Beraich".
+
+<#Cenndubán>
+    a foaf:Person;
+    irishRel:nomName "Cenndubán";
+    rel:childOf <#Máelucáin>.
+
+<#Máelucáin>
+    a foaf:Person;
+    irishRel:nomName "Máelucán";
+    irishRel:genName "Máelucáin";
+    rel:childOf <#Finguine>.
+
+<#Finguine>
+    a foaf:Person;
+    irishRel:nomName "Fingen";
+    irishRel:genName "Finguine";
+    rel:childOf <#Flaithniad>.
+
+<#Flaithniad>
+    a foaf:Person;
+    irishRel:nomName "Flaithnia";
+    irishRel:genName "Flaithniad";
+    rel:childOf <#Beraich>.
+
+<#Beraich-cf341520>
+    a foaf:Person;
+    irishRel:nomName "Berach";
+    irishRel:genName "Beraich";
+    rel:childOf <#Mescill>;
+    owl:sameAs <#Beraich>.
+
+<#Mescill-cf341520>
+    a foaf:Person;
+    irishRel:nomName "Mescell";
+    irishRel:genName "Mescill";
+    owl:sameAs <#Mescill>.
+
+<#Dunechaid>
+    a foaf:Person;
+    irishRel:nomName "Dunechaid";
+    rel:childOf <#Beraich>;
+    irishRel:ancestorOfGroup <#ClannDuinechda>.
+
+<#ClannDuinechda>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Duinechda".
+
+<#Fubthad>
+    a foaf:Person;
+    irishRel:nomName "Fubthad";
+    rel:childOf <#Donnacáin>.
+
+<#Donnacáin>
+    a foaf:Person;
+    irishRel:nomName "Donnacán";
+    irishRel:genName "Donnacáin";
+    rel:childOf <#Fogartaich>.
+
+<#Fogartaich>
+    a foaf:Person;
+    irishRel:nomName "Fogartach";
+    irishRel:genName "Fogartaich";
+    rel:childOf <#Duinechda>.
+
+<#Duinechda>
+    a foaf:Person;
+    irishRel:nomName "Duinechaid";
+    irishRel:genName "Duinechda";
+    rel:childOf <#Beraich>;
+    owl:sameAs <#Dunechaid>.
+
+<#Beraich-7982b720>
+    a foaf:Person;
+    irishRel:nomName "Berach";
+    irishRel:genName "Beraich";
+    owl:sameAs <#Beraich>.
+
+<#Carpre>
+    a foaf:Person;
+    irishRel:nomName "Carpre";
+    rel:childOf <#Beraich>;
+    irishRel:ancestorOfGroup <#ClannCharpri>;
+    rdfs:comment "a quo Clann Charpri".
+
+<#ClannCharpri>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Charpri";
+    irishRel:ancestorGroupOf <#ÚiChroíbíne>.
+
+<#ÚiChroíbíne>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chroíbíne".
+
+<#Chroíbíne>
+    a foaf:Person;
+    irishRel:genName "Chroíbíne";
+    irishRel:nomName "Cróebéne";
+    rel:childOf <#Suibne>;
+    irishRel:ancestorOfGroup <#ÚiChroíbíne>.
+
+<#Suibne>
+    a foaf:Person;
+    irishRel:nomName "Suibne";
+    irishRel:genName "Suibne";
+    rel:descendantOf <#Carpre>.
+
+<#Ailill>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    rel:childOf <#Beraich>;
+    rdfs:comment "a quo Síl n-Ailella";
+    irishRel:ancestorOfGroup <#Síln-Ailella>.
+
+<#Síln-Ailella>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl n-Ailella".
+
+<#Cathal-c4085ce0>
+    a foaf:Person;
+    irishRel:nomName "Cathal";
+    rel:childOf <#Beraich>;
+    rdfs:comment "a quo Úi Fachtnai";
+    irishRel:ancestorOfGroup <#ÚiFachtnai>.
+
+<#ÚiFachtnai>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Fachtnai".
+
+<#Ruaidíne>
+    a foaf:Person;
+    irishRel:nomName "Ruaidíne";
+    rel:childOf <#Beraich>;
+    irishRel:ancestorOfGroup <#ClannRuaidíne>;
+    rdfs:comment "a quo Clann Ruaidíne".
+
+<#ClannRuaidíne>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Ruaidíne".
+
+<#Coscrach>
+    a foaf:Person;
+    irishRel:nomName "Coscrach";
+    rel:childOf <#Ruaidíne>.
+
+<#Indrechtach>
+    a foaf:Person;
+    irishRel:nomName "Indrechtach";
+    rel:childOf <#Beraich>;
+    rdfs:comment "a quo Clann Indrechtaich";
+    irishRel:ancestorOfGroup <#ClannIndrechtaich>.
+
+<#ClannIndrechtaich>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Indrechtaich";
+    rdfs:comment "de quibus Conall m. Godra".
+
+<#Conall>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#Godra>.
+
+<#Godra>
+    a foaf:Person;
+    irishRel:genName "Godra";
+    irishRel:nomName "Godar";
+    irishRel:descendantOf <#Indrechtach>.
+
+<#Cathasach>
+    a foaf:Person;
+    irishRel:nomName "Cathasach";
+    rel:childOf <#Beraich>;
+    rdfs:comment "a quo Clann Chathasaich";
+    irishRel:ancestorOfGroup <#ClannChathasaich>.
+
+<#ClannChathasaich>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Chathasaich";
+    irishRel:ancestorGroupOf <#ÚiFínáin>, <#ÚiRuaidíne-cffd0da0>.
+
+<#ÚiFínáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Fínáin".
+
+<#ÚiRuaidíne-cffd0da0>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Ruaidíne";
+    rdfs:comment "h-i Cluain Eidnech".
+
+<#Siln-Aduair>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Sil n-Aduair";
+    rdfs:comment "Fine Loíchsi Síl n-Aduair i n-Eittiuch".
+
+<#Airennáin>
+    a foaf:Person;
+    irishRel:nomName "Airenannáin";
+    rel:childOf <#Báeth>.
+
+<#Báeth>
+    a foaf:Person;
+    irishRel:nomName "Báeth";
+    irishRel:genName "Báeth";
+    rel:childOf <#Beláin>.
+
+<#Beláin>
+    a foaf:Person;
+    irishRel:nomName "Belán";
+    irishRel:genName "Beláin";
+    rel:childOf <#MáelPátric>.
+
+<#MáelPátric>
+    a foaf:Person;
+    irishRel:nomName "Máel Pátric";
+    irishRel:genName "Máel Pátric";
+    rel:childOf <#Fir Dá Chrích>.
+
+<#FirDáChrích>
+    a foaf:Person;
+    irishRel:nomName "Fer Dá Chrích";
+    irishRel:genName "Fir Dá Chrích";
+    rel:childOf <#Onchon>.
+
+<#Onchon>
+    a foaf:Person;
+    irishRel:nomName "Onchú";
+    irishRel:genName "Onchon";
+    rel:childOf <#Aduair>.
+
+<#Aduair>
+    a foaf:Person;
+    irishRel:nomName "Aduar";
+    irishRel:genName "Aduair";
+    rel:childOf <#Forbaird>;
+    irishRel:ancestorOfGroup <#Siln-Aduair>.
+
+<#Forbaird>
+    a foaf:Person;
+    irishRel:nomName "Forbard";
+    irishRel:genName "Forbaird";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    irishRel:genName "Áeda";
+    rel:childOf <#Lugdach>.
+
+<#Lugdach>
+    a foaf:Person;
+    irishRel:nomName "Lugaid";
+    irishRel:genName "Lugdach";
+    rel:childOf <#Bairr>.
+
+<#Bairr-f8170e20>
+    a foaf:Person;
+    irishRel:nomName "Barr";
+    irishRel:genName "Bairr";
+    owl:sameAs <#Bairr>.
+
+<#Coscrach-c6eabf80>
+    a foaf:Person;
+    irishRel:nomName "Coscrach";
+    rel:childOf <#Dubucáin>.
+
+<#Dubucáin>
+    a foaf:Person;
+    irishRel:nomName "Dubucán";
+    irishRel:genName "Dubucáin";
+    rel:childOf <#Murchada>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:nomName "Murchad";
+    irishRel:genName "Murchada";
+    rel:childOf <#Faílgusa>.
+
+<#Faílgusa>
+    a foaf:Person;
+    irishRel:nomName "Faílgus";
+    irishRel:genName "Faílgusa";
+    rel:childOf <#Cethernaich>.
+
+<#Cethernaich>
+    a foaf:Person;
+    irishRel:nomName "Cethernach";
+    irishRel:genName "Cethernaich";
+    rel:childOf <#Dubthathuad>.
+
+<#Dubthathuad>
+    a foaf:Person;
+    irishRel:nomName "Dubthathua";
+    irishRel:genName "Dubthathuad";
+    rel:childOf <#Aduair>.
+
+<#Aduair-feeafda0>
+    a foaf:Person;
+    irishRel:nomName "Aduar";
+    irishRel:genName "Aduair";
+    owl:sameAs <#Aduair>.
+
+<#Áeda-a8223f60>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#Énnae>.
+
+<#Énnae>
+    a foaf:Person;
+    irishRel:genName "Énnae";
+    irishRel:nomNam "Énna";
+    rel:childOf <#Bairr-7d6d2900>.
+
+<#Bairr-7d6d2900>
+    a foaf:Person;
+    irishRel:genName "Bairr";
+    irishRel:nomName "Barr";
+    owl:sameAs <#Bairr>.
+
+<#SílTecháin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Techáin".
+
+<#Techáin>
+    a foaf:Person;
+    irishRel:genName "Techáin";
+    irishRel:nomName "Techán";
+    rel:childOf <#Áeda-a8223f60>;
+    irishRel:ancestorOfGroup <#SílTecháin>.
+
+<#SílFurudráin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Furudráin".
+
+<#Furudráin>
+    a foaf:Person;
+    irishRel:genName "Furudráin";
+    irishRel:nomName "Furudrán";
+    rel:childOf <#Áeda-a8223f60>;
+    irishRel:ancestorOfGroup <#SílFurudráin>.
+
+<#SílCumma>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Cumma".
+
+<#Cumma>
+    a foaf:Person;
+    irishRel:genName "Cuma";
+    rel:childOf <#Senaich>;
+    irishRel:ancestorOfGroup <#SílCumma>.
+
+<#Senaich>
+    a foaf:Person;
+    irishRel:genName "Senaich";
+    irishRel:nomName "Senach";
+    rel:childOf <#Áeda-a8223f60>.
+
+<#SílChuaráin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Chuaráin".
+
+<#Chuaráin>
+    a foaf:Person;
+    irishRel:nomName "Cuarán";
+    irishRel:genName "Chuaráin";
+    rel:childOf <#Énnae>.
+
+<#Sílm-Bairr>
+    a irishRel:PopulationGroup;
+    irishrel:populationGroupName "Síl m-Bairr";
+    rdfs:comment "Síl m-Bairr trá sáerchlanna na secht Laíchsi, ar is co Barr bertair a n-geneloige h-uile ut praediximus.".
+
+<#m-Bairr>
+    a foaf:Person;
+    irishRel:nomName "Barr";
+    irishRel:genName "Bairr";
+    owl:sameAs <#Bairr>;
+    irishRel:ancestorOfGroup <#Sílm-Bairr>.
