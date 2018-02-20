@@ -28,7 +28,7 @@ my $person_no_space = $person =~ s/\s+//gr;
 
 my $output = "<#$person_no_space>\n a foaf:Person;\nirishRel:genName \"$person\";\nirishRel:numChild " . $num{$numChild} . ".\n\n";
 
-my @children = split /\set\s|&|,|\./, $tail;
+my @children = split /\set\s|&|,|\.|ocus/, $tail;
 
 foreach my $child (@children) {
     $child =~ s/^\s+|\s+$//g;
