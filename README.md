@@ -7,7 +7,7 @@ Framework](https://www.w3.org/TR/rdf11-primer/) (RDF) to represent it.
 Because this is a human curated database, a human readable
 representation of RDF was needed, which, in this case, the curators
 chose the [Turtle](https://www.w3.org/TR/turtle/) concrete
-representation.
+representation of RDF.
 
 # Structure
 
