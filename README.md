@@ -23,7 +23,7 @@ directory.
 Each genealogy is divided into its "items" which represent one Turtle
 file in its directory.  The item file name is created from its
 manuscript header.  For instance "Aisneidem Di Araill" from the _Book
-of Leinster_ has the file name <pre>aisneidem_di_araill.ttl</pre>.
+of Leinster_ has the file name `aisneidem_di_araill.ttl`.
 
 ## URL Structure
 
@@ -50,13 +50,13 @@ For example,
 ```
 
 At the present moment, all URLs are prefixed with
-<pre>http://example.com</pre> because a permanent URL has not been
+`http://example.com` because a permanent URL has not been
 purchased at this time.
 
 ## Individuals
 
 While each entry in the geneaology has its own URL, many references
-are to the same person.  To represent this, <pre>owl:sameAs</pre> is
+are to the same person.  To represent this, `owl:sameAs` is
 used to link these persons together.  This is done: within a single
 item file, across item files in the same manuscript, and across
 manuscripts.  This ensures that the various versions of the
@@ -65,6 +65,7 @@ genealogies are referenced together.
 # Utilties
 
 There are several utility Perl scripts which ease the creation and
-curation of the database.  Look in the <pre>utils</pre> directory for
+curation of the database.  Look in the `utils` directory for
 more information.
+
 
