@@ -1,32 +1,70 @@
 # Digitising Medieval Irish Genealogies in RDF
 
-Traditional Irish genealogies represented as Turtle RDF graphs.
+The goal of this project is to create a database of the early Irish
+Genealogies.  To achieve this goal and due to the nature of the source
+material, the curators chose the [Resource Description
+Framework](https://www.w3.org/TR/rdf11-primer/) (RDF) to represent it.
+Because this is a human curated database, a human readable
+representation of RDF was needed, which, in this case, the curators
+chose the [Turtle](https://www.w3.org/TR/turtle/) concrete
+representation.
 
-This project is to transform the early Irish geneologies from HTML and
-XML in the [CELT](http://celt.ucc.ie) site into a computer readable
-[Turtle RDF](http://www.w3.org/TR/turtle/).  This will allow
-researchers to manipulate and visualize the genealogies
-programmatically.  This should allow researchers a more reliable and
-quicker way to study the various genealogies.
+# Structure
 
-# Conventions
+The database is structured by dividing the genealogies by manuscript.
+Each manuscript is given its own directory which is derived from its
+common scholarly abbreviation.  For instance, all genealogies that
+are derived from the _Book of Leinster_ are placed in the LL
+directory. As for the ontologies, these are placed in the top
+directory.
 
-There are a couple of conventions used to make referencing the various
-people in the graph easier.  First, when a name is repeated, it's IRI
-is appended with a random identifier of the first eight characters
-created by uuidgen.  Second, when there are differing variants of a
-name the OWL sameAs property is used.  Third, if there are two or more
-variants of a particular decendant line, the same technique is use
-where a new node with a uuidgen id is created but is connected to the
-original node by an owl sameAs property.  The alternate line is then
-attached to the uuidgen node.
+## Items
 
-Each set of files are listed by the manuscript they derive from. For
-instance, files in the LL directory come from the Book of Leinster.
-LL comes from the standard scholarly abbreviation for the book.
+Each genealogy is divided into its "items" which represent one Turtle
+file in its directory.  The item file name is created from its
+manuscript header.  For instance "Aisneidem Di Araill" from the _Book
+of Leinster_ has the file name <pre>aisneidem_di_araill.ttl</pre>.
 
-For the moment, until there is a proper IRI to reference, all the
-turtle files use http://example.com as their base IRI. This makes
-namespacing and linking easier over the files.  For instance,
-dáil_caiss.ttl is in the LL directory and has a base IRI of
-http://example.com/LL/dáil_caiss.ttl.
+## URL Structure
+
+Within each item, the individual entries are given a URL to represent
+that particular entry in the geneaology.  The URL for an individual
+entry, which consitutes a node in the RDF graph, is generated from the
+instance of their name directly from the manuscript.  If the same name
+appears, whether or not it is the same person or not, then a UUID is
+appended to differentiate between the different instances is added.
+For example,
+
+```turtle
+<#CindFhaelad>
+    a foaf:Person;
+    irishRel:genName "Cind Fhaelad";
+    irishRel:nomName "Cenn Faelad";
+    rel:childOf <#Airnelaig>.
+
+<#CindFhaelad-6e827350>
+    a foaf:Person;
+    irishRel:genName "Cind Fhaelad";
+    irishRel:nomName "Cenn Faelad";
+    rel:childOf <#Gairb>.
+```
+
+At the present moment, all URLs are prefixed with
+<pre>http://example.com</pre> because a permanent URL has not been
+purchased at this time.
+
+## Individuals
+
+While each entry in the geneaology has its own URL, many references
+are to the same person.  To represent this, <pre>owl:sameAs</pre> is
+used to link these persons together.  This is done: within a single
+item file, across item files in the same manuscript, and across
+manuscripts.  This ensures that the various versions of the
+genealogies are referenced together.
+
+# Utilties
+
+There are several utility Perl scripts which ease the creation and
+curation of the database.  Look in the <pre>utils</pre> directory for
+more information.
+
