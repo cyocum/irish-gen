@@ -37,5 +37,5 @@ for(my $i = 0; $i < $len; $i++) {
     $output .= $relationship;
 }
 
-print $output;
+print ($output . "\n");
 
