@@ -70,7 +70,7 @@ referenced together.
 Occasionally, individuals will have alternate genealogies.  For ease
 of curation, these alternate genealogies are attached directly where
 they appear in the manuscript.  This will often make an individual
-look like they have three parents.
+look like they have three or more parents.
 
 ## Individuals with no name
 
