@@ -1,32 +1,151 @@
 # Digitising Medieval Irish Genealogies in RDF
 
-Traditional Irish genealogies represented as Turtle RDF graphs.
+The goal of this project is to create a database of the early Irish
+Genealogies.  To achieve this goal and due to the nature of the source
+material, the curators chose the [Resource Description
+Framework](https://www.w3.org/TR/rdf11-primer/) (RDF) to represent it.
+Because this is a human curated database, a human readable
+representation of RDF was needed, which, in this case, the curators
+chose the [Turtle](https://www.w3.org/TR/turtle/) concrete
+representation of RDF.
 
-This project is to transform the early Irish geneologies from HTML and
-XML in the [CELT](http://celt.ucc.ie) site into a computer readable
-[Turtle RDF](http://www.w3.org/TR/turtle/).  This will allow
-researchers to manipulate and visualize the genealogies
-programmatically.  This should allow researchers a more reliable and
-quicker way to study the various genealogies.
+# Structure
 
-# Conventions
+The database is structured by dividing the genealogies by manuscript.
+Each manuscript is given its own directory which is derived from its
+common scholarly abbreviation.  For instance, all genealogies that are
+derived from the _Book of Leinster_ are placed in the LL directory. As
+for the ontologies, these are placed in the top level directory.
 
-There are a couple of conventions used to make referencing the various
-people in the graph easier.  First, when a name is repeated, it's IRI
-is appended with a random identifier of the first eight characters
-created by uuidgen.  Second, when there are differing variants of a
-name the OWL sameAs property is used.  Third, if there are two or more
-variants of a particular decendant line, the same technique is use
-where a new node with a uuidgen id is created but is connected to the
-original node by an owl sameAs property.  The alternate line is then
-attached to the uuidgen node.
+## Items
 
-Each set of files are listed by the manuscript they derive from. For
-instance, files in the LL directory come from the Book of Leinster.
-LL comes from the standard scholarly abbreviation for the book.
+Each genealogy is divided into its "items" which represent one Turtle
+file in its directory.  The item file name is created from its
+manuscript header.  For instance "Aisneidem Di Araill" from the _Book
+of Leinster_ has the file name `aisneidem_di_araill.ttl`.
 
-For the moment, until there is a proper IRI to reference, all the
-turtle files use http://example.com as their base IRI. This makes
-namespacing and linking easier over the files.  For instance,
-dáil_caiss.ttl is in the LL directory and has a base IRI of
-http://example.com/LL/dáil_caiss.ttl.
+The curators have not always been consistant in the naming of the
+items.  Especally in LL, "Genelogia" or "De Genelach" have been
+omitted.
+
+## URL Structure
+
+Within each item, the individual entries are given a URL to represent
+that particular entry in the genealogy.  The URL for an individual
+entry, which constitutes a node in the RDF graph, is generated from
+the instance of their name directly from the manuscript.  If the same
+name appears in exactly the same form appears, whether or not it is
+the same person, then the first eight characters of a UUID generated
+by `uuidgen -r` are appended to differentiate between the different
+instances is added.  For example,
+
+```turtle
+<#CindFhaelad>
+    a foaf:Person;
+    irishRel:genName "Cind Fhaelad";
+    irishRel:nomName "Cenn Faelad";
+    rel:childOf <#Airnelaig>.
+
+<#CindFhaelad-6e827350>
+    a foaf:Person;
+    irishRel:genName "Cind Fhaelad";
+    irishRel:nomName "Cenn Faelad";
+    rel:childOf <#Gairb>.
+```
+
+At the present moment, all URLs are prefixed with `http://example.com`
+because a permanent URL has not been purchased at this time.  For
+example, a full URL for `<#CindFhaelad-6e827350>` would be
+`http://example.com/LL/ceniuil_lugdach.ttl#CindFhaelad-6e827350`.
+
+## Individuals
+
+While each entry in the genealogy has its own URL, many references are
+to the same individuals.  To represent this, `owl:sameAs` is used to
+link these URLs together.  This is done: within a single item file,
+across item files in the same manuscript, and across manuscripts.
+This ensures that the various versions of the genealogies are
+referenced together.
+
+Occasionally, individuals will have alternate genealogies.  For ease
+of curation, these alternate genealogies are attached directly where
+they appear in the manuscript.  This will often make an individual
+look like they have three or more parents.
+
+## Individuals with no name
+
+There are many instances where there are individuals who are mentioned
+but have no name.  RDF blank nodes are used to identify the
+individual.  The curators chose a format which uses a `_:missing` plus
+a UUID fragment like above. For instance,
+
+```turtle
+_:missing-04015614
+    a foaf:Person ;
+    foaf:gender "female" ;
+    rel:parentOf <#Conmáel>, <#h-Ér>, <#Orbba>, <#Ferón>, <#Fergna>;
+    rel:childOf <#Militis>;
+    rel:siblingOf <#Díl>.
+```
+
+The alternate form of the blank node is used where convenient.  For
+instance,
+
+```turtle
+<#FiachachLabrinne>
+    a foaf:Person ;
+    irishRel:genName "Fiachach Labrinne" ;
+    irishRel:nomName "Fiachu Labrainne" ;
+    rel:spouseOf [
+        a foaf:Person ;
+        foaf:gender "female" ;
+        rel:childOf <#MugáethMórólach>;
+        rel:parentOf <#ÓengusaÓlmugáetha>
+    ] ;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.ttl#FhiachachLabrainne>.
+```
+
+## Population Groups
+
+Often important individuals are credited with founding a clan or
+tribe.  In this case the population group is created as its own URL
+which is constructed using the same principles as for a person, as
+above.  For instance:
+
+```turtle
+<#Coscrach>
+    a foaf:Person;
+    irishRel:nomName "Coscrach";
+    rel:childOf <#Lorcan>;
+    irishRel:numChild 12 ;
+    irishRel:ancestorOfGroup <#ClandCosraig>.
+
+<#ClandCosraig>
+    a irishRel:PopulationGroup ;
+    irishRel:PopulationGroup "Cland Cosraig" .
+```
+
+## Comments on entries
+
+Occationally, in the manuscript sources, there is more information
+about an individual which is added to the entry by using
+`rdfs:comment`.  This is done because the curators wished to capture
+relevant non-structured information to capture the context of an
+entry.  For instance,
+
+```turtle
+<#Lachtna-32e54830>
+    a foaf:Person;
+    irishRel:nomName "Lachtna";
+    rel:childOf <#Cennétig>;
+    irishRel:numChild 0;
+    rdfs:comment "is é ro gab ríge dar éis Cennetig. Unde dicitur Grianan Lactnai i Creicc Léith...".
+```
+
+# Utilities
+
+There are several utility Perl scripts which ease the creation and
+curation of the database.  Look in the `utils` directory for
+more information.
+
+
