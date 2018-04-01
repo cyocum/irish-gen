@@ -1,0 +1,59 @@
+@base <http://example.com/Rawl_B502/clann_dúngaile.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Clann Dúnaile"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text007.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text007.html> .
+
+<#Séitrechán>
+    a foaf:Person;
+    irishRel:nomName "Séitrechán";
+    rel:childOf <#Cellaich>;
+    owl:sameAs <http://example.com/LL/cland_dungaile.ttl#Sétrachán>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:nomName "Cellach";
+    irishRel:genName "Cellaich";
+    rel:childOf <#Flaithim>;
+    owl:sameAs <http://example.com/LL/cland_dungaile.ttl#Cellaich>.
+
+<#Flaithim>
+    a foaf:Person;
+    irishRel:nomName "Flaithem";
+    irishRel:genName "Flaithim";
+    rel:childOf <#Forbasaich>;
+    owl:sameAs <http://example.com/LL/cland_dungaile.ttl#Fhlathim>.
+
+<#Forbasaich>
+    a foaf:Person;
+    irishRel:nomName "Forbasach";
+    irishRel:genName "Forbasaich";
+    rel:childOf <#Dúngaile>;
+    owl:sameAs <http://example.com/LL/cland_dungaile.ttl#Forbasaig>.
+
+<#Dúngaile>
+    a foaf:Person;
+    irishRel:nomName "Dúngal";
+    irishRel:genName "Dúngaile";
+    rel:childOf <#Snédgusa>;
+    owl:sameAs <http://example.com/LL/cland_dungaile.ttl#Dúngaile>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_taidc_inso.ttl#Dúngal>.
+
+<#Snédgusa>
+    a foaf:Person;
+    irishRel:nomName "Snédgus";
+    irishRel:genName "Snédgusa";
+    owl:sameAs <http://example.com/LL/cland_dungaile.ttl#Snedgusa>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_taidc_inso.ttl#Snédgus>.
