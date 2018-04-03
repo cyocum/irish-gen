@@ -1,0 +1,88 @@
+@base <http://example.com/Rawl_B502/_92.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "92"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text008.html> .
+
+<#SírnaSírsáeglach>
+    a irishTitles:Rí;
+    irishTitles:succeededBy <#RothechtaidRotha>;
+    irishRel:nomName "Sírna Sírsáeglach";
+    rel:childOf <#Déin>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#Sirna>;
+    rdfs:comment "Is leis ar-ríchta rotha na carpat cetherrech i nh-Érinn ar thús coro loisc tene geláin i n-Dún Sobairchi.".
+
+<#Déin>
+    a foaf:Person;
+    irishRel:genName "Déin";
+    irishRel:nomName "Dían";
+    rel:childOf <#Demáil>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#Dian>.
+
+<#Demáil>
+    a foaf:Person;
+    irishRel:genName "Demáil";
+    irishRel:nomName "Demál";
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#Demáil>.
+
+<#RothechtaidRotha>
+    a irishTitles:Rí;
+    irishRel:accName "Rothechtaid Rotha";
+    irishRel:nomName "Rothechtaid Rotha";
+    irishTitles:reignLength 7;
+    irishTitles:succeededBy <#ÉllimOllfínsnechta>;
+    rel:antagonistOf <#SírnaSírsáeglach>;
+    rel:childOf <#Móen>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#Rechtaid>;
+    rdfs:comment "Is leis ar-ríchta rotha na carpat cetherrech i nh-Érinn ar thús coro loisc tene geláin i n-Dún Sobairchi.".
+
+<#Móen>
+    a foaf:Person;
+    irishRel:genName "Móen";
+    irishRel:nomName "Móen";
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#Móen>.
+
+<#ÉllimOllfínsnechta>
+    a irishTitles:Rí;
+    irishRel:nomName "Éllim Ollfínsnechta";
+    irishTitles:reignLength 1;
+    irishTitles:succeededBy <#Giallchad>;
+    rdfs:comment ".i. fína fersat ina flaith";
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.ttl#EllimOllfhinsnechta>.
+
+<#Giallchad>
+    a irishTitles:Rí;
+    irishRel:nomName "Giallchad";
+    irishTitles:reignLength 9;
+    irishTitles:succeededBy <#ArttInflig>;
+    rel:antagonistOf <#ÉllimOllfínsnechta>;
+    rel:childOf <#AilellaOalchlóen>;
+    rdfs:comment "Is h-é thuc giall cach cóicid fhir a m-Mumain";
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.ttl#Giallchada>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#Giallchada>.
+
+<#AilellaOalchlóen>
+    a foaf:Person;
+    irishRel:genName "Ailella Oalchlóen";
+    irishRel:nomName "Ailill Oalchlóen";
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.ttl#AilellaOalchlóen>;
+    owl:sameAs <http://example.com/LL/lagin.ttl#AilellaOlchain>.
+
+<#Sírna>
+    a foaf:Person;
+    irishRel:genName "Sírna";
+    irishRel:nomName "Sírna";
+    owl:sameAs <http://example.com/LL/lagin.ttl#Sirnai>;
+    owl:sameAs <#SírnaSírsáeglach>.
