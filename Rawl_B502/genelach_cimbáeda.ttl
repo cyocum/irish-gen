@@ -1,0 +1,129 @@
+@base <http://example.com/Rawl_B502/genelach_cimbáeda.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Cimbáeda"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text008.html> .
+
+<#Cimbáed>
+    a foaf:Person;
+    irishRel:nomName "Cimbáed";
+    rel:childOf <#Fintain>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Cimbáeth>.
+
+<#Fintain>
+    a foaf:Person;
+    irishRel:nomName "Fintan";
+    irishRel:genName "Fintain";
+    rel:childOf <#Argatmáir>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Fintain>.
+
+<#Argatmáir>
+    a foaf:Person;
+    irishRel:nomName "Argatmár";
+    irishRel:genName "Argatmáir";
+    rel:childOf <#Sírláim>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Argatmár>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#Argatmáir>.
+
+<#Sírláim>
+    a foaf:Person;
+    irishRel:nomName "Sírlám";
+    irishRel:genName "Sírláim";
+    rel:childOf <#Find>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Sirlám>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#Sírláim>.
+
+<#Find>
+    a foaf:Person;
+    irishRel:nomName "Find";
+    irishRel:genName "Find";
+    rel:childOf <#Blátha>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Find>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#Find>.
+
+<#Blátha>
+    a foaf:Person;
+    irishRel:nomName "Bláth";
+    irishRel:genName "Blátha";
+    rel:childOf <#Labrada>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Brátha>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#Blátha>.
+
+<#Labrada>
+    a foaf:Person;
+    irishRel:nomName "Labraid";
+    irishRel:genName "Labrada";
+    rel:childOf <#CairpriOlloman>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Labrada>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#Labrada>.
+
+<#CairpriOlloman>
+    a foaf:Person;
+    irishRel:nomName "Cairpre Ollam";
+    irishRel:genName "Cairpri Olloman";
+    rel:childOf <#OllomanFótla>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Corpri>.
+
+<#OllomanFótla>
+    a foaf:Person;
+    irishRel:nomName "Ollam Fótla";
+    irishRel:genName "Olloman Fótla";
+    rel:childOf <#FiachachFínscothaich>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Olloman>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#OllamanFótla>.
+
+<#FiachachFínscothaich>
+    a foaf:Person;
+    irishRel:nomName "Fiacha Fínscothach";
+    irishRel:genName "Fiachach Fínscothaich";
+    rel:childOf <#SétnaiAirtt>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#FiachaFínscothe>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#FiachachFínscothaig>.
+
+<#SétnaiAirtt>
+    a foaf:Person;
+    irishRel:genName "Sétnai Airtt";
+    irishRel:nomName "Sétna Artt";
+    rel:childOf <#Ébir>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Setna>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Art>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#SétnaiAirt>.
+
+<#Ébir>
+    a foaf:Person;
+    irishRel:nomName "Éber";
+    irishRel:genName "Ébir";
+    rel:childOf <#h-Ír>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Eber>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#Ébir>.
+
+<#h-Ír>
+    a foaf:Person;
+    irishRel:nomName "Ír";
+    irishRel:genName "h- Ír";
+    rel:childOf <#MíledEspáine>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Ír>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#h-Ír>.
+
+<#MíledEspáine>
+    a foaf:Person;
+    irishRel:nomName "Míl Espáine";
+    irishRel:genName "Míled Espáine";
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Míl>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.ttl#MíledEspáine>.
+
+<#Cimbáethnochinnedcechcáin>
+    dcterms:title "Cimbáeth no chinned cech cáin";
+    rdfs:comment "Inde dicitur".
