@@ -1,0 +1,131 @@
+@base <http://example.com/Rawl_B502/_94.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<>
+    a dctype:Dataset;
+    dcterms:title "94"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text008.html> .
+
+<#Macha>
+    a irishRel:Rí;
+    foaf:gender "female";
+    irishRel:nomName "Macha";
+    irishTitles:reignLength 7;
+    irishTitles:succeededBy <#RechtaidRigderg>;
+    rel:childOf <#ÁedaRuaid>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Macha>.
+
+<#ÁedaRuaid>
+    a foaf:Person;
+    irishRel:genName "Áeda Ruaid";
+    irishRel:nomName "Áed Ruad";
+    rel:childOf <#Baduirn>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#ÁedRuad>.
+
+<#Baduirn>
+    a foaf:Person;
+    irishRel:genName "Baduirn";
+    irishRel:nomName "Badurn";
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Baduirn>.
+
+<#RechtaidRigderg>
+    a irishTitles:Rí;
+    irishRel:nomName "Rechtaid Rigderg";
+    irishTitles:reignLength 20;
+    irishTitles:succeededBy <#ÚgaineMór>;
+    rel:childOf <#Lugdach>;
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.ttl#RechtaidRigderg>;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.ttl#RectaidRigderc>;
+    owl:sameAs <http://example.com/Rawl_B502/item_na_fothaid.ttl#RechtaidRigderg>.
+
+<#Lugdach>
+    a foaf:Person;
+    irishRel:nomName "Lugaid";
+    irishRel:genName "Lugdach";
+    rel:childOf <#Echach>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Lugaid-f61af760>.
+
+<#Echach>
+    a foaf:Person;
+    irishRel:nomName "Eochu";
+    irishRel:genName "Echach";
+    rel:childOf <#AilellaFind>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Eochaid-46fd4120>.
+
+<#AilellaFind>
+    a foaf:Person;
+    irishRel:nomName "Ailill Find";
+    irishRel:genName "Ailella Find";
+    rel:childOf <#Airt>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#AilillFind>.
+
+<#Airt>
+    a foaf:Person;
+    irishRel:nomName "Art";
+    irishRel:genName "Airt";
+    rel:childOf <#LugdachLaídich>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Art>.
+
+<#LugdachLaídich>
+    a foaf:Person;
+    irishRel:nomName "Lugaid Laidech";
+    irishRel:genName "Lugdach Laídich";
+    rel:childOf <#EchachUarchés>;
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Lugaid-655f1030>.
+
+<#EchachUarchés>
+    a foaf:Person;
+    irishRel:nomName "Eochu Uarchés";
+    irishRel:genName "Echach Uarchés";
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#EochuUarchés>.
+
+<#Cimbáeda>
+    a foaf:Person;
+    irishRel:genName "Cimbáeda";
+    irishRel:nomName "Cimbáed";
+    owl:sameAs <http://example.com/Rawl_B502/_92.ttl#Cimbáeth>.
+
+<#ÚgaineMór>
+    a irishTitles:Rí;
+    irishTitles:reignLength 40;
+    irishTitles:succeededBy <#LáegaireLorcc>;
+    irishRel:numChild 52;
+    irishRel:accName "Úgaine Mór";
+    irishRel:nomName "Úgaine Mór";
+    irishRel:fosterChildOf <#Macha>, <#Cimbáeda>;
+    rel:childOf <#EchachBuadaig>;
+    rel:spouseOf <#CessairCáemchruthaich>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_cimbáeda.ttl#ÚgaineMór>;
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.ttl#ÚgaineMór>;
+    rdfs:comment "Úgaine Mór m. Echach gabais iar sin ríge h-Érenn & Alban & co Muir n- Icht & tuc ingin ríg Franc .i. Cessair Cáemchruthaich & ruc-side dá mc ar fichit & téora ingena dó ó ro gab-sum rígi na h-Éorpa h-uile co Muir Torrén sair & fodes & co Muir Caisp ut alii dicunt. Ro rainn iar sin h-Érinn i cóic ranna fichet eter a chlaind.".
+
+<#EchachBuadaig>
+    a foaf:Person;
+    irishRel:genName "Echach Buadaig";
+    irishRel:nomName "Eochu Buadach";
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.ttl#EchachBuadaig>
+
+<#CessairCáemchruthaich>
+    a foaf:person;
+    foaf:gender "female";
+    irishRel:nomName "Cessair Cáemchruthaich";
+    rel:childOf [
+      a foaf:Person;
+      foaf:title "rí Franc"@sga, "king of the Franks"@eng;
+    ].
+
+<#Badbchad>
+    a foaf:Person;
+    irishRel:nomName "Badbchad";
+    rel:antagonistOf <#ÚgaineMór>;
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.ttl#Badbchad>.
