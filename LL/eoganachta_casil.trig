@@ -1,4 +1,4 @@
-@base <http://example.com/LL/eoganachta_casil.ttl>.
+@base <http://example.com/LL/eoganachta_casil.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +7,19 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitles: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Eoganachta Casil"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
 
 <#Tadc>
@@ -181,7 +186,7 @@
     a foaf:Person;
     irishRel:genName "Ailella Oloim";
     irishRel:nomName "Ailill Olom";
-    owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#AilellaUluimm>;
+    owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#AilellaUluimm>;
     rel:childOf <#EogainTaidlig>.
 
 <#EogainTaidlig>
@@ -497,7 +502,7 @@
     a foaf:Person;
     irishRel:genName "Ebir";
     irishRel:nomName "Eber";
-    owl:sameAs <http://example.com/LL/fergus_mc_do_roig.ttl#Ebir>;
+    owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Ebir>;
     rel:childOf <#MiledEspain>.
 
 <#MiledEspain>
@@ -1749,7 +1754,7 @@
     a foaf:Person;
     irishRel:genName "Mael Fhatharlaig";
     irishRel:nomName "Mael Fatharlach";
-    owl:differentFrom <http://example.com/LL/dal_corpri_arad.ttl#MaelFathartaig>;
+    owl:differentFrom <http://example.com/LL/dal_corpri_arad.trig#MaelFathartaig>;
     rel:childOf <#Flaind>.
 
 <#Flaind>
@@ -1768,7 +1773,7 @@
     a foaf:Person;
     irishRel:genName "Mael Fhotharlaig";
     irishRel:nomName "Mael Fotharlach";
-    owl:differentFrom <http://example.com/LL/dal_corpri_arad.ttl#MaelFathartaig>;
+    owl:differentFrom <http://example.com/LL/dal_corpri_arad.trig#MaelFathartaig>;
     rel:childOf <#Brain>.
 
 <#Brain>
@@ -1857,7 +1862,7 @@
     a foaf:Person;
     irishRel:genName "Duib Da Chrích";
     irishRel:nomName "Dub Da Crích";
-    owl:differentFrom <http://example.com/LL/dal_corpri_arad.ttl#DuibDaChrích>;
+    owl:differentFrom <http://example.com/LL/dal_corpri_arad.trig#DuibDaChrích>;
     rel:childOf <#Colmain-6f2fc2cd>.
 
 <#Colmain-6f2fc2cd>
@@ -2511,9 +2516,9 @@
     a foaf:Person;
     irishRel:nomName "Tuathal";
     rel:childOf <#Dondchada-602dd708>;
-    irishRel:ancestorOfGroup <#hGlassin>.
+    irishRel:ancestorOfGroup <hGlassin>.
 
-<#hGlassin>
+<hGlassin>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Glassin" .
 
@@ -2524,9 +2529,9 @@
 <#Anmchaid-fdc100f0>
     owl:sameAs <#Anmchaid>;
     rel:childOf <#Dondchada-602dd708>;
-    irishRel:ancestorOfGroup <#hAnmchada>.
+    irishRel:ancestorOfGroup <hAnmchada>.
 
-<#hAnmchada>
+<hAnmchada>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Anmchada" .    
 
@@ -2692,9 +2697,9 @@
     a foaf:Person;
     irishRel:nomName "Muridach";
     rel:childOf <#Dallain>;
-    irishRel:ancestorOfGroup <#hChonath>.
+    irishRel:ancestorOfGroup <hChonath>.
 
-<#hChonath>
+<hChonath>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Chonath" .    
 
@@ -2943,9 +2948,9 @@
     a foaf:Person;
     irishRel:nomName "Draeic Deleith";
     rel:childOf <#Crumthain>;
-    irishRel:ancestorOfGroup <#hCuirbb>.
+    irishRel:ancestorOfGroup <hCuirbb>.
 
-<#hCuirbb>
+<hCuirbb>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Cuirbb" .    
 
@@ -3431,9 +3436,9 @@
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
-    rel:childOf <#h-Irc>.
+    rel:childOf <h-Irc>.
 
-<#h-Irc>
+<h-Irc>
     a foaf:Person;
     irishRel:genName "h-Irc";
     irishRel:nomName "Erc";
@@ -3474,9 +3479,9 @@
     irishRel:genName "Conail";
     irishRel:nomName "Conal";
     rel:childOf <#Intait>;
-    irishRel:ancestorOfGroup <#hChonaillGabra>.
+    irishRel:ancestorOfGroup <hChonaillGabra>.
 
-<#hChonaillGabra>
+<hChonaillGabra>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h Chonaill Gabra" .    
 
@@ -3746,9 +3751,9 @@
     a foaf:Person;
     irishRel:nomName "Oenchinnid";
     rel:childOf <#Briuin>;
-    irishRel:ancestorOfGroup <#hLocheni>.
+    irishRel:ancestorOfGroup <hLocheni>.
 
-<#hLocheni>
+<hLocheni>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Locheni" .    
 
@@ -3756,9 +3761,9 @@
     a foaf:Person;
     irishRel:nomName "Lugaid Dub";
     rel:childOf <#Briuin>;
-    irishRel:ancestorOfGroup <#hFergusa>.
+    irishRel:ancestorOfGroup <hFergusa>.
 
-<#hFergusa>
+<hFergusa>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Fergusa" .
 
@@ -3776,9 +3781,9 @@
     a foaf:Person;
     irishRel:nomName "Ross";
     rel:childOf <#Briuin>;
-    irishRel:ancestorOfGroup <#hFalbeCirr>.
+    irishRel:ancestorOfGroup <hFalbeCirr>.
 
-<#hFalbeCirr>
+<hFalbeCirr>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Falbe Cirr" .    
 
@@ -3796,9 +3801,9 @@
     a foaf:Person;
     irishRel:nomName "Dubthach Eich";
     rel:childOf <#Mainechain>;
-    irishRel:ancestorOfGroup <#hFache>.
+    irishRel:ancestorOfGroup <hFache>.
 
-<#hFache>
+<hFache>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Fache" .    
 
@@ -3845,9 +3850,9 @@
     a foaf:Person;
     irishRel:genName "Murithaig";
     irishRel:nomName "Murithach";
-    rel:childOf <#h-Irc-a5840ea3>.
+    rel:childOf <h-Irc-a5840ea3>.
 
-<#h-Irc-a5840ea3>
+<h-Irc-a5840ea3>
     a foaf:Person;
     irishRel:genName "h-Irc";
     irishRel:nomName "Erc";
@@ -3905,10 +3910,10 @@
 <#Tail>
     irishRel:nomName "Tail";
     owl:sameAs <#Thail>;
-    rel:childOf <#h-Irc-8be8472a>.
+    rel:childOf <h-Irc-8be8472a>.
 
-<#h-Irc-8be8472a>
-    owl:sameAs <#h-Irc-a5840ea3>;
+<h-Irc-8be8472a>
+    owl:sameAs <h-Irc-a5840ea3>;
     rel:childOf <#Fhintait>.
 
 <#Fhintait>
@@ -3954,10 +3959,10 @@
     a foaf:Person;
     irishRel:genName "Lichtenaig";
     irishRel:nomName "Lichtenach";
-    rel:childOf <#h-Irc-5b4c7860>.
+    rel:childOf <h-Irc-5b4c7860>.
 
-<#h-Irc-5b4c7860>
-    owl:sameAs <#h-Irc-a5840ea3>;
+<h-Irc-5b4c7860>
+    owl:sameAs <h-Irc-a5840ea3>;
     rel:childOf <#Fhintait-7455c90c>.
 
 <#Fhintait-7455c90c>
@@ -3996,10 +4001,10 @@
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Echaid";
-    rel:childOf <#h-Irc-1147e2d8>.
+    rel:childOf <h-Irc-1147e2d8>.
 
-<#h-Irc-1147e2d8>
-    owl:sameAs <#h-Irc-8be8472a>;
+<h-Irc-1147e2d8>
+    owl:sameAs <h-Irc-8be8472a>;
     rel:childOf <#Fhintait-5f75e6b7>.
 
 <#Fhintait-5f75e6b7>
@@ -4152,9 +4157,9 @@
 <#Cendfhotae>
     a foaf:Person;
     irishRel:nomName "Cendfhotae";
-    rel:childOf <#h-Irc-5154ce58>.
+    rel:childOf <h-Irc-5154ce58>.
 
-<#h-Irc-5154ce58>
+<h-Irc-5154ce58>
     a foaf:Person;
     irishRel:genName "h-Irc";
     irishRel:nomName "Erc";
@@ -4194,13 +4199,13 @@
     a foaf:Person;
     irishRel:nomName "Echen";
     rel:childOf <#Corpri-4aaa264b>;
-    irishRel:ancestorOfGroup <#FirThamnaig>, <#hGarbain>.
+    irishRel:ancestorOfGroup <#FirThamnaig>, <hGarbain>.
 
 <#FirThamnaig>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Fir Thamnaig" .
 
-<#hGarbain>
+<hGarbain>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Garbain" .
 
@@ -4208,7 +4213,7 @@
     a foaf:Person ;
     irishRel:genName "Meic Brocain" ;
     irishRel:nomName "Mac Brocan" ;
-    irishRel:descendantOfGroup <#hGarbain>.
+    irishRel:descendantOfGroup <hGarbain>.
 
 <#Tren>
     a foaf:Person;
@@ -4230,7 +4235,7 @@
     irishRel:nomName "Mane";
     rel:childOf <#Echein>.
 
-<#hChille>
+<hChille>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Chille" ;
     rdfs:comment "ón Omnae"@sga .
@@ -4260,9 +4265,9 @@
     a foaf:Person;
     irishRel:genName "Cummascaig";
     irishRel:nomName "Cummascach";
-    rel:childOf <#h-Irc-32335064>.
+    rel:childOf <h-Irc-32335064>.
 
-<#h-Irc-32335064>
+<h-Irc-32335064>
     a foaf:Person;
     irishRel:genName "h-Irc";
     irishRel:nomName "Erc";
@@ -4377,10 +4382,10 @@
     irishRel:genName "Ailella Cendfotai";
     irishRel:nomName "Ailill Cindfotae";
     owl:sameAs <#Cendfhotae>;
-    rel:childOf <#h-Irc-b3af4a1d>.
+    rel:childOf <h-Irc-b3af4a1d>.
 
-<#h-Irc-b3af4a1d>
-    owl:sameAs <#h-Irc-5154ce58>;
+<h-Irc-b3af4a1d>
+    owl:sameAs <h-Irc-5154ce58>;
     rel:childOf <#Carpri-e95033a3>.
 
 <#Carpri-e95033a3>
@@ -4479,9 +4484,9 @@
     a foaf:Person;
     irishRel:genName "Budi";
     irishRel:nomName "Buide";
-    rel:childOf <#h-Ingu>.
+    rel:childOf <h-Ingu>.
 
-<#h-Ingu>
+<h-Ingu>
     a foaf:Person;
     irishRel:nomName "h-Ingu";
     rel:childOf <#Gulbain>.
@@ -4621,9 +4626,9 @@
 <#Daescur>
     a foaf:Person;
     irishRel:nomName "Daescur";
-    rel:childOf <#h-Ingardail>.
+    rel:childOf <h-Ingardail>.
 
-<#h-Ingardail>
+<h-Ingardail>
     a foaf:Person;
     irishRel:genName "h-Ingardail";
     irishRel:nomName "Ingardal";
@@ -4756,7 +4761,7 @@
 <#FiachachFidgente-b0fd7722>
     owl:sameAs <#FiachachFidgente>.
 
-<Setnai-0e372e23>
+<#Setnai-0e372e23>
     irishRel:nomName "Setnai";
     irishRel:numChild 3;
     owl:sameAs <#Shetnai>.
@@ -4764,17 +4769,17 @@
 <#Corc>
     irishRel:nomName "Corc";
     owl:sameAs <#Cuirc-22d63099>;
-    rel:childOf <Setnai-0e372e23>.
+    rel:childOf <#Setnai-0e372e23>.
 
 <#Findchad-48c3707c>
     a foaf:Person;
     irishRel:nomName "Findchad";
-    rel:childOf <Setnai-0e372e23>.
+    rel:childOf <#Setnai-0e372e23>.
 
 <#Fintat>
     a foaf:Person;
     irishRel:nomName "Fintat";
-    rel:childOf <Setnai-0e372e23>.
+    rel:childOf <#Setnai-0e372e23>.
 
 <#FerAnbuis>
     a foaf:Person;
@@ -4828,3 +4833,5 @@
 
 <#FiachachFidgente-1801d13d>
     owl:sameAs <#FiachachFidgente-b0fd7722>.
+}
+

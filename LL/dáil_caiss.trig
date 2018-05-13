@@ -1,4 +1,4 @@
-@base <http://example.com/LL/dáil_caiss.ttl>.
+@base <http://example.com/LL/dáil_caiss.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Dáil Caiss"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text008.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text008.html> .
 
 <#Caiss>
@@ -38,9 +43,9 @@
     a foaf:Person;
     irishRel:nomName "Blat";
     rel:childOf <#Caiss>;
-    irishRel:ancestorOfGroup <#hBlait>.
+    irishRel:ancestorOfGroup <hBlait>.
 
-<#hBlait>
+<hBlait>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Blait" .    
 
@@ -48,9 +53,9 @@
     a foaf:Person;
     irishRel:nomName "Cassin";
     rel:childOf <#Caiss>;
-    irishRel:ancestorOfGroup <#hChassin>.
+    irishRel:ancestorOfGroup <hChassin>.
 
-<#hChassin>
+<hChassin>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Chassin" .    
 
@@ -58,9 +63,9 @@
     a foaf:Person;
     irishRel:nomName "Lugaid";
     rel:childOf <#Caiss>;
-    irishRel:ancestorOfGroup <#hMaelBaetain>.
+    irishRel:ancestorOfGroup <hMaelBaetain>.
 
-<#hMaelBaetain>
+<hMaelBaetain>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Mael Baetain" .
 
@@ -68,9 +73,9 @@
     a foaf:Person;
     irishRel:nomName "Setna";
     rel:childOf <#Caiss>;
-    irishRel:ancestorOfGroup <#hMoenchen>.
+    irishRel:ancestorOfGroup <hMoenchen>.
 
-<#hMoenchen>
+<hMoenchen>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Moenchen" .    
 
@@ -100,9 +105,9 @@
     a foaf:Person;
     irishRel:nomName "Aed";
     rel:childOf <#Caiss>;
-    irishRel:ancestorOfGroup <#hAeda>.
+    irishRel:ancestorOfGroup <hAeda>.
 
-<#hAeda>
+<hAeda>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Aeda" .    
 
@@ -581,3 +586,5 @@
     irishRel:nomName "Ligdai";
     rel:childOf <#Eochu>.
     
+}
+

@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_fiachach_aidni.ttl>.
+@base <http://example.com/LL/h_fiachach_aidni.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "H. Fiachach Aidni"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text114.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text114.html> .
 
 <#GillaCellaich>
@@ -133,10 +138,11 @@
     irishRel:genName "Fiachach";
     irishRel:nomName "Fiachu";
     rel:childOf <#EchachMugmedoin>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fiachach>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fiachach>.
 
 <#EchachMugmedoin>
     a foaf:Person;
     irishRel:genName "Echach Mugmedoin";
     irishRel:nomName "Eochu Mugmedon" ;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EchachMugmedóin>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EchachMugmedóin>.
+}

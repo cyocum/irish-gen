@@ -1,0 +1,96 @@
+@base <http://example.com/Rawl_B502/nunc_úi_diabulbaine.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Nunc Uí Diabulbaine"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text006.html> .
+
+<#CummairDiabulban>
+    a foaf:Person;
+    irishRel:nomName "Cummair Diabulban";
+    rel:childOf <#Conglais>;
+    rdfs:comment "Is de atá Cummair Diabulbane & Druim Senchuimre qui habuit duas uxores unaque in his duabus non erat frequens et ob hoc Diabulbane dictus est.".
+
+<#Conglais>
+    a foaf:Person;
+    irishRel:genName "Conglais";
+    irishRel:nomName "Cú Glas";
+    rel:childOf <#Nóes>;
+    irishRel:descendantOfGroup <#ChiannachtGlinniGemen>.
+
+<#ChiannachtGlinniGemen>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ciannacht Glinni Gemen".
+
+<#DruimSenchuimre>
+    a foaf:Person;
+    irishRel:nomName "Druim Senchuimre";
+    irishRel:descendantOfGroup <#ChiannachtGlinniGemen>.
+
+<#Nóes>
+    a foaf:Person;
+    irishRel:genName "Nóes";
+    rel:childOf <#Fincháin>.
+
+<#Fincháin>
+    a foaf:Person;
+    irishRel:nomName "Finchán";
+    irishRel:genName "Fincháin";
+    rel:childOf <#Féicc>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Fhindchain>.
+
+<#Féicc>
+    a foaf:Person;
+    irishRel:nomName "Fíacc";
+    irishRel:genName "Féicc";
+    rel:childOf <#ImchadaUlaich>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Fheic>.
+
+<#ImchadaUlaich>
+    a foaf:Person;
+    irishRel:nomName "Imchad Ulach";
+    irishRel:genName "Imchada Ulaich";
+    rel:childOf <#Condlae>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#FhindchadaUlig>.
+
+<#Condlae>
+    a foaf:Person;
+    irishRel:nomName "Condla";
+    irishRel:genName "Condlae";
+    rel:childOf <#Thaidc>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Conla>.
+
+<#Thaidc>
+    a foaf:Person;
+    irishRel:nomName "Tadc";
+    irishRel:genName "Thaidc";
+    rel:childOf <#Céin>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Taidc>.
+
+<#Céin>
+    a foaf:Person;
+    irishRel:nomName "Cían";
+    irishRel:genName "Céin";
+    rel:childOf <#Ailella>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Cein>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    irishRel:genName "Ailella";
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#AilellaUluimm>.
+}

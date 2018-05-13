@@ -1,4 +1,4 @@
-@base <http://example.com/LL/clainde_lulaig.ttl>.
+@base <http://example.com/LL/clainde_lulaig.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,131 +9,138 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+     
+
+<http://example.com/LL> {
 <>
-    a dctype:Dataset;
-    dcterms:title "Genelach Clainde Lulaig"@sga;
-    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text069.html>;
-    dcterms:format "text/turtle" ;
-    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text069.html> .
 
-<#MaelSnechta>
-    a foaf:Person;
-    irishRel:nomName "Mael Snechta";
-    rel:childOf <#GillaiChomgain>.
+        a dctype:Dataset;
+        dcterms:title "Genelach Clainde Lulaig"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text069.html>;
+        dcterms:format "application/trig" ;
+        prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text069.html> .
 
-<#GillaiChomgain>
-    a foaf:Person;
-    irishRel:genName "Gillai Chomgain";
-    irishRel:nomName "Gilla Comgan";
-    rel:childOf <#MaelBrigti>.
+     <#MaelSnechta>
+        a foaf:Person;
+        irishRel:nomName "Mael Snechta";
+        rel:childOf <#GillaiChomgain>.
 
-<#MaelBrigti>
-    a foaf:Person;
-    irishRel:genName "Mael Brigti";
-    irishRel:nomName "Mael Brigit";
-    rel:childOf <#Ruadri>.
+     <#GillaiChomgain>
+        a foaf:Person;
+        irishRel:genName "Gillai Chomgain";
+        irishRel:nomName "Gilla Comgan";
+        rel:childOf <#MaelBrigti>.
 
-<#Ruadri>
-    a foaf:Person;
-    irishRel:nomName "Ruadri";
-    rel:childOf <#Dondgusa>.
+     <#MaelBrigti>
+        a foaf:Person;
+        irishRel:genName "Mael Brigti";
+        irishRel:nomName "Mael Brigit";
+        rel:childOf <#Ruadri>.
 
-<#Dondgusa>
-    a foaf:Person;
-    irishRel:genName "Dondgusa";
-    irishRel:nomName "Dondgus";
-    rel:childOf <#Morgain>.
+     <#Ruadri>
+        a foaf:Person;
+        irishRel:nomName "Ruadri";
+        rel:childOf <#Dondgusa>.
 
-<#Morgain>
-    a foaf:Person;
-    irishRel:genName "Morgain";
-    irishRel:nomName "Morgan";
-    rel:childOf <#Domnaill>.
+     <#Dondgusa>
+        a foaf:Person;
+        irishRel:genName "Dondgusa";
+        irishRel:nomName "Dondgus";
+        rel:childOf <#Morgain>.
 
-<#Domnaill>
-    a foaf:Person;
-    irishRel:genName "Domnaill";
-    irishRel:nomName "Domnall";
-    rel:childOf <#Cathmáil>.
+     <#Morgain>
+        a foaf:Person;
+        irishRel:genName "Morgain";
+        irishRel:nomName "Morgan";
+        rel:childOf <#Domnaill>.
 
-<#Cathmáil>
-    a foaf:Person;
-    irishRel:genName "Cathmáil";
-    irishRel:nomName "Cathmál";
-    rel:childOf <#Ruadrí>.
+     <#Domnaill>
+        a foaf:Person;
+        irishRel:genName "Domnaill";
+        irishRel:nomName "Domnall";
+        rel:childOf <#Cathmáil>.
 
-<#Ruadrí>
-    a foaf:Person;
-    irishRel:nomName "Ruadrí";
-    rel:childOf <#Ailchellaig>.
+     <#Cathmáil>
+        a foaf:Person;
+        irishRel:genName "Cathmáil";
+        irishRel:nomName "Cathmál";
+        rel:childOf <#Ruadrí>.
 
-<#Ailchellaig>
-    a foaf:Person;
-    irishRel:genName "Ailchellaig";
-    irishRel:nomName "Ailchellach";
-    rel:childOf <#FherchairFotai>.
+     <#Ruadrí>
+        a foaf:Person;
+        irishRel:nomName "Ruadrí";
+        rel:childOf <#Ailchellaig>.
 
-<#FherchairFotai>
-    a foaf:Person;
-    irishRel:genName "Fherchair Fotai";
-    irishRel:nomName "Ferchar Fotae";
-    rel:childOf <#Fheradaig>.
+     <#Ailchellaig>
+        a foaf:Person;
+        irishRel:genName "Ailchellaig";
+        irishRel:nomName "Ailchellach";
+        rel:childOf <#FherchairFotai>.
 
-<#Fheradaig>
-    a foaf:Person;
-    irishRel:genName "Fheradaig";
-    irishRel:nomName "Feradach";
-    rel:childOf <#Fhergusa>.
+     <#FherchairFotai>
+        a foaf:Person;
+        irishRel:genName "Fherchair Fotai";
+        irishRel:nomName "Ferchar Fotae";
+        rel:childOf <#Fheradaig>.
 
-<#Fhergusa>
-    a foaf:Person;
-    irishRel:genName "Fhergusa";
-    irishRel:nomName "Fergus";
-    rel:childOf <#Nectain>.
+     <#Fheradaig>
+        a foaf:Person;
+        irishRel:genName "Fheradaig";
+        irishRel:nomName "Feradach";
+        rel:childOf <#Fhergusa>.
 
-<#Nectain>
-    a foaf:Person;
-    irishRel:genName "Nectain";
-    irishRel:nomName "Nectan";
-    rel:childOf <#Colmain>.
+     <#Fhergusa>
+        a foaf:Person;
+        irishRel:genName "Fhergusa";
+        irishRel:nomName "Fergus";
+        rel:childOf <#Nectain>.
 
-<#Colmain>
-    a foaf:Person;
-    irishRel:genName "Colmain";
-    irishRel:nomName "Colman";
-    rel:childOf <#Baitain>.
+     <#Nectain>
+        a foaf:Person;
+        irishRel:genName "Nectain";
+        irishRel:nomName "Nectan";
+        rel:childOf <#Colmain>.
 
-<#Baitain>
-    a foaf:Person;
-    irishRel:genName "Baitain";
-    irishRel:nomName "Baitan";
-    rel:childOf <#Echdach>.
+     <#Colmain>
+        a foaf:Person;
+        irishRel:genName "Colmain";
+        irishRel:nomName "Colman";
+        rel:childOf <#Baitain>.
 
-<#Echdach>
-    a foaf:Person;
-    irishRel:genName "Echdach";
-    irishRel:nomName "Echdaid";
-    rel:childOf <#Muridaig>.
+     <#Baitain>
+        a foaf:Person;
+        irishRel:genName "Baitain";
+        irishRel:nomName "Baitan";
+        rel:childOf <#Echdach>.
 
-<#Muridaig>
-    a foaf:Person;
-    irishRel:genName "Muridaig";
-    irishRel:nomName "Muridach";
-    rel:childOf <#Loairn>.
+     <#Echdach>
+        a foaf:Person;
+        irishRel:genName "Echdach";
+        irishRel:nomName "Echdaid";
+        rel:childOf <#Muridaig>.
 
-<#Loairn>
-    a foaf:Person;
-    irishRel:genName "Loairn";
-    irishRel:nomName "Loarn";
-    rel:childOf <#Eirc>.
+    <#Muridaig>
+        a foaf:Person;
+        irishRel:genName "Muridaig";
+        irishRel:nomName "Muridach";
+        rel:childOf <#Loairn>.
 
-<#Eirc>
-    a foaf:Person;
-    irishRel:genName "Eirc";
-    irishRel:nomName "Erc";
-    rel:childOf <#EchachMunremuir>.
+     <#Loairn>
+        a foaf:Person;
+        irishRel:genName "Loairn";
+        irishRel:nomName "Loarn";
+        rel:childOf <#Eirc>.
 
-<#EchachMunremuir>
-    a foaf:Person;
-    irishRel:genName "Echaid Munremur";
-    irishRel:nomName "Echach Munremuir".
+     <#Eirc>
+        a foaf:Person;
+        irishRel:genName "Eirc";
+        irishRel:nomName "Erc";
+        rel:childOf <#EchachMunremuir>.
+
+     <#EchachMunremuir>
+        a foaf:Person;
+        irishRel:genName "Echaid Munremur";
+        irishRel:nomName "Echach Munremuir".
+}
+

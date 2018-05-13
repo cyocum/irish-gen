@@ -1,0 +1,127 @@
+@base <http://example.com/Rawl_B502/genelach_cenéoil_cormaic.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cenéoil Cormaic"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html> .
+
+<#CúDruine>
+    a foaf:Person;
+    irishRel:nomName "Cú Druine";
+    rel:childOf <#Concertaich>.
+
+<#Concertaich>
+    a foaf:Person;
+    irishRel:genName "Concertaich";
+    irishRel:nomName "Concertach";
+    rel:childOf <#Rónáin>.
+
+<#Rónáin>
+    a foaf:Person;
+    irishRel:genName "Rónáin";
+    irishRel:nomName "Rónán";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Causáin>.
+
+<#Causáin>
+    a foaf:Person;
+    irishRel:genName "Causáin";
+    irishRel:nomName "Causán";
+    rel:childOf <#Feradaich>.
+
+<#Feradaich>
+    a foaf:Person;
+    irishRel:genName "Feradaich";
+    irishRel:nomName "Feradach";
+    rel:childOf <#NathÍ>.
+
+<#NathÍ>
+    a foaf:Person;
+    irishRel:genName "Nath Í";
+    rel:childOf <#Óengusa>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    rel:childOf <#NadFráech>.
+
+<#NadFráech>
+    a foaf:Person;
+    irishRel:genName "Nad Fráech".
+
+<#Cormaic-f13c12bf>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    owl:sameAs <#Cormaic>;
+    irishRel:numChild 5.
+
+<#Diarmait>
+    a foaf:Person;
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Cormaic-f13c12bf>.
+
+<#Cummíne>
+    a foaf:Person;
+    irishRel:nomName "Cummíne";
+    rel:childOf <#Cormaic-f13c12bf>.
+
+<#Rónán-0844eae0>
+    a foaf:Person;
+    irishRel:nomName "Rónán";
+    owl:sameAs <#Rónáin>;
+    rel:childOf <#Cormaic-f13c12bf>.
+
+<#Faílbe>
+    a foaf:Person;
+    irishRel:nomName "Faílbe";
+    rel:childOf <#Cormaic-f13c12bf>.
+
+<#Suibne>
+    a foaf:Person;
+    irishRel:nomName "Suibne";
+    rel:childOf <#Cormaic-f13c12bf>.
+
+<#Mongfhind>
+    a foaf:Person ;
+    irishRel:nomName "Mongfhind" ;
+    foaf:gender "female" ;
+    rdfs:comment "banchóem de Alba" ;
+    rel:parentOf <#Fiachach>, <#CrimthaindMáir>.
+    
+<#Fiachach>
+    a foaf:Person ;
+    irishRel:genName "Fiachach" .
+
+<#CrimthaindMáir>
+    a foaf:Person;
+    irishRel:genName "Crimthaind Máir";
+    irishRel:nomName "Crimthand Már";
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#CrimthandMór>;
+    rel:childOf <#Fidaich>.
+
+<#Fidaich>
+    a foaf:Person;
+    irishRel:genName "Fidaich" ;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Fidach>.
+}

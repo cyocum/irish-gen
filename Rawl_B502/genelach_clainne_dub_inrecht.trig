@@ -1,0 +1,72 @@
+@base <http://example.com/Rawl_B502/genelach_clainne_dub_inrecht.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainne Dub Inrecht"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+
+<#GillaCiaráin>
+    a foaf:Person;
+    irishRel:nomName "Gilla Ciaráin";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Laidgneáin>.
+
+<#Laidgneáin>
+    a foaf:Person;
+    irishRel:genName "Laidgneáin";
+    irishRel:nomName "Laidgneán";
+    rel:childOf <#GillaiCiaráin>.
+
+<#GillaiCiaráin>
+    a foaf:Person;
+    irishRel:genName "Gillai Ciaráin";
+    irishRel:nomName "Gillae Ciarán";
+    rel:childOf <#Uallgairg>.
+
+<#Uallgairg>
+    a foaf:Person;
+    irishRel:genName "Uallgairg";
+    irishRel:nomName "Uallgarg";
+    rel:childOf <#Óengusa>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    rel:childOf <#MáelTrea>.
+
+<#MáelTrea>
+    a foaf:Person;
+    irishRel:genName "Máel Trea";
+    rel:childOf <#DubInrecht>.
+
+<#DubInrecht>
+    a foaf:Person;
+    irishRel:genName "Dub Inrecht";
+    rel:childOf <#NéillCaille>.
+
+<#NéillCaille>
+    a foaf:Person;
+    irishRel:genName "Néill Caille" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.trig#NéillKaille>.
+}

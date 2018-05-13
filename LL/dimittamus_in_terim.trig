@@ -1,4 +1,4 @@
-@base <http://example.com/LL/dimittamus_in_terim.ttl>.
+@base <http://example.com/LL/dimittamus_in_terim.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +7,19 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitles: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Dimittamus Interim Claind Fergusa Dicamus Claind Conaill Cernaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text029.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text029.html> .
 
 <#Findcháem>
@@ -34,19 +39,19 @@
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1123545>;
     irishRel:nomName "Conaill Cernaig" ;
     irishRel:ancestorOfGroup <#ClannaConaillCernaig>.
-    # same as eli_descirt.ttl and laigsi.ttl #ConaillCernaig ? - CY
+    # same as eli_descirt.trig and laigsi.trig #ConaillCernaig ? - CY
 
 <#ClannaConaillCernaig>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Clanna Conaill Cernaig" ;
-    irishRel:ancestorGroupOf <#Dáln-Araide>, <#hEchachUlad>.
+    irishRel:ancestorGroupOf <#Dáln-Araide>, <hEchachUlad>.
 
 <#Dáln-Araide>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dál n-Araide" .
-#same as dáil_araide.ttl Dál n-Araide? - CY
+#same as dáil_araide.trig Dál n-Araide? - CY
 
-<#hEchachUlad>
+<hEchachUlad>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Echach Ulad" .
 
@@ -119,13 +124,13 @@
     a foaf:Person ;
     irishRel:nomName "Caenna" ;
     irishRel:descendantOfGroup <#ClandAilella>;
-    irishRel:ancestorOfGroup <#LuigneConnacht>, <#hIndFhochlai>.
+    irishRel:ancestorOfGroup <#LuigneConnacht>, <hIndFhochlai>.
 
 <#LuigneConnacht>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Luigne Connacht" .
 
-<#hIndFhochlai>
+<hIndFhochlai>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Ind Fhochlai" .
 
@@ -163,12 +168,12 @@
 <#Conchobuir>
     a irishTitles:Rí ;
     foaf:title "ríg la Ultu"@sga, "king of Ulster"@en;
-    owl:sameAs <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.ttl#Conchobuir>;
+    owl:sameAs <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.trig#Conchobuir>;
     rel:childOf <#Nessa>.
 
 <#Nessa>
     irishRel:nomName "Nessa";
-    owl:sameAs <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.ttl#Nesa>.
+    owl:sameAs <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.trig#Nesa>.
 
 <#FindchadGlasne>
     a foaf:Person;
@@ -232,5 +237,5 @@
     irishRel:genName "Con Chulaind";
     irishRel:nomName "Cú Chulainn";
     rdfs:seeAlso <https://www.wikidata.org/entity/Q5202793>.
-    
+}
 

@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/rig_ceniuil_conaill.ttl>.
+﻿@base <http://example.com/LL/rig_ceniuil_conaill.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Rig Ceniuil Conaill"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text100.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text100.html> .
 
 <#Flaithbertach>
@@ -108,27 +112,27 @@
     irishRel:genName "Shetnai";
     irishRel:nomName "Setna";
     rel:childOf <#Fhergusa>;
-    owl:sameAs <http://example.com/LL/ceniuil_lugdach.ttl#Shétnai>.
+    owl:sameAs <http://example.com/LL/ceniuil_lugdach.trig#Shétnai>.
 
 <#Fhergusa>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
     rel:childOf <#ConaillGulban>;
-    owl:sameAs <http://example.com/LL/ceniuil_lugdach.ttl#Fhergusa>.
+    owl:sameAs <http://example.com/LL/ceniuil_lugdach.trig#Fhergusa>.
 
 <#ConaillGulban>
     a foaf:Person;
     irishRel:genName "Conaill Gulban";
     irishRel:nomName "Conall Gulban";
     rel:childOf <#NeillNoigiallaich>;
-    owl:sameAs <http://example.com/LL/ceniuil_lugdach.ttl#Conaill>.
+    owl:sameAs <http://example.com/LL/ceniuil_lugdach.trig#Conaill>.
 
 <#NeillNoigiallaich>
     a foaf:Person;
     irishRel:genName "Neill Noigiallaich";
     irishRel:nomName "Niall Noigiallach";
-    owl:sameAs <http://example.com/LL/ceniuil_lugdach.ttl#NeillNóigiallaich>.
+    owl:sameAs <http://example.com/LL/ceniuil_lugdach.trig#NeillNóigiallaich>.
 
 <#MaelRuanaid>
     a foaf:Person;
@@ -186,3 +190,4 @@
 # pedigree, but there are two others. Can we 
 # it to be the second, because of the lack 
 # of further specification? EPT
+}

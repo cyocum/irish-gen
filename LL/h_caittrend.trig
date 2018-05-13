@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_caittrend.ttl>.
+@base <http://example.com/LL/h_caittrend.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,18 +9,23 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "De Genelach H. Caittrend"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text128.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text128.html> .
 
 <#Failbe>
     a foaf:Person;
     irishRel:nomName "Failbe";
     rel:childOf <#Cilleni>;
-    owl:sameAs <http://example.com/LL/ClandShechnasaig.ttl#Fhalbi>.
+    owl:sameAs <http://example.com/LL/ClandShechnasaig.trig#Fhalbi>.
 
 <#Cilleni>
     a foaf:Person;
@@ -73,28 +78,28 @@
     irishRel:genName "Conchind";
     irishRel:nomName "Conchend";
     rel:childOf <#Dróida>;
-    owl:sameAs <http://example.com/LL/h_n_eirc.ttl#Conchind>.
+    owl:sameAs <http://example.com/LL/h_n_eirc.trig#Conchind>.
 
 <#Dróida>
     a foaf:Person;
     irishRel:nomName "Dróida";
     rel:childOf <#Buaín>;
-    owl:sameAs <http://example.com/LL/h_n_eirc.ttl#Dróida>.
+    owl:sameAs <http://example.com/LL/h_n_eirc.trig#Dróida>.
 
 <#Buaín>
     a foaf:Person;
     irishRel:genName "Buaín";
     irishRel:nomName "Búan";
     rel:childOf <#LoegairiBirnBuadaig>;
-    owl:sameAs <http://example.com/LL/h_n_eirc.ttl#Buain>;
-    owl:sameAs <http://example.com/LL/sil_birn.ttl#Búain>.
+    owl:sameAs <http://example.com/LL/h_n_eirc.trig#Buain>;
+    owl:sameAs <http://example.com/LL/sil_birn.trig#Búain>.
 
 <#LoegairiBirnBuadaig>
     a foaf:Person;
     irishRel:genName "Loegairi Birn Buadaig";
     irishRel:nomName "Loegaire Birn Buadach";
-    owl:sameAs <http://example.com/LL/h_n_eirc.ttl#LoegairiBirnBuadaig>;
-    owl:sameAs <http://example.com/LL/sil_birn.ttl#LoegaireBirnBuadaig>.
+    owl:sameAs <http://example.com/LL/h_n_eirc.trig#LoegairiBirnBuadaig>;
+    owl:sameAs <http://example.com/LL/sil_birn.trig#LoegaireBirnBuadaig>.
 
 <#Fhalbe>
     a foaf:Person;
@@ -173,8 +178,8 @@
     irishRel:genName "Snedgusa";
     irishRel:nomName "Sneidgus";
     rel:childOf <#Failbi-68c7fed0>;
-    owl:sameAs <http://example.com/LL/ClandDungaile.ttl#Snedgusa>;
-    owl:sameAs <http://example.com/LL/ClandUargusa.ttl#Snedgusa>.
+    owl:sameAs <http://example.com/LL/ClandDungaile.trig#Snedgusa>;
+    owl:sameAs <http://example.com/LL/ClandUargusa.trig#Snedgusa>.
 
 <#Failbi-68c7fed0>
     a foaf:Person;
@@ -299,7 +304,7 @@
     a foaf:Person;
     irishRel:nomName "Sechnassach";
     rel:childOf <#Falbe-00715fb0>;
-    owl:sameAs <http://example.com/LL/ClandShechnasaig.ttl#Shechnasaig>.
+    owl:sameAs <http://example.com/LL/ClandShechnasaig.trig#Shechnasaig>.
 
 <#Sneidgus-917f8440>
     owl:sameAs <#Sneidgus-121ab4a0>;
@@ -315,13 +320,13 @@
     a foaf:Person;
     irishRel:nomName "Uargus";
     rel:childOf <#Sneidgus-917f8440>;
-    owl:sameAs <http://example.com/LL/ClandUargusa.ttl#Uargusa>.
+    owl:sameAs <http://example.com/LL/ClandUargusa.trig#Uargusa>.
 
 <#Dungal>
     a foaf:Person;
     irishRel:nomName "Dungal";
     rel:childOf <#Sneidgus-121ab4a0>;
-    owl:sameAs <http://example.com/LL/ClandDungaile.ttl#Dúngaile>.
+    owl:sameAs <http://example.com/LL/ClandDungaile.trig#Dúngaile>.
 
 <#Dunechda-15f8c920>
     owl:sameAs <#Dunechaid-f6b66af0>;
@@ -360,3 +365,5 @@
     irishRel:nomName "Dunchad";
     rel:childOf <#Cinaed-5e08f780>;
     owl:sameAs <#Dunchada>.
+}
+

@@ -1,4 +1,4 @@
-@base <http://example.com/LL/delbna_móre.ttl>.
+@base <http://example.com/LL/delbna_móre.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,17 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Delmna Móre"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text054.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text054.html> .
 
 <#Gormucan>
@@ -72,10 +78,12 @@
     a foaf:Person;
     irishRel:genName "Shige";
     irishRel:nomName "Sige";
-    owl:sameAs <http://example.com/LL/delbna_bethra.ttl#Shige>;
+    owl:sameAs <http://example.com/LL/delbna_bethra.trig#Shige>;
     rel:childOf <#Andiled>.
 
 <#Andiled>
     a foaf:Person;
-    owl:sameAs <http://example.com/LL/delbna_bethra.ttl#Andiled>;
+    owl:sameAs <http://example.com/LL/delbna_bethra.trig#Andiled>;
     irishRel:nomName "Andiled".
+}
+

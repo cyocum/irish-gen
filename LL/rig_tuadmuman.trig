@@ -1,4 +1,4 @@
-@base <http://example.com/LL/rig_tuadmuman.ttl>.
+@base <http://example.com/LL/rig_tuadmuman.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +7,18 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitles: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Rig Tuadmuman"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text073.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text073.html> .
 
 <#Conchobor>
@@ -172,8 +176,9 @@
     rel:childOf <#AilellaUluimm>.
 
 <#AilellaUluimm>
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#AilellaOloim>;
-    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Ailill_Aulomm>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#AilillAulomm>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AilellaOloim>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Ailill_Aulomm>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#AilillAulomm>;
     irishRel:genName "Ailella Uluimm";
     irishRel:nomName "Ailill Aulomm".
+}

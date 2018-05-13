@@ -1,0 +1,643 @@
+@base <http://example.com/Rawl_B502/bunad_laigen.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Nuadu Necht ní dámair anfhlaith"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text001.html>;
+    dcterms:format "application/trig";
+    rdfs:comment "BUNAD LAIGEN IMMORRO & A TINDREM CO ÁDAM do-rurim in ríg-fhile Find Rossa Ruaid isna fursaintib do-dergéne do rígaib Lagen & dia genelogaib ó Nuadait Necht co Ádam ut dixit:"@sga ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text001.html> .
+
+<http://www.vanhamel.nl/codecs/Nuadu_Necht_n%C3%AD_d%C3%A1mair_anflaith>
+    dcterms:title "Nuadu Necht ní dámair anflaith"@sga;
+    prov:wasAttributedTo <#Find>.
+
+<#Find>
+    a foaf:Person;
+    irishRel:nomName "Find";
+    rel:childOf <#RossaRuaid>.
+
+<#RossaRuaid>
+    a foaf:Person;
+    irishRel:genName "Rossa Ruaid";
+    irishRel:nomName "Ros Ruad".
+
+<#Adam>
+    a foaf:Person;
+    irishRel:nomName "Adam";
+    rel:ancestorOf <#NuaduNecht>.
+
+<#NuaduNecht>
+    a foaf:Person;
+    irishRel:nomName "Nuadu Necht";
+    rel:antagonistOf <#Eterscéla>;
+    rel:descendantOf <#Lugdach>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#NuaduNecht>;
+    owl:sameAs <http://example.com/LL/lagin.trig#Nuadu>.
+
+<#Eterscéla>
+    a irishTitle:Rí;
+    irishRel:genName "Eterscéla";
+    irishRel:nomName "Eterscél";
+    rel:descendantOf <#Iair>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ríg_n_alban.trig#Eterscéla>.
+
+<#Iair>
+    a foaf:Person;
+    irishRel:genName "Iair";
+    irishRel:nomName "Iar".
+
+<#Lugdach>
+    a foaf:Person ;
+    irishRel:nomName "Lugaid" ;
+    irishRel:genName "Lugdach";
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#LugaidLuath>.
+
+<#FergusFairrce>
+    a foaf:Person ;
+    irishRel:nomName "Fergus Fairrce" ;
+    rel:childOf <#NuaduNecht-9d624370>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FergusFairrcge>.
+
+<#NuaduNecht-9d624370>
+    a foaf:Person;
+    irishRel:nomName "Nuadu Necht";
+    owl:sameAs <#NuaduNecht>.
+
+<#Airt>
+    a foaf:Person ;
+    irishRel:genName "Airt" ;
+    irishRel:nomName "Art" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#SétnaiSithbaicc>
+    a foaf:Person ;
+    irishRel:genName "Sétnai Sithbaicc" ;
+    irishRel:nomName "Sétna Sithbacc" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Sétna>.
+
+<#BressailBricc>
+    a foaf:Person ;
+    irishRel:genName "Bressail Bricc" ;
+    irishRel:nomName "Bressal Brecc" ;
+    owl:sameAs <#Bressail>;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#BresalBrecc>.
+
+<#Lugaid-db5d2810>
+    a foaf:Person;
+    irishRel:nomName "Lugaid";
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Sedrach>
+    a foaf:Person ;
+    irishRel:accName "Sedrach" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+# Could <#Lugaid-db5d2810> and <#Sedrach> be the same person
+# (= <http://example.com/Rawl_B502/fursunnud_naile.trig#LugaidLuath>)? EPT
+
+<#Bressal>
+    a foaf:Person;
+    irishRel:nomName "Bressal";
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#BresalBrecc>;
+    owl:sameAs <#BressailBricc>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Fiachrai>
+    a foaf:Person ;
+    irishRel:genName "Fiachrai" ;
+    irishRel:nomName "Fiachra" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FiachuFobrecc>.
+
+<#Ailill>
+    a foaf:Person ;
+    irishRel:nomName "Ailill" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#AilillGlass>.
+
+<#Foglass>
+    a foaf:Person ;
+    irishRel:nomName "Foglass" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FeradachFoglas>.
+
+<#NuaduFuildon>
+    a foaf:Person ;
+    irishRel:nomName "Nuadu Fuildon" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#NuaduFuildonArggatlám>.
+
+<#Artt-9b2acabd>
+    a foaf:Person ;
+    irishRel:nomName "Artt" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#ArtAlldoit>.
+
+<#ArttMug>
+    a foaf:Person ;
+    irishRel:nomName "Artt Mug" .
+
+#Could this all be referring to one guy called Art? EPT
+
+<#CrimthanCoscrach>
+    a foaf:Person ;
+    irishRel:nomName "Crimthan Coscrach" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#CrimthannCoscrach>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#FeradachFindFechtnach>
+    a foaf:Person ;
+    irishRel:nomName "Feradach Find Fechtnach" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FeradachFechtnachFind>.
+
+<#FedelmidFortrén>
+    a foaf:Person ;
+    irishRel:nomName "Fedelmid Fortrén" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FeidlimidFortrén>.
+
+<#FergusFortamuil>
+    a foaf:Person ;
+    irishRel:nomName "Fergus Fortamuil" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FergusFortamail>.
+
+<#BressalBregom>
+    a foaf:Person ;
+    irishRel:nomName "Bressal Bregom" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#BresalBregom>.
+
+<#Ailill-bdddf533>
+    a foaf:Person ;
+    irishRel:nomName "Ailill" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Aillil>.
+
+<#Óengus>
+    a foaf:Person ;
+    irishRel:nomName "Óengus" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#OengusOllam>.
+
+<#Labraid>
+    a foaf:Person ;
+    irishRel:genName "Labraid" ;
+    rel:antagonistOf <#FerFagraig>;
+    rel:descendantOf <#Luirc> ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#LabraidLoingsech>.
+
+<#FerFagraig>
+    a foaf:Person;
+    irishRel:nomName "Fer Fagraig".
+
+<#Luirc>
+    a foaf:Person ;
+    irishRel:genName "Luirc" ;
+    irishRel:nomName "Lorc" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#LóegaireLorcc>.
+
+<#Feradach>
+    owl:sameAs <#FeradachFindFechtnach>.
+
+<#Fedilmid>
+    owl:sameAs <#FedelmidFortrén>.
+
+<#FergusFortamail>
+    irishRel:nomName "Fergus Fortamail";
+    owl:sameAs <#FergusFortamuil>.
+
+<#BresalBregom>
+    irishRel:nomName "Bresal Bregom" ;
+    owl:sameAs <#BressalBregom>.
+
+<#ÓengusOldam>
+    a foaf:Person ;
+    irishRel:nomName "Óengus Oldam" ;
+    owl:sameAs <#OengusOllam>.
+
+<#Aillil-7a00ec08>
+    a foaf:Person ;
+    irishRel:nomName "Aillil" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#AilillAine>.
+
+<#Úgaine>
+    a foaf:Person ;
+    foaf:name "Úgaine" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#AugaineMár>.
+
+<#Eochu>
+    a foaf:Person ;
+    foaf:name "Eochu" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#EochuBuaid>.
+
+<#Ailill-5a7b095b>
+    a foaf:Person ;
+    owl:sameAs <#Aillil-7a00ec08>.
+
+<#Lorcc>
+    irishRel:nomName "Lorcc" ;
+    owl:sameAs <#Luirc>.
+
+<#Labraid-e01ec923>
+    owl:sameAs <#Labraid>.
+
+<#DuachLadcrai>
+    a foaf:Person ;
+    irishRel:genName "Duach Ladcrai" ;
+    irishRel:nomName "Dui Ladcrai" ;
+    rel:ancestorOf <#NuaduNecht>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#DuachLadcra>.
+
+<#FiachraTolcrai>
+    a foaf:Person ;
+    irishRel:nomName "Fiachra Tolcrai" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#FiachuTolcrai>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Senén>
+    a foaf:Person ;
+    irishRel:nomName "Senén" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#SinéoinBric>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ethén>
+    a foaf:Person ;
+    irishRel:nomName "Ethén" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#ÁedánGlas>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Nuadu-e0721d4a>
+    a irishTitle:Rí ;
+    irishRel:nomName "Nuadu" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#NuaduFailFind>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#AilillOalchlóen>
+    a foaf:Person ;
+    irishRel:nomName "Ailill Oalchlóen" .
+
+<#Sírna>
+    a foaf:Person ;
+    irishRel:nomName "Sírna" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Sirna>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Déin>
+    a irishTitle:Rí ;
+    irishRel:genName "Déin" ;
+    irishRel:nomName "Dian" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Dian>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Demál>
+    a foaf:Person ;
+    irishRel:nomName "Demál" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Demáil>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Rothait>
+    a foaf:Person ;
+    irishRel:nomName "Rothait" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Rechtaid>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ogamuin>
+    a irishTitle:Rí ;
+    irishRel:nomName "Ogamuin" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+# owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Móen> ? EPT
+
+<#Óengus-902e76c6>
+    a foaf:Person ;
+    irishRel:nomName "Óengus" ;
+    rel:childOf <#Eochu-71d7ebad>;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Óengus>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Eochu-71d7ebad>
+    a foaf:Person ;
+    irishRel:nomName "Eochu" ;
+    rel:ancestorOf <#NuaduNecht>.
+    #same as <#Eochu> above? CY
+
+<#Smirgnath>
+    a foaf:Person ;
+    irishRel:nomName "Smirgnath" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Smrith>
+    a foaf:Person ;
+    irishRel:nomName "Smrith" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Enbath>
+    a foaf:Person ;
+    irishRel:nomName "Enbath" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Senboth>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Tigernmas>
+    a foaf:Person ;
+    irishRel:nomName "Tigernmas" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Tigernmas>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ethér>
+    a foaf:Person ;
+    irishRel:nomName "Ethér" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+# owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Ethrél> ?
+
+<#Éremón>
+    a foaf:Person ;
+    irishRel:nomName "Éremón" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.ttl#h-Éremóin>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Mílid>
+    a foaf:Person ;
+    irishRel:genName "Mílid" ;
+    irishRel:nomName "Míl" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Mílid>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MiledEspain>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Bile>
+    a foaf:Person ;
+    irishRel:nomName "Bile";
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Bile>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Bríga>
+    a foaf:Person ;
+    irishRel:nomName "Bríga" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Bríge>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Bráth>
+    a foaf:Person ;
+    irishRel:nomName "Bráth" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Bráth>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Deáith>
+    a foaf:Person ;
+    irishRel:nomName "Deáith" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Deátha>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Eirrgid>
+    a foaf:Person ;
+    irishRel:nomName "Eirrgid" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Arcid>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Alldóit>
+    a foaf:Person ;
+    irishRel:nomName "Alldóit" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Alldóit>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Nuadu-6fb3c2be>
+    a foaf:Person ;
+    irishRel:nomName "Nuadu" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Nuadat>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Nóenal>
+    a foaf:Person ;
+    irishRel:nomName "Nóenal" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Nóenail>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Fáebar>
+    a foaf:Person ;
+    irishRel:nomName "Fáebar" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#ÉbirGlass>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#GáedelGlass>
+    a foaf:Person ;
+    irishRel:nomName "Gáedel Glass" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Glúnfhind>
+    a foaf:Person ;
+    irishRel:nomName "Glúnfhind" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Glúnfhind>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Lámfhind>
+    a foaf:Person ;
+    irishRel:nomName "Lámfhind" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ethéoir>
+    a foaf:Person ;
+    irishRel:nomName "Ethéoir" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Fethiúir>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Agnoman>
+    a foaf:Person ;
+    irishRel:nomName "Agnoman" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Agnoman>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Tóe>
+    a foaf:Person ;
+    irishRel:nomName "Tóe" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Tóe>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Banb>
+    a foaf:Person ;
+    irishRel:nomName "Banb" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Bainb>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Séim>
+    a foaf:Person ;
+    irishRel:nomName "Séim" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Séim>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Máir>
+    a foaf:Person ;
+    irishRel:nomName "Máir" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Máir>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ethecht>
+    a foaf:Person ;
+    irishRel:nomName "Ethecht" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Ethecht>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Aurtacht>
+    a foaf:Person ;
+    irishRel:nomName "Aurtacht" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Aurthecht>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Boath>
+    a foaf:Person ;
+    irishRel:nomName "Boath" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Abor>
+    a foaf:Person ;
+    irishRel:nomName "Abor" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ára>
+    a foaf:Person ;
+    irishRel:nomName "Ára" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Ára>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Sara>
+    a foaf:Person ;
+    irishRel:nomName "Sara" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Séth>
+    a foaf:Person ;
+    irishRel:nomName "Séth" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Zrú>
+    a foaf:Person ;
+    irishRel:nomName "Zrú" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Srú>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Esrú>
+    a foaf:Person ;
+    irishRel:nomName "Esrú" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Esrú>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ethrocht>
+    a foaf:Person ;
+    irishRel:nomName "Ethrocht" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Baoth>
+    a foaf:Person ;
+    irishRel:nomName "Baoth" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ibath>
+    a foaf:Person ;
+    irishRel:nomName "Ibath" ;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Gomér>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1148172> ;
+    irishRel:nomName "Gomér" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Gomér>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Iaféth>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q200637> ;
+    irishRel:nomName "Iaféth" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Iaféth>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Noe>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q81422> ;
+    irishRel:nomName "Noe" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Nóe>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Lamiach>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q10921342> ;
+    irishRel:nomName "Lamiach" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Lamiach>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Mathusalám>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q156290> ;
+    irishRel:nomName "Mathusalám" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Él>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Enóc>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q213027> ;
+    irishRel:nomName "Enóc" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Enóc>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Iaréth>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q927410> ;
+    irishRel:nomName "Iaréth" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Iaréth>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Malalél>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q10297002> ;
+    irishRel:nomName "Malalél" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Malalél>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Cáinán>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q844433> ;
+    irishRel:nomName "Cáinán" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Cáinán>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Enos>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q682531> ;
+    irishRel:nomName "Enos" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Enos>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Séth-44de4e08>
+    a foaf:Person ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q107626> ;
+    irishRel:nomName "Séth" ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Séth>;
+    rel:ancestorOf <#NuaduNecht>.
+
+<#Ádam>
+    a foaf:Person ;
+    owl:sameAs <#Adam>;
+    irishRel:nomName "Ádam" ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q70899> ;
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#Ádam-b97a6880>;
+    rel:ancestorOf <#NuaduNecht>.
+}

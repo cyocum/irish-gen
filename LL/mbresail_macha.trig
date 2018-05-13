@@ -1,4 +1,4 @@
-@base <http://example.com/LL/mbresail_macha.ttl>.
+@base <http://example.com/LL/mbresail_macha.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach H. mBresail Macha"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text043.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text043.html> .
 
 <#Flaithbertach>
@@ -94,10 +98,10 @@
 <#CollaFocri>
     a foaf:Person;
     irishRel:nomName "Colla Focri";
-    owl:sameAs <http://example.com/LL/h_niallain.ttl#CollaFocrí>;
-    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CollaFocrí>;
-    owl:sameAs <http://example.com/LL/h_n-echdach.ttl#CollaFocri>;
-    owl:sameAs <http://example.com/LL/h_airgialla.ttl#CollaFochri>.
+    owl:sameAs <http://example.com/LL/h_niallain.trig#CollaFocrí>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CollaFocrí>;
+    owl:sameAs <http://example.com/LL/h_n-echdach.trig#CollaFocri>;
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#CollaFochri>.
 
 <#Garbid-ea925580>
     a foaf:Person;
@@ -185,10 +189,10 @@
     a foaf:Person;
     irishRel:nomName "Mael Bresail";
     rel:childOf <#Cummascaig>;
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#MaelBresail>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#MaelBresail>.
 
 <#Cummascaig>
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Cummascach>;
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#Cummascach>;
     irishRel:genName "Cummascaig";
     irishRel:nomName "Cummuscach";
     rel:childOf <#ConchobuirCorraig>.
@@ -197,7 +201,7 @@
     a foaf:Person;
     irishRel:genName "Conchobuir Corraig";
     irishRel:nomName "Conchobar Corrach";
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#ConchobuirChorraig>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#ConchobuirChorraig>.
 
 <#DubEmna>
     a foaf:Person;
@@ -226,9 +230,9 @@
 <#Conchobor>
     a foaf:Person;
     irishRel:nomName "Conchobor";
-    rel:childOf <#inDerg>.
+    rel:childOf <inDerg>.
 
-<#inDerg>
+<inDerg>
     a foaf:Person;
     irishRel:genName "in Derg";
     irishRel:nomName "In Derg";
@@ -273,17 +277,18 @@
     rel:childOf <#MaeliDuin>.
 
 <#MaeliDuin>
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#MaelDuin>;
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#MaelDuin>;
     irishRel:genName "Maeli Duin";
     irishRel:nomName "Mael Duin";
     rel:childOf <#Cummascaig-dfffd79d>.
 
 <#Cummascaig-dfffd79d>
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Cummascach>;
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#Cummascach>;
     owl:sameAs <#Cummascaig>;
     irishRel:genName "Cummascaig";
     irishRel:nomName "Cummuscach";
     rel:childOf <#ConchobuirCorraig-6cfca6a8>.
 
 <#ConchobuirCorraig-6cfca6a8>
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#ConchobuirChorraig>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#ConchobuirChorraig>.
+}

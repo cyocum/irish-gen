@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_n_eirc.ttl>.
+@base <http://example.com/LL/h_n_eirc.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "H. n-Eirc"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text125.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text125.html> .
 
 <#Erc>
@@ -93,22 +97,22 @@
     a foaf:Person;
     irishRel:nomName "Dróida";
     rel:childOf <#Buain>;
-    owl:sameAs <http://example.com/LL/h.raithnen.ttl#Droida>;
-    owl:sameAs <http://example.com/LL/sil_birn.ttl#Dróida>.
+    owl:sameAs <http://example.com/LL/h.raithnen.trig#Droida>;
+    owl:sameAs <http://example.com/LL/sil_birn.trig#Dróida>.
 
 <#Buain>
     a foaf:Person;
     irishRel:genName "Buain";
     irishRel:nomName "Buan";
     rel:childOf <#LoegairiBirnBuadaig>;
-    owl:sameAs <http://example.com/LL/sil_birn.ttl#Búain>.
+    owl:sameAs <http://example.com/LL/sil_birn.trig#Búain>.
 
 <#LoegairiBirnBuadaig>
     a foaf:Person;
     irishRel:genName "Loegairi Birn Buadaig";
     irishRel:nomName "Loegaire Birn Buadach";
-    owl:sameAs <http://example.com/LL/rig_ossairge.ttl#LóegaireBirnBuadaig>;
-    owl:sameAs <http://example.com/LL/sil_birn.ttl#LoegaireBirnBuadaig>.
+    owl:sameAs <http://example.com/LL/rig_ossairge.trig#LóegaireBirnBuadaig>;
+    owl:sameAs <http://example.com/LL/sil_birn.trig#LoegaireBirnBuadaig>.
 
 <#Tuathchar>
     a foaf:Person;
@@ -226,3 +230,4 @@
     a foaf:Person;
     irishRel:nomName "Mael Tuili";
     owl:sameAs <#MaeliTuili>. 
+}

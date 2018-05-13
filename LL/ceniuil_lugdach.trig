@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/ceniuil_lugdach.ttl>.
+﻿@base <http://example.com/LL/ceniuil_lugdach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Ceniuil Lugdach"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text102.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text102.html> .
 
 <#Cathbarr>
@@ -115,6 +119,7 @@
     a foaf:Person;
     irishRel:genName "Neill Nóigiallaich";
     irishRel:nomName "Niall Nóigiallach";
-    owl:sameAs <http://example.com/LL/ceniuil_ennai.ttl#NeillNóigiallaich>;
-    owl:sameAs <http://example.com/LL/fer_tethba.ttl#NeilNoigiallaig>.
+    owl:sameAs <http://example.com/LL/ceniuil_ennai.trig#NeillNóigiallaich>;
+    owl:sameAs <http://example.com/LL/fer_tethba.trig#NeilNoigiallaig>.
     
+}

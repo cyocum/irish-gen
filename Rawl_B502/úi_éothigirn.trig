@@ -1,0 +1,51 @@
+@base <http://example.com/Rawl_B502/úi_éothigirn.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Éothigirn"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Conac>
+    a foaf:Person;
+    irishRel:genName "Conac";
+    rel:childOf <#Éothigirn>.
+
+<#Éothigirn>
+    a foaf:Person;
+    irishRel:genName "Éoth(i)girn";
+    rel:childOf <#Gúithigirn>.
+
+<#Gúithigirn>
+    a foaf:Person;
+    irishRel:genName "Gúithigirn";
+    rel:childOf <#Carthaich>.
+
+<#Carthaich>
+    a foaf:Person;
+    irishRel:genName "Carthaich";
+    irishRel:nomName "Carthach";
+    rel:childOf <#Mothorchon>.
+
+<#Mothorchon>
+    a foaf:Person;
+    irishRel:genName "Mothorchon";
+    irishRel:nomName "Mothorchu";
+    rel:childOf <#Doithnennaich>.
+
+<#Doithnennaich>
+    owl:sameAs <http://example.com/Rawl_B502/úi_chon_dún.trig#Doithnennaich>.
+}

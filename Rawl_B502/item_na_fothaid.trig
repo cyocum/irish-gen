@@ -1,0 +1,638 @@
+@base <http://example.com/Rawl_B502/item_na_fothaid.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.trig>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Item Na Fothaid"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text021.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text021.html>.
+
+<#Óendé>
+    a foaf:Person ;
+    irishRel:nomName "Óendé" .
+
+<#Clóendé>
+    a foaf:Person ;
+    irishRel:nomName "Clóendé" .
+
+<#Tróendé>
+    a foaf:Person ;
+    irishRel:nomName "Tróendé" .
+
+<#Luigdech>
+    a foaf:Person ;
+    irishRel:genName "Luigdech" ;
+    irishRel:nomName "Luigaid" ;
+    rel:childOf <#Garbchon>.
+
+<#Garbchon>
+    a foaf:Person ;
+    irishRel:genName "Garbchon" ;
+    irishRel:nomName "Garbchu" .
+
+<#FainchiTreichíchige>
+    a foaf:Person ;
+    irishRel:genName "Fainchi Treichíchige" ;
+    foaf:gender "female" ;
+    irishRel:numChild 3 ;
+    rel:parentOf <#Óendé>;
+    rel:parentOf <#Clóendé>;
+    rel:parentOf <#Tróendé>;
+    rel:childOf <#Náir>.
+
+<#Náir>
+    a foaf:Person;
+    irishRel:genName "Náir";
+    irishRel:nomName "Nár";
+    rel:childOf <#Airmora>;
+    owl:sameAs <http://example.com/LL/eli_descirt.trig#Náir>.
+
+<#Airmora>
+    a foaf:Person;
+    irishRel:genName "Airmora" ;
+    irishRel:nomName "Airmor";
+    owl:sameAs <http://example.com/LL/eli_descirt.trig#Airmóra>.
+
+<#Maicniad>
+    a foaf:Person;
+    irishRel:numChild 3 ;
+    irishRel:genName "Maicniad";
+    rel:parentOf <#Óendé>;
+    rel:parentOf <#Clóendé>;
+    rel:parentOf <#Tróendé>;
+    rel:childOf <#Lugdach>.
+
+<#Lugdach>
+    a foaf:Person;
+    irishRel:genName "Lugdach";
+    irishRel:nomName "Lugaid";
+    rel:childOf <#DáireDeirg>.
+
+<#DáireDeirg>
+    a foaf:Person;
+    irishRel:genName "Dáire Deirg";
+    irishRel:nomName "Dáire Derg";
+    rel:childOf <#Gnáthaltaich>.
+
+<#Gnáthaltaich>
+    a foaf:Person;
+    irishRel:genName "Gnáthaltaich";
+    irishRel:nomName "Gnáthaltach";
+    rel:childOf <#NuadatNecht>.
+
+<#NuadatNecht>
+    a foaf:Person;
+    irishRel:genName "Nuadat Necht" ;
+    irishRel:nomName "Nuada Necht".
+
+<#Iarél>
+    a foaf:Person ;
+    irishRel:genName "Iarél" ;
+    irishRel:numChild 2 .
+
+<#GlúnmárForcc>
+    a foaf:Person ;
+    irishRel:nomName "Glúnmár Forcc" ;
+    rel:childOf <#Iarél>.
+
+<#Inboth>
+    a foaf:Person ;
+    irishRel:nomName "Inboth" ;
+    rel:childOf <#Iarél>.
+
+<#RechtaidRigderg>
+    a foaf:Person ;
+    irishRel:nomName "Rechtaid Rigderg" .
+
+<h-Uaithne>
+    a foaf:Person ;
+    irishRel:nomName "h-Uaithne" ;
+    foaf:gender "female" ;
+    irishRel:numChild 4 ;
+    rel:childOf <#Echach>.
+
+<#Echach>
+    a foaf:Person;
+    irishRel:genName "Echach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Luchtai>.
+
+<#Luchtai>
+    a foaf:Person;
+    irishRel:genName "Luchtai" ;
+    irishRel:genName "Luchta".
+
+<h-Uaithnia>
+    a foaf:Person ;
+    irishRel:nomName "h-Uaithnia" ;
+    rel:childOf <h-Uaithne>.
+
+<#Drúithnia>
+    a foaf:Person ;
+    irishRel:nomName "Drúithnia" ;
+    rel:childOf <h-Uaithne>.
+
+<#Cóennia>
+    a foaf:Person ;
+    irishRel:nomName "Cóennia" ;
+    rel:childOf <h-Uaithne>.
+
+<#Deochnia>
+    a foaf:Person ;
+    irishRel:nomName "Deochnia" ;
+    rel:childOf <h-Uaithne>.
+
+<#Maicnia>
+    a foaf:Person;
+    irishRel:nomName "Maicnia";
+    foaf:title "pater na Fothud" ;
+    owl:sameAs <#Maicniad>;
+    rel:childOf <#Cairpri>.
+
+<#Cairpri>
+    a foaf:Person;
+    irishRel:genName "Cairpri";
+    irishRel:nomName "Carpre";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#MesenSuad>.
+
+<#MesenSuad>
+    a foaf:Person;
+    irishRel:genName "Mesen Suad";
+    rel:childOf <#MesinFuiric>.
+
+<#MesinFuiric>
+    a foaf:Person;
+    irishRel:genName "Mesin Fuiric";
+    rel:childOf <#MesinFoirgill>.
+
+<#MesinFoirgill>
+    a foaf:Person;
+    irishRel:genName "Mesin Foirgill";
+    rel:childOf <#Coirpri>.
+
+<#Coirpri>
+    a foaf:Person;
+    irishRel:genName "Coirpri";
+    irishRel:nomName "Corpre";
+    rel:childOf <#Inboth-11d44faa>.
+
+<#Inboth-11d44faa>
+    a foaf:Person;
+    irishRel:genName "Inboth";
+    owl:sameAs <#Inboth>;
+    rel:childOf <#IarélGlúnmáir>.
+
+<#IarélGlúnmáir>
+    a foaf:Person;
+    owl:sameAs <#Iarél>;
+    irishRel:genName "Iarél Glúnmáir".
+
+<#Feideilmid>
+    a foaf:Person;
+    irishRel:genName "Feideilmid";
+    rel:parentOf <#Óendé>;
+    rel:parentOf <#Clóendé>;
+    rel:parentOf <#Tróendé>;
+    rel:childOf <#Niad>.
+
+<#Niad>
+    a foaf:Person;
+    irishRel:genName "Niad";
+    rel:childOf <#Gnáthaltaich-c09d949e>.
+
+<#Gnáthaltaich-c09d949e>
+    a foaf:Person;
+    irishRel:genName "Gnáthaltaich";
+    rel:childOf <#EirccNáir>.
+
+<#EirccNáir>
+    a foaf:Person;
+    irishRel:genName "Eircc Náir";
+    irishRel:nomName "Eircc Nár";
+    rel:childOf <#CairpriNiadFir>.
+
+<#CairpriNiadFir>
+    a foaf:Person;
+    irishRel:genName "Cairpri Niad Fir" ;
+    irishRel:nomName "Carpre Niad Fir".
+
+<#Matudán>
+    a foaf:Person;
+    irishRel:nomName "Matudán";
+    rel:childOf <#Ruadrí>.
+
+<#Ruadrí>
+    a foaf:Person;
+    irishRel:genName "Ruadrí";
+    rel:childOf <#Cathniad>.
+
+<#Cathniad>
+    a foaf:Person;
+    irishRel:genName "Cathniad";
+    irishRel:nomName "Cathnia";
+    rel:childOf <#Cathaláin>.
+
+<#Cathaláin>
+    a foaf:Person;
+    irishRel:genName "Cathaláin";
+    irishRel:nomName "Cathalán";
+    rel:childOf <#Catháin>.
+
+<#Catháin>
+    a foaf:Person;
+    irishRel:genName "Catháin";
+    irishRel:nomName "Cathán";
+    irishRel:numChild 5 ;
+    rel:childOf <#Dermata>.
+
+<#Cathalán>
+    a foaf:Person ;
+    irishRel:nomName "Cathalán" ;
+    rel:childOf <#Catháin>.
+
+<#Cermaint>
+    a foaf:Person ;
+    irishRel:nomName "Cermaint" ;
+    rel:childOf <#Catháin>.
+
+<#Catharnach>
+    a foaf:Person ;
+    irishRel:nomName "Catharnach" ;
+    rel:childOf <#Catháin>.
+
+<#MacLachtnai-ba08fa53>
+    a foaf:Person ;
+    irishRel:nomName "Mac Lachtnai" ;
+    rel:childOf <#Catháin>.
+
+<#Diarmait>
+    a foaf:Person ;
+    irishRel:nomName "Diarmait" ;
+    rel:childOf <#Catháin>.
+
+<#Dermata>
+    a foaf:Person;
+    irishRel:genName "Dermata";
+    irishRel:nomName "Dermat";
+    irishRel:numChild 3 ;
+    rel:childOf <#Óengusa>.
+
+<#Grádmaccán>
+    a foaf:Person ;
+    irishRel:nomName "Grádmaccán" ;
+    rel:childOf <#Dermata>.
+
+<#Áebennán>
+    a foaf:Person ;
+    irishRel:nomName "Áebennán" ;
+    rel:childOf <#Dermata>.
+
+<#DubLenna>
+    a foaf:Person ;
+    irishRel:nomName "Dub Lenna" ;
+    rel:childOf <#Dermata>.
+
+<#Finnechán>
+    a foaf:Person ;
+    irishRel:nomName "Finnechán" ;
+    rel:childOf <#Dermata>.
+
+<#Láegaire>
+    a foaf:Person ;
+    irishRel:nomName "Láegaire" ;
+    rel:childOf <#Dermata>.
+
+<#Findmaccán>
+    a foaf:Person ;
+    irishRel:nomName "Findmaccán" ;
+    rel:childOf <#Dermata>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    irishRel:numChild 3 ;
+    rel:childOf <#Gormgaile>.
+
+<#Clúmán>
+    a foaf:Person ;
+    irishRel:nomName "Clúmán" ;
+    rel:childOf <#Óengusa>.
+
+<#MacLachtnai>
+    a foaf:Person ;
+    irishRel:nomName "Mac Lachtnai" ;
+    rel:childOf <#Óengusa>.
+
+<#Gormgaile>
+    a foaf:Person;
+    irishRel:genName "Gormgaile";
+    irishRel:nomName "Gormgail";
+    irishRel:numChild 2 ;
+    rel:childOf <#Flaithim>.
+
+<#Cormac>
+    a foaf:Person ;
+    irishRel:nomName "Cormac" ;
+    rel:childOf <#Gormgaile>.
+
+<#Flaithim>
+    a foaf:Person;
+    irishRel:genName "Flaithim";
+    irishRel:nomName "Flaithem";
+    irishRel:nomName "Laithim" ;
+    rel:childOf <#Fogartaich>.
+
+<#Gormgal>
+    a foaf:Person ;
+    irishRel:nomName "Gormgal" ;
+    rel:childOf <#Flaithim>.
+
+<#Caicher>
+    a foaf:Person ;
+    irishRel:nomName "Caicher" ;
+    rel:childOf <#Flaithim>.
+
+<#Fogartaich>
+    a foaf:Person;
+    irishRel:genName "Fogartaich";
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Donngalaich>.
+
+<#Donngalaich>
+    a foaf:Person;
+    irishRel:genName "Donngalaich";
+    irishRel:nomName "Donngalach";
+    irishRel:numChild 3 ;
+    rel:childOf <#Fothaid>.
+
+<#Fogartach>
+    a foaf:Person ;
+    irishRel:nomName "Fogartach" ;
+    rel:childOf <#Donngalaich>.
+
+<#Forbasach>
+    a foaf:Person ;
+    irishRel:nomName "Forbasach" ;
+    rel:childOf <#Donngalaich>.
+
+<#Aurthuile>
+    a foaf:Person ;
+    irishRel:nomName "Aurthuile" ;
+    rel:childOf <#Donngalaich>.
+
+<#Fothaid>
+    a foaf:Person;
+    irishRel:genName "Fothaid";
+    irishRel:nomName "Fothad";
+    rel:childOf <#Tómmáin>.
+
+<#Tómmáin>
+    a foaf:Person;
+    irishRel:genName "Tómmáin";
+    irishRel:nomName "Tómmán";
+    rel:childOf <#Fínáin>.
+
+<#Athechdae>
+    a foaf:Person;
+    irishRel:genName "Athechdae";
+    irishRel:nomName "Athechda";
+    irishRel:numChild 2 ;
+    rel:childOf <#Ailde>.
+
+<#Ailill>
+    a foaf:Person ;
+    irishRel:nomName "Ailill" ;
+    rel:childOf <#Athechdae>.
+
+<#Fergal>
+    a foaf:Person ;
+    irishRel:nomName "Fergal" ;
+    rel:childOf <#Athechdae>.
+
+<#Ailde>
+    a foaf:Person;
+    irishRel:genName "Ailde";
+    rel:childOf <#Thómmáin>.
+
+<#Thómmáin>
+    a foaf:Person;
+    irishRel:genName "Thómmáin" ;
+    owl:sameAs <#Tómmáin>.
+
+<#Fínáin>
+    a foaf:Person;
+    irishRel:genName "Fínáin";
+    irishRel:nomName "Fínán";
+    irishRel:numChild 4 ;
+    rel:childOf <#Fiachrach>.
+
+<#Fiachrach>
+    a foaf:Person;
+    irishRel:genName "Fiachrach";
+    irishRel:numChild 2 ;
+    rel:childOf <#Fintain>.
+
+<#Berach>
+    a foaf:Person ;
+    irishRel:nomName "Berach" ;
+    rel:childOf <#Fiachrach>.
+
+<#Fintan-e9a27f3d>
+    a foaf:Person ;
+    irishRel:nomName "Fintan" ;
+    rel:childOf <#Fiachrach>.
+
+<#Fintain>
+    a foaf:Person;
+    irishRel:genName "Fintain";
+    irishRel:nomName "Fintan";
+    rel:childOf <#NadFraích>.
+
+<#NadFraích>
+    a foaf:Person;
+    irishRel:genName "Nad Fraích";
+    rel:childOf <#MeicLaisre>.
+
+<#MeicLaisre>
+    a foaf:Person;
+    irishRel:genName "Meic Laisre";
+    irishRel:nomName "Mac Laisre";
+    rel:childOf <#MeicCaille>.
+
+<#MeicCaille>
+    a foaf:Person;
+    irishRel:genName "Meic Caille";
+    irishRel:nomName "Mac Caille";
+    rel:childOf <#Fergusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    irishRel:numChild 2 ;
+    rel:childOf <#Dalláin>.
+
+<#Caíchne>
+    a foaf:Person ;
+    irishRel:nomName "Caíchne" ;
+    rel:childOf <#Fergusa>.
+
+<#MacCaille>
+    a foaf:Person ;
+    irishRel:nomName "Mac Caille" ;
+    rel:childOf <#Fergusa>.
+
+<#Dalláin>
+    a foaf:Person;
+    irishRel:genName "Dalláin";
+    irishRel:nomName "Dallán";
+    rel:childOf <#Fachtnai>.
+
+<#Fachtnai>
+    a foaf:Person;
+    irishRel:genName "Fachtnai";
+    irishRel:genName "Fachtnae";
+    irishRel:nomName "Fachtna";
+    rel:childOf <#FothaidAirgtich>.
+
+<#FothaidAirgtich>
+    a foaf:Person;
+    irishRel:genName "Fothaid Airgtich";
+    irishRel:nomName "Fothad Airgtich";
+    rel:childOf <#Maccniad>.
+
+<#Maccniad>
+    a foaf:Person;
+    irishRel:genName "Maccniad" ;
+    owl:sameAs <#Maicniad>.
+
+<#Fínáin-3d46ef22>
+    a foaf:Person;
+    irishRel:genName "Fínáin";
+    irishRel:nomName "Fínán";
+    irishRel:numChild 4 ;
+    rel:childOf <#Fiangalaich>.
+
+<#Fiangalaich>
+    a foaf:Person;
+    irishRel:genName "Fiangalaich" ;
+    irishRel:nomName "Fiangalach".
+
+<#MáelColggaich>
+    a foaf:Person ;
+    irishRel:nomName "Máel Colggaich" ;
+    rel:childOf <#Fínáin-3d46ef22>.
+
+<#Tómmán-0c50d173>
+    a foaf:Person ;
+    irishRel:nomName "Tómmán" ;
+    rel:childOf <#Fínáin-3d46ef22>.
+
+<#Ailill-b7bba1fa>
+    a foaf:Person ;
+    irishRel:nomName "Ailill" ;
+    rel:childOf <#Fínáin-3d46ef22>.
+
+<#CennFáelad>
+    a foaf:Person ;
+    irishRel:nomName "Cenn Fáelad" ;
+    rel:childOf <#Fínáin-3d46ef22>.
+
+<#Loingsech>
+    a foaf:Person;
+    irishRel:nomName "Loingsech";
+    rel:childOf <#Sestnáin>.
+
+<#Sestnáin>
+    a foaf:Person;
+    irishRel:genName "Sestnáin";
+    irishRel:nomName "Sestnán";
+    rel:childOf <#Congeltaich>.
+
+<#Congeltaich>
+    a foaf:Person;
+    irishRel:genName "Congeltaich";
+    irishRel:nomName "Congeltach";
+    rel:childOf <#Donnchada>.
+
+<#Donnchada>
+    a foaf:Person;
+    irishRel:genName "Donnchada";
+    irishRel:nomName "Donnchad";
+    rel:childOf <#Echdach>.
+
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Moínaich>.
+
+<#Moínaich>
+    a foaf:Person;
+    irishRel:genName "Moínaich";
+    irishRel:nomName "Moínach";
+    rel:childOf <#Brócáin>.
+
+<#Brócáin>
+    a foaf:Person;
+    irishRel:genName "Brócáin" ;
+    irishRel:nomName "Brócán".
+
+<#Mamennaich>
+    a foaf:Person;
+    irishRel:genName "Mamennaich";
+    irishRel:nomName "Mamennach";
+    irishRel:numChild 4 ;
+    rel:childOf <#Brócáin-a746eb67>.
+
+<#Brócáin-a746eb67>
+    a foaf:Person;
+    irishRel:genName "Brócáin";
+    irishRel:nomName "Brócán";
+    rel:childOf <#Beraich>.
+
+<#Beraich>
+    a foaf:Person;
+    irishRel:genName "Beraich" ;
+    irishRel:nomName "Berach".
+
+<#Eochuid>
+    a foaf:Person ;
+    irishRel:nomName "Eochuid" ;
+    rel:childOf <#Mamennaich>.
+
+<#Forbassach>
+    a foaf:Person ;
+    irishRel:nomName "Forbassach" ;
+    rel:childOf <#Mamennaich>.
+
+<#Fogartach>
+    a foaf:Person ;
+    irishRel:nomName "Fogartach" ;
+    rel:childOf <#Mamennaich>.
+
+<#Muirgius>
+    a foaf:Person ;
+    irishRel:nomName "Muirgius" ;
+    rel:childOf <#Mamennaich>.
+}

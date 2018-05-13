@@ -1,0 +1,205 @@
+@base <http://example.com/Rawl_B502/item_úi_labrada.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Item Úi Labrada"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text003.html> .
+
+<#Cáirthenn>
+    a foaf:Person;
+    irishRel:nomName "Cáirthenn";
+    rel:childOf <#Labrada>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cáirthend>.
+
+<#Labrada>
+    a foaf:Person;
+    irishRel:nomName "Labraid";
+    irishRel:genName "Labrada";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Labraid>.
+
+<#Chuimmíne>
+    a foaf:Person;
+    irishRel:nomName "Cumméne";
+    irishRel:genName "Chuimmíne";
+    rel:childOf <#Cáirthenn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Chummini>;
+    rdfs:comment "Úi Chuimmine".
+
+<#Brócáin>
+    a foaf:Person;
+    irishRel:nomName "Brócán";
+    irishRel:genName "Brócáin";
+    rel:childOf <#Cáirthenn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Bróccain>;
+    rdfs:comment "Úi Brócáin".
+
+<#Gedgcáin>
+    a foaf:Person;
+    irishRel:nomName "Gedgcán";
+    irishRel:genName "Gedgcáin";
+    rel:childOf <#Cáirthenn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Gedgain>;
+    rdfs:comment "Úi Gedgcáin".
+
+<#Fiannáin>
+    a foaf:Person;
+    irishRel:nomName "Fiannán";
+    irishRel:genName "Fiannáin";
+    rel:childOf <#Cáirthenn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fiannáin>;
+    rdfs:comment "Úi Fiannáin".
+
+<#Dímmae>
+    a foaf:Person;
+    irishRel:nomName "Dímmae";
+    irishRel:genName "Dímmae";
+    rel:childOf <#Cáirthenn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Dimmae>;
+    rdfs:comment "Úi Dímmae".
+
+<#Lill>
+    a foaf:Person;
+    irishRel:genName "Lill";
+    rel:childOf <#Cáirthenn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Lill>;
+    rdfs:comment "Úi Lill".
+
+<#Coelbad>
+    a foaf:Person;
+    irishRel:genName "Coelbad";
+    irishRel:nomName "Coelbad";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.trig#Cóeldub>;
+    rel:childOf <#Labrada-319eaab0>.
+
+<#Labrada-319eaab0>
+    a foaf:Person;
+    irishRel:nomName "Labraid";
+    irishRel:genName "Labrada";
+    owl:sameAs <#Labrada>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:nomName "Aed";
+    irishRel:genName "Aeda";
+    foaf:title "epscop"@sga, "bishop"@eng;
+    rel:descendantOf <#Coelbad>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Aeda-88b47561>;
+    rdfs:comment "Úi Epscuip Áeda".
+
+<#Chrutháin>
+    a foaf:Person;
+    irishRel:nomName "Cruthán";
+    irishRel:genName "Crutháin";
+    rel:descendantOf <#Coelbad>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cruthain>;
+    rdfs:comment "Úi Chrutháin secundum alios".
+
+<#Lill>
+    a foaf:Person;
+    irishRel:genName "Lill";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Lill-88b47562>;
+    rdfs:comment "[secundum alios], Úi Lill".
+
+# <#Lill>, above, is a descendant of Cairthend, not of Coelbad. EPT
+
+<#DaigBec>
+    a foaf:Person;
+    irishRel:nomName "Daig Bec";
+    rel:childOf <#Labrada-319eaab0>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#DaigBec>;
+    rdfs:comment "Úi Dega Bic .i. Úi Muiredaig. Is leo Ráth Dromma & Methus Úa m-Bic & Tech Midnann & Cell Clochair.".
+
+<#Muiredaig>
+    a foaf:Person;
+    irishRel:genName "Muiredaig";
+    irishRel:nomName "Muiredach";
+    rel:descendantOf <#DaigBec>;
+    rdfs:comment "Úi Muiredaig";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Muridaig-4bf7e050>.
+
+<#Cainnech>
+    a foaf:Person;
+    irishRel:nomName "Cainnech";
+    irishRel:genName "Cainnich";
+    rel:childOf <#Labrada-319eaab0>;
+    rdfs:comment "a quo Úi Chainnich";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cainnech-4bf7e051>.
+
+<#Bróccéni>
+    a foaf:Person;
+    irishRel:nomName "Bróccéne";
+    irishRel:genName "Bróccéni";
+    rel:descendantOf <#Cainnech>;
+    rdfs:comment "Úi Bróccéni";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Broceni>.
+
+<#Chimíni>
+    a foaf:Person;
+    irishRel:nomName "Ciméne";
+    irishRel:genName "Chimíni";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cummeni>;
+    rdfs:comment "Úi Chimíni".
+
+<#Thoichthe>
+    a foaf:Person;
+    irishRel:genName "Thoichthe";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Thogae>;
+    rdfs:comment "Úi Thoichthe".
+
+<#Amalgaid>
+    a foaf:Person;
+    irishRel:nomName "Amalgaid";
+    irishRel:genName "Amalgaid";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Amalgaid>;
+    rdfs:comment "Úi Amalgaid".
+
+<#Dímmae-8c0fbb90->
+    a foaf:Person;
+    irishRel:nomName "Dímmae";
+    irishRel:genName "Dímmae";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Dimmae>;
+    rdfs:comment "Úi Dímmae".
+
+<#Chuiléni>
+    a foaf:Person;
+    irishRel:nomName "Culén";
+    irishRel:genName "Chuiléni";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Chulén>;
+    rdfs:comment "Úi Chuiléni".
+
+<#Attáin>
+    a foaf:Person;
+    irishRel:nomName "Attán";
+    irishRel:genName "Attáin";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Attain>;
+    rdfs:comment "Úi Attáin".
+
+<#Gaimdechair>
+    a foaf:Person;
+    irishRel:nomName "Gaimdechar";
+    irishRel:genName "Gaimdechair";
+    rel:descendantOf <#Cainnech>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Gaimdegair>;
+    rdfs:comment "Úi Gaimdechair".
+}

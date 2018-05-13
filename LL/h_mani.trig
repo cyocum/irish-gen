@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/h_mani.ttl>.
+﻿@base <http://example.com/LL/h_mani.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "H. Mani"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text116.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text116.html> .
     
 <#Aeda>
@@ -104,14 +109,14 @@
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
     rel:childOf <#CorpriChruim>;
-    owl:sameAs <http://example.com/LL/sil_anmchada.ttl#Cormaic>.
+    owl:sameAs <http://example.com/LL/sil_anmchada.trig#Cormaic>.
 
 <#CorpriChruim>
     a foaf:Person;
     irishRel:genName "Corpri Chruim";
     irishRel:nomName "Coirpre Crum";
     rel:childOf <#Fheradaig>;
-    owl:sameAs <http://example.com/LL/sil_anmchada.ttl#CorpriChruim>.
+    owl:sameAs <http://example.com/LL/sil_anmchada.trig#CorpriChruim>.
 
 <#Fheradaig>
     a foaf:Person;
@@ -160,10 +165,12 @@
     irishRel:genName "Fhiachach Sroptine";
     irishRel:nomName "Fiachu Sroiptine";
     rel:childOf <#CarpriLifechair>;
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#FhiachachSraptini>.
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#FhiachachSraptini>.
 
 <#CarpriLifechair>
     a foaf:Person;
     irishRel:genName "Coirpre Lifechair";
     irishRel:nomName "Carpri Lifechair" ;
-    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriLifechair>.
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CairpriLifechair>.
+}
+

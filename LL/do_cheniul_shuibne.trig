@@ -1,4 +1,4 @@
-@base <http://example.com/LL/do_cheniul_shuibne.ttl>.
+@base <http://example.com/LL/do_cheniul_shuibne.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Do Cheniul Shuibne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text025.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text025.html> .
 
 <#Rechtabra>
@@ -295,9 +300,9 @@
     a foaf:Person;
     irishRel:nomName "Trichem";
     rel:childOf <#Feic>;
-    irishRel:populationGroupName <#hThrichem>.
+    irishRel:populationGroupName <hThrichem>.
 
-<#hThrichem>
+<hThrichem>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Thrichem" .
 
@@ -305,9 +310,9 @@
     a foaf:Person;
     irishRel:nomName "Trian";
     rel:childOf <#Feic>;
-    irishRel:ancestorOfGroup <#hTrena>.
+    irishRel:ancestorOfGroup <hTrena>.
 
-<#hTrena>
+<hTrena>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Trena" .
 
@@ -315,9 +320,9 @@
     a foaf:Person;
     irishRel:nomName "Brian";
     rel:childOf <#Feic>;
-    irishRel:ancestorOfGroup <#hBriuin>.
+    irishRel:ancestorOfGroup <hBriuin>.
 
-<#hBriuin>
+<hBriuin>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Briuin" .
 
@@ -326,9 +331,9 @@
     foaf:title "rí h-Erenn"@sga, "King of Ireland"@en;
     irishRel:nomName "Eochaid Gunnat";
     rel:childOf <#MathairChaem>;
-    irishRel:ancestorOfGroup <#hEchach>.
+    irishRel:ancestorOfGroup <hEchach>.
 
-<#hEchach>
+<hEchach>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Echach na h-Ardda" .
 
@@ -390,3 +395,5 @@
     irishRel:genName "Echdach Gunnat" ;
     irishRel:nomName "Eochu Gunna";
     owl:sameAs <#EochaidGunnat>.
+}
+

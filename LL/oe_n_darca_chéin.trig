@@ -1,4 +1,4 @@
-@base <http://example.com/LL/oe_n_darca_chéin.ttl>.
+@base <http://example.com/LL/oe_n_darca_chéin.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Oe N-Darca Chéin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text067.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text067.html> .
 
 <#Dolgen>
@@ -101,28 +105,28 @@
     irishRel:genName "Eogain";
     irishRel:nomName "Eogan";
     rel:childOf <#Duach>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#EogainSreim>.
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#EogainSreim>.
 
 <#Duach>
     a foaf:Person;
     irishRel:nomName "Duach";
     rel:childOf <#Briuin>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#DuachGalaig>.
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#DuachGalaig>.
 
 <#Briuin>
     a foaf:Person;
     irishRel:genName "Briuin";
     irishRel:nomName "Brion";
     rel:childOf <#EchachMugmedoin>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#Briain>.
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#Briain>.
 
 <#EchachMugmedoin>
     a foaf:Person;
     irishRel:genName "Echach Mugmedoin";
     irishRel:nomName "Eochaid Mugmedon";
-    owl:sameAs <http://example.com/LL/h_fiachach_aidni.ttl#EchachMugmedoin>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EchachMugmedóin>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#EchachMugmedoin>.
+    owl:sameAs <http://example.com/LL/h_fiachach_aidni.trig#EchachMugmedoin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EchachMugmedóin>;
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#EchachMugmedoin>.
 
 <#Doraiden>
     a foaf:Person;
@@ -189,3 +193,4 @@
 
 <#Oschon-06b96dc9>
     owl:sameAs <#Oschon>.
+}

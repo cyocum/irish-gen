@@ -1,0 +1,89 @@
+@base <http://example.com/Rawl_B502/úi_chaíretha.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Chaíretha"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Mugrón>
+    a foaf:Person;
+    irishRel:genName "Mugrón";
+    rel:childOf <#Géráin>.
+
+<#Géráin>
+    a foaf:Person;
+    irishRel:genName "Géráin";
+    irishRel:nomName "Gérán";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Fiachnae>.
+
+<#Fiachnae>
+    a foaf:Person;
+    irishRel:genName "Fiachnae";
+    irishRel:nomName "Fiachna";
+    rel:childOf <#ConChuire>.
+
+<#ConChuire>
+    a foaf:Person;
+    irishRel:genName "Con Chuire";
+    irishRel:nomName "Cu Chuire";
+    rel:childOf <#Congaili>.
+
+<#Congaili>
+    a foaf:Person;
+    irishRel:genName "Congaili";
+    rel:childOf <#Thornacáin>.
+
+<#Thornacáin>
+    a foaf:Person;
+    irishRel:genName "Thornacáin";
+    irishRel:nomName "Tornacán";
+    rel:childOf <#Fáelguine>.
+
+<#Fáelguine>
+    a foaf:Person;
+    irishRel:genName "Fáelguine";
+    irishRel:nomName "Fáelguin";
+    rel:childOf <#Brain>.
+
+<#Brain>
+    a foaf:Person;
+    irishRel:genName "Brain";
+    rel:childOf <#Caíritha>.
+
+<#Caíritha>
+    a foaf:Person;
+    irishRel:genName "Caíritha";
+    irishRel:nomName "Caírith";
+    rel:childOf <#Angáin>.
+
+<#Angáin>
+    a foaf:Person;
+    irishRel:genName "Angá(in)";
+    irishRel:nomName "Angán";
+    rel:childOf <#Imchatha>.
+
+<#Imchatha>
+    a foaf:Person;
+    irishRel:genName "Imchatha" ;
+    irishRel:nomName "Imchath".
+}

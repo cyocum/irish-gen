@@ -1,0 +1,163 @@
+@base <http://example.com/Rawl_B502/úi_líga.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Líga"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Léithíne>
+    a foaf:Person;
+    irishRel:nomName "Léithíne";
+    rel:childOf <#Flannáin>.
+
+<#Flannáin>
+    a foaf:Person;
+    irishRel:genName "Flannáin";
+    irishRel:nomName "Flannán";
+    rel:childOf <#Sétnae>.
+
+<#Sétnae>
+    a foaf:Person;
+    irishRel:genName "Sétnae";
+    rel:childOf <#Cluichechair>.
+
+<#Cluichechair>
+    a foaf:Person;
+    irishRel:genName "Cluichechair";
+    irishRel:nomName "Cluichechar";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Líga>.
+
+<#Líga>
+    a foaf:Person;
+    irishRel:genName "Líga";
+    irishRel:nomName "Líg";
+    rel:childOf <#ConApaig>.
+
+<#ConApaig>
+    a foaf:Person;
+    irishRel:genName "Con Apaig";
+    irishRel:nomName "Cu Apaig";
+    rel:childOf <#Éitcheáin>.
+
+<#Éitcheáin>
+    a foaf:Person;
+    irishRel:genName "Éitcheáin";
+    irishRel:nomName "Éitcheán";
+    rel:childOf <#Cruinnmáel>.
+
+<#Cruinnmáel>
+    a foaf:Person;
+    irishRel:genName "Cruinnmáel";
+    rel:childOf <#Eithlenn>.
+
+<#Eithlenn>
+    a foaf:Person;
+    irishRel:genName "Eithlenn";
+    irishRel:nomName "Ethlenn";
+    rel:childOf <#Firbb>.
+
+<#Firbb>
+    a foaf:Person;
+    irishRel:genName "Firbb".
+
+<#Coinenn>
+    a foaf:Person ;
+    irishRel:genName "Coinenn" ;
+    irishRel:numChild 9 .
+
+
+<#Rethu>
+    a foaf:Person ;
+    irishRel:nomName "Rethu" ;
+    rel:childOf <#Coinenn>.
+
+<#Lugaid>
+    a foaf:Person ;
+    irishRel:nomName "Lugaid" ;
+    rel:childOf <#Coinenn>.
+
+<#Luigdech>
+    a foaf:Person ;
+    irishRel:nomName "Luigdech" ;
+    rel:childOf <#Coinenn>.
+    
+<#Ciara>
+    a foaf:Person ;
+    irishRel:nomName "Ciara" ;
+    rel:childOf <#Coinenn>.
+    
+<h-Ercc>
+    a foaf:Person ;
+    irishRel:nomName "h-Ercc" ;
+    rel:childOf <#Coinenn>.
+
+<#Conliath>
+    a foaf:Person ;
+    irishRel:nomName "Conliath" ;
+    rel:childOf <#Coinenn>.
+    
+<#Báethlug>
+    a foaf:Person ;
+    irishRel:nomName "Báethlug" ;
+    rel:childOf <#Coinenn>.
+
+<#Áedlug>
+    a foaf:Person ;
+    irishRel:nomName "Áedlug" ;
+    rel:childOf <#Coinenn>.
+
+<#Retach>
+    owl:sameAs <#Rethu>;
+    irishRel:genName "Retach" ;
+    irishRel:numChild 6 .
+    
+<#Cáirthenn>
+    a foaf:Person ;
+    irishRel:nomName "Cáirthenn" ;
+    rel:childOf <#Retach>.
+
+<#Cúán>
+    a foaf:Person ;
+    irishRel:nomName "Cúán" ;
+    rel:childOf <#Retach>.
+
+<#Fintan>
+    a foaf:Person ;
+    irishRel:nomName "Fintan" ;
+    rel:childOf <#Retach>.
+
+<#Druídén>
+    a foaf:Person ;
+    irishRel:nomName "Druídén" ;
+    rel:childOf <#Retach>.
+
+<#Luguidén>
+    a foaf:Person ;
+    irishRel:nomName "Luguidén" ;
+    rel:childOf <#Retach>.
+
+<#Donnán>
+    a foaf:Person ;
+    irishRel:nomName "Donnán" ;
+    rel:childOf <#Retach>.
+}

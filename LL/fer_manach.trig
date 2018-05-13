@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/fer_manach.ttl>.
+﻿@base <http://example.com/LL/fer_manach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Fer Manach"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text107.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text107.html> .
 
 <#GillaColuim>
@@ -37,9 +42,9 @@
     a foaf:Person;
     irishRel:genName "Dalaig";
     irishRel:nomName "Dalach";
-    rel:childOf <#h-Uidir>.
+    rel:childOf <h-Uidir>.
 
-<#h-Uidir>
+<h-Uidir>
     a foaf:Person;
     irishRel:nomName "h-Uidir";
     irishRel:genName "Uidir";
@@ -92,22 +97,22 @@
     irishRel:genName "CorpriDaimArgait";
     irishRel:nomName "Coirpre Dam Argait";
     rel:childOf <#Echdach>;
-    owl:sameAs <http://example.com/LL/h_airgialla.ttl#CairpreDamArgait>;
-    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriDaimArgait>;
-    owl:sameAs <http://example.com/LL/síl_daimini.ttl#CarpriDaimArgait>.
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#CairpreDamArgait>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CairpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/síl_daimini.trig#CarpriDaimArgait>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Eochaid";
     rel:childOf <#CrimthainnLeith>;
-    owl:sameAs <http://example.com/LL/h_airgialla.ttl#EochaidAndgaine>.
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#EochaidAndgaine>.
 
 <#CrimthainnLeith>
     a foaf:Person;
     irishRel:genName "Crimthainn Leith";
     irishRel:nomName "Crimthann Liath";
-    owl:sameAs <http://example.com/LL/h_airgialla.ttl#Crimthand>.
+    owl:sameAs <http://example.com/LL/h_airgialla.trigCrimthand>.
 
 <#GillaCrist-c9fb3700>
     a foaf:Person;
@@ -139,3 +144,5 @@
     irishRel:genName "Écnig";
     irishRel:nomName "Éicnech";
     owl:sameAs <#Éicnig>.
+}
+

@@ -1,0 +1,141 @@
+@base <http://example.com/Duanaire_Finn/PoemXXXVII.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/Duanaire_Finn> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Poem XXXVII";
+    dcterms:isFormatOf <https://celt.ucc.ie/published/G402562/text002.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <https://celt.ucc.ie/published/G402562/text002.html> .
+
+# I am omitting data from the Patrick-Oisín frame narrative. EPT
+
+<#Fionn>
+    a foaf:Person;
+    irishRel:nomName "Fionn";
+    rel:childOf <#Cumaill>;
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.trig#Finn>;
+    owl:sameAs <http://example.com/LL/lagin.trig#Find-b1db9300>.
+
+<#Cumaill>
+    a foaf:Person;
+    irishRel:genName "Cumaill" ;
+    irishRel:nomName "Cumall";
+    rel:childOf <#Baoisgne>;
+    owl:sameAs <http://example.com/LL/lagin.trig#Cumaill>.
+
+<#Baoisgne>
+    a foaf:Person;
+    irishRel:genName "Baoisgne";
+    irishRel:nomName "Baoisgne";
+    rel:childOf <#FirDháRoth>.
+
+<#FirDháRoth>
+    a foaf:Person;
+    irishRel:genName "Fir Dhá Roth";
+    irishRel:nomName "Fear Dá Roth";
+    rel:childOf <#Cuinn>.
+
+<#Cuinn>
+    a foaf:Person;
+    irishRel:nomName "Conn";
+    irishRel:genName "Cuinn";
+    rel:childOf <#Garaidh>.
+
+<#Garaidh>
+    a foaf:Person;
+    irishRel:nomName "Garadh";
+    irishRel:genName "Garaidh" ;
+    rel:childOf <#DáireDhuinn>.
+
+<#DáireDhuinn>
+    a foaf:Person;
+    irishRel:genName "Dáire Dhuinn";
+    irishRel:nomName "Dáire Donn";
+    rel:childOf <#Deadhadh>.
+
+<#Deadhadh>
+    a foaf:Person;
+    irishRel:nomName "Deadhadh";
+    irishRel:genName "Deadhadh".
+
+<#Dáire>
+    a foaf:Person;
+    irishRel:genName "Dáire";
+    irishRel:nomName "Dáire";
+    irishRel:numChild 4;
+    owl:sameAs <#DáireDhuinn>.
+
+<#CúRaoí>
+    a foaf:Person;
+    irishRel:nomName "Cú Raoí";
+    rel:childOf <#Dáire>;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#CúRúi>.
+
+<#Baoisgne-f9c1eb50>
+    a foaf:Person;
+    irishRel:nomName "Baoisgne";
+    rel:childOf <#Dáire>;
+    owl:sameAs <#Baoisgne>.
+
+<#Fiachaidh>
+    a foaf:Person;
+    irishRel:nomName "Fiachaidh";
+    rel:childOf <#Dáire>.
+
+<#Eochaidh>
+    a foaf:Person;
+    irishRel:nomName "Eochaidh";
+    rel:childOf <#Dáire>.
+
+<#Garadh>
+    a foaf:Person;
+    irishRel:nomName "Garadh";
+    rel:childOf <#Baoisgne-f9c1eb50>;
+    owl:sameAs <#Garaidh>.
+
+<#Conn>
+    a foaf:Person;
+    irishRel:nomName "Conn";
+    rel:childOf <#Garadh>;
+    owl:sameAs <#Cuinn>.
+
+<#FearDaRoth>
+    a foaf:Person;
+    irishRel:nomName "Fear Da Roth";
+    rel:childOf <#Conn>;
+    owl:sameAs <#FirDháRoth>.
+
+<#Trenmór>
+    a foaf:Person;
+    irishRel:nomName "Trenmór";
+    rel:childOf <#FearDaRoth>;
+    owl:sameAs <http://example.com/LL/lagin.trig#Trenmóir>.
+
+<#Cumholl>
+    a foaf:Person;
+    irishRel:nomName "Cumholl";
+    rel:childOf <#Trenmór>;
+    owl:sameAs <#Cumaill>.
+
+<#Fionn-f4006b50>
+    a foaf:Person;
+    irishRel:nomName "Fionn";
+    rel:childOf <#Cumholl>;
+    owl:sameAs <#Fionn>.
+
+<#Oisin>
+    a foaf:Person;
+    irishRel:nomName "Oisin";
+    rel:childOf <#Fionn-f4006b50>.
+}

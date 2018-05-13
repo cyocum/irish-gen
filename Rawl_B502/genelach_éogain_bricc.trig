@@ -1,0 +1,122 @@
+@base <http://example.com/Rawl_B502/genelach_éogain_bricc.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Éogain Bricc"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text014.html> .
+
+<#Fíngin>
+    a foaf:Person;
+    irishRel:nomName "Fíngin";
+    rel:childOf <#Donngaile>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Fingin>.
+
+<#Donngaile>
+    a foaf:Person;
+    irishRel:genName "Donngaile";
+    irishRel:nomName "Donngail";
+    rel:childOf <#MáelTuile>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Dondgaile>.
+
+<#MáelTuile>
+    a foaf:Person;
+    irishRel:genName "Máel Tuile";
+    irishRel:nomName "Máel Tuile";
+    rel:childOf <#Fiangalaich>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#MaeleTuile>.
+
+<#Fiangalaich>
+    a foaf:Person;
+    irishRel:genName "Fiangalaich";
+    irishRel:nomName "Fiangalach";
+    rel:childOf <#Fiangaile>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Fhiangalaig>.
+
+<#Fiangaile>
+    a foaf:Person;
+    irishRel:genName "Fiangaile";
+    irishRel:nomName "Fiangaile";
+    rel:childOf <#Fáelgusa>.
+
+<#Fáelgusa>
+    a foaf:Person;
+    irishRel:genName "Fáelgusa";
+    irishRel:nomName "Fáelgus";
+    rel:childOf <#Fáelniad>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Fhaelgusa>.
+
+<#Fáelniad>
+    a foaf:Person;
+    irishRel:genName "Fáelniad";
+    irishRel:nomName "Fáelnad";
+    rel:childOf <#Fiangniad>.
+
+<#Fiangniad>
+    a foaf:Person;
+    irishRel:genName "Fiangniad";
+    irishRel:nomName "Fiangnad";
+    rel:childOf <#Modobba>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Fhalniad>.
+
+<#Modobba>
+    a foaf:Person;
+    irishRel:genName "Modobba";
+    irishRel:nomName "Modobb";
+    rel:childOf <#Ségáin>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Modba>.
+
+<#Ségáin>
+    a foaf:Person;
+    irishRel:genName "Ségáin";
+    irishRel:nomName "Ségán";
+    rel:childOf <#Fortcheirn>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Segain>.
+
+<#Fortcheirn>
+    a foaf:Person;
+    irishRel:genName "Fortcheirn";
+    irishRel:nomName "Fortchern";
+    rel:childOf <#MáelRubae>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Fhortcheirn>.
+
+<#MáelRubae>
+    a foaf:Person;
+    irishRel:genName "Máel Rubae";
+    irishRel:nomName "Máel Ruba";
+    rel:childOf <#Dícolla>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#MaeleRuba>.
+
+<#Dícolla>
+    a foaf:Person;
+    irishRel:genName "Dícolla";
+    irishRel:nomName "Dícoll";
+    rel:childOf <#Crítáin>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Dicholla>.
+
+<#Crítáin>
+    a foaf:Person;
+    irishRel:genName "Crítáin";
+    irishRel:nomName "Crítán";
+    rel:childOf <#Airmedaich>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Crítain>.
+
+<#Airmedaich>
+    a foaf:Person;
+    irishRel:genName "Airmedaich" ;
+    irishRel:nomName "Airmedach" ;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Airmedaig>.
+}

@@ -1,0 +1,187 @@
+@base <http://example.com/Duanaire_Finn/PoemXI.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/Duanaire_Finn> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Poem XI";
+    dcterms:isFormatOf <https://archive.org/stream/duanairefinnboo00fostgoog#page/n96/mode/2up>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <https://archive.org/stream/duanairefinnboo00fostgoog#page/n96/mode/2up> .
+
+<#FiondFile>
+    a foaf:Person;
+    irishRel:nomName "Fiond File";
+    foaf:title "file"@sga, "poet"@eng;
+    foaf:title "rí"@sga, "king"@eng.
+
+<#Trénmhór>
+    a foaf:Person;
+    irishRel:nomName "Tréanmhór";
+    owl:sameAs <#FiondFile>.
+
+<#FerghusLuaithfhionn>
+    a foaf:Person;
+    irishRel:nomName "Fearghus Luaithfhionn";
+    rel:childOf <#FiondFile>.
+
+<#Eogan>
+    a foaf:Person;
+    irishRel:nomName "Eoghan";
+    rel:childOf <#FiondFile>.
+
+<#Oilill>
+    a foaf:Person;
+    irishRel:nomName "Oilill";
+    rel:childOf <#Eogan>.
+
+<#Dáire>
+    a foaf:Person;
+    irishRel:nomName "Dáire";
+    rel:childOf <#Oilill>.
+
+<#Dorchaidhe>
+    a foaf:Person;
+    irishRel:nomName "Dorchaidhe";
+    rel:childOf <#Oilill>.
+
+<#Baoiscne>
+    a foaf:Person;
+    irishRel:nomName "Baoiscne";
+    owl:sameAs <#FerghusLuaithfhionn>;
+    irishRel:numChild 3.
+
+<#Cumhall>
+    a foaf:Person;
+    irishRel:nomName "Cumhall";
+    rel:childOf <#Baoiscne>.
+
+<#Criomhall>
+    a foaf:Person;
+    irishRel:nomName "Criomhall";
+    rel:childOf <#Baoiscne>.
+
+<#ÁodhOllach>
+    a foaf:Person;
+    irishRel:nomName "Aodh Ollach";
+    rel:childOf <#Baoiscne>;
+    irishRel:numChild 1.
+
+<#Lughaidh>
+    a foaf:Person;
+    irishRel:nomName "Lughaidh";
+    rel:childOf <#ÁodhOllach>.
+
+<#Feardhomhann>
+    a foaf:Person;
+    irishRel:nomName "Feardhomhann";
+    rel:childOf <#Lughaidh>;
+    irishRel:numChild 2.
+
+<#Morann>
+    a foaf:Person;
+    irishRel:nomName "Morann";
+    rel:childOf <#Feardhomhann>.
+
+<#Aodh>
+    a foaf:Person;
+    irishRel:nomName "Aodh";
+    rel:childOf <#Feardhomhann>.
+
+<#Oisin>
+    a foaf:Person;
+    irishRel:nomName "Oisin";
+    irishRel:childOf <#Finn>.
+
+<#Finn>
+    a foaf:Person;
+    irishRel:nomName "Finn".
+
+<#Fearghus>
+    a foaf:Person;
+    irishRel:nomName "Fearghus";
+    rel:siblingOf <#Oisin>;
+    rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
+
+<#Caoinche>
+    a foaf:Person;
+    irishRel:nomName "Caoinche";
+    rel:siblingOf <#Oisin>;
+    rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
+
+<#Uilleann>
+    a foaf:Person;
+    irishRel:nomName "Uilleann";
+    rel:siblingOf <#Oisin>;
+    rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
+
+<#Fáobhar>
+    a foaf:Person;
+    irishRel:nomName "Fáobhar";
+    rel:siblingOf <#Oisin>;
+    rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
+
+<#Ráighne>
+    a foaf:Person;
+    irishRel:nomName "Raighne";
+    rel:siblingOf <#Oisin>;
+    rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
+
+<#Oisin-18c1f630>
+    a foaf:Person;
+    irishRel:nomName "Oisin";
+    owl:sameAs <#Oisin>;
+    irishRel:numChild 5.
+
+<#Osgar>
+    a foaf:Person;
+    irishRel:nomName "Osgar";
+    rel:childOf <#Oisin-18c1f630>.
+
+<#FearLogha>
+    a foaf:Person;
+    irishRel:nomName "Fear Logha";
+    rel:childOf <#Oisin-18c1f630>.
+
+<#Eachtach>
+    a foaf:Person;
+    irishRel:nomName "Eachtach";
+    rel:childOf <#Oisin-18c1f630>.
+
+<#Uladhach>
+    a foaf:Person;
+    irishRel:nomName "Uladhach";
+    rel:childOf <#Oisin-18c1f630>.
+
+<#DolbhSgéine>
+    a foaf:Person;
+    irishRel:nomName "Dolbh Sgéine";
+    rel:childOf <#Oisin-18c1f630>.
+
+<#Lughach>
+    a foaf:Person;
+    foaf:gender "female";
+    rel:childOf <#Finn>;
+    irishRel:spouseOf <#Dáire-0ec0f7c0>.
+
+<#Dáire-0ec0f7c0>
+    a foaf:Person;
+    irishRel:nomName "Dáire";
+    owl:sameAs <#Dáire>.
+
+<#Gaoine>
+    a foaf:Person;
+    irishRel:nomName "Gaoine";
+    irishRel:nomName "Mac Lughach";
+    rel:childOf <#Lughach>;
+    rel:childOf <#Dáire-0ec0f7c0>.
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_felmeda.ttl>.
+@base <http://example.com/LL/h_felmeda.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach .H. Felmeda"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text083.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text083.html> .
 
 <#Guaire>
@@ -120,7 +125,7 @@
     irishRel:nomName "Feidlimid";
     rel:childOf <#EnnaeChenselaig>.
 
-<#hFelmeda>
+<hFelmeda>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Felmeda" .    
 
@@ -128,4 +133,6 @@
     a foaf:Person;
     irishRel:genName "Ennae Chenselaig";
     irishRel:nomName "Enna Cennselach";
-    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#EnnaeCendselaig>.
+    owl:sameAs <http://example.com/LL/h_ceinselaig.trig#EnnaeCendselaig>.
+}
+

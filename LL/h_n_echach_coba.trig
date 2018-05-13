@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_n_echach_coba.ttl>.
+@base <http://example.com/LL/h_n_echach_coba.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach H. N-Echach Coba"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text064.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text064.html> .
 
 <#Flaithbertach>
@@ -79,65 +84,66 @@
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
     rel:childOf <#Aedain>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Fergusa>.
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Fergusa>.
 
 <#Aedain>
     a foaf:Person;
     irishRel:genName "Aedain";
     irishRel:nomName "Aedan";
     rel:childOf <#Mongain>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Aedain>.
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Aedain>.
 
 <#Mongain>
     a foaf:Person;
     irishRel:genName "Mongain";
     irishRel:nomName "Mongan";
     rel:childOf <#Sharáin>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Mongain>.
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Mongain>.
 
 <#Sharáin>
     a foaf:Person;
     irishRel:genName "Sharáin";
     irishRel:nomName "Sarán";
     rel:childOf <#Mane>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Sarain>.
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Sarain>.
 
 <#Mane>
     a foaf:Person;
     irishRel:genName "Mane";
     irishRel:nomName "Maine";
     rel:childOf <#Fhothaid>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Mane>.
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Mane>.
 
 <#Fhothaid>
     a foaf:Person;
     irishRel:genName "Fhothaid";
     irishRel:nomName "Fothad";
     rel:childOf <#Conaill>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Fhothaid>.
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Fhothaid>.
 
 <#Conaill>
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
     rel:childOf <#Echach>;
-    owl:sameAs <http://example.com/LL/conaille_murthemni.ttl#ConaillAnglondaich>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Conaill>.
+    owl:sameAs <http://example.com/LL/conaille_murthemni.trig#ConaillAnglondaich>;
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Conaill>.
 
 <#Echach>
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Eohcu";
     rel:childOf <#CruindBaDrui>;
-    owl:sameAs <http://example.com/LL/conaille_murthemni.ttl#Echach>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#Echach>;
-    irishRel:ancestorOfGroup <#hEchach>.
+    owl:sameAs <http://example.com/LL/conaille_murthemni.trig#Echach>;
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#Echach>;
+    irishRel:ancestorOfGroup <hEchach>.
 
-<#hEchach>
+<hEchach>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Echach" .
 
 <#CruindBaDrui>
-    owl:sameAs <http://example.com/LL/dáil_araide.ttl#CruindBaDrúi>;
-    owl:sameAs <http://example.com/LL/conaille_murthemni.ttl#CruindBaDrui>;
-    owl:sameAs <http://example.com/LL/n_echach_coba.ttl#CruindBaDrui>.
+    owl:sameAs <http://example.com/LL/dáil_araide.trig#CruindBaDrúi>;
+    owl:sameAs <http://example.com/LL/conaille_murthemni.trig#CruindBaDrui>;
+    owl:sameAs <http://example.com/LL/n_echach_coba.trig#CruindBaDrui>.
+}

@@ -1,0 +1,331 @@
+@base <http://example.com/Rawl_B502/anmann_in_so_na_ríg_ó_chimbáeth_co_conchobor.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.trig>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Anmann In So Na Ríg Ó Chimbáeth Co Conchobor"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text022.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text022.html>.
+
+<#EochuÉolochair>
+    a irishTitle:Rí ;
+    irishRel:nomName "Eochu Éolochair" ;
+    irishTitle:succeededBy <h-Umanchenn>;
+    rel:childOf <#Feadaich>;
+    irishTitle:reignLength 20 .
+
+<#Feadaich>
+    a foaf:Person ;
+    irishRel:genName "Feadaich" ;
+    irishRel:nomName "Feadach" ;
+    rel:childOf <#Argatmáir>.
+
+<#Argatmáir>
+    a foaf:Person ;
+    irishRel:genName "Argatmáir" ;
+    irishRel:nomName "Argatmár" .
+
+<h-Umanchenn>
+    a irishTitle:Rí ;
+    irishRel:nomName "h-Umanchenn" ;
+    irishTitle:succeededBy <#ConchoborRot>;
+    irishTitle:reignLength 50 ;
+    rel:childOf <#Corráin>.
+
+<#Corráin>
+    a foaf:Person ;
+    irishRel:genName "Corráin" ;
+    irishRel:nomName "Corrán" ;
+    rel:childOf <#Caiss>.
+    
+<#Caiss>
+    a foaf:Person ;
+    irishRel:genName "Caiss" ;
+    irishRel:nomName "Cass" ;
+    rel:childOf <#Argatmáir-172402fa>.
+
+<#Argatmáir-172402fa>
+    owl:sameAs <#Argatmáir>.
+
+<#ConchoborRot>
+    a irishTitle:Rí ;
+    irishRel:nomName "Conchobor Rot" ;
+    irishTitle:succeededBy <#Fachtna>;
+    irishTitle:reignLength 30 ;
+    rel:childOf <#Catháer>.
+
+<#Catháer>
+    a foaf:Person ;
+    irishRel:genName "Catháer" ;
+    rel:childOf <#Corráin-f4c530bd>.
+
+<#Corráin-f4c530bd>
+    owl:sameAs <#Corráin>.
+
+<#Fachtna>
+    a irishTitle:Rí ;
+    irishRel:nomName "Fachtna" ;
+    irishTitle:succeededBy <#Dáre> ;
+    irishTitle:reignLength 16 ;
+    rel:childOf <#Feideilmid>.    
+
+<#Feideilmid>
+    a foaf:Person ;
+    irishRel:genName "Feideilmid" ;
+    rel:childOf <h-Uamunchinn-e09ea721>.
+
+<h-Uamunchinn-e09ea721>
+    irishRel:genName "h-Uamunchinn" ;
+    owl:sameAs <h-Umanchenn>.
+
+<#Dáre>
+    a irishTitle:Rí ;
+    irishRel:nomName "Dáre" ;
+    irishTitle:succeededBy <#Énna>;
+    irishTitle:reignLength 61 ;
+    rel:childOf <#Forgo>.
+
+<#Forgo>
+    a foaf:Person ;
+    irishRel:genName "Forgo" ;
+    rel:childOf <#Feideilmid-0edb72f8>.
+
+<#Feideilmid-0edb72f8>
+    owl:sameAs <#Feideilmid>.
+
+<#Énna>
+    a irishTitle:Rí ;
+    irishRel:nomName "Énna" ;
+    irishTitle:succeededBy <#Findchad>;
+    irishTitle:reignLength 5 ;
+    rel:childOf <#Rochada>.
+
+<#Rochada>
+    a foaf:Person ;
+    irishRel:genName "Rochada" ;
+    irishRel:nomName "Rochad" ;
+    rel:childOf <#Feideilmthi>.
+
+<#Feideilmthi>
+    a foaf:Person ;
+    irishRel:genName "Feideilmthi" ;
+    owl:sameAs <#Feideilmid>.
+
+<#Findchad>
+    a irishTitle:Rí ;
+    irishRel:nomName "Findchad" ;
+    irishTitle:succeededBy <#ConchoborMáel>;
+    irishTitle:reignLength 2 ;
+    rel:childOf <#Baicce>.
+
+<#Baicce>
+    a foaf:Person ;
+    irishRel:genName "Baicce" ;
+    irishRel:nomName "Baicc" ;
+    rel:childOf <#Dáre-3d969a38>.
+
+<#Dáre-3d969a38>
+    owl:sameAs <#Dáre>.
+
+<#ConchoborMáel>
+    a irishTitle:Rí ;
+    irishRel:nomName "Conchobor Máel" ;
+    irishTitle:succeededBy <#Rudraigi>;
+    irishTitle:reignLength 12 ;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#ConchobuirMael>;
+    rel:childOf <#Futhi>.
+
+<#Futhi>
+    a foaf:Person ;
+    irishRel:genName "Futhi" ;
+    rel:childOf <#Forggu>.
+
+<#Forggu>
+    a foaf:Person ;
+    irishRel:genName "Forggu" ;
+    owl:sameAs <#Forgo>.
+
+<#Rudraigi>
+    a irishTitle:Rí ;
+    irishRel:nomName "Rudraigi" ;
+    irishTitle:succeededBy <#Cormac>;
+    irishTitle:reignLength 70 ;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Rudraige>;
+    rel:childOf <#Sittride>.
+
+<#Sittride>
+    a foaf:Person ;
+    irishRel:genName "Sittride" ;
+    rel:childOf <#Duib>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Sittride>.
+
+<#Duib>
+    a foaf:Person ;
+    irishRel:genName "Duib" ;
+    irishRel:nomName "Dub" ;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Duib>.
+
+<#Cormac>
+    a irishTitle:Rí ;
+    irishRel:nomName "Cormac" ;
+    irishTitle:succeededBy <#Mochta>;
+    irishTitle:reignLength 27 ;
+    rel:childOf <#Laithich>.
+
+<#Laithich>
+    a foaf:Person ;
+    irishRel:genName "Laithich" ;
+    rel:childOf <#ConchobuirMáel>.
+
+<#ConchobuirMáel>
+    irishRel:genName "Conchobuir Máel" ;
+    owl:sameAs <#ConchoborMáel>;
+    rel:childOf <#Futhi-ceee3ad5>.
+
+<#Futhi-ceee3ad5>
+    owl:sameAs <#Futhi>.
+
+<#Mochta>
+    a irishTitle:Rí ;
+    irishRel:nomName "Mochta" ;
+    irishTitle:succeededBy <#Énna-d932f5bf>;
+    irishTitle:reignLength 3 ;
+    rel:childOf <#Murchorad>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Mochta>.
+
+<#Murchorad>
+    a foaf:Person ;
+    irishRel:genName "Murchorad" ;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Murchaid>.
+
+<#Énna-d932f5bf>
+    a irishTitle:Rí ;
+    irishRel:nomName "Énna" ;
+    irishTitle:succeededBy <#EochoSálbuide>;
+    irishTitle:reignLength 3 ;
+    rel:childOf <#Dáre-74acdf6a>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Enna-c9783780>.
+
+<#Dáre-74acdf6a>
+    a foaf:Person ;
+    irishRel:genName "Dáre" ;
+    rel:childOf <#Conchobuir>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Dáire>.
+    
+<#Conchobuir>
+    a foaf:Person ;
+    irishRel:genName "Conchobuir" ;
+    irishRel:nomName "Conchobur" ;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Conchobuir-f31c01c0>.
+
+<#EochoSálbuide>
+    a irishTitle:Rí ;
+    irishRel:nomName "Eocho Sálbuide" ;
+    irishTitle:succeededBy <#BresalBódíbad>;
+    irishTitle:reignLength 20 ;
+    rel:childOf <#Loc>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#EochuSalbude>.
+
+<#Loc>
+    a foaf:Person ;
+    irishRel:genName "Loc" ;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Lot>.
+    
+<#BresalBódíbad>
+    a irishTitle:Rí ;
+    irishRel:nomName "Bresal Bódíbad" ;
+    irishTitle:succeededBy <#Congal>;
+    irishTitle:reignLength 12 ;
+    rel:childOf <#Rudraigi-1d66107f>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#BresalBódíbad>.
+
+<#Rudraigi-1d66107f>
+    owl:sameAs <#Rudraigi>.
+
+<#Congal>
+    a irishTitle:Rí ;
+    irishRel:nomName "Congal" ;
+    irishTitle:succeededBy <#FachtnaFáthach>;
+    irishTitle:reignLength 14 ;
+    rel:childOf <#Rudraigi-9e873ca3>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#CongalCláringnech>.
+
+<#Rudraigi-9e873ca3>
+    owl:sameAs <#Rudraigi>.
+
+<#FachtnaFáthach>
+    a irishTitle:Rí ;
+    irishRel:nomName "Fachtna Fáthach" ;
+    irishTitle:succeededBy <#Fergus>;
+    irishTitle:reignLength 30 ;
+    rel:childOf <#Cais>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#FachtnaFáthach>.
+
+<#Cais>
+    a foaf:Person ;
+    irishRel:genName "Cais" ;
+    irishRel:nomName "Cas" ;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Cass>;
+    rel:childOf <#Rudraigi-f7d7a9bc>.
+
+<#Rudraigi-f7d7a9bc>
+    owl:sameAs <#Rudraigi>.
+
+<#Fergus>
+    a irishTitle:Rí ;
+    irishRel:nomName "Fergus" ;
+    irishTitle:succeededBy <#Fergus-b1c298df>;
+    irishTitle:reignLength 3 ;
+    rel:childOf <#Leiti>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Fergus-8934bfee>.
+    
+<#Leiti>
+    a foaf:Person ;
+    irishRel:genName "Leiti" ;
+    rel:childOf <#Rudraigi-315d3063>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Leite>.
+
+<#Rudraigi-315d3063>
+    owl:sameAs <#Rudraigi>.
+
+<#Fergus-b1c298df>
+    a irishTitle:Rí ;
+    irishRel:nomName "Fergus" ;
+    irishTitle:succeededBy <#Conchobur>;
+    irishTitle:reignLength 3 ;
+    rel:childOf <#Rossa>;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Fergus>.
+
+<#Rossa>
+    a foaf:Person ;
+    irishRel:genName "Rossa" ;
+    irishRel:nomName "Ross" ;
+    owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Ross>;
+    rel:childOf <#Rudraigi-3475962a>.
+    
+<#Rudraigi-3475962a>
+    owl:sameAs <#Rudraigi>.
+
+<#Conchobur>
+    a irishTitle:Rí ;
+    irishRel:nomName "Conchobur" ;
+    irishTitle:reignLength 40 ;
+    rel:childOf <#Fachtna-2affe70f>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Conchobor>.
+
+<#Fachtna-2affe70f>
+    owl:sameAs <#FachtnaFáthach>.
+}

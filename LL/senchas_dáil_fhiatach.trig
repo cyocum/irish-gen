@@ -1,4 +1,4 @@
-@base <http://example.com/LL/senchas_dáil_fiatach.ttl>.
+@base <http://example.com/LL/senchas_dáil_fiatach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +7,18 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitle: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Ciarraige"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text024.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text024.html> .
 
 <#FhiatachFind>
@@ -80,14 +84,14 @@
     a foaf:Person;
     irishRel:nomName "Cian";
     rel:childOf <#AilellaOloimm>;
-    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Cian>.
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Cian>.
 
 <#AilellaOloimm>
     a foaf:Person;
     irishRel:genName "Ailella Oloimm";
     irishRel:nomName "Ailil Aulomm";
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#AilellaOloim>;
-    owl:sameAs <http://example.com/LL/Ciannachta_Glinni_Gaimen.ttl#Ailill_Aulomm>.
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AilellaOloim>;
+    owl:sameAs <http://example.com/LL/Ciannachta_Glinni_Gaimen.trig#Ailill_Aulomm>.
 
 <#EochoToebfhota>
     a foaf:Person;
@@ -173,9 +177,9 @@
     a foaf:Person;
     irishRel:nomName "Connaid";
     rel:childOf <#Forg>;
-    irishRel:ancestorOfGroup <#hConnaideEnna>.
+    irishRel:ancestorOfGroup <hConnaideEnna>.
     
-<#hConnaideEnna>
+<hConnaideEnna>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Connaide Enna" ;
     rdfs:comment "díbaidside" .
@@ -184,9 +188,9 @@
     a foaf:Person;
     irishRel:nomName "Nem";
     rel:childOf <#Forg>;
-    irishRel:ancestorOfGroup <#hNemand>.
+    irishRel:ancestorOfGroup <hNemand>.
 
-<#hNemand>
+<hNemand>
     a irishRel:PopulationGroup ;
     irishRel:ancestorOfGroup ".h. Nemand" .
 
@@ -194,9 +198,9 @@
     a foaf:Person;
     irishRel:nomName "Lugaid";
     rel:childOf <#Forg>;
-    irishRel:ancestorOfGroup <#hLugdech>.
+    irishRel:ancestorOfGroup <hLugdech>.
 
-<#hLugdech>
+<hLugdech>
     a irishRel:PopulationGroup ;
     irishRel:ancestorOfGroup ".h. Lugdech" .
 
@@ -204,9 +208,9 @@
     a foaf:Person;
     irishRel:nomName "Bresal";
     rel:childOf <#Forg>;
-    irishRel:ancestorOfGroup <#hBresail>.
+    irishRel:ancestorOfGroup <hBresail>.
 
-<#hBresail>
+<hBresail>
     a irishRel:PopulationGroup ;
     irishRel:ancestorOfGroup ".h. Bresail" .
 
@@ -214,9 +218,9 @@
     a foaf:Person;
     irishRel:nomName "Longthe";
     rel:childOf <#Forg>;
-    irishRel:ancestorOfGroup <#hLongthe>.
+    irishRel:ancestorOfGroup <hLongthe>.
 
-<#hLongthe>
+<hLongthe>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Longthe" .
 
@@ -224,9 +228,9 @@
     a foaf:Person;
     irishRel:nomName "Conall";
     rel:childOf <#Forg>;
-    irishRel:ancestorOfGroup <#hConaill>.
+    irishRel:ancestorOfGroup <hConaill>.
 
-<#hConaill>
+<hConaill>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Conaill" .
 
@@ -250,9 +254,9 @@
         a foaf:Person;
         foaf:gender "female"
     ] ;
-    irishRel:ancestorOfGroup <#hIbtaig>.
+    irishRel:ancestorOfGroup <hIbtaig>.
 
-<#hIbtaig>
+<hIbtaig>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Ibtaig" .
 
@@ -645,10 +649,11 @@
     irishRel:genName "Baetain";
     irishRel:nomName "Baetan";
     rel:childOf <#Echach>.
-# owl:sameAs <http://example.com/LL/dáil_araide.ttl#Baetain>?
+# owl:sameAs <http://example.com/LL/dáil_araide.trig#Baetain>?
 
 <#Echach>
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Eochu".
-# owl:sameAs <http://example.com/LL/dáil_araide.ttl#Echach>? 
+# owl:sameAs <http://example.com/LL/dáil_araide.trig#Echach>? 
+}

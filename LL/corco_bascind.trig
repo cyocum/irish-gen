@@ -1,4 +1,4 @@
-@base <http://example.com/LL/corco_bascind.ttl>.
+@base <http://example.com/LL/corco_bascind.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Corco Bascind"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text013.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text013.html> .
 
 <#AedRoin>
@@ -93,7 +98,7 @@
   a foaf:Person;
   irishRel:genName "Cuirp";
   irishRel:nomName "Corp";
-  rel:childOf <Luigdech>.
+  rel:childOf <#Luigdech>.
 
 <#Luigdech>
     a foaf:Person;
@@ -118,19 +123,19 @@
     a foaf:Person;
     irishRel:genName "Conaire Móir";
     irishRel:nomName "Conaire Mór";
-    owl:sameAs <http://example.com/LL/corco_dubni.ttl#Conaire>.
+    owl:sameAs <http://example.com/LL/corco_dubni.trig#Conaire>.
 
 <#Conaire>
     a foaf:Person;
     irishRel:nomName "Conaire";
     rel:childOf <#MogaLama>;
-    owl:sameAs <http://example.com/LL/rig_alban.ttl#Conaire>.
+    owl:sameAs <http://example.com/LL/rig_alban.trig#Conaire>.
 
 <#MogaLama>
     a foaf:Person;
     irishRel:genName "Moga Lama";
     irishRel:nomName "Mog Lam";
-    owl:sameAs <http://example.com/LL/rig_alban.ttl#MogaLama>.
+    owl:sameAs <http://example.com/LL/rig_alban.trig#MogaLama>.
 
 <#Rectabra>
     irishRel:nomName "Rectabra";
@@ -156,7 +161,7 @@
     foaf:name "Patraic";
     foaf:title "Saint"@eng;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q165479>;
-    owl:sameAs <http://example.com/LL/senchas_síl_ébir.ttl#Patric>.
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Patric>.
 
 <#Bolg>
     a foaf:Person;
@@ -199,7 +204,7 @@
     foaf:knows <http://www.wikidata.org/entity/Q165479>;
     rel:childOf <#Décci>.
 
-<#h-Uidriu>
+<h-Uidriu>
     a foaf:Person;
     irishRel:nomName "h-Uidriu";
     foaf:title "epscop"@sga, "bishop"@en;
@@ -821,9 +826,9 @@ _:missing-eefa250f
     a foaf:Person;
     irishRel:nomName "Narchride";
     rel:childOf <#DubDaire>;
-    irishRel:ancestorOfGroup <#hChonarge>.
+    irishRel:ancestorOfGroup <hChonarge>.
 
-<#hChonarge>
+<hChonarge>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Chonarge" .
 
@@ -1070,3 +1075,5 @@ _:missing-eefa250f
 <#Uargusa>
     a foaf:Person;
     irishRel:nomName "Uargusa".
+}
+

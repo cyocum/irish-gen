@@ -1,0 +1,124 @@
+@base <http://example.com/Rawl_B502/genelach_delbna_móre.ttl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Delbna Móre"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text014.html> .
+
+<#Gormucán>
+    a foaf:Person;
+    irishRel:nomName "Gormucán";
+    rel:childOf <#Anfída>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Gormucan>.
+
+<#Anfída>
+    a foaf:Person;
+    irishRel:genName "Anfída";
+    irishRel:nomName "Anfíd";
+    rel:childOf <#MáelMíchíl>.
+
+<#MáelMíchíl>
+    a foaf:Person;
+    irishRel:genName "Máel Míchíl";
+    rel:childOf <#Cochláin>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#MaelMichil>.
+
+<#Cochláin>
+    a foaf:Person;
+    irishRel:genName "Cochláin";
+    irishRel:nomName "Cochlán";
+    rel:childOf <#Coimded>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Cochláin>.
+
+<#Coimded>
+    a foaf:Person;
+    irishRel:genName "Coimded";
+    rel:childOf <#Donngusa>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Comdeith>.
+
+<#Donngusa>
+    a foaf:Person;
+    irishRel:genName "Donngusa";
+    irishRel:nomName "Donngus";
+    rel:childOf <#Clothchon>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Dondgusa>.
+
+<#Clothchon>
+    a foaf:Person;
+    irishRel:genName "Clothchon";
+    irishRel:nomName "Clothchu";
+    rel:childOf <#Comgaill>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Clothchon>.
+
+<#Comgaill>
+    a foaf:Person;
+    irishRel:genName "Comgaill";
+    irishRel:nomName "Comgall";
+    rel:childOf <#Sáráin>.
+
+<#Sáráin>
+    a foaf:Person;
+    irishRel:genName "Sáráin";
+    irishRel:nomName "Sárán";
+    rel:childOf <#Brócáin>.
+
+<#Brócáin>
+    a foaf:Person;
+    irishRel:genName "Brócáin";
+    irishRel:nomName "Brócán";
+    rel:childOf <#Comgaill-05400497>.
+
+<#Comgaill>
+    a foaf:Person;
+    irishRel:genName "Comgaill";
+    irishRel:nomName "Comgall";
+    rel:childOf <#Blait>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Comgaill>.
+
+<#Blait>
+    a foaf:Person;
+    irishRel:genName "Blait";
+    irishRel:nomName "Blat";
+    rel:childOf <#Sige>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Blait>.
+
+<#Sige>
+    a foaf:Person;
+    irishRel:genName "Sige";
+    rel:childOf <#Aindiled>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Sige>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Shige>.
+
+<#Aindiled>
+    a foaf:Person;
+    irishRel:genName "Aindiled";
+    rel:childOf <#Beccáin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Andiled>;
+    owl:sameAs <http://example.com/LL/delbna_móre.trig#Andiled>.
+
+<#Beccáin>
+    a foaf:Person;
+    irishRel:genName "Beccáin";
+    irishRel:nomName "Beccán";
+    rel:childOf <#Delbáeth>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Beccáin>.
+
+<#Delbáeth>
+    a foaf:Person;
+    irishRel:genName "Delbáeth" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Delbaíth>.
+}

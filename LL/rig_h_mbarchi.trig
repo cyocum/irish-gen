@@ -1,4 +1,4 @@
-@base <http://example.com/LL/rig_h_mbarchi.ttl>.
+@base <http://example.com/LL/rig_h_mbarchi.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Rig .H. mBarchi"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text095.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text095.html> .
 
 <#Oengus>
@@ -127,55 +131,56 @@
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
     rel:childOf <#Cormaic>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Domnaill>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Domnaill>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
     rel:childOf <#Diarmata>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cormaic>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cormaic>.
 
 <#Diarmata>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
     rel:childOf <#EchachGunich>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Diarmata>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Diarmata>.
 
 <#EchachGunich>
     a foaf:Person;
     irishRel:genName "Echach Gunich";
     irishRel:nomName "Eochaid Gunech";
     rel:childOf <#Oengusa>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EchachGunich>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EchachGunich>.
 
 <#Oengusa>
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Óengus";
     rel:childOf <#Erca>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Oengusa-553b3d11>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Oengusa-553b3d11>.
 
 <#Erca>
     a foaf:Person;
     irishRel:genName "Erca";
     irishRel:nomName "Erc";
     rel:childOf <#Brecain>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Ercca>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ercca>.
 
 <#Brecain>
     a foaf:Person;
     irishRel:genName "Brecain";
     irishRel:nomName "Brecan";
     rel:childOf <#Feic>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Breccain>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Breccain>.
     
 <#Feic>
     a foaf:Person;
     irishRel:genName "Feic";
     irishRel:nomName "Fiac";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fheic>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fheic>;
     rel:childOf [
         a foaf:Person; # based on dal_corpri_arad.ttl this is almost certainly Daire Barrach. - CY
     ].
+}

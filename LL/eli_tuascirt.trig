@@ -1,4 +1,4 @@
-@base <http://example.com/LL/eli_tuascirt.ttl>.
+@base <http://example.com/LL/eli_tuascirt.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,150 +7,155 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitles: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Uathni"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text080.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text080.html> .
 
 <#Domnall>
     a foaf:Person;
     irishRel:nomName "Domnall";
     rel:childOf <#Rigbardain>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Domnall-aa162970>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Domnall-aa162970>.
 
 <#Rigbardain>
     a foaf:Person;
     irishRel:genName "Rigbardain";
     irishRel:nomName "Rigbardan";
     rel:childOf <#ConCorne>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Rigbardain>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Rigbardain>.
 
 <#ConCorne>
     a foaf:Person;
     irishRel:genName "Con Corne";
     irishRel:nomName "Cu Corn";
     rel:childOf <#Mainaig>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#ConChorne>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#ConChorne>.
 
 <#Mainaig>
     a foaf:Person;
     irishRel:genName "Mainaig";
     irishRel:nomName "Mainach";
     rel:childOf <#Cerbaill>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Máinaig>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Máinaig>.
 
 <#Cerbaill>
     a foaf:Person;
     irishRel:genName "Cerbaill";
     irishRel:nomName "Cerball";
     rel:childOf <#Dublaigi>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Cerbaill>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cerbaill>.
 
 <#Dublaigi>
     a foaf:Person;
     irishRel:genName "Dublaigi";
     irishRel:nomName "Dublaig";
     rel:childOf <#Cnamin>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Dublaige>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Dublaige>.
 
 <#Cnamin>
     a foaf:Person;
     irishRel:nomName "Cnamin";
     rel:childOf <#Máinaig>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Cnamín>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cnamín>.
 
 <#Máinaig>
     a foaf:Person;
     irishRel:genName "Máinaig";
     irishRel:nomName "Máinach";
     rel:childOf <#Shechnasaig>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Mainaig-029e7fc0>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Mainaig-029e7fc0>.
 
 <#Shechnasaig>
     a foaf:Person;
     irishRel:genName "Shechnasaig";
     irishRel:nomName "Sechnasach";
     rel:childOf <#Angeda>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Sechnasaig>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Sechnasaig>.
 
 <#Angeda>
     a foaf:Person;
     irishRel:genName "Angeda";
     irishRel:nomName "Anged";
     rel:childOf <#MaelRuanaid>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Angida>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Angida>.
 
 <#MaelRuanaid>
     a foaf:Person;
     irishRel:genName "Mael Ruanaid";
     irishRel:nomName "Mael Ruanad";
     rel:childOf <#Ultain>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#MaelRuanaid>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#MaelRuanaid>.
 
 <#Ultain>
     a foaf:Person;
     irishRel:genName "Ultain";
     irishRel:nomName "Ultan";
     rel:childOf <#Lonain>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Ultain>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Ultain>.
 
 <#Lonain>
     a foaf:Person;
     irishRel:genName "Lonain";
     irishRel:nomName "Lonan";
     rel:childOf <#Indig>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Lonain>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Lonain>.
 
 <#Indig>
     a foaf:Person;
     irishRel:genName "Indig";
     irishRel:nomName "Indech";
     rel:childOf <#Fhéic>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Indig>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Indig>.
 
 <#Fhéic>
     a foaf:Person;
     irishRel:genName "Fhéic";
     irishRel:nomName "Fiac";
     rel:childOf <#Tail>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Féic-d1117380>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Féic-d1117380>.
 
 <#Tail>
     a foaf:Person;
     irishRel:nomName "Tail";
     rel:childOf <#MeicCaire>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Táil>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Táil>.
 
 <#MeicCaire>
     a foaf:Person;
     irishRel:genName "Meic Caire";
     irishRel:nomName "Mac Cair";
     rel:childOf <#Arad>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#MeicCaire>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#MeicCaire>.
 
 <#Arad>
     a foaf:Person;
     irishRel:nomName "Arad";
     rel:childOf <#Druad>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Arad>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Arad>.
 
 <#Druad>
     a foaf:Person;
     irishRel:nomName "Druad";
     rel:childOf <#EliRigdeirg>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Druad>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Druad>.
 
 <#EliRigdeirg>
     a foaf:Person;
     irishRel:genName "Eli Rigdeirg";
     irishRel:nomName "Ele Rigderg";
     rel:childOf <#Imchad>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#ÉliRigdeirg>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#ÉliRigdeirg>.
 
 <#Imchad>
     a foaf:Person;
@@ -159,7 +164,7 @@
         a foaf:Person;
        rel:childOf <#Findcha>;
     ];
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Imchada-3927d2a0>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Imchada-3927d2a0>.
 
 <#Findcha>
     a foaf:Person;
@@ -168,7 +173,7 @@
         a foaf:Person;
         rel:childOf <#Fheic-0eece92f>;
     ];
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Findchain>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Findchain>.
 
 
 <#Fheic-0eece92f>
@@ -176,34 +181,34 @@
     irishRel:genName "Fheic";
     irishRel:nomName "Feic";
     rel:childOf <#Findchain>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Fheic>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Fheic>.
 
 <#Findchain>
     a foaf:Person;
     irishRel:genName "Findchain";
     irishRel:nomName "Findchan";
     rel:childOf <#Condlai>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Findchada>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Findchada>.
 
 <#Condlai>
     a foaf:Person;
     irishRel:genName "Condlai";
     irishRel:nomName "Condla";
     rel:childOf <#Taidc>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Conlai-28bcbad0>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Conlai-28bcbad0>.
 
 <#Taidc>
     a foaf:Person;
     irishRel:genName "Taidc";
     irishRel:nomName "Tadc";
     rel:childOf <#Cein>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Taidc-3ad06a50>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Taidc-3ad06a50>.
 
 <#Cein>
     a foaf:Person;
     irishRel:genName "Cein";
     irishRel:nomName "Cen";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Céin>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Céin>.
 
 <#Colman>
     a foaf:Person;
@@ -224,3 +229,5 @@
         a irishTitles:Rí;
         foaf:title "rig Connacht"@sga, "king of Connacht"@eng;
     ].
+}
+

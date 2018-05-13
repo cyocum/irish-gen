@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/rig_ailig.ttl>.
+﻿@base <http://example.com/LL/rig_ailig.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Rig Ailig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text099.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text099.html> .
 
 <#Murchertach>
@@ -145,16 +149,16 @@
     irishRel:genName "Neill Nóigiallaig";
     irishRel:nomName "Niall Noígiallach";
     rel:childOf <#EchachMugmedóin>;
-    owl:sameAs <http://example.com/LL/ceniuil_lugdach.ttl#NeillNóigiallaich>.
+    owl:sameAs <http://example.com/LL/ceniuil_lugdach.trig#NeillNóigiallaich>.
 
 <#EchachMugmedóin>
     a foaf:Person;
     irishRel:genName "Echach Mugmedóin";
     irishRel:nomName "Eochad Mugmedón";
     rel:childOf <#MuridaigTirig>;
-    owl:sameAs <http://example.com/LL/h_fiachach_aidni.ttl#EchachMugmedoin>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EchachMugmedóin>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#EchachMugmedoin>.
+    owl:sameAs <http://example.com/LL/h_fiachach_aidni.trig#EchachMugmedoin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EchachMugmedóin>;
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#EchachMugmedoin>.
 
 <#MuridaigTirig>
     a foaf:Person;
@@ -173,9 +177,9 @@
     irishRel:genName "Carpri Liphechair";
     irishRel:nomName "Coirpre Liphechair";
     rel:childOf <#CormaicUlfhota>;
-    owl:sameAs <http://example.com/LL/h_mani.ttl#CarpriLifechair>;
-    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriLifechair>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>.
+    owl:sameAs <http://example.com/LL/h_mani.trig#CarpriLifechair>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CairpriLifechair>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CorpreLiphechair>.
 
 <#CormaicUlfhota>
     a foaf:Person;
@@ -289,7 +293,7 @@
     irishRel:genName "Labrada L.";
     irishRel:nomName "Labraid Loingsech";
     rel:childOf <#EnnaAgnig>;
-    owl:sameAs <http://example.com/LL/lagin.ttl#LabraidLongsechMoen>.
+    owl:sameAs <http://example.com/LL/lagin.trig#LabraidLongsechMoen>.
 
 <#EnnaAgnig>
     a foaf:Person;
@@ -301,4 +305,5 @@
     a foaf:Person;
     foaf:name "Oengusa Turbig";
     foaf:name "Oengus Tuirbech" ;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#OengusaTurbig>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#OengusaTurbig>.
+}

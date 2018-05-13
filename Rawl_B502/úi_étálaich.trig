@@ -1,0 +1,79 @@
+@base <http://example.com/Rawl_B502/úi_étálaich.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Étálaich"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Scandlán>
+    a foaf:Person;
+    irishRel:nomName "Scandlán";
+    rel:childOf <#Cuiliussáin>.
+
+<#Cuiliussáin>
+    a foaf:Person;
+    irishRel:genName "Cuiliussáin";
+    irishRel:nomName "Cuiliussán";
+    rel:childOf <#Ólchobair>.
+
+<#Ólchobair>
+    a foaf:Person;
+    irishRel:genName "Ólchobair";
+    irishRel:nomName "Ólchobar";
+    rel:childOf <#Fiangáeth>.
+
+<#Fiangáeth>
+    a foaf:Person;
+    irishRel:genName "Fiangáeth";
+    rel:childOf <#Bratheman>.
+
+<#Bratheman>
+    a foaf:Person;
+    irishRel:genName "Bratheman";
+    rel:childOf <#Étálaich>.
+
+<#Étálaich>
+    a foaf:Person;
+    irishRel:genName "Étálaich";
+    irishRel:nomName "Étálach";
+    rel:childOf <#MáeliDoburchon>.
+
+<#MáeliDoburchon>
+    a foaf:Person;
+    irishRel:genName "Máeli Doburchon";
+    irishRel:nomName "Máel Doburchon";
+    rel:childOf <#MeicLaisre>.
+
+<#MeicLaisre>
+    a foaf:Person;
+    irishRel:genName "Meic Laisre";
+    irishRel:nomName "Mac Laisre";
+    owl:sameAs <http://example.com/Rawl_B502/úi_congusa.trig#MeiccLaisre>;
+    rel:childOf <#Daurthecht>.
+
+<#Daurthecht>
+    a foaf:Person;
+    irishRel:genName "Daurthecht";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.trig#Daurthacht>;
+    rel:childOf <#Senaich>.
+
+<#Senaich>
+    a foaf:Person;
+    irishRel:genName "Senaich" ;
+    irishRel:nomName "Senach" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.trig#Senaich>.
+}

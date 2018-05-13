@@ -1,0 +1,116 @@
+@base <http://example.com/Rawl_B502/genelach_clainne_sínaich.ttl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainne Sínaich"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text014.html> .
+
+
+<#Amalgaid>
+    a foaf:Person;
+    irishRel:nomName "Amalgaid";
+    rel:childOf <#MáelMaire>.
+
+<#MáelMaire>
+    a foaf:Person;
+    irishRel:genName "Máel Maire";
+    rel:childOf <#Eochada>.
+
+<#Eochada>
+    a foaf:Person;
+    irishRel:genName "Eochada";
+    irishRel:nomName "Eochad";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Flannacáin>.
+
+<#Flannacáin>
+    a foaf:Person;
+    irishRel:genName "Flannacáin";
+    rel:childOf <#Cóemáin>.
+
+<#Cóemáin>
+    a foaf:Person;
+    irishRel:genName "Cóemáin";
+    irishRel:nomName "Cóemán";
+    rel:childOf <#Airechtaich>.
+
+<#Airechtaich>
+    a foaf:Person;
+    irishRel:genName "Airechtaich";
+    irishRel:nomName "Airechtach";
+    rel:childOf <#DuibDáLethi>.
+
+<#DuibDáLethi>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Lethi";
+    irishRel:nomName "Dub Dá Lethi";
+    rel:childOf <#Sínaich>.
+
+<#Sínaich>
+    a foaf:Person;
+    irishRel:genName "Sínaich";
+    irishRel:nomName "Sínach";
+    rel:childOf <#Feradaich>.
+
+<#Feradaich>
+    a foaf:Person;
+    irishRel:genName "Feradaich";
+    irishRel:nomName "Feradach";
+    rel:childOf <#Amalgada>.
+
+<#Amalgada>
+    a foaf:Person;
+    irishRel:genName "Amalgada";
+    irishRel:nomName "Amalgad";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Echdach>.
+
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Feidelmid>.
+
+<#Feidelmid>
+    a foaf:Person;
+    irishRel:genName "Feidelmid";
+    rel:childOf <#FiachrachCassáin>.
+
+<#FiachrachCassáin>
+    a foaf:Person;
+    irishRel:genName "Fiachrach Cassáin";
+    irishRel:nomName "Fiachraid Cassán";
+    rel:childOf <#CollaFochríth>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_na_n-airther.trig#FiachraCassan> .
+    
+
+<#CollaFochríth>
+    a foaf:Person;
+    irishRel:genName "Colla Fochríth" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_na_n-airther.trig#CollaFochrich> .
+    
+}

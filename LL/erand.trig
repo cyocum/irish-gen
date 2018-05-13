@@ -1,4 +1,4 @@
-@base <http://example.com/LL/erand.ttl>.
+@base <http://example.com/LL/erand.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Erand"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text011.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text011.html> .
 
 <#Duline>
@@ -80,7 +85,7 @@
     irishRel:genName "Imchada";
     irishRel:nomName "Imchad";
     rel:childOf <#FirChorb>.
-#sameas http://example.com/LLdal_corpri_arad.ttl#Imchad ? - CY
+#sameas http://example.com/LLdal_corpri_arad.trig#Imchad ? - CY
 # I fear not. There are no other connections to suggest it
 # and I know of no special relationship between the Eraind
 # and the Laigin that would lead us to expect it. EPT
@@ -224,7 +229,7 @@
     a foaf:Person;
     irishRel:genName "Oengusa Turbig";
     irishRel:nomName "Oengus Tuirbech";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#OengusaTurbig>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#OengusaTurbig>.
 
 <#FerMara>
     a foaf:Person;
@@ -349,5 +354,6 @@
     a foaf:Person;
     irishRel:genName "Rigbaird";
     irishRel:nomName "Rígbard";
-    rdfs:comment "dia tát Martini i. iarna n-dilgiund do Leith Chuind .i. ar ba lethrand do Dal Chete & do Dál Bardeni ár is deich catha ro memaid ré n-Ernaib for Ultaib et a h-ocht for Ultaib re n-Ernaib.".
-    
+    rdfs:comment "dia tát Martini i. iarna n-dilgiund do Leith Chuind .i. ar ba lethrand do Dal Chete & do Dál Bardeni ár is deich catha ro memaid ré n-Ernaib for Ultaib et a h-ocht for Ultaib re n-Ernaib.".   
+}
+

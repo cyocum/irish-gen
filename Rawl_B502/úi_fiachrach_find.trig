@@ -1,0 +1,125 @@
+@base <http://example.com/Rawl_B502/úi_fiachrach_find.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Fiachrach Find"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#Flannacán>
+    a foaf:Person;
+    irishRel:nomName "Flannacán";
+    rel:childOf <#Néill>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomName "Niall";
+    rel:childOf <#Ferchair>.
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Maclaích>.
+
+<#Maclaích>
+    a foaf:Person;
+    irishRel:genName "Maclaích";
+    rel:childOf <#Condálaich>.
+
+<#Condálaich>
+    a foaf:Person;
+    irishRel:genName "Condálaich";
+    irishRel:nomName "Condálach";
+    rel:childOf <#Amalgada>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Condalaig>.
+
+<#Amalgada>
+    a foaf:Person;
+    irishRel:genName "Amalgada";
+    irishRel:nomName "Amalgad";
+    rel:childOf <#Deinmedaig>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Amalgaid>.
+
+<#Deinmedaig>
+    a foaf:Person;
+    irishRel:genName "Deinmedaig";
+    irishRel:nomName "Deinmedach";
+    rel:childOf <#Dímmae>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Déinmetaig>.
+
+<#Dímmae>
+    a foaf:Person;
+    irishRel:genName "Dímmae";
+    irishRel:nomName "Dímma";
+    rel:childOf <#Laidgneáin>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Dimmai>.
+
+<#Laidgneáin>
+    a foaf:Person;
+    irishRel:genName "Laidgneáin";
+    irishRel:nomName "Laidgneán";
+    rel:childOf <#Máelhuidir>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Laidcnen>.
+
+<#Máelhuidir>
+    a foaf:Person;
+    irishRel:genName "Máelhuidir";
+    rel:childOf <#Áeda>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Maeludir>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#Fínáin>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Aeda>.
+
+<#Fínáin>
+    a foaf:Person;
+    irishRel:genName "Fínáin";
+    irishRel:nomName "Fínán";
+    rel:childOf <#Amalgada-44c956b0>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Fhinain>.
+
+<#Amalgada-44c956b0>
+    a foaf:Person;
+    irishRel:genName "Amalgada";
+    irishRel:nomName "Amalgad";
+    rel:childOf <#FiachrachFind>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Amalgaid-39c57d70>.
+
+<#FiachrachFind>
+    a foaf:Person;
+    irishRel:genName "Fiachrach Find";
+    irishRel:nomName "Fiachaid Find";
+    rel:childOf <#Bresail>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#FiachrachFind>.
+
+<#Bresail>
+    a foaf:Person;
+    irishRel:genName "Bresail";
+    irishRel:nomName "Bresal";
+    rel:childOf <#MaineM>;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Bresail>.
+
+<#MaineM>
+    a foaf:Person;
+    irishRel:genName "Maine M" ;
+    rdfs:comment "[gap: cut off by binder/extent: 3 letters]" ;
+    owl:sameAs <http://example.com/LL/h_fiachrach117.trig#ManeMóir>.
+}

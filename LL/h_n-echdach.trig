@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/h_n-echdach.ttl>.
+﻿@base <http://example.com/LL/h_n-echdach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "H. n-Echdach"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text104.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text104.html> .
 
 <#Murchad>
@@ -108,19 +112,20 @@
     irishRel:genName "Fheidlimthi";
     irishRel:nomName "Feidlimid";
     rel:childOf <#FhiachrachCassan>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#Fheidlimid>.
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Fheidlimid>.
 
 <#FhiachrachCassan>
     a foaf:Person;
     irishRel:genName "Fhiachrach Cassan";
     irishRel:nomName "Fiachra Cassan";
     rel:childOf <#CollaFocri>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#FiachrachCassan>;
-    owl:sameAs <http://example.com/LL/h_airgialla.ttl#FiachraCassan>.
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#FiachrachCassan>;
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#FiachraCassan>.
 
 <#CollaFocri>
     a foaf:Person;
     irishRel:genName "Colla Focri";
     irishRel:genName "Colla Fo Cri";
-    owl:sameAs <http://example.com/LL/h_niallain.ttl#CollaFocrí>;
-    owl:sameAs <http://example.com/LL/h_airgialla.ttl#CollaFochrich>.
+    owl:sameAs <http://example.com/LL/h_niallain.trig#CollaFocrí>;
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#CollaFochrich>.
+}

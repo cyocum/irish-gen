@@ -1,4 +1,4 @@
-@base <http://example.com/LL/corcomruad.ttl>.
+@base <http://example.com/LL/corcomruad.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Corcomruad"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text078.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text078.html> .
 
 <#Conchobor>
@@ -181,3 +186,5 @@
     a foaf:Person;
     foaf:name "Rosa";
     foaf:name "Ross".
+}
+

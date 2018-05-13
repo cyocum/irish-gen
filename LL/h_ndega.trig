@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_ndega.ttl>.
+@base <http://example.com/LL/h_ndega.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Ri H. nDega"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text082.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text082.html> .
 
 <#DondSlebi>
@@ -115,70 +120,71 @@
     a foaf:Person;
     irishRel:genName "Enna Chenselaig";
     irishRel:nomName "Enna Cennselach";
-    owl:sameAs <http://example.com/LL/h_ceinselaig.ttl#EnnaeCendselaig>.
+    owl:sameAs <http://example.com/LL/h_ceinselaig.trig#EnnaeCendselaig>.
 
 <#Murcad>
     a foaf:Person;
     irishRel:nomName "Murcad";
     rel:childOf <#Etarsceoil>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Murchad-3b03356b>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Murchad-3b03356b>.
 
 <#Etarsceoil>
     a foaf:Person;
     irishRel:nomName "Etarsceoil";
     rel:childOf <#AedaMind>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Etarsceli>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Etarsceli>.
 
 <#AedaMind>
     a foaf:Person;
     irishRel:nomName "Aeda Mind";
     rel:childOf <#Colgan>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Aeda-f2eb79e9>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Aeda-f2eb79e9>.
 
 <#Colgan>
     a foaf:Person;
     irishRel:nomName "Colgan";
     rel:childOf <#Bresail>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Colgan-192bb982>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Colgan-192bb982>.
 
 <#Bresail>
     a foaf:Person;
     irishRel:nomName "Bresail";
     rel:childOf <#Fiachach>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Bresail-fd7bbf38>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Bresail-fd7bbf38>.
 
 <#Fiachach>
     a foaf:Person;
     irishRel:nomName "Fiachach";
     rel:childOf <#Crundmail>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhiachrach-b33bdafb>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fhiachrach-b33bdafb>.
 
 <#Crundmail>
     a foaf:Person;
     irishRel:nomName "Crundmail";
     rel:childOf <#Cormaic>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Crunmael-128537f3>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crunmael-128537f3>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:nomName "Cormaic";
     rel:childOf <#NathÍ>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cormaic-08a7f681>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cormaic-08a7f681>.
 
 <#NathÍ>
     a foaf:Person;
     irishRel:nomName "Nath Í";
     rel:childOf <#Crimthaind>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#DathÍ-9eb4b78e>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#DathÍ-9eb4b78e>.
 
 <#Crimthaind>
     a foaf:Person;
     irishRel:nomName "Crimthaind";
     rel:childOf <#EnnaeChenselaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Crimthainn-eb2bc61c>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crimthainn-eb2bc61c>.
 
 <#EnnaeChenselaig>
     a foaf:Person;
     irishRel:nomName "Ennae Chenselaig";
     owl:sameAs <#EnnaChenselaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Ennai-7e7d96ea>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ennai-7e7d96ea>.
+}

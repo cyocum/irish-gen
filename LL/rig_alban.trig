@@ -1,4 +1,4 @@
-@base <http://example.com/LL/rig_alban.ttl>.
+@base <http://example.com/LL/rig_alban.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,31 +9,35 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Rig Alban"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text068.html>;
-    dcterms:format "text/turtle".
+    dcterms:format "application/trig".
 
 <#Dauid>
     a foaf:Person;
     irishRel:nomName "Dauid";
     rel:childOf <#MaelCholuim>;
-    rdfs:seeAlso <#https://www.wikidata.org/entity/Q216787>.
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q216787>.
 
 <#MaelCholuim>
     a foaf:Person;
     irishRel:genName "Mael Choluim";
     irishRel:nomName "Mael Coluim";
     rel:childOf <#Donnchada>;
-    rdfs:seeAlso <#https://www.wikidata.org/entity/Q68508>.
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q68508>.
 
 <#Donnchada>
     a foaf:Person;
     irishRel:genName "Donnchada";
     irishRel:nomName "Donnchad";
     rel:childOf <#Cinaeda>;
-    rdfs:seeAlso <#https://www.wikidata.org/entity/Q26326>.
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q26326>.
 
 _:missing-02dcec05
     a foaf:Person;
@@ -451,8 +455,9 @@ _:missing-02dcec05
     irishRel:genName "Briuin";
     irishRel:nomName "Brion";
     rel:childOf <#EchachMugnedoin>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#Briain>.
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#Briain>.
 
 <#EchachMugnedoin>
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EchachMugmedóin>;
-    owl:sameAs <http://example.com/LL/rig_connacht.ttl#EchachMugmedoin>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EchachMugmedóin>;
+    owl:sameAs <http://example.com/LL/rig_connacht.trig#EchachMugmedoin>.
+}

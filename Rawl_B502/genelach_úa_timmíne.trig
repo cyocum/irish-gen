@@ -1,0 +1,166 @@
+@base <http://example.com/Rawl_B502/genelach_úa_timmíne.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Úa Timmíne"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text004.html> .
+
+<#EchuTimmíne>
+    a foaf:Person;
+    irishRel:nomName "Echu Timmíne";
+    rel:siblingOf <#BresalEnechglas>;
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.trig#EochuTimmíne>;
+    rdfs:comment "Inna chotlud dano báe Eochu intan do-breth ferand dia bráthair & sé fóendalta. Co n-ebert Bresal, ‘Is tim sin, a Eochaid’. Conid de sin ro lil Timmíne.";
+    irishRel:ancestorOfGroup <#ÚaTimmín>.
+
+<#BresalEnechglas>
+    a foaf:Person;
+    irishRel:nomName "Bresal Enechglas";
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.trig#BresalEnechglas>;
+    rdfs:comment "siniu Bresal oldás Eochu".
+
+_:missing-968e2ee0
+    a foaf:Person;
+    irishRel:givesLandTo <#EchuTimmíne>.
+
+<#NathÍ>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    irishRel:numChild 7;
+    rel:childOf <#EchuTimmíne>.
+
+<#MacMáel>
+    a foaf:Person;
+    irishRel:nomName "Mac Máel";
+    rel:childOf <#NathÍ>;
+    irishRel:ancestorOfGroup <#ÚiMáelglais>, <#ÚiAndamaig>.
+
+<#ÚiMáelglais>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Máelglais".
+
+<#ÚiAndamaig>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Andamaig".
+
+<#Feidelmith>
+    a foaf:Person;
+    irishRel:nomName "Feidelmith";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Feidlimid-ff6df05b>;
+    irishRel:ancestorOfGroup <#ÚiBáetáin>, <#ÚiCrunmáel>.
+
+<#ÚiBáetáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Báetáin".
+
+<#ÚiCrunmáel>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Crunmáel".
+
+<#Conall>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Conall-bf8c4538>;
+    irishRel:ancestorOfGroup <#ÚiChommáin>.
+
+<#ÚiChommáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chommáin".
+
+<#Crimthan>
+    a foaf:Person;
+    irishRel:nomName "Crimthan";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crimthand-06627ab8>;
+    irishRel:ancestorOfGroup <#ÚiBuide>.
+
+<#ÚiBuide>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Buide".
+
+<#Éogan>
+    a foaf:Person;
+    irishRel:nomName "Éogan";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Eogan-666737d0>;
+    irishRel:ancestorOfGroup <#ÚiBáetáin>.
+
+<#ÚiBáetáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Báetáin".
+
+<#Cormac>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cormac-d9c1590d>;
+    irishRel:ancestorOfGroup <#ÚiChuimmi>.
+
+<#ÚiChuimmi>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chuimmi".
+
+<#BresalTuathach>
+    a foaf:Person;
+    irishRel:nomName "Bresal Tuathach";
+    rel:childOf <#NathÍ>;
+    irishRel:ancestorOfGroup <#ÚiChruimthirÁeda>.
+
+<#ÚiChruimthirÁeda>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chruimthir Áeda".
+
+<#ÚaTimmín>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Uí Timmín";
+    irishRel:ancestorGroupOf <#ÚiInscrind>, <#ÚiLuinge>, <#ÚiÉnáin>, <#ÚiThelind>, <#ÚiAltáin>, <#ÚiSenáin>, <#ÚiCobáin>, <#ÚiChluastáin>.
+
+<#ÚiInscrind>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Inscrind".
+
+<#ÚiLuinge>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Luinge".
+
+<#ÚiÉnáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Énáin".
+
+<#ÚiThelind>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Thelind".
+
+<#ÚiAltáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Altáin".
+
+<#ÚiSenáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Senáin".
+
+<#ÚiCobáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Cobáin".
+
+<#ÚiChluastáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chluastáin".
+}

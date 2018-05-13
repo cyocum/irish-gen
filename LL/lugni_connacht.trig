@@ -1,4 +1,4 @@
-@base <http://example.com/LL/lugni_connacht.ttl>.
+@base <http://example.com/LL/lugni_connacht.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Lugni Connacht"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text119.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text119.html> .
 
 <#Diarmait>
@@ -108,7 +112,7 @@
     a foaf:Person;
     irishRel:nomName "Niad Corp";
     rel:childOf <#Loi>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#AirtChoirp>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#AirtChoirp>.
 
 <#Loi>
     a foaf:Person;
@@ -122,19 +126,20 @@
     irishRel:genName "Cormaic Galeng";
     irishRel:nomName "Cormac Gaileng";
     rel:childOf <#Thaidc>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#CormacGaleng>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#CormacGaleng>.
 
 <#Thaidc>
     a foaf:Person;
     irishRel:genName "Thaidc";
     irishRel:nomName "Tadc";
-    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Tadc>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Tadc>;
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Tadc>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Tadc>;
     rel:childOf <#Cein>.
 
 <#Cein>
     a foaf:Person;
     irishRel:genName "Cein";
     irishRel:nomName "Cian";
-    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.ttl#Cian>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Cian-77585fd0>.
+    owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Cian>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cian-77585fd0>.
+}

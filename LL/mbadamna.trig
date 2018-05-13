@@ -1,4 +1,4 @@
-@base <http://example.com/LL/mbadamna.ttl>.
+@base <http://example.com/LL/mbadamna.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach .H. Mbadamna"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text017.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text017.html> .
 
 <#Dondgus>
@@ -379,7 +383,7 @@
     rel:childOf <#Trena-e475f960>.
 
 <#Conchinni>
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Conchinni>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Conchinni>;
     rel:childOf <#Cathboth>;
     irishRel:numChild 3;
     foaf:gender "female";
@@ -387,20 +391,20 @@
     rdfs:comment "Issed Cenel Conchinne a fhéic h-o Duni cosin drochet ic Loch Anmchada".
 
 <#Cathboth>
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Cathboth>.
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Cathboth>.
 
 <#Mach-Irc>
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Mach-Irc>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Mach-Irc>;
     owl:sameAs <#MacH-Irc>;
     rel:childOf <#Conchinni>;
     irishRel:numChild 3.
 
 <#ConallClóen>
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#ConallCloen>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#ConallCloen>;
     rel:childOf <#Conchinni>.
 
 <#Oengus-030520e7>
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Oengus>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Oengus>;
     rel:childOf <#Conchinni>;
     owl:sameAs <#Oengus-5bdb01d0>.
 
@@ -445,7 +449,7 @@
     rel:childOf <#Treno>.
 
 <#Treno>
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Treno>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Treno>;
     owl:sameAs <#Trena>.
 
 <#Factna>
@@ -546,12 +550,12 @@
     irishRel:genName "Meic Con";
     irishRel:nomName "Mac Con";
     rel:childOf <#Lugdech>;
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#MeicCon>.
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#MeicCon>.
 
 <#Lugdech>
     a foaf:Person;
     irishRel:nomName "Lugdech";
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#LugdechLaigde>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#LugdechLaigde>;
     irishRel:numChild 2.
 
 <#OengusBolg>
@@ -598,3 +602,4 @@
     a foaf:Person;
     irishRel:nomName "Ussine";
     rel:childOf <#Eltini>.
+}

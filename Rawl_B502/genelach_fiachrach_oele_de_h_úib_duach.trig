@@ -1,0 +1,137 @@
+@base <http://example.com/Rawl_B502/genelach_fiachrach_oele_de_h_úib_duach.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Fiachrach Oele De H-Úib Duach"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html> .
+
+<#Laidgneán>
+    a foaf:Person;
+    irishRel:nomName "Laidgneán";
+    rel:childOf <#Suibne>.
+
+<#Suibne>
+    a foaf:Person;
+    irishRel:genName "Suibne";
+    rel:childOf <#Doinennaich>.
+
+<#Doinennaich>
+    a foaf:Person;
+    irishRel:genName "Doinennaich";
+    irishRel:nomName "Doinennach";
+    rel:childOf <#Suibne-bce6f72b>.
+
+<#Suibne-bce6f72b>
+    a foaf:Person;
+    irishRel:genName "Suibne";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#ÓengusaConath>.
+
+<#ÓengusaConath>
+    a foaf:Person;
+    irishRel:genName "Óengusa Conath";
+    irishRel:nomName "Óengus Conath";
+    rel:childOf <#Concrath>.
+
+<#Concrath>
+    a foaf:Person;
+    irishRel:genName "Concrath".
+
+<#Mugain>
+    a foaf:Person ;
+    irishRel:genName "Mugain" ;
+    irishRel:nomName "Mugan" ;
+    foaf:gender "female" ;
+    rel:spouseOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Cerbaill>.
+
+<#Cerbaill>
+    a foaf:Person;
+    irishRel:genName "Cerbaill" ;
+    irishRel:nomName "Cerball" ;
+    rdfs:comment "dia tá Carn Mugaine i n-Argatrus" ;
+    rel:childOf <#DuachCliach>.
+
+<#DuachCliach>
+    a foaf:Person;
+    irishRel:genName "Duach Cliach";
+    irishRel:nomName "Dui Cliach";
+    rel:childOf <#MaineMunchaín>.
+
+<#MaineMunchaín>
+    a foaf:Person;
+    irishRel:genName "Maine Munchaín";
+    rel:childOf <#Cairpri>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_cairpri_luachra.trig#Maine>.
+
+<#Cairpri>
+    a foaf:Person;
+    irishRel:genName "Cairpri";
+    rel:childOf <#Cuircc>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_cairpri_luachra.trig#Cairpri>.
+
+<#Cuircc>
+    a foaf:Person;
+    irishRel:genName "Cuircc";
+    rel:childOf <#Luigdech>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_cairpri_luachra.trig#Cuircc>.
+
+<#Luigdech>
+    a foaf:Person;
+    irishRel:genName "Luigdech" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_cairpri_luachra.trig#Luigdech>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:nomName "Óengusa";
+    irishRel:numChild 2 ;
+    rel:childOf <#FiachrachBruigde>.
+
+<#FiachrachBruigde>
+    a foaf:Person;
+    irishRel:genName "Fiachrach Bruigde";
+    rel:childOf <#FiachrachOele>.
+
+<#FiachrachOele>
+    a foaf:Person;
+    irishRel:genName "Fiachrach Oele".
+
+<#Dau>
+    a foaf:Person ;
+    irishRel:nomName "Dau" ;
+    rel:childOf <#Óengusa>;
+    rdfs:comment "Díbech Srúbech i Clíu"@sga .
+
+<#Da>
+    a foaf:Person ;
+    irishRel:nomName "Da" ;
+    rel:childOf <#Óengusa>;
+    rdfs:comment "Derbéolach i n-Argatrus"@sga .
+
+
+}

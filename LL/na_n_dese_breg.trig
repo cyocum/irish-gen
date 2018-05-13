@@ -1,4 +1,4 @@
-@base <http://example.com/LL/na_n_dese_breg.ttl>.
+@base <http://example.com/LL/na_n_dese_breg.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Na N-Dese Breg"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text055.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text055.html> .
 
 <#Fingin>
@@ -171,13 +175,13 @@
     irishRel:genName "Fhiachach Suidge";
     irishRel:nomName "Fiachu Suidge";
     rel:childOf <#FeidlimtheRechtada>;
-    owl:sameAs <http://example.com/LL/na_n_desi_muman.ttl#FhiachachSuide>.
+    owl:sameAs <http://example.com/LL/na_n_desi_muman.trig#FhiachachSuide>.
 
 <#FeidlimtheRechtada>
     a foaf:Person;
     irishRel:genName "Feidlimthe Rechtada";
     irishRel:nomName "Feidlimid Rechtaid";
-    owl:sameAs <http://example.com/LL/lagin.ttl#FeidlimidRechtada>.
+    owl:sameAs <http://example.com/LL/lagin.trig#FeidlimidRechtada>.
 
 <#Dochartach>
     a foaf:Person;
@@ -321,3 +325,4 @@
     # attested as his son anywhere else. "Fiachu Suide" is,
     # however, and he is the apical figure of the Deisi.
     # Perhaps a scribal error? EPT
+}

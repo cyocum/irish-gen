@@ -1,4 +1,4 @@
-@base <http://example.com/LL/ríg_ulad.ttl>.
+@base <http://example.com/LL/ríg_ulad.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Ríg Ulad"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text036.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text036.html> .
 
 <#CúUlad>
@@ -87,35 +91,35 @@
     irishRel:genName "Aeda Roin";
     irishRel:nomName "Aed Ron";
     rel:childOf <#BecceBairche>;
-    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.ttl#AedRóin>.
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#AedRóin>.
 
 <#BecceBairche>
     a foaf:Person;
     irishRel:genName "Becce Bairche";
     irishRel:nomName "Becc Bairche";
     rel:childOf <#Blaimeic>;
-    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.ttl#BeccBairche>.
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#BeccBairche>.
 
 <#Blaimeic>
     a foaf:Person;
     irishRel:genName "Blaimeic";
     irishRel:nomName "Blathmac";
     rel:childOf <#MeliCoba>;
-    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.ttl#Blaimac>.
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#Blaimac>.
 
 <#MeliCoba>
     a foaf:Person;
     irishRel:genName "Meli Coba";
     irishRel:nomName "Mael Coba";
     rel:childOf <#FiachnaiDuib>;
-    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.ttl#MaelChoba>.
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#MaelChoba>.
 
 <#FiachnaiDuib>
     a foaf:Person;
     irishRel:genName "Fiachnai Duib";
     irishRel:nomName "Fiachna Dub";
     rel:childOf <#DuibThuinni>;
-    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.ttl#Fiachnai>.
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#Fiachnai>.
 
 <#DuibThuinni>
     a foaf:Person;
@@ -135,10 +139,11 @@
     irishRel:nomName "Cairell";
     rel:childOf <#MuridaigMundeirg>;
     rdfs:comment "qui credidit Patricio";
-    owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#Cairell>.
+    owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.trig#Cairell>.
 
 <#MuridaigMundeirg>
     a foaf:Person;
     irishRel:genName "Muridaig Mundeirg";
     irishRel:nomName "Muredach Munderg";
-    owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#MuridachMunderg>.
+    owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.trig#MuridachMunderg>.
+}

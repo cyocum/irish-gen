@@ -1,4 +1,4 @@
-@base <http://example.com/LL/lethi_cathail.ttl>.
+@base <http://example.com/LL/lethi_cathail.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Lethi Cathail"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text066.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text066.html> .
 
 <#CuUlad>
@@ -100,24 +104,25 @@
     irishRel:genName "Mael Choba";
     irishRel:nomName "Mael Coba";
     rel:childOf <#Fhiachnai>;
-    owl:sameAs <http://example.com/LL/rig_ulad.ttl#MaeleCoba>.
+    owl:sameAs <http://example.com/LL/rig_ulad.trig#MaeleCoba>.
 
 <#Fhiachnai>
     a foaf:Person;
     irishRel:genName "Fhiachnai";
     irishRel:nomName "Fiachna";
     rel:childOf <#Demmain>;
-    owl:sameAs <http://example.com/LL/rig_ulad.ttl#Fhiachnai-484a27e0>.
+    owl:sameAs <http://example.com/LL/rig_ulad.trig#Fhiachnai-484a27e0>.
 
 <#Demmain>
     a foaf:Person;
     irishRel:genName "Demmain";
     irishRel:nomName "Demman";
     rel:childOf <#Cairill>;
-    owl:sameAs <http://example.com/LL/rig_ulad.ttl#Demain>.
+    owl:sameAs <http://example.com/LL/rig_ulad.trig#Demain>.
 
 <#Cairill>
     a foaf:Person;
     irishRel:genName "Cairill";
     irishRel:nomName "Cairell";
-    owl:sameAs <http://example.com/LL/rig_ulad.ttl#Cairill>.
+    owl:sameAs <http://example.com/LL/rig_ulad.trig#Cairill>.
+}

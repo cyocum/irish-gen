@@ -1,4 +1,4 @@
-@base <http://example.com/LL/síl_daimini.ttl>.
+@base <http://example.com/LL/síl_daimini.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Do Síl Daimini"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text048.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text048.html> .
 
 <#Bec>
@@ -91,8 +95,8 @@
     a foaf:Person;
     irishRel:genName "Carpri Daim Argait";
     irishRel:nomName "Cairpre Daim Argait";
-    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriDaimArgait>;
-    owl:sameAs <http://example.com/LL/fer_manach.ttl#CorpriDaimArgait>.
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CairpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/fer_manach.trig#CorpriDaimArgait>.
 
 <#Flandgus>
     a foaf:Person;
@@ -131,24 +135,24 @@
     a foaf:Person;
     irishRel:genName "Cronain";
     irishRel:nomName "Crónán";
-    owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Cronain>;
+    owl:sameAs <http://example.com/LL/fer_fernmaige.trig#Cronain>;
     rel:childOf <#Fhergusa>.
 
 <#Fhergusa>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
-    owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Fhergusa>;
+    owl:sameAs <http://example.com/LL/fer_fernmaige.trig#Fhergusa>;
     rel:childOf <#NadSluaig>.
 
 <#NadSluaig>
     a foaf:Person;
     irishRel:nomName "Nad Sluaig";
-    owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#NadShluaig>;
+    owl:sameAs <http://example.com/LL/fer_fernmaige.trig#NadShluaig>;
     rel:childOf <#Carpri>.
 
 <#Carpri>
-    owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Carpri>;
+    owl:sameAs <http://example.com/LL/fer_fernmaige.trig#Carpri>;
     irishRel:genName "Carpri";
     irishRel:nomName "Coirpre".
 
@@ -374,7 +378,7 @@
     irishRel:nomName "Mael Morda";
     rel:childOf <#Murchada-c26fed05>.
 
-<#hDaimini>
+<hDaimini>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Daimini" .
     
@@ -385,7 +389,7 @@
     irishRel:nomName "Muiredach";
     irishRel:nomName "Muridaig";
     rel:childOf <#Murchada-c26fed05>;
-    irishRel:ancestorOfGroup <#hDaimini>.
+    irishRel:ancestorOfGroup <hDaimini>.
 
 <#Daimini>
     a foaf:Person;
@@ -419,7 +423,7 @@
 <#Briain>
     a foaf:Person;
     irishRel:nomName "Briain";
-    owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Brian>.
+    owl:sameAs <http://example.com/LL/tairdelbaig.trig#Brian>.
 
 <#AmlaibCuarain>
     a foaf:Person;
@@ -598,3 +602,4 @@ _:missing-b0cdaf50
     irishRel:genName "Fhind";
     irishRel:nomName "Find";
     owl:sameAs <#Fhind>. 
+}

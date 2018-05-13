@@ -1,4 +1,4 @@
-@base <http://example.com/LL/laigsi.ttl>.
+@base <http://example.com/LL/laigsi.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +7,18 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitles: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Laigsi"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text003.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text003.html> .
 
 <#LaegsechCendmor>
@@ -24,8 +28,8 @@
     rdfs:comment "Is uad atat Laigsi".
 
 <#ConaillCernaig>
-    owl:sameAs <http://example.com/LL/dimittamus_in_terim.ttl#ConaillCernaig>;
-    owl:sameAs <http://example.com/LL/dail_araide.ttl#ConaillCernaig>;
+    owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#ConaillCernaig>;
+    owl:sameAs <http://example.com/LL/dail_araide.trig#ConaillCernaig>;
     irishRel:genName "Conaill Cernaig";
     irishRel:nomName "Conall Cernach".
 
@@ -215,7 +219,7 @@
     irishRel:nomName "Cathal";
     rel:childOf <#Berach>;
     rdfs:comment "a quo reges .c. alibi in hoc libro scripsimus";
-    owl:sameAs <http://example.com/LL/rig_laigsi_genelach_fl.ttl#Caithail>.
+    owl:sameAs <http://example.com/LL/rig_laigsi_genelach_fl.trig#Caithail>.
 
 <#Comgall>
     a foaf:Person;
@@ -421,12 +425,12 @@
     irishRel:nomName "Lagnech";
     rel:childOf <#Lugnai-3e81a1e4>.
 
-<#hBáith>
+<hBáith>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Báith" ;
     rdfs:comment "issed a orbba Loch Laignich & Cluain Connaid" .
 
-<#hBrocain>
+<hBrocain>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Brocain" ;
     rdfs:comment "issed a orbba Loch Laignich & Cluain Connaid" .
@@ -437,9 +441,9 @@
     irishRel:nomName "Erc";
     rel:childOf <#Lugnai-3e81a1e4>;
     rdfs:comment "a quo .h. Diamrain & Dodecce & h. Forandla & h. Chormaic. Is é a ferand. Tech n-Declaín & Domnach Findchon & Caelbothar & Cluain Da Fiach & Cluain Dartada. Et in ferand forsat .h. Fhoranla" ;
-    irishRel:ancestorOfGroup <#hDiamrain>, <#Dodecce>, <#hForandla>, <#hChormaic>.
+    irishRel:ancestorOfGroup <hDiamrain>, <#Dodecce>, <hForandla>, <hChormaic>.
 
-<#hDiamrain>
+<hDiamrain>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Diamrain" .
 
@@ -447,11 +451,11 @@
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dodecce" .
 
-<#hForandla>
+<hForandla>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Forandla" .
 
-<#hChormaic>
+<hChormaic>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Chormaic" .
 
@@ -706,24 +710,24 @@ _:missing-231433a2
     a foaf:Person;
     irishRel:nomName "Eogan";
     rel:childOf <#Bairr-4d968e16>;
-    irishRel:descendantOfGroup <#nhBresail>;
+    irishRel:descendantOfGroup <nhBresail>;
     rdfs:comment "i Feib. .i. i n.h. Bresail".
 
 <#Lugaid>
     a foaf:Person;
     irishRel:nomName "Lugaid";
     rel:childOf <#Bairr-4d968e16>;
-    irishRel:descendantOfGroup <#nhBresail>;
+    irishRel:descendantOfGroup <nhBresail>;
     rdfs:comment "i Feib. .i. i n.h. Bresail".
 
 <#Diarmait>
     a foaf:Person;
     irishRel:nomName "Diarmait";
     rel:childOf <#Bairr-4d968e16>;
-    irishRel:descendantOfGroup <#nhBresail>;
+    irishRel:descendantOfGroup <nhBresail>;
     rdfs:comment "i Feib. .i. i n.h. Bresail".
 
-<#nhBresail>
+<nhBresail>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "n.h. Bresail" .
 
@@ -894,13 +898,13 @@ _:missing-231433a2
 <#NiallNóigiallach>
     a foaf:Person;
     irishRel:nomName "Niall Nóigiallach";
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#NeillNóigiallaig>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillNóigiallaig>;
     rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
 
 <#CathairMár>
     a irishTitles:Rí ;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>;
-    owl:sameAs <http://example.com/LL/lagin.ttl#CathairMár>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CathairMár>;
+    owl:sameAs <http://example.com/LL/lagin.trig#CathairMár>;
     foaf:title "ardríg"@sga, "High King"@en;
     rel:childOf <#Feidlimthe>;
     rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
@@ -911,7 +915,7 @@ _:missing-231433a2
 
 <#Feidlimthe>
     a irishTitles:Rí ;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FeidlimidFerUrglas>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#FeidlimidFerUrglas>;
     foaf:title "ardríg"@sga, "High King"@en;
     irishRel:genName "Feidlimthe";
     irishRel:nomName "Feidlimid".
@@ -920,12 +924,13 @@ _:missing-231433a2
     a irishTitles:Rí;
     foaf:title "ardríg"@sga, "High King"@en;
     irishRel:nomName "Fiachra Araide";
-    owl:sameAs <http://example.com/LL/dail_araide.ttl#FhiachachAraide>;
+    owl:sameAs <http://example.com/LL/dail_araide.trig#FhiachachAraide>;
     rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
 
 <#AilillOlom>
     a irishTitles:Rí;
     foaf:title "ardríg"@sga, "High King"@en;
     irishRel:nomName "Ailill Olom";
-    owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.ttl#AilellaOloimm>;
+    owl:sameAs <http://example.com/LL/senchas_dáil_fiatach.trig#AilellaOloimm>;
     rdfs:comment "Is iatsin tra cethri uaítne airegda cossa m-bertar genelaige ardríg & degdoene & uasalnoeb h-Erenn & sochenelach h-Erenn uile".
+}

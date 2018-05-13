@@ -1,4 +1,4 @@
-@base <http://example.com/LL/n_echach.ttl>.
+@base <http://example.com/LL/n_echach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach .H. N-Echach"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text018.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text018.html> .
 
 <#Cais>
@@ -27,7 +31,7 @@
     a foaf:Person;
     irishRel:genName "Cuirc";
     irishRel:nomName "Corc";
-    owl:sameAs <http://example.com/LL/rig_desmuman.ttl#Cuirc>.
+    owl:sameAs <http://example.com/LL/rig_desmuman.trig#Cuirc>.
 
 <#Eocho>
     a foaf:Person;
@@ -46,9 +50,9 @@
     a foaf:Person;
     irishRel:nomName "Lugaid Cichech";
     rel:childOf <#Eocho>;
-    irishRel:ancestorOfGroup <#hLugdech>.
+    irishRel:ancestorOfGroup <hLugdech>.
 
-<#hLugdech>
+<hLugdech>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Lugdech" .
 
@@ -818,7 +822,7 @@
     rel:childOf <#Aeda-c30e8f52>;
     owl:sameAs <#Lapae>.
 
-<#h-Ulide>
+<h-Ulide>
     a foaf:Person;
     irishRel:nomName "h-Ulide";
     rel:childOf <#Aeda-c30e8f52>.
@@ -1186,7 +1190,7 @@
     irishRel:genName "Moga Ruith";
     irishRel:nomName "Muig Ruith";
     rel:childOf <#Cuinisc>;
-    owl:sameAs <http://example.com/LL/sil_birn.ttl#MogaRuith>.
+    owl:sameAs <http://example.com/LL/sil_birn.trig#MogaRuith>.
 
 <#Cuinisc>
     a foaf:Person;
@@ -1228,30 +1232,30 @@
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
     rel:childOf <#Roig>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Fhergusa>;
-    owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#Fergus>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#MacRosa>.
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#Fhergusa>;
+    owl:sameAs <http://example.com/LL/aisneidem_di_araill.trig#Fergus>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#MacRosa>.
 
 <#Roig>
     a foaf:Person;
     irishRel:genName "Roig";
     irishRel:nomName "Ró Ech";
     rel:childOf <#Rosa>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Roig>.
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#Roig>.
 
 <#Rosa>
     a foaf:Person;
     irishRel:nomName "Rosa";
     rel:childOf <#Rudraige>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Rosa>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Rosa>;
-    owl:sameAs <http://example.com/LL/fergus_mc_do_roig.ttl#Roig>.
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#Rosa>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Rosa>;
+    owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Roig>.
 
 <#Rudraige>
     a foaf:Person;
     irishRel:nomName "Rudraige";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Rudraige>;
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Rudraige>.
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Rudraige>;
+    owl:sameAs <http://example.com/LL/n_echach.trig#Rudraige>.
 
 <#Cormac-91c8dc5f>
     a foaf:Person;
@@ -1302,8 +1306,8 @@
 <#NadFraich>
     a foaf:Person;
     irishRel:nomName "Nad Fraich";
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#NathFraich-17d2ed08>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NathFraich>.
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich-17d2ed08>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#NathFraich>.
     
 <#Echach-830c81d0>
     a foaf:Person;
@@ -1656,7 +1660,7 @@
     a foaf:Person;
     irishRel:genName "Ailella Flaind Bic";
     irishRel:nomName "Ailill Fland Bec";
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#AilellaFlaindBic>.
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AilellaFlaindBic>.
 
 <#Ailella-eb4f70e0>
     a foaf:Person;
@@ -1699,3 +1703,4 @@
     a foaf:Person;
     irishRel:nomName "Mac Arda";
     rel:childOf <#Ailella-eb4f70e0>.
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/LL/comuammand_na_n-genelach.ttl>.
+@base <http://example.com/LL/comuammand_na_n-genelach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,537 +9,541 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+     
+
+<http://example.com/LL> {
 <>
-    a dctype:Dataset;
-    dcterms:title "Comuammand na n-Genelach"@sga;
-    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text004.html>;
-    dcterms:format "text/turtle" ;
-    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text004.html> .
-
-<#Erímon>
-    a foaf:Person;
-    irishRel:nomName "Erímon";
-    rdfs:comment "Ic h-Erímon tra condrecat na teora Connachta. & h. Neill in tuascirt & h. Neill in descirt & Airgialla & na Dési & Laigin & Ossairge. & Éraind. & Orbraigi. & Fotharta. & Dal Riata. & Dal Fiatach. Et rigrad Alban. Et Síl Conaire & Cland Oengusa & Fergusa & Loairn tri mc h-Eirc. Et Síl Conaire i n-Albain & i nh-Erinn .i. Muscraigi & Corco Duibni.";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Erimon>;
-    owl:sameAs <http://example.com/LL/lagin.ttl#h-Erimoin>;
-    irishRel:ancestorOfGroup <#hNeillInTuascirt>, <#hNeillInDescirt>, <#Airgialla>, <#naDési>, <#Laigin>, <#Ossairge>, <#Éraind>, <#Orbraigi>, <#Fotharta>, <#DalRiata>, <#DalFiatach>, <#SílConaire>, <#SílConairein-Albain>, <#SílConaireinh-Erinn>, <#Muscraigi>, <#CorcoDuibni>.
-
-<#hNeillInTuascirt>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Neill in tuascirt" .
-
-<#hNeillInDescirt>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Neill in descirt" .
-
-<#Airgialla>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Airgialla" .
-
-<#naDési>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "na Dési" .
-
-<#Laigin>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Laigin", "Lagin" .
-
-<#Ossairge>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Ossairge" .
-
-<#Éraind>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Éraind" .
-
-<#Orbraigi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Orbraigi" .
-
-<#Fotharta>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Fotharta" .
-
-<#DalRiata>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Dal Riata" .
-
-<#DalFiatach>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Dal Fiatach" .
-
-<#SílConaire>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Síl Conaire" .
-
-<#SílConairein-Albain>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Síl Conaire i n-Albain" ;
-    irishRel:descendantGroupOf <#SílConaire>.
-
-<#SílConaireinh-Erinn>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Síl Conaire i nh-Erinn" ;
-    irishRel:descendantGroupOf <#SílConaire>.
-
-<#Muscraigi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Muscraigi" ;
-    irishRel:descendantGroupOf <#SílConairein-Albain>.
-
-<#CorcoDuibni>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Corco Duibni" ;
-    irishRel:descendantGroupOf <#SílConaireinh-Erinn>.
-
-<#Éber>
-    a foaf:Person;
-    irishRel:nomName "Éber";
-    rdfs:comment "Ic h-Éber condrecat na secht n-Eoganachta & Lemnaig Alban.";
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Ebir>;
-    irishRel:ancestorOfGroup <#LemnaigAlban>.
-
-<#LemnaigAlban>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Lemnaig Alban" .   
-
-<#Ír>
-    a foaf:Person;
-    irishRel:nomName "Ír";
-    rdfs:comment "Ic h-Ír condrecat Síl Fergusa & Conaill & Celtchair.";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Ír>;
-    irishRel:ancestorOfGroup <#SílFergusa>, <#SílConaill>, <#SílCeltchair>.
-
-<#SílFergusa>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Síl Fergusa" .
-
-<#SílConaill>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Conaill" .
-
-<#SílCeltchair>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Celtchair" .
-
-<#OengusTurbech>
-    a foaf:Person;
-    irishRel:nomName "Oengus Turbech";
-    rdfs:comment "Ic Oengus Turbech condrecat Ulaid & Albanaig & Ernai frisna clanna remaind.";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#OengusaTurbig>.
-
-<#Niall>
-    a foaf:Person;
-    irishRel:nomName "Niall";
-    rdfs:comment "Ic Niall condrecat .h. Néill in descirt & in tuascirt. & uii. fini Temrach .i. Conall. Colman. Eogan. Aed Slane. Tethba & Cairpre. & Cenel n-Ennae & Loegaire.";
-    owl:sameAs <http://example.com/LL/fer_tethba.ttl#NeilNoigiallaig>;
-    irishRel:ancestorOfGroup <#hNeillInTuascirt>, <#hNeillInDescirt>, <#Conall>, <#Colman>, <#Eogan>, <#AedSlane>, <#Tethba>, <#Cairpre>, <#Ceneln-Ennae>, <#Loegaire>.
-
-<#Conall>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Conall" .
-
-<#Colman>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Colman" .
-
-<#Eogan>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Eogan" .
-
-<#AedSlane>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Aed Slane" .
-
-<#Tethba>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Tethba" .
-
-<#Cairpre>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cairpre" .
-
-<#Ceneln-Ennae>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cenel n-Ennae" .
-
-<#Loegaire>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Loegaire" .
-
-<#EochaidMugmedón>
-    a foaf:Person;
-    irishRel:nomName "Eochaid Mugmedón";
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#EchachMugmedóin>;
-    rdfs:comment "Ic Eochaid Mugmedón condrecat .h. Neill & Connachta." .
-
-<#CarpriuLiphechair>
-    a foaf:Person;
-    irishRel:genName "Carpriu Liphecahir";
-    irishRel:nomName "Coirpre Liphechair";
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CarpriLiphechair>;
-    rdfs:comment "Ic Carpriu Liphechair condrecat Airgialla & h. Meic Cuais fri Ú Néill & Connachta & Corco Roidi fri Claind Cuind." ;
-    irishRel:ancestorOfGroup <#Airgialla>, <#hMeicCuais>, <#hMeicCuais>, <#CorcoRoidi>.
-
-<#hMeicCuais>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Meic Cuais" .
-
-<#CorcoRoidi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Corco Roidi" .
-
-<#AedFindlíath>
-    a foaf:Person;
-    irishRel:nomName "Aed Findlíath";
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#AedaFindleith>;
-    rdfs:comment "Ic Aed Findlíath condrecat Cland Néill & Cland Domnaill." ;
-    irishRel:ancestorOfGroup <#ClandNéill>, <#ClandDomnaill>.
-
-<#ClandNéill>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cland Néill" .
-
-<#ClandDomnaill>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cland Domnaill" .
-
-<#FeidlimidRechtaid>
-    a foaf:Person;
-    irishRel:nomName "Feidlimid Rechtaid";
-    owl:sameAs <http://example.com/LL/lagin.ttl#FeidlimidRechtada>;
-    rdfs:comment "Ic Feidlimid Rechtaid condrecat Fotharta & na Dési fri Claind Cuin." ;
-    irishRel:ancestorOfGroup <#Fotharta>, <#naDési>.
-
-<#UgaineMár>
-    a foaf:Person;
-    irishRel:nomName "Ugaine Már";
-    rdfs:comment "Ic Ugaine Már condrecat Lagin & Ossairge & Cland Chuind" ;
-    irishRel:ancestorOfGroup <#Laigin>, <#Ossairge>, <#ClandChuind>.
-
-<#ClandChuind>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cland Chuind" .
-
-<#BresulBricc>
-    a foaf:Person;
-    irishRel:genName "Bresul Bricc";
-    irishRel:nomName "Bresal Brecc";
-    owl:sameAs <http://example.com/LL/rig_ossairge.ttl#BresailBric>;
-    owl:sameAs <http://example.com/LL/lagin.ttl#BressalBrecc>;
-    rdfs:comment "Ic Bresul Bricc condrecat Lagin & Ossairge." ;
-    irishRel:ancestorOfGroup <#Laigin>, <#Ossairge>.
-
-<#BresulBelach>
-    a foaf:Person;
-    irishRel:genName "Bresul Belach";
-    irishRel:nomName "Bresal Belach";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad#BresalBelachsa>;
-    rdfs:comment "Ic Bresul Belach condrecat .h. Fhaelain & .h. Dunchada & h. Muridaig fri Uib Censelaig." ;
-    irishRel:ancestorOfGroup <#hFhaelain>, <#hDunchada>, <#hMuridaig>.
-
-<#hFhaelain>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName ".h. Fhaelain" .
-
-<#hDunchada>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName ".h. Dunchada" .
-
-<#hMuridaig>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Muridaig" .
-
-
-<#CathairMór>
-    a foaf:Person;
-    irishRel:nomName "Cathair Mór";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>;
-    rdfs:comment "Ic Cathair Mór condrecat .h. Falgi & h. Enechglais & h. Bairrchi. & h. Crimthainn & Clanda Cathair archena." ;
-    irishRel:ancestorOfGroup <#hFalgi>, <#hEnechglais>, <#hBairrchi>, <#ClandaCathair>.
-    
-<#hFalgi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName ".h. Falgi" .
-
-<#hEnechglais>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Enechglais" .
-
-<#hBairrchi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Bairrchi" .
-
-<#ClandaCathair>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Clanda Cathair" .
-    
-<#Diarmait>
-    a foaf:Person;
-    irishRel:nomName "Diarmait";
-    owl:sameAs <http://example.com/LL/ríg_mide.ttl#Diarmata>;
-    rdfs:comment "Ic Diarmait mc Cerbaill condrecat Cland Cholmain & Sil Aeda Slane." ;
-    irishRel:ancestorOfGroup <#ClandCholmain>, <#SilAedaSlane>.
-
-<#ClandCholmain>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cland Cholmain" .
-
-<#SilAedaSlane>
-    owl:sameAs <#AedSlane>;
-    irishRel:populationGroupName "Sil Aeda Slane" .
-
-<#Cerbaill>
-    a foaf:Person;
-    irishRel:genName "Cerbaill";
-    irishRel:nomName "Cerball";
-    owl:sameAs <http://example.com/LL/ríg_mide.ttl#FhergusaCerrbeoil>.
-
-<#Flathbertach>
-    a foaf:Person;
-    irishRel:nomName "Flathbertach";
-    owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.ttl#Flaithbertach>;
-    rdfs:comment "Ic Flathbertach mc Longsich condrecat Cenel Conaill .i. h. Mael- Doraid. & h. Chanannain." ;
-    irishRel:ancestorOfGroup <#CenelConaill>, <#hMael-Doraid>, <#hChanannain>.
-
-<#CenelConaill>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cenel Conaill" .
-
-<#hMael-Doraid>
-    a irishRel:PopulationGroup ;
-    irishRel:descendantGroupOf <#CenelConaill>;
-    irishRel:populationGroupName "h. Mael-Doraid" .
-
-<#hChanannain>
-    a irishRel:PopulationGroup ;
-    irishRel:descendantGroupOf <#CenelConaill>;
-    irishRel:populationGroupName "h. Chanannain" .
-
-<#Longsich>
-    a foaf:Person;
-    irishRel:genName "Longsich";
-    irishRel:nomName "Loingsech";
-    owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.ttl#Longsich>.
-
-<#Cund>
-    a foaf:Person;
-    irishRel:genName "Cund";
-    irishRel:nomName "Conn";
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#CuindCetchathaig>;
-    rdfs:comment "Ic Cund tra fodlaiter saerchlanna Sil Chuind. Et it fortuatha Síl Chuind cach oen nach berar genelach co Cond eter noebu & rigu. amal atát Lugni Delmna. & Galenga & Cianachta." ;
-    irishRel:ancestorOfGroup <#SílChuind>.
-
-<#SílChuind>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Síl Chuind" .
-
-<#LugniDelmna>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Lugni Delmna" .
-
-<#Galenga>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Galenga" .
-    
-<#Cianachta>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cianachta" .
-
-<#Cathair>
-    a foaf:Person;
-    irishRel:nomName "Cathair";
-    owl:sameAs <#CathairMór>;
-    rdfs:comment "Ic Cathair dano fodlaiter saerclanda Lagen & it fortuatha cóicid Cathair cach oen na berar genelach cu Cathair amal atát Laigsi & Fotharta.".
-
-<#Laigsi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Laigsi" .
-
-# Does Cathair Mór really appear twice? EPT
-
-<#AilillÓlom>
-    a foaf:Person;
-    irishRel:nomName "Ailill Ólom";
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#AilillAulomm>;
-    rdfs:comment "Ic Ailill Ólom fodlaiter saerclanna Muman. & cach oen nad berar genelach co Ailill Ólom. It fortuatha Síl n-Echach Múmo amal atát h-Eraind & Ciarraigi .&c.".
-
-<#Muman>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Muman" .
-
-<#Síln-Echach>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Síl n-Echach" .
-
-<#h-Eraind>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h-Eraind" .
-
-<#Ciarraigi>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Ciarraigi" .    
-
-<#Lugaid>
-    a foaf:Person;
-    irishRel:nomName "Lugaid";
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Lugdach>;
-    rdfs:comment "O Lugaid mc Itha immorro Corco Laigde & na Callraige.".
-
-<#CorcoLaigde>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Corco Laigde" .
-
-<#naCallraige>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "na Callraige" .
-
-<#Ith>
-    a foaf:Person;
-    irishRel:nomName "Ith";
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Itha>.
-
-<#Glass>
-    a foaf:Person;
-    irishRel:nomName "Glass";
-    rel:childOf <#ConaillChostamail>;
-    rel:childOf <#Creidne>.
-
-<#Runtar>
-    a foaf:Person;
-    irishRel:nomName "Runtar";
-    rel:childOf <#ConaillChostamail>;
-    rel:childOf <#Creidne>.
-
-<#Imda>
-    a foaf:Person;
-    irishRel:nomName "Imda";
-    rel:childOf <#ConaillChostamail>;
-    rel:childOf <#Creidne>.
-
-<#ConaillChostamail>
-    a foaf:Person;
-    irishRel:genName "Conaill Chostamail";
-    irishRel:nomName "Conall Costamail";
-    rdfs:comment "Ba rí dano cóicid Choncobuir in Conall Costomail.".
-
-# Does this mean he was king of Ulster? EPT
-
-<#Creidne>
-    a foaf:Person;
-    irishRel:nomName "Creidne";
-    foaf:gender "female";
-    foaf:title "banfhennid"@sga;
-    rel:childOf <#ConaillChostamail>;
-    rel:spouseOf <#ConaillChostamail>.
-
-# Does rel:spouseOf cover only marital relations? EPT
-
-<#Aife>
-    a foaf:Person;
-    irishRel:nomName "Aife";
-    foaf:gender "female";
-    rel:spouseOf <#ConaillChostamail>;
-    rel:antagonistOf <#Creidne>.
-
-<#ConallCostamail>
-    a foaf:Person;
-    irishRel:nomName "Conall Costamail";
-    rel:childOf <#Fhianchada>;
-    owl:sameAs <#ConaillChostamail>.
-
-<#Fhianchada>
-    a foaf:Person;
-    irishRel:genName "Fhianchada";
-    irishRel:nomName "Fianchad";
-    rel:childOf <#Oengusa>.
-
-<#Oengusa>
-    a foaf:Person;
-    irishRel:genName "Oengusa";
-    irishRel:nomName "Óengus";
-    rel:childOf <#Gaith>.
-
-<#Gaith>
-    a foaf:Person;
-    irishRel:genName "Gaith";
-    irishRel:nomName "Gaeth";
-    rel:childOf <#Enbláith>.
-
-<#Enbláith>
-    a foaf:Person;
-    irishRel:genName "Enbláith";
-    irishRel:nomName "Enbláth";
-    rel:childOf <#Rochada>.
-
-<#Rochada>
-    a foaf:Person;
-    irishRel:genName "Rochada";
-    irishRel:nomName "Rochaid";
-    rel:childOf <#IriéilGlunmair>.
-
-<#IriéilGlunmair>
-    a foaf:Person;
-    irishRel:genName "Iriéil Glunmair";
-    irishRel:nomName "Irial Glunmar";
-    rel:childOf <#ConaillCernaig>;
-    owl:sameAs <http://example.com/LL/dáil_araide.ttl#IrielGlunmair>.
-
-<#ConaillCernaig>
-    a foaf:Person;
-    irishRel:genName "Conaill Cernaig";
-    irishRel:nomName "Conall Cernach";
-    rel:childOf <#Amargin>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#ConaillCernaich>;
-    owl:sameAs <http://example.com/LL/dáil_araide.ttl#ConaillCernaig>.
-
-<#Amargin>
-    a foaf:Person;
-    irishRel:genName "Amargin";
-    irishRel:nomName "Amairgen";
-    owl:sameAs <http://example.com/LL/lagin.ttl#Amairgin>.
-
-<#Lebarcham>
-    a foaf:Person;
-    irishRel:nomName "Lebarcham";
-    foaf:gender "female";
-    rel:childOf <#Oe>;
-    rel:childOf <#Adarce>;
-    rel:spouseOf <#ChoinChulainn>.
-
-<#Oe>
-    a foaf:Person;
-    irishRel:nomName "Oe".
-
-<#Adarce>
-    a foaf:Person;
-    irishRel:nomName "Adarce".
-
-<#ChoinChulainn>
-    a foaf:Person;
-    irishRel:genName "Choin Chulainn";
-    irishRel:nomName "Cú Chulainn";
-    owl:sameAs <http://example.com/LL/dáil_araide.ttl#CuChulaind>.
-
-<#Caulnia>
-    a foaf:Person;
-    irishRel:nomName "Caulnia";
-    rel:childOf <#ChoinChulainn>;
-    rel:childOf <#Lebarcham>;
-    rdfs:comment "Is dib Corco Caullain & Dal Cualni i Cruithniu.".
-
-<#Condlúan>
-    a foaf:Person;
-    irishRel:nomName "Condlúan";
-    rel:childOf <#ChoinChulainn>;
-    rel:childOf <#Lebarcham>;
-    rdfs:comment "Is dib Corco Caullain & Dal Cualni i Cruithniu.".
-
-<#CorcoCaullain>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Corco Caullain" .
-
-<#DalCualni>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Dal Cualni" .
-    
+
+        a dctype:Dataset;
+        dcterms:title "Comuammand na n-Genelach"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text004.html>;
+        dcterms:format "application/trig" ;
+        prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text004.html> .
+
+     <#Erímon>
+        a foaf:Person;
+        irishRel:nomName "Erímon";
+        rdfs:comment "Ic h-Erímon tra condrecat na teora Connachta. & h. Neill in tuascirt & h. Neill in descirt & Airgialla & na Dési & Laigin & Ossairge. & Éraind. & Orbraigi. & Fotharta. & Dal Riata. & Dal Fiatach. Et rigrad Alban. Et Síl Conaire & Cland Oengusa & Fergusa & Loairn tri mc h-Eirc. Et Síl Conaire i n-Albain & i nh-Erinn .i. Muscraigi & Corco Duibni.";
+        owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Erimon>;
+        owl:sameAs <http://example.com/LL/lagin.trig#h-Erimoin>;
+        irishRel:ancestorOfGroup <hNeillInTuascirt>, <hNeillInDescirt>, <#Airgialla>, <naDési>, <#Laigin>, <#Ossairge>, <#Éraind>, <#Orbraigi>, <#Fotharta>, <#DalRiata>, <#DalFiatach>, <#SílConaire>, <#SílConairein-Albain>, <#SílConaireinh-Erinn>, <#Muscraigi>, <#CorcoDuibni>.
+
+     <hNeillInTuascirt>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h. Neill in tuascirt" .
+
+     <hNeillInDescirt>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h. Neill in descirt" .
+
+     <#Airgialla>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Airgialla" .
+
+     <naDési>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "na Dési" .
+
+     <#Laigin>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Laigin", "Lagin" .
+
+     <#Ossairge>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Ossairge" .
+
+     <#Éraind>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Éraind" .
+
+     <#Orbraigi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Orbraigi" .
+
+     <#Fotharta>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Fotharta" .
+
+     <#DalRiata>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Dal Riata" .
+
+     <#DalFiatach>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Dal Fiatach" .
+
+     <#SílConaire>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Síl Conaire" .
+
+     <#SílConairein-Albain>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Síl Conaire i n-Albain" ;
+        irishRel:descendantGroupOf <#SílConaire>.
+
+     <#SílConaireinh-Erinn>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Síl Conaire i nh-Erinn" ;
+        irishRel:descendantGroupOf <#SílConaire>.
+
+     <#Muscraigi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Muscraigi" ;
+        irishRel:descendantGroupOf <#SílConairein-Albain>.
+
+     <#CorcoDuibni>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Corco Duibni" ;
+        irishRel:descendantGroupOf <#SílConaireinh-Erinn>.
+
+     <#Éber>
+        a foaf:Person;
+        irishRel:nomName "Éber";
+        rdfs:comment "Ic h-Éber condrecat na secht n-Eoganachta & Lemnaig Alban.";
+        owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Ebir>;
+        irishRel:ancestorOfGroup <#LemnaigAlban>.
+
+     <#LemnaigAlban>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Lemnaig Alban" .   
+
+     <#Ír>
+        a foaf:Person;
+        irishRel:nomName "Ír";
+        rdfs:comment "Ic h-Ír condrecat Síl Fergusa & Conaill & Celtchair.";
+        owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Ír>;
+        irishRel:ancestorOfGroup <#SílFergusa>, <#SílConaill>, <#SílCeltchair>.
+
+     <#SílFergusa>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Síl Fergusa" .
+
+     <#SílConaill>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Conaill" .
+
+     <#SílCeltchair>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Celtchair" .
+
+     <#OengusTurbech>
+        a foaf:Person;
+        irishRel:nomName "Oengus Turbech";
+        rdfs:comment "Ic Oengus Turbech condrecat Ulaid & Albanaig & Ernai frisna clanna remaind.";
+        owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#OengusaTurbig>.
+
+     <#Niall>
+        a foaf:Person;
+        irishRel:nomName "Niall";
+        rdfs:comment "Ic Niall condrecat .h. Néill in descirt & in tuascirt. & uii. fini Temrach .i. Conall. Colman. Eogan. Aed Slane. Tethba & Cairpre. & Cenel n-Ennae & Loegaire.";
+        owl:sameAs <http://example.com/LL/fer_tethba.trig#NeilNoigiallaig>;
+        irishRel:ancestorOfGroup <hNeillInTuascirt>, <hNeillInDescirt>, <#Conall>, <#Colman>, <#Eogan>, <#AedSlane>, <#Tethba>, <#Cairpre>, <#Ceneln-Ennae>, <#Loegaire>.
+
+    <#Conall>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Conall" .
+
+    <#Colman>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Colman" .
+
+    <#Eogan>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Eogan" .
+
+    <#AedSlane>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Aed Slane" .
+
+    <#Tethba>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Tethba" .
+
+    <#Cairpre>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cairpre" .
+
+    <#Ceneln-Ennae>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cenel n-Ennae" .
+
+    <#Loegaire>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Loegaire" .
+
+    <#EochaidMugmedón>
+        a foaf:Person;
+        irishRel:nomName "Eochaid Mugmedón";
+        owl:sameAs <http://example.com/LL/rig_ailig.trig#EchachMugmedóin>;
+        rdfs:comment "Ic Eochaid Mugmedón condrecat .h. Neill & Connachta." .
+
+    <#CarpriuLiphechair>
+        a foaf:Person;
+        irishRel:genName "Carpriu Liphecahir";
+        irishRel:nomName "Coirpre Liphechair";
+        owl:sameAs <http://example.com/LL/rig_ailig.trig#CarpriLiphechair>;
+        rdfs:comment "Ic Carpriu Liphechair condrecat Airgialla & h. Meic Cuais fri Ú Néill & Connachta & Corco Roidi fri Claind Cuind." ;
+        irishRel:ancestorOfGroup <#Airgialla>, <hMeicCuais>, <hMeicCuais>, <#CorcoRoidi>.
+
+    <hMeicCuais>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h. Meic Cuais" .
+
+    <#CorcoRoidi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Corco Roidi" .
+
+    <#AedFindlíath>
+        a foaf:Person;
+        irishRel:nomName "Aed Findlíath";
+        owl:sameAs <http://example.com/LL/rig_ailig.trig#AedaFindleith>;
+        rdfs:comment "Ic Aed Findlíath condrecat Cland Néill & Cland Domnaill." ;
+        irishRel:ancestorOfGroup <#ClandNéill>, <#ClandDomnaill>.
+
+    <#ClandNéill>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cland Néill" .
+
+    <#ClandDomnaill>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cland Domnaill" .
+
+    <#FeidlimidRechtaid>
+        a foaf:Person;
+        irishRel:nomName "Feidlimid Rechtaid";
+        owl:sameAs <http://example.com/LL/lagin.trig#FeidlimidRechtada>;
+        rdfs:comment "Ic Feidlimid Rechtaid condrecat Fotharta & na Dési fri Claind Cuin." ;
+        irishRel:ancestorOfGroup <#Fotharta>, <naDési>.
+
+    <#UgaineMár>
+        a foaf:Person;
+        irishRel:nomName "Ugaine Már";
+        rdfs:comment "Ic Ugaine Már condrecat Lagin & Ossairge & Cland Chuind" ;
+        irishRel:ancestorOfGroup <#Laigin>, <#Ossairge>, <#ClandChuind>.
+
+    <#ClandChuind>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cland Chuind" .
+
+    <#BresulBricc>
+        a foaf:Person;
+        irishRel:genName "Bresul Bricc";
+        irishRel:nomName "Bresal Brecc";
+        owl:sameAs <http://example.com/LL/rig_ossairge.trig#BresailBric>;
+        owl:sameAs <http://example.com/LL/lagin.trig#BressalBrecc>;
+        rdfs:comment "Ic Bresul Bricc condrecat Lagin & Ossairge." ;
+        irishRel:ancestorOfGroup <#Laigin>, <#Ossairge>.
+
+    <#BresulBelach>
+        a foaf:Person;
+        irishRel:genName "Bresul Belach";
+        irishRel:nomName "Bresal Belach";
+        owl:sameAs <http://example.com/LL/dal_corpri_arad#BresalBelachsa>;
+        rdfs:comment "Ic Bresul Belach condrecat .h. Fhaelain & .h. Dunchada & h. Muridaig fri Uib Censelaig." ;
+        irishRel:ancestorOfGroup <hFhaelain>, <hDunchada>, <hMuridaig>.
+
+    <hFhaelain>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName ".h. Fhaelain" .
+
+    <hDunchada>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName ".h. Dunchada" .
+
+    <hMuridaig>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h. Muridaig" .
+        
+    <#CathairMór>
+        a foaf:Person;
+        irishRel:nomName "Cathair Mór";
+        owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CathairMár>;
+        rdfs:comment "Ic Cathair Mór condrecat .h. Falgi & h. Enechglais & h. Bairrchi. & h. Crimthainn & Clanda Cathair archena." ;
+        irishRel:ancestorOfGroup <hFalgi>, <hEnechglais>, <hBairrchi>, <#ClandaCathair>.
+        
+    <hFalgi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName ".h. Falgi" .
+
+    <hEnechglais>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h. Enechglais" .
+
+    <hBairrchi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h. Bairrchi" .
+
+    <#ClandaCathair>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Clanda Cathair" .
+        
+    <#Diarmait>
+        a foaf:Person;
+        irishRel:nomName "Diarmait";
+        owl:sameAs <http://example.com/LL/ríg_mide.trig#Diarmata>;
+        rdfs:comment "Ic Diarmait mc Cerbaill condrecat Cland Cholmain & Sil Aeda Slane." ;
+        irishRel:ancestorOfGroup <#ClandCholmain>, <#SilAedaSlane>.
+
+    <#ClandCholmain>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cland Cholmain" .
+
+    <#SilAedaSlane>
+        owl:sameAs <#AedSlane>;
+        irishRel:populationGroupName "Sil Aeda Slane" .
+
+    <#Cerbaill>
+        a foaf:Person;
+        irishRel:genName "Cerbaill";
+        irishRel:nomName "Cerball";
+        owl:sameAs <http://example.com/LL/ríg_mide.trig#FhergusaCerrbeoil>.
+
+    <#Flathbertach>
+        a foaf:Person;
+        irishRel:nomName "Flathbertach";
+        owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.trig#Flaithbertach>;
+        rdfs:comment "Ic Flathbertach mc Longsich condrecat Cenel Conaill .i. h. Mael- Doraid. & h. Chanannain." ;
+        irishRel:ancestorOfGroup <#CenelConaill>, <hMael-Doraid>, <hChanannain>.
+
+    <#CenelConaill>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cenel Conaill" .
+
+    <hMael-Doraid>
+        a irishRel:PopulationGroup ;
+        irishRel:descendantGroupOf <#CenelConaill>;
+        irishRel:populationGroupName "h. Mael-Doraid" .
+
+    <hChanannain>
+        a irishRel:PopulationGroup ;
+        irishRel:descendantGroupOf <#CenelConaill>;
+        irishRel:populationGroupName "h. Chanannain" .
+
+    <#Longsich>
+        a foaf:Person;
+        irishRel:genName "Longsich";
+        irishRel:nomName "Loingsech";
+        owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.trig#Longsich>.
+
+    <#Cund>
+        a foaf:Person;
+        irishRel:genName "Cund";
+        irishRel:nomName "Conn";
+        owl:sameAs <http://example.com/LL/rig_ailig.trig#CuindCetchathaig>;
+        rdfs:comment "Ic Cund tra fodlaiter saerchlanna Sil Chuind. Et it fortuatha Síl Chuind cach oen nach berar genelach co Cond eter noebu & rigu. amal atát Lugni Delmna. & Galenga & Cianachta." ;
+        irishRel:ancestorOfGroup <#SílChuind>.
+
+    <#SílChuind>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Síl Chuind" .
+
+    <#LugniDelmna>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Lugni Delmna" .
+
+    <#Galenga>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Galenga" .
+        
+    <#Cianachta>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Cianachta" .
+
+    <#Cathair>
+        a foaf:Person;
+        irishRel:nomName "Cathair";
+        owl:sameAs <#CathairMór>;
+        rdfs:comment "Ic Cathair dano fodlaiter saerclanda Lagen & it fortuatha cóicid Cathair cach oen na berar genelach cu Cathair amal atát Laigsi & Fotharta.".
+
+    <#Laigsi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Laigsi" .
+
+        # Does Cathair Mór really appear twice? EPT
+
+    <#AilillÓlom>
+        a foaf:Person;
+        irishRel:nomName "Ailill Ólom";
+        owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#AilillAulomm>;
+        rdfs:comment "Ic Ailill Ólom fodlaiter saerclanna Muman. & cach oen nad berar genelach co Ailill Ólom. It fortuatha Síl n-Echach Múmo amal atát h-Eraind & Ciarraigi .&c.".
+
+    <#Muman>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Muman" .
+
+    <#Síln-Echach>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Síl n-Echach" .
+
+    <h-Eraind>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "h-Eraind" .
+
+    <#Ciarraigi>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Ciarraigi" .    
+
+    <#Lugaid>
+        a foaf:Person;
+        irishRel:nomName "Lugaid";
+        owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Lugdach>;
+        rdfs:comment "O Lugaid mc Itha immorro Corco Laigde & na Callraige.".
+
+    <#CorcoLaigde>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Corco Laigde" .
+
+    <naCallraige>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "na Callraige" .
+
+    <#Ith>
+        a foaf:Person;
+        irishRel:nomName "Ith";
+        owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Itha>.
+
+    <#Glass>
+        a foaf:Person;
+        irishRel:nomName "Glass";
+        rel:childOf <#ConaillChostamail>;
+        rel:childOf <#Creidne>.
+
+    <#Runtar>
+        a foaf:Person;
+        irishRel:nomName "Runtar";
+        rel:childOf <#ConaillChostamail>;
+        rel:childOf <#Creidne>.
+
+    <#Imda>
+        a foaf:Person;
+        irishRel:nomName "Imda";
+        rel:childOf <#ConaillChostamail>;
+        rel:childOf <#Creidne>.
+
+    <#ConaillChostamail>
+        a foaf:Person;
+        irishRel:genName "Conaill Chostamail";
+        irishRel:nomName "Conall Costamail";
+        rdfs:comment "Ba rí dano cóicid Choncobuir in Conall Costomail.".
+        # Does this mean he was king of Ulster? EPT
+
+    <#Creidne>
+        a foaf:Person;
+        irishRel:nomName "Creidne";
+        foaf:gender "female";
+        foaf:title "banfhennid"@sga;
+        rel:childOf <#ConaillChostamail>;
+        rel:spouseOf <#ConaillChostamail>.
+        # Does rel:spouseOf cover only marital relations? EPT
+
+    <#Aife>
+        a foaf:Person;
+        irishRel:nomName "Aife";
+        foaf:gender "female";
+        rel:spouseOf <#ConaillChostamail>;
+        rel:antagonistOf <#Creidne>.
+
+    <#ConallCostamail>
+        a foaf:Person;
+        irishRel:nomName "Conall Costamail";
+        rel:childOf <#Fhianchada>;
+        owl:sameAs <#ConaillChostamail>.
+
+    <#Fhianchada>
+        a foaf:Person;
+        irishRel:genName "Fhianchada";
+        irishRel:nomName "Fianchad";
+        rel:childOf <#Oengusa>.
+
+    <#Oengusa>
+        a foaf:Person;
+        irishRel:genName "Oengusa";
+        irishRel:nomName "Óengus";
+        rel:childOf <#Gaith>.
+
+    <#Gaith>
+        a foaf:Person;
+        irishRel:genName "Gaith";
+        irishRel:nomName "Gaeth";
+        rel:childOf <#Enbláith>.
+
+    <#Enbláith>
+        a foaf:Person;
+        irishRel:genName "Enbláith";
+        irishRel:nomName "Enbláth";
+        rel:childOf <#Rochada>.
+
+    <#Rochada>
+        a foaf:Person;
+        irishRel:genName "Rochada";
+        irishRel:nomName "Rochaid";
+        rel:childOf <#IriéilGlunmair>.
+
+    <#IriéilGlunmair>
+        a foaf:Person;
+        irishRel:genName "Iriéil Glunmair";
+        irishRel:nomName "Irial Glunmar";
+        rel:childOf <#ConaillCernaig>;
+        owl:sameAs <http://example.com/LL/dáil_araide.trig#IrielGlunmair>.
+
+    <#ConaillCernaig>
+        a foaf:Person;
+        irishRel:genName "Conaill Cernaig";
+        irishRel:nomName "Conall Cernach";
+        rel:childOf <#Amargin>;
+        owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#ConaillCernaich>;
+        owl:sameAs <http://example.com/LL/dáil_araide.trig#ConaillCernaig>.
+
+    <#Amargin>
+        a foaf:Person;
+        irishRel:genName "Amargin";
+        irishRel:nomName "Amairgen";
+        owl:sameAs <http://example.com/LL/lagin.trig#Amairgin>.
+
+    <#Lebarcham>
+        a foaf:Person;
+        irishRel:nomName "Lebarcham";
+        foaf:gender "female";
+        rel:childOf <#Oe>;
+        rel:childOf <#Adarce>;
+        rel:spouseOf <#ChoinChulainn>.
+
+    <#Oe>
+        a foaf:Person;
+        irishRel:nomName "Oe".
+
+    <#Adarce>
+        a foaf:Person;
+        irishRel:nomName "Adarce".
+
+    <#ChoinChulainn>
+        a foaf:Person;
+        irishRel:genName "Choin Chulainn";
+        irishRel:nomName "Cú Chulainn";
+        owl:sameAs <http://example.com/LL/dáil_araide.trig#CuChulaind>.
+
+    <#Caulnia>
+        a foaf:Person;
+        irishRel:nomName "Caulnia";
+        rel:childOf <#ChoinChulainn>;
+        rel:childOf <#Lebarcham>;
+        rdfs:comment "Is dib Corco Caullain & Dal Cualni i Cruithniu.".
+
+    <#Condlúan>
+        a foaf:Person;
+        irishRel:nomName "Condlúan";
+        rel:childOf <#ChoinChulainn>;
+        rel:childOf <#Lebarcham>;
+        rdfs:comment "Is dib Corco Caullain & Dal Cualni i Cruithniu.".
+
+    <#CorcoCaullain>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Corco Caullain" .
+
+    <#DalCualni>
+        a irishRel:PopulationGroup ;
+        irishRel:populationGroupName "Dal Cualni" .
+        
+}
+

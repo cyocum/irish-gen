@@ -1,4 +1,4 @@
-@base <http://example.com/LL/eli_descirt.ttl>.
+@base <http://example.com/LL/eli_descirt.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach H-Eli Descirt"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text014.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text014.html> .
 
 <#Dunechaid>
@@ -148,17 +153,17 @@
     irishRel:nomName "Corc Aela";
     rel:childOf <#Taidc>;
     irishRel:descendantOfGroup <#ShílConlai>;
-    irishRel:ancestorGroupOf <#hDunertaig>, <#hMidgusa>, <#hAmraid>.
+    irishRel:ancestorGroupOf <hDunertaig>, <hMidgusa>, <hAmraid>.
 
-<#hDunertaig>
+<hDunertaig>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Dunertaig" .
 
-<#hMidgusa>
+<hMidgusa>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Midgusa" .
 
-<#hAmraid>
+<hAmraid>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Amraid" .
 
@@ -306,9 +311,9 @@
     a foaf:Person;
     irishRel:genName "Gnathail";
     irishRel:nomName "Gnathal";
-    rel:childOf <#h-IrcMoir>.
+    rel:childOf <h-IrcMoir>.
 
-<#h-IrcMoir>
+<h-IrcMoir>
     a foaf:Person;
     irishRel:genName "h-Irc Moir";
     irishRel:nomName "Erc Mor";
@@ -356,7 +361,7 @@
 
 <#ConaillCernaig>
     a foaf:Person;
-    owl:sameAs <http://example.com/LL/dimittamus_in_terim.ttl#ConaillCernaig>;
+    owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#ConaillCernaig>;
     irishRel:nomName "Conaill Cernaig".
 
 <#Tiri>
@@ -513,4 +518,5 @@
     a foaf:Person;
     irishRel:genName "Maicniat";
     irishRel:nomName "Maicnia".
-    
+}        
+

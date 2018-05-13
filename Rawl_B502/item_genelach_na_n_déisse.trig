@@ -1,0 +1,157 @@
+@base <http://example.com/Rawl_B502/item_genelach_na_n_déisse.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "ITEM GENELACH NA N-DÉISSE"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text13.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text13.html> .
+
+<#FeideilmidRechtada>
+    a foaf:Person;
+    irishRel:genName "Feideilmid Rechtada";
+    irishRel:nomName "Feideilmid Rechtad";
+    irishRel:numChild 7 ;
+    rel:childOf <#TuathailTechtmair>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#FeidlimtheRechtada>.
+
+<#TuathailTechtmair>
+    a foaf:Person ;
+    irishRel:genName "Tuathail Techtmair" ;
+    owl:sameAs <http://example.com/LL/n_dési.trig#TuathailTechtmair>.
+
+<#EochaidFindFuathn-Airt>
+    a foaf:Person;
+    irishRel:nomName "Eochaid Find Fuath n-Airt";
+    rel:childOf <#FeideilmidRechtada>.
+
+<#ConnCétchathach>
+    a foaf:Person;
+    irishRel:nomName "Conn Cétchathach";
+    rel:childOf <#FeideilmidRechtada>.
+
+<#Cuirenn>
+    a foaf:Person;
+    irishRel:nomName "Cuirenn";
+    rel:childOf <#FeideilmidRechtada>.
+
+<#Cruisíne>
+    a foaf:Person;
+    irishRel:nomName "Cruisíne";
+    rel:childOf <#FeideilmidRechtada>.
+
+<#Fiacho>
+    a foaf:Person;
+    irishRel:nomName "Fiacho";
+    rel:childOf <#FeideilmidRechtada>.
+
+<#CorccRuad>
+    a foaf:Person;
+    irishRel:nomName "Corcc Ruad";
+    rel:childOf <#FeideilmidRechtada>.
+
+<#FiachuSuidge>
+    a foaf:Person;
+    irishRel:nomName "Fiachu Suidge";
+    rel:childOf <#FeideilmidRechtada>;
+    irishRel:ancestorOfGroup <#DéissiMuman>, <#Breg>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#FhiachachSuidge>.
+
+<#DéissiMuman>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Déissi Muman" .
+
+<#Breg>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Breg" .
+    
+<#FiachachSuidgi>
+    a foaf:Person;
+    irishRel:genName "Fiachach Suidgi";
+    irishRel:nomName "Fiachaid Suidge";
+    irishRel:numChild 5 ;
+    owl:sameAs <#FiachuSuidge>.
+
+<#Ross>
+    a foaf:Person;
+    irishRel:nomName "Ross";
+    rel:childOf <#FiachachSuidgi>.
+
+<#Éogan>
+    a foaf:Person;
+    irishRel:nomName "Éogan";
+    irishRel:nomName "Brecc";
+    rel:childOf <#FiachachSuidgi>.
+
+<#Óengus>
+    a foaf:Person;
+    irishRel:nomName "Óengus";
+    rel:childOf <#FiachachSuidgi>.
+
+<#Artt>
+    a foaf:Person;
+    irishRel:nomName "Artt";
+    rel:childOf <#FiachachSuidgi>.
+
+<#Andgán>
+    a foaf:Person;
+    irishRel:nomName "Andgán";
+    rel:childOf <#FiachachSuidgi>.
+
+<#ClannRossaÚiDícollaindFheda>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Clann Rossa Úi Dícolla ind Fheda" .
+
+<inMaige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "in Maige" .
+
+<#GenusÚaCormaic>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Genus Úa Cormaic" ;
+    rdfs:comment "la Déissib Muman" .
+
+<#ClannÉogainÚiPhóláin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Clann Éogain Úi Phóláin" .
+
+<#ÚiOchtbrain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Ochtbrain" .
+
+<#ClannÓengusaÚiMucca>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Clann Óengusa Úi Mucca", "Aiccme Cilli Cúili" .
+
+<#ÚiChellaichChláraich>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Chellaich Chláraich" .
+
+<#ÚiRónáin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Rónáin" .
+
+<#ClannAndgáinÚiScandláin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Clann Andgáin Úi Scandláin" .
+
+<#ÚiCathloga>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Cathloga" .
+
+<#ÚiÓengusa>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Úi Óengusa" .
+}

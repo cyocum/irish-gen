@@ -1,4 +1,4 @@
-@base <http://example.com/LL/dal_moga_ruith.ttl>.
+@base <http://example.com/LL/dal_moga_ruith.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Dal Moga Ruith"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text031.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text031.html> .
 
 <#CuAllaid>
@@ -94,7 +99,7 @@
     rel:childOf <#MogaRuith>.
 
 <#MogaRuith>
-    owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#MugRuith>;
+    owl:sameAs <http://example.com/LL/aisneidem_di_araill.trig#MugRuith>;
     irishRel:genName "Moga Ruith";
     irishRel:nomName "Mog Ruth";
     rel:childOf <#Cuinisc>.
@@ -235,3 +240,5 @@
     a foaf:Person;
     irishRel:genName "Orni Chulbennaig";
     irishRel:nomName "Orn Culbennach".
+}
+

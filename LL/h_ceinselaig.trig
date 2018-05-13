@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_ceinselaig.ttl>.
+@base <http://example.com/LL/h_ceinselaig.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach .H. Ceinselaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text081.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text081.html> .
 
 <#Diarmait>
@@ -42,10 +47,10 @@
     irishRel:nomName "Diarmait";
     rel:childOf [
         a foaf:Person;
-        rel:childOf <#maelí>
+        rel:childOf <maelí>
     ].
     
-<#maelí>
+<maelí>
     a foaf:Person;
     rel:childOf <#Dondchada-8289fc07>.
 
@@ -142,29 +147,29 @@
     irishRel:genName "Eogain Cháech";
     irishRel:nomName "Eogan Cáech";
     rel:childOf <#NathÍ>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Eogan-2f23aa46>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Eogan-2f23aa46>.
 
 <#NathÍ>
     a foaf:Person;
     irishRel:nomName "Nath Í";
     rel:childOf <#Crimthaind>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#NathÍ-6c69a50e>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#NathÍ-6c69a50e>.
 
 <#Crimthaind>
     a foaf:Person;
     irishRel:genName "Crimthaind";
     irishRel:nomName "Crimthand";
     rel:childOf <#EnnaeCendselaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Crimthand-70ddc258>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crimthand-70ddc258>.
 
 <#EnnaeCendselaig>
     a foaf:Person;
     irishRel:genName "Ennae Cendselaig";
     irishRel:nomName "Enna Cennselach";
     rel:childOf <#Labrada>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EnnaGensalach>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EnnaGensalach>.
     
-# sameAs http://example.com/LL/dal_corpri_arad.ttl#Chendselaig ? - CY
+# sameAs http://example.com/LL/dal_corpri_arad.trig#Chendselaig ? - CY
 # Yup, but I found a more direct mention in that tract, hiding beneath 
 # a weird spelling variant. EPT
 
@@ -173,24 +178,25 @@
     irishRel:genName "Labrada";
     irishRel:nomName "Labraid";
     rel:childOf <#BresailBelaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#LabradaLaidig>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#LabradaLaidig>.
 
 <#BresailBelaig>
     a foaf:Person;
     irishRel:genName "Bresail Belaig";
     irishRel:nomName "Bresal Belach";
     rel:childOf <#FiachachBaccid>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#BresailBelaig>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#BresailBelaig>.
 
 <#FiachachBaccid>
     a foaf:Person;
     foaf:name "Fiachach Baccid";
     foaf:name "Fiachu Baccid";
     rel:childOf <#CathairMoir>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FiachuBaccid>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#FiachuBaccid>.
 
 <#CathairMoir>
     a foaf:Person;
     irishRel:genName "Cathair Moir";
     irishRel:nomName "Cathair Mór";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CathairMár>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CathairMár>.
+}

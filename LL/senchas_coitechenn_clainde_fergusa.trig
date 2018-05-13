@@ -1,4 +1,4 @@
-@base <http://example.com/LL/senchas_coitechenn_clainde_fergusa.ttl>.
+@base <http://example.com/LL/senchas_coitechenn_clainde_fergusa.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,11 +10,15 @@
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Is é So Senchas Coitchenn Clainde Fergus(a)"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text032.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text032.html> .
 
 <#Fhergusa>
@@ -35,9 +39,9 @@
     irishRel:nomName "Fer Tlactga";
     rel:childOf <#Fhergusa>;
     rdfs:comment "o tát na cethri Araid .i. Taecraige & Artraige & Descert Cliach." ;
-    irishRel:ancestorOfGroup <#hIdbanMugTói>, <#Ciarraige>, <#Bidraige>.
+    irishRel:ancestorOfGroup <hIdbanMugTói>, <#Ciarraige>, <#Bidraige>.
 
-<#hIdbanMugTói>
+<hIdbanMugTói>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Idban Mug Tói" .
 
@@ -178,9 +182,10 @@
     rel:childOf <#Rosa>.
 
 <#Rosa>
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Rosa>;
+    owl:sameAs <http://example.com/LL/n_echach.trig#Rosa>;
     rel:childOf <#Rudraige>.
 
 <#Rudraige>
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Rudraige>;
+    owl:sameAs <http://example.com/LL/n_echach.trig#Rudraige>;
     irishRel:nomName "Rudraige".
+}

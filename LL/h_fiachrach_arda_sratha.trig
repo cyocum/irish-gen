@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/h_fiachrach_arda_sratha.ttl>.
+﻿@base <http://example.com/LL/h_fiachrach_arda_sratha.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "H. Fiachrach Arda Sratha"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text109.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text109.html> .
 
 <#Niall>
@@ -120,16 +124,17 @@
     irishRel:genName "Fiachrach";
     irishRel:nomName "Fiachra";
     rel:childOf <#Eirc>;
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Fiachra>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#Fiachra>.
 
 <#Eirc>
     a foaf:Person;
     irishRel:genName "Eirc";
     irishRel:nomName "Erc";
     rel:childOf <#CollaUais>;
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Erc>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#Erc>.
 
 <#CollaUais>
     a foaf:Person;
     irishRel:nomName "Colla Uais";
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#CollaUais>.
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#CollaUais>.
+}

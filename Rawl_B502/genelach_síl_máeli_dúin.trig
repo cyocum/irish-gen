@@ -1,0 +1,70 @@
+@base <http://example.com/Rawl_B502/genelach_síl_máeli_dúin.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Síl Máeli Dúin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#Cléirchéin>
+    a foaf:Person;
+    irishRel:nomName "Cléirchéin";
+    rel:childOf <#MáeliDúin>.
+
+<#MáeliDúin>
+    a foaf:Person;
+    irishRel:genName "Máeli Dúin";
+    irishRel:nomName "Máeli Dún";
+    rel:childOf <#Donnacáin>.
+
+<#Donnacáin>
+    a foaf:Person;
+    irishRel:genName "Donnacáin";
+    irishRel:nomName "Donnacán";
+    rel:childOf <#Néill>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomName "Niall";
+    rel:childOf <#MáelDúin-2ef0652b>.
+
+<#MáelDúin-2ef0652b>
+    a foaf:Person;
+    irishRel:genName "Máel Dúin";
+    irishRel:nomName "Máel Dún";
+    rel:childOf <#ÁedaOirdnidi>.
+
+<#ÁedaOirdnidi>
+    a foaf:Person;
+    irishRel:genName "Áeda Oirdnidi";
+    irishRel:nomName "Áed Oirdnidi";
+    rel:childOf <#NéillFrossaig>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#AedaOrdnidi>.
+
+<#NéillFrossaig>
+    a foaf:Person;
+    irishRel:genName "Néill Frossaig";
+    irishRel:nomName "Niall Frossach";
+    rel:childOf <#Fergaile>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillFhrosaig>.
+
+<#Fergaile>
+    a foaf:Person;
+    irishRel:genName "Fergaile" ;
+    irishRel:nomName "Fergal" ;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#Fhergaile>.
+}

@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/h_mbresail.ttl>.
+﻿@base <http://example.com/LL/h_mbresail.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,16 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "H. Bresail"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text106.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text106.html> .
     
 
@@ -111,24 +116,26 @@
     irishRel:genName "Fheic";
     irishRel:nomName "Fiac";
     rel:childOf <#Bresail>;
-    owl:sameAs <http://example.com/LL/mbresail_macha.ttl#Fécc>.
+    owl:sameAs <http://example.com/LL/mbresail_macha.trig#Fécc>.
 
 <#Bresail>
     a foaf:Person;
     irishRel:genName "Bresail";
     irishRel:nomName "Bresal";
     rel:childOf <#Fheidlimid>;
-    owl:sameAs <http://example.com/LL/mbresail_macha.ttl#Bresail>.
+    owl:sameAs <http://example.com/LL/mbresail_macha.trig#Bresail>.
 
 <#Fheidlimid>
     a foaf:Person;
     irishRel:genName "Fheidlimid";
     irishRel:nomName "Feidlimid";
     rel:childOf <#FiachrachCassan>;
-    owl:sameAs <http://example.com/LL/mbresail_macha.ttl#Feidlimthi>.
+    owl:sameAs <http://example.com/LL/mbresail_macha.trig#Feidlimthi>.
 
 <#FiachrachCassan>
     a foaf:Person;
     irishRel:genName "Fiachrach Cassan";
     irishRel:nomName "Fiachra Cassan";
-    owl:sameAs <http://example.com/LL/mbresail_macha.ttl#Fiachach>.
+    owl:sameAs <http://example.com/LL/mbresail_macha.trig#Fiachach>.
+}
+

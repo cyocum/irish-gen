@@ -1,0 +1,101 @@
+@base <http://example.com/Rawl_B502/item_genelach_fernmaigi.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Item Genelach Fernmaigi"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#MaccLégind>
+    a foaf:Person;
+    irishRel:nomName "Macc Légind";
+    rel:childOf <#Cairill>.
+
+<#Cairill>
+    a foaf:Person;
+    irishRel:genName "Cairill";
+    rel:childOf <#Crícháin>.
+
+<#Crícháin>
+    a foaf:Person;
+    irishRel:genName "Crícháin";
+    irishRel:nomName "Críchán";
+    rel:childOf <#Lorccáin>.
+
+<#Lorccáin>
+    a foaf:Person;
+    irishRel:genName "Lorccáin";
+    irishRel:nomName "Lorccán";
+    rel:childOf <#Donnacáin>.
+
+<#Donnacáin>
+    a foaf:Person;
+    irishRel:genName "Donnacáin";
+    irishRel:nomName "Donnacán";
+    rel:childOf <#Fogartaich>.
+
+<#Fogartaich>
+    a foaf:Person;
+    irishRel:genName "Fogartaich";
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Ruadrach>.
+
+<#Ruadrach>
+    a foaf:Person;
+    irishRel:genName "Ruadrach" ;
+    irishRel:nomName "Ruadaid".
+
+<#Donnocán-ad5da4fb>
+    a foaf:Person;
+    irishRel:nomName "Donnocán";
+    rel:childOf <#MáelMaire>.
+
+<#MáelMaire>
+    a foaf:Person;
+    irishRel:genName "Máel Maire";
+    rel:childOf <#Flannacáin>.
+
+<#Flannacáin>
+    a foaf:Person;
+    irishRel:genName "Flannacáin";
+    irishRel:nomName "Flannacán";
+    rel:childOf <#Ruadrach-768e7a49>.
+
+<#Ruadrach-768e7a49>
+    a foaf:Person;
+    irishRel:genName "Ruadrach";
+    rel:childOf <#Mathgamna>.
+
+<#Mathgamna>
+    a foaf:Person;
+    irishRel:genName "Mathgamna";
+    irishRel:nomName "Mathgamain";
+    rel:childOf <#Laidgneáin>.
+
+<#Laidgneáin>
+    a foaf:Person;
+    irishRel:genName "Laidgneáin";
+    irishRel:nomName "Laidgneán";
+    rel:childOf <#Fogartaich-82b77cee>.
+
+<#Fogartaich-82b77cee>
+    a foaf:Person;
+    irishRel:genName "Fogartaich" ;
+    irishRel:nomName "Fogartaich" ;
+    owl:sameAs <#Fogartaich>.
+    
+    
+}

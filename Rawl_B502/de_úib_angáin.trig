@@ -1,0 +1,126 @@
+@base <http://example.com/Rawl_B502/de_úib_angáin.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "De Úib Angáin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Angáin>
+    a foaf:Person ;
+    irishRel:genName "Angáin" ;
+    irishRel:nomName "Angán" ;
+    irishRel:numChild 7 .
+    
+<#Duib>
+    a foaf:Person ;
+    irishRel:nomName "Duib" ;
+    rel:childOf <#Angáin>.
+    
+<h-Uaire>
+    a foaf:Person ;
+    irishRel:nomName "h-Uaire" ;
+    rel:childOf <#Angáin>.
+
+<#Daigre>
+    a foaf:Person ;
+    irishRel:nomName "Daigre" ;
+    rel:childOf <#Angáin>.
+
+<#Finndchain>
+    a foaf:Person ;
+    irishRel:nomName "Finndchain" ;
+    rel:childOf <#Angáin>.
+    
+<#Cairiub>
+    a foaf:Person ;
+    irishRel:nomName "Cairiub" ;
+    rel:childOf <#Angáin>.
+
+<#Bruiniuch>
+    a foaf:Person ;
+    irishRel:nomName "Bruiniuch" ;
+    rel:childOf <#Angáin>.
+
+<#Linge>
+    a foaf:Person ;
+    irishRel:nomName "Linge" ;
+    rel:childOf <#Angáin>.
+
+<#DubDíbech>
+    irishRel:nomName "Dub Díbech" ;
+    owl:sameAs <#Duib>.
+
+<#Duinech>
+    irishRel:nomName "Duinech" ;
+    owl:sameAs <#Duib>.
+
+<h-UaireUallach>
+    irishRel:nomName "h-Uaire Uallach" ;
+    owl:sameAs <h-Uaire>.
+
+<#DaigriDoichlech>
+    irishRel:nomName "Daigri Doichlech" ;
+    owl:sameAs <#Daigre>.
+
+<#FindchadFingalach>
+    irishRel:nomName "Findchad Fingalach" ;
+    owl:sameAs <#Finndchain>.
+
+<#CairiubCuitbide>
+    irishRel:nomName "Cairiub Cuitbide" ;
+    owl:sameAs <#Cairiub>.
+
+<#BruinniuchDotchadach>
+    irishRel:nomName "Bruinniuch Dotchadach" ;
+    owl:sameAs <#Bruiniuch>.
+
+<#LingeLabar>
+    irishRel:nomName "Linge Labar" ;
+    owl:sameAs <#Linge>.
+
+<#Duibe>
+    irishRel:genName "Duibe" ;
+    owl:sameAs <#Duib>;
+    irishRel:numChild 3 .
+    
+<#Collae>
+    a foaf:Person ;
+    irishRel:nomName "Collae" ;
+    rel:childOf <#Duibe>.
+
+<#Sárán>
+    a foaf:Person ;
+    irishRel:nomName "Sárán" ;
+    rel:childOf <#Duibe>.
+
+<#Étrú>
+    a foaf:Person ;
+    irishRel:nomName "Étrú" ;
+    rel:childOf <#Duibe>.
+
+<#DuibDáBarc>
+    a foaf:Person ;
+    irishRel:genName "Duib Dá Barc" ;
+    irishRel:nomName "Dub Dá Barc" ;
+    rel:descendantOf <#Sárán>.
+
+<#MacLéigind>
+    a foaf:Person ;
+    irishRel:nomName "Mac Léigind" ;
+    rel:childOf <#DuibDáBarc>.
+
+}

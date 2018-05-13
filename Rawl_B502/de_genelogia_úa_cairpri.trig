@@ -1,0 +1,165 @@
+@base <http://example.com/Rawl_B502/de_genelogia_úa_cairpri.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Úa Cairpri";
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html> .
+
+<#CennFáelad>
+    a foaf:Person;
+    irishRel:nomName "Cenn Fáelad";
+    rel:childOf <#DuibDáBairenn>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#CindFáelad>.
+
+<#DuibDáBairenn>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Bairenn";
+    irishRel:nomName "Dub Dá Bairenn";
+    rel:childOf <#ÁedaRóin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#DuibDáBairenn>.
+
+<#ÁedaRóin>
+    a foaf:Person;
+    irishRel:genName "Áeda Róin";
+    irishRel:nomName "Áed Róin";
+    rel:childOf <#Éoganáin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#ÁedaRóin>.
+
+<#Éoganáin>
+    a foaf:Person;
+    irishRel:genName "Éoganáin";
+    irishRel:nomName "Éoganán";
+    rel:childOf <#Crundmaíl>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Éoganáin>.
+
+<#Crundmaíl>
+    a foaf:Person;
+    irishRel:genName "Crundmaíl";
+    irishRel:nomName "Crundmael";
+    rel:childOf <#Áeda>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Crunnmaíl>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#ÓengusaLappae>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Áedo>.
+
+<#ÓengusaLappae>
+    a foaf:Person;
+    irishRel:genName "Óengusa Lappae";
+    irishRel:nomName "Óengus Lappae";
+    rel:childOf <#AilellaCennfhota>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Óengusa>.
+
+<#AilellaCennfhota>
+    a foaf:Person;
+    irishRel:genName "Ailella Cennfhota";
+    irishRel:nomName "Ailill Cennfhota";
+    rel:childOf <#Eircc>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#AilellaCennfota>.
+
+<#Eircc>
+    a foaf:Person;
+    irishRel:genName "Eircc";
+    irishRel:nomName "Ercc";
+    rel:childOf <#Cairpri>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.ttl#h-Eircc>.
+
+<#Cairpri>
+    a foaf:Person;
+    irishRel:genName "Cairpri";
+    irishRel:nomName "Carpre";
+    rel:childOf <#Brioin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Cairpri>.
+
+<#Brioin>
+    a foaf:Person;
+    irishRel:genName "Brioin";
+    irishRel:nomName "Brion";
+    rel:childOf <#FiachachFidgeinte>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgente.trig#Brioin>.
+
+<#FiachachFidgeinte>
+    a foaf:Person;
+    irishRel:genName "Fiachach Fidgeinte" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgente.trig#FiachachFidgeinti>.
+
+<#Cairpri-b2588c6d>
+    a foaf:Person;
+    irishRel:genName "Cairpri";
+    irishRel:numChild 5.
+
+<#Ercc>
+    a foaf:Person;
+    irishRel:nomName "Ercc";
+    rel:childOf <#Cairpri-b2588c6d>;
+    owl:sameAs <#Eircc>.
+
+<#FirThamnaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Fir Thamnaig" .
+
+<#MeicBrócáinÚiGairbáin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Meic Brócáin Úi Gairbáin" .
+
+<#Echen>
+    a foaf:Person;
+    irishRel:nomName "Echen";
+    rel:childOf <#Cairpri-b2588c6d>;
+    irishRel:ancestorOfGroup <#FirThamnaig>, <#MeicBrócáinÚiGairbáin>.
+
+<#Trian>
+    a foaf:Person;
+    irishRel:nomName "Trian";
+    rel:childOf <#Cairpri-b2588c6d>;
+    rel:ancestorOf <#ÁedaGairb>.
+
+<#CúCháech>
+    a foaf:Person;
+    irishRel:nomName "Cú Cháech";
+    rel:childOf <#ÁedaGairb>.
+
+<#ÁedaGairb>
+    a foaf:Person;
+    irishRel:genName "Áeda Gairb" ;
+    irishRel:nomName "Áed Gairb".
+
+<#Sétna>
+    a foaf:Person;
+    irishRel:nomName "Sétna";
+    rel:childOf <#Cairpri-b2588c6d>;
+    irishRel:ancestorOfGroup <#MeicConh-Íraich>.
+
+<#MeicConh-Íraich>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Meic Con h-Íraich" .    
+
+<#CormacInbirte>
+    a foaf:Person;
+    irishRel:nomName "Cormac Inbirte";
+    rel:childOf <#Cairpri-b2588c6d>;
+    irishRel:ancestorOfGroup <#MeicCáechLuinge>.
+
+<#MeicCáechLuinge>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Meic Cáech Luinge" .
+    
+}

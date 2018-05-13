@@ -1,0 +1,55 @@
+@base <http://example.com/Rawl_B502/clann_fianairle.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Clann Fianairle"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Eochuid>
+    a foaf:Person;
+    irishRel:nomName "Eochuid";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Gaiscedaich>.
+
+<#Gaiscedaich>
+    a foaf:Person;
+    irishRel:genName "Gaiscedaich";
+    irishRel:nomName "Gaiscedach";
+    rel:childOf <#Lemnata>.
+
+<#Lemnata>
+    a foaf:Person;
+    irishRel:genName "Lemnata";
+    irishRel:nomName "Lemnat";
+    rel:childOf <#Fianairle>.
+
+<#Fianairle>
+    a foaf:Person;
+    irishRel:genName "Fianairle";
+    rel:childOf <#Comraite>;
+    owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Fianairle>.
+
+<#Comraite>
+    a foaf:Person;
+    irishRel:genName "Comraite" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Comraite>.
+}

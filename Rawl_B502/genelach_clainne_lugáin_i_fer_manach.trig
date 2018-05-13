@@ -1,0 +1,128 @@
+@base <http://example.com/Rawl_B502/genelach_clainne_lugáin_i_fer_manach.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainne Lugáin .i. Fer Manach"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#GillaColuim>
+    a foaf:Person;
+    irishRel:nomName "Gilla Coluim";
+    rel:childOf <#GillaiCríst>.
+
+<#GillaiCríst>
+    a foaf:Person;
+    irishRel:genName "Gillai Críst";
+    rel:childOf <#Éicnich>.
+
+<#Éicnich>
+    a foaf:Person;
+    irishRel:genName "Éicnich";
+    irishRel:nomName "Éicnech";
+    rel:childOf <#Dálaich>.
+
+<#Dálaich>
+    a foaf:Person;
+    irishRel:genName "Dálaich";
+    irishRel:nomName "Dálach";
+    rel:childOf <#Meicch-Uidir>.
+
+<#Meicch-Uidir>
+    a foaf:Person;
+    irishRel:genName "Meicc h-Uidir";
+    irishRel:nomName "Mac Uidir";
+    rel:childOf <#Cernaich>.
+
+<#Cernaich>
+    a foaf:Person;
+    irishRel:genName "Cernaich";
+    irishRel:nomName "Cernach";
+    rel:childOf <#Lugáin>.
+
+<#Lugáin>
+    a foaf:Person;
+    irishRel:genName "Lugáin";
+    irishRel:nomName "Lugán";
+    rel:childOf <#Írgalaich>.
+
+<#Írgalaich>
+    a foaf:Person;
+    irishRel:genName "Írgalaich";
+    irishRel:nomName "Írgalach";
+    rel:childOf <#Feichín>.
+
+<#Feichín>
+    a foaf:Person;
+    irishRel:genName "Feichín";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Fergusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#CairpriDaimArgait>.
+
+<#CairpriDaimArgait>
+    a foaf:Person;
+    irishRel:genName "Cairpri Daim Argait";
+    irishRel:nomName "Carpre Dam Argat";
+    rel:childOf <#Echdach>.
+    
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Crimthaind>.
+
+<#Crimthaind>
+    a foaf:Person;
+    irishRel:genName "Crimthaind";
+    irishRel:nomName "Crimthand";
+    rel:childOf <#Féicc>.
+
+<#Féicc>
+    a foaf:Person;
+    irishRel:genName "Féicc";
+    irishRel:nomName "Fiacc";
+    rel:childOf <#DegaDuirn>.
+
+<#DegaDuirn>
+    a foaf:Person;
+    irishRel:genName "Dega Duirn";
+    irishRel:nomName "Deg Durn";
+    rel:childOf <#Rochada>.
+
+<#Rochada>
+    a foaf:Person;
+    irishRel:genName "Rochada";
+    irishRel:nomName "Rochad";
+    rel:childOf <#CollaFochríth>.
+
+<#CollaFochríth>
+    a foaf:Person;
+    irishRel:genName "Colla Fochríth" ;
+    irishRel:nomName "Coll Fochríth" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_na_n_airther.trig#CollaFochríth> .
+
+
+}

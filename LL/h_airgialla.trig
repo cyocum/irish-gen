@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_airgialla.ttl>.
+@base <http://example.com/LL/h_airgialla.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -7,14 +7,19 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
-@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix irishTitles: <http://example.com/earlyIrishTitles.trig>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Na H-Airgialla"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text040.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text040.html> .
 
 <#FiachaSroptene>
@@ -22,13 +27,13 @@
     foaf:title "rí i Temair"@sga, "king of Tara"@en;
     irishRel:nomName "Fiacha Sroptene";
     rel:childOf <#CorpriLiphechair>;
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#FhiachachSraptini>.
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#FhiachachSraptini>.
 
 <#CorpriLiphechair>
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#CorpreLiphechair>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CorpreLiphechair>;
     irishRel:numChild 2.
 
-<#hNéil>
+<hNéil>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Néil" .
 
@@ -40,10 +45,10 @@
     a foaf:Person;
     irishRel:nomName "Muridach Tirech";
     rel:childOf <#FiachaSroptene>;
-    owl:sameAs <http://example.com/LL/rig_ailig.ttl#MuridaigTirig>.
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#MuridaigTirig>.
 
 <#EochoDomlén>
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#EochaidDomlen>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#EochaidDomlen>;
     irishRel:nomName "Eocho Domlén";
     rel:childOf <#CorpriLiphechair>.
 
@@ -52,16 +57,16 @@
     irishRel:genName "Colla Oss";
     irishRel:nomName "Colla Uais";
     rel:childOf <#EochoDomlén>;
-    owl:sameAs <http://example.com/LL/h_fiachrach_arda_sratha.ttl#CollaUais>;
-    owl:sameAs <http://example.com/LL/rig_h_turtri.ttl#CollaUais>;
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#CollaUais>;
-    irishRel:ancestorOfGroup <#hMeicUais>, <#hThurtri>.
+    owl:sameAs <http://example.com/LL/h_fiachrach_arda_sratha.trig#CollaUais>;
+    owl:sameAs <http://example.com/LL/rig_h_turtri.trig#CollaUais>;
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#CollaUais>;
+    irishRel:ancestorOfGroup <hMeicUais>, <hThurtri>.
 
-<#hMeicUais>
+<hMeicUais>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h Meic Uais" .
 
-<#hThurtri>
+<hThurtri>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Thurtri" .
     
@@ -73,7 +78,7 @@
     rdfs:comment "o tát ";
     irishRel:fosterChildOf <#MennetChruithnech>;
     irishRel:fosterChildOf <#MugdornDub>;
-    owl:sameAs <http://example.com/LL/mugdorn.ttl#CollaMind>;
+    owl:sameAs <http://example.com/LL/mugdorn.trig#CollaMind>;
     irishRel:ancestorOfGroup <#Mugdornai>.
 
 <#Mugdornai>
@@ -103,7 +108,7 @@
     a foaf:Person;
     irishRel:nomName "Mael Bresail";
     rel:childOf <#MaeliDúin>;
-    owl:sameAs <http://example.com/LL/mugdorn.ttl#MaelBresail>.
+    owl:sameAs <http://example.com/LL/mugdorn.trig#MaelBresail>.
 
 <#MaeliDúin>
     a foaf:Person;
@@ -111,7 +116,7 @@
     irishRel:nomName "Mael Dúin";
     rel:descendantOf <#MugdornDub>;
     rel:descendantOf <#MennetChruithnech>;
-    owl:sameAs <http://example.com/LL/mugdorn.ttl#MaelDuin>.
+    owl:sameAs <http://example.com/LL/mugdorn.trig#MaelDuin>.
 
 <#MugdornDuib>
     a foaf:Person;
@@ -222,18 +227,18 @@
     irishRel:genName "Colla Fochri";
     irishRel:nomName "Colla Ochre";
     rel:childOf <#EochoDomlén>;
-    irishRel:ancestorOfGroup <#hCrimthainn>, <#intAirther>, <#hMéith>;
+    irishRel:ancestorOfGroup <hCrimthainn>, <intAirther>, <hMéith>;
     rdfs:comment "Is ón Chollasain".
 
-<#hCrimthainn>
+<hCrimthainn>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Crimthainn" .
 
-<#intAirther>
+<intAirther>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "int Airther" .
 
-<#hMéith>
+<hMéith>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Méith" .
 
@@ -267,16 +272,16 @@
     irishRel:nomName "Fiachra Cassan";
     rel:childOf <#CollaFochrith>;
     rdfs:comment "a quo int Airther";
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#FiachrachCassan>;
-    owl:sameAs <http://example.com/LL/h_niallain.ttl#FhiachrachCassan>.
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#FiachrachCassan>;
+    owl:sameAs <http://example.com/LL/h_niallain.trig#FhiachrachCassan>.
 
 <#Rochad>
     a foaf:Person;
     irishRel:nomName "Rochad";
     rel:childOf <#CollaFochrith>;
-    irishRel:ancestorOfGroup <#hChremthainn>.
+    irishRel:ancestorOfGroup <hChremthainn>.
 
-<#hChremthainn>
+<hChremthainn>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Chremthainn" .
 
@@ -294,9 +299,9 @@
     a foaf:Person;
     irishRel:nomName "Labraid";
     rel:childOf <#CollaFochrith>;
-    irishRel:ancestorOfGroup <#hLabrada>.
+    irishRel:ancestorOfGroup <hLabrada>.
 
-<#hLabrada>
+<hLabrada>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Labrada" .
 
@@ -304,7 +309,7 @@
     a foaf:Person;
     irishRel:nomName "Crimthand";
     rel:descendantOf <#Rochad>;
-    owl:sameAs <http://example.com/LL/fer_manach.ttl#CrimthainnLeith>;
+    owl:sameAs <http://example.com/LL/fer_manach.trig#CrimthainnLeith>;
     irishRel:numChild 6.
 
 # ? not sure - CY
@@ -325,9 +330,9 @@
     a foaf:Person;
     irishRel:nomName "Fergus Cendfhota";
     rel:childOf <#Crimthand>;
-    irishRel:ancestorOfGroup <#hChendfhotai>.
+    irishRel:ancestorOfGroup <hChendfhotai>.
 
-<#hChendfhotai>
+<hChendfhotai>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h. Chendfhotai" .
 
@@ -350,9 +355,9 @@
     a foaf:Person;
     irishRel:nomName "Eochaid Amainsen";
     rel:childOf <#Muridach>;
-    irishRel:ancestorOfGroup <#hMeicBrócc>.
+    irishRel:ancestorOfGroup <hMeicBrócc>.
 
-<#hMeicBrócc>
+<hMeicBrócc>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Meic Brócc" .
 
@@ -362,23 +367,23 @@
     rel:childOf <#Crimthand>;
     rdfs:comment "a quo Cland Slébine i Fernmaig et Cland Fhlannan";
     irishRel:numChild 1;
-    owl:sameAs <http://example.com/LL/fer_manach.ttl#Echdach>.
+    owl:sameAs <http://example.com/LL/fer_manach.trig#Echdach>.
 
 <#CairpreDamArgait>
     a foaf:Person;
     irishRel:nomName "Cairpre Dam Argait";
     rel:childOf <#EochaidAndgaine>;
     irishRel:numChild 6;
-    owl:sameAs <http://example.com/LL/fer_manach.ttl#CorpriDaimArgait>;
-    owl:sameAs <http://example.com/LL/rig_airgiall.ttl#CairpriDaimArgait>;
-    owl:sameAs <http://example.com/LL/síl_daimini.ttl#CarpriDaimArgait>.
+    owl:sameAs <http://example.com/LL/fer_manach.trig#CorpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CairpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/síl_daimini.trig#CarpriDaimArgait>.
 
 <#Daimine>
     a foaf:Person;
     irishRel:nomName "Daimine";
     rel:childOf <#CairpreDamArgait>;
     irishRel:ancestorOfGroup <#Síln-Daimine>;
-    owl:sameAs <http://example.com/LL/síl_daimini.ttl#Daimine>.
+    owl:sameAs <http://example.com/LL/síl_daimini.trig#Daimine>.
 
 <#Síln-Daimine>
     a irishRel:PopulationGroup ;
@@ -437,7 +442,7 @@
     a foaf:Person;
     irishRel:nomName "Aed";
     rel:childOf <#CairpreDamArgait>;
-    owl:sameAs <http://example.com/LL/fer_manach.ttl#Aeda>.
+    owl:sameAs <http://example.com/LL/fer_manach.trig#Aeda>.
 
 <#Daimine-1e674840>
     owl:sameAs <#Daimine>;
@@ -511,3 +516,5 @@
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dál n-Oich int Shlébe" .
     
+}
+

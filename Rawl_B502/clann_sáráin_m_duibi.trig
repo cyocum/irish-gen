@@ -1,0 +1,87 @@
+@base <http://example.com/Rawl_B502/clann_sáráin_m_duibi.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Clann Sáráin M Duibi"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html> .
+    
+
+<#MacLégind>
+    a foaf:Person;
+    irishRel:nomName "Mac Légind";
+    owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#MacLéigind>;
+    rel:childOf <#DuinDáBárrc>.
+
+<#DuinDáBárrc>
+    a foaf:Person;
+    irishRel:genName "Duin Dá Bárrc";
+    irishRel:nomName "Dun Dá Bárrc";
+    owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#DuibDáBarc>;
+    rel:childOf <#Fithrich>.
+
+<#Fithrich>
+    a foaf:Person;
+    irishRel:genName "Fithrich";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Fithnich>.
+
+<#Fithnich>
+    a foaf:Person;
+    irishRel:genName "Fithnich";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Fithrich-1b8e6755>.
+
+<#Fithrich-1b8e6755>
+    a foaf:Person;
+    irishRel:genName "Fithrich";
+    rel:childOf <#Carthai(ch)>.
+
+<#Carthaich>
+    a foaf:Person;
+    irishRel:genName "Carthai(ch)";
+    irishRel:nomName "Cartha(ch)";
+    foaf:title "éices"@sga, "sage"@eng ;
+    rel:childOf <#Liathglaisse>.
+
+<#Liathglaisse>
+    a foaf:Person;
+    irishRel:genName "Liathglaisse";
+    irishRel:nomName "Liathglaiss";
+    rel:childOf <#Sáráin>.
+
+<#Sáráin>
+    a foaf:Person;
+    irishRel:genName "Sáráin";
+    irishRel:genName "Sárán";
+    rel:childOf <#Duibi>;
+    owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#Sárán>.
+
+<#Duibi>
+    a foaf:Person;
+    irishRel:genName "Duibi" ;
+    owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#Duibe>.
+}

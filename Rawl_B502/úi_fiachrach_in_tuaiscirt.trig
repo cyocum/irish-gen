@@ -1,0 +1,93 @@
+@base <http://example.com/Rawl_B502/úi_fiachrach_in_tuaiscirt.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Fiachrach In Tuaiscirt"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#CúChothaid>
+    a foaf:Person;
+    irishRel:nomName "Cú Chothaid";
+    rel:childOf <#Móenaich>.
+
+<#Móenaich>
+    a foaf:Person;
+    irishRel:genName "Móenaich";
+    irishRel:nomName "Móenach";
+    rel:childOf <#Dúnchada>.
+
+<#Dúnchada>
+    a foaf:Person;
+    irishRel:genName "Dúnchada";
+    irishRel:nomName "Dúnchad";
+    rel:childOf <#FlaindRodba>.
+
+<#FlaindRodba>
+    a foaf:Person;
+    irishRel:genName "Flaind Rodba";
+    irishRel:nomName "Flaind Rodb";
+    rel:childOf <#MáelDúin>.
+
+<#MáelDúin>
+    a foaf:Person;
+    irishRel:genName "Máel Dúin";
+    rel:childOf <#Faílbe>.
+
+<#Faílbe>
+    a foaf:Person;
+    irishRel:genName "Faílbe";
+    rel:childOf <#Máelh-Umai>.
+
+<#Máelh-Umai>
+    a foaf:Person;
+    irishRel:genName "Máel h-Umai";
+    rel:childOf <#Feradaich>.
+
+<#Feradaich>
+    a foaf:Person;
+    irishRel:genName "Feradaich";
+    irishRel:nomName "Feradach";
+    rel:childOf <#Rossa>.
+
+<#Rossa>
+    a foaf:Person;
+    irishRel:genName "Rossa";
+    irishRel:nomName "Ross";
+    rel:childOf <#Maine>.
+
+<#Maine>
+    a foaf:Person;
+    irishRel:genName "Maine";
+    rel:childOf <#MeicErcc>.
+
+<#MeicErcc>
+    a foaf:Person;
+    irishRel:genName "Meic Ercc";
+    irishRel:nomName "Mac Ercc";
+    rel:childOf <#Fiachrach>.
+
+<#Fiachrach>
+    a foaf:Person;
+    irishRel:genName "Fiachrach";
+    irishRel:nomName "Fiachaid";
+    rel:childOf <#Echdach>.
+
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach" ;
+    irishRel:nomName "Echaid".
+}

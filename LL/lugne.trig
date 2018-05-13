@@ -1,4 +1,4 @@
-@base <http://example.com/LL/lugne.ttl>.
+@base <http://example.com/LL/lugne.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,15 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Lugne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text120.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text120.html> .
 
 <#Aed>
@@ -107,22 +111,23 @@
     a foaf:Person;
     irishRel:nomName "Eoin";
     rel:childOf <#Ithchaire>;
-    owl:sameAs <http://example.com/LL/lugni_connacht.ttl#Iden>.
+    owl:sameAs <http://example.com/LL/lugni_connacht.trig#Iden>.
 
 <#Ithchaire>
     a foaf:Person;
     irishRel:nomName "Ithchaire";
     rel:childOf <#AirtChirp>;
-    owl:sameAs <http://example.com/LL/lugni_connacht.ttl#Idchuir>.
+    owl:sameAs <http://example.com/LL/lugni_connacht.trig#Idchuir>.
 
 <#AirtChirp>
     a foaf:Person;
     irishRel:genName "Airt Chirp";
     irishRel:nomName "Art Chorp";
-    owl:sameAs <http://example.com/LL/lugni_connacht.ttl#NiadCorp>.
+    owl:sameAs <http://example.com/LL/lugni_connacht.trig#NiadCorp>.
 
 # The best ID I can find for this individual is
-# <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#AirtChoirp>,
+# <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#AirtChoirp>,
 # which fits with the oft-repeated notion that the Luigne
 # descend from Tadc mac Céin. Could it be that <#AirtChirp> is the 
 # <#NiadCorp> of lugne_connacht.ttl and <#Ithchaire> is <#Idchuir> etc.? EPT
+}
