@@ -1,4 +1,4 @@
-@base <http://example.com/Duanaire_Finn/PoemXI.ttl>.
+@base <http://example.com/Duanaire_Finn/PoemXI.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,6 +10,7 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+<http://example.com/Duanaire_Finn> {
 <>
     a dctype:Dataset;
     dcterms:title "Poem XI";
@@ -17,169 +18,170 @@
     dcterms:format "text/turtle" ;
     prov:asDerivedFrom <https://archive.org/stream/duanairefinnboo00fostgoog#page/n96/mode/2up> .
 
-<#FiondFile>
+<FiondFile>
     a foaf:Person;
     irishRel:nomName "Fiond File";
     foaf:title "file"@sga, "poet"@eng;
     foaf:title "rí"@sga, "king"@eng.
 
-<#Trénmhór>
+<Trénmhór>
     a foaf:Person;
     irishRel:nomName "Tréanmhór";
-    owl:sameAs <#FiondFile>.
+    owl:sameAs <FiondFile>.
 
-<#FerghusLuaithfhionn>
+<FerghusLuaithfhionn>
     a foaf:Person;
     irishRel:nomName "Fearghus Luaithfhionn";
-    rel:childOf <#FiondFile>.
+    rel:childOf <FiondFile>.
 
-<#Eogan>
+<Eogan>
     a foaf:Person;
     irishRel:nomName "Eoghan";
-    rel:childOf <#FiondFile>.
+    rel:childOf <FiondFile>.
 
-<#Oilill>
+<Oilill>
     a foaf:Person;
     irishRel:nomName "Oilill";
-    rel:childOf <#Eogan>.
+    rel:childOf <Eogan>.
 
-<#Dáire>
+<Dáire>
     a foaf:Person;
     irishRel:nomName "Dáire";
-    rel:childOf <#Oilill>.
+    rel:childOf <Oilill>.
 
-<#Dorchaidhe>
+<Dorchaidhe>
     a foaf:Person;
     irishRel:nomName "Dorchaidhe";
-    rel:childOf <#Oilill>.
+    rel:childOf <Oilill>.
 
-<#Baoiscne>
+<Baoiscne>
     a foaf:Person;
     irishRel:nomName "Baoiscne";
-    owl:sameAs <#FerghusLuaithfhionn>;
+    owl:sameAs <FerghusLuaithfhionn>;
     irishRel:numChild 3.
 
-<#Cumhall>
+<Cumhall>
     a foaf:Person;
     irishRel:nomName "Cumhall";
-    rel:childOf <#Baoiscne>.
+    rel:childOf <Baoiscne>.
 
-<#Criomhall>
+<Criomhall>
     a foaf:Person;
     irishRel:nomName "Criomhall";
-    rel:childOf <#Baoiscne>.
+    rel:childOf <Baoiscne>.
 
-<#ÁodhOllach>
+<ÁodhOllach>
     a foaf:Person;
     irishRel:nomName "Aodh Ollach";
-    rel:childOf <#Baoiscne>;
+    rel:childOf <Baoiscne>;
     irishRel:numChild 1.
 
-<#Lughaidh>
+<Lughaidh>
     a foaf:Person;
     irishRel:nomName "Lughaidh";
-    rel:childOf <#ÁodhOllach>.
+    rel:childOf <ÁodhOllach>.
 
-<#Feardhomhann>
+<Feardhomhann>
     a foaf:Person;
     irishRel:nomName "Feardhomhann";
-    rel:childOf <#Lughaidh>;
+    rel:childOf <Lughaidh>;
     irishRel:numChild 2.
 
-<#Morann>
+<Morann>
     a foaf:Person;
     irishRel:nomName "Morann";
-    rel:childOf <#Feardhomhann>.
+    rel:childOf <Feardhomhann>.
 
-<#Aodh>
+<Aodh>
     a foaf:Person;
     irishRel:nomName "Aodh";
-    rel:childOf <#Feardhomhann>.
+    rel:childOf <Feardhomhann>.
 
-<#Oisin>
+<Oisin>
     a foaf:Person;
     irishRel:nomName "Oisin";
-    irishRel:childOf <#Finn>.
+    irishRel:childOf <Finn>.
 
-<#Finn>
+<Finn>
     a foaf:Person;
     irishRel:nomName "Finn".
 
-<#Fearghus>
+<Fearghus>
     a foaf:Person;
     irishRel:nomName "Fearghus";
-    rel:siblingOf <#Oisin>;
+    rel:siblingOf <Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
-<#Caoinche>
+<Caoinche>
     a foaf:Person;
     irishRel:nomName "Caoinche";
-    rel:siblingOf <#Oisin>;
+    rel:siblingOf <Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
-<#Uilleann>
+<Uilleann>
     a foaf:Person;
     irishRel:nomName "Uilleann";
-    rel:siblingOf <#Oisin>;
+    rel:siblingOf <Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
-<#Fáobhar>
+<Fáobhar>
     a foaf:Person;
     irishRel:nomName "Fáobhar";
-    rel:siblingOf <#Oisin>;
+    rel:siblingOf <Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
-<#Ráighne>
+<Ráighne>
     a foaf:Person;
     irishRel:nomName "Raighne";
-    rel:siblingOf <#Oisin>;
+    rel:siblingOf <Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
-<#Oisin-18c1f630>
+<Oisin-18c1f630>
     a foaf:Person;
     irishRel:nomName "Oisin";
-    owl:sameAs <#Oisin>;
+    owl:sameAs <Oisin>;
     irishRel:numChild 5.
 
-<#Osgar>
+<Osgar>
     a foaf:Person;
     irishRel:nomName "Osgar";
-    rel:childOf <#Oisin-18c1f630>.
+    rel:childOf <Oisin-18c1f630>.
 
-<#FearLogha>
+<FearLogha>
     a foaf:Person;
     irishRel:nomName "Fear Logha";
-    rel:childOf <#Oisin-18c1f630>.
+    rel:childOf <Oisin-18c1f630>.
 
-<#Eachtach>
+<Eachtach>
     a foaf:Person;
     irishRel:nomName "Eachtach";
-    rel:childOf <#Oisin-18c1f630>.
+    rel:childOf <Oisin-18c1f630>.
 
-<#Uladhach>
+<Uladhach>
     a foaf:Person;
     irishRel:nomName "Uladhach";
-    rel:childOf <#Oisin-18c1f630>.
+    rel:childOf <Oisin-18c1f630>.
 
-<#DolbhSgéine>
+<DolbhSgéine>
     a foaf:Person;
     irishRel:nomName "Dolbh Sgéine";
-    rel:childOf <#Oisin-18c1f630>.
+    rel:childOf <Oisin-18c1f630>.
 
-<#Lughach>
+<Lughach>
     a foaf:Person;
     foaf:gender "female";
-    rel:childOf <#Finn>;
-    irishRel:spouseOf <#Dáire-0ec0f7c0>.
+    rel:childOf <Finn>;
+    irishRel:spouseOf <Dáire-0ec0f7c0>.
 
-<#Dáire-0ec0f7c0>
+<Dáire-0ec0f7c0>
     a foaf:Person;
     irishRel:nomName "Dáire";
-    owl:sameAs <#Dáire>.
+    owl:sameAs <Dáire>.
 
-<#Gaoine>
+<Gaoine>
     a foaf:Person;
     irishRel:nomName "Gaoine";
     irishRel:nomName "Mac Lughach";
-    rel:childOf <#Lughach>;
-    rel:childOf <#Dáire-0ec0f7c0>.
+    rel:childOf <Lughach>;
+    rel:childOf <Dáire-0ec0f7c0>.
+}
