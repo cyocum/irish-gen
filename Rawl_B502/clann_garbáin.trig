@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_garbáin.ttl>.
+@base <http://example.com/Rawl_B502/clann_garbáin.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,68 +9,72 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Garbáin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Manannach>
+<Manannach>
     a foaf:Person;
     irishRel:nomName "Manannach";
-    rel:childOf <#Cathassaich>.
+    rel:childOf <Cathassaich>.
 
-<#Cathassaich>
+<Cathassaich>
     a foaf:Person;
     irishRel:genName "Cathassaich";
     irishRel:nomName "Cathassach";
-    rel:childOf <#Duinechda>.
+    rel:childOf <Duinechda>.
 
-<#Duinechda>
+<Duinechda>
     a foaf:Person;
     irishRel:genName "Duinechda";
-    rel:childOf <#Fordáin>.
+    rel:childOf <Fordáin>.
 
-<#Fordáin>
+<Fordáin>
     a foaf:Person;
     irishRel:genName "Fordáin";
     irishRel:nomName "Fordán";
-    rel:childOf <#Garbáin>.
+    rel:childOf <Garbáin>.
 
-<#Garbáin>
+<Garbáin>
     a foaf:Person;
     irishRel:genName "Garbáin";
     irishRel:nomName "Garbán";
-    rel:childOf <#Congusa>.
+    rel:childOf <Congusa>.
 
-<#Congusa>
+<Congusa>
     a foaf:Person;
     irishRel:genName "Congusa" ;
     irishRel:nomName "Congus".
 
-<#Daigre>
+<Daigre>
     a foaf:Person ;
     irishRel:genName "Daigre" .
     # which Daigri is this? - CY
 
-<#Énna>
+<Énna>
     a foaf:Person ;
     irishRel:genName "Énna" ;
     irishRel:numChild 3 ;
-    rel:childOf <#Daigre>.
+    rel:childOf <Daigre>.
 
-<#MacÁine>
+<MacÁine>
     a foaf:Person ;
     irishRel:nomName "Mac Áine" ;
-    rel:childOf <#Daigre>.
+    rel:childOf <Daigre>.
 
-<#Fhletchú>
+<Fhletchú>
     a foaf:Person ;
     irishRel:nomName "Fhletchú" ;
-    rel:childOf <#Daigre>.
+    rel:childOf <Daigre>.
 
-<#Dubthach>
+<Dubthach>
     a foaf:Person ;
     irishRel:nomName "Dubthach" ;
-    rel:childOf <#Daigre>.
+    rel:childOf <Daigre>.
+}

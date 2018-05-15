@@ -1,4 +1,4 @@
-@base <http://example.com/LL/fergus_mc_do_roig.ttl>.
+@base <http://example.com/LL/fergus_mc_do_roig.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,297 +9,303 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Fergus Mc Do Roig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text030.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text030.html> .
 
-<#Fergus>
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Fhergusa-7bda6a24>;
-    owl:sameAs <http://example.com/LL/aisneidem_di_araill.ttl#Fergus>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#MacRosa>;
+<Fergus>
+    owl:sameAs <http://example.com/LL/n_echach.trig#Fhergusa-7bda6a24>;
+    owl:sameAs <http://example.com/LL/aisneidem_di_araill.trig#Fergus>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#MacRosa>;
     irishRel:nomName "Fergus";
-    rel:childOf <#Roig>.
+    rel:childOf <Roig>.
 
-<#Roig>
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Roig>;
+<Roig>
+    owl:sameAs <http://example.com/LL/n_echach.trig#Roig>;
     irishRel:nomName "Roig";
     rel:childOf [
         a foaf:Person;
         foaf:gender "female";
-	rel:childOf <#Echach>
+	rel:childOf <Echach>
     ].
 
-<#Echach>
+<Echach>
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Eochu";
-    rel:childOf <#Corpri>;
+    rel:childOf <Corpri>;
     rel:parentOf [
         a foaf:Person ;
         foaf:gender "female" ;
     ] .
         
 
-<#Corpri>
+<Corpri>
     a foaf:Person;
     irishRel:genName "Corpri";
     irishRel:nomName "Coirpre";
-    rel:childOf <#Lugdach>.
+    rel:childOf <Lugdach>.
 
-<#Lugdach>
+<Lugdach>
     a foaf:Person;
     irishRel:genName "Lugdach";
     irishRel:nomName "Lugaid";
-    rel:childOf <#LogaLúaith>.
+    rel:childOf <LogaLúaith>.
 
-<#LogaLúaith>
+<LogaLúaith>
     a foaf:Person;
     irishRel:genName "Loga Lúaith";
     irishRel:nomName "Lug Lúath";
-    rel:childOf <#EithnendCaiss>.
+    rel:childOf <EithnendCaiss>.
 
-<#EithnendCaiss>
+<EithnendCaiss>
     a foaf:Person;
     irishRel:genName "Eithnend Caiss";
     irishRel:nomName "Ethniu Cass";
-    rel:childOf <#DomnaindDeirg>.
+    rel:childOf <DomnaindDeirg>.
 
-<#DomnaindDeirg>
+<DomnaindDeirg>
     a foaf:Person;
     irishRel:genName "Domnaind Deirg";
     irishRel:nomName "Domnand Derg";
-    rel:childOf <#Ethiuir>.
+    rel:childOf <Ethiuir>.
 
-<#Ethiuir>
+<Ethiuir>
     a foaf:Person;
     irishRel:genName "Ethiuir";
     irishRel:nomName "Ether";
-    rel:childOf <#EchachFiad>.
+    rel:childOf <EchachFiad>.
 
-<#EchachFiad>
+<EchachFiad>
     a foaf:Person;
     irishRel:genName "Echach Fiad";
     irishRel:nomName "Eochu Fiad";
-    rel:childOf <#CongailCostodaig>.
+    rel:childOf <CongailCostodaig>.
 
-<#CongailCostodaig>
+<CongailCostodaig>
     a foaf:Person;
     foaf:name "Congail Costodaig";
     irishRel:nomName "Congal Costodach";
-    rel:childOf <#EchachApthaig>.
+    rel:childOf <EchachApthaig>.
 
-<#EchachApthaig>
+<EchachApthaig>
     a foaf:Person;
     irishRel:genName "Echach Apthaig";
     irishRel:nomName "Eochu Apthach";
-    rel:childOf <#Airt>.
+    rel:childOf <Airt>.
 
-<#Airt>
+<Airt>
     a foaf:Person;
     irishRel:genName "Airt";
     irishRel:nomName "Art";
-    rel:childOf <#Flaind>.
+    rel:childOf <Flaind>.
 
-<#Flaind>
+<Flaind>
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
-    rel:childOf <#EbirBricc>.
+    rel:childOf <EbirBricc>.
 
-<#EbirBricc>
+<EbirBricc>
     a foaf:Person;
     irishRel:genName "Ebir Bricc";
     irishRel:nomName "Eber Brecc";
-    rel:childOf <#EchachEtguthaig>.
+    rel:childOf <EchachEtguthaig>.
 
-<#EchachEtguthaig>
+<EchachEtguthaig>
     a foaf:Person;
     irishRel:genName "Echach Etguthaig";
     irishRel:nomName "Eochu Etguthach";
-    rel:childOf <#DaireDaimthig>.
+    rel:childOf <DaireDaimthig>.
 
-<#DaireDaimthig>
+<DaireDaimthig>
     a foaf:Person;
     irishRel:genName "Daire Daimthig";
     irishRel:nomName "Daire Daimthech";
-    rel:childOf <#Rosa>.
+    rel:childOf <Rosa>.
 
-<#Rosa>
+<Rosa>
     a foaf:Person;
     irishRel:genName "Rosa";
     irishRel:nomName "Ros";
-    rel:childOf <#Riguill>.
+    rel:childOf <Riguill>.
 
-<#Riguill>
+<Riguill>
     a foaf:Person;
     irishRel:genName "Riguill";
     irishRel:nomName "Rigoll";
-    rel:childOf <#LugdachClo>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#RosaRiguill>.
+    rel:childOf <LugdachClo>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#RosaRiguill>.
 
-<#LugdachClo>
+<LugdachClo>
     a foaf:Person;
     irishRel:genName "Lugdach Clo";
     irishRel:nomName "Lugaid Clo";
-    rel:childOf <#Bregoin>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#LugdachLoigde>.
+    rel:childOf <Bregoin>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#LugdachLoigde>.
 
-<#Bregoin>
+<Bregoin>
     a foaf:Person;
     irishRel:genName "Bregoin";
     irishRel:nomName "Bregon";
-    rel:childOf <#Lugdach-78292120>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Bregain>.
+    rel:childOf <Lugdach-78292120>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#Bregain>.
 
-<#Lugdach-78292120>
+<Lugdach-78292120>
     a foaf:Person;
     irishRel:genName "Lugdach";
     irishRel:nomName "Lugaid";
-    rel:childOf <#Itha>;
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Lugdach>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Lugdach-e8f3fc1f>.
+    rel:childOf <Itha>;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Lugdach>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#Lugdach-e8f3fc1f>.
 
-<#Itha>
+<Itha>
     a foaf:Person;
     irishRel:genName "Itha";
     irishRel:nomName "Ith";
-    owl:sameAs <http://example.com/LL/darine_sil_lugdach.ttl#Itha>;
-    owl:sameAs <http://example.com/LL/ciarraige_luachra.ttl#Itha>.
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Itha>;
+    owl:sameAs <http://example.com/LL/ciarraige_luachra.trig#Itha>.
 
-<#Fergus-438654dd>
-    owl:sameAs <#Fergus>;
-    rel:childOf <#Róig-a25fa629>.
+<Fergus-438654dd>
+    owl:sameAs <Fergus>;
+    rel:childOf <Róig-a25fa629>.
 
-<#Róig-a25fa629>
+<Róig-a25fa629>
     irishRel:nomName "Róig";
-    owl:sameAs <#Roig>;
-    rel:childOf <#Rosa-054832e8>.
+    owl:sameAs <Roig>;
+    rel:childOf <Rosa-054832e8>.
 
-<#Rosa-054832e8>
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Rosa>;
+<Rosa-054832e8>
+    owl:sameAs <http://example.com/LL/n_echach.trigRosa>;
     irishRel:genName "Rosa";
     irishRel:nomName "Ros";
-    rel:childOf <#Rudraige>.
+    rel:childOf <Rudraige>.
 
-<#Rudraige>
-    owl:sameAs <http://example.com/LL/n_echach.ttl#Rudraige>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Rudraige>.
+<Rudraige>
+    owl:sameAs <http://example.com/LL/n_echach.trig#Rudraige>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Rudraige>.
 
-<#Fergus-c2ea499d>
-    owl:sameAs <#Fergus>;
-    rel:childOf <#Roich>.
+<Fergus-c2ea499d>
+    owl:sameAs <Fergus>;
+    rel:childOf <Roich>.
 
-<#Roich>
-    owl:sameAs <#Roig>;
+<Roich>
+    owl:sameAs <Roig>;
     irishRel:nomName "Roich";
-    rel:childOf <#Echdach>.
+    rel:childOf <Echdach>.
 
-<#Echdach>
+<Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Eochaid";
-    rel:childOf <#Corpri-033a63ee>.
+    rel:childOf <Corpri-033a63ee>.
 
-<#Corpri-033a63ee>
-    owl:sameAs <#Corpri>;
-    rel:childOf <#Lugdach-f41962a5>.
+<Corpri-033a63ee>
+    owl:sameAs <Corpri>;
+    rel:childOf <Lugdach-f41962a5>.
 
-<#Lugdach-f41962a5>
-    owl:sameAs <#Lugdach>;
-    rel:childOf <#Lugair>.
+<Lugdach-f41962a5>
+    owl:sameAs <Lugdach>;
+    rel:childOf <Lugair>.
 
-<#Lugair>
+<Lugair>
     a foaf:Person;
     irishRel:genName "Lugair";
     irishRel:nomName "Lugar";
-    rel:childOf <#Loga>.
+    rel:childOf <Loga>.
 
-<#Loga>
+<Loga>
     a foaf:Person;
     irishRel:genName "Loga";
     irishRel:nomName "Lug";
-    rel:childOf <#Cethnend>.
+    rel:childOf <Cethnend>.
 
-<#Cethnend>
+<Cethnend>
     a foaf:Person;
     irishRel:nomName "Cethnend";
-    rel:childOf <#Donand>.
+    rel:childOf <Donand>.
 
-<#Donand>
+<Donand>
     a foaf:Person;
     irishRel:nomName "Donand";
-    rel:childOf <#Bratha>.
+    rel:childOf <Bratha>.
 
-<#Bratha>
+<Bratha>
     a foaf:Person;
     irishRel:genName "Bratha";
     irishRel:nomName "Braith";
-    rel:childOf <#Connaid>.
+    rel:childOf <Connaid>.
 
-<#Connaid>
+<Connaid>
     a foaf:Person;
     irishRel:genName "Connaid";
     irishRel:nomName "Connad";
-    rel:childOf <#Defhatha>.
+    rel:childOf <Defhatha>.
 
-<#Defhatha>
+<Defhatha>
     a foaf:Person;
     irishRel:genName "Defhatha";
     irishRel:nomName "Derbfath";
-    rel:childOf <#Ceu>.
+    rel:childOf <Ceu>.
 
-<#Ceu>
+<Ceu>
     a foaf:Person;
     irishRel:nomName "Ceu";
-    rel:childOf <#Celebair>.
+    rel:childOf <Celebair>.
 
-<#Celebair>
+<Celebair>
     a foaf:Person;
     irishRel:nomName "Celebair";
-    rel:childOf <#Boais>.
+    rel:childOf <Boais>.
 
-<#Boais>
+<Boais>
     a foaf:Person;
     irishRel:genName "Boais";
     irishRel:nomName "Boas";
-    rel:childOf <#Anfois>.
+    rel:childOf <Anfois>.
 
-<#Anfois>
+<Anfois>
     a foaf:Person;
     irishRel:genName "Anfois";
     irishRel:nomName "Anfos";
-    rel:childOf <#Ebir>.
+    rel:childOf <Ebir>.
 
-<#Ebir>
+<Ebir>
     a foaf:Person;
     irishRel:genName "Ebir";
     irishRel:nomName "Eber";
-    rel:childOf <#Ethiuir-47416350>.
+    rel:childOf <Ethiuir-47416350>.
 
-<#Ethiuir-47416350>
+<Ethiuir-47416350>
     a foaf:Person;
     irishRel:genName "Ethiuir";
     irishRel:nomName "Ether";
-    rel:childOf <#h-Érich>.
+    rel:childOf <h-Érich>.
 
-<#h-Érich>
+<h-Érich>
     a foaf:Person;
     irishRel:genName "h-Érich";
     irishRel:genName "Érich";
     irishRel:nomName "Érech";
-    rel:childOf <#Febria>;
-    owl:sameAs <http://example.com/LL/ciarraige.ttl#h-ÉrechFebria>.
+    rel:childOf <Febria>;
+    owl:sameAs <http://example.com/LL/ciarraige.trig#h-ÉrechFebria>.
 
-<#Febria>
+<Febria>
     a foaf:Person;
     irishRel:nomName "Febria";
-    rel:childOf <#MiledEspain>;
-    owl:sameAs <http://example.com/LL/ciarraige.ttl#h-ÉrechFebria>.
+    rel:childOf <MiledEspain>;
+    owl:sameAs <http://example.com/LL/ciarraige.trigh-ÉrechFebria>.
 
-<#MiledEspain>
-    owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#MiledEspain>;
-    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#Míl>;
-    owl:sameAs <http://example.com/LL/ciarraige.ttl#MiledEspane>.
+<MiledEspain>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MiledEspain>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Míl>;
+    owl:sameAs <http://example.com/LL/ciarraige.trig#MiledEspane>.
+}

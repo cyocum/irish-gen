@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/cenél_feradaich.ttl>.
+@base <http://example.com/Rawl_B502/cenél_feradaich.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,100 +9,104 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Cenél Feradaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
 
-<#MáelÍssu>
+<MáelÍssu>
     a foaf:Person;
     irishRel:nomName "Máel Íssu";
-    rel:childOf <#MáelBrigti>.
+    rel:childOf <MáelBrigti>.
 
-<#MáelBrigti>
+<MáelBrigti>
     a foaf:Person;
     irishRel:genName "Máel Brigti";
     irishRel:nomName "Máel Brigt";
-    rel:childOf <#DuibIndsi>.
+    rel:childOf <DuibIndsi>.
 
-<#DuibIndsi>
+<DuibIndsi>
     a foaf:Person;
     irishRel:genName "Duib Indsi";
     irishRel:nomName "Dub Indsi";
-    rel:childOf <#MáelPátric>.
+    rel:childOf <MáelPátric>.
 
-<#MáelPátric>
+<MáelPátric>
     a foaf:Person;
     irishRel:genName "Máel Pátric";
-    rel:childOf <#Doiligén>.
+    rel:childOf <Doiligén>.
 
-<#Doiligén>
+<Doiligén>
     a foaf:Person;
     irishRel:genName "Doiligén";
     irishRel:nomName "Doilgén";
-    rel:childOf <#Brolcháin>.
+    rel:childOf <Brolcháin>.
 
-<#Brolcháin>
+<Brolcháin>
     a foaf:Person;
     irishRel:genName "Brolcháin";
     irishRel:nomName "Brolchán";
-    rel:childOf <#Eilgíne>.
+    rel:childOf <Eilgíne>.
 
-<#Eilgíne>
+<Eilgíne>
     a foaf:Person;
     irishRel:genName "Eilgíne";
-    rel:childOf <#Díchon>.
+    rel:childOf <Díchon>.
 
-<#Díchon>
+<Díchon>
     a foaf:Person;
     irishRel:genName "Díchon";
     irishRel:nomName "Díchu";
-    rel:childOf <#Flaind>.
+    rel:childOf <Flaind>.
 
-<#Flaind>
+<Flaind>
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
-    rel:childOf <#MáelTuile>.
+    rel:childOf <MáelTuile>.
 
-<#MáelTuile>
+<MáelTuile>
     a foaf:Person;
     irishRel:genName "Máel Tuile";
-    rel:childOf <#Crundmáel>.
+    rel:childOf <Crundmáel>.
 
-<#Crundmáel>
+<Crundmáel>
     a foaf:Person;
     irishRel:genName "Crundmáel";
-    rel:childOf <#Suibne>.
+    rel:childOf <Suibne>.
 
-<#Suibne>
+<Suibne>
     a foaf:Person;
     irishRel:genName "Suibne";
-    rel:childOf <#Fiachnai>.
+    rel:childOf <Fiachnai>.
 
-<#Fiachnai>
+<Fiachnai>
     a foaf:Person;
     irishRel:genName "Fiachnai";
     irishRel:nomName "Fiachna";
-    rel:childOf <#Feradaich>.
+    rel:childOf <Feradaich>.
 
-<#Feradaich>
+<Feradaich>
     a foaf:Person;
     irishRel:genName "Feradaich";
     irishRel:nomName "Feradach";
-    rel:childOf <#Éogain>.
+    rel:childOf <Éogain>.
 
-<#Éogain>
+<Éogain>
     a foaf:Person;
     irishRel:genName "Éogain";
     irishRel:nomName "Éogan";
-    rel:childOf <#Néill>;
+    rel:childOf <Néill>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_áeda_m_fergusa.ttl#Éogain>.
 
-<#Néill>
+<Néill>
     a foaf:Person;
     irishRel:genName "Néill" ;
     irishRel:nomName "Niall" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_áeda_m_fergusa.ttl#Néill> .
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/de_nominibus_laginensium.ttl>.
+@base <http://example.com/Rawl_B502/de_nominibus_laginensium.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,42 +9,46 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "INCIPIUNT PAUCA DE NOMINIBUS LAGINENSIUM ET DE REGIBUS ET ORIGINIBUS ET DE GENELOGIIS ET (DI)VISIONIBUS EORUM."@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text001.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text001.html> .
 
-<#LabraidLongsechMóen>
+<LabraidLongsechMóen>
     a foaf:Person;
     irishRel:nomName "Labraid Longsech Móen";
-    rel:childOf <#AilellaÁine>;
-    rel:descendantOf <#LóegaireLorcc>;
+    rel:childOf <AilellaÁine>;
+    rel:descendantOf <LóegaireLorcc>;
     owl:sameAs <http://example.com/LL/lagin.ttl#LabraidLongsechMoen>.
 
-<#AilellaAine>
+<AilellaAine>
     a foaf:Person;
     irishRel:genName "Ailella Áine";
     irishRel:nomName "Ailill Áine";
     owl:sameAs <http://example.com/LL/lagin.ttl#AilellaAne>.
 
-<#LóegaireLorcc>
+<LóegaireLorcc>
     a foaf:Person;
     irishRel:nomName "Lóegaire Lorcc";
-    rel:childOf <#AugaineMáir>;
+    rel:childOf <AugaineMáir>;
     owl:sameAs <http://example.com/LL/lagin.ttl#LoegaireLuirc>;
     rdfs:comment "is h-é senathair Laigin";
-    irishRel:ancestorOfGroup <#lagin>.
+    irishRel:ancestorOfGroup <lagin>.
 
-<#Lagin>
+<Lagin>
     a irishRel:populationGroup;
     irishRel:populationGroupName "Lagin".
 
-<#AugaineMáir>
+<AugaineMáir>
     a foaf:Person;
     irishRel:genName "Augaine Máir";
     irishRel:nomName "Augaine Már";
     owl:sameAs <http://example.com/LL/lagin.ttl#ÚgaineMáir>;
     irishRel:numChild 26;
     rdfs:comment "Trí m. fichet & téora ingena dano la Augaine".
+}

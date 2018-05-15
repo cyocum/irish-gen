@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_cathasaig.ttl>.
+@base <http://example.com/Rawl_B502/clann_cathasaig.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,38 +9,42 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Cathasaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#MáelCluichi>
+<MáelCluichi>
     a foaf:Person;
     irishRel:nomName "Máel Cluichi";
-    rel:childOf <#Flannabrat>.
+    rel:childOf <Flannabrat>.
 
-<#Flannabrat>
+<Flannabrat>
     a foaf:Person;
     irishRel:genName "Flannabrat";
     irishRel:nomName "Flannabra";
-    rel:childOf <#Catháin>.
+    rel:childOf <Catháin>.
 
-<#Catháin>
+<Catháin>
     a foaf:Person;
     irishRel:genName "Catháin";
     irishRel:nomName "Cathán";
-    rel:childOf <#Cathasaig>.
+    rel:childOf <Cathasaig>.
 
-<#Cathasaig>
+<Cathasaig>
     a foaf:Person;
     irishRel:genName "Cathasaig";
     irishRel:nomName "Cathasach";
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige.ttl#Cathasach>;
-    rel:childOf <#FlainnFéorna>.
+    rel:childOf <FlainnFéorna>.
 
-<#FlainnFéorna>
+<FlainnFéorna>
     a foaf:Person;
     irishRel:genName "Flainn Féorna" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige.ttl#FlannFeórna>.
+}

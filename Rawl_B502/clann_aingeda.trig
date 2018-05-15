@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_aingeda.ttl>.
+@base <http://example.com/Rawl_B502/clann_aingeda.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,42 +9,46 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Aingeda"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Findobur>
+<Findobur>
     a foaf:Person;
     irishRel:nomName "Findobur";
-    rel:childOf <#Braccáin>.
+    rel:childOf <Braccáin>.
 
-<#Braccáin>
+<Braccáin>
     a foaf:Person;
     irishRel:genName "Braccáin";
     irishRel:nomName "Braccán";
-    rel:childOf <#Ailgellaich>.
+    rel:childOf <Ailgellaich>.
 
-<#Ailgellaich>
+<Ailgellaich>
     a foaf:Person;
     irishRel:genName "Ailgellaich";
     irishRel:nomName "Ailgellach";
-    rel:childOf <#Eichlech>.
+    rel:childOf <Eichlech>.
 
-<#Eichlech>
+<Eichlech>
     a foaf:Person;
     irishRel:genName "Eichlech";
-    rel:childOf <#Aingeda>.
+    rel:childOf <Aingeda>.
 
-<#Aingeda>
+<Aingeda>
     a foaf:Person;
     irishRel:genName "Aingeda";
-    rel:childOf <#Báeth>;
+    rel:childOf <Báeth>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.ttl#Aingid>.
 
-<#Báeth>
+<Báeth>
     a foaf:Person;
     irishRel:genName "Báeth" ;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.ttl#Báeth>.
+}

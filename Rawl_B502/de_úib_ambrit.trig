@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/de_úib_ambrit.ttl>.
+@base <http://example.com/Rawl_B502/de_úib_ambrit.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,31 +9,35 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "De Úib Ambrit"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Ambrit>
+<Ambrit>
     a foaf:Person;
     irishRel:genName "Ambrit";
-    rel:childOf <#Imchada>;
+    rel:childOf <Imchada>;
     owl:sameAs <http://example.com/Rawl_B502/clann_indsáin_meic_áine.ttl#Ambrit>.
 
-<#Imchada>
+<Imchada>
     a foaf:Person;
     irishRel:genName "Imchada" ;
     owl:sameAs <http://example.com/Rawl_B502/clann_indsáin_meic_áine.ttl#Imchada>.
 
-<#Cóenniu>
+<Cóenniu>
     a foaf:Person ;
     irishRel:nomName "Cóenniu" ;
-    rel:childOf <#Ambrit>.
+    rel:childOf <Ambrit>.
 
-<#Feirbb>
+<Feirbb>
     a foaf:Person ;
     irishRel:nomName "Feirbb" ;
-    rel:childOf <#Ambrit>.
+    rel:childOf <Ambrit>.
     
+}

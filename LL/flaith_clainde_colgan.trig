@@ -1,4 +1,4 @@
-@base <http://example.com/LL/flaith_clainde_colgan.ttl>.
+@base <http://example.com/LL/flaith_clainde_colgan.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,19 +9,24 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Flaithe Clainde Colgan"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text093.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text093.html> .
 
-<#Mathgamain>
+<Mathgamain>
     a foaf:Person;
     irishRel:nomName "Mathgamain";
-    rel:descendantOf <#Oengusa>;
-    rel:childOf <#Domnaill>;
-    irishRel:ancestorOfGroup <#hOengusa>.
+    rel:descendantOf <Oengusa>;
+    rel:childOf <Domnaill>;
+    irishRel:ancestorOfGroup <hOengusa>.
 
 # "Mathgamain .h Oengusa m Domnaill...m Oengusa" has been read here as a
 # tautology - the first Oengusa is also the second Oengusa. How do we know that
@@ -32,136 +37,138 @@
 # weigh in against interposing a third Uallachan in that pedigree and a second O
 # Oengus here? EPT
 
-<#hOengusa>
+<hOengusa>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h Oengusa" .    
 
-<#Domnaill>
+<Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
-    rel:childOf <#Aeda>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Domnall-059aa900>.
+    rel:childOf <Aeda>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Domnall-059aa900>.
 
-<#Aeda>
+<Aeda>
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
-    rel:childOf <#Uallachain>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Aeda-6c90fd3c>.
+    rel:childOf <Uallachain>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Aeda-6c90fd3c>.
 
-<#Uallachain>
+<Uallachain>
     a foaf:Person;
     irishRel:genName "Uallachain";
     irishRel:nomName "Uallachan";
-    rel:childOf <#Thaidg>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Uallachain-32ef234a>.
+    rel:childOf <Thaidg>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Uallachain-32ef234a>.
 
-<#Thaidg>
+<Thaidg>
     a foaf:Person;
     irishRel:genName "Thaidg";
     irishRel:nomName "Tadg";
-    rel:childOf <#Oengusa>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Taidg>.
+    rel:childOf <Oengusa>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Taidg>.
 
-<#Oengusa>
+<Oengusa>
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Oengus";
-    rel:childOf <#Cummascaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Oengusa-52b15d3a>.
+    rel:childOf <Cummascaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Oengusa-52b15d3a>.
 
-<#Cummascaig>
+<Cummascaig>
     a foaf:Person;
     irishRel:genName "Cummascaig";
     irishRel:nomName "Cummuscach";
-    rel:childOf <#Colgan>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cummascaig-7496bb53>.
+    rel:childOf <Colgan>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cummascaig-7496bb53>.
 
-<#Colgan>
+<Colgan>
     a foaf:Person;
     irishRel:genName "Colgan";
     irishRel:nomName "Colgu";
-    rel:childOf <#Mugroin>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Colgan-7bf4e34c>.
+    rel:childOf <Mugroin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Colgan-7bf4e34c>.
 
-<#Mugroin>
+<Mugroin>
     a foaf:Person;
     irishRel:genName "Mugroin";
     irishRel:nomName "Mugron";
-    rel:childOf <#FlaindDaChongal>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Mugroin-723d5741>.
+    rel:childOf <FlaindDaChongal>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Mugroin-723d5741>.
 
-<#FlaindDaChongal>
+<FlaindDaChongal>
     a foaf:Person;
     irishRel:genName "Flaind Da Chongal";
     irishRel:nomName "Fland Da Chongal";
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#FlaindDaCongal>;
-    owl:sameAs <http://example.com/LL/flaithe_h_riacain.ttl#FlaindDaChongal>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Flaind-685f02eb>.
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#FlaindDaCongal>;
+    owl:sameAs <http://example.com/LL/flaithe_h_riacain.trig#FlaindDaChongal>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Flaind-685f02eb>.
 
-<#MacTire>
+<MacTire>
     a foaf:Person;
     irishRel:nomName "Mac Tire";
-    rel:descendantOf <#Uallachain-f4af3430>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#MacTiri>;
-    irishRel:descendantOfGroup <#hUallachain>.
+    rel:descendantOf <Uallachain-f4af3430>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#MacTiri>;
+    irishRel:descendantOfGroup <hUallachain>.
 
-<#hUallachain>
+<hUallachain>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName ".h Uallachain" .    
 
-<#Uallachain-33a88eb0>
+<Uallachain-33a88eb0>
     a foaf:Person;
     irishRel:genName "Uallachain";
     irishRel:nomName "Uallachan";
-    rel:childOf <#Uallachain-f4af3430>.
+    rel:childOf <Uallachain-f4af3430>.
 
-<#Uallachain-f4af3430>
+<Uallachain-f4af3430>
     a foaf:Person;
     irishRel:genName "Uallachain";
     irishRel:nomName "Uallachan";
-    rel:childOf <#Culeoin>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Uallachain>.
+    rel:childOf <Culeoin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Uallachain>.
 
-<#Culeoin>
+<Culeoin>
     a foaf:Person;
     irishRel:genName "Culeoin";
     irishRel:nomName "Culen";
-    rel:childOf <#Conchobuir>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Culeoin>.
+    rel:childOf <Conchobuir>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Culeoin>.
 
-<#Conchobuir>
+<Conchobuir>
     a foaf:Person;
     irishRel:genName "Conchobuir";
     irishRel:nomName "Conchobar";
-    rel:childOf <#MeicTiri>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Conchobuir-49df6b27>.
+    rel:childOf <MeicTiri>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Conchobuir-49df6b27>.
 
-<#MeicTiri>
+<MeicTiri>
     a foaf:Person;
     irishRel:genName "Meic Tiri";
     irishRel:nomName "Mac Tire";
-    rel:childOf <#Uallachain-0a499970>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#MeicTire>.
+    rel:childOf <Uallachain-0a499970>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#MeicTire>.
 
-<#Uallachain-0a499970>
+<Uallachain-0a499970>
     a foaf:Person;
     irishRel:genName "Uallachain";
     irishRel:nomName "Uallachan";
-    rel:childOf <#Fogartaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Uallachain-acfd9c8a>.
+    rel:childOf <Fogartaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Uallachain-acfd9c8a>.
 
-<#Fogartaig>
+<Fogartaig>
     a foaf:Person;
     irishRel:genName "Fogartaig";
     irishRel:nomName "Fogartach";
-    rel:childOf <#Cummascaig-785d39d0>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fogartaig>.
+    rel:childOf <Cummascaig-785d39d0>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fogartaig>.
 
-<#Cummascaig-785d39d0>
+<Cummascaig-785d39d0>
     a foaf:Person;
     irishRel:genName "Cummascaig";
     irishRel:nomName "Cummuscach";
-    owl:sameAs <#Cummascaig>;
-    owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cummascaig-baf97480>.
+    owl:sameAs <Cummascaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cummascaig-baf97480>.
+}
+

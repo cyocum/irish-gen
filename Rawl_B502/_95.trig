@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/_95.ttl>.
+@base <http://example.com/Rawl_B502/_95.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,43 +10,46 @@
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "95"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text008.html> .
 
-<#Militis>
+<Militis>
     a foaf:Person;
     irishRel:genName "Militis";
     irishRel:nomName "Miles";
     owl:sameAs <http://example.com/LL/lagin.ttl#MiledEspane>.
 
-<#Éremón>
+<Éremón>
     a irishTitles:Rí;
     irishRel:nomName "Éremón";
-    rel:childOf <#Militis>;
+    rel:childOf <Militis>;
     owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#Erímon>;
     owl:sameAs <http://example.com/LL/lagin.ttl#h-Erimoin>;
     rdfs:comment "primus de Scotis omnem Hiberniam regnauit ... de semine ipsius Hiberniam .lviii. reges dominauerunt antequam Patricius Hibernensibus passionem et catholicam fidem regulamque Christi narraret et post Patricium de prole eius .l. reges dominauerunt Hiberniam";
     irishTitles:reignLength 6;
     irishTitles:succeededBy [
       a irishTitles:Rí;
-      rel:childOf <#Éremón>;
-      irishTitles:succeededBy <#IarélProfeta>;
+      rel:childOf <Éremón>;
+      irishTitles:succeededBy <IarélProfeta>;
       irishTitles:reignLength 3;
       owl:sameAs <http://example.com/Rawl_B502/hic_sunt_nomina_incredentium.ttl#Muimne>;
       irishTitles:coRulerWith [
         a irishTitles:Rí;
-        rel:childOf <#Éremón>;
-        irishTitles:succeededBy <#IarélProfeta>;
+        rel:childOf <Éremón>;
+        irishTitles:succeededBy <IarélProfeta>;
         irishTitles:reignLength 3;
         owl:sameAs <http://example.com/Rawl_B502/hic_sunt_nomina_incredentium.ttl#Luigni>;
         irishTitles:coRulerWith [
           a irishTitles:Rí;
-          irishTitles:succeededBy <#IarélProfeta>;
-          rel:childOf <#Éremón>;
+          irishTitles:succeededBy <IarélProfeta>;
+          rel:childOf <Éremón>;
           owl:sameAs <http://example.com/Rawl_B502/hic_sunt_nomina_incredentium.ttl#Laigne>;
           irishTitles:reignLength 3;
           ]
@@ -54,16 +57,17 @@
     ];
     irishRel:numChild 5.
 
-<#IarélProfeta>
+<IarélProfeta>
     a irishTitles:Rí;
     irishRel:nomName "Iarél Profeta";
     irishTitles:reignLength 10;
-    rel:childOf <#Éremón>;
+    rel:childOf <Éremón>;
     owl:sameAs <http://example.com/LL/lagin.ttl#IriailFatha>.
 
-<#Éber>
+<Éber>
     a foaf:Person;
     irishRel:nomName "Éber";
-    rel:childOf <#Militis>;
+    rel:childOf <Militis>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.ttl#Éber>;
     rdfs:comment "Éber autem australem partem Hiberniae accepit".
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/minigud_senchassa_lagen_tuath_gabair_&_des_gabair.ttl>.
+@base <http://example.com/Rawl_B502/minigud_senchassa_lagen_tuath_gabair_&_des_gabair.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,46 +10,50 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Mínigud Senchassa Lagen Tuath Gabair & Des Gabair"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text002.html>;
-    dcterms:format "text/turtle";
+    dcterms:format "application/trig";
     rdfs:comment "MÍNIGUD SENCHASSA LAGEN TUATH GABAIR & DES GABAIR iar suidiu h-i trebaib & h-i tellaigib, h-i finib & h-i forshlointib cóicid Cathaír co h-Úgaine & co h-Éremón & co Ádam feib ro suidigit sóerchlanna cirt cóicid Cairpri."@sga ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text002.html> .
 
-<#Cathaír>
+<Cathaír>
     a foaf:Person;
     irishRel:genName "Cathaír";
     irishRel:nomName "Cathair";
-    rel:descendantOf <#h-Úgaine>;
+    rel:descendantOf <h-Úgaine>;
     owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#CathairMór>;
     owl:sameAs <http://example.com/Rawl_B502/bunad_laigen.ttl#CatháerMár>.
 
-<#h-Úgaine>
+<h-Úgaine>
     a foaf:Person;
     irishRel:accName "h-Úgaine";
     irishRel:nomName "Ugaine";
-    rel:descendantOf <#h-Éremón>;
+    rel:descendantOf <h-Éremón>;
     owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#UgaineMár>;
     owl:sameAs <http://example.com/Rawl_B502/bunad_laigen.ttl#Úgaine>.
 
-<#h-Éremón>
+<h-Éremón>
     a foaf:Person;
     irishRel:accName "h-Éremón";
     irishRel:nomName "Érimón";
-    rel:descendantOf <#Ádam>;
+    rel:descendantOf <Ádam>;
     owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.ttl#Erímon>;
     owl:sameAs <http://example.com/Rawl_B502/bunad_laigen.ttl#Éremón>.
 
-<#Ádam>
+<Ádam>
     a foaf:Person;
     irishRel:accName "Ádam";
     irishRel:nomName "Ádam";
     owl:sameAs <http://example.com/Rawl_B502/bunad_laigen.ttl#Adam>.
 
-<#Cairpri>
+<Cairpri>
     a foaf:Person;
     irishRel:genName "Cairpri";
     irishRel:nomName "Cairpre";
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.ttl#CairpreAithem>.
+}

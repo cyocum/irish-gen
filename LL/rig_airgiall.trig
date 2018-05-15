@@ -1,4 +1,4 @@
-﻿@base <http://example.com/LL/rig_airgiall.ttl>.
+﻿@base <http://example.com/LL/rig_airgiall.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,166 +9,171 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Rig Airgiall"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text103.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text103.html> .
 
-<#Dondchad>
+<Dondchad>
     a foaf:Person;
     irishRel:nomName "Dondchad";
-    rel:childOf <#ConChasil>.
+    rel:childOf <ConChasil>.
 
-<#ConChasil>
+<ConChasil>
     a foaf:Person;
     irishRel:nomName "Con Chasil";
     irishRel:nomName "Cú Casil";
-    rel:childOf <#Domnaill>.
+    rel:childOf <Domnaill>.
 
-<#Domnaill>
+<Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
-    rel:childOf <#Mathgamna>.
+    rel:childOf <Mathgamna>.
 
-<#Mathgamna>
+<Mathgamna>
     a foaf:Person;
     irishRel:genName "Mathgamna";
     irishRel:nomName "Mathgamain";
-    rel:childOf <#Laidcnén>.
+    rel:childOf <Laidcnén>.
 
-<#Laidcnén>
+<Laidcnén>
     a foaf:Person;
     irishRel:nomName "Laidcnén";
-    rel:childOf <#Cerbaill>.
+    rel:childOf <Cerbaill>.
 
-<#Cerbaill>
+<Cerbaill>
     a foaf:Person;
     irishRel:nomName "Cerbaill";
-    rel:childOf <#MaelPhoil>.
+    rel:childOf <MaelPhoil>.
 
-<#MaelPhoil>
+<MaelPhoil>
     a foaf:Person;
     irishRel:genName "Mael Phoil";
     irishRel:nomName "Mael Poil";
-    rel:childOf <#Fhogartaig>.
+    rel:childOf <Fhogartaig>.
 
-<#Fhogartaig>
+<Fhogartaig>
     a foaf:Person;
     irishRel:genName "Fhogartaig";
     irishRel:nomName "Fogartach";
-    rel:childOf <#Ruadrach>;
+    rel:childOf <Ruadrach>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Fogartaig-2ea886f0>.
 
-<#Ruadrach>
+<Ruadrach>
     a foaf:Person;
     irishRel:genName "Ruadrach";
     irishRel:nomName "Ruaidri";
-    rel:childOf <#MaelFhothartaig>;
+    rel:childOf <MaelFhothartaig>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Ruadrach>.
 
-<#MaelFhothartaig>
+<MaelFhothartaig>
     a foaf:Person;
     irishRel:genName "MaelFhothartaig";
     irishRel:nomName "Mael Fothartaig";
-    rel:childOf <#Artrach>;
+    rel:childOf <Artrach>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#MaelFothartaig>.
 
-<#Artrach>
+<Artrach>
     a foaf:Person;
     irishRel:nomName "Artrach";
-    rel:childOf <#Aithechda>;
+    rel:childOf <Aithechda>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Artrach>.
 
-<#Aithechda>
+<Aithechda>
     a foaf:Person;
     irishRel:nomName "Aithechda";
-    rel:childOf <#MaelDuib>;
+    rel:childOf <MaelDuib>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Aithechda>.
 
-<#MaelDuib>
+<MaelDuib>
     a foaf:Person;
     irishRel:nomName "Mael Duib";
-    rel:childOf <#Cronain>;
+    rel:childOf <Cronain>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#MaelDuib>.
 
-<#Cronain>
+<Cronain>
     a foaf:Person;
     irishRel:genName "Cronain";
     irishRel:nomName "Cronan";
-    rel:childOf <#Fhergusa>;
+    rel:childOf <Fhergusa>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Cronain>.
 
-<#Fhergusa>
+<Fhergusa>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
-    rel:childOf <#NadSluaig>;
+    rel:childOf <NadSluaig>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Fhergusa>.
 
-<#NadSluaig>
+<NadSluaig>
     a foaf:Person;
     irishRel:nomName "Nad Sluaig";
-    rel:childOf <#CairpriDaimArgait>;
+    rel:childOf <CairpriDaimArgait>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#NadShluaig>;
     owl:sameAs <http://example.com/LL/h_airgialla.ttl#NadSluaig>.
 
-<#CairpriDaimArgait>
+<CairpriDaimArgait>
     a foaf:Person;
     irishRel:nomName "Cairpri Daim Argait";
-    rel:childOf <#Echdach>;
+    rel:childOf <Echdach>;
     owl:sameAs <http://example.com/LL/fer_manach.ttl#CorpriDaimArgait>;
     owl:sameAs <http://example.com/LL/fer_fernmaige.ttl#Carpri>;
     owl:sameAs <http://example.com/LL/h_airgialla.ttl#CairpreDamArgait>.
 
-<#Echdach>
+<Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Eochaid";
-    rel:childOf <#CremthaindLeith>;
+    rel:childOf <CremthaindLeith>;
     owl:sameAs <http://example.com/LL/fer_manach.ttl#Echdach>.
 
-<#CremthaindLeith>
+<CremthaindLeith>
     a foaf:Person;
     irishRel:genName "Cremthaind Leith";
     irishRel:nomName "Crimthand Liath";
-    rel:childOf <#Fheic>;
+    rel:childOf <Fheic>;
     owl:sameAs <http://example.com/LL/fer_manach.ttl#CrimthainnLeith>.
 
-<#Fheic>
+<Fheic>
     a foaf:Person;
     irishRel:genName "Fheic";
     irishRel:nomName "Fiacc";
-    rel:childOf <#DegaDuirn>.
+    rel:childOf <DegaDuirn>.
 
-<#DegaDuirn>
+<DegaDuirn>
     a foaf:Person;
     irishRel:genName "Dega Duirn";
     irishRel:nomName "Daig Dornd";
-    rel:childOf <#Rocheda>.
+    rel:childOf <Rocheda>.
 
-<#Rocheda>
+<Rocheda>
     a foaf:Person;
     irishRel:genName "Rocheda";
     irishRel:nomName "Rochaid";
-    rel:childOf <#CollaFocrí>.
+    rel:childOf <CollaFocrí>.
 
-<#CollaFocrí>
+<CollaFocrí>
     a foaf:Person;
     irishRel:nomName "Colla Focrí";
-    rel:childOf <#EchdachDomlen>;
+    rel:childOf <EchdachDomlen>;
     owl:sameAs <http://example.com/LL/h_niallain.ttl#CollaFocrí>.
 
-<#EchdachDomlen>
+<EchdachDomlen>
     a foaf:Person;
     irishRel:genName "Echdach Domlen";
     irishRel:nomName "Eochaid Domlen";
-    rel:childOf <#CairpriLifechair>;
+    rel:childOf <CairpriLifechair>;
     owl:sameAs <http://example.com/LL/mugdorn.ttl#EchachDomlen>.
 
-<#CairpriLifechair>
+<CairpriLifechair>
     a foaf:Person;
     irishRel:nomName "Cairpri Lifechair";
     owl:sameAs <http://example.com/LL/h_mani.ttl#CarpriLifechair>.
+}

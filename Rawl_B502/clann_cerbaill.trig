@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_cerbaill.ttl>.
+@base <http://example.com/Rawl_B502/clann_cerbaill.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,74 +10,78 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Cerbaill"@sga ;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html>.
 
-<#Écertach>
+<Écertach>
     a foaf:Person;
     irishRel:nomName "Écertach";
-    rel:childOf <#Cormaic>;
+    rel:childOf <Cormaic>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Ecertach>.
 
-<#Cormaic>
+<Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
-    rel:childOf <#Cellaich>;
+    rel:childOf <Cellaich>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Cormaic>.
 
-<#Cellaich>
+<Cellaich>
     a foaf:Person;
     irishRel:genName "Cellaich";
     irishRel:nomName "Cellach";
-    rel:childOf <#MáelFínáin>;
+    rel:childOf <MáelFínáin>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Cellaig>.
 
-<#MáelFínáin>
+<MáelFínáin>
     a foaf:Person;
     irishRel:genName "Máel Fínáin";
     irishRel:nomName "Máel Fínán";
-    rel:childOf <#Arttgaile>;
+    rel:childOf <Arttgaile>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#MaelFhínain>.
 
-<#Arttgaile>
+<Arttgaile>
     a foaf:Person;
     irishRel:genName "Arttgaile" ;
     irishRel:nomName "Arttgal" ;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Artgaile-901d760e>.
     #sameAs http://example.com/Rawl_B502/cenél_conaill.ttl#Arttgaile> ? - CY
 
-<#MáelFínáin-bef8e616>
+<MáelFínáin-bef8e616>
     a foaf:Person;
     irishRel:genName "Máel Fínáin";
-    owl:sameAs <#MáelFínáin>;
+    owl:sameAs <MáelFínáin>;
     irishRel:numChild 4.
 
-<#Fáelán>
+<Fáelán>
     a foaf:Person;
     irishRel:nomName "Fáelán";
-    rel:childOf <#MáelFínáin-bef8e616>;
+    rel:childOf <MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Fáelan>.
 
-<#Mugrón>
+<Mugrón>
     a foaf:Person;
     irishRel:nomName "Mugrón";
-    rel:childOf <#MáelFínáin-bef8e616>;
+    rel:childOf <MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Mugron>.
 
-<#Cerball>
+<Cerball>
     a foaf:Person;
     irishRel:nomName "Cerball";
-    rel:childOf <#MáelFínáin-bef8e616>;
+    rel:childOf <MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Cerball>.
 
-<#Láegaire>
+<Láegaire>
     a foaf:Person;
     irishRel:nomName "Láegaire";
-    rel:childOf <#MáelFínáin-bef8e616>;
+    rel:childOf <MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Loegaire-d41447df>.
 
+}

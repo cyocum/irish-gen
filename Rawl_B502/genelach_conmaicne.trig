@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/genelach_conmaicne.ttl>.
+@base <http://example.com/Rawl_B502/genelach_conmaicne.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,84 +9,88 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Conmaicne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text025.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text025.html> .
 
-<#Cúscraid>
+<Cúscraid>
     a foaf:Person ;
     irishRel:nomName "Cúscraid" ;
     irishRel:numChild 5 .
 
-<#Fráech>
+<Fráech>
     a foaf:Person ;
     irishRel:nomName "Fráech" ;
-    rel:childOf <#Cúscraid>.
+    rel:childOf <Cúscraid>.
 
-<#Finer>
+<Finer>
     a foaf:Person ;
-    irishRel:nomName <#Finer>;
-    rel:childOf <#Cúscraid>.
+    irishRel:nomName <Finer>;
+    rel:childOf <Cúscraid>.
 
-<#Findchóem>
+<Findchóem>
     a foaf:Person ;
     irishRel:nomName "Findchóem" ;
-    rel:childOf <#Cúscraid>.
+    rel:childOf <Cúscraid>.
 
-<#Copchass>
+<Copchass>
     a foaf:Person ;
     irishRel:nomName "Copchass" ;
-    rel:childOf <#Cúscraid>.
+    rel:childOf <Cúscraid>.
 
-<#Ciru>
+<Ciru>
     a foaf:Person ;
     irishRel:nomName "Ciru" ;
-    rel:childOf <#Cúscraid>.
+    rel:childOf <Cúscraid>.
 
-<#Fraích>
+<Fraích>
     irishRel:genName "Fraích" ;
-    owl:sameAs <#Fráech>;
+    owl:sameAs <Fráech>;
     irishRel:numChild 3 .
 
-<#Dubán>
+<Dubán>
     a foaf:Person ;
     irishRel:nomName "Dubán" ;
-    rel:childOf <#Fraích>.
+    rel:childOf <Fraích>.
 
-<#Lugna>
+<Lugna>
     a foaf:Person ;
     irishRel:nomName "Lugna" ;
-    rel:childOf <#Fraích>.
+    rel:childOf <Fraích>.
 
-<#Cass>
+<Cass>
     a foaf:Person ;
     irishRel:nomName "Cass" ;
-    rel:childOf <#Fraích>.
+    rel:childOf <Fraích>.
 
-<#Cárith>
+<Cárith>
     a foaf:Person ;
     irishRel:nomName "Cárith" ;
     irishRel:numChild 4 .
 
-<#Eithne>
+<Eithne>
     a foaf:Person ;
     irishRel:nomName "Eithne" ;
-    rel:childOf <#Cárith>.
+    rel:childOf <Cárith>.
 
-<#Ailtne>
+<Ailtne>
     a foaf:Person ;
     irishRel:nomName "Ailtne" ;
-    rel:childOf <#Cárith>.
+    rel:childOf <Cárith>.
 
-<#Mbruigech>
+<Mbruigech>
     a foaf:Person ;
     irishRel:nomName "Mbruigech" ;
-    rel:childOf <#Cárith>.
+    rel:childOf <Cárith>.
 
-<#Ercc>
+<Ercc>
     a foaf:Person ;
     irishRel:nomName "Ercc" ;
-    rel:childOf <#Cárith>.
+    rel:childOf <Cárith>.
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_celicain.ttl>.
+@base <http://example.com/LL/h_celicain.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,82 +9,89 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach H. Celicain"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text042.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text042.html> .
 
-<#Lorcan>
+<Lorcan>
     a foaf:Person;
     irishRel:nomName "Lorcan";
-    rel:childOf <#GillaiPatric>.
+    rel:childOf <GillaiPatric>.
 
-<#GillaiPatric>
+<GillaiPatric>
     a foaf:Person;
     irishRel:genName "Gillai Patric";
     irishRel:nomName "Gilla Patric";
-    rel:childOf <#Matudain>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#GillaPatric>.
+    rel:childOf <Matudain>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#GillaPatric>.
 
-<#Matudain>
+<Matudain>
     a foaf:Person;
     irishRel:genName "Matudain";
     irishRel:nomName "Matudan";
-    rel:childOf <#Aeda>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#Matudain>.
+    rel:childOf <Aeda>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Matudain>.
 
-<#Aeda>
+<Aeda>
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
-    rel:childOf <#Trenfhir>.
+    rel:childOf <Trenfhir>.
 
-<#Trenfhir>
+<Trenfhir>
     a foaf:Person;
     irishRel:genName "Trenfhir";
     irishRel:nomName "Trenfer";
-    rel:childOf <#Celicain>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#Trenfhir>.
+    rel:childOf <Celicain>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Trenfhir>.
 
-<#Celicain>
+<Celicain>
     a foaf:Person;
     irishRel:genName "Celicain";
     irishRel:nomName "Ceilecan";
-    rel:childOf <#Garbith>.
+    rel:childOf <Garbith>.
 
-<#Garbith>
+<Garbith>
     a foaf:Person;
     irishRel:nomName "Garbith";
-    rel:childOf <#Aeda-ca2809f0>.
+    rel:childOf <Aeda-ca2809f0>.
 
-<#Aeda-ca2809f0>
+<Aeda-ca2809f0>
     a foaf:Person;
     irishRel:nomName "Aeda";
-    rel:childOf <#MaelDuin>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#Aeda>.
+    rel:childOf <MaelDuin>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Aeda>.
 
-<#MaelDuin>
+<MaelDuin>
     a foaf:Person;
     irishRel:nomName "Mael Duin";
-    rel:childOf <#Dondgail>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#MaelaDuin>.
+    rel:childOf <Dondgail>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#MaelaDuin>.
 
-<#Dondgail>
+<Dondgail>
     a foaf:Person;
     irishRel:genName "Dondgail";
     irishRel:nomName "Dondgal";
-    rel:childOf <#Buachalla>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#Dondgaile>.
+    rel:childOf <Buachalla>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Dondgaile>.
 
-<#Buachalla>
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#Buachail>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#Buachalla>;
+<Buachalla>
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#Buachail>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Buachalla>;
     irishRel:genName "Buachalla";
     irishRel:nomName "Buachaile";
-    rel:childOf <#ConchobuirChorraig>.
+    rel:childOf <ConchobuirChorraig>.
 
-<#ConchobuirChorraig>
-    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.ttl#ConchobuirChorraig>;
-    owl:sameAs <http://example.com/LL/h_mbresail.ttl#ConchobuirChorraig>.
+<ConchobuirChorraig>
+    owl:sameAs <http://example.com/LL/clainde_conchobuir_corraig.trig#ConchobuirChorraig>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#ConchobuirChorraig>.
+}
+

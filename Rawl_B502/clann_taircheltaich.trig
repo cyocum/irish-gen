@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_taircheltaich.ttl>.
+@base <http://example.com/Rawl_B502/clann_taircheltaich.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,56 +9,60 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Taircheltaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#MáelTuile>
+<MáelTuile>
     a foaf:Person;
     irishRel:nomName "Máel Tuile";
-    rel:childOf <#Flaithgile>.
+    rel:childOf <Flaithgile>.
 
-<#Flaithgile>
+<Flaithgile>
     a foaf:Person;
     irishRel:genName "Flaithgile";
     irishRel:nomName "Flaithgil";
-    rel:childOf <#Sechnasaich>.
+    rel:childOf <Sechnasaich>.
 
-<#Sechnasaich>
+<Sechnasaich>
     a foaf:Person;
     irishRel:genName "Sechnasaich";
     irishRel:nomName "Sechnasach";    
-    rel:childOf <#Tairceltaich>.
+    rel:childOf <Tairceltaich>.
 
-<#Tairceltaich>
+<Tairceltaich>
     a foaf:Person;
     irishRel:genName "Tairceltaich";
     irishRel:nomName "Tairceltach";
     owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.ttl#Tairchellach>;
-    rel:childOf <#Dúngusa>.
+    rel:childOf <Dúngusa>.
 
-<#Dúngusa>
+<Dúngusa>
     a foaf:Person;
     irishRel:genName "Dúngusa";
     irishRel:nomName "Dúngus";
     owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.ttl#Flanngusa>;
-    rel:childOf <#Fáeláin>.
+    rel:childOf <Fáeláin>.
 
-<#Fáeláin>
+<Fáeláin>
     a foaf:Person;
     irishRel:genName "Fáeláin";
     irishRel:nomName "Fáelán";
-    rel:childOf <#Luigdech>.
+    rel:childOf <Luigdech>.
 
-<#Luigdech>
+<Luigdech>
     a foaf:Person;
     irishRel:genName "Luigdech";
     irishRel:nomName "Luigaid";
-    rel:childOf <#Fiachnae>.
+    rel:childOf <Fiachnae>.
 
-<#Fiachnae>
+<Fiachnae>
     a foaf:Person;
     irishRel:genName "Fiachnae".
+}

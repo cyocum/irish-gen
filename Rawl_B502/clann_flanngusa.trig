@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_flanngusa.ttl>.
+@base <http://example.com/Rawl_B502/clann_flanngusa.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,32 +9,36 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Flanngusa"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#MáelTuile>
+<MáelTuile>
     a foaf:Person;
     irishRel:nomName "Máel Tuile";
-    rel:childOf <#Cináeda>.
+    rel:childOf <Cináeda>.
 
-<#Cináeda>
+<Cináeda>
     a foaf:Person;
     irishRel:genName "Cináeda";
     irishRel:nomName "Cináed";
-    rel:childOf <#Flanngusa>.
+    rel:childOf <Flanngusa>.
 
-<#Flanngusa>
+<Flanngusa>
     a foaf:Person;
     irishRel:genName "Flanngusa";
     irishRel:nomName "Flanngus";
-    rel:childOf <#Báeth>;
+    rel:childOf <Báeth>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.ttl#Flanngus>.
 
-<#Báeth>
+<Báeth>
     a foaf:Person;
     irishRel:genName "Báeth" ;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.ttl#Báeth>.
+}

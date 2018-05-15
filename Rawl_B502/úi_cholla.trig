@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/úi_cholla.ttl>.
+@base <http://example.com/Rawl_B502/úi_cholla.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,61 +9,65 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Úi Cholla"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#DubInbe>
+<DubInbe>
     a foaf:Person;
     irishRel:nomName "Dub Inbe";
-    rel:childOf <#Meráin>.
+    rel:childOf <Meráin>.
 
-<#Meráin>
+<Meráin>
     a foaf:Person;
     irishRel:genName "Meráin";
     irishRel:nomName "Merán";
-    rel:childOf <#DuibDúin>.
+    rel:childOf <DuibDúin>.
 
-<#DuibDúin>
+<DuibDúin>
     a foaf:Person;
     irishRel:genName "Duib Dúin";
     irishRel:nomName "Dub Dúin";
-    rel:childOf <#Fairchellai(ch)>.
+    rel:childOf <Fairchellai(ch)>.
 
-<#Fairchellaich>
+<Fairchellaich>
     a foaf:Person;
     irishRel:genName "Fairchellai(ch)";
     irishRel:nomName "Fairchella(ch)";
-    rel:childOf <#FirDála>.
+    rel:childOf <FirDála>.
 
-<#FirDála>
+<FirDála>
     a foaf:Person;
     irishRel:genName "Fir Dála";
     irishRel:nomName "Fer Dála";
-    rel:childOf <#Conh-Uidir>.
+    rel:childOf <Conh-Uidir>.
 
-<#Conh-Uidir>
+<Conh-Uidir>
     a foaf:Person;
     irishRel:genName "Con h-Uidir";
-    rel:childOf <#Fíngin>;
+    rel:childOf <Fíngin>;
     owl:sameAs <http://example.com/Rawl_B502/úi_aithirne.ttl#Conh-Uidir>.
 
-<#Fíngin>
+<Fíngin>
     a foaf:Person;
     irishRel:genName "Fíngin";
-    rel:childOf <#Collae>;
+    rel:childOf <Collae>;
     owl:sameAs <http://example.com/Rawl_B502/úi_aithirne.ttl#Fíngin>.
 
-<#Collae>
+<Collae>
     a foaf:Person;
     irishRel:genName "Collae";
-    rel:childOf <#Duba>;
+    rel:childOf <Duba>;
     owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.ttl#Collae>.
 
-<#Duba>
+<Duba>
     a foaf:Person;
     irishRel:genName "Duba" ;
     owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.ttl#Duibe>.
+}

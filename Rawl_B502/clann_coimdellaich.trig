@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_coimdellaich.ttl>.
+@base <http://example.com/Rawl_B502/clann_coimdellaich.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,44 +9,48 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Coimdellaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Cellach>
+<Cellach>
     a foaf:Person;
     irishRel:nomName "Cellach";
-    rel:childOf <#Cináeda>.
+    rel:childOf <Cináeda>.
 
-<#Cináeda>
+<Cináeda>
     a foaf:Person;
     irishRel:genName "Cináeda";
     irishRel:nomName "Cináed";
-    rel:childOf <#DuibDáThuath>.
+    rel:childOf <DuibDáThuath>.
 
-<#DuibDáThuath>
+<DuibDáThuath>
     a foaf:Person;
     irishRel:genName "Duib Dá Thuath";
     irishRel:nomName "Dub Dá Thuath";
-    rel:childOf <#Rudgaile>.
+    rel:childOf <Rudgaile>.
 
-<#Rudgaile>
+<Rudgaile>
     a foaf:Person;
     irishRel:genName "Rudgaile";
     irishRel:nomName "Rudgail";
-    rel:childOf <#Comdellaich>.
+    rel:childOf <Comdellaich>.
 
-<#Comdellaich>
+<Comdellaich>
     a foaf:Person;
     irishRel:genName "Comdellaich";
     irishRel:nomName "Comdellach";
-    rel:childOf <#Báeth>;
+    rel:childOf <Báeth>;
     owl:sameas <http://example.com/Rawl_B502/úib_luchta.ttl#Comdellach> .
 
-<#Báeth>
+<Báeth>
     a foaf:Person;
     irishRel:genName "Báeth" ;
     owl:sameas <http://example.com/Rawl_B502/úib_luchta.ttl#Báeth>.
+}

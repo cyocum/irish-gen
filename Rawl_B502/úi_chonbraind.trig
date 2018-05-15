@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/úi_chonbraind.ttl>.
+@base <http://example.com/Rawl_B502/úi_chonbraind.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,80 +9,84 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Úi Chonbraind"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Corccán>
+<Corccán>
     a foaf:Person;
     irishRel:nomName "Corccán";
-    rel:childOf <#Deochocáin>.
+    rel:childOf <Deochocáin>.
 
-<#Deochocáin>
+<Deochocáin>
     a foaf:Person;
     irishRel:genName "Deochocáin";
     irishRel:nomName "Deochocán";
-    rel:childOf <#Aurthuile>.
+    rel:childOf <Aurthuile>.
 
-<#Aurthuile>
+<Aurthuile>
     a foaf:Person;
     irishRel:genName "Aurthuile";
     irishRel:nomName "Aurthuil";
-    rel:childOf <#Siadail>.
+    rel:childOf <Siadail>.
 
-<#Siadail>
+<Siadail>
     a foaf:Person;
     irishRel:genName "Siadail";
     irishRel:nomName "Siadal";
-    rel:childOf <#Fiangusa>.
+    rel:childOf <Fiangusa>.
 
-<#Fiangusa>
+<Fiangusa>
     a foaf:Person;
     irishRel:genName "Fiangusa";
     irishRel:nomName "Fiangus";
-    rel:childOf <#Conbraind>.
+    rel:childOf <Conbraind>.
 
-<#Conbraind>
+<Conbraind>
     a foaf:Person;
     irishRel:genName "Conbraind";
     irishRel:nomName "Conbrand";
-    rel:childOf <#Dícolla>.
+    rel:childOf <Dícolla>.
 
-<#Dícolla>
+<Dícolla>
     a foaf:Person;
     irishRel:genName "Dícolla" ;
     irishRel:nomName "Dícoll".
 
-<#Conbrann>
+<Conbrann>
     a foaf:Person;
     irishRel:nomName "Conbrann";
-    owl:sameAs <#Conbraind>;
-    rel:childOf <#MáeliDoborchon>.
+    owl:sameAs <Conbraind>;
+    rel:childOf <MáeliDoborchon>.
 
-<#MáeliDoborchon>
+<MáeliDoborchon>
     a foaf:Person;
     irishRel:genName "Máeli Doborchon";
     irishRel:nomName "Máel Doborchu";
-    rel:childOf <#MeiccLaisre>.
+    rel:childOf <MeiccLaisre>.
 
-<#MeiccLaisre>
+<MeiccLaisre>
     a foaf:Person;
     irishRel:genName "Meicc Laisre";
     irishRel:nomName "Macc Laisre";
-    rel:childOf <#Daurthacht>;
+    rel:childOf <Daurthacht>;
     owl:sameAs <http://example.com/Rawl_B502/úi_congusa.ttl#MeiccLaisre>.
 
-<#Daurthacht>
+<Daurthacht>
     a foaf:Person;
     irishRel:genName "Daurthacht";
-    rel:childOf <#Senaich>;
+    rel:childOf <Senaich>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.ttl#Daurthacht>.
 
-<#Senaich>
+<Senaich>
     a foaf:Person;
     irishRel:genName "Senaich" ;
     irishRel:genName "Senach" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.ttl#Senaich>.
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/úi_murgalaich.ttl>.
+@base <http://example.com/Rawl_B502/úi_murgalaich.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,49 +9,53 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Úi Murgalaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Fland>
+<Fland>
     a foaf:Person;
     irishRel:nomName "Fland";
-    rel:childOf <#Flaithim>.
+    rel:childOf <Flaithim>.
 
-<#Flaithim>
+<Flaithim>
     a foaf:Person;
     irishRel:genName "Flaithim";
     irishRel:nomName "Flaithem";
-    rel:childOf <#Thorptha>.
+    rel:childOf <Thorptha>.
 
-<#Thorptha>
+<Thorptha>
     a foaf:Person;
     irishRel:genName "Thorptha";
     irishRel:nomName "Torpth";
-    rel:childOf <#Duinechda>.
+    rel:childOf <Duinechda>.
 
-<#Duinechda>
+<Duinechda>
     a foaf:Person;
     irishRel:genName "Duinechda";
     irishRel:nomName "Duinechd";
-    rel:childOf <#Murgalaich>.
+    rel:childOf <Murgalaich>.
 
-<#Murgalaich>
+<Murgalaich>
     a foaf:Person;
     irishRel:genName "Murgalaich";
     irishRel:nomName "Murgalach";
-    rel:childOf <#Midlaige>.
+    rel:childOf <Midlaige>.
 
-<#Midlaige>
+<Midlaige>
     a foaf:Person;
     irishRel:genName "Midlaige";
     irishRel:nomName "Midlach";
-    rel:childOf <#Brain>.
+    rel:childOf <Brain>.
 
-<#Brain>
+<Brain>
     a foaf:Person;
     irishRel:genName "Brain" ;
     irishRel:nomName "Bran".
+}

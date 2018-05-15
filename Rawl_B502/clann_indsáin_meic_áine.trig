@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_indsáin_meic_áine.ttl>.
+@base <http://example.com/Rawl_B502/clann_indsáin_meic_áine.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,74 +9,78 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Indsáin Meic Áine"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#MoChromma>
+<MoChromma>
     a foaf:Person;
     irishRel:nomName "Mo Chromma";
     rdfs:comment "dísertach"@sga, "hermit"@eng ;
-    rel:childOf <#Rígáin>.
+    rel:childOf <Rígáin>.
 
-<#Rígáin>
+<Rígáin>
     a foaf:Person;
     irishRel:genName "Rígáin";
     irishRel:nomName "Rígán";
-    rel:childOf <#Insáin>.
+    rel:childOf <Insáin>.
 
-<#Insáin>
+<Insáin>
     a foaf:Person;
     irishRel:genName "Insáin";
     irishRel:nomName "Insán";
-    rel:childOf <#Áine>;
+    rel:childOf <Áine>;
     owl:sameAs <http://example.com/Rawl_B502/úi_ábartaich.ttl#Indsán>.
 
-<#Áine>
+<Áine>
     a foaf:Person;
     irishRel:genName "Áine";
-    rel:childOf <#Ambrit>;
+    rel:childOf <Ambrit>;
     owl:sameAs <http://example.com/Rawl_B502/úi_ábartaich.ttl#Áine>.
 
-<#Ambrit>
+<Ambrit>
     a foaf:Person;
     irishRel:genName "Ambrit";
-    rel:childOf <#Imchada>.
+    rel:childOf <Imchada>.
 
-<#Imchada>
+<Imchada>
     a foaf:Person;
     irishRel:genName "Imchada" ;
     irishRel:nomName "Imchad" ;
     owl:sameAs <http://example.com/Rawl_B502/úi_ábartaich.ttl#Imchada>.
 
-<#Cammíne>
+<Cammíne>
     a foaf:Person;
     irishRel:nomName "Cammíne";
-    rel:childOf <#Colmáin>.
+    rel:childOf <Colmáin>.
 
-<#Colmáin>
+<Colmáin>
     a foaf:Person;
     irishRel:genName "Colmáin";
     irishRel:nomName "Colmáin";
-    rel:childOf <#Comarbaich>.
+    rel:childOf <Comarbaich>.
 
-<#Comarbaich>
+<Comarbaich>
     a foaf:Person;
     irishRel:genName "Comarbaich";
     irishRel:nomName "Comarbaich";
-    rel:childOf <#Insáin-db0ac4fb>.
+    rel:childOf <Insáin-db0ac4fb>.
 
-<#Insáin-db0ac4fb>
-    owl:sameAs <#Insáin>;
-    rel:childOf <#Áine-7341247f>.
+<Insáin-db0ac4fb>
+    owl:sameAs <Insáin>;
+    rel:childOf <Áine-7341247f>.
 
-<#Áine-7341247f>
+<Áine-7341247f>
     a foaf:Person;
     irishRel:genName "Áine";
-    rel:childOf <#Aimbrit-be2b4b97>.
+    rel:childOf <Aimbrit-be2b4b97>.
 
-<#Aimbrit-be2b4b97>
-    owl:sameAs <#Ambrit>.
+<Aimbrit-be2b4b97>
+    owl:sameAs <Ambrit>.
+}

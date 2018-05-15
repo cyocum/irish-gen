@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/in_déis_deiscirt_úa_n_éndae.ttl>.
+@base <http://example.com/Rawl_B502/in_déis_deiscirt_úa_n_éndae.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,75 +10,79 @@
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "In Déis Deiscirt Úa N-Éndae"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text017.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text017.html>.
 
-<#ÉnnaTéith>
+<ÉnnaTéith>
     a foaf:Person;
     irishRel:genName "Énna Téith";
-    rel:childOf <#Conaill>;
+    rel:childOf <Conaill>;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#EnnaTéith>.
 
-<#Conaill>
+<Conaill>
     a foaf:Person;
     irishRel:genName "Conaill" ;
     irishRel:nomName "Conall" ;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Conaill>.
 
-<#CáirthennDubDiarmait>
+<CáirthennDubDiarmait>
     a foaf:Person;
     irishRel:nomName "Cáirthenn Dub Diarmait" ;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#CarthendDuibDiarmait>.
     
-<#Cáirthind>
+<Cáirthind>
     a foaf:Person;
     irishRel:genName "Cáirthind" ;
-    owl:sameAs <#CáirthennDub>.
+    owl:sameAs <CáirthennDub>.
 
-<#Fínán>
+<Fínán>
     a foaf:Person;
     irishRel:genName "Fínán";
-    rel:childOf <#Diarmata>;
+    rel:childOf <Diarmata>;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Finan>.
 
-<#Diarmata>
+<Diarmata>
     a foaf:Person;
     irishRel:genName "Diarmata" ;
-    owl:sameAs <#CáirthennDubDiarmait>.
+    owl:sameAs <CáirthennDubDiarmait>.
 
-<#Congal>
+<Congal>
     a foaf:Person;
     irishRel:genName "Congal";
-    rel:childOf <#MáelAithgeáin>;
+    rel:childOf <MáelAithgeáin>;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Congal>.
 
-<#MáelAithgeáin>
+<MáelAithgeáin>
     a foaf:Person;
     irishRel:genName "Máel Aithgeáin";
-    rel:childOf <#Diarmata-50ccf9a6>;
+    rel:childOf <Diarmata-50ccf9a6>;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#MaelAthgen>.
     
-<#DiarmataDubTómma>
+<DiarmataDubTómma>
     a foaf:Person;
     irishRel:genName "Diarmata Dub Tómma";
-    rel:childOf <#Diarmata-2d6184ef>;
+    rel:childOf <Diarmata-2d6184ef>;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#DiarmataDubTonna>.
 
-<#Diarmata-2d6184ef>
+<Diarmata-2d6184ef>
     a foaf:Person;
     irishRel:genName "Diarmata" ;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Diarmata-38f2f4d9>.
 
-<#Conall>
+<Conall>
     a foaf:Person;
     irishRel:genName "Conall";
-    rel:childOf <#DuibNaill>;
+    rel:childOf <DuibNaill>;
     owl:sameAs <http://example.com/LL/tairdelbaig.ttl#Conaill-dbf782c8>.
 
-<#DuibNaill>
+<DuibNaill>
     a foaf:Person;
     irishRel:genName "Duib Naill".
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/LL/uachtair_tiri.ttl>.
+@base <http://example.com/LL/uachtair_tiri.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,97 +9,102 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+
+<http://example.com/LL> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Uachtair Tiri"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text061.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text061.html> .
 
-<#Niall>
+<Niall>
     a foaf:Person;
     irishRel:nomName "Niall";
-    rel:childOf <#GillaiFhechin>.
+    rel:childOf <GillaiFhechin>.
 
-<#GillaiFhechin>
+<GillaiFhechin>
     a foaf:Person;
     irishRel:genName "Gillai Fhechin";
     irishRel:nomName "Gilla Fechin";
-    rel:childOf <#Neill>.
+    rel:childOf <Neill>.
 
-<#Neill>
+<Neill>
     a foaf:Person;
     irishRel:genName "Neill";
     irishRel:nomName "Níall";
-    rel:childOf <#Fhergusa>.
+    rel:childOf <Fhergusa>.
 
-<#Fhergusa>
+<Fhergusa>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
-    rel:childOf <#Cummascaig>.
+    rel:childOf <Cummascaig>.
 
-<#Cummascaig>
+<Cummascaig>
     a foaf:Person;
     irishRel:genName "Cummascaig";
     irishRel:nomName "Cummascach";
-    rel:childOf <#Ecertaig>.
+    rel:childOf <Ecertaig>.
 
-<#Ecertaig>
+<Ecertaig>
     a foaf:Person;
     irishRel:genName "Ecertaig";
     irishRel:nomName "Ecertach";
-    rel:childOf <#Lorcain>.
+    rel:childOf <Lorcain>.
 
-<#Lorcain>
+<Lorcain>
     a foaf:Person;
     irishRel:genName "Lorcain";
     irishRel:nomName "Lorcán";
-    rel:childOf <#Cernaig>.
+    rel:childOf <Cernaig>.
 
-<#Cernaig>
+<Cernaig>
     a foaf:Person;
     irishRel:genName "Cernaig";
     irishRel:nomName "Cernach";
-    rel:childOf <#MaeleBresail>.
+    rel:childOf <MaeleBresail>.
 
-<#MaeleBresail>
+<MaeleBresail>
     a foaf:Person;
     irishRel:genName "Maele Bresail";
     irishRel:nomName "Máel Bresail";
-    rel:childOf <#Ailella>.
+    rel:childOf <Ailella>.
 
-<#Ailella>
+<Ailella>
     a foaf:Person;
     irishRel:genName "Ailella";
     irishRel:nomName "Ailill";
-    rel:childOf <#Fheidlimthi>.
+    rel:childOf <Fheidlimthi>.
 
-<#Fheidlimthi>
+<Fheidlimthi>
     a foaf:Person;
     irishRel:genName "Fheidlimthi";
     irishRel:nomName "Feidlimid";
-    rel:childOf <#MaeleCothaid>.
+    rel:childOf <MaeleCothaid>.
 
-<#MaeleCothaid>
+<MaeleCothaid>
     a foaf:Person;
     irishRel:genName "Maele Cothaid";
     irishRel:nomName "Máel Cothaid";
-    rel:childOf <#Fhergusa-9e6c2774>.
+    rel:childOf <Fhergusa-9e6c2774>.
 
-<#Fhergusa-9e6c2774>
+<Fhergusa-9e6c2774>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
-    rel:childOf <#Aedain>.
+    rel:childOf <Aedain>.
 
-<#Aedain>
+<Aedain>
     a foaf:Person;
     irishRel:genName "Aedain";
     irishRel:nomName "Áedán";
-    rel:childOf <#Mongain>.
+    rel:childOf <Mongain>.
     
-<#Mongain>
+<Mongain>
     a foaf:Person;
     irishRel:genName "Mongain";
     irishRel:nomName "Mongán".
+}

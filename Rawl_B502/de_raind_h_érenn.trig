@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/de_raind_h_érenn.ttl>.
+@base <http://example.com/Rawl_B502/de_raind_h_érenn.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,169 +10,173 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "De Raind H-Érenn Inso"@sga ;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html>.
 
-<#ConnCétchathach>
+<ConnCétchathach>
     a foaf:Person ;
     irishRel:nomName "Conn Cétchathach" ;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.ttl#ChuindCetchataig>.
 
-<#ÉoganMár>
+<ÉoganMár>
     a foaf:Person ;
     irishRel:nomName "Éogan Már" ;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#EogainMóir>.
 
-<#MugNuadat>
+<MugNuadat>
     a foaf:Person;
     irishRel:nomName "Mug Nuadat";
-    rel:childOf <#Dergthene>;
+    rel:childOf <Dergthene>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#MogaNeit>.
 
-<#Dergthene>
+<Dergthene>
     a foaf:Person;
     irishRel:genName "Dergthene" ;
     owl:sameAs <http://example.com/LL/eoganachta_casil.ttl#Dergthene>.
     
-<#AilillAulum>
+<AilillAulum>
     a foaf:Person;
     irishRel:nomName "Ailill Aulum";
     irishRel:numChild 19 ;
-    rel:childOf <#ÉoganMár>;
+    rel:childOf <ÉoganMár>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#AilellaUluimm>.
 
-<#LugaidLága>
+<LugaidLága>
     a foaf:Person;
     irishRel:nomName "Lugaid Lága";
-    rel:childOf <#ÉoganMár>.
+    rel:childOf <ÉoganMár>.
 
-<#CormacCass>
+<CormacCass>
     a foaf:Person ;
     irishRel:nomName "Cormac Cass" ;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#CormaicCais>.
 
-<#FiachuMullethan>
+<FiachuMullethan>
     a foaf:Person;
     irishRel:nomName "Fiachu Mullethan";
-    rel:childOf <#Éogain>.
+    rel:childOf <Éogain>.
 
-<#Éogain>
+<Éogain>
     a foaf:Person;
     irishRel:genName "Éogain".
 
-<#LugaidMend>
+<LugaidMend>
     a foaf:Person;
     irishRel:nomName "Lugaid Mend";
-    rel:childOf <#ÓengusaTírich>;
+    rel:childOf <ÓengusaTírich>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#LugdachMind>.
 
-<#ÓengusaTírich>
+<ÓengusaTírich>
     a foaf:Person;
     irishRel:genName "Óengusa Tírich";
-    rel:childOf <#FirChuirp>;
+    rel:childOf <FirChuirp>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#OengusaTirig>.
 
-<#FirChuirp>
+<FirChuirp>
     a foaf:Person;
     irishRel:genName "Fir Chuirp" ;
     irishRel:nomName "Fer Cuirp" ;
-    rel:childOf <#MogaCoirp>;
+    rel:childOf <MogaCoirp>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#FhirChoirp>.
 
-<#MogaCoirp>
+<MogaCoirp>
     a foaf:Person;
     irishRel:genName "Moga Coirp";
     irishRel:nomName "Mog Cuirp";
-    rel:childOf <#CormaicCaiss>;
+    rel:childOf <CormaicCaiss>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#MogaCoirp>.
 
-<#CormaicCaiss>
+<CormaicCaiss>
     a foaf:Person;
     irishRel:genName "Cormaic Caiss" ;
-    owl:sameAs <#CormacCass>.
+    owl:sameAs <CormacCass>.
 
-<#Óengus>
+<Óengus>
     a foaf:Person;
     irishRel:nomName "Óengus";
-    rel:childOf <#NadFraích>.
+    rel:childOf <NadFraích>.
 
-<#NadFraích>
+<NadFraích>
     a foaf:Person;
     irishRel:genName "Nad Fraích".
 # there are a bunch of Nad Fraích in LL for Munster. I am not sure which are meant here - CY
 
-<#DímmaDub>
+<DímmaDub>
     a foaf:Person;
     irishRel:nomName "Dímma Dub";
-    rel:childOf <#Rónáin>;
+    rel:childOf <Rónáin>;
     foaf:title "rii Dáil Chais"@sga .
 
-<#Rónáin>
+<Rónáin>
     a irishTitle:Rí;
     irishRel:genName "Rónáin" ;
     irishRel:nomName "Rónán" .
     
 #same as http://example.com/LL/eoganachta_casil.ttlDimmaDub ?- CY
 
-<#FaílbeFland>
+<FaílbeFland>
     a irishTitle:Rí ;
     irishRel:nomName "Faílbe Fland" ;
     foaf:title "rígi Caissil"@sga ;
-    rel:antagonistOf <#DímmaDub>.
+    rel:antagonistOf <DímmaDub>.
 
-<#Eochaid>
+<Eochaid>
     a foaf:Person;
     irishRel:nomName "Eochaid";
-    rel:childOf <#Cais>.
+    rel:childOf <Cais>.
 
-<#Cais>
+<Cais>
     a foaf:Person;
     irishRel:genName "Cais";
     irishRel:nomName "Cais";
-    rel:childOf <#Cuircc>.
+    rel:childOf <Cuircc>.
 
-<#Cuircc>
+<Cuircc>
     a foaf:Person;
     irishRel:genName "Cuircc" ;
     irishRel:nomName "Curcc".
 
-<#ConallEchluath>
+<ConallEchluath>
     a foaf:Person ;
     irishRel:nomName "Conall Echluath" ;
-    rel:antagonistOf <#Eochaid>;
+    rel:antagonistOf <Eochaid>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.ttl#ConaillEchluaith>.
 
-<#CarpreCruithnechán>
+<CarpreCruithnechán>
     a foaf:Person ;
     irishRel:nomName "Carpre Cruithnechán" .
     
-<#Corcc>
+<Corcc>
     a foaf:Person;
     irishRel:nomName "Corcc";
-    rel:childOf <#Lugdach>;
-    foaf:knows <#CarpreCruithnechán>.
+    rel:childOf <Lugdach>;
+    foaf:knows <CarpreCruithnechán>.
 
-<#Lugdach>
+<Lugdach>
     a foaf:Person;
     irishRel:genName "Lugdach" ;
     irishRel:nomName "Lugdaid".
 
-<#ÚiThornae>
+<ÚiThornae>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Úi Thornae" .
 
-<#Cóemfhind>
+<Cóemfhind>
     a foaf:Person ;
     foaf:gender "female" ;
     irishRel:nomName "Cóemfhind" ;
-    irishRel:ancestorOfGroup <#Tornai>;
-    rel:childOf <#CarpreCruithnechán>.
+    irishRel:ancestorOfGroup <Tornai>;
+    rel:childOf <CarpreCruithnechán>.
 
-<#Tornai>
+<Tornai>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Tornai" .
 
+}

@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/genelach_úa_máeli_rubae.ttl>.
+@base <http://example.com/Rawl_B502/genelach_úa_máeli_rubae.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,96 +10,100 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Úa Máeli Rubae"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text014.html> .
 
-<#MáelKallann>
+<MáelKallann>
     a foaf:Person;
     irishRel:nomName "Máel Kallann";
-    rel:childOf <#Uaracáin>.
+    rel:childOf <Uaracáin>.
 
-<#Uaracáin>
+<Uaracáin>
     a foaf:Person;
     irishRel:genName "Uaracáin";
     irishRel:nomName "Uaracán";
-    rel:childOf <#Pupucáin>.
+    rel:childOf <Pupucáin>.
 
-<#Pupucáin>
+<Pupucáin>
     a foaf:Person;
     irishRel:genName "Pupucáin";
     irishRel:nomName "Pupucán";
-    rel:childOf <#MáelRubae>.
+    rel:childOf <MáelRubae>.
 
-<#MáelRubae>
+<MáelRubae>
     a foaf:Person;
     irishRel:genName "Máel Rubae";
     irishRel:nomName "Máel Ruba";
-    rel:childOf <#Snéidgaile>.
+    rel:childOf <Snéidgaile>.
 
-<#Snéidgaile>
+<Snéidgaile>
     a foaf:Person;
     irishRel:genName "Snéidgaile";
     irishRel:nomName "Snéidgal";
-    rel:childOf <#Cuandai>.
+    rel:childOf <Cuandai>.
 
-<#Cuandai>
+<Cuandai>
     a foaf:Person;
     irishRel:genName "Cuandai";
     irishRel:nomName "Cuandae";
-    rel:childOf <#Conaill>.
+    rel:childOf <Conaill>.
 
-<#Conaill>
+<Conaill>
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
-    rel:childOf <#MáelRubae-edab656c>.
+    rel:childOf <MáelRubae-edab656c>.
 
-<#MáelRubae-edab656c>
+<MáelRubae-edab656c>
     a foaf:Person;
     irishRel:genName "Máel Rubae";
-    rel:childOf <#Condoilb>.
+    rel:childOf <Condoilb>.
 
-<#Condoilb>
+<Condoilb>
     a foaf:Person;
     irishRel:genName "Condoilb";
     irishRel:nomName "Condolb";
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_lugdach_meic_láegaire.ttl#Condolb>;
-    rel:childOf <#Rechtcride>.
+    rel:childOf <Rechtcride>.
 
-<#Rechtcride>
+<Rechtcride>
     a foaf:Person;
     irishRel:genName "Rechtcride";
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_lugdach_meic_láegaire.ttl#Rechtcride-0336d23e>;
-    rel:childOf <#Moga>.
+    rel:childOf <Moga>.
 
-<#Moga>
+<Moga>
     a foaf:Person;
     irishRel:genName "Moga";
     irishRel:nomName "Moga";
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_lugdach_meic_láegaire.ttl#Moga-d58905a9>;
-    rel:childOf <#MáelRubae-71d7ed6c>.
+    rel:childOf <MáelRubae-71d7ed6c>.
 
-<#MáelRubae-71d7ed6c>
+<MáelRubae-71d7ed6c>
     a foaf:Person;
     irishRel:genName "Máel Rubae";
     irishRel:nomName "Máel Ruba";
-    rel:childOf <#Connaill>;
-    irishRel:ancestorOfGroup <#ÚiMáeliRubae>.
+    rel:childOf <Connaill>;
+    irishRel:ancestorOfGroup <ÚiMáeliRubae>.
 
-<#ÚiMáeliRubae>
+<ÚiMáeliRubae>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Úi Máeli Rubae" .    
 
-<#Connaill>
+<Connaill>
     a foaf:Person;
     irishRel:genName "Connaill";
     irishRel:nomName "Connall";
-    rel:childOf <#Moga-bd86dab7>.
+    rel:childOf <Moga-bd86dab7>.
 
-<#Moga-bd86dab7>
+<Moga-bd86dab7>
     a foaf:Person;
     irishRel:genName "Moga".
+}

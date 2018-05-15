@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/genelach_clainne_dub_inrecht.ttl>.
+@base <http://example.com/Rawl_B502/genelach_clainne_dub_inrecht.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,60 +9,64 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Genelach Clainne Dub Inrecht"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
 
 
-<#GillaCiaráin>
+<GillaCiaráin>
     a foaf:Person;
     irishRel:nomName "Gilla Ciaráin";
-    rel:childOf <#Domnaill>.
+    rel:childOf <Domnaill>.
 
-<#Domnaill>
+<Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
-    rel:childOf <#Laidgneáin>.
+    rel:childOf <Laidgneáin>.
 
-<#Laidgneáin>
+<Laidgneáin>
     a foaf:Person;
     irishRel:genName "Laidgneáin";
     irishRel:nomName "Laidgneán";
-    rel:childOf <#GillaiCiaráin>.
+    rel:childOf <GillaiCiaráin>.
 
-<#GillaiCiaráin>
+<GillaiCiaráin>
     a foaf:Person;
     irishRel:genName "Gillai Ciaráin";
     irishRel:nomName "Gillae Ciarán";
-    rel:childOf <#Uallgairg>.
+    rel:childOf <Uallgairg>.
 
-<#Uallgairg>
+<Uallgairg>
     a foaf:Person;
     irishRel:genName "Uallgairg";
     irishRel:nomName "Uallgarg";
-    rel:childOf <#Óengusa>.
+    rel:childOf <Óengusa>.
 
-<#Óengusa>
+<Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
-    rel:childOf <#MáelTrea>.
+    rel:childOf <MáelTrea>.
 
-<#MáelTrea>
+<MáelTrea>
     a foaf:Person;
     irishRel:genName "Máel Trea";
-    rel:childOf <#DubInrecht>.
+    rel:childOf <DubInrecht>.
 
-<#DubInrecht>
+<DubInrecht>
     a foaf:Person;
     irishRel:genName "Dub Inrecht";
-    rel:childOf <#NéillCaille>.
+    rel:childOf <NéillCaille>.
 
-<#NéillCaille>
+<NéillCaille>
     a foaf:Person;
     irishRel:genName "Néill Caille" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.ttl#NéillKaille>.
+}

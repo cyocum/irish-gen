@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/de_columba_dicitur.ttl>.
+@base <http://example.com/Rawl_B502/de_columba_dicitur.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,74 +10,78 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "De Columba Dicitur"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text004.html> .
 
-<#Níbucráebcrínfeda>
+<Níbucráebcrínfeda>
     rdfs:comment "De Columba dicitur";
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Nibacraebcrínfheda>.
 
-<#Colum>
+<Colum>
     a foaf:Person;
     irishRel:nomName "Colum";
-    rel:childOf <#Nainnida>;
-    rel:descendantOf <#Nadstáir>;
-    rel:descendantOf <#CrimthaindBic>;
-    rel:descendantOf <#Catháer>;
+    rel:childOf <Nainnida>;
+    rel:descendantOf <Nadstáir>;
+    rel:descendantOf <CrimthaindBic>;
+    rel:descendantOf <Catháer>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Colum>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#Nainnida>
+<Nainnida>
     a foaf:Person;
     irishRel:genName "Nainnida";
     irishRel:nomName "Nainnid";
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Nannida>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#Nadstáir>
+<Nadstáir>
     a foaf:Person;
     irishRel:genName "Nadstáir";
     irishRel:nomName "Nadstár";
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Nastáir>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#CrimthaindBic>
+<CrimthaindBic>
     a foaf:Person;
     irishRel:nomName "Crimthand Bec";
     irishRel:genName "Crimthaind Bic";
-    rel:childOf <#Echach>;
+    rel:childOf <Echach>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#CrimthaindBic>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#Echach>
+<Echach>
     a foaf:Person;
     irishRel:nomName "Eochu";
     irishRel:genName "Echach";
-    rel:childOf <#Óengusa>;
+    rel:childOf <Óengusa>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Echach>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#Óengusa>
+<Óengusa>
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
-    rel:childOf <#CrimthaindÁin>;
+    rel:childOf <CrimthaindÁin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#Óengusa>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#CrimthaindÁin>
+<CrimthaindÁin>
     a foaf:Person;
     irishRel:nomName "Crimthand Án";
     irishRel:genName "Crimthaind Áin";
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#CrimthaindÁin>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
 
-<#Catháer>
+<Catháer>
     a foaf:Person;
     irishRel:genName "Catháer";
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.ttl#CathaírMáir>;
-    rdfs:seeAlso <#Níbucráebcrínfeda>.
+    rdfs:seeAlso <Níbucráebcrínfeda>.
+}

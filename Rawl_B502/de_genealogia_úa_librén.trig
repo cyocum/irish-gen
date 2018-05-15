@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/de_genealogia_úa_librén.ttl>.
+@base <http://example.com/Rawl_B502/de_genealogia_úa_librén.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,89 +10,93 @@
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "De Genealogia Úa Librén"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text003.html> .
 
-<#Flathróe>
+<Flathróe>
     a foaf:Person;
     irishRel:nomName "Flathróe";
-    rel:childOf <#Echach>;
+    rel:childOf <Echach>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Flaithnia>.
 
-<#Echach>
+<Echach>
     a foaf:Person;
     irishRel:nomName "Eochu";
     irishRel:genName "Echach";
-    rel:childOf <#Forannáin>;
+    rel:childOf <Forannáin>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Echach>.
 
-<#Forannáin>
+<Forannáin>
     a foaf:Person;
     irishRel:nomName "Forannán";
     irishRel:genName "Forannáin";
-    rel:childOf <#Librén>;
+    rel:childOf <Librén>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhorannain>.
 
-<#Librén>
+<Librén>
     a foaf:Person;
     irishRel:nomName "Librén";
     irishRel:genName "Librén";
-    rel:childOf <#Furudráin>;
+    rel:childOf <Furudráin>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Libriain>.
 
-<#Furudráin>
+<Furudráin>
     a foaf:Person;
     irishRel:nomName "Furudrán";
     irishRel:genName "Furudráin";
-    rel:childOf <#Beccáin>;
+    rel:childOf <Beccáin>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhurudrain>.
 
-<#Beccáin>
+<Beccáin>
     a foaf:Person;
     irishRel:nomName "Beccán";
     irishRel:genName "Beccáin";
-    rel:childOf <#Librén>.
+    rel:childOf <Librén>.
 
-<#Librén>
+<Librén>
     a foaf:Person;
     irishRel:nomName "Librén";
     irishRel:genName "Librén";
-    rel:childOf <#Óengusa>.
+    rel:childOf <Óengusa>.
 
-<#Óengusa>
+<Óengusa>
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
-    rel:childOf <#Trena>;
+    rel:childOf <Trena>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Oengusa>.
 
-<#Trena>
+<Trena>
     a foaf:Person;
     irishRel:nomName "Tren";
     irishRel:genName "Trena";
-    rel:childOf <#Fergusa>;
+    rel:childOf <Fergusa>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Trena>.
 
-<#Fergusa>
+<Fergusa>
     a foaf:Person;
     irishRel:nomName "Fergus";
     irishRel:genName "Fergusa";
-    rel:childOf <#Cormaic>;
+    rel:childOf <Cormaic>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Fhergusa-59dddd77>.
 
-<#Cormaic>
+<Cormaic>
     a foaf:Person;
     irishRel:nomName "Cormac";
     irishRel:genName "Cormaic";
-    rel:childOf <#ConCorb>;
+    rel:childOf <ConCorb>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#Cormaic-a7212584>.
 
-<#ConCorb>
+<ConCorb>
     a foaf:Person;
     irishRel:nomName "Cú Corb";
     irishRel:genName "Con Corb";
     owl:sameAs <http://example.com/LL/dal_corpri_arad.ttl#ConCorb-879ebe24>.
+}

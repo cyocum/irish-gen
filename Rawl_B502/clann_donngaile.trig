@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_donngaile.ttl>.
+@base <http://example.com/Rawl_B502/clann_donngaile.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,38 +9,42 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+
+<http://example.com/Rawl_B502> {
 <>
+
     a dctype:Dataset;
     dcterms:title "Clann Donngaile"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
-    dcterms:format "text/turtle" ;
+    dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
 
-<#Muirethach>
+<Muirethach>
     a foaf:Person;
     irishRel:nomName "Muirethach";
-    rel:childOf <#Giallucáin>.
+    rel:childOf <Giallucáin>.
 
-<#Giallucáin>
+<Giallucáin>
     a foaf:Person;
     irishRel:genName "Giallucáin";
     irishRel:nomName "Giallucán";
-    rel:childOf <#Echdach>.
+    rel:childOf <Echdach>.
 
-<#Echdach>
+<Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Echaid";
-    rel:childOf <#Donnailed>.
+    rel:childOf <Donnailed>.
 
-<#Donnailed>
+<Donnailed>
     a foaf:Person;
     irishRel:genName "Donnailed";
     irishRel:nomName "Donnaile";
-    rel:childOf <#Comraite>;
+    rel:childOf <Comraite>;
     owl:sameAs <http://example.com/Rawl/B502/úi_thómmáin.ttl#Donnaile>.
 
-<#Comraite>
+<Comraite>
     a foaf:Person;
     irishRel:genName "Comraite" ;
     owl:sameAs <http://example.com/Rawl/B502/úi_thómmáin.ttl#Coicéile>.
+}
