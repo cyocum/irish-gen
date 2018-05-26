@@ -6,8 +6,10 @@ material, the curators chose the [Resource Description
 Framework](https://www.w3.org/TR/rdf11-primer/) (RDF) to represent it.
 Because this is a human curated database, a human readable
 representation of RDF was needed, which, in this case, the curators
-chose the [Turtle](https://www.w3.org/TR/turtle/) concrete
-representation of RDF.
+chose the [TRiG](https://www.w3.org/TR/trig/) concrete representation
+of RDF.  It is recommendedd for those who may not have experience with
+RDF serializations to read the [Turtle](https://www.w3.org/TR/turtle/)
+specification first before reading the TRiG one.
 
 # Structure
 
@@ -58,6 +60,47 @@ because a permanent URL has not been purchased at this time.  For
 example, a full URL for `<#CindFhaelad-6e827350>` would be
 `http://example.com/LL/ceniuil_lugdach.ttl#CindFhaelad-6e827350`.
 
+## Named Graph (RDF Dataset)
+
+Each item belongs to a manuscript and while this is represented in the
+URL as described above, it is inconvenient to address the manuscript
+itself.  To allow for this and to allow queries which are easily
+narrowed by manuscript, an extention to the triple format, called a
+[TRiG](https://www.w3.org/TR/trig/), is used.  This extention allows
+for the use of Named Graphs (see more
+[here](https://www.w3.org/TR/rdf11-concepts/#section-dataset)).  In
+the case of this project, the manuscript is identified by its URL and
+is the named graph for the triples.  For instance, from
+`aisneidem_di_araill.ttl`:
+
+```turtle
+
+<http://example.com/LL> {
+<>
+        a dctype:Dataset;
+        dcterms:title "Aisneidem Di Araill"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text028.html>;
+        dcterms:format "application/trig" ;
+        prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text028.html> .
+
+     <#Conchobuir>
+        a foaf:Person;
+        irishRel:genName "Conchobuir";
+        irishRel:nomName "Conchobar";
+        rel:childOf <#Fhactnai>.
+
+     <#Fhactnai>
+        a foaf:Person;
+        irishRel:nomName "Fhactnai".
+}
+
+```
+
+This snippet identifies these triples as being a part of the
+`<http://example.com/LL>` graph.  In this way, queries can be done on
+particular graphs and the user can programmatically determine which
+triples belong to which manuscript.
+
 ## Individuals
 
 While each entry in the genealogy has its own URL, many references are
@@ -75,9 +118,10 @@ look like they have three or more parents.
 ## Individuals with no name
 
 There are many instances where there are individuals who are mentioned
-but have no name.  RDF blank nodes are used to identify the
-individual.  The curators chose a format which uses a `_:missing` plus
-a UUID fragment like above. For instance,
+but have no name.  RDF [blank
+nodes](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) are
+used to identify the individual.  The curators chose a format which
+uses a `_:missing` plus a UUID fragment like above. For instance,
 
 ```turtle
 _:missing-04015614
