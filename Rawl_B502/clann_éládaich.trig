@@ -1,0 +1,68 @@
+@base <http://example.com/Rawl_B502/clann_éládaich.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Clann Éládaich"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text007.html> .
+
+<#ClannÉládaich>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Éládaich";
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#ClandElathaig>.
+
+<#Ilmaide>
+    a foaf:Person;
+    irishRel:nomName "Ilmaide";
+    rel:childOf <#Móenaich>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Ilmaid>;
+    rel:descendantOfGroup <#ClannÉládaich>.
+
+<#Móenaich>
+    a foaf:Person;
+    irishRel:genName "Móenaich";
+    irishRel:nomName "Móenach";
+    rel:childOf <#Cináeda>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Móenaig>.
+
+<#Cináeda>
+    a foaf:Person;
+    irishRel:nomName "Cináed";
+    irishRel:genName "Cináeda";
+    rel:childOf <#Cormaic>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Cinaeda>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    irishRel:genName "Cormaic";
+    rel:childOf <#Muiredaich>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Cormaic>.
+
+<#Muiredaich>
+    a foaf:Person;
+    irishRel:nomName "Muiredach";
+    irishRel:genName "Muiredaich";
+    rel:childOf <#DuibThonn>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Muridaig>.
+
+<#DuibThonn>
+    a foaf:Person;
+    irishRel:nomName "Dub Tonn";
+    irishRel:genName "Duib Thonn";
+    owl:sameAs <http://example.com/Rawl_B502/clann_conglaiss.trig#DuibDáThonn>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#DuibDaThond>.
+}

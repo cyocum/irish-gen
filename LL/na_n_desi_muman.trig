@@ -1,0 +1,194 @@
+﻿@base <http://example.com/LL/na_n_desi_muman.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Na N-Desi Muman"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text074.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text074.html> .
+
+<#GillaPatric>
+    a foaf:Person;
+    irishRel:nomName "Gilla Patric";
+    rel:childOf <#MaelShechnaill>.
+
+<#MaelShechnaill>
+    a foaf:Person;
+    irishRel:genName "Mael Shechnaill";
+    irishRel:nomName "Mael Sechnaill";
+    rel:childOf <#GillaiBrigti>.
+
+<#GillaiBrigti>
+    a foaf:Person;
+    irishRel:genName "Gillai Brigti";
+    irishRel:nomName "Gilla Brigti";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Fhelain>.
+
+<#Fhelain>
+    a foaf:Person;
+    irishRel:genName "Fhelain";
+    irishRel:nomName "Faelan";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Mothlai>.
+
+<#Mothlai>
+    a foaf:Person;
+    irishRel:nomName "Mothlai";
+    rel:childOf <#Ruadrach>.
+
+<#Ruadrach>
+    a foaf:Person;
+    irishRel:genName "Ruadrach";
+    irishRel:nomName "Ruaidri";
+    rel:childOf <#Dunchada>.
+
+<#Dunchada>
+    a foaf:Person;
+    irishRel:genName "Dunchada";
+    irishRel:nomName "Dunchad";
+    rel:childOf <#Eogain>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:nomName "Eogain";
+    rel:childOf <#Bregduilb>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Eogain>.
+
+<#Bregduilb>
+    a foaf:Person;
+    irishRel:genName "Bregduilb";
+    irishRel:nomName "Bregdolb";
+    rel:childOf <#Cummascaig>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Bregduilb>.
+
+<#Cummascaig>
+    a foaf:Person;
+    irishRel:genName "Cummascaig";
+    irishRel:nomName "Cummuscach";
+    rel:childOf <#Cobthaig>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Cummascaig>.
+
+<#Cobthaig>
+    a foaf:Person;
+    irishRel:genName "Cobthaig";
+    irishRel:nomName "Cobthach";
+    rel:childOf <#Aeda>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Cobthaig>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Fhintain>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Aeda>.
+
+<#Fhintain>
+    a foaf:Person;
+    irishRel:genName "Fhintain";
+    irishRel:nomName "Fintan";
+    rel:childOf <#Cláre>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Fintain>.
+
+<#Cláre>
+    a foaf:Person;
+    irishRel:genName "Cláre";
+    irishRel:nomName "Cláire";
+    rel:childOf <#Cainnig>.
+
+# This raises an interesting question. The name in the corresponding position
+# in the pedigree in n_dési.ttl is "Lasre"/"Lasair". Same genealogical position,
+# different names - are they still the "same" person? What is a person? EPT
+
+<#Cainnig>
+    a foaf:Person;
+    irishRel:genName "Cainnig";
+    irishRel:nomName "Cainnech";
+    rel:childOf <#Ercbraind>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Cainnig>.
+
+<#Ercbraind>
+    a foaf:Person;
+    irishRel:genName "Ercbraind";
+    irishRel:nomName "Ercbrand";
+    rel:childOf <#Niad>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Ernbraind>.
+
+<#Niad>
+    a foaf:Person;
+    irishRel:genName "Niad";
+    irishRel:nomName "Nia";
+    rel:childOf <#Briuin>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Nioth>.
+
+<#Briuin>
+    a foaf:Person;
+    irishRel:genName "Briuin";
+    irishRel:nomName "Brion";
+    rel:childOf <#Eogain-7cda63d0>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Brioin>.
+
+<#Eogain-7cda63d0>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Bricc>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Eogain-1993ddd1>.
+
+<#Bricc>
+    a foaf:Person;
+    irishRel:genName "Bricc";
+    irishRel:nomName "Brecc";
+    rel:childOf <#AirtChoirp>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#Bricc>.
+
+<#AirtChoirp>
+    a foaf:Person;
+    irishRel:genName "Airt Choirp";
+    irishRel:nomName "Art Corp";
+    rel:childOf <#CorpriRigroin>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#ArtChuirp>.
+
+<#CorpriRigroin>
+    a foaf:Person;
+    irishRel:genName "Corpri Rigroin";
+    irishRel:nomName "Coirpri Rigron";
+    rel:childOf <#FhiachachSuide>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#CorpriRígróin>.
+
+<#FhiachachSuide>
+    a foaf:Person;
+    irishRel:genName "Fhiachach Suide";
+    irishRel:nomName "Fiachu Suide";
+    rel:childOf <#FeidlimidRechtada>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#FhiachachSuidge>.
+
+<#FeidlimidRechtada>
+    a foaf:Person;
+    irishRel:nomName "Feidlimid Rechtada";
+    owl:sameAs <http://example.com/LL/lagin.trig#FeidlimidRechtada>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#FeidlimtheRechtada>.
+}

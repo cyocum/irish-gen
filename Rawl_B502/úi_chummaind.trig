@@ -1,0 +1,98 @@
+@base <http://example.com/Rawl_B502/úi_chummaind.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Chummaind"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#MáelPátric>
+    a foaf:Person;
+    irishRel:nomName "Máel Pátric";
+    rel:childOf <#MáelChennais>.
+
+<#MáelChennais>
+    a foaf:Person;
+    irishRel:genName "Máel Chennais";
+    rel:childOf <#Fhiangaile>.
+
+<#Fhiangaile>
+    a foaf:Person;
+    irishRel:genName "Fhiangaile";
+    irishRel:nomName "Fiangail";
+    rel:childOf <h-Írgaile>.
+
+<h-Írgaile>
+    a foaf:Person;
+    irishRel:genName "h-Írgaile";
+    irishRel:nomName "Írgail";
+    rel:childOf <#Chumaind>.
+
+<#Chumaind>
+    a foaf:Person;
+    irishRel:genName "Chumaind";
+    irishRel:nomName "Cumand";
+    rel:childOf <#Dega>.
+
+<#Dega>
+    a foaf:Person;
+    irishRel:genName "Dega";
+    rel:childOf <#Findchada>;
+    owl:sameAs <http://example.com/Rawl_B502/úi_chon_dúin.trig#Dega>.
+
+<#Findchada>
+    a foaf:Person;
+    irishRel:genName "Findch(ada)" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_chon_dúin.trig#Findchada>.
+
+<#Linge>
+    a foaf:Person ;
+    irishRel:genName "Linge" ;
+    irishRel:genName "Luigne" ;
+    irishRel:numChild 2 .
+# sameAs De Úib Angáin Linge Labar ? - CY
+
+<#LingeDub>
+    a foaf:Person ;
+    irishRel:nomName "Linge Dub" ;
+    rel:childOf <#Linge>.
+
+<#LingeFind>
+    a foaf:Person ;
+    irishRel:nomName "Linge Find" ;
+    rel:childOf <#Linge>.
+
+<#Mochon>
+    a foaf:Person ;
+    irishRel:genName "Mochon" ;
+    irishRel:nomName "Mochu" ;
+    rel:descendantOf <#Linge>.
+
+<#MacCausraith>
+    a foaf:Person ;
+    irishRel:nomName "Mac Causraith" ;
+    rel:childOf <#Mochon>.
+    
+<#MacCárith>
+    a foaf:Person ;
+    irishRel:nomName "Mac Cárith" ;
+    rel:childOf <#Mochon>.
+
+<#Bruinniuc>
+    a foaf:Person ;
+    irishRel:nomName "Bruinniuc" ;
+    rel:childOf <#Mochon>.
+}

@@ -1,0 +1,189 @@
+@base <http://example.com/LL/genelach_corco_bascind.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Corco Bascind"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text077.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text077.html> .
+
+<#Cathrannach>
+    a foaf:Person;
+    irishRel:nomName "Cathrannach";
+    rel:childOf <#MeicRaith>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Cathrannach>.
+
+<#MeicRaith>
+    a foaf:Person;
+    irishRel:genName "Meic Raith";
+    irishRel:nomName "Mac Raith";
+    rel:childOf <#Bascind>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#MeicRaith>.
+
+<#Bascind>
+    a foaf:Person;
+    irishRel:genName "Bascind";
+    irishRel:nomName "Baiscend";
+    rel:childOf <#Briain>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Bascind>.
+
+<#Briain>
+    a foaf:Person;
+    irishRel:genName "Briain";
+    irishRel:nomName "Brian";
+    rel:childOf <#Murchada>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Briain>.
+
+<#Murchada>
+    a foaf:Person;
+    irishRel:genName "Murchada";
+    irishRel:nomName "Murchad";
+    rel:childOf <#Cathrannaig>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Murchada>.
+
+<#Cathrannaig>
+    a foaf:Person;
+    irishRel:genName "Cathrannaig";
+    irishRel:nomName "Cathrannach";
+    rel:childOf <#Aeda>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Cathrannaig>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aeda";
+    rel:childOf <#Rectabrat>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Aeda>.
+
+<#Rectabrat>
+    a foaf:Person;
+    irishRel:genName "Rectabrat";
+    irishRel:nomName "Rectabra";
+    rel:childOf <#Aithechdai>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Rectabrat>.
+
+<#Aithechdai>
+    a foaf:Person;
+    irishRel:genName "Aithechdai";
+    irishRel:nomName "Aithechda";
+    rel:childOf <#Thalamnaig>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Athechdai>.
+
+<#Thalamnaig>
+    a foaf:Person;
+    irishRel:genName "Thalamnaig";
+    irishRel:nomName "Talamnach";
+    rel:childOf <#Laidcind>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Thalamnaig>.
+
+<#Laidcind>
+    a foaf:Person;
+    irishRel:genName "Laidcind";
+    irishRel:nomName "Laidcend";
+    rel:childOf <#Baetain>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Laidgcind>.
+
+<#Baetain>
+    a foaf:Person;
+    irishRel:genName "Baetain";
+    irishRel:nomName "Baetan";
+    rel:childOf <#Dondnain>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Báitain>.
+
+<#Dondnain>
+    a foaf:Person;
+    irishRel:genName "Dondnain";
+    irishRel:nomName "Dondnan";
+    rel:childOf <#Mongain>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Donnain>.
+
+<#Mongain>
+    a foaf:Person;
+    irishRel:genName "Mongain";
+    irishRel:nomName "Mongan";
+    rel:childOf <#Cuirp>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Mogain>.
+
+<#Cuirp>
+    a foaf:Person;
+    irishRel:genName "Cuirp";
+    irishRel:nomName "Corp";
+    rel:childOf <#Cet>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Cuirp>.
+
+<#Cet>
+    a foaf:Person;
+    irishRel:nomName "Cet";
+    rel:childOf <#Déice>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Cett>.
+
+<#Déice>
+    a foaf:Person;
+    irishRel:genName "Déice";
+    irishRel:nomName "Décce";
+    rel:childOf <#Imchada>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Decci>.
+
+<#Imchada>
+    a foaf:Person;
+    irishRel:genName "Imchada";
+    irishRel:nomName "Imchad";
+    rel:childOf <#Cuirp-0e7497d0>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#Imchada>.
+
+<#Cuirp-0e7497d0>
+    a foaf:Person;
+    irishRel:genName "Cuirp";
+    irishRel:nomName "Corp";
+    rel:childOf <#Lugdech>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#CuirpLuigdech>.
+
+<#Lugdech>
+    a foaf:Person;
+    irishRel:genName "Lugdech";
+    irishRel:nomName "Lugaid";
+    rel:childOf <#Oengusa>;
+    rel:childOf <#Ailella>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#CuirpLuigdech>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:nomName "Ailella";
+    rel:childOf <#CairpriBaschain>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#AilellaBascain>.
+    
+# We need to discuss what to do in these "son of X or Y" 
+# situations. To me, there seems no reason to assume that
+# the pedigree doesn't continue aftereach of the options.
+# But should we then take the two options as two people
+# or two possible identities for the same person, that is, 
+# for the filler of this role? Is this a confusion on the
+# genealogist's part over names or over people. EPT
+
+<#Oengusa>
+    a foaf:Person;
+    irishRel:genName "Oengusa";
+    irishRel:nomName "Oengus";
+    rel:childOf <#CairpriBaschain>;
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#OengusaCorpri>.
+
+<#CairpriBaschain>
+    a foaf:Person;
+    irishRel:genName "Cairpri Baschain";
+    irishRel:nomName "Coirpre Baiscind";
+    owl:sameAs <http://example.com/LL/corco_bascind.trig#OengusaCorpri>.
+}

@@ -1,0 +1,90 @@
+@base <http://example.com/LL/sil_anmchada.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Síl Anmchada"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text118.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text118.html> .
+
+<#Godra>
+    a foaf:Person;
+    irishRel:nomName "Godra";
+    rel:childOf <#Dunadaig>.
+
+<#Dunadaig>
+    a foaf:Person;
+    irishRel:genName "Dunadaig";
+    irishRel:nomName "Dunadach";
+    rel:childOf <#Godrai-8b110cb0>.
+
+<#Godrai-8b110cb0>
+    a foaf:Person;
+    irishRel:genName "Godrai";
+    irishRel:nomName "Godra";
+    rel:childOf <#Longsig>.
+
+<#Longsig>
+    a foaf:Person;
+    irishRel:genName "Longsig";
+    irishRel:nomName "Loingsech";
+    rel:childOf <#Dunadaig-d7955430>.
+
+<#Dunadaig-d7955430>
+    a foaf:Person;
+    irishRel:genName "Dunadaig";
+    irishRel:nomName "Dunadach";
+    rel:childOf <#Cobthaig>.
+
+<#Cobthaig>
+    a foaf:Person;
+    irishRel:genName "Cobthaig";
+    irishRel:nomName "Cobthach";
+    rel:childOf <#MaelDuin>.
+
+<#MaelDuin>
+    a foaf:Person;
+    irishRel:nomName "Mael Duin";
+    rel:childOf <#Dondgalaig>.
+
+<#Dondgalaig>
+    a foaf:Person;
+    irishRel:genName "Dondgalaig";
+    irishRel:nomName "Dondgalach";
+    rel:childOf <#Anmchada>.
+
+<#Anmchada>
+    a foaf:Person;
+    irishRel:genName "Anmchada";
+    irishRel:nomName "Anmchad";
+    rel:childOf <#EogainBúaic>.
+
+<#EogainBúaic>
+    a foaf:Person;
+    irishRel:genName "Eogain Búaic";
+    irishRel:nomName "Eogan Búaic";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#CorpriChruim>.
+
+<#CorpriChruim>
+    irishRel:genName "Corpri Chruim";
+    irishRel:nomName "Corpre Crom".
+}

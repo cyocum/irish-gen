@@ -1,0 +1,153 @@
+@base <http://example.com/LL/h_n_dróna.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Ríg .H. n-Dróna"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text085.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text085.html> .
+
+<#MaelSechnaill>
+    a foaf:Person;
+    irishRel:nomName "Mael Sechnaill";
+    rel:childOf <#Dondchada>.
+
+<#Dondchada>
+    a foaf:Person;
+    irishRel:genName "Dondchada";
+    irishRel:nomName "Dondchad";
+    rel:childOf <#Taidg>.
+
+<#Taidg>
+    a foaf:Person;
+    irishRel:genName "Taidg";
+    irishRel:nomName "Tadc";
+    rel:childOf <#Cairpre>.
+
+<#Cairpre>
+    a foaf:Person;
+    irishRel:genName "Cairpre";
+    irishRel:nomName "Coirpre";
+    rel:childOf [
+        a foaf:Person;
+        rel:childOf [
+            a foaf:Person;
+            rel:childOf <#Riain>
+        ]
+    ].
+
+<#Riain>
+    a foaf:Person;
+    irishRel:genName "Riain";
+    irishRel:nomName "Rian";
+    rel:childOf <#Dubgilla>.
+
+<#Dubgilla>
+    a foaf:Person;
+    irishRel:nomName "Dubgilla";
+    rel:childOf <#Bruatair>.
+
+<#Bruatair>
+    a foaf:Person;
+    irishRel:genName "Bruatair";
+    irishRel:nomName "Bruatar";
+    rel:childOf <#Aeda>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Bruatur>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Corpri>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Aeda-457ceebe>.
+
+<#Corpri>
+    a foaf:Person;
+    irishRel:genName "Corpri";
+    irishRel:nomName "Coirpre";
+    rel:childOf <#Laidcnen>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Corpri-4ea2959a>.
+
+<#Laidcnen>
+    a foaf:Person;
+    irishRel:nomName "Laidcnen";
+    rel:childOf <#Colmain>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ladgnen>.
+
+<#Colmain>
+    a foaf:Person;
+    irishRel:genName "Colmain";
+    irishRel:nomName "Colman";
+    rel:childOf <#AedaRoin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Colmain-81b498a4>.
+
+<#AedaRoin>
+    a foaf:Person;
+    irishRel:genName "Aeda Roin";
+    irishRel:nomName "Aed Ron";
+    rel:childOf <#Crunmael>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#AedaRoin>.
+
+<#Crunmael>
+    a foaf:Person;
+    irishRel:nomName "Crunmael";
+    rel:childOf <#Ronain>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crundmael-96c75f2e>.
+
+<#Ronain>
+    a foaf:Person;
+    irishRel:genName "Ronain";
+    irishRel:nomName "Ronan";
+    rel:childOf <#Colmain-cc21fa70>.
+
+<#Colmain-cc21fa70>
+    a foaf:Person;
+    irishRel:nomName "Colmain";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#NathÍ>;
+    owl:sameAs <http://example.com/LL/h_ndega.trig#Cormaic>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CormaicCamshroin>.
+
+<#NathÍ>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    rel:childOf <#Crimthainn>;
+    owl:sameAs <http://example.com/LL/h_ndega.trig#NathÍ>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.trig#NathÍ>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#NathÍ-dc44c4bc>.
+
+<#Crimthainn>
+    a foaf:Person;
+    irishRel:genName "Crimthainn";
+    irishRel:nomName "Crimthann";
+    rel:childOf <#Ennae>;
+    owl:sameAs <http://example.com/LL/h_ndega.trig#Crimthaind>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.trig#Crimthaind>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crimthainn-b3dceadd>.
+
+<#Ennae>
+    a foaf:Person;
+    irishRel:nomName "Ennae";
+    owl:sameAs <http://example.com/LL/h_felmeda#EnnaeChenselaig>;
+    owl:sameAs <http://example.com/LL/h_ceinselaig.trig#EnnaeCendselaig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ennae-c07ad5af>.
+}

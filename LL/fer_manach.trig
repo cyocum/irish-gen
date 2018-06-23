@@ -1,0 +1,148 @@
+﻿@base <http://example.com/LL/fer_manach.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Fer Manach"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text107.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text107.html> .
+
+<#GillaColuim>
+    a foaf:Person;
+    irishRel:nomName "Gilla Coluim";
+    rel:childOf <#GillaiCrist>.
+
+<#GillaiCrist>
+    a foaf:Person;
+    irishRel:genName "Gillai Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#Éicnig>.
+
+<#Éicnig>
+    a foaf:Person;
+    irishRel:genName "Éicnig";
+    irishRel:nomName "Éicnech";
+    rel:childOf <#Dalaig>.
+
+<#Dalaig>
+    a foaf:Person;
+    irishRel:genName "Dalaig";
+    irishRel:nomName "Dalach";
+    rel:childOf <h-Uidir>.
+
+<h-Uidir>
+    a foaf:Person;
+    irishRel:nomName "h-Uidir";
+    irishRel:genName "Uidir";
+    irishRel:nomName "Odor";
+    rel:childOf <#Cernaig>.
+
+<#Cernaig>
+    a foaf:Person;
+    irishRel:genName "Cernaig";
+    irishRel:nomName "Cernach";
+    rel:childOf <#Lugain>.
+
+<#Lugain>
+    a foaf:Person;
+    irishRel:genName "Lugain";
+    irishRel:nomName "Lugan";
+    rel:childOf <#Irgalaig>.
+
+<#Irgalaig>
+    a foaf:Person;
+    irishRel:genName "Irgalaig";
+    irishRel:nomName "Irgalach";
+    rel:childOf <#Feichind>.
+
+<#Feichind>
+    a foaf:Person;
+    irishRel:nomName "Feichind";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Fhergusa>.
+
+<#Fhergusa>
+    a foaf:Person;
+    irishRel:genName "Fhergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#CorpriDaimArgait>.
+
+<#CorpriDaimArgait>
+    a foaf:Person;
+    irishRel:genName "CorpriDaimArgait";
+    irishRel:nomName "Coirpre Dam Argait";
+    rel:childOf <#Echdach>;
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#CairpreDamArgait>;
+    owl:sameAs <http://example.com/LL/rig_airgiall.trig#CairpriDaimArgait>;
+    owl:sameAs <http://example.com/LL/síl_daimini.trig#CarpriDaimArgait>.
+
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach";
+    irishRel:nomName "Eochaid";
+    rel:childOf <#CrimthainnLeith>;
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#EochaidAndgaine>.
+
+<#CrimthainnLeith>
+    a foaf:Person;
+    irishRel:genName "Crimthainn Leith";
+    irishRel:nomName "Crimthann Liath";
+    owl:sameAs <http://example.com/LL/h_airgialla.trigCrimthand>.
+
+<#GillaCrist-c9fb3700>
+    a foaf:Person;
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#MeicUidir>.
+# There are two possibile ways of interpreting
+# this second pedigree. "Gilla Crist mac Meic Uidir"
+# could be Gilla Crist, son of Éicnig, son of Dalaig,
+# son of Uidir" from the previous pedigree. If so,
+# perhaps it is there as an alternative ancestry for
+# Uidir, as they differ thereafter? Or is Dub Darach
+# the brother of Gilla Crist from the first pedigree i.e.
+# another son of <#Éicnig>? I am assuming the latter EPT
+
+<#MeicUidir>
+    a foaf:Person;
+    irishRel:genName "Meic Uidir";
+    irishRel:nomName "Mac Uidir";
+    rel:childOf <#DuibDarach>.
+
+<#DuibDarach>
+    a foaf:Person;
+    irishRel:genName "Duib Darach";
+    irishRel:nomName "Dub Darach";
+    rel:childOf <#Écnig-cf0fb8b0>.
+
+<#Écnig-cf0fb8b0>
+    a foaf:Person;
+    irishRel:genName "Écnig";
+    irishRel:nomName "Éicnech";
+    owl:sameAs <#Éicnig>.
+}
+

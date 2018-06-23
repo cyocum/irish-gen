@@ -1,0 +1,76 @@
+@base <http://example.com/Rawl_B502/de_regibus_lagenorum.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "DE REGIBUS LAGENORUM ET DE ORDINIBUS EORUM NUNC INCIPIT"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text001.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text001.html> .
+
+<#LabraidLongsechMóen>
+    a irishTitle:Rí ;
+    irishRel:nomName "Labraid Longsech Móen";
+    owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#LabraidLoingsech>.
+
+<#NadBuidb>
+    a irishTitle:Rí ;
+    irishRel:nomName "Nad Buidb";
+    rel:childOf <h-EirccBuadaig>;
+    rdfs:comment "do Úib Dega";
+    rdfs:comment "s h-é rí dédenach ro buí díb ann amal ro-s-ainmnig in prím-file cétna Laidcenn mc Bairceda".
+
+<h-EirccBuadaig>
+    a foaf:Person;
+    irishRel:genName "h-Eircc Buadaig";
+    irishRel:nomName "Ercc Buadach";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#ErcBuadach-06b6ca88>.
+
+<#ÚibDega>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Úi Dega".
+
+ <#Laidcenn>
+    a foaf:Person;
+    irishRel:nomName "Laidcenn";
+    rdfs:comment "in prím-file cétna";
+    rdfs:comment "do Dáil Araide";
+    rdfs:comment "[author of 'Nidu dír dermait dála cach ríg rómdae']";
+    rel:childOf <#Bairceda>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Laidcend>.
+
+<#Bairceda>
+    a foaf:Person;
+    irishRel:genName "Bairceda";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Baircheda>.
+
+<#DáilAraide>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Araide".
+
+<#Brii>
+    a foaf:Person;
+    irishRel:nomName "Brii";
+    rel:childOf <#Bairceda>;
+    rel:worksWith <#CatháerMár>;
+    rdfs:comment "is é ro-d-uc for fis Cathaír";
+    rdfs:seeAlso <http://www.vanhamel.nl/codecs/Dinnshenchas_of_Loch_Garman>.
+
+<#CatháerMár>
+    a foaf:Person;
+    irishRel:accName "Catháer Már";
+    irishRel:nomName "Cathair Már";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CathairMár>.
+}

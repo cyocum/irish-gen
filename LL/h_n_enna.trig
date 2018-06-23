@@ -1,0 +1,158 @@
+@base <http://example.com/LL/h_n_enna.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. N-Enna"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text071.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text071.html> .
+
+<#Conchobor>
+    a foaf:Person;
+    irishRel:nomName "Conchobor";
+    rel:childOf <#GillaiAilbe>.
+
+<#GillaiAilbe>
+    a foaf:Person;
+    irishRel:genName "Gillai Ailbe";
+    irishRel:nomName "Gilla Ailbe";
+    rel:childOf <#MeicMaras>.
+
+<#MeicMaras>
+    a foaf:Person;
+    irishRel:genName "Meic Maras";
+    irishRel:nomName "Mac Maras";
+    rel:childOf <#Ciarmaic>.
+
+<#Ciarmaic>
+    a foaf:Person;
+    irishRel:genName "Ciarmaic";
+    irishRel:nomName "Ciarmac";
+    rel:childOf <#MaelGuala>.
+
+<#MaelGuala>
+    a foaf:Person;
+    irishRel:nomName "Mael Guala";
+    rel:childOf <#Rind>.
+
+<#Rind>
+    a foaf:Person;
+    irishRel:nomName "Rind";
+    rel:childOf <#FhindShláine>.
+
+<#FhindShláine>
+    a foaf:Person;
+    irishRel:genName "Fhind Shláine";
+    irishRel:nomName "Find Slán";
+    rel:childOf <#Cerbaill>.
+
+<#Cerbaill>
+    a foaf:Person;
+    irishRel:genName "Cerbaill";
+    irishRel:nomName "Cerball";
+    rel:childOf <#Corne>.
+
+<#Corne>
+    a foaf:Person;
+    irishRel:nomName "Corne";
+    rel:childOf <#Olchobair>.
+
+<#Olchobair>
+    a foaf:Person;
+    irishRel:genName "Olchobair";
+    irishRel:nomName "Olchobar";
+    rel:childOf <#DuibIndrecht>.
+
+<#DuibIndrecht>
+    a foaf:Person;
+    irishRel:genName "Duib Indrecht";
+    irishRel:nomName "Dub Indrecht";
+    rel:childOf <#Cathasaig>.
+
+<#Cathasaig>
+    a foaf:Person;
+    irishRel:genName "Cathasaig";
+    irishRel:nomName "Cathasach";
+    rel:childOf <#Usnig>;
+    rel:childOf <#MaeleUmai>.
+
+<#Usnig>
+    a foaf:Person;
+    irishRel:genName "Usnig";
+    irishRel:nomName "Uisnech";
+    rel:childOf <#Cuain>;
+    rdfs:comment "m Usnig nó m Maele Umai".
+
+<#MaeleUmai>
+    a foaf:Person;
+    irishRel:genName "Maele Umai";
+    irishRel:nomName "Mael Umai";
+    rel:childOf <#Cuain>;
+    rdfs:comment "m Usnig nó m Maele Umai".
+
+<#Cuain>
+    a foaf:Person;
+    irishRel:genName "Cuain";
+    irishRel:nomName "Cuan";
+    rel:childOf <#Amalgada>.
+
+<#Amalgada>
+    a foaf:Person;
+    irishRel:genName "Amalgada";
+    irishRel:nomName "Amalgaid";
+    rel:childOf <#Ennai>.
+
+<#Ennai>
+    a foaf:Person;
+    irishRel:genName "Ennai";
+    irishRel:nomName "Enna";
+    rel:childOf <#Crimthaind>.
+
+<#Crimthaind>
+    a foaf:Person;
+    irishRel:genName "Crimthaind";
+    irishRel:nomName "Crimthand";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#NadFraich>.
+
+<#NadFraich>
+    a foaf:Person;
+    irishRel:nomName "Nad Fraich";
+    rel:childOf <#Cuirc>;
+    owl:sameAs <http://example.com/LL/rig_desmuman.trig#NadFraich>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich-47cc38b6>.
+
+<#Cuirc>
+    a foaf:Person;
+    irishRel:genName "Cuirc";
+    irishRel:nomName "Corc";
+    rel:childOf <#Lugdech>;
+    owl:sameAs <http://example.com/LL/rig_desmuman.trig#Cuirc>;
+    owl:sameAs <http://example.com/LL/n_echach.trig#Cuirc>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cuirc>.
+
+<#Lugdech>
+    a foaf:Person;
+    irishRel:genName "Lugdech";
+    irishRel:nomName "Lugaid";
+    owl:sameAs <http://example.com/LL/rig_desmuman.trig#Lugdech>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Lugdech>.
+}

@@ -1,0 +1,92 @@
+@base <http://example.com/Rawl_B502/genelach_uachtair_tíre.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Uachtair Tíre"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#Niall>
+    a foaf:Person;
+    irishRel:nomName "Niall";
+    rel:childOf <#GillaiFechín>.
+
+<#GillaiFechín>
+    a foaf:Person;
+    irishRel:genName "Gillai Fechín";
+    irishRel:nomName "Gillae Fechín";
+    rel:childOf <#Néill>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:genName "Néill";
+    irishRel:nomName "Niall";
+    rel:childOf <#Fergusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Cummascaich>.
+
+<#Cummascaich>
+    a foaf:Person;
+    irishRel:genName "Cummascaich";
+    irishRel:nomName "Cummascach";
+    rel:childOf <#Écertaich>.
+
+<#Écertaich>
+    a foaf:Person;
+    irishRel:genName "Écertaich";
+    irishRel:nomName "Écertach";
+    rel:childOf <#Lorcáin>.
+
+<#Lorcáin>
+    a foaf:Person;
+    irishRel:genName "Lorcáin";
+    irishRel:nomName "Lorcán";
+    rel:childOf <#Cernaich>.
+
+<#Cernaich>
+    a foaf:Person;
+    irishRel:genName "Cernaich";
+    irishRel:nomName "Cernach";
+    rel:childOf <#MáelBressail>.
+
+<#MáelBressail>
+    a foaf:Person;
+    irishRel:genName "Máel Bressail";
+    irishRel:nomName "Máel Bressal";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Feidelmid>.
+
+<#Feidelmid>
+    a foaf:Person;
+    irishRel:genName "Feidelmid";
+    rel:childOf <#FiachrachCassáin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_na_n_airther.trig#Feidelmid>.
+
+<#FiachrachCassáin>
+    a foaf:Person;
+    irishRel:genName "Fiachrach Cassáin" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_na_n_airther.trig#FiachrachCassáin> .
+    
+}

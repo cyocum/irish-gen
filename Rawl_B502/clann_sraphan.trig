@@ -1,0 +1,109 @@
+@base <http://example.com/Rawl_B502/clann_sraphan.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Clann Sraphan"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text007.html> .
+
+<#ClannSraphan>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Sraphan";
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#ClandSrafain>.
+
+<#Cethernach>
+    a foaf:Person;
+    irishRel:nomName "Cethernach";
+    rel:childOf <#Sóerchoraich>;
+    rel:descendantOf <#ClannSraphan>;
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Cethernach>;
+    rel:descendantOfGroup <#ClannSraphan>.
+
+<#Sóerchoraich>
+    a foaf:Person;
+    irishRel:nomName "Sóerchorach";
+    irishRel:genName "Sóerchoraich";
+    owl:sameAs <http://example.com/LL/cland_conglais.trig#Saerchoraig>.
+
+<#Fáebrachán>
+    a foaf:Person;
+    irishRel:nomName "Fáebrachán";
+    rel:childOf <#Finguine>.
+
+<#Finguine>
+    a foaf:Person;
+    irishRel:nomName "Fingen";
+    irishRel:genName "Finguine";
+    rel:childOf <#Labrai>.
+
+<#Labrai>
+    a foaf:Person;
+    irishRel:nomName "Labra";
+    irishRel:genName "Labrai";
+    rel:childOf <#Finnacáin>.
+
+<#Finnacáin>
+    a foaf:Person;
+    irishRel:nomName "Finnacán";
+    irishRel:genName "Finnacáin";
+    rel:childOf <#Congeltaich>.
+
+<#Congeltaich>
+    a foaf:Person;
+    irishRel:nomName "Congeltach";
+    irishRel:genName "Congeltaich";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:nomName "Cellach";
+    irishRel:genName "Cellaich";
+    rel:childOf <#Thnúthgaile>.
+
+<#Thnúthgaile>
+    a foaf:Person;
+    irishRel:nomName "Tnúthgal";
+    irishRel:genName "Thnúthgaile";
+    rel:childOf <#DuibDáThonn>.
+
+<#DuibDáThonn>
+    a foaf:Person;
+    irishRel:nomName "Dub Dá Thonn";
+    irishRel:genName "Duib Dá Thonn";
+    owl:sameAs <http://example.com/Rawl_B502/clann_conglaiss.trig#DuibDáThonn>.
+
+<#Dubucán>
+    a foaf:Person;
+    irishRel:nomName "Dubucán";
+    rel:childOf <#Lígáin>.
+
+<#Lígáin>
+    a foaf:Person;
+    irishRel:nomName "Lígán";
+    irishRel:genName "Lígáin";
+    rel:childOf <#Bresail>.
+
+<#Bresail>
+    a foaf:Person;
+    irishRel:nomName "Bresal";
+    irishRel:genName "Bresail";
+    rel:childOf <#Fairchellaich>.
+
+<#Fairchellaich>
+    a foaf:Person;
+    irishRel:nomName "Fairchellach";
+    irishRel:genName "Fairchellaich".
+}

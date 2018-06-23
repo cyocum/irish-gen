@@ -1,0 +1,191 @@
+@base <http://example.com/LL/senchas_coitechenn_clainde_fergusa.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Is é So Senchas Coitchenn Clainde Fergus(a)"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text032.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text032.html> .
+
+<#Fhergusa>
+    a foaf:Person;
+    irishRel:genName "Fhergusa";
+    irishRel:nomName "Fergus";
+    irishRel:numChild 6.
+    # same as fergus mac roích ?- CY
+
+<#FerDeoda>
+    a foaf:Person;
+    irishRel:nomName "Fer Deoda";
+    rel:childOf <#Fhergusa>;
+    rdfs:comment "o tát Corcomrúad".
+
+<#FerTlactga>
+    a foaf:Person;
+    irishRel:nomName "Fer Tlactga";
+    rel:childOf <#Fhergusa>;
+    rdfs:comment "o tát na cethri Araid .i. Taecraige & Artraige & Descert Cliach." ;
+    irishRel:ancestorOfGroup <hIdbanMugTói>, <#Ciarraige>, <#Bidraige>.
+
+<hIdbanMugTói>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Idban Mug Tói" .
+
+<#Ciarraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Ciarraige" .
+
+<#Bidraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Bidraige" .
+
+
+<#MugToeth>
+    a foaf:Person;
+    irishRel:genName "Mug Toeth";
+    irishRel:nomName "Mug Doeth";
+    irishRel:nomName "Mug Doet";
+    rel:childOf <#Fhergusa>.
+
+<#Uatu>
+    a foaf:Person;
+    irishRel:nomName "Uatu";
+    rel:childOf <#Fhergusa>;
+    rdfs:comment "o tát nói mc Maicniat in cach baliu.".
+
+<#Eithlend>
+    a foaf:Person;
+    irishRel:nomName "Eithlend";
+    rel:childOf <#Fhergusa>;
+    irishRel:ancestorOfGroup <#Orbraige>.
+
+<#Orbraige>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Orbraige" .
+
+<#CorpAulaim>
+    a foaf:Person;
+    irishRel:nomName "Corp Aulaim";
+    rel:childOf <#Fhergusa>;
+    irishRel:ancestorOfGroup <#CorcÁulaim>.
+
+<#CorcÁulaim>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Corc Áulaim" .
+
+<#Celtchair>
+    a foaf:Person;
+    irishRel:nomName "Celtchair";
+    rel:childOf <#Cuthechair>.
+
+<#Cuthechair>
+    a foaf:Person;
+    irishRel:genName "Cuthechair";
+    irishRel:nomName "Cuthechar";
+    rel:childOf <#Fothaid>.
+
+<#Fothaid>
+    a foaf:Person;
+    irishRel:genName "Fothaid";
+    irishRel:nomName "Fothad";
+    rel:childOf <#FhirFhiled>.
+
+<#FhirFhiled>
+    a foaf:Person;
+    irishRel:genName "Fer Filed";
+    irishRel:nomName "Fhir Fhiled";
+    rdfs:comment "Is die claind Finnian Cluana Iraird".
+
+<#Finnian>
+    a foaf:Person;
+    irishRel:nomName "Finnian";
+    rel:childOf <#Fintain>.
+
+<#Fintain>
+    a foaf:Person;
+    irishRel:genName "Fintain";
+    irishRel:nomName "Fintan";
+    rel:childOf <#Concraid>.
+
+<#Concraid>
+    a foaf:Person;
+    irishRel:nomName "Concraid";
+    rel:childOf <#Dairchella>.
+
+<#Dairchella>
+    a foaf:Person;
+    irishRel:genName "Dairchella";
+    irishRel:nomName "Dairchell";
+    rel:childOf <#Senaig>.
+
+<#Senaig>
+    a foaf:Person;
+    irishRel:genName "Senaig";
+    irishRel:nomName "Senach";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Fhergusa-e8ac3640>.
+
+<#Fhergusa-e8ac3640>
+    a foaf:Person;
+    irishRel:nomName "Fhergusa";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Celtchair-c0ed9ca0>.
+
+<#Celtchair-c0ed9ca0>
+    a foaf:Person;
+    irishRel:genName "Celtchair";
+    irishRel:nomName "Celtchar";
+    rel:childOf <#Fothaid-bda94d40>.
+
+<#Fothaid-bda94d40>
+    owl:sameAs <#Fothaid>;
+    rel:childOf <#FhirFhiled-e1ad66d4>.
+
+<#FhirFhiled-e1ad66d4>
+    owl:sameAs <#FhirFhiled>;
+    rel:childOf <#Glais>.
+
+<#Glais>
+    a foaf:Person;
+    irishRel:genName "Glais";
+    irishRel:nomName "Glas";
+    rel:childOf <#Rosa>.
+
+<#Rosa>
+    owl:sameAs <http://example.com/LL/n_echach.trig#Rosa>;
+    rel:childOf <#Rudraige>.
+
+<#Rudraige>
+    owl:sameAs <http://example.com/LL/n_echach.trig#Rudraige>;
+    irishRel:nomName "Rudraige".
+}

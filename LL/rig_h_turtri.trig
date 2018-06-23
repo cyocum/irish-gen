@@ -1,0 +1,162 @@
+﻿@base <http://example.com/LL/rig_h_turtri.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Rig H. Turtri"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text108.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text108.html> .
+
+<#CuUlad>
+    a foaf:Person;
+    irishRel:nomName "Cu Ulad";
+    rel:childOf <#ConMaige>.
+
+<#ConMaige>
+    a foaf:Person;
+    irishRel:genName "Con Maige";
+    irishRel:nomName "Cú Maige";
+    rel:childOf <#Deoraid>.
+
+<#Deoraid>
+    a foaf:Person;
+    irishRel:genName "Deoraid";
+    irishRel:nomName "Deorad";
+    rel:childOf <#Fhoglada>.
+
+<#Fhoglada>
+    a foaf:Person;
+    irishRel:genName "Fhoglada";
+    irishRel:nomName "Foglad";
+    rel:childOf <#MeicIairn>.
+
+<#MeicIairn>
+    a foaf:Person;
+    irishRel:genName "Meic Iairn";
+    irishRel:nomName "Mac Iairn";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Donnacain>.
+
+<#Donnacain>
+    a foaf:Person;
+    irishRel:genName "Donnacain";
+    irishRel:nomName "Donnacan";
+    rel:childOf <#Fhogartaig>.
+
+<#Fhogartaig>
+    a foaf:Person;
+    irishRel:genName "Fhogartaig";
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Fhlaind>.
+
+<#Fhlaind>
+    a foaf:Person;
+    irishRel:genName "Fhlaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#Muridaig>.
+
+<#Muridaig>
+    a foaf:Person;
+    irishRel:genName "Muridaig";
+    irishRel:nomName "Muiredach";
+    rel:childOf <#Inrechtaig>.
+
+<#Inrechtaig>
+    a foaf:Person;
+    irishRel:genName "Inrechtaig";
+    irishRel:nomName "Indrechtach";
+    rel:childOf <#Rechtabrai>.
+
+<#Rechtabrai>
+    a foaf:Person;
+    irishRel:genName "Rechtabrai";
+    irishRel:nomName "Rechtabra";
+    rel:childOf <#MaelChraibe>.
+
+<#MaelChraibe>
+    a foaf:Person;
+    irishRel:genName "Mael Chraibe";
+    irishRel:nomName "Mael Craibe";
+    rel:childOf <#MaelFhothartaig>.
+
+<#MaelFhothartaig>
+    a foaf:Person;
+    irishRel:genName "Mael Fhothartaig";
+    irishRel:nomName "Mael Fogartaig";
+    rel:childOf <#Shubne>.
+
+<#Shubne>
+    a foaf:Person;
+    irishRel:genName "Shubne";
+    irishRel:nomName "Subne";
+    rel:childOf <#Fhurudáin>.
+
+<#Fhurudáin>
+    a foaf:Person;
+    irishRel:genName "Fhurudáin";
+    irishRel:nomName "Furudán";
+    rel:childOf <#Becce>.
+
+<#Becce>
+    a foaf:Person;
+    irishRel:genName "Becce";
+    irishRel:nomName "Becc";
+    rel:childOf <#Cuanach>.
+
+<#Cuanach>
+    a foaf:Person;
+    irishRel:genName "Cuanach";
+    irishRel:nomName "Cuanu";
+    rel:childOf <#Dare>.
+
+<#Dare>
+    a foaf:Person;
+    irishRel:nomName "Dare";
+    rel:childOf <#Feidilmthi>.
+
+<#Feidilmthi>
+    a foaf:Person;
+    irishRel:genName "Feidilmthi";
+    irishRel:nomName "Feidlimid";
+    rel:childOf <#Echen>.
+
+<#Echen>
+    a foaf:Person;
+    irishRel:nomName "Echen";
+    rel:childOf <#FiachrachTurtri>;
+    rdfs:comment "a quo .h. Turtri".
+
+<#FiachrachTurtri>
+    a foaf:Person;
+    irishRel:genName "Fiachrach Turtri";
+    irishRel:nomName "Fiachra Turtri";
+    rel:childOf <#CollaUais>;
+    irishRel:ancestorOfGroup <hTurtri>.
+
+<hTurtri>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Turtri" .    
+
+<#CollaUais>
+    a foaf:Person;
+    irishRel:nomName "Colla Uais";
+    owl:sameAs <http://example.com/LL/h_fiachrach_arda_sratha.trig#CollaUais>.
+}

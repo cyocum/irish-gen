@@ -1,0 +1,135 @@
+@base <http://example.com/Rawl_B502/de_genelogia_buirich.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Buirich";
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html> .
+
+<#Buirich>
+    a foaf:Person;
+    irishRel:genName "Buirich";
+    irishRel:numChild 4.
+
+<#EchachLiatháin>
+    a foaf:Person ;
+    irishRel:genName "Echach Liatháin" ;
+    irishRel:nomName "Eochu Liathán" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ceníuil_dalláin.trigEchachLiatháin> .
+
+<#Ailill>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    rel:childOf <#Buirich>.
+
+<#Óengus>
+    a foaf:Person;
+    irishRel:nomName "Óengus";
+    rel:childOf <#Buirich>.
+
+<#Canainn>
+    a foaf:Person;
+    irishRel:nomName "Canainn";
+    rel:childOf <#Buirich>.
+
+<#Dero>
+    a foaf:Person;
+    irishRel:nomName "Dero";
+    rel:childOf <#Buirich>.
+
+<#MeiccBrócc>
+    a foaf:Person;
+    irishRel:genName "Meicc Brócc";
+    irishRel:nomName "Macc Brócc";
+    irishRel:numChild 7.
+
+<#EchoSnac>
+    a foaf:Person;
+    irishRel:nomName "Echo Snac";
+    rel:childOf <#MeiccBrócc>.
+
+<#Óengus-e434921b>
+    a foaf:Person;
+    irishRel:nomName "Óengus";
+    rel:childOf <#MeiccBrócc>.
+
+<#Milige>
+    a foaf:Person;
+    irishRel:nomName "Milige";
+    rel:childOf <#MeiccBrócc>.
+
+<#Muiredach>
+    a foaf:Person;
+    irishRel:nomName "Muiredach";
+    rel:childOf <#MeiccBrócc>;
+    rel:ancestorOf <#Samgaisced>.
+
+<#Samgaisced>
+    a foaf:Person ;
+    irishRel:nomName "Samgaisced" .
+
+<#MacAidche>
+    a foaf:Person;
+    irishRel:nomName "Mac Aidche";
+    irishRel:nomName "Máel Dofhinnu" ;
+    rel:childOf <#MeiccBrócc>.
+
+<#Torlugaid>
+    a foaf:Person;
+    irishRel:nomName "Torlugaid";
+    rel:childOf <#MeiccBrócc>.
+
+<#ÁedUlach>
+    a foaf:Person;
+    irishRel:nomName "Áed Ulach";
+    rel:childOf <#MeiccAidchi>.
+
+<#MeiccAidchi>
+    a foaf:Person;
+    irishRel:genName "Meicc Aidchi" ;
+    owl:sameAs <#MacAidche>.
+
+<#Tigernach>
+    a foaf:Person;
+    irishRel:nomName "Tigernach";
+    rel:childOf <h-Uis>;
+    rel:ancestorOf <#Laidgneán>.
+
+<h-Uis>
+    a foaf:Person;
+    irishRel:genName "h-Uis" ;
+    irishRel:nomName "Uis".
+
+<#Laidgneán>
+    a foaf:Person ;
+    irishRel:nomName "Laidgneán" .
+    
+<#Amalgaid>
+    a foaf:Person ;
+    irishRel:nomName "Amalgaid" ;
+    rdfs:comment "defecit"@lat ;
+    rel:childOf <#MeiccAidchi>.
+
+<#Derer>
+    a foaf:Person ;
+    irishRel:nomName "Derer" ;
+    foaf:gender "female" ;
+    rel:spouseOf <#MeiccBrócc>;
+    rel:parentOf <#EchoSnac>, <#Óengus>, <#Milige>, <#Muiredach>, <#MacAidche>, <#Torlugaid>, <#Amalgaid>.
+
+
+}

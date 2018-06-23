@@ -1,0 +1,230 @@
+@base <http://example.com/Rawl_B502/genelach_úa_riacain.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Úa Riacain"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text004.html> .
+
+<#Cerball>
+    a foaf:Person;
+    irishRel:nomName "Cerball";
+    rel:childOf <#ConBladma>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cerbaill-855a3824>.
+
+<#MacTíre>
+    a foaf:Person;
+    irishRel:nomName "Mac Tíre";
+    rel:childOf <#ConBladma>.
+
+<#ConBladma>
+    a foaf:Person;
+    irishRel:nomName "Cú Bladma";
+    irishRel:genName "Con Bladma";
+    rel:childOf <#ConAllaid>;
+    irishRel:numChild 2;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#ConBladma>.
+
+<#ConAllaid>
+    a foaf:Person;
+    irishRel:nomName "Cú Allaid";
+    irishRel:genName "Con Allaid";
+    rel:childOf <#Fidallaid>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#ConAllaid>.
+
+<#Fidallaid>
+    a foaf:Person;
+    irishRel:nomName "Fidallaid";
+    irishRel:genName "Fidallaid";
+    rel:childOf <#Duinn>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fidallaid>.
+
+<#Duinn>
+    a foaf:Person;
+    irishRel:nomName "Donn";
+    irishRel:genName "Duinn";
+    rel:childOf <#Duibgilla>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Duind>.
+
+<#Duibgilla>
+    a foaf:Person;
+    irishRel:nomName "Dubgilla";
+    irishRel:genName "Duibgilla";
+    rel:childOf <#MáelFinne>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Dubgillai>.
+
+<#MáelFinne>
+    a foaf:Person;
+    irishRel:nomName "Máel Finne";
+    irishRel:genName "Máel Finne";
+    rel:childOf <#Riacáin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#MaelFhinne>.
+
+<#Riacáin>
+    a foaf:Person;
+    irishRel:nomName "Riacán";
+    irishRel:genName "Riacáin";
+    rel:childOf <#Cináeda>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Riacain>.
+
+<#Cináeda>
+    a foaf:Person;
+    irishRel:nomName "Cináed";
+    irishRel:genName "Cináeda";
+    rel:childOf <#Mugróin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cinaeda-0457b6a9>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_colgan_liphi.trig#Cináeda>.
+
+<#Mugróin>
+    a foaf:Person;
+    irishRel:nomName "Mugrón";
+    irishRel:genName "Mugróin";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Mugroin-307c0b8e>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_colgan_liphi.trig#Mugróin-60320dd0>.
+
+<#GillaMaire>
+    a foaf:Person;
+    irishRel:nomName "Gilla Maire";
+    irishRel:nomName "Gilla Cíchech";
+    rel:childOf <#MáelRuanaid>.
+
+<#MáelRuanaid>
+    a foaf:Person;
+    irishRel:nomName "Máel Ruanaid";
+    irishRel:genName "Máel Ruanaid";
+    rel:childOf <#Dubtai>.
+
+<#Dubtai>
+    a foaf:Person;
+    irishRel:nomName "Dubta";
+    irishRel:genName "Dubtai";
+    rel:childOf <#Duibrind>.
+
+<#Duibrind>
+    a foaf:Person;
+    irishRel:nomName "Dubrend";
+    irishRel:genName "Duibrind";
+    rel:childOf <#Dubgillai>.
+
+<#Dubgillai>
+    a foaf:Person;
+    irishRel:nomName "Dubgilla";
+    irishRel:genName "Dubgillai";
+    owl:sameAs <#Duibgilla>.
+
+<#Dáln-Gálla>
+    a irishRel:populationGroup ;
+    irishRel:populationGroupName "Dál n-Gálla";
+    irishRel:ancestorGroupOf <#ÚiDuibChuirrich>, <#ÚiFechíne>, <#ÚiDróna>, <#ÚiDonnáin>, <#ÚiBercháin>, <#ÚiBrocc>, <#ÚiChommáin>.
+
+<#ÚaFailge>
+    a irishRel:populationGroup;
+    irishRel:ancestorGroupOf <#Dáln-Gálla>, <#ÚiFoirbthén>, <#ÚiNialláin>, <#ÚiDonnáin>, <#ÚiDronchon>, <#ÚiChrónáin>, <#ÚiBrócáin>, <#ÚiMuigíne>, <#ÚiCholbraind>, <#ÚiChommáin>, <#ÚiMangáin>, <#ÚiManguráin>, <#ÚiMoturáin>, <#ÚiGuill>, <#ÚiIlairlich>, <#ÚiDímmaeLeccerdae>;
+    owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.trig#hFalgi>.
+
+<#ÚiDuibChuirrich>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Duib Chuirrich".
+
+<#ÚiFechíne>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Fechíne".
+
+<#ÚiDróna>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Dróna".
+
+<#ÚiDonnáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Donnáin".
+
+<#ÚiBercháin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Bercháin".
+
+<#ÚiBrocc>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Brocc".
+
+<#ÚiChommáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chommáin".
+
+<#ÚiFoirbthén>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Foirbthén".
+
+<#ÚiNialláin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Nialláin".
+
+<#ÚiDonnáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Donnáin".
+
+<#ÚiDronchon>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Dronchon".
+
+<#ÚiChrónáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chrónáin".
+
+<#ÚiBrócáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Brócáin".
+
+<#ÚiMuigíne>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Muigíne".
+
+<#ÚiCholbraind>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Cholbraind".
+
+<#ÚiCiatu>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Ciatu".
+
+<#ÚiChommáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Chommáin".
+
+<#ÚiMangáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Mangáin".
+
+<#ÚiManguráin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Manguráin".
+
+<#ÚiMoturáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Moturáin".
+
+<#ÚiGuill>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Guill".
+
+<#ÚiIlairlich>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Ilairlich".
+
+<#ÚiDímmaeLeccerdae>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Dímmae Leccerdae".
+}

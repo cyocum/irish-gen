@@ -1,0 +1,104 @@
+@base <http://example.com/Rawl_B502/genelach_gabraige.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Gabraige"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html> .
+
+<#Fáelchú>
+    a foaf:Person;
+    irishRel:nomName "Fáelchú";
+    rel:childOf <#Airmedaich>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Faelchu>.
+
+<#Airmedaich>
+    a foaf:Person;
+    irishRel:genName "Airmedaich";
+    irishRel:nomName "Airmedach";
+    rel:childOf <#MáelAnfaid>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Airmedaig>.
+
+<#MáelAnfaid>
+    a foaf:Person;
+    irishRel:genName "Máel Anfaid";
+    irishRel:nomName "Máel Anfad";
+    rel:childOf <#Díma>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MaelAnfaid-a734b6c8>.
+
+<#Díma>
+    a foaf:Person;
+    irishRel:genName "Díma";
+    irishRel:nomName "Dímmae";
+    rel:childOf <#Dícolla>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#DimmaDicholla>.
+
+<#Dícolla>
+    a foaf:Person;
+    irishRel:genName "Dícolla";
+    irishRel:nomName "Dícoll";
+    rel:childOf <#Gubbi>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#DimmaDicholla>.
+
+<#Gubbi>
+    a foaf:Person;
+    irishRel:genName "Gubbi";
+    rel:childOf <#Cormaic>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Gubbi>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormaic";
+    rel:childOf <#Cáirthind>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cormaic-4a647f3a>.
+
+<#Cáirthind>
+    a foaf:Person;
+    irishRel:genName "Cáirthind";
+    rel:childOf <#Óengusa>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Carthind>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    rel:childOf <#NadFraích>;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Oengusa-7dd77d85>.
+
+<#NadFraích>
+    a foaf:Person;
+    irishRel:genName "Nad Fraích" ;
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich-22e4ba31>.
+
+<#Dímma>
+    a foaf:Person;
+    irishRel:genName "Dímma";
+    irishRel:numChild 2 ;
+    owl:sameAs <#Díma>.
+
+<#MáelAnfaid-ea4ee748>
+    a foaf:Person;
+    irishRel:nomName "Máel Anfaid";
+    rel:childOf <#Dímma>;
+    owl:sameAs <#MáelAnfaid>.
+
+<#Éladach>
+    a foaf:Person;
+    irishRel:nomName "Éladach";
+    rel:childOf <#Dímma>.
+}

@@ -1,0 +1,163 @@
+@base <http://example.com/LL/forthart_mac_cinaeda.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Forthart Mac Cinaeda"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text098.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text098.html> .
+
+<#Cinaed>
+    a foaf:Person;
+    irishRel:nomName "Cinaed";
+    rel:childOf <#Cellaich>.
+
+<#Cellaich>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Cinaeda>.
+
+<#Cinaeda>
+    a foaf:Person;
+    irishRel:genName "Cinaeda";
+    irishRel:nomName "Cinaed";
+    rel:childOf <#Congalaig>.
+
+<#Congalaig>
+    a foaf:Person;
+    irishRel:genName "Congalaig";
+    irishRel:nomName "Congalach";
+    rel:childOf <#Matudain>.
+
+<#Matudain>
+    a foaf:Person;
+    irishRel:genName "Matudain";
+    irishRel:nomName "Matudan";
+    rel:childOf <#Cellaich-98052240>.
+
+<#Cellaich-98052240>
+    a foaf:Person;
+    irishRel:genName "Cellaich";
+    irishRel:nomName "Cellach";
+    rel:childOf <#DuibEchtge>.
+
+<#DuibEchtge>
+    a foaf:Person;
+    irishRel:genName "Duib Echtge";
+    irishRel:nomName "Dub Echtge";
+    rel:childOf <#DuibLachtnai>.
+
+<#DuibLachtnai>
+    a foaf:Person;
+    irishRel:genName "Duib Lachtnai";
+    irishRel:nomName "Dub Lachtnai";
+    rel:childOf <#Eochada>.
+
+<#Eochada>
+    a foaf:Person;
+    irishRel:genName "Eochada";
+    irishRel:nomName "Eochaid";
+    rel:childOf <#DuibDaThuath>.
+
+<#DuibDaThuath>
+    a foaf:Person;
+    irishRel:genName "Duib Da Thuath";
+    irishRel:nomName "Dub Da Thuath";
+    rel:childOf <#Curre>.
+
+<#Curre>
+    a foaf:Person;
+    irishRel:nomName "Curre";
+    rel:childOf <#Diurain>.
+
+<#Diurain>
+    a foaf:Person;
+    irishRel:genName "Diurain";
+    irishRel:nomName "Diuran";
+    rel:childOf <#Demre>.
+
+<#Demre>
+    a foaf:Person;
+    irishRel:nomName "Demre";
+    rel:childOf <#Bresail>.
+
+<#Bresail>
+    a foaf:Person;
+    irishRel:genName "Bresail";
+    irishRel:nomName "Bresal";
+    rel:childOf <#Dein>.
+
+<#Dein>
+    a foaf:Person;
+    irishRel:genName "Dein";
+    irishRel:nomName "Dian";
+    rel:childOf <#ConlaiCurrig>.
+
+<#ConlaiCurrig>
+    a foaf:Person;
+    irishRel:genName "Conlai Currig";
+    irishRel:nomName "Conla Currech";
+    rel:childOf <#Airt>.
+
+<#Airt>
+    a foaf:Person;
+    irishRel:genName "Airt";
+    irishRel:nomName "Art";
+    rdfs:comment "qui Chirbb";
+    rel:childOf <#CorpriNiad>;
+    owl:sameAs <http://example.com/LL/forthart_fea.trig#AirtChirp>.
+
+<#CorpriNiad>
+    a foaf:Person;
+    irishRel:genName "Corpri Niad";
+    irishRel:nomName "Coirpre Niad";
+    rel:childOf <#CormaicMair>;
+    owl:sameAs <http://example.com/LL/forthart_fea.trig#CorpriNiad>.
+
+<#CormaicMair>
+    a foaf:Person;
+    irishRel:genName "Cormaic Mair";
+    irishRel:nomName "Cormac Mar";
+    rel:childOf <#OengusaMind>;
+    owl:sameAs <http://example.com/LL/forthart_fea.trig#Cormaic>.
+
+<#OengusaMind>
+    a foaf:Person;
+    irishRel:genName "Oengusa Mind";
+    irishRel:nomName "Oengus Mend";
+    rel:childOf <#EchachFindFuathAirt>;
+    owl:sameAs <http://example.com/LL/forthart_fea.trig#Oengusa>.
+
+<#EchachFindFuathAirt>
+    a foaf:Person;
+    irishRel:genName "Echach Find Fuath Airt";
+    irishRel:nomName "Eochu Find Fuath Airt";
+    rel:childOf <#Fedlimid>;
+    owl:sameAs <http://example.com/LL/forthart_fea.trig#EchachFindFuathAirt>;
+    owl:sameAs <http://example.com/LL/lagin.trig#EchachFindFuathAirt>.
+
+<#Fedlimid>
+    a foaf:Person;
+    irishRel:genName "Fedlimid";
+    irishRel:nomName "Feidlimid";
+    owl:sameAs <http://example.com/LL/lagin.trig#FeidlimidRechtada>;
+    owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#FeidlimtheRechtada>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#FheidlimidRechtada>;
+    owl:sameAs <http://example.com/LL/n_dési.trig#FeidlimtheRechtada>.
+}
+

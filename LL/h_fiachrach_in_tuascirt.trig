@@ -1,0 +1,119 @@
+﻿@base <http://example.com/LL/h_fiachrach_in_tuascirt.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "H Fiachrach In Tuascirt"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text113.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text113.html> .
+
+<#MaelRuanaid>
+    a foaf:Person;
+    irishRel:nomName "Mael Ruanaid";
+    rel:childOf <#Aeda>.
+
+<#Aeda>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Cellaig>.
+
+<#Cellaig>
+    a foaf:Person;
+    irishRel:genName "Cellaig";
+    irishRel:nomName "Cellach";
+    rel:childOf <#Dubdai>.
+
+<#Dubdai>
+    a foaf:Person;
+    irishRel:genName "Dubdai";
+    irishRel:nomName "Dubda";
+    rel:childOf <#Condmaig>.
+
+<#Condmaig>
+    a foaf:Person;
+    irishRel:genName "Condmaig";
+    irishRel:nomName "Condmag";
+    rel:childOf <#DuindChothaid>.
+
+<#DuindChothaid>
+    a foaf:Person;
+    irishRel:genName "Duind Chothaid";
+    irishRel:nomName "Dond Cothaid";
+    rel:childOf <#Cathail>.
+
+<#Cathail>
+    a foaf:Person;
+    irishRel:genName "Cathail";
+    irishRel:nomName "Cathal";
+    rel:childOf <#Ailella>.
+
+<#Ailella>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Dunchada>.
+
+<#Dunchada>
+    a foaf:Person;
+    irishRel:genName "Dunchada";
+    irishRel:nomName "Dunchad";
+    rel:childOf <#Tipraite>.
+
+<#Tipraite>
+    a foaf:Person;
+    irishRel:nomName "Tipraite";
+    rel:childOf <#Maelduib>.
+
+<#Maelduib>
+    a foaf:Person;
+    irishRel:genName "Maelduib";
+    irishRel:nomName "Mael Dub";
+    rel:childOf <#Elgaig>.
+    
+<#Elgaig>
+    a foaf:Person;
+    irishRel:genName "Elgaig";
+    irishRel:nomName "Elgach";
+    rel:childOf <#Fhiachnai>.
+
+<#Fhiachnai>
+    a foaf:Person;
+    irishRel:genName "Fhiachnai";
+    irishRel:nomName "Fiachna";
+    rel:childOf <#NathÍ>.
+
+<#NathÍ>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    rel:childOf <#Fhiachrach>;
+    owl:sameAs <http://example.com/LL/h_fiachach_aidni.trig#NathÍ>.
+
+<#Fhiachrach>
+    a foaf:Person;
+    irishRel:genName "Fhiachrach";
+    irishRel:nomName "Fiachra";
+    rel:childOf <#EchachMugmedoin>;
+    owl:sameAs <http://example.com/LL/h_fiachach_aidni.trig#Fiachach>.
+
+<#EchachMugmedoin>
+    a foaf:Person;
+    irishRel:genName "Echach Mugmedoin";
+    irishRel:nomName "Eochu Mugmedon";
+    owl:sameAs <http://example.com/LL/h_fiachach_aidni.trig#EchachMugmedoin>.
+}
+

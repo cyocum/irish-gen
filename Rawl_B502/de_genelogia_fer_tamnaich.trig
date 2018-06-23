@@ -1,0 +1,73 @@
+@base <http://example.com/Rawl_B502/de_genelogia_fer_tamnaich.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "De Genelogia Fer Tamnaich";
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text016.html> .
+
+<#Airechtach>
+    a foaf:Person;
+    irishRel:nomName "Airechtach";
+    rel:childOf <#Cuanach>.
+
+<#Cuanach>
+    a foaf:Person;
+    irishRel:genName "Cuanach";
+    irishRel:nomName "Cuanaid";
+    rel:childOf <#MáeliOchtraich>.
+
+<#MáeliOchtraich>
+    a foaf:Person;
+    irishRel:genName "Máeli Ochtraich";
+    irishRel:nomName "Máel Ochtrach";
+    rel:childOf <#Lonáin>.
+
+<#Lonáin>
+    a foaf:Person;
+    irishRel:genName "Lonáin";
+    irishRel:nomName "Lonán";
+    rel:childOf <#FeideilmidDaimDásachtaich>.
+
+<#FeideilmidDaimDásachtaich>
+    a foaf:Person;
+    irishRel:genName "Feideilmid Daim Dásachtaich";
+    irishRel:nomName "Feideilmid Dam Dásachtach";
+    rel:childOf <#Rossa>.
+
+<#Rossa>
+    a foaf:Person;
+    irishRel:genName "Rossa";
+    irishRel:nomName "Ross";
+    rel:childOf <#Echen>.
+
+<#Echen>
+    a foaf:Person;
+    irishRel:genName "Echen";
+    rel:childOf <#Rossa-caed346b>.
+
+<#Rossa-caed346b>
+    a foaf:Person;
+    irishRel:genName "Rossa";
+    irishRel:nomName "Ross";
+    rel:childOf <#Brioin>.
+
+<#Brioin>
+    a foaf:Person;
+    irishRel:genName "Brioin" ;
+    irishRel:nomName "Brion".
+}

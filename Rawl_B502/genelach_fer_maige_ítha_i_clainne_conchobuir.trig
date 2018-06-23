@@ -1,0 +1,79 @@
+@base <http://example.com/Rawl_B502/genelach_fer_maige_ítha_i_clainne_conchobuir.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Fer Maige Ítha .i. Clainne Conchobuir"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text14.html> .
+
+<#MáelRuanaid>
+    a foaf:Person;
+    irishRel:nomName "Máel Ruanaid";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:genName "Áeda";
+    irishRel:nomName "Áed";
+    rel:childOf <#Ruaidrí>.
+
+<#Ruaidrí>
+    a foaf:Person;
+    irishRel:genName "Ruaidrí";
+    rel:childOf <#Óengusa>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    rel:childOf <#Cairelláin>.
+
+<#Cairelláin>
+    a foaf:Person;
+    irishRel:genName "Cairelláin";
+    irishRel:nomName "Cairellán";
+    rel:childOf <#Baígill>.
+
+<#Baígill>
+    a foaf:Person;
+    irishRel:genName "Baígill";
+    rel:childOf <#Diarmata>.
+
+<#Diarmata>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Conchobuir>.
+
+<#Conchobuir>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobur";
+    rel:childOf <#Fergaile>.
+
+<#Fergaile>
+    a foaf:Person;
+    irishRel:genName "Fergaile";
+    irishRel:nomName "Fergal";
+    rel:childOf <#MáeliDúin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.trig#Fergaile>.
+
+<#MáeliDúin>
+    a foaf:Person;
+    irishRel:genName "Máeli Dúin" ;
+    irishRel:nomName "Máel Dún" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.trig#MáeleDúin>.
+}

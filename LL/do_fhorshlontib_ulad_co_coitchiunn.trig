@@ -1,0 +1,217 @@
+@base <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "De Fhorshlontib Ulad Co Coitchiunn So Sís"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text027.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text027.html> .
+
+<#FergnaGarb>
+    a foaf:Person;
+    irishRel:nomName "Fergna Garb";
+    rel:childOf <#Salaich>.
+
+<#Salaich>
+    a foaf:Person;
+    irishRel:genName "Salaich";
+    irishRel:nomName "Salach";	
+    rel:childOf <#LoairnMair>.
+
+<#LoairnMair>
+    a foaf:Person;
+    irishRel:genName "Loairn Mair";
+    irishRel:nomName "Loarn Mar".
+
+<#Buachaill>
+    a foaf:Person;
+    irishRel:nomName "Buachaill".
+
+<#ConallCass>
+    a foaf:Person;
+    irishRel:nomName "Conall Cass".
+
+<#Corc>
+    a foaf:Person;
+    irishRel:nomName "Corc".
+    
+<#ChongetChonganchnes>
+    a foaf:Person;
+    irishRel:genName "Chonget Chonganchnes";
+    irishRel:nomName "Conget Chnganchnes";
+    rel:siblingOf <#Corc>, <#ConallCass>, <#Corc>;
+    rel:childOf <#Dedad>.
+    
+<#Dedad>
+    a foaf:Person;
+    irishRel:nomName "Dedad".
+
+<#Celtchair>
+    a foaf:Person;
+    irishRel:nomName "Celtchair";
+    irishRel:numChild 3;
+    rel:childOf <#Uithechair>;
+    rel:childOf <#Lithechair>.
+
+<#Lithechair>
+    a foaf:Person;
+    irishRel:nomName "Lithechair".
+
+<#Bél>
+    a foaf:Person;
+    irishRel:nomName "Bél";
+    foaf:gender "female";
+    rel:childOf <#Celtchair>.
+
+<#Nemdaille>
+    a foaf:Person;
+    irishRel:nomName "Nemdaille";
+    foaf:gender "female";
+    rel:childOf <#Celtchair>.
+
+<#ScadarcAngain>
+    a foaf:Person;
+    irishRel:nomName "Scadarc Angain";
+    foaf:gender "female";
+    rel:childOf <#Celtchair-472a82f0>;
+    rel:spouseOf <#ChongetChonganchnis>.
+
+<#ChongetChonganchnis>
+    irishRel:genName "Chonget Chonganchnis";
+    irishRel:nomName "Conget Conganchnes";
+    owl:sameAs <#ChongetChonganchnes>.
+
+<#Uithechair>
+    a foaf:Person;
+    irishRel:nomName "Uithechair";
+    rel:parentOf <#Celtchair>.
+
+<#Dronae>
+    a foaf:Person;
+    irishRel:nomName "Dronae";
+    rel:spouseOf <#Celtchair>;
+    foaf:gender "female";
+    rel:childOf <#Conchobuir>.
+
+<#Conchobuir>
+    a foaf:Person;
+    irishRel:nomName "Conchobuir";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1124002>;
+    rel:childOf <#Nesa>.
+
+<#Nesa>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Nesa".
+
+<#Lugdach>
+    a foaf:Person;
+    irishRel:nomName "Lugdach";
+    irishRel:numChild 6;
+    rel:childOf <#OengusaFind>.
+
+<#OengusaFind>
+    a foaf:Person;
+    irishRel:genName "Oengusa Find";
+    irishRel:nomName "Oengus Finn".
+
+<#Aed>
+    a foaf:Person;
+    irishRel:nomName "Aed";
+    rel:childOf <#Lugdach>.
+
+<#Daig>
+    a foaf:Person;
+    irishRel:nomName "Daig";
+    rel:childOf <#Lugdach>.
+
+<#Dallan>
+    a foaf:Person;
+    irishRel:nomName "Dallan";
+    rel:childOf <#Lugdach>.
+
+<#Indiu>
+    a foaf:Person;
+    irishRel:nomName "Indiu";
+    foaf:gender "female";
+    rel:childOf <#Lugdach>.
+
+<#Indiach>
+    a foaf:Person;
+    irishRel:nomName "Indiach";
+    foaf:gender "female";
+    rel:childOf <#Lugdach>.
+
+<#Sciath>
+    a foaf:Person;
+    irishRel:nomName "Sciath";
+    foaf:gender "female";
+    rel:childOf <#Lugdach>;
+    rel:spouseOf <#Taidc>.
+
+<#Néill>
+    a foaf:Person;
+    irishRel:nomName "Néill";
+    rel:childOf <#Echach>;
+    rel:spouseOf <#Indiu>.
+
+<#Echach>
+    a foaf:Person;
+    irishRel:nomName "Echach".
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:nomName "Conaill";
+    rel:childOf <#Indiu>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:nomName "Eogain";
+    rel:childOf <#Indiu>.
+
+<#Indecht>
+    irishRel:nomName "Indecht";
+    owl:sameAs <#Indiach>;
+    rel:spouseOf <#Buti>.
+
+<#Buti>
+    a foaf:Person;
+    irishRel:nomName "Buti".
+
+<#Colgu>
+    a foaf:Person;
+    irishRel:nomName "Colgu";
+    rel:childOf <#Indecht>, <#Buti>.
+
+<#Crimthann>
+    a foaf:Person;
+    irishRel:nomName "Crimthann";
+    rel:childOf <#Indecht>, <#Buti>.
+
+
+<#Taidc>
+    a foaf:Person;
+    irishRel:genName "Taidc";
+    irishRel:nomName "Tadc";        
+    rel:childOf <#Céin>.
+
+<#Céin>
+    a foaf:Person;
+    irishRel:genName "Céin";
+    irishRel:nomName "Cén".
+}
+

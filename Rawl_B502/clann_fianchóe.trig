@@ -1,0 +1,62 @@
+@base <http://example.com/Rawl_B502/clann_fianchóe.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Clann Fianchóe"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Flaithem>
+    a foaf:Person;
+    irishRel:nomName "Flaithem";
+    rel:childOf <#Donngaile>.
+
+<#Donngaile>
+    a foaf:Person;
+    irishRel:genName "Donngaile";
+    irishRel:nomName "Donngail";
+    rel:childOf <#Feradaich>.
+
+<#Feradaich>
+    a foaf:Person;
+    irishRel:genName "Feradai(c)h";
+    irishRel:nomName "Feradach";
+    rel:childOf <#Sáergusa>.
+
+<#Sáergusa>
+    a foaf:Person;
+    irishRel:genName "Sáergusa";
+    irishRel:nomName "Sáergus";
+    rel:childOf <#DuibDáDoss>.
+
+<#DuibDáDoss>
+    a foaf:Person;
+    irishRel:genName "Duib Dá Doss";
+    irishRel:nomName "Dub Dá Doss";
+    rel:childOf <#Fiachnae>.
+
+<#Fiachnae>
+    a foaf:Person;
+    irishRel:genName "Fiachnae";
+    irishRel:nomName "Fiachna";
+    rel:childOf <#Comraite>;
+    owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Fianchóe>.
+
+<#Comraite>
+    a foaf:Person;
+    irishRel:genName "Comraite" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Comraite>.
+}

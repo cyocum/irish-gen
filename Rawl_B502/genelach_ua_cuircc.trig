@@ -1,0 +1,104 @@
+@base <http://example.com/Rawl_B502/genelach_ua_cuircc.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Ua Cuircc"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text003.html> .
+
+<#Arttacán>
+    a foaf:Person;
+    irishRel:nomName "Arttacán";
+    rel:childOf <#Taidc>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Artacan>.
+
+<#Taidc>
+    a foaf:Person;
+    irishRel:nomName "Tadc";
+    irishRel:genName "Taidc";
+    rel:childOf <#Sinill>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Taidcg>.
+
+<#Sinill>
+    a foaf:Person;
+    irishRel:nomName "Sinell";
+    irishRel:genName "Sinill";
+    rel:childOf <#Ánchoraig>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Sinill>.
+
+<#Ánchoraig>
+    a foaf:Person;
+    irishRel:nomName "Anchorach";
+    irishRel:genName "Ánchoraig";
+    rel:childOf <#Siadalta>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Anchoraig>.
+
+<#Siadalta>
+    a foaf:Person;
+    irishRel:genName "Siadalta";
+    irishRel:nomName "Siadaltae";
+    rel:childOf <#Máelhuidir>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Siadalta>.
+
+<#Máelhuidir>
+    a foaf:Person;
+    irishRel:nomName "Máelodor";
+    irishRel:genName "Máelhuidir";
+    rel:childOf <#Oen>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Maeluidir-784bd41d>.
+
+<#Oen>
+    a foaf:Person;
+    irishRel:nomName "Oen";
+    irishRel:genName "Oen";
+    rel:childOf <#Colmáin>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#hIuin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:nomName "Colmán";
+    irishRel:genName "Colmáin";
+    rel:childOf <#Cuircc>.
+
+<#Cuircc>
+    a foaf:Person;
+    irishRel:nomName "Corcc";
+    irishRel:genName "Cuircc";
+    rel:childOf <#Fergusa>;
+    rdfs:comment "Bánhuma díre eneclainni in chenéoil-sin";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cuirc>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    irishRel:genName "Fergusa";
+    rel:childOf <#Cormaic>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fergusa>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:nomName "Cormac`";
+    irishRel:genName "Cormaic";
+    rel:childOf <#ConCorb>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Cormaic>.
+
+<#ConCorb>
+    a foaf:Person;
+    irishRel:nomName "Cú Corb";
+    irishRel:genName "Con Corb";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#ConCorb>.
+}

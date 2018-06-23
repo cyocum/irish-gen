@@ -1,0 +1,67 @@
+@base <http://example.com/Rawl_B502/clann_leáin.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Clann Leáin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#MáelSalach>
+    a foaf:Person;
+    irishRel:nomName "Máel Salach";
+    rel:childOf <#Óengusa>.
+
+<#Óengusa>
+    a foaf:Person;
+    irishRel:genName "Óengusa";
+    irishRel:nomName "Óengus";
+    rel:childOf <#Fiannachtaich>.
+
+<#Fiannachtaich>
+    a foaf:Person;
+    irishRel:genName "Fiannachtaich";
+    irishRel:nomName "Fiannachtach";
+    rel:childOf <#Echdach>.
+
+<#Echdach>
+    a foaf:Person;
+    irishRel:genName "Echdach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Échtgusa>.
+
+<#Échtgusa>
+    a foaf:Person;
+    irishRel:genName "Échtgusa";
+    irishRel:nomName "Échtgus";
+    rel:childOf <#Leáin>.
+
+<#Leáin>
+    a foaf:Person;
+    irishRel:genName "Leáin";
+    irishRel:nomName "Leán";
+    rel:childOf <#Rithi>.
+
+<#Rithi>
+    a foaf:Person;
+    irishRel:genName "Rithi";
+    rel:childOf <#Rethach>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_gáethnemaig.trig#Rithi>.
+
+<#Rethach>
+    a foaf:Person;
+    irishRel:genName "Rethach" ;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.trig#Rethech>.
+}

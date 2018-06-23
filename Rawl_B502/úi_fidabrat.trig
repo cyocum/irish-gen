@@ -1,0 +1,175 @@
+@base <http://example.com/Rawl_B502/úi_fidabrat.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Rawl_B502> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Úi Fidabrat"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text023.html>.
+
+<#Dorche>
+    a foaf:Person;
+    irishRel:nomName "Dorche";
+    rel:childOf <#Ailgile>.
+
+<#Ailgile>
+    a foaf:Person;
+    irishRel:genName "Ailgile";
+    irishRel:nomName "Ailgil";
+    rel:childOf <#Sóergaile>.
+
+<#Sóergaile>
+    a foaf:Person;
+    irishRel:genName "Sóergaile";
+    irishRel:nomName "Sóergail";
+    rel:childOf <#Dálaich>.
+
+<#Dálaich>
+    a foaf:Person;
+    irishRel:genName "Dálaich";
+    irishRel:nomName "Dálach";
+    rel:childOf <#Fidabrat>.
+
+<#Fidabrat>
+    a foaf:Person;
+    irishRel:genName "Fidabrat";
+    irishRel:nomName "Fidabra";
+    rel:childOf <#MáelDoborchon>.
+
+<#MáelDoborchon>
+    a foaf:Person;
+    irishRel:genName "Máel Doborchon";
+    rel:childOf <#Áedgein>.
+
+<#Áedgein>
+    a foaf:Person;
+    irishRel:genName "Áedgein";
+    irishRel:nomName "Áedgen";
+    rel:childOf <#Findchada>.
+
+<#Findchada>
+    a foaf:Person;
+    irishRel:genName "Findchada" ;
+    irishRel:nomName "Findchad" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_chon_dúin.trig#Findchada>.
+
+<#Cofir>
+    a foaf:Person ;
+    irishRel:genName "Cofir" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_findtigirn.trig#Cobfhir>.
+
+<#Ailchridi>
+    a foaf:Person ;
+    irishRel:nomName "Ailchridi" ;
+    rel:childOf <#Cofir>.
+
+<#Fintigern>
+    owl:sameAs <http://example.com/Rawl_B502/úi_findtigirn.trig#Fintigirn>;
+    rel:childOf <#Cofir>.
+    
+<#Colmán>
+    a foaf:Person ;
+    irishRel:nomName "Colmán" ;
+    rel:childOf <#Cofir>.
+
+<#Ailill>
+    a foaf:Person;
+    irishRel:genName "Ailill";
+    rel:childOf <#Selbaich>.
+
+<#Selbaich>
+    a foaf:Person;
+    irishRel:genName "Selbaich";
+    irishRel:nomName "Selbach";
+    rel:childOf <#Dimrada>.
+
+<#Dimrada>
+    a foaf:Person;
+    irishRel:genName "Dimrada";
+    irishRel:nomName "Dimraid";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    owl:sameAs <#Colmán>;
+    rel:childOf <#Cofhir>.
+
+<#Cofhir>
+    a foaf:Person;
+    irishRel:genName "Cofhir" ;
+    irishRel:numChild 3 ;
+    owl:sameAs <#Cofir>.
+
+<#Genán>
+    a foaf:Person;
+    irishRel:nomName "Genán";
+    rel:childOf <#Cuiliúin>.
+
+<#Cuiliúin>
+    a foaf:Person;
+    irishRel:genName "Cuiliúin";
+    rel:childOf <#Donngaile>.
+
+<#Donngaile>
+    a foaf:Person;
+    irishRel:genName "Donngaile";
+    irishRel:nomName "Donngail";
+    rel:childOf <#Ailcride>.
+
+<#Ailcride>
+    a foaf:Person;
+    irishRel:genName "Ailcride";
+    irishRel:nomName "Ailcrid";
+    rel:childOf <#Cofhir>.
+
+<#Cofhir>
+    owl:sameAs <#Cofir>.
+
+<#Tuísech>
+    a foaf:Person;
+    irishRel:nomName "Tuísech";
+    rel:childOf <#Dúnaill>.
+
+<#Dúnaill>
+    a foaf:Person;
+    irishRel:genName "Dúnaill";
+    irishRel:nomName "Dúnall";
+    rel:childOf <#Anmchada>.
+
+<#Anmchada>
+    a foaf:Person;
+    irishRel:genName "Anmchada";
+    irishRel:nomName "Anmchad";
+    rel:childOf <#Gúthigirn>.
+
+<#Gúthigirn>
+    a foaf:Person;
+    irishRel:genName "Gúthigirn";
+    rel:childOf <#Thnúthgaile>.
+
+<#Thnúthgaile>
+    a foaf:Person;
+    irishRel:genName "Thnúthgaile";
+    irishRel:nomName "Tnúthgail";
+    rel:childOf <#ConDúin>.
+
+<#ConDúin>
+    a foaf:Person;
+    irishRel:genName "Con Dúin" ;
+    irishRel:nomName "Cu Dúin" ;
+    owl:sameAs <http://example.com/Rawl_B502/úi_chon_dúin.trig#ConDúin>.
+}
