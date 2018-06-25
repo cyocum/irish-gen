@@ -1,0 +1,112 @@
+@base <http://example.com/Laud_Misc_610/AnaS_50.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix nsl: <http://www.dbpedia.org/resource/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#>.
+
+<http://example.com/Laud_Misc_610> {
+<>
+a dctype:Dataset;
+dcterms:title "Acallam na Senórach: Section 50";
+dcterms:isFormatOf <https://celt.ucc.ie//published/G303000/text050.html>;
+dcterms:format "application/trig" ;
+prov:asDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
+
+<#Fhind>
+    a foaf:Person;
+    irishRel:nomName "Finn";
+    rel:childOf <#Cumaill>;
+    irishRel:descendantOfGroup <#Laignib>;
+    irishRel:descendantOfGroup <#UibTairrsig>;
+    owl:sameAs <http://example.com/LL/lagin.trig#Find>;
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.trig#Fionn>.
+
+<#Cumaill>
+    a foaf:Person;
+    irishRel:nomName "Cumall";
+    irishRel:genName "Cumaill";
+    owl:sameAs <http://example.com/LL/lagin.trig#Cumaill>;
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.trig#Cumaill>.
+
+<#Laignib>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Laigin";
+    owl:sameAs <http://example.com/Rawl_B502/alia_peritia_de_genelogiis_&_de_generibus_hibernensium.trig#Laigin>;
+    owl:sameAs <http://example.com/LLAdd/LLAdd.trig#Laigen>.
+
+<#UibTairrsig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Uí Tairrsig";
+    owl:sameAs <http://example.com/LLAdd/LLAdd.trig#UíbhTairrsig>;
+    irishRel:descendantGroupOf <#Laignib>.
+
+<#Find>
+    a foaf:Person;
+    irishRel:nomName "Find";
+    owl:sameAs <#Fhind>;
+    rel:childOf <#Cumaill-ee5516b0>;
+    rel:childOf <#MuirneMunchaem>.
+
+<#Cumaill-ee5516b0>
+    a foaf:Person;
+    irishRel:genName "Cumaill";
+    irishRel:nomName "Cumall";
+    rel:childOf <#Treduirnn>;
+    owl:sameAs <#Cumaill>.
+
+<#Treduirnn>
+    a foaf:Person;
+    irishRel:genName "Treduirnn";
+    irishRel:nomName "Tredorn";
+    rel:childOf <#Trenmoir>.
+
+<#Trenmoir>
+    a foaf:Person;
+    irishRel:genName "Trenmoir";
+    irishRel:nomName "Trenmor";
+    rel:childOf <#CairpriGarbsroin>.
+
+<#CairpriGarbsroin>
+    a foaf:Person;
+    irishRel:genName "Cairpri Garbsroin";
+    irishRel:nomName "Cairpre Garbsron";
+    rel:childOf <#FiachachFobricc>.
+
+<#FiachachFobricc>
+    a foaf:Person;
+    irishRel:genName "Fiachach Fobricc";
+    irishRel:nomName "Fiachu Fobrecc";
+    owl:sameAs <http://example.com/LL/sil_birn.trig#FiachachFobricc>.
+
+<#MuirneMunchaem>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Muirne Munchaem";
+    rel:childOf <#Taidg>;
+    owl:sameAs <http://example.com/LLAdd/LLAdd.trig#MuirneMunchaem>.
+
+<#Taidg>
+    a foaf:Person;
+    irishRel:nomName "Tadg";
+    owl:sameAs <http://example.com/LLAdd/LLAdd.trig#Taidhg>;
+    rel:childOf <#Nuadut>.
+
+<#Nuadut>
+    a foaf:Person;
+    irishRel:genName "Nuadu";
+    owl:sameAs <http://example.com/LLAdd/LLAdd.trig#Nuadat>;
+    rel:descendantOfGroup <#TuathaDeDanann>.
+
+<#TuathaDeDanann>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tuatha De Danann";
+    owl:sameAs <http://example.com/LLAdd/LLAdd.trig#TuathaibDeDanann>.
+}
