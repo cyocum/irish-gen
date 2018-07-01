@@ -7,7 +7,7 @@ Framework](https://www.w3.org/TR/rdf11-primer/) (RDF) to represent it.
 Because this is a human curated database, a human readable
 representation of RDF was needed, which, in this case, the curators
 chose the [TRiG](https://www.w3.org/TR/trig/) concrete representation
-of RDF.  It is recommendedd for those who may not have experience with
+of RDF.  It is recommended for those who may not have experience with
 RDF serializations to read the [Turtle](https://www.w3.org/TR/turtle/)
 specification first before reading the TRiG one.
 
@@ -24,7 +24,7 @@ for the ontologies, these are placed in the top level directory.
 Each genealogy is divided into its "items" which represent one Turtle
 file in its directory.  The item file name is created from its
 manuscript header.  For instance "Aisneidem Di Araill" from the _Book
-of Leinster_ has the file name `aisneidem_di_araill.ttl`.
+of Leinster_ has the file name `aisneidem_di_araill.trig`.
 
 The curators have not always been consistant in the naming of the
 items.  Especally in LL, "Genelogia" or "De Genelach" have been
@@ -58,7 +58,7 @@ instances is added.  For example,
 At the present moment, all URLs are prefixed with `http://example.com`
 because a permanent URL has not been purchased at this time.  For
 example, a full URL for `<#CindFhaelad-6e827350>` would be
-`http://example.com/LL/ceniuil_lugdach.ttl#CindFhaelad-6e827350`.
+`http://example.com/LL/ceniuil_lugdach.trig#CindFhaelad-6e827350`.
 
 ## Named Graph (RDF Dataset)
 
@@ -71,7 +71,7 @@ for the use of Named Graphs (see more
 [here](https://www.w3.org/TR/rdf11-concepts/#section-dataset)).  In
 the case of this project, the manuscript is identified by its URL and
 is the named graph for the triples.  For instance, from
-`aisneidem_di_araill.ttl`:
+`aisneidem_di_araill.trig`:
 
 ```turtle
 
@@ -146,7 +146,7 @@ instance,
         rel:childOf <#MugáethMórólach>;
         rel:parentOf <#ÓengusaÓlmugáetha>
     ] ;
-    owl:sameAs <http://example.com/LL/senchas_síl_ébir.ttl#FhiachachLabrainne>.
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FhiachachLabrainne>.
 ```
 
 ## Population Groups
