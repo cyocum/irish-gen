@@ -1,0 +1,55 @@
+@base <http://example.com/Laud_Misc_610/CGH/_5_cróeb_choibniusa_cenél_tigernaig_in_so.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Laud Misc. 610: Section 5: Cróeb choibniusa Cenél Tigernaig in so"@sga;
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Muredach>
+    a foaf:Person;
+    irishRel:nomName "Muredach";
+    rel:childOf <#Eogain>;
+    irishRel:numChild 4;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Muredach-a99f3530>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:nomName "Eogan";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Eogan-eeed52d0>.
+
+<#CethrimaiclaMuredach>
+    dcterms:title "Cethri maic la Muredach";
+    rdfs:comment "amal isbert in file".
+
+<#Muredach-256ae8f0>
+    a foaf:Person;
+    irishRel:nomName "Muredach";
+    owl:sameAs <#Muredach>;
+    irishRel:numChild 4;
+    rdfs:seeAlso <#CethrimaiclaMuredach>.
+
+<#Ercca>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:accName "Erca";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Ercca>;
+    rdfs:seeAlso <#CethrimaiclaMuredach>.
+
+
+
+}
