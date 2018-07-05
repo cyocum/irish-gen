@@ -1,0 +1,506 @@
+@base <http://example.com/Laud_Misc_610/CGH/_4_cróeb_cheniúil_binnig_inso.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 4: Cróeb Cheniúil Binnig Inso"@sga;
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#EochoBinnech>
+    a foaf:Person;
+    irishRel:nomName "Eocho Binnech";
+    rel:childOf <#Eogain>;
+    irishRel:numChild 7;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Bindech>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Eogan>.
+
+<#Láréin>
+    a foaf:Person;
+    irishRel:nomName "Láréin";
+    rel:childOf <#EochoBinnech>;
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Láréin>;
+    irishRel:ancestorOfGroup <#CenélBinnigGlindi>, <#CenélBinnigLochaDrochait>, <#CenélBinnigTúaitheRois>.
+
+<#CenélBinnigGlindi>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cenél Binnig Glindi".
+
+<#CenélBinnigLochaDrochait>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cenél Binnig Locha Drochait".
+
+<#CenélBinnigTúaitheRois>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cenél Binnig Túaithe Rois".
+
+<#Áedáin>
+    a foaf:Person;
+    irishRel:genName "Áedáin";
+    irishRel:nomName "Áedán";
+    rel:childOf <#Láréin>;
+    irishRel:ancestorOfGroup <#FirMaigeLocha>.
+
+<#FirMaigeLocha>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Fir Maige Locha";
+    rdfs:comment ".i. muinter Fáil díb & alii multi";
+    irishRel:ancestorGroupOf <#MuinterFáil>.
+
+<#MuinterFáil>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Muinter Fáil".
+
+<#Díarmada>
+    a foaf:Person;
+    irishRel:genName "Díarmada";
+    irishRel:nomName "Díarmait";
+    rel:childOf <#Láréin>;
+    irishRel:ancestorOfGroup <#ClandOsséne>, <#HúiThomrair>, <#MuinterThaigenaCommairche>.
+
+<#ClandOsséne>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Osséne".
+
+<#HúiThomrair>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Thomrair".
+
+<#MuinterThaigenaCommairche>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Muinter Thaige na Commairche";
+    irishRel:ancestorGroupOf <#HóiBrain>, <#HóiBocán>.
+
+<#HóiBrain>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Hói Brain".
+
+<#HóiBocán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Hói Bocán".
+
+<#Fothudnacanóne>
+    a foaf:Person;
+    irishRel:nomName "Fothud na canóne";
+    rel:descendantOf <#Díarmada>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q7401234>.
+
+<#Flannabrafíal>
+    a foaf:Person;
+    irishRel:nomName "Flannabra fíal";
+    rel:descendantOf <#Díarmada>.
+
+<#Crimthand>
+    a foaf:Person;
+    irishRel:nomName "Crimthand";
+    rel:childOf <#EochoBinnech>;
+    irishRel:ancestorOfGroup <#ClandForballaig>, <#ClandOdrán>.
+
+<#ClandForballaig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Forballaig".
+
+<#ClandOdrán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Odrán";
+    irishRel:ancestorGroupOf <#MuinterChúaich>, <#ClandTírecháin>.
+
+<#MuinterChúaich>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Muinter Chúaich".
+
+<#ClandTírecháin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Tírecháin".
+
+<#Eocho>
+    a foaf:Person;
+    irishRel:nomName "Eocho";
+    rel:childOf <#EochoBinnech>;
+    irishRel:ancestorOfGroup <#HúiLachnán>, <#HúiChormaic>, <#HúiThúathgaile>.
+
+<#HúiLachnán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Lachnán".
+
+<#HúiChormaic>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Chormaic".
+
+<#HúiThúathgaile>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Thúathgaile".
+
+<#Dáre>
+    a foaf:Person;
+    irishRel:nomName "Dáre";
+    rel:childOf <#EochoBinnech>;
+    irishRel:ancestorGroupOf <#HúiCáichdamán>, <#HúiMagán>.
+
+<#HúiCáichdamán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Cáichdamán".
+
+<#HúiMagán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Magán".
+
+<#Mane>
+    a foaf:Person;
+    irishRel:nomName "Mane";
+    rel:childOf <#EochoBinnech>;
+
+<#HúiCúanán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Cúanán".
+
+<#Brigit>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Brigit";
+    rel:childOf <#Mane>.
+
+<#Gocán>
+    a foaf:Person;
+    irishRel:nomName "Gocán";
+    rel:childOf <#EochoBinnech>;
+    rdfs:comment "díbaid acht bec".
+
+<#Odor>
+    a foaf:Person;
+    irishRel:nomName "Odor";
+    rel:descendantOf <#Duibdúanaig>;
+    rel:descendantOf <#Gocán>;
+    rdfs:comment "i nÓentrub.".
+
+<#Duibdúanaig>
+    a foaf:Person;
+    irishRel:genName "Duibdúanaig";
+    irishRel:nomName "Duibdúanach".
+
+<#Congaland>
+    a foaf:Person;
+    irishRel:genName "Congaland";
+    rel:descendantOf <#Gocán>;
+    irishRel:numChild 4.
+
+<#Dathgel>
+    a foaf:Person;
+    irishRel:nomName "Dathgel";
+    rel:descendantOf <#Odor>;
+    rel:childOf <#Congaland>;
+    rdfs:comment "i Loch Drochait";
+    irishRel:ancestorOfGroup <#TellachhúaRerge>, <#TellachMaelóenaig>.
+
+<#TellachhúaRerge>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach húa Rerge".
+
+<#TellachMaelóenaig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Maelóenaig".
+
+<#Drucán>
+    a foaf:Person;
+    irishRel:nomName "Drucán";
+    rel:descendantOf <#Odor>;
+    rel:childOf <#Congaland>;
+    rdfs:comment "i Loch Drochait".
+
+<#TellachDrúcan>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Drúcan".
+
+<#Tnúthgal>
+    a foaf:Person;
+    irishRel:nomName "Tnúthgal";
+    irishRel:nomName "Tnúthgal Admall";
+    rel:descendantOf <#Odor>;
+    rel:childOf <#Congaland>;
+    rdfs:comment "i Loch Drochait";
+    irishRel:ancestorOfGroup <#TellachAdmaill>.
+
+<#TellachAdmaill>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Admaill".
+
+<#Fabaide>
+    a foaf:Person;
+    irishRel:nomName "Fabaide";
+    rel:descendantOf <#Odor>;
+    rel:childOf <#Congaland>;
+    rdfs:comment "i Loch Drochait";
+    irishRel:ancestorOfGroup <#TellachFabaide>.
+
+<#TellachFabaide>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Fabaide".
+
+<#Maelfothbil>
+    a foaf:Person;
+    irishRel:nomName "Maelfothbil";
+    rel:descendantOf <#Odor>;
+    rdfs:comment "hi nGlind".
+
+<#Uititén>
+    a foaf:Person;
+    irishRel:nomName "Maelfothbil";
+    rel:descendantOf <#Odor>;
+    rdfs:comment "hi nGlind".
+
+<#Dubdúin>
+    a foaf:Person;
+    irishRel:nomName "Dubdúin";
+    rel:descendantOf <#Odor>;
+    rdfs:comment "hi Túaith Rois".
+
+<#Díangus>
+    a foaf:Person;
+    irishRel:nomName "Díangus";
+    rel:childOf <#Máiledúin-cd624b70>;
+    irishRel:numChild 3.
+
+<#Máiledúin-cd624b70>
+    a foaf:Person;
+    irishRel:genName "Máiledúin";
+    irishRel:nomName "Máel Dúin";
+    rel:childOf <#Failbe>.
+
+<#Failbe>
+    a foaf:Person;
+    irishRel:nomName "Failbe";
+    rel:descendantOf <#EochoBinnech>.
+
+# The descent of <#Failbe> from <#EochoBinnech> is implied by his presence in this section;
+# otherwise, it is not clear how he fits in. EPT
+
+<#Nógus>
+    a foaf:Person;
+    irishRel:nomName "Nógus";
+    rel:childOf <#Díangus>.
+
+<#Cernach>
+    a foaf:Person;
+    irishRel:nomName "Cernach";
+    rel:childOf <#Nógus>;
+    irishRel:ancestorOfGroup <#CenélCernaig>.
+
+<#CenélCernaig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cenél Cernaig".
+
+<#Faelcú>
+    a foaf:Person;
+    irishRel:nomName "Faelcú";
+    rel:childOf <#Nógus>;
+    irishRel:ancestorOfGroup <#HúiThenán>, <#HúiChonCathaise>.
+
+<#HúiThenán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Thenán".
+
+<#HúiChonCathaise>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi ChonCathaise".
+
+<#Dubchú>
+    a foaf:Person;
+    irishRel:nomName "Dubchú";
+    rel:childOf <#Nógus>;
+    irishRel:ancestorOfGroup <#HúiChatanaig>, <#HúiLagéin>.
+
+<#HúiChatanaig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Chatanaig".
+
+<#HúiLagéin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Lagéin".
+
+<#Muirgius>
+    a foaf:Person;
+    irishRel:nomName "Muirgius";
+    rel:childOf <#Díangus>;
+    irishRel:ancestorOfGroup <#HúiDraignén>.
+
+<#HúiDraignén>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Draignén".
+
+<#Nárchú>
+    a foaf:Person;
+    irishRel:nomName "Nárchú";
+    rel:childOf <#Díangus>;
+    irishRel:ancestorOfGroup <#HúiFurudran>.
+
+<#HúiFurudran>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Furudran".
+
+<#Cathgus>
+    a foaf:Person;
+    irishRel:nomName "Cathgus";
+    rel:childOf <#Cobraid>;
+    rel:descendantOf <#EochoBinnech>;
+    irishRel:ancestorOfGroup <#hóiChonaill>.
+
+# Again, this is implied by his presence in the section, nothing more. EPT
+
+<#Cobraid>
+    a foaf:Person;
+    irishRel:genName "Cobraid".
+
+<#Murir>
+    a foaf:Person;
+    irishRel:nomName "Murir";
+    rel:descendantOf <#Cathgus>;
+    rel:descendantOfGroup <#hóiChonaill>.
+
+<#hóiChonaill>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "hói Chonaill".
+
+<#Cuac>
+    a foaf:Person;.
+    irishRel:nomName "Cuac";
+    rel:childOf <#Maelchon>;
+    irishRel:ancestorOfGroup <#MuinterChuaic>.
+
+<#MuinterChuaic>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Muinter Chuaic".
+
+<#Maelchon>
+    a foaf:Person;
+    irishRel:nomName "Maelchú";
+    irishRel:genName "Maelchon";
+    rel:childOf <#Odrán>.
+
+<#Odrán>
+    a foaf:Person;
+    irishRel:nomName "Odru";
+    irishRel:genName "Odrán";
+    rel:childOf <#Fáilgussa>.
+
+<#Fáilgussa>
+    a foaf:Person;
+    irishRel:nomName "Fáilgus";
+    irishRel:genName "Fáilgussa";
+    rel:childOf <#Failgniaith>.
+
+<#Failgniaith>
+    a foaf:Person;
+    irishRel:nomName "Failgniath";
+    irishRel:genName "Failgniaith";
+    rel:childOf <#Airmedaig>.
+
+<#Airmedaig>
+    a foaf:Person;
+    irishRel:nomName "Airmedach";
+    irishRel:genName "Airmedaig";
+    rel:childOf <#Cathbath>.
+
+<#Cathbath>
+    a foaf:Person;
+    irishRel:nomName "Cathbath";
+    irishRel:genName "Cathbath";
+    rel:childOf <#Erblaind>.
+
+<#Erblaind>
+    a foaf:Person;
+    irishRel:nomName "Erbland";
+    irishRel:genName "Erblaind";
+    rel:childOf <#Gúare>.
+
+<#Gúare>
+    a foaf:Person;
+    irishRel:nomName "Gúaire";
+    irishRel:genName "Gúare";
+    rel:childOf <#Colmán>.
+
+<#Colmán>
+    a foaf:Person;
+    irishRel:nomName "Colmán";
+    irishRel:genName "Colmán";
+    rel:descendantOf <#Crimthand>.
+
+# Earlier, both Cland Odrán and Muinter Chúaich are said to descend from <#Crimthand>. But can we infer this as a result? EPT
+
+<#Fiachan>
+    a foaf:Person;
+    irishRel:nomName "Fiachan";
+    rel:childOf <#Cronmacán>;
+    irishRel:ancestorOfGroup <#TellachFiachán>.
+
+<#TellachFiachán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Fiachán".
+
+<#Cronmacán>
+    a foaf:Person;
+    irishRel:nomName "Cronmacán";
+    rel:childOf <#Odrán>.
+
+<#TellachBranán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Branán";
+    rdfs:comment "cenéle Binnig Glinni".
+
+<#TellachCathalán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Cathalán";
+    rdfs:comment "cenéle Binnig Glinni".
+
+<#TellachDuibRoilbe>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach DuibRoilbe";
+    rdfs:comment "cenéle Binnig Glinni".
+
+<#Branán>
+    a foaf:Person;
+    irishRel:nomName "Branán";
+    rel:childOf <#Uititén-fd7f3e30>;
+    irishRel:ancestorOfGroup <#TellachBranán>.
+
+<#Cathalán>
+    a foaf:Person;
+    irishRel:nomName "Cathalán";
+    rel:childOf <#Uititén-fd7f3e30>;
+    irishRel:ancestorOfGroup <#TellachCathalán>.
+
+<#DuibRoilbe>
+    a foaf:Person;
+    irishRel:nomName "DuibRoilbe";
+    rel:childOf <#Uititén-fd7f3e30>;
+    irishRel:ancestorOfGroup <#TellachDuibRoilbe>.
+
+<#Uititén-fd7f3e30>
+    a foaf:Person;
+    irishRel:genName "Uititén";
+    irishRel:numChild 3;
+    owl:sameAs <#Uititén>.
+
+  }
