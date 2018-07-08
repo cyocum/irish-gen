@@ -1,0 +1,197 @@
+@base <http://example.com/Laud_Misc_610/CGH/cenél_cóelbad_corice_so_cenél_immorru_áeda_asso_sís.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 7: Cenél Cóelbad corice so; Cenél immorru Áeda asso sís"@sga;
+    dcterms:identifier "LMisc610_CGH_07";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Áed>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    rel:childOf <#Fergusa>;
+    irishRel:numChild 7;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/cráeb_ceniúil_fergusa_inso.trig#Áed>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_áeda_m._fergusa.trig#Áeda>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    irishRel:genName "Fergusa";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/cráeb_ceniúil_fergusa_inso.trig#Fergus-31842b50>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_áeda_m._fergusa.trig#Fergusa-91575a1b>.
+
+<#Lóegaire>
+    a foaf:Person;
+    irishRel:nomName "Lóegaire";
+    rel:childOf <#Áed>;
+    irishRel:ancestorOfGroup <#TellachCinaeda>, <#TellachMuredaig>, <#ÓLoegaire>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_áeda_m._fergusa.trig#Láegaire>.
+
+<#ÓLoegaire>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ó Loegaire";
+    irishRel:ancestorOfGroup <#OéChollai>.
+
+<#TellachCinaeda>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Cinaeda";
+    irishRel:ancestorGroupOf <#ÓeBranacáin>, <#ÓeGan>, <#ÓeMáilmaige>, <#ÓeCathalán>.
+
+<#ÓeBranacáin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Branacáin".
+
+<#ÓeGan>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Gan".
+
+<#ÓeMáilmaige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Máilmaige".
+
+<#ÓeCathalán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Cathalán".
+
+<#TellachMuredaig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Muredaig";
+    irishRel:ancestorGroupOf <#ÓeLoingsecháin>, <#ÓeEnaisc>, <#ÓeBerecdai>, <#ÓeScurri>, <#ÓeMáilfinn>, <#HóeLannacáin>, <#ÓeFiraiste>.
+
+<#ÓeLoingsecháin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Tellach Muredaig".
+
+<#ÓeEnaisc>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Enaisc".
+
+<#ÓeBerecdai>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Berecdai".
+
+<#ÓeScurri>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Scurri".
+
+<#ÓeMáilfinn>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Máilfinn".
+
+<#HóeLannacáin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Hóe Lannacáin".
+
+<#ÓeFiraiste>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Firaiste".
+
+<#Taután>
+    a foaf:Person;
+    irishRel:nomName "Taután";
+    rel:childOf <#Áed>;
+    irishRel:ancestorOfGroup <#ÓeThúatáin>.
+
+<#ÓeThúatáin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Thúatáin";
+    irishRel:ancestorGroupOf <#ÓeBrúatair>, <#ÓeMurchadha>, <#ÓeBeóailb>.
+
+<#ÓeBrúatair>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Brúatair".
+
+<#ÓeMurchadha>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Murchadha".
+
+<#ÓeBeóailb>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Beóailb".
+
+<#Úanaind>
+    a foaf:Person;
+    irishRel:nomName "Úanaind";
+    rel:childOf <#Áed>;
+    irishRel:ancestorOfGroup <#ÓeÚanainn>.
+
+<#ÓeÚanainn>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Úanainn";
+    irishRel:ancestorGroupOf <#MunterMelláin>.
+
+<#MunterMelláin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Munter Melláin".
+
+<#Comán>
+    a foaf:Person;
+    irishRel:nomName "Comán";
+    rel:childOf <#Áed>;
+    irishRel:ancestorOfGroup <#ÓeCommáin>.
+
+<#ÓeCommáin>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Commáin";
+    irishRel:ancestorGroupOf <#ÓeDídnaid>.
+
+<#ÓeDídnaid>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Óe Dídnaid".
+
+<#Breccán>
+    a foaf:Person;
+    irishRel:nomName "Breccán";
+    rel:childOf <#Áed>;
+    irishRel:ancestorOfGroup <#ÓBrecán>.
+
+<#ÓBrecán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ó Brecán";
+    irishRel:ancestorGroupOf <#ÓAirisnig>.
+
+<#ÓAirisnig>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ó Airisnig".
+
+<#Lannán>
+    a foaf:Person;
+    irishRel:nomName "Lannán";
+    rel:childOf <#Áed>.
+
+<#Ubbán>
+    a foaf:Person;
+    irishRel:nomName "Ubbán";
+    rel:childOf <#Áed>;
+    irishRel:ancestorOfGroup <#ÓHubbán>.
+
+<#ÓHubbán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ó Hubbán";
+    irishRel:ancestorOfGroup <#ClandDubán>.
+
+<#ClandDubán>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Dubán";
+    rdfs:comment "hi Connachtaibh".
+
+<#OéChollai>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Oé Chollai".
+}
