@@ -1,0 +1,258 @@
+@base <http://example.com/Laud_Misc_610/CGH/de_genelach_brigte.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 11: De Genelach Brigte"@sga;
+    dcterms:identifier "LMisc610_CGH_11";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Brigit>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Brigit";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Brigit>;
+    rel:childOf <#Dubhaig>.
+
+<#Dubhaig>
+    a foaf:Person;
+    irishRel:genName "Dubhaig";
+    irishRel:nomName "Dubthach";
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Dubthaich>.
+
+<#Fintan>
+    a foaf:Person;
+    irishRel:nomName "Fintan";
+    rel:childOf <#Gabríni>;
+    rdfs:comment "Cluana Eidnech";
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Fintan>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q3072671>.
+
+<#Gabríni>
+    a foaf:Person;
+    irishRel:genName "Gabríni";
+    rel:childOf <#Corcáin>;
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Gabríni>.
+
+<#Corcáin>
+    a foaf:Person;
+    irishRel:nomName "Corcán";
+    irishRel:genName "Corcáin";
+    rel:childOf <#Echdach>;
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Corcáin>.
+
+<#Echdach>
+    a foaf:Person;
+    irishRel:nomName "Eochaid";
+    irishRel:genName "Echdach";
+    rel:childOf <#Bressail>;
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Echach-c9552db0>.
+
+<#Bressail>
+    a foaf:Person;
+    irishRel:nomName "Bressal";
+    irishRel:genName "Bressail";
+    rel:childOf <#Déin>;
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Bresal-4e76b0e0>.
+
+<#Déin>
+    a foaf:Person;
+    irishRel:nomName "Dían";
+    irishRel:genName "Déin";
+    owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#Dian>;
+    rdfs:comment "Is and condric & Brigit".
+
+# Laud is correct that <#Déin> is a common ancestor of Fintan and Brigit, but one needs to
+# refer to other manuscripts in order to make the connection. EPT
+
+<#Fergus>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    rel:childOf <#Fothaid>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_messin_corb.trig#FergusLáebderc>.
+    irishRel:ancestorOfGroup <#HúiChaile>, <#HúiLaigthegtáin>, <#HúiFithrecháin>, <#HúiChatháin>, <#HúiGaimdechair>, <#HúiDobráin>, <#SílCrúachén>.
+
+<#Fothaid>
+    a foaf:Person;
+    irishRel:nomName "Fothaid";
+    irishRel:genName "Fothaid";
+    rel:childOf <#EchachLámdeirg>;
+    owl:sameAs <http://example.com/LL/na_fortúath.trig#Fhothaid>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_messin_corb.trig#Fothaid>.
+
+<#EchachLámdeirg>
+    a foaf:Person;
+    irishRel:nomName "Eochu Lámderg";
+    irishRel:genName "Echach Lámdeirg";
+    rel:childOf <#Messincorp>;
+    owl:sameAs <http://example.com/LL/na_fortúath.trig#EchachLamdeirg>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_messin_corb.trig#EuchuLámderg>.
+
+<#Messincorp>
+    a foaf:Person;
+    irishRel:nomName "Messincorp";
+    irishRel:genName "Messincorp";
+    owl:sameAs <http://example.com/LL/na_fortúath.trig#MessinCorp>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_messin_corb.trig#MessinCorb>.
+
+<#Cóemgein>
+    a foaf:Person;
+    irishRel:nomName "Cóemgein";
+    rel:descendantOf <#Fergus>;
+    rdfs:comment "Glinde dá Locha";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Coemgen>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:nomName "Eogain";
+    foaf:title "epscop"@sga, "bishop"@eng;
+    rel:descendantOf <#Fergus>;
+    rdfs:comment "Aird Sratha";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Eogain-f478a320>>.
+
+<#Lochán>
+    a foaf:Person;
+    irishRel:nomName "Lochán";
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Lochan>;
+    rdfs:comment "hi Cill Manach".
+
+<#Énna>
+    a foaf:Person;
+    irishRel:nomName "Énna";
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Enna-dbafa850>;
+    rdfs:comment "hi Cill Manach".
+
+<#Mosenóc>
+    a foaf:Person;
+    irishRel:nomName "Mosenóc";
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#MuShenoc>;
+    rdfs:comment "Tíre dá Glas".
+
+<#Mognai>
+    a foaf:Person;
+    irishRel:nomName "Mognai";
+    rel:descendantOf <#Fergus>;
+    rdfs:comment "Tíre dá Glas".
+
+<#Mochóeme>
+    a foaf:Person;
+    irishRel:nomName "Mochóeme";
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#MoChoeme>;
+    rdfs:comment "Tíre dá Glas".
+
+<#Cóiman>
+    a foaf:Person;
+    irishRel:nomName "Cóiman";
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Coeman>;
+    rdfs:comment "enaig Thruim".
+
+<#Petrán>
+    a foaf:Person;
+    irishRel:nomName "Petrán";
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Petran>;
+    rdfs:comment "o Chill Lainne".
+
+<#Etchén>
+    a foaf:Person;
+    foaf:title "epscop"@sga, "bishop"@eng;
+    irishRel:nomName "Etchén";
+    rel:childOf <#Mane>;
+    rel:descendantOf <#Fergus>;
+    rdfs:comment "hi Clúain Fotta Báitán Aba";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Étchaín>.
+
+<#Mane>
+    a foaf:Person;
+    foaf:title "écis"@sga, "sage"@eng;
+    irishRel:nomName "Mane";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Mane-69a21e90>.
+
+<#Nathí>
+    a foaf:Person;
+    foaf:title "epscop"@sga, "bishop"@eng;
+    irishRel:nomName "Nathí";
+    rel:childOf <#Fergusa>;
+    rel:descendantOf <#Fergus>;
+    rdfs:comment "hi Cúil Fothirbi";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#NathÍ-f9faa250>.
+
+<#Fegusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus".
+
+<#Moacru>
+    a foaf:Person;
+    irishRel:nomName "Moacru";
+    rel:childOf <#Senáin>;
+    rel:descendantOf <#Fergus>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#MoAcru>.
+
+<#Senáin>
+    a foaf:Person;
+    irishRel:genName "Senáin";
+    irishRel:nomName "Senán".
+
+<#HúiChaile>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Húi Chaile".
+
+<#HúiLaigthegtáin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Húi Laigthegtáin".
+
+<#Laigthegtáin>
+    a foaf:Person;
+    irishRel:genName "Laigthegtáin";
+    irishRel:nomName "Laigthegtán";
+    rel:descendantOf <#Fergus>;
+    rel:childOf <#Cuimmine>;
+    irishRel:ancestorOfGroup <#HúiLaigthegtáin>.
+
+<#Cuimmine>
+    a foaf:Person;
+    irishRel:nomName "Cuimmine";
+    irishRel:genName "Cuimmine".
+
+<#HúiFithrecháin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Húi Fithrecháin".
+
+<#HúiChatháin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Húi Chatháin".
+
+<#HúiGaimdechair>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Húi Gaimdechair".
+
+<#HúiDobráin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Húi Dobráin".
+
+<#SílCrúachén>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Crúachén".
+    rdfs:comment ".i. for Gabrán".
+
+}
