@@ -1,0 +1,200 @@
+@base <http://example.com/Laud_Misc_610/CGH/de_causis_quibus_exules_aquilonensium_ad_muminenses_adducti_sunt.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 14: De causis quibus exules Aquilonensium ad Muminenses adducti sunt"@sga;
+    dcterms:identifier "LMisc610_CGH_14";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#RosaRóig>;
+    owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Fergus>;
+    owl:sameAs <http://example.com/LL/senchas_coitechenn_clainde_fergusa.trig#Fhergusa>;
+    irishRel:ancestorOfGroup <#ClannMogaThóech>, <#ClandFirDeodai>, <#DálFirTlachtgai>.
+
+<#RosaRóig>
+    a foaf:Person;
+    irishRel:genName "Rosa Róig";
+    irishRel:nomName "Ros Róig";
+    owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Roig>.
+
+<#MedbaCrúachan>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:genName "Medba Crúachan";
+    irishRel:nomName "Medb Crúachan";
+    rel:spouseOf <#Fergusa>;
+    owl:sameAs <http://example.com/LL/aisneidem_di_araill.trig#Medba>;
+    irishRel:ancestorOfGroup <#ClannMogaThóech>, <#ClandFirDeodai>, <#DálFirTlachtgai>.
+
+<#ClannMogaThóech>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Moga Thóech";
+    irishRel:ancestorGroupOf <#Cíarraigi>.
+
+<#Cíarraigi>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ciarraigi";
+    owl:sameAs <http://example.com/LL/senchas_coitechenn_clainde_fergusa.trig#Ciarraige>.
+
+<#ClandFirDeodai>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Fir Deodai";
+    irishRel:ancestorGroupOf <#DálMedraud>.
+
+<#DálMedraud>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Medraud";
+
+<#DálFirTlachtgai>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Fir Tlachtgai";
+    irishRel:ancestorGroupOf <#nacethriAraid>.
+
+<#nacethriAraid>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "na cethri Araid";
+
+<#HuéMaicDornae>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Hué Maic Dornae".
+
+<#Én>
+    a foaf:Person;
+    irishRel:nomName "Én";
+    rel:childOf <#Mauguirn>.
+
+<#Mauguirn>
+    a foaf:Person;
+    irishRel:genName "Mauguirn".
+
+<#Corc>
+    a foaf:Person;
+    irishRel:nomName "Corc";
+    rel:childOf <#Luigthig>;
+    foaf:knows <#Én>.
+
+<#Luigthig>
+    a foaf:Person;
+    irishRel:genName "Luigthig".
+
+<#Corp>
+    a foaf:Person;
+    irishRel:nomName "Corp";
+    rel:childOf <#Ainirmae>.
+
+<#Ainirmae>
+    a foaf:Person;
+    irishRel:genName "Ainirmae".
+
+<#Coinniu>
+    a foaf:Person;
+    irishRel:nomName "Coinniu";
+    rel:childOf <#Seghu>;
+    rdfs:comment "oc Dún Choinnenn & oc Comarthu".
+
+<#Seghu>
+    a foaf:Person;
+    irishRel:genName "Seghu".
+
+<#CoelhUirc>
+    a foaf:Person;
+    irishRel:nomName "Coel hUirc";
+    irishRel:numChild 3;
+    rdfs:comment "Trí maic Coel hUirc ic Curchu ocus drécht diib i nAidniu, araill diib oc Dubcechair".
+
+<#Cethernd>
+    a foaf:Person;
+    irishRel:nomName "Cethernd";
+    rel:childOf <#Fintain>;
+    rel:parentOf [
+      a foaf:Person;
+      foaf:gender "female";
+    ]
+    irishRel:ancestorOfGroup <#CorcoSelgind>.
+
+<#Fintain>
+    a foaf:Person;
+    irishRel:genName "Fintain";
+    irishRel:nomName "Fintan".
+
+<#CorcoSelgind>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Corco Selgind".
+
+<#Fergus>
+    a foaf:Person;
+    irishRel:nomName "Fergus";
+    owl:sameAs <#Fergusa>;
+    rel:antagonistOf <#Cethernd>.
+
+<#FerDeodae>
+    a foaf:Person;
+    irishRel:nomName "Fer Deodae";
+    rel:antagonistOf [
+      a foaf:Person;
+      rel:childOf <#Fergus>;
+      owl:sameAs <#Fecc>;
+    ].
+
+<#Fecc>
+    a foaf:Person;
+    irishRel:nomName "Fecc";
+    irishRel:genName "Fecc".
+
+<#Carthind>
+    a foaf:Person;
+    irishRel:genName "Carthind";
+    irishRel:nomName "Cairthend".
+
+<#Solchenn>
+    a foaf:Person;
+    irishRel:nomName "Solchenn";
+    rel:childOf <#Cethernd>;
+    rel:antagonistOf <#Fecc>;
+    irishRel:ancestorOfGroup <#CorcoSolgind>.
+
+<#CorcoSolgind>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Corco Solgind";
+    irishRel:populationGroupName "Corco hAlchind";
+    rdfs:comment "unde rectius Corco Solgind dicti sunt a poetis, nunc autem ab imperitis Corco hAlchind dicuntur.".
+
+<#Lucrith>
+    a foaf:Person;
+    irishRel:nomName "Lucrith";
+    irishRel:descendantOfGroup <#mocuChíara>.
+
+<#mocuChíara>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "mocu Chíara".
+
+<#Conaillamedbmichura>
+    dcterms:title "Conailla medb michura";
+    prov:wasAttributedTo <#Lucrith>;
+    owl:sameAs <http://vanhamel.nl/codecs/Conailla_Medb_m%C3%ADchuru>.
+
+# This section is very terse and the connections between characters are not always apparent.
+# It should be reviewed against the IrishGen database and other sources once more material has been added.
+# Also, a translation exists of 'Conailla medb michura' in Études Celtiques 29; this will be
+# consulted when the opportunity permits. EPT
+
+}
