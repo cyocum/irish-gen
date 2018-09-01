@@ -1,0 +1,147 @@
+@base <http://example.com/Laud_Misc_610/CGH/scéla_eogain_in_so_&_cormaic.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 15: Scéla Eogain in so & Cormaic"@sga;
+    dcterms:identifier "LMisc610_CGH_16";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#EnganMór>
+    a foaf:Person;
+    irishRel:nomName "Engan Mór";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#Eogan>.
+# Possible typo? EPT
+
+<#Treth>
+    a foaf:Person;
+    irishRel:nomName "Treth";
+    irishRel:descendantOf <#moccuCreccai>;
+    rel:parentOf <#Moncha>;
+
+<#moccuCreccai>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Moccu Creccai".
+
+<#Moncha>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Moncha";
+    rel:spouseOf <#EnganMór>.
+
+<#MacCon>
+    a foaf:Person;
+    irishRel:nomName "Mac Con";
+    owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.trig#MacCon>;
+    rel:antagonistOf <#EnganMór>.
+
+<#FíachoMuillethan>
+    a foaf:Person;
+    irishRel:nomName "Fíacho Muillethan";
+    rel:childOf <#Moncha>;
+    rel:childOf <#EnganMór>;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FiachaMullethan>.
+
+<#Art>
+    a foaf:Person;
+    irishRel:nomName "Art";
+    rel:childOf <#Cuind>;
+    irishRel:fosterChildOf <#FíachnaeCassán>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#ArtÓenfer>.
+
+<#Cuind>
+    a foaf:Person;
+    irishRel:nomName "Conn";
+    irishRel:genName "Cuind";
+    pwl:sameAs <http://example.com/Laud_Misc_610/CGH/de_peritia_fhothart_so_sis.trig#ChundChétchadach>.
+
+<#hAchtán>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:accName "hAchtán"
+    irishRel:nomName "Achtán";
+    rel:spouseOf <#Art>;
+    rel:childOf <#hUilcAiche>.
+
+<#hUilcAiche>
+    a foaf:Person;
+    irishRel:genName "hUilc Aiche";
+    irishRel:nomName "Olc Aiche";
+    foaf:title "druad"@sga, "druid"@eng.
+
+<#Chormaic>
+    a irishTitle:rí;
+    irishTitle:reignLength 30;
+    irishRel:genName "Chormaic";
+    irishRel:nomName "Cormac";
+    irishRel:fosterChildOf <#LuigneFerTrí>;
+    irishRel:fosterChildOf <#FíachnaeCassán>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Cormac>.
+
+<#MaicCon>
+    a irishTitle:rí;
+    irishTitle:succeededBy <#Chormaic>;
+    irishRel:genName "Maic Con";
+    irishRel:nomName "Mac Con";
+    owl:sameAs <#MacCon>;
+    rel:childOf <#Luigthech>.
+
+<#Luigthech>
+    a foaf:Person;
+    irishRel:nomName "Lugaid";
+    irishRel:genName "Luigthech";
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Luigdech>.
+
+<#LuigneFerTrí>
+    a foaf:Person;
+    irishRel:nomName "Luigne Fer Trí".
+
+<#FíachnaeCassán>
+    a foaf:Person;
+    irishRel:accName "Fíachnae Cassán";
+    irishRel:nomName "Fíachna Cassán";
+    owl:sameAs <http://example.com/Rawl_B502/de_peritia_cenéoil_cairpri_liphechair_incipit.trig#FiachraCassán>.
+
+<#LugidMacnía>
+    a foaf:Person;
+    irishRel:nomName "Lugid Macnía"
+    rel:childOf <#MaicCon>;
+    rdfs:comment ".i. óenainm";
+    irishRel:numChild 4;
+    owl:sameAs <http://example.com/LL/darine_sil_lugdach.trig#Maicnioth>.
+
+<#Dau>
+    a foaf:Person;
+    irishRel:nomName "Dau";
+    rel:childOf <#LugidMacnía>.
+
+<#Trian>
+    a foaf:Person;
+    irishRel:nomName "Trian";
+    rel:childOf <#LugidMacnía>.
+
+<#Eochu>
+    a foaf:Person;
+    irishRel:nomName "Eochu";
+    rel:childOf <#LugidMacnía>.
+
+<#Lugith>
+    a foaf:Person;
+    irishRel:nomName "Lugith";
+    rel:childOf <#LugidMacnía>.
+
+  }
