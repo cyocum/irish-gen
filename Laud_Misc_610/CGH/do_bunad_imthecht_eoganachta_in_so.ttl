@@ -1,0 +1,188 @@
+@base <http://example.com/Laud_Misc_610/CGH/do_bunad_imthecht_eoganachta_in_so.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 15: Do bunad imthecht Eoganachta in so"@sga;
+    dcterms:identifier "LMisc610_CGH_17";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#EogainTáidlig>
+    a foaf:Person;
+    irishRel:genName "Eogain Táidlig";
+    irishRel:nomName "Eogan Táidlech";
+    irishRel:nomName "Mug Núadat";
+    irishRel:nomName "Eogan Fitheccach";
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#MogNuadat>;
+    irishRel:ancestorOfGroup <#Eoganacht>.
+
+<#EoganFithicech>
+    a foaf:Person;
+    irishRel:nomName "Eogan Fithicech";
+    irishRel:nomName "Eugan Táidlech";
+    irishRel:nomName "Mug Núadat";
+    owl:sameAs <#EogainTáidlig>;
+    rdfs:seeAlso <#Cethrianmandmíadcenbrón>.
+
+<#Cethrianmandmíadcenbrón>
+    dcterms:title "Cethri anmand, míad cen brón";
+    rdfs:comment "amal atbert in fili".
+
+<#Eoganacht>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Eoganachta";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#Eoganachta>.
+
+<#DáilChuind>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Cuind".
+
+<#Búain>
+    a foaf:Person;
+    irishRel:genName "Búain";
+    irishRel:nomName "Búan";
+    rel:childOf <#LoegairiBirnd>;
+    owl:sameAs <http://example.com/Rawl_B502/clann_taidc_inso.trig#Buain>;
+    irishRel:numChild 3;
+    irishRel:ancestorOfGroup <#Ossirge>, <#DálCuind>, <#DálFíachach>.
+
+<#LoegairiBirnd>
+    a foaf:Person;
+    irishRel:genName "Loegairi Birnd";
+    irishRel:nomName "Loegaire Birnd";
+    owl:sameAs <http://example.com/Rawl_B502/clann_taidc_inso.trig#LóegaireBirnBuadaig>.
+
+<#Ossirge>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Ossirge";
+    owl:sameAs <http://example.com/Rawl_B502/item_úi_théig.trig#Osairgiu>.
+
+<#Ailill>
+     a foaf:Person;
+     irishRel:nomName "Ailill";
+     rel:childOf <#Búain>.
+
+<#Óengus>
+     a foaf:Person;
+     irishRel:nomName "Óengus";
+     rel:childOf <#Búain>.
+
+<#Fíacc>
+     a foaf:Person;
+     irishRel:nomName "Fíacc";
+     rel:childOf <#Búain>.
+
+<#MílEspáne>
+    a foaf:Person;
+    irishRel:nomName "Míl Espáne";
+    rdfs:comment "tánaise";
+    foaf:knows <#Ailill>, <#Óengus>, <#Fíacc>.
+# NOT the well-known Míl Espaine!!! EPT
+
+<#DálCuind>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Cuind";
+    owl:sameAs <#DáilChuind>.
+
+<#DálFíachach>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Fíachach".
+
+<#Fínán>
+    a foaf:Person;
+    irishRel:nomName "Fínán";
+    rel:childOf <#Fíachrach>;
+    irishRel:descendantOfGroup <#DálAride>.
+
+<#Fíachrach>
+    a foaf:Person;
+    irishRel:nomName "Fíchrach";
+    rel:childOf <#Fíachrach>.
+
+<#DálAride>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dál Aride";
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#DálnAraide>.
+
+<#ManudbáigarThipraite>
+    dcterms:title "Manud báig ar Thipraite";
+    prov:wasAttributedTo <#Fínán>.
+
+<#ConnCétchathach>
+    a foaf:Person;
+    irishRel:nomName "Conn Cétchathach";
+    rel:antagonistOf <#DálAride>;
+    owl:sameAs <http://example.com/Rawl_B502/_94.trig#ConnCétchathach>.
+
+<#ArtÓenfher>
+    a foaf:Person;
+    irishRel:nomName "Art Óenfher";
+    rel:childOf <#ConnCétchathach>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#ArtOenfhir>.
+
+<#Cormac>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:descendantOf <#ConnCétchathach>;
+    rel:givesLandTo <#FíachaigMullethan>;
+    rel:friendOf <#FíachaigMullethan>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#CormaicUlfhota>.
+
+<#Fíacha>
+    a foaf:Person;
+    irishRel:nomName "Fíacha";
+    rel:childOf <#Araide>;
+    owl:sameAs <http://example.com/LL/dáil_araide.trig#Fiacha>;
+    rel:antagonistOf <#Cormac>;
+    rdfs:comment "Gabais Cormac húa Cuind flaith fer nhÉirenn & dámuir Fíacha mac Araide...Tocart Fíacha Araide Cormac a flaith Temra".
+
+<#Araide>
+    a foaf:Person;
+    irishRel:nomName "Araide";
+    owl:sameAs <http://example.com/LL/dáil_araide.trig#AraideBibre>.
+
+<#FíachaigMullethan>
+    a foaf:Person;
+    irishRel:accName "Fíachaig Mullethan";
+    irishRel:nomName "Fíacha Muillethan";
+    irishRel:givesLandTo <#Connla>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/scéla_eogain_in_so_&_cormaic.trig#FíachoMuillethan>.
+
+<#EogainMáir>
+    a foaf:Person;
+    irishRel:genName "Eogain Máir";
+    irishRel:nomName "Eogan Már";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/scéla_eogain_in_so_&_cormaic.trig#EnganMór>.
+
+<#Connla>
+    a foaf:Person;
+    irishRel:nomName "Connla";
+    rel:childOf <#Taidg>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Conla>.
+
+<#Taidg>
+    a foaf:Person;
+    irishRel:genName "Taidg";
+    irishRel:nomName "Tadg";
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Taidc>.
+
+<#MugRuith>
+    a foaf:Person;
+    irishRel:nomName "Mug Ruith";
+    owl:sameAs <http://example.com/Rawl_B502/genelach_síl_moga_ruith.trig#MogaRuith>.
+
+}
