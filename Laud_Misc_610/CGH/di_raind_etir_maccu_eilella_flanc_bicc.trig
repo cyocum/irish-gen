@@ -1,0 +1,89 @@
+@base <http://example.com/Laud_Misc_610/CGH/di_raind_etir_maccu_eilella_flanc_bicc.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 15: Di raind etir maccu Eilella Flanc Bicc.trig"@sga;
+    dcterms:identifier "LMisc610_CGH_18";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#EilellaFlancBicc>
+    a foaf:Person;
+    irishRel:genName "Eilella Flanc Bicc";
+    irishRel:nomName "Ailill Fland Becc";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/de_quabsis_torchi_corco_ché.trig#hAilillFlannBecc>;
+    irishRel:numChild 4.
+
+<#Fidach>
+    a foaf:Person;
+    irishRel:nomName "Fidach";
+    rel:childOf <#EilellaFlancBicc>.
+
+<#CrimthanMór>
+    a foaf:Person;
+    irishRel:nomName "Crimthan Mór";
+    rel:childOf <#Fidach>.
+
+<#Luigtheg>
+    a foaf:Person;
+    irishRel:nomName "Luigtheg";
+    rel:childOf <#EilellaFlancBicc>;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Lugaid>.
+
+<#MaineMuncháin>
+    a foaf:Person;
+    irishRel:nomName "Maine Muncháin";
+    rel:childOf <#EilellaFlancBicc>;
+    owl:sameAs <http://example.com/Rawl_B502/genelogia_úa_liatháin.trig#MaineMunchaín>;
+    rdfs:comment "Emmon nhDáre & in Mane";
+    irishRel:ancestorOfGroup <#CorcoChé>, <#CorcoMuchit>.
+
+<#DáreCherbae>
+    a foaf:Person;
+    irishRel:nomName "Dáre Cherbae";
+    rel:childOf <#EilellaFlancBicc>;
+    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#DáreCerba>;
+    rdfs:comment "Emmon nhDáre & in Mane";
+    irishRel:ancestorOfGroup <#CorcoChé>, <#CorcoMuchit>.
+
+<#CorcoChé>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Corco Ché";
+    rdfs:comment "cruiti".
+
+<#CorcoMuchit>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Corco Muchit";
+    rdfs:comment "indbaith".
+
+_:missing-4c26e030
+    a foaf:Person;
+    foaf:gender "female";
+    rel:descendantOf <#MogaRoith>;
+    rel:parentOf <#MaineMuncháin>, <#DáreCherbae>.
+
+<#MogaRoith>
+    a foaf:Person;
+    irishRel:nomName "Mug Ruith";
+    irishRel:genName "Moga Roith";
+    foaf:title "druad"@sga, "druid"@eng;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_bunad_imthecht_eoganachta_in_so.trig#MugRuith>.
+
+# The phrase ".i. Síl Moga Roith [in] druad" appears but it is not at all clear what
+# it refers to. This reading is provisional. EPT
+
+}
