@@ -73,6 +73,13 @@
     rdfs:domain foaf:Person ;
     owl:inverseOf :givesLandTo .
 
+:givesHostagesTo
+		a owl:ObjectProperty ;
+		rdfs:subPropertyOf foaf:knows ;
+		rdfs:label "givesHostagesTo" ;
+		rdfs:range foaf:Person ;
+		rdfs:domain foaf:Agent .
+
 rel:ancestorOf a owl:IrreflexiveProperty,
 	       	 owl:ObjectProperty.
 
@@ -158,3 +165,10 @@ rel:siblingOf
     rdfs:subPropertyOf owl:differentFrom ;
     rdfs:domain foaf:Person ;
     rdfs:range :PopulationGroup .
+
+:friendOfGroup
+		a owl:ObjectProperty, owl:IrreflexiveProperty ;
+		owl:inverseOf :antagonistOfGroup ;
+		rdfs:subPropertyOf owl:differentFrom ;
+		rdfs:domain foaf:Person ;
+	 	rdfs:range :PopulationGroup .
