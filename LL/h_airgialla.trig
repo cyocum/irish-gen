@@ -69,7 +69,7 @@
 <#hThurtri>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "h. Thurtri" .
-    
+
 
 <#CollaMend>
     a foaf:Person;
@@ -94,7 +94,7 @@
 <#DálMennet>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dál Mennet" ;
-    rdfs:comment "la Mugdornaib" .    
+    rdfs:comment "la Mugdornaib" .
 
 <#MugdornDub>
     a foaf:Person;
@@ -134,7 +134,7 @@
 <#Dubraige>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dubraige" ;
-    rdfs:comment "oc Imliuch Chorcu Duib" .    
+    rdfs:comment "oc Imliuch Chorcu Duib" .
 
 <#Papa>
     a foaf:Person;
@@ -167,13 +167,13 @@
 <#Sordraige>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Sordraige" ;
-    rdfs:comment "la Crimthannu" .    
+    rdfs:comment "la Crimthannu" .
 
 <#Ibar>
     a foaf:Person;
     irishRel:nomName "Ibar";
     foaf:title "Epscop"@sga, "bishop"@en;
-    rel:descendantOf <#Sord>;
+    irishRel:descendantOfGroup <#Sordraige>;
     rdfs:comment "Epscop Ibar for Fobrech".
 
 <#Art>
@@ -218,7 +218,7 @@
     a foaf:Person;
     irishRel:nomName "Ethern";
     foaf:title "Epscop"@sga, "bishop"@en;
-    rel:descendantOf <#Mesnophe>;
+    irishRel:descendantOfGroup <#Sobraige>;
     rdfs:comment "i n-Domnuch Mór Maige Laithbe".
 
 <#CollaFochrich>
@@ -249,7 +249,7 @@
     rel:spouseOf <#ChrindenCherdda>;
     rel:parentOf <#CollaFochrich>;
     rel:ambivalentOf <#EochoDomlén>.
-    
+
 <#ChrindenCherdda>
     a foaf:Person;
     rel:ambivalentOf <#EochoDomlén>;
@@ -293,7 +293,7 @@
 
 <#Bríuin>
     a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "h. Bríuin" .    
+    irishRel:populationGroupName "h. Bríuin" .
 
 <#Labraid>
     a foaf:Person;
@@ -365,9 +365,17 @@
     a foaf:Person;
     irishRel:nomName "Eochaid Andgaine";
     rel:childOf <#Crimthand>;
-    rdfs:comment "a quo Cland Slébine i Fernmaig et Cland Fhlannan";
     irishRel:numChild 1;
     owl:sameAs <http://example.com/LL/fer_manach.trig#Echdach>.
+
+<#ClandSlébine>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Slébine";
+    rdfs:comment "i Fernmaig".
+
+<#ClandFhlannan>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cland Fhlannan".
 
 <#CairpreDamArgait>
     a foaf:Person;
@@ -396,7 +404,7 @@
 
 <#ClandCormaic>
     a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cland Cormaic", "Cland Lugan" .    
+    irishRel:populationGroupName "Cland Cormaic", "Cland Lugan" .
 
 <#NadSluaig>
     a foaf:Person;
@@ -515,6 +523,5 @@
 <#Dáln-OichintShlébe>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dál n-Oich int Shlébe" .
-    
-}
 
+}
