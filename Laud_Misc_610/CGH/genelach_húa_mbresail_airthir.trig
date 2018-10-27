@@ -1,0 +1,100 @@
+@base <http://example.com/Laud_Misc_610/CGH/genelach_húa_bresail_airthir.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 21: Genelach hÚa mBresail Airthir .i. hÚa Célechán"@sga;
+    dcterms:identifier "LMisc610_CGH_21";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Lorcán>
+    a foaf:Person;
+    irishRel:nomName "Lorcán";
+    rel:childOf <#Gillapátraic>.
+
+<#Gillapátraic>
+    a foaf:Person;
+    irishRel:nomName "Gillapátraic";
+    irishRel:genName "Gillapátraic";
+    rel:childOf <#Matudán>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#GillaPatric>.
+
+<#Matudán>
+    a foaf:Person;
+    irishRel:genName "Matudán";
+    rel:childOf <#Áeda>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Matudain>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    irishRel:genName "Áeda";
+    rel:childOf <#Trénfhir>.
+
+<#Trénfhir>
+    a foaf:Person;
+    irishRel:nomName "Trénfer";
+    irishRel:genName "Trénfhir";
+    rel:childOf <#Elicán>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Trenfhir>.
+
+<#Elicán>
+    a foaf:Person;
+    irishRel:genName "Elicán";
+    rel:childOf <#Gairbid>.
+
+<#Gairbid>
+    a foaf:Person;
+    irishRel:genName "Gairbid";
+    rel:childOf <#Áeda>.
+
+<#Áeda-c3c641b0>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    irishRel:genName "Áeda";
+    rel:childOf <#Máildúin>.
+
+<#Máildúin>
+    a foaf:Person;
+    irishRel:nomName "Máeldúin";
+    irishRel:genName "Máildúin";
+    rel:childOf <#Dondgail>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#MaelaDuin>.
+
+<#Dondgail>
+    a foaf:Person;
+    irishRel:nomName "Dondgal";
+    irishRel:genName "Dondgail";
+    rel:childOf <#Búachalla>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Dondgaile>.
+
+<#Búachalla>
+    a foaf:Person;
+    irishRel:nomName "Búachaill";
+    irishRel:genName "Búachalla";
+    rel:childOf <#ConchobuirChorraig>;
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#Buachalla>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/genelach_cloindi_conchubair_chorraig.trig#Búachaill>.
+
+<#ConchobuirChorraig>
+    a foaf:Person;
+    irishRel:nomName "Conchobar Corrach";
+    irishRel:genName "Conchobuir Chorraig";
+    owl:sameAs <http://example.com/LL/h_mbresail.trig#ConchobuirChorraig>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/genelach_cloindi_conchubair_chorraig.trig#ConchubairChorraig>.
+
+}
