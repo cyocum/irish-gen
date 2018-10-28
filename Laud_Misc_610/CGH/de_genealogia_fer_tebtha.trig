@@ -1,0 +1,137 @@
+@base <http://example.com/Laud_Misc_610/CGH/de_genealogia_fer_tebtha.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 30: De Genealogia Fer Tebtha"@sga;
+    dcterms:identifier "LMisc610_CGH_30";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Brión>
+    a foaf:Person;
+    irishRel:nomName "Brión";
+    rel:childOf <#Maine>;
+    irishRel:numChild 2.
+
+<#Maine>
+    a foaf:Person;
+    irishRel:nomName "Maine";
+    irishRel:genName "Maine";
+    rel:childOf <#Maine>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_fer_tethba.trig#Maine>.
+
+<#Crimthand>
+    a foaf:Person;
+    irishRel:nomName "Crimthand";
+    rel:childOf <#Brión>.
+
+<#Brénaind>
+    a foaf:Person;
+    irishRel:nomName "Brénaind";
+    rel:childOf <#Brión>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_fer_tethba.trig#Brénaind>.
+
+<#Rónan>
+    a foaf:Person;
+    irishRel:nomName "Rónan";
+    rel:childOf <#Anmere>.
+
+<#Anmere>
+    a foaf:Person;
+    irishRel:genName "Anmere";
+    rel:childOf <#Brénaind>.
+
+<#Brénaind-43c563e0>
+    a foaf:Person;
+    irishRel:nomName "Brénand";
+    irishRel:genName "Brénaind";
+    owl:sameAs <#Brénaind>.
+
+<#Tadgán>
+    a foaf:Person;
+    irishRel:nomName "Tadgán";
+    rel:childOf <#Máilbendachta>.
+
+<#Máilbendachta>
+    a foaf:Person;
+    irishRel:nomName "Máelbendachta";
+    irishRel:genName "Máilbendachta";
+    rel:childOf <#Bressail>.
+
+<#Bressail>
+    a foaf:Person;
+    irishRel:nomName "Bressal";
+    irishRel:genName "Bressail";
+    rel:childOf <#Conchobair>.
+
+<#Conchobair>
+    a foaf:Person;
+    irishRel:nomName "Conchobar";
+    irishRel:genName "Conchobair";
+    rel:childOf <#Bécce>.
+
+<#Bécce>
+    a foaf:Person;
+    irishRel:nomName "Bécc";
+    irishRel:genName "Bécce";
+    rel:childOf <#Colla>.
+
+<#Colla>
+    a foaf:Person;
+    irishRel:nomName "Colla";
+    irishRel:genName "Colla";
+    rel:childOf <#Congail>.
+
+<#Congail>
+    a foaf:Person;
+    irishRel:nomName "Congal";
+    irishRel:genName "Congail";
+    rel:childOf <#Blamaic>.
+
+<#Blamaic>
+    a foaf:Person;
+    irishRel:nomName "Blamac";
+    irishRel:genName "Blamaic";
+    rel:childOf <#Áeda>.
+
+<#Áeda>
+    a foaf:Person;
+    irishRel:nomName "Áed";
+    irishRel:genName "Áeda";
+    rel:childOf <#Brénaind-83b5f370>.
+
+<#Brénaind-83b5f370>
+    a foaf:Person;
+    irishRel:nomName "Brénaind";
+    irishRel:genName "Brénaind";
+    rel:childOf <#Briúin>;
+    owl:sameAs <#Brénaind>.
+
+<#Briúin>
+    a foaf:Person;
+    irishRel:nomName "Brion";
+    irishRel:genName "Briúin";
+    rel:childOf <#Mane>;
+    owl:sameAs <#Brión>.
+
+<#Mane>
+    a foaf:Person;
+    irishRel:nomName "Maine";
+    irishRel:genName "Mane";
+    owl:sameAs <#Maine>.
+
+}
