@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-f', 'Dockerfile', '-t', 'script-runner', '--no-cache', '.']
+  args: ['build', '--no-cache', '-f', 'Dockerfile', '-t', 'script-runner' ,'.']
 - name: 'script-runner'
   args: ["sh", "build.sh"]
 - name: 'gcr.io/cloud-builders/docker'
