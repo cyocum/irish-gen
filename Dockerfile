@@ -1,5 +1,5 @@
 from ubuntu
 
 RUN apt update
-RUN apt install wget
+RUN apt install -y wget
 ENTRYPOINT ["/workspace/build.sh"]
