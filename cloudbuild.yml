@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-f', 'Dockerfile', '-t', 'gcr.io/$PROJECT_ID/script-runner', '.']
-- name: 'script-runner'
-  args: ["sh", "./build.sh"]
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/script-runner', '.']
+- name: 'ubuntu'
+  args: ["bash", "./build.sh"]
 images: ['gcr.io/$PROJECT_ID/script-runner']
