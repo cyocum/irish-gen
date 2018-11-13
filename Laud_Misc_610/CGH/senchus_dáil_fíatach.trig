@@ -1,0 +1,98 @@
+@base <http://example.com/Laud_Misc_610/CGH/senchus_dáil_fíatach.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 32: Senchus Dáil Fíatach in so"@sga;
+    dcterms:identifier "LMisc610_CGH_32";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#FíatachFind>
+    a foaf:Person;
+    irishRel:genName "Fíatach Find";
+    foaf:title "rí hÉirenn"@sga, "king of Ireland"@eng;
+    irishRel:numChild 2;
+    rdfs:comment "Is leis arrobad for síthib .i. Síd mBressi & Síd Nenta & Síd Femin & Síd Cuilind, quod dicitur Tech Cermna i sSléib Chuilind.";
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#FiatachFind>;
+    owl:sameAs <http://example.com/Rawl_B502/_94.trig#FiatachFind>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Fíatach>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Fiatach>.
+
+<#Sírchath>
+    a foaf:Person;
+    irishRel:nomName "Sírchath";
+    rel:childOf <#FíatachFind>;
+    owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#Sirchada>.
+
+<#Ogman>
+    a foaf:Person;
+    irishRel:nomName "Ogman";
+    rel:childOf <#FíatachFind>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Ogman>.
+
+<#Imchada>
+    a foaf:Person;
+    irishRel:genName "Imchada";
+    irishRel:nomName "Imchad";
+    irishRel:numChild 5;
+    rel:childOf <#Findchoda>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Imchada>.
+
+<#Findchoda>
+    a foaf:Person;
+    irishRel:genName "Findchoda";
+    rel:childOf <#Fhogamain>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Fhinnachta>.
+
+<#Fhogamain>
+    a foaf:Person;
+    irishRel:genName "Fhogamain";
+    owl:sameAs <#Ogman>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Ogomain>.
+
+<#FergusFoltlebor>
+    a foaf:Person;
+    irishRel:nomName "Fergus Foltlebor";
+    rel:childOf <#Imchada>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#FergusFoltlebor>.
+
+<#FergusTeneFoBrega>
+    a foaf:Person;
+    irishRel:nomName "Fergus Tene Fo Brega";
+    rel:childOf <#Imchada>.
+
+<#FergusDoDeriBrega>
+    a foaf:Person;
+    irishRel:nomName "Fergus Do Deri Brega";
+    rel:childOf <#Imchada>.
+
+# <#FergusDoDeriBrega> does not appear in the CELT text but does appear
+# in Meyer's edition. EPT
+
+<#ÓengusFoscriche>
+    a foaf:Person;
+    irishRel:nomName "Óengus Foscriche ";
+    rel:childOf <#Imchada>.
+
+<#FergusDubdétach>
+    a foaf:Person;
+    irishRel:nomName "Fergus Dubdétach";
+    owl:sameAs <#FergusDoDeriBrega>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#FergusDubdétach>;
+    owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#FergusDubdetach>.
+
+}
