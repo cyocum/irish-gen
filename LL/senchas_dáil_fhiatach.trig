@@ -350,22 +350,8 @@
 <#ConaillChostodaig>
     a foaf:Person;
     irishRel:nomName "Conaill Chostodaig";
-    irishRel:numChild 7.
-
-<#Bassí>
-    a foaf:Person;
-    irishRel:nomName "Bassí";
-    rel:childOf <#ConaillChostodaig>.
-
-<#OchtarCuillche>
-    a foaf:Person;
-    irishRel:nomName "Ochtar Cuillche";
-    rel:childOf <#ConaillChostodaig>.
-
-<#Cholland>
-    a foaf:Person;
-    irishRel:nomName "Cholland";
-    rel:childOf <#ConaillChostodaig>.
+    irishRel:numChild 7;
+    rdfs:comment "ar ba flaithside fon oenchumma. Bassí a raind. Ochtar Cuillche nó Cholland i n-Drumnib Breg. Iss inti randsat mc Muridaig nó Cairill a n-orbba.".
 
 <#Cablin>
     a foaf:Person;
@@ -401,7 +387,11 @@
     a foaf:Person;
     irishRel:nomName "Ginfhiach";
     rel:childOf <#ConaillChostodaig>;
-    rdfs:comment "a quo Cenel n-Geno".
+    irishRel:ancestorOfGroup <#Ceneln-Geno>.
+
+<#Ceneln-Geno>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Cenel n-Geno".
 
 <#Baetán>
     a irishTitle:Rí;
@@ -412,13 +402,8 @@
     rdfs:comment "a quo Cu Gabraige".
 
 <#CuGabraige>
-    a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Cu Gabraige" .
-
-<#Cairill>
     a foaf:Person;
-    irishRel:genName "Cairill";
-    irishRel:nomName "Cairell";
+    irishRel:nomName "Cu Gabraige";
     rel:childOf <#Flaind>.
 
 <#Flaind>
@@ -455,6 +440,7 @@
     irishRel:nomName "Demmán";
     irishRel:ancestorOfGroup <#CenelDemmain>;
     rdfs:comment "genus eius usque hodie regnat";
+    irishRel:fosterChildOf <#Domongart>;
     irishRel:numChild 5.
 
 <#CenelDemmain>
@@ -464,7 +450,7 @@
 <#Domangart>
     a foaf:Person;
     irishRel:nomName "Domangart";
-    rel:childOf "Predae".
+    rel:childOf <#Predae>.
 
 <#Predae>
     a foaf:Person;
@@ -508,12 +494,7 @@
 <#Fiachna>
     a foaf:Person;
     irishRel:nomName "Fiachna";
-    rel:childOf <#Demmán>.
-
-<#Demmain>
-    irishRel:nomName "Demmain";
-    owl:sameAs <#Demmán>;
-    rel:childOf <#Garbae>.
+    rel:childOf <#Demmán>, <#Garbae>.
 
 <#Garbae>
     a foaf:Person;
