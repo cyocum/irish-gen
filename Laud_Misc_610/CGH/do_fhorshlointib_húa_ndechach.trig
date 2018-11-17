@@ -1,0 +1,107 @@
+@base <http://example.com/Laud_Misc_610/CGH/do_fhorshlointib_húa_ndechach.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 34: Do fhorshlointib hÚa ndEchach in so sís"@sga;
+    dcterms:identifier "LMisc610_CGH_34";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#DuibEchdach>
+    a foaf:Person;
+    irishRel:genName "Duib Echdach";
+    irishRel:nomName "Dub Echdach";
+    rdfs:comment "Secht n-aithichaicmi in tíri ria tíachtain Duib Echdach".
+
+# Who is this? He sounds important. EPT
+
+<#Gallraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Gallraige".
+
+<#CainnechDrommaFotai>
+    a foaf:Person;
+    irishRel:nomName "Cainnech Dromma Fotai";
+    irishRel:descendantOfGroup <#Gallraige>;
+    rel:descendantOf <#Fedlemedo>;
+    rdfs:comment "Alii dicunt esse de genelogia Fedlemedo".
+
+<#Fedlemedo>
+    a foaf:Person;
+    irishRel:genName "Fedlemedo";
+    irishRel:nomName "Feidlimid".
+
+<#Gael>
+    a foaf:Person;
+    irishRel:nomName "Gael";
+    rdfs:comment "de Mumu".
+
+<#Conaille>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Conaille";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_cheniul_suibne.trig#Conaille>.
+
+<#Fachtna>
+    a foaf:Person;
+    irishRel:nomName "Fachtna";
+    irishRel:ancestorOfGroup <#Conaille>;
+    rel:childOf <#Senchada>.
+
+<#Senchada>
+    a foaf:Person;
+    irishRel:genName "Senchada".
+
+<#Rosraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Rosraige".
+
+<#Celtchair>
+    a foaf:Person;
+    irishRel:genName "Celtchair";
+    irishRel:nomName "Celtchar";
+    rel:childOf <#Cuithechair>;
+    irishRel:ancestorOfGroup <#Rosraige>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Celtchair>.
+
+<#Cuithechair>
+    a foaf:Person;
+    irishRel:genName "Cuithechair";
+    irishRel:nomName "Cuitechar";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Cuthechair>.
+
+<#Corcraigi>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Corcraigi".
+
+<#CrumthirCorcáinDrommaCruind>
+    a foaf:Person;
+    irishRel:nomName "Crumthir Corcáin Dromma Cruind";
+    irishRel:descendantOfGroup <#Corcraigi>.
+
+<#Lusraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Lusraige".
+
+<#Dubraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Dubraige".
+
+<#Lugraige>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Lugraige".
+
+}
