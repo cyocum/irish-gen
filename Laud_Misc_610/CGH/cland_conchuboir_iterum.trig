@@ -1,0 +1,40 @@
+@base <http://example.com/Laud_Misc_610/CGH/cland_conchuboir_iterum.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 37: Cland Conchuboir iterum"@sga;
+    dcterms:identifier "LMisc610_CGH_37";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#Mongan>
+    a foaf:Person;
+    irishRel:nomName "Mongan";
+    owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Mongain>.
+
+# The identification of this individual with Mongán is based on the attribution of
+# 'A Fíachnæ ná ráid in gæ', from which the following verse is extracted, to Mongán
+# mac Fiachna in Rawl. B. 502. EPT
+
+<#AFíachnæNáRáidInGæ>
+    dc:dcterms:title "A Fíachnæ ná ráid in gæ";
+    rdfs:comment "Mongán mac Fíachna cecinit do thecosc a athar";
+    prov:wasAttributedTo <#Mongan>;
+    rdfs:seeAlso <#https://celt.ucc.ie/published/G400069>.
+
+
+}
