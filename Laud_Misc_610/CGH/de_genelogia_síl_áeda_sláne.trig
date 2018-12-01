@@ -28,25 +28,188 @@
     irishRel:numChild 7;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#AedaSlaine>.
 
-Diarmait
+<#Diarmait>
+    a foaf:Person;
+    irishRel:nomName "Diarmait";
+    rel:childOf <#ÁedaSláne>;
+    owl:sameAs <http://example.com/Rawl_B502/item_síl_áeda_sláine.trig#Diarmata>.
 
-Rúanaid
-a quo Fogartach mac Néill
+<#Rúanaid>
+    a foaf:Person;
+    irishRel:nomName "Rúanaid";
+    rel:childOf <#ÁedaSláne>.
 
-Blaithmac
+<#Fogartach>
+      a foaf:Person;
+      irishRel:nomName "Fogartach";
+      rel:descendantOf <#Rúanaid>;
+      rel:childOf <#Néill>;
+      owl:sameAs <http://example.com/Rawl_B502/item_síl_áeda_sláine.trig#Fogartaich-08486522>.
 
-Conall
-a quo Húi Aitechdai mic Conaill
+<#Néill>
+      a foaf:Person;
+      irishRel:genName "Néill";
+      irishRel:nomName "Níall";
+      owl:sameAs <http://example.com/Rawl_B502/item_síl_áeda_sláine.trig#Néill>.
 
-Congal
-a quo Conaing
-ótá Congalach mac Máilmithig
+<#Blaithmac>
+    a foaf:Person;
+    irishRel:nomName "Blaithmac";
+    rel:childOf <#ÁedaSláne>.
 
-Ailill
-a quo fir Chúl
+<#Conall>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#ÁedaSláne>.
 
-Dúnchad
-a quo Finnechta Fledach
+<#Aitechdai>
+    a foaf:Person;
+    irishRel:genName "Aitechdai";
+    rel:childOf <#Conall>;
+    irishRel:ancestorOfGroup <#HúiAitechdai>.
 
-Cerbail
+<#HúiAitechdai>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Aitechdai".
+
+<#Congal>
+    a foaf:Person;
+    irishRel:nomName "Congal";
+    rel:childOf <#ÁedaSláne>;
+    owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Congalaig-9c5c2ad0>.
+
+<#Conaing>
+    a foaf:Person;
+    irishRel:nomName "Conaing";
+    rel:descendantOf <#Congal>;
+    owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Conaing>.
+
+<#Congalach>
+    a foaf:Person;
+    irishRel:nomName "Congalach";
+    rel:childOf <#Máilmithig>;
+    rel:descendantOf <#Conaing>;
+    owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#CongalaigCnogba>;
+    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#Congalach>.
+
+<#Máilmithig>
+    a foaf:Person;
+    irishRel:genName "Máilmithig";
+    owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#MaelMithig>;
+    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#MáelMithig>.
+
+<#Ailill>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    rel:childOf <#ÁedaSláne>;
+    irishRel:ancestorOfGroup <#FirChúl>.
+
+<#FirChúl>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Fir Chúl".
+
+<#Dúnchad>
+    a foaf:Person;
+    irishRel:nomName "Dúnchad";
+    rel:childOf <#ÁedaSláne>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_fínsnechtai_m_dúnchada.trig#Dúnchada>;
+    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#Dúnchada>.
+
+<#FinnechtaFledach>
+    a foaf:Person;
+    irishRel:nomName "Finnechta Fledach";
+    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#FínnachtaFledach>.
+
+<#Cerbail>
+    a foaf:Person;
+    irishRel:nomName "Cerbail";
+    rel:childOf <#ÁedaSláne>.
+
+<#Tigernán>
+    a foaf:Person;
+    irishRel:nomName "Tigernán";
+    rel:childOf <#ÁedaSláne>;
+    irishRel:ancestorOfGroup <#HúiTigernáinMide>;
+    rdfs:comment "Dicunt autem ailii octauum fuisse".
+
+<#HúiTigernáinMide>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Húi Tigernáin Mide".
+
+<#SechtmaicÁedaSláinesláin>
+    dcterms:title "Secht maic Áeda Sláine sláin".
+
+<#ÁedaSláine>
+    a foaf:Person;
+    irishRel:genName "Áeda Sláine";
+    irishRel:numChild 7;
+    owl:sameAs <#ÁedaSláne>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>.
+
+<#Diarmait-a7ce6980>
+    a foaf:Person;
+    irishRel:nomName "Diarmait";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>;
+    owl:sameAs <#Diarmait>
+
+<#Conall-bc0b61a0>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>;
+    owl:sameAs <#Conall>.
+
+<#Blaithmac-d0db9910>
+    a foaf:Person;
+    irishRel:nomName "Blaithmac";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>;
+    owl:sameAs <#Blaithmac>.
+
+<#Congal-f54fb880>
+    a foaf:Person;
+    irishRel:nomName "Congal";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>;
+    owl:sameAs <#Congal>.
+
+<#Ailill-07c5ac40>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>;
+    owl:sameAs <#Ailill>.
+
+<#Dúnchád>
+    a foaf:Person;
+    irishRel:nomName "Dúnchád";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>;
+    owl:sameAs <#Dúnchad>.
+
+<#Maelodor>
+    a foaf:Person;
+    irishRel:nomName "Maelodor";
+    rel:childOf <#ÁedaSláine>;
+    rdfs:seeAlso <#SechtmaicÁedaSláinesláin>.
+
+<#Donnchad>
+    a foaf:Person;
+    irishRel:nomName "Donnchad";
+    rel:childOf <#Donnchada>.
+
+<#Donnchada>
+    a foaf:Person;
+    irishRel:nomName "Donnchad";
+    irishRel:genName "Donnchada";
+    rel:childOf <#Domnaill>;
+    owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Donnchada>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Domnaill>.
+
 }
