@@ -1,4 +1,4 @@
-@base <http://example.com/LL/senchas_dáil_fiatach.trig>.
+@base <http://example.com/LL/senchas_dáil_fhiatach.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -178,11 +178,16 @@
     irishRel:nomName "Connaid";
     rel:childOf <#Forg>;
     irishRel:ancestorOfGroup <#hConnaideEnna>.
-    
+
 <#hConnaideEnna>
     a irishRel:PopulationGroup ;
-    irishRel:populationGroupName ".h. Connaide Enna" ;
-    rdfs:comment "díbaidside" .
+    irishRel:populationGroupName ".h. Connaide" .
+
+<#Enna>
+    a foaf:Person;
+    irishRel:nomName "Enna";
+    rel:childOf <#Forg>;
+    rdfs:comment "díbaidside".
 
 <#Nem>
     a foaf:Person;
@@ -244,15 +249,14 @@
     a irishRel:PopulationGroup ;
     irishRel:ancestorOfGroup "Cenél Crimthainn" .
 
-
 <#OengusIbtach>
-    a foaf:Person;
+    a foaf:Person ;
     irishRel:nomName "Oengus Ibtach";
-    rdfs:comment "mathair eius d'Íbtachaib fuit";
     rel:childOf <#Forg>;
     rel:childOf [
         a foaf:Person;
-        foaf:gender "female"
+        foaf:gender "female";
+        irishRel:descendantOfGroup <#Ibtacha>;
     ] ;
     irishRel:ancestorOfGroup <#hIbtaig>.
 
@@ -261,7 +265,7 @@
     irishRel:populationGroupName ".h. Ibtaig" .
 
 <#MuridachMunderg>
-    a foaf:Person;
+    a foaf:Person ;
     irishRel:nomName "Muridach Munderg";
     foaf:knows <https://www.wikidata.org/entity/Q17019277>;
     irishRel:numChild 5.
@@ -655,5 +659,5 @@
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Eochu".
-# owl:sameAs <http://example.com/LL/dáil_araide.trig#Echach>? 
+# owl:sameAs <http://example.com/LL/dáil_araide.trig#Echach>?
 }
