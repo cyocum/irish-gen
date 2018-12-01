@@ -26,6 +26,13 @@
 	rdfs:domain foaf:Person;
 	rdfs:range foaf:Person.
 
+:fosteredToGroup
+	a owl:ObjectProperty;
+	rdfs:subPropertyOf foaf:knows;
+	rdfs:label "fosteredToGroup";
+	rdfs:domain foaf:Person;
+	rdfs:range :PopulationGroup.
+
 :fosterParentOf
 	a owl:ObjectProperty;
 	owl:inverseOf :fosterChildOf;
@@ -35,7 +42,7 @@
 	rdfs:range foaf:Person.
 
 :fosterSiblingOf
-	a owl:SymmetricProperty, owl:TransitiveProperty;	
+	a owl:SymmetricProperty, owl:TransitiveProperty;
 	rdfs:subPropertyOf foaf:knows;
 	rdfs:label "fosterSiblingOf";
 	rdfs:domain foaf:Person;
@@ -56,9 +63,9 @@
     rdfs:subPropertyOf foaf:knows ;
     rdfs:label "givesLandTo" ;
     rdfs:range foaf:Person ;
-    rdfs:domain foaf:Person ;
-    rdfs:comment "this property relates a person who gives land to another." .
-    
+    rdfs:domain foaf:Agent ;
+    rdfs:comment "this property relates a person who gives land to another or to a population group." .
+
 :givenLandBy
     a owl:ObjectProperty ;
     rdfs:subPropertyOf foaf:knows ;
@@ -76,7 +83,7 @@ rel:childOf rdfs:subPropertyOf rel:descendantOf.
 rel:siblingOf
     a owl:TransitivePoperty, owl:SymmetricProperty;
     owl:propertyChainAxiom (rel:childOf [owl:inverseOf rel:childOf]).
-    
+
 :nomName
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf oldIrish:nominative, foaf:name .
@@ -84,7 +91,7 @@ rel:siblingOf
 :genName
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf oldIrish:genitive, foaf:name .
-    
+
 :accName
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf oldIrish:accusative, foaf:name .
@@ -145,7 +152,7 @@ rel:siblingOf
     rdfs:subPropertyOf owl:differentFrom ;
     rdfs:domain foaf:Person ;
     rdfs:range foaf:Person .
-    
+
 :antagonistOfGroup
     a owl:ObjectProperty, owl:IrreflexiveProperty ;
     rdfs:subPropertyOf owl:differentFrom ;

@@ -1,0 +1,143 @@
+@base <http://example.com/Laud_Misc_610/CGH/de_quabsis_torchi_corco_ché.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/Laud_Misc_610/CGH> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Section 15: De quabsis torchi Corco Ché"@sga;
+    dcterms:identifier "LMisc610_CGH_15";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G105005>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie//published/G105005> .
+
+<#CorcoChé>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Corco Ché";
+    rdfs:comment "Ó Loch Echach a mbunadb".
+
+<#SílDubthigDóelthengath>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Síl Dubthig Dóelthengath";
+    irishRel:ancestorGroupOf <#CorcoChé>.
+
+<#hAilillFlannBecc>
+    a foaf:Person;
+    foaf:title "rí Muman"@sga, "king of Munster"@eng;
+    irishRel:accName "hAilill Flann Becc";
+    irishRel:nomName "Ailill Flann Becc";
+    irishRel:givesLandTo <#CorcoChé>, <#CíarraigeLóchrae>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#AilellaFlainnBicc>.
+
+<#Corc>
+    a foaf:Person;
+    irishRel:nomName "Corc";
+    rel:childOf <#Láre>;
+    irishRel:fosterChildOf <#CorcoChé>;
+    irishRel:ancestorOfGroup <#EoganachtHúamaicLáre>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#Corc-308ce9c0>.
+
+<#Láre>
+    a foaf:Person;
+    irishRel:genName "Láre";
+    irishRel:nomName "Láir";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#LugaidLáre>.
+
+<#LáirDerg>
+    a foaf:Person;
+    irishRel:nomName "Láir Derg";
+    irishRel:fosterChildOf <#CorcoChé>;
+    owl:sameAs <#Láre>.
+
+<#EoganachtHúamaicLáre>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Eoganacht Húa maic Láre".
+
+<#Mídend>
+    a foaf:Person;
+    foaf:title "drúth"@sga, "druid"@eng;
+    irishRel:nomName "Mídend";
+    rel:employedBy <#Eochath>.
+
+<#Eochath>
+    a foaf:Person;
+    irishRel:nomName "Eochaid";
+    irishRel:genName "Eochath";
+    rel:childOf <#Muireda>.
+
+<#Muireda>
+    a foaf:Person;
+    irishRel:genName "Muireda".
+
+<#Conbroc>
+    a <http://dbpedia.org/ontology/Dog>;
+    irishRel:nomName "Conbroc";
+    <http://dbpedia.org/ontology/owner> <#Eochath>.
+
+<#hUiriu>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "hUiriu";
+    rel:childOf <#Eochath>.
+
+# Cf. LU, ll. 3083-3085. EPT
+
+<#Luccreth>
+    a foaf:Person;
+    irishRel:nomName "Luccreth";
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/de_causis_quibus_exules_aquilonensium_ad_muminenses_adducti_sunt.trig#Lucrith>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q6696417>;
+
+# Meyer reads "utla creth profetauit", which follows the word division in the manuscript. However, this makes no sense. It is more likely
+# that it reads "ut Lucreth profetauit" (as Lucreth prophesied), particularly as Luccreth appears earlier in the Laud text. EPT
+
+<#BamolMídendmidlaige>
+    dcterms:title "Ba mol Mídend midlaige";
+    prov:wasAttributedTo <#Luccreth>;
+    owl:sameAs <https://www.vanhamel.nl/codecs/Ba_mol_Midend_midlaige>.
+
+# This poem has been edited and translated recently (ITS 65). The translation will be consulted and any further data added. EPT
+
+<#CíarraigeLóchrae>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Cíarraige Lóchrae".
+
+<#Corc-48820840>
+    a foaf:Person;
+    irishRel:nomName "Corc";
+    owl:sameAs <#Corc>;
+    irishRel:ancestorOfGroup <#ClaindChuirc>.
+
+<#Choirpre>
+    a foaf:Person;
+    irishRel:genName "Choirpre";
+    irishRel:nomName "Coirpre";
+    rel:childOf <#Corc-48820840>;
+    owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#CarpreCruithnechán>.
+
+<#ClannMaineMuncháin>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Clann Maine Muncháin".
+
+<#MaineMuncháin>
+    a foaf:Person;
+    irishRel:nomName "Maine Muncháin";
+    irishRel:ancestorOfGroup <#ClannMaineMuncháin>;
+    irishRel:antagonistOfGroup <#ClaindChuirc>;
+    owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#MaineMunchaín>.
+
+<#ClaindChuirc>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Claind Chuirc".
+
+}
