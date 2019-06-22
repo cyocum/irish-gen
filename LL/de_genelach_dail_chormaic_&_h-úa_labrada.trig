@@ -1,0 +1,78 @@
+@base <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.trig>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "De Genelach Dail Chormaic & H-Úa Labrada"@Sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+<#Cormac>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:childOf <#ConCorbb>.
+
+<#ConCorbb-d2451e3d>
+    a foaf:Person;
+    irishRel:nomName "Con Corbb";
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#ConCorbb>.
+
+<#Imchad>
+    a foaf:Person;
+    irishRel:nomName "Imchad";
+    rel:childOf <#Cormac>.
+
+<#Labraid>
+    a foaf:Person;
+    irishRel:nomName "Labraid";
+    rel:childOf <#Imchad>.
+
+<#Lugaid>
+    a foaf:Person;
+    irishRel:nomName "Lugaid";
+    rel:childOf <#Labraid>.
+
+<#Cathub>
+    a foaf:Person;
+    irishRel:nomName "Cathub";
+    rel:childOf <#Labraid>.
+
+<#Caeldub>
+    a foaf:Person;
+    irishRel:nomName "Caeldub";
+    rel:childOf <#Labraid>.
+
+<#Cainnech>
+    a foaf:Person;
+    irishRel:nomName "Cainnech";
+    rel:childOf <#Labraid>.
+
+<#Cáirthend>
+    a foaf:Person;
+    irishRel:nomName "Cáirthend";
+    rel:childOf <#Labraid>.
+
+<#NioCulend>
+    a foaf:Person;
+    irishRel:nomName "Nio Culend";
+    rel:childOf <#Labraid>.
+
+<#DiagBec>
+    a foaf:Person;
+    irishRel:nomName "Diag Bec";
+    rel:childOf <#Labraid>.
+
+
+}
