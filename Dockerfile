@@ -1,7 +1,7 @@
 from openjdk:11
-RUN wget https://www-eu.apache.org/dist/jena/binaries/apache-jena-3.12.0.tar.gz 
-RUN tar xfvz apache-jena-3.12.0.tar.gz
-RUN sed -i 's/WARN/INFO/g' ./apache-jena-3.12.0/jena-log4j.properties
+RUN wget https://www-eu.apache.org/dist/jena/binaries/apache-jena-3.13.1.tar.gz 
+RUN tar xfvz apache-jena-3.13.1.tar.gz
+RUN sed -i 's/WARN/INFO/g' ./apache-jena-3.13.1/jena-log4j.properties
 RUN mkdir -p /workspace/LL /workspace/Duanaire_Finn /workspace/Laud_Misc_610 /workspace/LLAdd /workspace/LU /workspace/NLS.Adv.72.1.1 /workspace/Rawl_B502
 COPY build.sh /workspace/
 COPY LL /workspace/LL
