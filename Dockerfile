@@ -1,8 +1,8 @@
 from openjdk:11
-RUN wget https://www-eu.apache.org/dist/jena/binaries/apache-jena-3.14.0.tar.gz 
+RUN wget https://archive.apache.org/dist/jena/binaries/apache-jena-3.14.0.tar.gz
 RUN tar xfvz apache-jena-3.14.0.tar.gz
 RUN sed -i 's/WARN/INFO/g' ./apache-jena-3.14.0/jena-log4j.properties
-RUN mkdir -p /workspace/LL /workspace/Duanaire_Finn /workspace/Laud_Misc_610 /workspace/LLAdd /workspace/LU /workspace/NLS.Adv.72.1.1 /workspace/Rawl_B502
+RUN mkdir -p /workspace/LL /workspace/Duanaire_Finn /workspace/Laud_Misc_610 /workspace/LLAdd /workspace/LU /workspace/NLS.Adv.72.1.1 /workspace/Rawl_B502 /workspace/utils
 COPY build.sh /workspace/
 COPY LL /workspace/LL
 COPY Duanaire_Finn /workspace/Duanaire_Finn
@@ -11,6 +11,7 @@ COPY LLAdd /workspace/LLAdd
 COPY LU /workspace/LU
 COPY NLS.Adv.72.1.1 /workspace/NLS.Adv.72.1.1
 COPY Rawl_B502 /workspace/Rawl_B502
+COPY utils /workspace/utils
 ENV JENA_HOME /apache-jena-3.14.0
-RUN chmod 777 /workspace/build.sh
-ENTRYPOINT ["/workspace/utils/checkfile_file_syntax.sh"]
+RUN chmod 777 /workspace/utils/check_file_syntax.sh
+ENTRYPOINT ["/workspace/utils/check_file_syntax.sh"]
