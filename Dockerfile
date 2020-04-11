@@ -3,7 +3,6 @@ RUN wget https://archive.apache.org/dist/jena/binaries/apache-jena-3.14.0.tar.gz
 RUN tar xfvz apache-jena-3.14.0.tar.gz
 RUN sed -i 's/WARN/INFO/g' ./apache-jena-3.14.0/jena-log4j.properties
 RUN mkdir -p /workspace/LL /workspace/Duanaire_Finn /workspace/Laud_Misc_610 /workspace/LLAdd /workspace/LU /workspace/NLS.Adv.72.1.1 /workspace/Rawl_B502 /workspace/utils
-COPY build.sh /workspace/
 COPY LL /workspace/LL
 COPY Duanaire_Finn /workspace/Duanaire_Finn
 COPY Laud_Misc_610 /workspace/Laud_Misc_610
