@@ -11,5 +11,6 @@ COPY LLAdd /workspace/LLAdd
 COPY LU /workspace/LU
 COPY NLS.Adv.72.1.1 /workspace/NLS.Adv.72.1.1
 COPY Rawl_B502 /workspace/Rawl_B502
+ENV JENA_HOME /apache-jena-3.14.0
 RUN chmod 777 /workspace/build.sh
-ENTRYPOINT ["/workspace/build.sh"]
+ENTRYPOINT ["/workspace/utils/checkfile_file_syntax.sh"]
