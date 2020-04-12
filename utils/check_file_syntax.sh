@@ -18,7 +18,9 @@ find $IRISH_GEN_HOME -name '*.trig' -print0 | xargs -0 $JENA_HOME/bin/riot --val
 # means success so flip the usual idea of failure in this case
 if [ $? -eq 1 ]
 then
+    echo "SUCCESS\n"
     exit 0
 else
+    echo "There were errors.  See the above error messages.\n"
     exit 1
 fi
