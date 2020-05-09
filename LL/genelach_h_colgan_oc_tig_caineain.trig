@@ -1,0 +1,63 @@
+@base <http://example.com/Rawl_B502/genelach_h_colgan_oc_tig_caineain.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/LL> {
+    <> a dctype:Dataset;
+    dcterms:title "Genelach .H. Colgan Oc Tig Caineain"@sga;
+    dcterms:isFormatOf <https://celt.ucc.ie/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+     prov:asDerivedFrom <https://celt.ucc.ie/published/G800011F/text002.html> .
+        
+<#Eochu-b2496e26>
+    a foaf:Person;
+    irishRel:nomName "Eochu";
+    rel:childOf <#GillaiPatric-aa0c663d>.
+
+<#GillaiPatric-aa0c663d>
+    a foaf:Person;
+    irishRel:genName "Gillai Patric";
+    irishRel:nomName "Gilla Patric";
+    rel:childOf <#Diarmata-aec703b8>.
+
+<#Diarmata-aec703b8>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Cathail-5657a85c>.
+
+<#Cathail-5657a85c>
+    a foaf:Person;
+    irishRel:genName "Cathail";
+    irishRel:nomName "Cathal";
+    rel:childOf <#Echthigirn>.
+
+<#Echthigirn>
+    a foaf:Person;
+    irishRel:genName "Echthigirn";
+    irishRel:nomName "Echthigern";
+    rel:childOf <#Uallachain-1f060e55>.
+
+<#Uallachain-1f060e55>
+    a foaf:Person;
+    irishRel:genName "Uallachain";
+    irishRel:nomName "Uallachan";
+    rel:childOf <#Colgan-8732a054>.
+
+<#Colgan-8732a054>
+    a foaf:Person;
+    irishRel:nomName "Colgan";
+    rel:childOf <#MaelCainnig>.
+
+<#MaelCainnig>
+    irishRel:nomName "Mael Cainnig";
+    owl:sameAs <http://example.com/LL/genelach_h_falgi.trig#MaelChainnig>.
+
+}
