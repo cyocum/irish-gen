@@ -1,0 +1,182 @@
+@base <http://example.com/LL/genelach_clainde_mael_ugrai.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainde Mael Ugrai"@sga;
+    dcterms:isFormatOf <https://celt.ucc.ie/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://celt.ucc.ie/published/G800011F/text002.html> .
+
+<#Aed>
+    a foaf:Person;
+    irishRel:nomName "Aed";
+    rel:childOf <#Flaind-7864e7ff>.
+
+<#Flaind-7864e7ff>
+    a foaf:Person;
+    irishRel:genName "Flaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#MaelRuanaid-9236fd30>.
+
+<#MaelRuanaid-9236fd30>
+    a foaf:Person;
+    irishRel:nomName "Mael Ruanaid";
+    rel:descendantOf <#Corcrain-4e3ec3e3>;
+    rdfs:comment "[gap: name erased/extent: ? letters]".
+
+<#Corcrain-4e3ec3e3>
+    a foaf:Person;
+    irishRel:genName "Corcrain";
+    irishRel:nomName "Corcran";
+    rel:childOf <#FhlaindUallaig>.
+
+<#FhlaindUallaig>
+    a foaf:Person;
+    irishRel:genName "Fhlaind Uallaig";
+    irishRel:nomName "Fland Uallach";
+    rel:childOf <#Diummasaig>.
+
+<#Diummasaig>
+    a foaf:Person;
+    irishRel:genName "Diummasaig";
+    irishRel:nomName "Diummasach";
+    rel:childOf <#Fhogartaig>.
+
+<#Fhogartaig>
+    a foaf:Person;
+    irishRel:genName "Fhogartaig";
+    irishRel:nomName "Fhogartach";
+    rel:childOf <#Mugroin-e4ec6d96>.
+
+<#Mugroin-e4ec6d96>
+    a foaf:Person;
+    irishRel:genName "Mugroin";
+    irishRel:nomName "Mugron";
+    rel:childOf <#Flaind-d033590a>.
+
+<#Flaind-d033590a>
+    a foaf:Person;
+    irishRel:genName "Flaind";
+    irishRel:nomName "Fland";
+    rel:childOf <#Diummasaig-9f7ff47d>;
+    owl:sameAs <#FlaindDaChongal>.
+
+<#Diummasaig-9f7ff47d>
+    a foaf:Person;
+    irishRel:genName "Diummasaig";
+    irishRel:nomName "Diummasach";
+    rel:childOf <#Corcrain-effa7150>.
+
+<#Corcrain-effa7150>
+    a foaf:Person;
+    irishRel:genName "Corcrain";
+    irishRel:nomName "Corcran";
+    rel:childOf <#MaelUgrai>.
+
+<#MaelUgrai>
+    a foaf:Person;
+    irishRel:genName "Mael Ugrai";
+    irishRel:nomName "Mael Ugra";
+    rel:childOf <#Conchobuir-c28d4a69>.
+
+<#Conchobuir-c28d4a69>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobur";
+    rel:childOf <#Aeda-e8b5d449>.
+
+<#Aeda-e8b5d449>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Tommaltaig>.
+
+<#Tommaltaig>
+    a foaf:Person;
+    irishRel:genName "Tommaltaig";
+    irishRel:nomName "Tommaltach";
+    rel:childOf <#FlaindDaChongal-a85f7c30>.
+
+<#FlaindDaChongal-a85f7c30>
+    owl:sameAs <http://example.com/LL/genelach_h_riacain.trig#FlaindDaCongal>.
+
+<#CulenCuBroga>
+    a foaf:Person;
+    irishRel:nomName "Culen Cu Broga";
+    irishRel:numChild 2;
+    rel:childOf <#Aeda-9a59528c>.
+
+<#Aeda-9a59528c>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Fhlaind-ca81a52e>.
+
+<#Fhlaind-ca81a52e>
+    owl:sameAs <#FlaindDaChongal>.
+
+<#Fland-545e8722>
+    a foaf:Person;
+    irishRel:nomName "Fland";
+    rel:childOf <#GillaiBrigti>.
+
+<#GillaiBrigti>
+    a foaf:Person;
+    irishRel:genName "Gillai Brigti";
+    irishRel:nomName "Gilla Brigit";
+    foaf:title "airchinnech"@sga;
+    rel:childOf <#Flaind-0213d5c8>.
+
+<#Flaind-0213d5c8>
+    owl:sameAs <#Fhlaind-ca81a52e>.
+
+<#Iarnan>
+    a foaf:Person;
+    irishRel:nomName "Iarnan";
+    rel:childOf <#Cellaig-a9bf8657>.
+
+<#Cellaig-a9bf8657>
+    a foaf:Person;
+    irishRel:genName "Cellaig";
+    irishRel:nomName "Cellach";
+    rel:childOf <#GillaiPatric-89b553db>.
+
+<#GillaiPatric-89b553db>
+    a foaf:Person;
+    irishRel:genName "Gillai Patric";
+    irishRel:nomName "Gilla Patric";
+    rel:childOf <#Conchobuir-a8db3279>.
+
+<#Conchobuir-a8db3279>
+    a foaf:Person;
+    irishRel:genName "Conchobuir";
+    irishRel:nomName "Conchobur";
+    rel:childOf <#Iarnain>.
+
+<#Iarnain>
+    a foaf:Person;
+    irishRel:genName "Iarnain";
+    irishRel:nomName "Iarnan";
+    rel:childOf <#Shibleain>.
+
+<#Shibleain>
+    a foaf:Person;
+    irishRel:genName "Shibleain";
+    irishRel:nomName "Siblean";
+    rel:childOf <#Fhogartaig-d216d8af>.
+
+<#Fhogartaig-d216d8af>
+    owl:sameAs <#Fhogartaig>.
+
+}
