@@ -1,0 +1,106 @@
+@base <http://example.com/LL/genelach_clainde_mugróin.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/LL> {
+
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Clainde Mugróin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+
+<#Conchobor-be63a884>
+    a foaf:Person;
+    irishRel:nomName "Conchobor";
+    rel:childOf <#Flannacain>.
+
+<#Flannacain>
+    a foaf:Person;
+    irishRel:genName "Flannacain";
+    irishRel:nomName "Flannacan";
+    rel:childOf <#Cinaeda-169322c6>.
+
+<#Cinaeda-169322c6>
+    a foaf:Person;
+    irishRel:genName "Cinaeda";
+    irishRel:nomName "Cinaed";
+    rel:childOf <#Mugroin-257cd841>.
+
+<#Mugroin-257cd841>
+    owl:sameAs <http://example.com/LL/genelach_h_falgi.trig#Mugroin>.
+
+<#Murchad>
+    a foaf:Person;
+    irishRel:nomName "Murchad";
+    rel:childOf <#ConMaige>.
+
+<#ConMaige>
+    a foaf:Person;
+    irishRel:genName "Con Maige";
+    irishRel:nomName "Cu Maig";
+    rel:childOf <#Cerbaill-506c6ae3>.
+
+<#Cerbaill-506c6ae3>
+    a foaf:Person;
+    irishRel:genName "Cerbaill";
+    irishRel:nomName "Cerball";
+    rel:descendantOf <#Mugroin>.
+
+<#Cerball-01f58b4b>
+    a foaf:Person;
+    irishRel:nomName "Cerball";
+    rel:childOf <#MaelRuanaid>.
+
+<#MaelRuanaid>
+    a foaf:Person;
+    irishRel:genName "Mael Ruanaid";
+    irishRel:nomName "Mael Ruanad";
+    rel:childOf <#Cinaeda-7825c3ff>.
+
+<#Cinaeda-7825c3ff>
+    a foaf:Person;
+    irishRel:genName "Cinaeda";
+    irishRel:nomName "Cinaed";
+    rel:childOf <#Mugroin-bbf15783>.
+
+<#Mugroin-bbf15783>
+    owl:sameAs <http://example.com/LL/genelach_h_falgi.trig#Mugroin>.
+
+<#Muricean>
+    a foaf:Person;
+    irishRel:nomName "Muricean";
+    rel:childOf <#Tadcain>.
+
+<#Tadcain>
+    a foaf:Person;
+    irishRel:genName "Tadcain";
+    irishRel:nomName "Tadcan";
+    rel:childOf <#Cinaeda-e584f47f>.
+
+<#Cinaeda-e584f47f>
+    owl:sameAs <#Cinaeda-7825c3ff>.
+
+<#Oenacan>
+    a foaf:Person;
+    irishRel:nomName "Oenacan";
+    rel:childOf <#Flathiceain>.
+
+<#Flathiceain>
+    a foaf:Person;
+    irishRel:genName "Flathiceain";
+    irishRel:nomName "Flathicean";
+    rel:childOf <#Cinaeda-6d52ff33>.
+
+<#Cinaeda-6d52ff33>
+    owl:sameAs <#Cinaeda-7825c3ff>.
+}
