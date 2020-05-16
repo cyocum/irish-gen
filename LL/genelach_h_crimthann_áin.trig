@@ -1,0 +1,93 @@
+@base <http://example.com/LL/genelach_h_crimthann_áin.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. Crimthann Áin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+<#Colum>
+    a foaf:Person;
+    irishRel:nomName "Colum";
+    foaf:title "nóem"@sga, "saint"@en;
+    rel:childOf <#Nannida-334a35f0>.
+
+<#Nannida-334a35f0>
+    a foaf:Person;
+    irishRel:nomName "Nannida";
+    rel:childOf <#Nazair-161e1bad>.
+
+<#Nazair-161e1bad>
+    a foaf:Person;
+    irishRel:genName "Nazair";
+    irishRel:nomName "Nazar";
+    rel:childOf <#CrimthainnBic>.
+
+<#CrimthainnBic>
+    a foaf:Person;
+    irishRel:genName "Crimthainn Bic";
+    irishRel:nomName "Crimthann Bec";
+    rel:childOf <#Echach-84cda7bd>.
+
+<#Echach-84cda7bd>
+    a foaf:Person;
+    irishRel:genName "Echach";
+    irishRel:nomName "Echaid";
+    rel:childOf <#Oengusa-e75452f7>.
+
+<#Oengusa-e75452f7>
+    a foaf:Person;
+    irishRel:genName "Oengusa";
+    irishRel:nomName "Oengus";
+    rel:childOf <#CrimthainnÁinMoir>.
+
+<#CrimthainnÁinMoir>
+    a foaf:Person;
+    irishRel:genName "Crimthainn Áin Moir";
+    irishRel:nomName "Crimthann Án Mor";
+    rel:childOf <#Cathair-3a1402a6>;
+    owl:sameAs <#CrimthannÁn>.
+
+<#Cathair-3a1402a6>
+    a foaf:Person;
+    irishRel:genName "Cathair";
+    irishRel:nomName "Cathar";
+    owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#CathairMár>.
+
+<#MoMedoc>
+    a foaf:Person;
+    irishRel:nomName "Mo Medoc";
+    foaf:title "Midshúi"@sga;
+    rel:childOf <#Midgnai>.
+
+<#Midgnai>
+    a foaf:Person;
+    irishRel:genName "Midgnai";
+    irishRel:nomName "Midgna";
+    rel:childOf <#Nannida-f5cb8bca>.
+
+<#Nannida-f5cb8bca>
+    owl:sameAs <#Nannida-334a35f0>.
+
+<#ColumCule>
+    a foaf:Person;
+    irishRel:nomName "Colum Cule";
+    rel:childOf <#Midgna-0ddb8493>;
+    rdfs:comment ".i. is e fil i Cluain Cáin".
+
+<#Midgna-0ddb8493>
+    irishRel:nomName "Midgna";
+    owl:sameAs <#Midgnai>.
+
+}
