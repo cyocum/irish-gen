@@ -13,5 +13,6 @@ COPY NLS.Adv.72.1.1 /workspace/NLS.Adv.72.1.1
 COPY Rawl_B502 /workspace/Rawl_B502
 COPY utils /workspace/utils
 ENV JENA_HOME /apache-jena-3.14.0
+ENV IRISH_GEN_HOME /workspace
 RUN chmod 777 /workspace/utils/check_file_syntax.sh
 ENTRYPOINT ["/workspace/utils/check_file_syntax.sh"]
