@@ -9,6 +9,7 @@ fi
 if [ -z "$IRISH_GEN_HOME" ]
 then
     echo "IRISH_GEN_HOME is empty. Please set IRISH_GEN_HOME\n"
+    exit 1
 fi
 
 find $IRISH_GEN_HOME -name '*.trig' -print0 | xargs -0 $JENA_HOME/bin/riot --validate --verbose | egrep -B 1 "WARN|ERROR"
