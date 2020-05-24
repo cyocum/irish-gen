@@ -1,0 +1,174 @@
+@base <http://example.com/LL/genelach_h_timmin.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. Timmin"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G105003/text.html> .
+
+<#BresalEnechglas-f6d8f987>
+    owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#BressalEnechglas>.
+
+<#RosFailge>
+    owl:sameAs <http://example.com/LL/genelach_h_falgi.trig#RossFalgi>.
+
+<#DáreBarrach>
+    owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#DareBarrach>.
+
+<#CrimthanneÁn>
+    owl:sameAs <http://example.com/LL/genelach_h_crimthann_áin.trig#CrimthainnÁinMoir>.
+
+<#NathÍ-c8ae4b5b>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    rel:childOf <#EchachTimmine>.
+
+_:missing-a1696134
+    a foaf:Person;
+    foaf:gender "female";
+    rel:parentOf <#BresalEnechglas-f6d8f987>;
+    rel:parentOf <#DáreBarrach>;
+    rel:parentOf <#CrimthanneÁn>;
+    rel:parentOf <#RosFailge>;
+    rel:parentOf <#EchachTimmine>;
+    rdfs:comment "Eocho Timmin & Bresal Enechglas & Ros Failge et Dáre Barrach & Crimthann Án mc oénmathar insin" .
+
+<#EchachTimmine>
+    a foaf:Person;
+    irishRel:nomName "Echach Timmine";
+    rel:siblingOf <#BresalEnechglas-f6d8f987>;
+    rel:siblingOf <#RosFailge>;
+    rel:siblingOf <#DáreBarrach>;
+    rel:siblingOf <#CrimthanneÁn>.
+
+<#NathÍ-7f74158c>
+    owl:sameAs <#NathÍ-c8ae4b5b>;
+    irishRel:numChild 7;
+    rel:childOf <#EchachTimmine>.
+
+<#MacMáel>
+    a foaf:Person ;
+    irishRel:nomName "Mac Máel" ;
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hMaelglais>, <#hAnnamaig>.
+
+<#hMaelglais>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Maelglais" .
+
+<#hAnnamaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Annamaig" .
+
+<#Feidlimid-ff6df05b>
+    a foaf:Person;
+    irishRel:nomName "Feidlimid";
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hBáetain>, <#hCrundmael>.
+
+<#hBáetain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Báetain" .
+
+<#hCrundmael>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Crundmael" .
+
+<#Cormac-d9c1590d>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hCummeni>.
+
+<#hCummeni>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Cummeni" .
+
+<#Tuathal>
+    a foaf:Person;
+    irishRel:nomName "Tuathal";
+    irishRel:nomName "Bresal" ;
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hChrumthirAeda>.
+
+<#hChrumthirAeda>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chrumthir Aeda" .
+
+<#Conall-bf8c4538>
+    a foaf:Person;
+    irishRel:nomName "Conall";
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hCommain>.
+
+<#hCommain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Commain" .
+
+<#Crimthand-06627ab8>
+    a foaf:Person;
+    irishRel:nomName "Crimthand";
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hBudi>.
+
+<#hBudi>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Budi" .
+
+<#Eogan-666737d0>
+    a foaf:Person;
+    irishRel:nomName "Eogan";
+    rel:childOf <#NathÍ-7f74158c>;
+    irishRel:ancestorOfGroup <#hBaetain>.
+
+<#hBaetain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Baetain" .
+
+<#hTimmini>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Timmini" .
+
+<#hInscrind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "h. Inscrind" .
+
+<#hLinge>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Linge" .
+
+<#hEnain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Enain" .
+
+<#hTelind>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Telind" .
+
+<#hAltain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Altain" .
+
+<#hShenain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Shenain" .
+
+<#hChobain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chobain" .
+
+<#hChluastain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chluastain" .
+}
