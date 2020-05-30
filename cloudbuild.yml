@@ -5,6 +5,7 @@ steps:
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/irish-gen-build', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['run', 'gcr.io/$PROJECT_ID/irish-gen-build', 'bash']
-        
+    env: ['IRISH_GEN_HOME=/workspace']
+
 images:
   - 'gcr.io/$PROJECT_ID/irish-gen-build'
