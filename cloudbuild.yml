@@ -1,4 +1,6 @@
 steps:
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', 'gs://irish-gen-build-dependencies/apache-jena-3.14.0.tar.gz', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/irish-gen-build', '.']
   - name: 'gcr.io/cloud-builders/docker'

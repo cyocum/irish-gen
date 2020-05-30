@@ -1,6 +1,5 @@
 from openjdk:11
-RUN wget https://archive.apache.org/dist/jena/binaries/apache-jena-3.14.0.tar.gz
-RUN tar xfvz apache-jena-3.14.0.tar.gz
+RUN tar xfvz /workspace/apache-jena-3.14.0.tar.gz
 RUN sed -i 's/WARN/INFO/g' ./apache-jena-3.14.0/jena-log4j.properties
 RUN sed -i 's/System\.err/System\.out/g' ./apache-jena-3.14.0/jena-log4j.properties
 RUN mkdir -p /workspace/LL /workspace/Duanaire_Finn /workspace/Laud_Misc_610 /workspace/LLAdd /workspace/LU /workspace/NLS.Adv.72.1.1 /workspace/Rawl_B502 /workspace/utils
