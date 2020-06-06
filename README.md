@@ -186,6 +186,15 @@ entry.  For instance,
     rdfs:comment "is é ro gab ríge dar éis Cennetig. Unde dicitur Grianan Lactnai i Creicc Léith...".
 ```
 
+# Irish Narr
+
+There is a supplemental database named [Irish
+Narr](https://github.com/cyocum/irish-narr) which contains some
+geneaological information which is extracted frm early Irish narrative
+sources.  This is sometimes useful for explicating some of the
+information in the genealogies and thus can be added to a triplestore
+to enhance IrishGen with narrative source information.
+
 # Utilities
 
 There are several utility Perl scripts which ease the creation and
