@@ -1,0 +1,100 @@
+@base <http://example.com/LL/genelach_síl_eogain.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach Síl Eogain"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "text/turtle" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+<#Tadg-d346fe61>
+    a foaf:Person;
+    irishRel:nomName "Tadg";
+    rel:childOf <#Faelain-9577d239>.
+
+<#Faelain-9577d239>
+    a foaf:Person;
+    irishRel:genName "Faelain";
+    irishRel:nomName "Faelan";
+    rel:childOf <#Guaire-2d4a554b>.
+
+<#Guaire-2d4a554b>
+    a foaf:Person;
+    irishRel:nomName "Guaire";
+    rel:childOf <#Artgaile-42b78fad>.
+
+<#Artgaile-42b78fad>
+    a foaf:Person;
+    irishRel:genName "Artgaile";
+    irishRel:nomName "Artgail";
+    rel:childOf <#Snedgaile>.
+
+<#Snedgaile>
+    a foaf:Person;
+    irishRel:genName "Snedgaile";
+    irishRel:nomName "Snedgail";
+    rel:childOf <#Elothaig>.
+
+<#Elothaig>
+    a foaf:Person;
+    irishRel:genName "Elothaig";
+    irishRel:nomName "Elothach";
+    rel:childOf <#Faelchon-f487f3f9>.
+
+<#Faelchon-f487f3f9>
+    a foaf:Person;
+    irishRel:genName "Faelchon";
+    irishRel:nomName "Faelchu";
+    rel:childOf <#Tulchotait>.
+
+<#Tulchotait>
+    a foaf:Person;
+    irishRel:genName "Tulchotait";
+    irishRel:nomName "Tulchotat";
+    rel:childOf <#Fhaelain-4e05ba46>.
+
+<#Fhaelain-4e05ba46>
+    a foaf:Person;
+    irishRel:genName "Fhaelain";
+    irishRel:nomName "Faelan";
+    rel:childOf <#Shilain>.
+
+<#Shilain>
+    a foaf:Person;
+    irishRel:genName "Shilain";
+    irishRel:nomName "Silan";
+    rel:childOf <#EogainCháich>.
+
+<#EogainCháich>
+    a foaf:Person;
+    irishRel:genName "Eogain Cháich";
+    irishRel:nomName "Eogan Cách";
+    rel:childOf <#NathÍ-6c0b857e>;
+    owl:sameAs <http://example.com/LL/dal_corpri_arad.trigEogain-Chaich> .
+        
+<#NathÍ-6c0b857e>
+    a foaf:Person;
+    irishRel:nomName "Nath Í";
+    rel:childOf <#Crimthainn-d6ed1d81>.
+
+<#Crimthainn-d6ed1d81>
+    owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#Crimthainn-b462fd6b>;
+    rel:childOf <#Ennai-7e7d96ea>.
+
+<#Ennai-7e7d96ea>
+    irishRel:genName "Ennai";
+    irishRel:nomName "Enna";
+    owl:sameAs <#Ennae-c07ad5af>.
+
+}
+
