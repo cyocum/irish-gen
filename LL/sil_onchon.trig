@@ -1,0 +1,65 @@
+@base <http://example.com/LL/sil_onchon.ttl>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Sil Onchon"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+<#Cellach-41c8ec04>
+    a foaf:Person;
+    irishRel:nomName "Cellach";
+    rel:childOf <#Cinaíd>.
+
+<#Cinaíd>
+    a foaf:Person;
+    irishRel:nomName "Cinaíd";
+    rel:childOf <#Corpri-a6e96891>.
+
+<#Corpri-a6e96891>
+    a foaf:Person;
+    irishRel:genName "Corpri";
+    irishRel:nomName "Corpre";
+    rel:childOf <#Diarmata-a80e03d4>.
+
+<#Diarmata-a80e03d4>
+    a foaf:Person;
+    irishRel:genName "Diarmata";
+    irishRel:nomName "Diarmait";
+    rel:childOf <#Aeda-efc55139>.
+
+<#Aeda-efc55139>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Rudgaile-bea4cce4>.
+
+<#Rudgaile-bea4cce4>
+    a foaf:Person;
+    irishRel:genName "Rudgaile";
+    irishRel:nomName "Rudgail";
+    rel:childOf <#Onchon-556aa629>.
+
+<#Onchon-556aa629>
+    a foaf:Person;
+    irishRel:genName "Onchon";
+    irishRel:nomName "Onchu";
+    rel:childOf <#Faelchon-2d566349>.
+
+<#Faelchon-2d566349>
+    irishRel:nomName "Faelchon";
+    owl:sameAs <http://example.com/LL/síl_forannain.trig#Fhaelchon-6a7bf492>.
+
+}
