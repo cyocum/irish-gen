@@ -1,0 +1,59 @@
+@base <http://example.com/Rawl_B502/síl_forannain.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Síl Forannain"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+<#Culennan>
+    a foaf:Person;
+    irishRel:nomName "Culennan";
+    rel:childOf <#Foithbelain>.
+
+<#Foithbelain>
+    a foaf:Person;
+    irishRel:genName "Foithbelain";
+    irishRel:nomName "Foithbelan";
+    rel:childOf <#Scandlain-6da16a15>.
+
+<#Scandlain-6da16a15>
+    a foaf:Person;
+    irishRel:genName "Scandlain";
+    irishRel:nomName "Scandlan";
+    rel:childOf <#Cummascaig-d77db795>.
+
+<#Cummascaig-d77db795>
+    a foaf:Person;
+    irishRel:genName "Cummascaig";
+    irishRel:nomName "Cummascach";
+    rel:childOf <#Úargussa>.
+
+<#Úargussa>
+    a foaf:Person;
+    irishRel:genName "Úargussa";
+    irishRel:nomName "Úarguss";
+    rel:childOf <#Fhorannain-b6633736>.
+
+<#Fhorannain-b6633736>
+    a foaf:Person;
+    irishRel:genName "Fhorannain";
+    irishRel:nomName "Forannan";
+    rel:childOf <#Fhaelchon-6a7bf492>.
+
+<#Fhaelchon-6a7bf492>
+    a foaf:Person;
+    irishRel:nomName "Fhaelchon".
+    #same as <#Faelchon-f487f3f9> ?- CY
+}
