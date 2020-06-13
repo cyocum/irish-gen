@@ -35,9 +35,9 @@
     a foaf:Person;
     irishRel:genName "Gillai Ultain";
     irishRel:nomName "Gilla Ultain";
-    rel:childOf <#Oengusa>.
+    rel:childOf <#Oengusa-c083ba60>.
 
-<#Oengusa>
+<#Oengusa-c083ba60>
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Oengus";
@@ -77,35 +77,51 @@
     irishRel:genName "Fheradaig";
     irishRel:nomName "Feradach";
     foaf:title "rectaire"@sga, "steward"@eng ;
+    foaf:title "cáinte"@sga, "satirist"@eng ;
     rel:childOf <#MaelDuinDergainig>;
-    rdfs:comment "in cáinte de Mumnechaib ba sé ba rectaire do Chormac .h. Chuind. Cairech a ben. Is i ro anacht Fiacha mc Oengusa. inde dicitur Fiacha Araide a quo Dal Araide" .    
+    rel:employedBy <#Cormac>;
+    rdfs:comment "in cáinte de Mumnechaib ba sé ba rectaire do Chormac .h. Chuind. Cairech a ben. Is i ro anacht Fiacha mc Oengusa. inde dicitur Fiacha Araide a quo Dal Araide" .
+
+<#Cormac>
+    a foaf:Person;
+    irishRel:nomName "Cormac";
+    rel:descendantOf <#Chuind>;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#CormaicUlfhota>.
+
+<#Chuind>
+    a foaf:Person;
+    irishRel:genName "Chuind";
+    irishRel:nomName "Cond";
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#CuindCetchathaig>;
+    owl:sameAs <#CondCetchathach>.
 
 <#Cairech>
-    a foaf:Person ;
-    irishRel:nomName "Cairech" ;
-    foaf:gender "female" ;
-    rel:spouseOf <#FheradaigAraideBibre>;
-    foaf:knows <#Fiacha>.
+    a foaf:Person;
+    irishRel:nomName "Cairech";
+    foaf:gender "female";
+    irishRel:fosterParentOf <#Fiacha>;
+    rel:spouseOf <#FheradaigAraideBibre>.
 
 <#Fiacha>
-    a foaf:Person ;
-    irishRel:nomName "Fiacha" ;
-    rel:childOf <#Oengusa-28ad61bd>.
-
-<#FiachaAraide>
-    a foaf:Person ;
-    irishRel:nomName "Fiacha Araide" ;
+    a foaf:Person;
+    irishRel:genName "Fiacha";
+    irishRel:nomName "Fiacha Araide";
+    owl:sameAs <#FiachachAraide>;
+    rel:childOf <#Oengusa>;
+    irishRel:fosterChildOf <#Cairech>;
+    rdfs:comment "a quo Dal Araide";
     irishRel:ancestorOfGroup <#DalAraide>.
-    # child of Ferdach Araide? - CY
+
+<#Oengusa>
+    a foaf:Person;
+    irishRel:genName "Oengusa";
+    irishRel:nomName "Oengus";
+    owl:sameAs <http://example.com/LL/dail_araide.trig#OengusaGobnenn>.
 
 <#DalAraide>
     a irishRel:PopulationGroup ;
-    irishRel:populationGroupName "Dal Araide" .
-
-<#Oengusa-28ad61bd>
-    a foaf:Person ;
-    irishRel:genName "Oengusa" ;
-    irishRel:nomName "Oengus" .    
+    irishRel:populationGroupName "Dal Araide" ;
+    owl:sameAs <http://example.com/Rawl_B502/section_11.trig#Dáln-Araide>.
 
 <#MaelDuinDergainig>
     a foaf:Person;
@@ -152,5 +168,5 @@
     owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.trig#NeillNoigiallaich>;
     owl:sameAs <http://example.com/LL/fer_tethba.trig#NeilNoigiallaig>;
     irishRel:genName "Neill Noigiallaig".
-    
+
 }
