@@ -16,17 +16,40 @@
     dcterms:title "Genelach .H. Máil"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
     dcterms:format "application/trig" ;
-     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+    prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
+
+<#ManeMál>
+    a foaf:Person ;
+    irishRel:nomName "ManeMál" ;
+    rel:childOf <#FeidlimidFirUrglais>;
+    rel:siblingOf <#ChathairMar>.
+
+<#FeidlimidFirUrglais>
+    a foaf:Person ;
+    irishRel:genName "Feidlimid Fir Urglais" ;
+    owl:sameAs <http://example.com/LL/section_135.trig#FheidlimtheFirUrglais>;
+    irishRel:numChild 2 .
+
+<#ChathairMar>
+    a foaf:Person ;
+    irishRel:datName "Chathair Mar" ;
+    owl:sameAs <http://example.com/LL/section_135.trig#CathairMor>.
+
+<#ManeMáil>
+    a foaf:Person ;
+    irishRel:numChild 4 ;
+    irishRel:genName "Mane Máil" ;        
+    owl:sameAs <#ManeMál>.
 
 <#Amlongaid>
     a foaf:Person;
     irishRel:nomName "Amlongaid";
-    rel:childOf <#ManeMál>.
+    rel:childOf <#ManeMáil>.
 
 <#TuathalTigech>
     a foaf:Person;
     irishRel:nomName "Tuathal Tigech";
-    rel:childOf <#ManeMál>;
+    rel:childOf <#ManeMáil>;
     irishRel:ancestorOfGroup <#hTheig>.
 
 <#hTheig>
@@ -36,7 +59,7 @@
 <#Setna-d9462ab3>
     a foaf:Person;
     irishRel:nomName "Setna";
-    rel:childOf <#ManeMál>.
+    rel:childOf <#ManeMáil>.
 
 <#Cromdana>
     a foaf:Person;
