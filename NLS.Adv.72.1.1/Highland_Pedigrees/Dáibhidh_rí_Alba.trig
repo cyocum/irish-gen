@@ -1,0 +1,50 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_1.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "kindred_1"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2001.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2001.html> .
+
+<#Daibidh>
+    a foaf:Person;
+    irishRel:nomName "Daibidh";
+    rel:childOf <#Maila>;
+    owl:sameAs <http://example.com/LL/rig_alban.trig#Dauid>.
+
+<#Maila>
+    a foaf:Person;
+    irishRel:genName "Maila";
+    rel:childOf <#Fionnodg>.
+    #In cognate pedigrees, "Mael Colaim" comes here.
+
+<#Fionnodg>
+    a foaf:Person;
+    irishRel:genName "Fionnodg";
+    rel:childOf <#Finnginn>.
+    #This name is difficult to read in the MS.
+
+<#Finginn>
+    a foaf:Person;
+    irishRel:genName "Finginn";
+    rel:childOf <#Mailcolaim>.
+    #It has been suggested (personal correspondence) that this individual, "Fingen mac Mail Cholaim",
+    #is derived from a misreading of "ingen Mail Colaim", which appears at this point in cognate
+    #pedigrees (e.g. https://celt.ucc.ie//published/G800011F/text068.html). The oddly named "Fionnodg",
+    #above, may also be somehow the product of this corruption.
+
+}
