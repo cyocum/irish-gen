@@ -1,0 +1,189 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_8.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Maeil Anfaigh"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2008.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2008.html> .
+
+<#Eogan>
+    a foaf:Person;
+    irishRel:nomName "Eogan";
+    rel:childOf <#DomnaillDhuib>.
+
+<#DomnaillDhuib>
+    a foaf:Person;
+    irishRel:genName "Domnaill Dhuib";
+    irishRel:nomName "Domnall Dub";
+    rel:childOf <#Ailin>.
+
+<#Ailin>
+    a foaf:Person;
+    irishRel:genName "Ailin";
+    irishRel:nomName "Ailin".
+
+<#MaelAnfhaid>
+    a foaf:Person;
+    irishRel:nomName "Mael Anfhaid";
+    rel:childOf <#Foil>.
+
+<#Foil>
+    a foaf:Person;
+    irishRel:genName "Foil";
+    irishRel:nomName "Pol";
+    rel:childOf <#GillaPadraig>.
+
+<#GillaPadraig>
+    a foaf:Person;
+    irishRel:genName "Gilla Padraig";
+    irishRel:nomName "Gilla Padraig";
+    rel:childOf <#GillaMartain>.
+
+<#GillaMartain>
+    a foaf:Person;
+    irishRel:genName "Gilla Martain";
+    irishRel:nomName "Gilla Martain";
+    rel:childOf <#Pfoil>.
+
+<#Pfoil>
+    a foaf:Person;
+    irishRel:genName "Pfoil";
+    irishRel:nomName "Pol";
+    rel:childOf <#MhailAnfaid>.
+
+<#MhailAnfaid>
+    a foaf:Person;
+    irishRel:genName "Mhail Anfaid";
+    irishRel:nomName "Mael Anfaid";
+    rel:childOf <#GillaAnfoid>.
+
+<#GillaAnfoid>
+    a foaf:Person;
+    irishRel:genName "Gilla Anfoid";
+    irishRel:nomName "Gilla Anfoid";
+    rel:childOf <#GillaAnfoid>;
+    rdfs:comment "a quo Clann Gilla Camsronic 7 Clann M[aol Anfaigh] o fuilid [...]";
+    rel:ancestorOf <#Ailin>.
+    #Both this name and this note are difficult to read in the MS. - EPT
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#GillaAnfad>.
+
+<#GillaAnfad>
+    a foaf:Person;
+    irishRel:genName "Gilla Anfad";
+    irishRel:nomName "Gilla Anfad";
+    rel:childOf <#GillaMartainOig>.
+
+<#GillaMartainOig>
+    a foaf:Person;
+    irishRel:genName "Gilla Martain Oig";
+    irishRel:nomName "Gilla Martain Oig";
+    rel:childOf <#Gilgain>.
+
+<#Gilgain>
+    a foaf:Person;
+    irishRel:genName "Gilgain";
+    rel:childOf <#Martain>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Martain>
+    a foaf:Person;
+    irishRel:genName "Martain";
+    irishRel:nomName "Martan";
+    rel:childOf <#GillaMartainn>.
+
+<#GillaMartainn>
+    a foaf:Person;
+    irishRel:genName "Gilla Martainn";
+    irishRel:nomName "Gilla Martainn";
+    rel:childOf <#GilleChamsroin>;
+    rdfs:comment "moirsin".
+    #This name is difficult to read in the MS. - EPT
+
+<#GilleChamsroin>
+    a foaf:Person;
+    irishRel:genName "Gille Chamsroin";
+    irishRel:nomName "Gilla Camsroin".
+    #This name is difficult to read in the MS. - EPT
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:nomName "Eogain";
+    rel:childOf <#GillaFaill>.
+
+<#GillaFaill>
+    a foaf:Person;
+    irishRel:genName "Gilla Faill";
+    irishRel:nomName "Gilla Faill";
+    rel:childOf <#Eacain>.
+
+<#Eacain>
+    a foaf:Person;
+    irishRel:genName "Eacain";
+    rel:childOf <#Gartnaid>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Gartnaid>
+    a foaf:Person;
+    irishRel:genName "Gartnaid";
+    irishRel:nomName "Gartnaid";
+    rel:childOf <#Conigail>.
+
+<#Conigail>
+    a foaf:Person;
+    irishRel:genName "Conigail";
+    rel:childOf <#Foailacha>.
+
+<#Foailacha>
+    a foaf:Person;
+    irishRel:genName "Foailacha";
+    rel:childOf <#Airt>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Airt>
+    a foaf:Person;
+    irishRel:genName "Airt";
+    irishRel:nomName "Art";
+    rel:childOf <#AengusMhoir>.
+
+<#AengusMhoir>
+    a foaf:Person;
+    irishRel:genName "Aengus Mhoir";
+    irishRel:nomName "Aengus Mor";
+    rel:childOf <#Eirc>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Eirc>
+    a foaf:Person;
+    irishRel:genName "Eirc";
+    irishRel:nomName "Erc";
+    rel:childOf <#Cenit>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Cenit>
+    a foaf:Person;
+    irishRel:genName "Cenit";
+    irishRel:nomName "Cinaid".
+    #This name is difficult to read in the MS; Black suggests that it could be
+    #read as "Conlaith" (if one hypothesises that the scribe has actively tried
+    #to disguise the name), making the last two names the Erc and Conlaith from
+    #Kindred 5. - EPT
+
+}
