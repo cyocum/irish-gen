@@ -1,0 +1,92 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_9.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Eoghain na hOitreac annso"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2009.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2009.html> .
+
+<#Baltar>
+    a foaf:Person;
+    irishRel:nomName "Baltar";
+    rel:childOf <#Eoin>.
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#Eogain>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#GillaEispaig>.
+
+<#GillaEispaig>
+    a foaf:Person;
+    irishRel:genName "Gilla Eispaig";
+    irishRel:nomName "Gilla Eispaig";
+    rel:childOf <#Crisdin>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Crisdin>
+    a foaf:Person;
+    irishRel:genName "Crisdin";
+    rel:childOf _:missing-d5125f70.
+    #This name is difficult to read in the MS. - EPT
+
+_:missing-d5125f70
+    a foaf:Person;
+    rel:childOf <#Saibara>.
+    #This name is illegible in the MS. - EPT
+
+<#Saibara>
+    a foaf:Person;
+    irishRel:genName "Saibara";
+    rel:childOf <#DuinnSleibe>.
+    #This name is difficult to read in the MS. - EPT
+
+<#DuinnSleibe>
+    a foaf:Person;
+    irishRel:genName "Duinn Sleibe";
+    irishRel:nomName "Donn Sleibe";
+    rel:childOf <#AodaAlainn>.
+    #This name is difficult to read in the MS. - EPT
+
+<#AodaAlainn>
+    a foaf:Person;
+    irishRel:genName "Aoda Alainn";
+    irishRel:nomName "Aod Alainn";
+    rdfs:comment "re nabartha an buirrce";
+    rel:childOf <#Anradan>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Anradan>
+    a foaf:Person;
+    irishRel:genName "Anradan";
+    rel:childOf <#Flaitbertac>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Flaitbertac>
+    a foaf:Person;
+    irishRel:genName "Flaitbertac";
+    irishRel:nomName "Flaithbertach".
+    #This name is difficult to read in the MS. - EPT
+
+
+}
