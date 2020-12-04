@@ -1,0 +1,73 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_12.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Mathghamhna annso sis"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2012.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2012.html> .
+
+<#Murchadh>
+    a foaf:Person;
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Donnchaigh>.
+
+<#Donnchaigh>
+    a foaf:Person;
+    irishRel:genName "Donnchaigh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#Murchaidh>.
+
+<#Murchaidh>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#MurchaidhMoir>.
+
+<#MurchaidhMoir>
+    a foaf:Person;
+    irishRel:genName "Murchaidh Moir";
+    irishRel:nomName "Murchadh Mor";
+    rel:childOf <#Cainnigh>.
+
+<#Cainnigh>
+    a foaf:Person;
+    irishRel:genName "Cainnigh";
+    rel:childOf <#Mathghamna>.
+
+<#Mathghamna>
+    a foaf:Person;
+    irishRel:genName "Mathghamna";
+    irishRel:nomName "Mathgamain";
+    rel:childOf <#Cainnigh-c1dc1f10>.
+
+<#Cainnigh-c1dc1f10>
+    a foaf:Person;
+    irishRel:genName "Cainnigh";
+    rel:childOf <#Cristin>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Cristin>
+    a foaf:Person;
+    irishRel:genName "Cristin".
+
+}
