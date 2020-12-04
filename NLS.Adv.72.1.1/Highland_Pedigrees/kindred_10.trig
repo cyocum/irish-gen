@@ -1,0 +1,157 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_10.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Labartaigh ann soth sis"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2010.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2010.html> .
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#Colim>.
+
+<#Domnall>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#Colim>.
+
+<#Amlgolgaoi>
+    a foaf:Person;
+    irishRel:nomName "Amlgolgaoi";
+    rel:childOf <#Colim>.
+
+<#Colim>
+    a foaf:Person;
+    irishRel:genName "Colim";
+    irishRel:nomName "Colum";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Eogain>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Baltair>.
+
+<#Baltair>
+    a foaf:Person;
+    irishRel:genName "Baltair";
+    irishRel:nomName "Baltar";
+    rel:childOf _:missing-ae4a9b70.
+
+_:missing-ae4a9b70
+    a foaf:Person;
+    rel:childOf <#Aeid>.
+    #This name is illegible in the MS. - EPT
+
+<#Aeid>
+    a foaf:Person;
+    irishRel:genName "Aeid";
+    irishRel:nomName "Aed";
+    rel:childOf <#Eogain-fe24a780>.
+
+<#Eogain-fe24a780>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Aig>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Aig>
+    a foaf:Person;
+    irishRel:genName "Aig";
+    irishRel:nomName "Aed";
+    rel:childOf <#Eisiab>.
+
+<#Eisiab>
+    a foaf:Person;
+    irishRel:genName "Eisiab";
+    rel:childOf <#GilleCrist>.
+
+<#GilleCrist>
+    a foaf:Person;
+    irishRel:genName "Gille Crist";
+    irishRel:nomName "Gille Crist";
+    rel:childOf <#GillaMhichel>.
+
+<#GillaMhichel>
+    a foaf:Person;
+    irishRel:genName "Gilla Mhichel";
+    irishRel:nomName "Gilla Michel";
+    rel:childOf <#Pilip>.
+
+<#Pilip>
+    a foaf:Person;
+    irishRel:genName "Pilip";
+    irishRel:nomName "Pilip";
+    rel:childOf <#FinnlaeithOig>.
+
+<#FinnlaeithOig>
+    a foaf:Person;
+    irishRel:genName "Finnlaeith Oig";
+    irishRel:nomName "Finnlaeth Og";
+    rel:childOf <#FinnlaeithMoir>.
+    #This name is difficult to read in the MS. - EPT
+
+<#FinnlaeithMoir>
+    a foaf:Person;
+    irishRel:genName "Finnlaeith Moir";
+    irishRel:nomName "Finnlaeth Mor";
+    rel:childOf <#Dubghaill>.
+
+<#Dubghaill>
+    a foaf:Person;
+    irishRel:genName "Dubghall";
+    irishRel:nomName "Dubghaill";
+    rel:childOf <#Baltuir>.
+
+<#Baltuir>
+    a foaf:Person;
+    irishRel:genName "Baltuir";
+    irishRel:nomName "Baltar";
+    rel:childOf <#Carlusa>.
+
+<#Carlusa>
+    a foaf:Person;
+    irishRel:genName "Carlusa";
+    rel:childOf <#DomnaillOig>.
+
+<#DomnaillOig>
+    a foaf:Person;
+    irishRel:genName "Domnaill Oig";
+    irishRel:nomName "Domnall Og";
+    rel:childOf <#DomnaillIDuinn>.
+
+<#DomnaillIDuinn>
+    a foaf:Person;
+    irishRel:genName "Domnaill Iduinn";
+    irishRel:nomName "Domnall Donn";
+    rel:childOf <#FearadaighFinn>.
+
+<#FearadaighFinn>
+    a foaf:person;
+    irishRel:genName "Fearadaigh Finn";
+    irishRel:nomName "Feradach Finn";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
+
+}
