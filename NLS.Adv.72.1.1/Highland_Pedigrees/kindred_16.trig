@@ -1,0 +1,150 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_16.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Aidh annso"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2016.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2016.html> .
+
+<#Fearchar>
+    a foaf:Person;
+    irishRel:nomName "Fearchar";
+    rel:childOf <#Imhair>.
+
+<#Imhair>
+    a foaf:Person;
+    irishRel:genName "Imhair"
+    irishRel:nomName "Imhar";
+    rel:childOf <#GillaCrist>.
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist"
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#GillaEaspaig>.
+
+<#GillaEaspaig>
+    a foaf:Person;
+    irishRel:genName "Gilla Easpaig"
+    irishRel:nomName "Gilla Easpaig";
+    rel:childOf <#GillaNaNaemh>.
+
+<#GillaNaNaemh>
+    a foaf:Person;
+    irishRel:genName "Gilla na Naemh"
+    irishRel:nomName "Gilla na Naemh";
+    rel:childOf <#GillaCrist-c2bb5930>.
+
+<#GillaCrist-c2bb5930>
+    a foaf:Person;
+    irishRel:genName "Cormaic"
+    irishRel:nomName "Cormac";
+    rel:childOf <#GillaMichel>.
+
+<#GillaMichel>
+    a foaf:Person;
+    irishRel:genName "Gilla Michel"
+    irishRel:nomName "Gilla Michel";
+    rel:childOf <#Aidh>.
+
+<#Aidh>
+    a foaf:Person;
+    irishRel:genName "Aidh"
+    irishRel:nomName "Aedh";
+    rel:childOf <#Gallbairt>.
+
+<#Gallbairt>
+    a foaf:Person;
+    irishRel:genName "Gallbairt"
+    irishRel:nomName "Gallbart";
+    rel:childOf _:missing-36214790.
+
+_:missing-36214790
+    a foaf:Person;
+    rdfs:comment ".i. in fer eges risinabartha gall[bairt]";
+    rel:childOf <#Domnaill>.
+    #Part of a name ("[...]rtan") is visible in the MS. - EPT
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Eogain>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Filip>.
+
+<#Filip>
+    a foaf:Person;
+    irishRel:genName "Filip";
+    irishRel:nomName "Filip";
+    rel:childOf <#Oisiab>.
+
+<#Oisiab>
+    a foaf:Person;
+    irishRel:genName "Oisiab";
+    rel:childOf <#Eirc>.
+
+<#Eirc>
+    a foaf:Person;
+    irishRel:genName "Eirc";
+    irishRel:nomName "Erc";
+    rel:childOf <#Aengusa>.
+
+<#Aengusa>
+    a foaf:Person;
+    irishRel:genName "Aengusa";
+    irishRel:nomName "Aengus";
+    rel:childOf <#Fhinnlaeith>.
+
+<#Fhinnlaeith>
+    a foaf:Person;
+    irishRel:genName "Fhinnlaeith";
+    irishRel:nomName "Finnlaeth";
+    rel:childOf <#Carla>.
+
+<#Carla>
+    a foaf:Person;
+    irishRel:genName "Carla";
+    rel:childOf <#DomnaillOig>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_10.trig#Carlusa>.
+
+<#DomnaillOig>
+    a foaf:Person;
+    irishRel:genName "Domnaill Oig";
+    irishRel:nomName "Domnall Og";
+    rel:childOf <#DomnaillDuinn>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_10.trig#DomnaillOig>.
+
+<#DomnaillDuinn>
+    a foaf:Person;
+    irishRel:genName "Domnaill Duinn";
+    irishRel:nomName "Domnall Donn";
+    rel:childOf <#Feradhaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_10.trig#DomnaillIDuinn>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Feradhaigh>
+    a foaf:Person;
+    irishRel:genName "Feradhaigh";
+    irishRel:nomName "Feradach";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_10.trig#FearadaighFinn>.
+
+}
