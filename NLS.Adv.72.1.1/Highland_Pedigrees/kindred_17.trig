@@ -1,0 +1,138 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_17.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Duibshithi annso"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2017.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2017.html> .
+
+<#Domnall>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#GillaEspaigRuaidh>.
+
+<#Niall>
+    a foaf:Person;
+    irishRel:nomName "Niall";
+    rel:childOf <#GillaEspaigRuaidh>.
+
+<#GillaColaim>
+    a foaf:Person;
+    irishRel:nomName "GillaColaim";
+    rel:childOf <#GillaEspaigRuaidh>.
+
+<#GillaEspaigRuaidh>
+    a foaf:Person;
+    irishRel:genName "Gilla Espaig Ruaidh";
+    irishRel:nomName "Gilla Espaig Ruadh";
+    rel:childOf <#GillaCrist>.
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#GhillaColaim>.
+
+<#GhillaColaim>
+    a foaf:Person;
+    irishRel:genName "Ghilla Colaim";
+    irishRel:nomName "Gilla Colaim";
+    rel:childOf <#DubghaillMoir>.
+
+<#DubghaillMoir>
+    a foaf:Person;
+    irishRel:genName "Dubghaill Moir";
+    irishRel:nomName "Dubghall Mor";
+    rel:childOf <#Dhuibshithi>.
+
+<#Dhuibshithi>
+    a foaf:Person;
+    irishRel:genName "Dhuibshithi";
+    irishRel:nomName "Duibshithe";
+    rel:childOf <#Murchaidh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Murchaidh>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf <#FinnlaeithChais>.
+
+<#FinnlaeithChais>
+    a foaf:Person;
+    irishRel:genName "Finnlaeith Chais";
+    irishRel:nomName "Finnlaeth Cas";
+    rel:childOf <#Murchaidh-10c6d0a0>.
+
+<#Murchaidh-10c6d0a0>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Dubgaill>.
+
+<#Dubgaill>
+    a foaf:Person;
+    irishRel:genName "Dubgaill";
+    irishRel:nomName "Dubgall";
+    rel:childOf <#Finnlaeich>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Finnlaeich>
+    a foaf:Person;
+    irishRel:genName "Finnlaeich";
+    irishRel:nomName "Finnlaech";
+    rel:childOf <#Ferchair>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Cormaic>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_14.trig#Ferchair>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Airbertaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Cormaic>.
+
+<#Airbertaigh>
+    a foaf:Person;
+    irishRel:genName "Airbertaigh";
+    irishRel:nomName "Airbertach";
+    rel:childOf <#FerchairFhada>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Airbertaigh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#FerchairFhada>
+    a foaf:Person;
+    irishRel:genName "Ferchair Fhada";
+    irishRel:nomName "Ferchar Fada";
+    rel:childOf <#Feradhaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#FercairFada>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Feradhaigh>
+    a foaf:Person;
+    irishRel:genName "Feradhaigh";
+    irishRel:nomName "Feradach";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
+    #This name is difficult to read in the MS. - EPT
+
+}
