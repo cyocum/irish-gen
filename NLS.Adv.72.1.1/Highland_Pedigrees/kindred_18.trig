@@ -1,0 +1,211 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_18.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Echthigerna"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2018.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2018.html> .
+
+<#GillaAinndrias>
+    a foaf:Person;
+    irishRel:nomName "Gilla Ainndrias";
+    rel:childOf <#Cailin>.
+
+<#Cailin>
+    a foaf:Person;
+    irishRel:genName "Cailin";
+    irishRel:nomName "Cailin";
+    rel:childOf <#Imair>.
+
+<#Imair>
+    a foaf:Person;
+    irishRel:genName "Imair";
+    irishRel:nomName "Imar";
+    rel:childOf <#Imair>.
+    #This name is difficult to read in the MS. - EPT
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#Mhicraith>.
+
+<#Mhicraith>
+    a foaf:Person;
+    irishRel:genName "Mhicraith";
+    irishRel:nomName "Macraith";
+    rel:childOf <#Muirchertaigh>.
+
+<#Muirchertaigh>
+    a foaf:Person;
+    irishRel:genName "Muirchertaigh";
+    irishRel:nomName "Muirchertach";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Oisiab>.
+
+<#Oisiab>
+    a foaf:Person;
+    irishRel:genName "Oisiab";
+    rel:childOf <#Ferchair>.
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Finnlaeith>.
+
+<#Finnlaeith>
+    a foaf:Person;
+    irishRel:genName "Finnlaeith";
+    irishRel:nomName "Finnlaeth";
+    rel:childOf <#Nicail>.
+
+<#Nicail>
+    a foaf:Person;
+    irishRel:genName "Nicail";
+    irishRel:nomName "Nical";
+    rel:childOf <#Maine>.
+
+<#Maine>
+    a foaf:Person;
+    irishRel:genName "Maine";
+    irishRel:nomName "Maine";
+    rel:childOf _:missing-263ba520.
+
+_:missing-263ba520
+    a foaf:Person;
+    rel:childOf <#Ethach>.
+    #This name is illegible in the MS. - EPT
+
+<#Ethach>
+    a foaf:Person;
+    irishRel:genName "Ethach";
+    irishRel:nomName "Eochu";
+    rel:childOf <#GillaCrist>.
+    #This name is difficult to read in the MS. - EPT
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#Osiab>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Osiab>
+    a foaf:Person;
+    irishRel:genName "Osiab";
+    rel:childOf <#Sainngaindrias>.
+
+<#Sainngaindrias>
+    a foaf:Person;
+    irishRel:genName "Sainngaindrias";
+    rel:childOf <#Ectigerna>.
+    #This name is difficult to read in the MS. Black suggests that it should be read
+    #as "Seanghille Ainndrias". - EPT
+
+<#Ectigerna>
+    a foaf:Person;
+    irishRel:genName "Ectigerna";
+    irishRel:nomName "Echtigern";
+    rel:childOf _:missing-01e355a0.
+    #This name is difficult to read in the MS. - EPT
+
+_:missing-01e355a0
+    a foaf:Person;
+    rel:childOf <#GillandriasMoir>.
+
+<#GillandriasMoir>
+    a foaf:Person;
+    irishRel:genName "Gillandrias Moir";
+    irishRel:nomName "Gille Andrias Mor";
+    rel:childOf <#Eittigerna>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Eittigerna>
+    a foaf:Person;
+    irishRel:genName "Eittigerna";
+    irishRel:nomName "Echthigern";
+    rel:childOf <#Ath>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Ath>
+    a foaf:Person;
+    irishRel:genName "Ath";
+    irishRel:nomName "Aed";
+    rel:childOf <#EchtigerneBetain>;
+    rdfs:comment "Cloinni Echtigerne Betain".
+    #The comment is difficult to read in the MS. - EPT
+
+<#EchtigerneBetain>
+    a foaf:Person;
+    irishRel:genName "Echtigerne Betain";
+    irishRel:nomName "Echthigern Betan";
+    rel:childOf <#Abran>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Abran>
+    a foaf:Person;
+    irishRel:genName "Abran";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#Cairbri>.
+
+<#Cairbri>
+    a foaf:Person;
+    irishRel:genName "Cairbri";
+    irishRel:nomName "Cairbre";
+    rel:childOf <#Eatach>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Eatach>
+    a foaf:Person;
+    irishRel:genName "Eatach";
+    irishRel:nomName "Eochu";
+    rel:childOf <#BethairMoir>.
+    #This name is difficult to read in the MS. Black suggests that "Eaictigerna"
+    #("Echthigern") is also a plausible reading. - EPT
+
+<#BethairMoir>
+    a foaf:Person;
+    irishRel:genName "Bethair Moir";
+    irishRel:nomName "Bethar Mor";
+    rel:childOf <#Dubgaill>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Dubgaill>
+    a foaf:Person;
+    irishRel:genName "Dubgaill";
+    irishRel:nomName "Dubgall";
+    rel:childOf <#Fergusa>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus".
+    #This name is difficult to read in the MS. - EPT
+
+}
