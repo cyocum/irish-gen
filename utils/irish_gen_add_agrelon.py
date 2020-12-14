@@ -3,6 +3,9 @@ import rdflib
 import argparse
 import tempfile
 import os
+import multiprocessing
+from concurrent.futures import ThreadPoolExecutor
+
 
 # These two rel predicates do not have an easily
 # translation into agrelon. They have been left out
@@ -45,11 +48,13 @@ def irish_rel_swap(g, irish_rel, agrelon):
     for subject, predicate, object, context in g.quads((None, rdflib.URIRef(f'http://example.com/earlyIrishRelationship.ttl#{irish_rel}'), None, None)):
         g.add((subject, rdflib.URIRef(f'https://d-nb.info/standards/elementset/agrelon#{agrelon}'), object, context))
 
-def write_file(file, output, dest):
-    with open(dest + "/" + filename, "w") as writer:
+def write_file(filename, output, dest):
+    with open(f'{dest}/{filename}', "w") as writer:
         writer.write(output)
             
-def process_rel_file(file_full_path, filename, base):
+def process_file(t):
+    (file_full_path, filename, dest, base) = t
+    print_filename(t)
     g = rdflib.Dataset()
     g.parse(file_full_path, format="trig")
     g.namespace_manager.bind('argrel', rdflib.URIRef("https://d-nb.info/standards/elementset/agrelon#"))
@@ -57,8 +62,13 @@ def process_rel_file(file_full_path, filename, base):
         rel_swap(g, key, rel_map[key])
     for key in irish_rel_map.keys():
         irish_rel_swap(g, key, irish_rel_map[key])
-    return g.serialize(format='trig', base=rdflib.URIRef(base + "/" + filename)).decode('utf-8')
+    output = g.serialize(format='trig', base=rdflib.URIRef(base + "/" + filename)).decode('utf-8')
+    write_file(filename, output, dest)
 
+def print_filename(t):
+    (file_full_path, filename, dest, base) = t
+    print(f'Processing file {file_full_path} to dest {args.dest}/{filename} with base url {args.base_url}')
+    
 def init_argparse():
     parser = argparse.ArgumentParser(
         description="Adds argrelon as a set of predicates to IrishGen"
@@ -71,10 +81,14 @@ def init_argparse():
     
 if __name__ == "__main__":
     args = init_argparse().parse_args()
+    file_args_list = []
     for file_full_path in args.files:
         path, filename = os.path.split(file_full_path)
+        file_args_list.append((file_full_path, filename, args.dest, args.base_url))
+    with ThreadPoolExecutor(max_workers=multiprocessing.cpu_count()) as executor:
         if args.dry_run:
-            print(f'Processing file {file_full_path} to dest {args.dest} with base url {args.base_url}')
+            executor.map(print_filename, file_args_list)
+            executor.shutdown()
         else:
-            foo = process_rel_file(file_full_path, filename, args.base_url)
-            write_file(filename, foo, args.dest)
+            executor.map(process_file, file_args_list)
+            executor.shutdown()
