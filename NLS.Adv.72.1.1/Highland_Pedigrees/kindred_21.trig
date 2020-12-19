@@ -1,0 +1,139 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_21.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Ladmainn"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2021.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2021.html> .
+
+<#Raiberd>
+    a foaf:Person;
+    irishRel:nomName "Raiberd";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#GillaColaim>.
+
+<#GillaColaim>
+    a foaf:Person;
+    irishRel:genName "Gilla Colaim";
+    irishRel:nomName "Gilla Colaim";
+    rel:childOf <#Ladmainn>.
+
+<#Ladmainn>
+    a foaf:Person;
+    irishRel:genName "Ladmainn";
+    irishRel:nomName "Ladmann";
+    rel:childOf <#Gillaspaig>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Gillaspaig>
+    a foaf:Person;
+    irishRel:genName "Gillaspaig";
+    irishRel:nomName "Gilla Espaig";
+    rel:childOf <#Ferchair>.
+    #This name seems to have been written in over "Gilla Colaim". - EPT
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Duinntsleibe>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Duinntsleibe>
+    a foaf:Person;
+    irishRel:genName "Duinn tSleibe";
+    irishRel:nomName "Donn Sleibe";
+    rel:childOf <#AedAlainn>.
+    #This name is difficult to read in the MS. - EPT
+
+<#AedAlainn>
+    a foaf:Person;
+    irishRel:genName "Aed Alainn";
+    irishRel:nomName "Aed Alainn";
+    rdfs:comment ".i. buirce";
+    rel:childOf <#Anradain>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Anradain>
+    a foaf:Person;
+    irishRel:genName "Anradain";
+    irishRel:nomName "Anradan";
+    rel:childOf <#Flaitbertaig>.
+
+<#Flaitbertaig>
+    a foaf:Person;
+    irishRel:genName "Flaitbertaig";
+    irishRel:nomName "Flaithbertach";
+    rel:childOf <#Connstantin>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Connstantin>
+    a foaf:Person;
+    irishRel:genName "Connstantin";
+    irishRel:nomName "Connstantin";
+    rel:childOf <#Muiredhaigh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Muiredhaigh>
+    a foaf:Person;
+    irishRel:genName "Muiredhaigh";
+    irishRel:nomName "Muiredhach";
+    rel:childOf _:missing-cdc6a200.
+    #This name is difficult to read in the MS. - EPT
+
+_:missing-cdc6a200
+    a foaf:Person;
+    rel:childOf <#Domnaill>.
+    #The MS is illegible at this point; the space is enough for "mhic" and then a
+    #short name. - EPT
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#GillaCrist>.
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#Murachaidh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Murachaidh>
+    a foaf:Person;
+    irishRel:genName "Murachaidh";
+    irishRel:nomName "Murachadh";
+    rdfs:comment ".i. Gilla Dub";
+    rel:childOf <#NeillGlunduibh>.
+    #This name and the note are difficult to read in the MS. - EPT
+
+<#NeillGlunduibh>
+    a foaf:Person;
+    irishRel:genName "Neill Glunduibh";
+    irishRel:nomName "Niall Glundubh";
+    rdfs:comment "ite";
+    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#NiallGlúndub>.
+    #This name and the note are difficult to read in the MS. Black's reading is based on cognate
+    #pedigrees in Irish MSS. - EPT
+
+}
