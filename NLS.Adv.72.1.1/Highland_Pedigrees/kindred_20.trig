@@ -1,0 +1,103 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_20.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mormaeir Leamra"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2020.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2020.html> .
+
+<#Donnchadh>
+    a foaf:Person;
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#Baltair>.
+
+<#Baltair>
+    a foaf:Person;
+    irishRel:genName "Baltair";
+    irishRel:nomName "Baltar";
+    rel:childOf <#Agllaoim>.
+
+<#Agllaoim>
+    a foaf:Person;
+    irishRel:genName "Agllaoim";
+    rel:childOf <#Donnchaidh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#AmlaoimOig>.
+
+<#AmlaoimOig>
+    a foaf:Person;
+    irishRel:genName "Amlaoim Oig";
+    irishRel:nomName "Amlaoim Og";
+    rel:childOf <#AmlaoimMoir>.
+
+<#AmlaoimMoir>
+    a foaf:Person;
+    irishRel:genName "Amlaoim Moir";
+    irishRel:nomName "Amlaoim Mor";
+    rel:childOf <#Muiredhgaigh>.
+
+<#Muiredhgaigh>
+    a foaf:Person;
+    irishRel:genName "Muiredhgaigh";
+    irishRel:nomName "Muiredach";
+    rel:childOf <#MaelDomnig>.
+    #This name is difficult to read in the MS. - EPT
+
+<#MaelDomnig>
+    a foaf:Person;
+    irishRel:genName "Mael Domnig";
+    irishRel:nomName "Mael Domnig";
+    rdfs:comment "i.d.";
+    rel:childOf <#Maini>.
+    #Black transcribes the MS here as "Muiredhgaigh ar Mael Domnig", the meaning of which is unclear.
+    #As at least two Irish MSS preserve a cognate pedigree in which Muiredach is Mael Domnig's
+    #son (see https://www.1467manuscript.co.uk/kindred%2020.html), this is what it is being taken
+    #to mean. From my own examination of the manuscript, "ar" could just about be an elaborate form
+    #of "i" with a superscript "c", standing for "mic". - EPT
+
+<#Maini>
+    a foaf:Person;
+    irishRel:genName "Maini";
+    irishRel:nomName "Maine";
+    rel:childOf <#Cuirc>.
+
+<#Cuirc>
+    a foaf:Person;
+    irishRel:genName "Cuirc";
+    irishRel:nomName "Corc";
+    rel:childOf <#Luigdheach>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Luigdheach>
+    a foaf:Person;
+    irishRel:genName "Luigdech";
+    irishRel:nomName "Lugaid";
+    rel:childOf <#Cairil>.
+
+<#Cairil>
+    a foaf:Person;
+    irishRel:genName "Cairil";
+    irishRel:nomName "Cairell".
+    #Approximately 6 more names appear in the pedigree, for which Black provides some possible readings.
+    #However, these are so hypothetical, and the manuscript itself so difficult to make out, that I did
+    #not feel able to include anything beyond this point. - EPT
+}
