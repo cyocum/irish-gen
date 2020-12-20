@@ -1,0 +1,97 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_23.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Gabharain Erca"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2023.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2023.html> .
+
+<#Murchadh>
+    a foaf:Person;
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Ferchair>.
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Coll>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Coll>
+    a foaf:Person;
+    irishRel:genName "Coll";
+    rel:childOf _:missing-a7d906e0.
+    #This name is difficult to read in the MS. - EPT
+
+_:missing-a7d906e0
+    a foaf:Person;
+    rel:childOf <#Murchaidh>.
+
+<#Murchaidh>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf <#FerchairMor>.
+
+<#FerchairMor>
+    a foaf:Person;
+    irishRel:genName "Ferchair Mor";
+    irishRel:nomName "Ferchar Mor";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf _:missing-17638fd0.
+
+_:missing-17638fd0
+    a foaf:Person;
+    rel:childOf <#GillaaganMor>.
+    #This name is illegible in the manuscript. - EPT
+
+<#GillaaganMor>
+    a foaf:Person;
+    irishRel:genName "Gillaagan Mor";
+    rdfs:comment "o fuilid";
+    rel:childOf <#Cormaic>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Airbertaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Cormaic>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Airbertaigh>
+    a foaf:Person;
+    irishRel:genName "Airbertaigh";
+    irishRel:nomName "Airbertach";
+    rel:childOf <#Feradhaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Airbertaigh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Feradhaigh>
+    a foaf:Person;
+    irishRel:genName "Feradhaigh";
+    irishRel:nomName "Feradhach";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Ferchairdi>.
+
+}
