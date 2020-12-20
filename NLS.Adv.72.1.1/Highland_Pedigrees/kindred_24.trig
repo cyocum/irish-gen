@@ -1,0 +1,181 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_24.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Do Genelach Cloinni Gil Eain"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2024.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2024.html> .
+
+<#Laclain>
+    a foaf:Person;
+    irishRel:nomName "Laclain";
+    rel:childOf <#Eoin>.
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#GilleColaim>.
+
+<#GilleColaim>
+    a foaf:Person;
+    irishRel:genName "Gille Colaim";
+    irishRel:nomName "Gilla Colaim";
+    rel:childOf <#Maulisog>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Maulisog>
+    a foaf:Person;
+    irishRel:genName "Maulisog";
+    irishRel:nomName "Maol Ísóg";
+    rel:childOf <#GillaEoin>.
+
+<#GillaEoin>
+    a foaf:Person;
+    irishRel:genName "Gilla Eoin";
+    irishRel:nomName "Gilla Eoin";
+    rel:childOf <#Mhicrait>.
+
+<#Mhicrait>
+    a foaf:Person;
+    irishRel:genName "Mhicrait";
+    irishRel:nomName "Mac Raith";
+    rel:childOf <#Suthain>.
+
+<#Suthain>
+    a foaf:Person;
+    irishRel:genName "Suthain";
+    irishRel:nomName "Suthain";
+    rel:childOf <#Neill>.
+
+<#Neill>
+    a foaf:Person;
+    irishRel:genName "Neill";
+    irishRel:nomName "Niall";
+    rel:childOf <#Conduiligh>.
+
+<#Conduiligh>
+    a foaf:Person;
+    irishRel:genName "Con Duiligh";
+    irishRel:nomName "Cu Duiligh";
+    rdfs:comment "ab Lesa Mor sanabi";
+    foaf:title "ab"@sga, "abbot"@eng;
+    rel:childOf <#RaingRuaidh>.
+
+<#RaingRuaidh>
+    a foaf:Person;
+    irishRel:genName "Raing Ruaidh";
+    irishRel:nomName "Rang Ruadh";
+    rel:childOf <#Seandubgaill>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Seandubgaill>
+    a foaf:Person;
+    irishRel:genName "Seandubgaill";
+    irishRel:nomName "Seandubgall";
+    rdfs:comment "ar lss";
+    rel:childOf <#FherchairAbradraidh>.
+    #This name is abbreviated to "sean dubg" in the MS. Black takes "ar lss" to
+    #be a corruption of "Sgoinne" (of Scone). - EPT
+
+<#FherchairAbradruaidh>
+    a foaf:Person;
+    irishRel:genName "Fherchair Abradruaidh";
+    irishRel:nomName "Ferchar Abradruadh";
+    rel:childOf <#Feradhaigh>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Feradhaigh>
+    a foaf:Person;
+    irishRel:genName "Feradhaigh";
+    irishRel:nomName "Feradhach";
+    rel:childOf <#Fergusa>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Nechtain>.
+    #This name is illegible in the MS; Black seems to derive it mainly
+    #from readings in other MSS. - EPT
+
+<#Nechtain>
+    a foaf:Person;
+    irishRel:genName "Nechtain";
+    irishRel:nomName "Nechtan";
+    rel:childOf <#Colmain>.
+
+<#Colmain>
+    a foaf:Person;
+    irishRel:genName "Colmain";
+    irishRel:nomName "Colman";
+    rel:childOf <#Leatain>.
+
+<#Leatain>
+    a foaf:Person;
+    irishRel:genName "Leatain";
+    irishRel:nomName "Leatan";
+    rel:childOf <#Morgainn>.
+
+<#Morgainn>
+    a foaf:Person;
+    irishRel:genName "Morgainn";
+    irishRel:nomName "Morgann";
+    rel:childOf <#Domhnaill>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Morgainn>.
+
+<#Domhnaill>
+    a foaf:Person;
+    irishRel:genName "Domhnaill";
+    irishRel:nomName "Domhnall";
+    rel:childOf <#Cathmael>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Domnaill>.
+    #This name is illegible in the MS; Black seems to derive it mainly
+    #from readings in other MSS. - EPT
+
+<#Cathmael>
+    a foaf:Person;
+    irishRel:genName "Cathmael";
+    irishRel:nomName "Cathmael";
+    rel:childOf <#Ruaidri>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Cathmhaeil>.
+
+<#Ruaidri>
+    a foaf:Person;
+    irishRel:genName "Ruaidri";
+    irishRel:nomName "Ruaidri";
+    rel:childOf _:missing-d8b35630;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Ruaidhri>.
+    #This name is illegible in the MS; Black seems to derive it mainly
+    #from readings in other MSS. - EPT
+
+_:missing-d8b35630
+    a foaf:Person;
+    rel:childOf <#Egac>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Aircheallaigh>.
+    #This name is partly illegible in the MS "[...]rullaigh"; Black takes it as
+    #a form of "Aircheallach". - EPT
+
+<#Egac>
+    a foaf:Person;
+    irishRel:genName "Egach";
+    irishRel:nomName "Eochu".
+    #This name is difficult to read in the MS. Black reads "cgac" and takes this as
+    #a corruption of "Echach" (genitive of Eochu). I am prepared to read the first
+    #"c" as "e". - EPT
+
+}
