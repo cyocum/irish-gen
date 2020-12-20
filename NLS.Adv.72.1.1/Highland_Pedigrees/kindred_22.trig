@@ -1,0 +1,81 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_22.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Gilla Maeil"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2022.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2022.html> .
+
+<#GillaColaim>
+    a foaf:Person;
+    irishRel:nomName "Gilla Colaim";
+    rel:childOf <#GillaColaimMoir>.
+
+<#GillaColaimMoir>
+    a foaf:Person;
+    irishRel:genName "Gilla Colaim Moir";
+    irishRel:nomName "Gilla Colaim Mor";
+    rel:childOf <#MaelMuire>.
+    #This name is difficult to read in the MS. - EPT
+
+<#MaelMuire>
+    a foaf:Person;
+    irishRel:genName "Mael Muire";
+    irishRel:nomName "Mael Muire";
+    rel:childOf <#Cainnig>.
+    #This name is difficult to read in the MS. - EPT
+
+<#Cainnig>
+    a foaf:Person;
+    irishRel:genName "Cainnig";
+    irishRel:nomName "Cainnech";
+    rel:childOf <#GilaMaeilOig>.
+
+<#GilaMaeilOig>
+    a foaf:Person;
+    irishRel:genName "Gilla Maeil Oig";
+    irishRel:nomName "Gilla Maeil Og";
+    rel:childOf <#GillCrist>.
+    #This name is difficult to read in the MS; Black suggests that it could have
+    #been amended to or from "Dubgaill", which is the reading in the cognate
+    #pedigree in Mac Firbhisigh. Mac Firbhisigh's version also includes an extra
+    #generation "mhic Gilla Colaim". - EPT
+
+<#GillCrist>
+    a foaf:Person;
+    irishRel:genName "Gill Crist";
+    irishRel:nomName "Gill Crist";
+    irishRel:nomName "in Gilla Maeil";
+    rdfs:comment "dar comainm in Gilla Maeil";
+    rel:childOf <#Cormaic>.
+    #The name and comment are difficult to read in the MS. - EPT
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Airbertaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Cormaic>.
+
+<#Airbertaigh>
+    a foaf:Person;
+    irishRel:genName "Airbertaigh";
+    irishRel:nomName "Airbertach";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Airbertaigh>.
+    #The name and comment are difficult to read in the MS. - EPT
+
+}
