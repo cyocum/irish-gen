@@ -1,0 +1,79 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_27.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Do Genelach Mhic Lachlainn Oig"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2027.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2027.html> .
+
+<#Caineac>
+    a foaf:Person;
+    irishRel:nomName "Caineac";
+    rel:childOf <#Eoin>.
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#Laclain>.
+
+<#Laclain>
+    a foaf:Person;
+    irishRel:genName "Laclain";
+    irishRel:nomName "Laclan";
+    rel:childOf <#GillaPadruig>.
+
+<#GillaPadruig>
+    a foaf:Person;
+    irishRel:genName "Gilla Padruig";
+    irishRel:nomName "Gilla Padruig";
+    rel:childOf <#LaclainnMoir>.
+
+<#LaclainnMoir>
+    a foaf:Person;
+    irishRel:genName "Laclainn Moir"
+    irishRel:nomName "Lachlann Mor";
+    rel:childOf <#GillaPhadruig>.
+
+<#GillaPhadruig>
+    a foaf:Person;
+    irishRel:genName "Gilla Phadruig";
+    irishRel:nomName "Gilla Padruig";
+    rel:childOf <#GillaCrist>.
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:nomName "Gilla Crist";
+    irishRel:genName "Gilla Crist";
+    rel:childOf <#DedaAlainn>.
+
+<#DedaAlainn>
+    a foaf:Person;
+    irishRel:genName "Deda Alainn";
+    irishRel:nomName "Ded Alainn";
+    rdfs:comment "renabartha Buirrce";
+    rel:childOf <#Anradan>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_9.trig#AodaAlainn>.
+    #The reading "deda" is fairly clear in the MS, but Black suggests amending to "aeda". EPT
+
+<#Anradan>
+    a foaf:Person;
+    irishRel:genName "Andradan";
+    rdfs:comment "condregaidid Clanna Neill Naighiallaigh";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_9.trig#Anradan>.
+
+}
