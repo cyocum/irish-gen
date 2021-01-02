@@ -15,14 +15,14 @@
 <>
 
     a dctype:Dataset;
-    dcterms:title "Genelach Cloinni Maeil Anfaigh"@sga;
+    dcterms:title "Genelach Cloinni Mhaeil Anfaigh"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2008.html>;
     dcterms:format "application/trig" ;
     prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2008.html> .
 
-<#Eogan>
+<#Eoghan>
     a foaf:Person;
-    irishRel:nomName "Eogan";
+    irishRel:nomName "Eoghan";
     rel:childOf <#DomnaillDhuib>.
 
 <#DomnaillDhuib>
@@ -35,6 +35,8 @@
     a foaf:Person;
     irishRel:genName "Ailin";
     irishRel:nomName "Ailin".
+    #The lack of rel:childOf is intentional. There is no "mhic" or equivalent
+    #in this MS. - EPT
 
 <#MaelAnfhaid>
     a foaf:Person;
@@ -51,11 +53,11 @@
     a foaf:Person;
     irishRel:genName "Gilla Padraig";
     irishRel:nomName "Gilla Padraig";
-    rel:childOf <#GillaMartain>.
+    rel:childOf <#GillaMhartain>.
 
-<#GillaMartain>
+<#GillaMhartain>
     a foaf:Person;
-    irishRel:genName "Gilla Martain";
+    irishRel:genName "Gilla Mhartain";
     irishRel:nomName "Gilla Martain";
     rel:childOf <#Pfoil>.
 
@@ -76,9 +78,19 @@
     irishRel:genName "Gilla Anfoid";
     irishRel:nomName "Gilla Anfoid";
     rel:childOf <#GillaAnfoid>;
-    rdfs:comment "a quo Clann Gilla Camsronic 7 Clann M[aol Anfaigh] o fuilid [...]";
-    rel:ancestorOf <#Ailin>.
-    #Both this name and this note are difficult to read in the MS. - EPT
+    rdfs:comment "a quo Clann Gilla Camsronich 7 Clann M[aol Anfaigh] o fuilid [...]";
+    rel:ancestorOf <#Ailin>;
+    irishRel:ancestorOfGroup <#ClannGillaCamsronich>, <#ClannMaolAnfaigh>.
+    #Both this name and this note are difficult to read in the MS. Black identifies
+    #CLann Maol Anfaigh as the MacGillonies. - EPT
+
+<#ClannGillaCamsronich>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Gilla Camsronich".
+
+<#ClannMaolAnfaigh>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Maol Anfaigh".
 
 <#Eoin>
     a foaf:Person;
