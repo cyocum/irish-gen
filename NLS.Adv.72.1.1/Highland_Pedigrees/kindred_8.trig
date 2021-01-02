@@ -36,7 +36,8 @@
     irishRel:genName "Ailin";
     irishRel:nomName "Ailin".
     #The lack of rel:childOf is intentional. There is no "mhic" or equivalent
-    #in this MS. - EPT
+    #in this MS. Black suggests that the connection with the pedigree that follows
+    #may be through an unspecified female. - EPT
 
 <#MaelAnfhaid>
     a foaf:Person;
@@ -78,7 +79,7 @@
     irishRel:genName "Gilla Anfoid";
     irishRel:nomName "Gilla Anfoid";
     rel:childOf <#GillaAnfoid>;
-    rdfs:comment "a quo Clann Gilla Camsronich 7 Clann M[aol Anfaigh] o fuilid [...]";
+    rdfs:comment "a quo Clann Gilla Camsronich 7 Clann M[aol Anfaigh] o bfuilid genelaigh b'inme i tighib ut";
     rel:ancestorOf <#Ailin>;
     irishRel:ancestorOfGroup <#ClannGillaCamsronich>, <#ClannMaolAnfaigh>.
     #Both this name and this note are difficult to read in the MS. Black identifies
@@ -91,6 +92,8 @@
 <#ClannMaolAnfaigh>
     a irishRel:populationGroup;
     irishRel:populationGroupName "Clann Maol Anfaigh".
+
+
 
 <#Eoin>
     a foaf:Person;
@@ -107,65 +110,71 @@
     a foaf:Person;
     irishRel:genName "Gilla Martain Oig";
     irishRel:nomName "Gilla Martain Oig";
-    rel:childOf <#Gilgain>.
+    rel:childOf <#Gelgan>.
 
-<#Gilgain>
+<#Gelgan>
     a foaf:Person;
-    irishRel:genName "Gilgain";
-    rel:childOf <#Martain>.
+    irishRel:genName "Gelgan";
+    rel:childOf <#GillaMartainnMoir>;
+    rdfs:comment "i. an Condainnec".
     #This name is difficult to read in the MS. - EPT
 
-<#Martain>
+<#GillaMartainnMoir>
     a foaf:Person;
-    irishRel:genName "Martain";
-    irishRel:nomName "Martan";
-    rel:childOf <#GillaMartainn>.
-
-<#GillaMartainn>
-    a foaf:Person;
-    irishRel:genName "Gilla Martainn";
-    irishRel:nomName "Gilla Martainn";
+    irishRel:genName "Gilla Martainn Moir";
+    irishRel:nomName "Gilla Martainn Mor";
     rel:childOf <#GilleChamsroin>;
-    rdfs:comment "moirsin".
+    rdfs:comment "si".
     #This name is difficult to read in the MS. - EPT
 
-<#GilleChamsroin>
+<#GilChamsroin>
     a foaf:Person;
-    irishRel:genName "Gille Chamsroin";
+    irishRel:genName "Gil Chamsroin";
     irishRel:nomName "Gilla Camsroin".
-    #This name is difficult to read in the MS. - EPT
+    #This name is difficult to read in the MS. In particular, line 4 ends "cha"
+    #and, according to Black, the remainder ("msroin") needs to be read from the
+    #left-hand "box", where it also supplied part of the pedigrees title. This
+    #re-use of the same physical text within different contexts is unusual. - EPT
 
 <#Eogain>
     a foaf:Person;
     irishRel:nomName "Eogain";
     rel:childOf <#GillaFaill>.
+    #Again, the lack of "rel:childOf" on <#GilChamsroin> is intentional. This
+    #name begins another new pedigree. Black asserts that "Eogain" is a
+    #valid ScG. nominative form. - EPT
 
 <#GillaFaill>
     a foaf:Person;
     irishRel:genName "Gilla Faill";
     irishRel:nomName "Gilla Faill";
-    rel:childOf <#Eacain>.
+    rel:childOf <#Eacada>.
 
-<#Eacain>
+<#Eacada>
     a foaf:Person;
-    irishRel:genName "Eacain";
-    rel:childOf <#Gartnaid>.
+    irishRel:genName "Eacada";
+    irishRel:nomName "Eochaid";
+    rel:childOf <#Gartnaidh>.
     #This name is difficult to read in the MS. - EPT
 
-<#Gartnaid>
+<#Gartnaidh>
     a foaf:Person;
-    irishRel:genName "Gartnaid";
-    irishRel:nomName "Gartnaid";
-    rel:childOf <#Conigail>.
+    irishRel:genName "Gartnaidh";
+    irishRel:nomName "Gartnaidh";
+    rel:childOf <#Conghgail>.
 
-<#Conigail>
+<#Conghgail>
     a foaf:Person;
-    irishRel:genName "Conigail";
+    irishRel:genName "Conghgail";
+    irishRel:nomName "Congal";
     rel:childOf <#Foailacha>.
+    #This name is difficult to read in the MS. Black suggests "Dighail" (< Dícuill)
+    #as a possible alternative. - EPT
 
 <#Foailacha>
     a foaf:Person;
     irishRel:genName "Foailacha";
+    irishRel:nomName "Faelchad";
     rel:childOf <#Airt>.
     #This name is difficult to read in the MS. - EPT
 
@@ -179,23 +188,28 @@
     a foaf:Person;
     irishRel:genName "Aengus Mhoir";
     irishRel:nomName "Aengus Mor";
-    rel:childOf <#Eirc>.
+    rel:childOf <#Ena>.
     #This name is difficult to read in the MS. - EPT
 
-<#Eirc>
+<#Ena>
     a foaf:Person;
-    irishRel:genName "Eirc";
-    irishRel:nomName "Erc";
+    irishRel:genName "Ena";
+    irishRel:nomName "Enna";
     rel:childOf <#Cenit>.
-    #This name is difficult to read in the MS. - EPT
+    #This name is difficult to read in the MS. As Black points out, "eifdh" would
+    #be the most faithful transcription, but it bears no resemblance to any known
+    #Gaelic word, let alone a name. "ena" emerges from moderare emendation, "erc"
+    #from more severe emendation. I have opted for the former of these two options. - EPT
 
 <#Cenit>
     a foaf:Person;
     irishRel:genName "Cenit";
-    irishRel:nomName "Cinaid".
+    irishRel:nomName "Cinaed".
     #This name is difficult to read in the MS; Black suggests that it could be
-    #read as "Conlaith" (if one hypothesises that the scribe has actively tried
-    #to disguise the name), making the last two names the Erc and Conlaith from
-    #Kindred 5. - EPT
+    #read as "Conlaith", making the last two names the Erc and Conlaith from
+    #Kindred 5 (Mackintoshes). Black hypothesises that these last two names
+    #have been deliberately disguised in this MS. He imagines that the Camerons'
+    #origins had previously been traced back to the Mackintoshes. This became politically unhelpful
+    #but without any alternative tradition being developed to take its place.  - EPT
 
 }
