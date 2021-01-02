@@ -15,7 +15,7 @@
 <>
 
     a dctype:Dataset;
-    dcterms:title "Genelach Mhic Eoghain na hOitreac annso"@sga;
+    dcterms:title "Genelach Mhic Eoghain na hOitreach annso"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2009.html>;
     dcterms:format "application/trig" ;
     prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2009.html> .
@@ -23,47 +23,56 @@
 <#Baltar>
     a foaf:Person;
     irishRel:nomName "Baltar";
-    rel:childOf <#Eoin>.
+    rel:childOf <#Eain>.
 
-<#Eoin>
+<#Eain>
     a foaf:Person;
-    irishRel:genName "Eoin";
-    irishRel:nomName "Eoin";
+    irishRel:genName "Eain";
+    irishRel:nomName "Eain";
     rel:childOf <#Eogain>.
+    #This name is difficult to read in the MS. - EPT
 
 <#Eogain>
     a foaf:Person;
     irishRel:genName "Eogain";
     irishRel:nomName "Eogan";
-    rel:childOf <#GillaEispaig>.
+    rel:childOf <#GillaEpspaig>.
 
-<#GillaEispaig>
+<#GillaEpspaig>
     a foaf:Person;
-    irishRel:genName "Gilla Eispaig";
-    irishRel:nomName "Gilla Eispaig";
-    rel:childOf <#Crisdin>.
+    irishRel:genName "Gilla Epspaig";
+    irishRel:nomName "Gilla Espaig";
+    rel:childOf <#Eagan>.
     #This name is difficult to read in the MS. - EPT
 
-<#Crisdin>
+<#Eagan>
     a foaf:Person;
-    irishRel:genName "Crisdin";
-    rel:childOf _:missing-d5125f70.
-    #This name is difficult to read in the MS. - EPT
+    irishRel:genName "Eagan";
+    irishRel:nomName "Eoghan";
+    rel:childOf <#Donnchaidh>.
+    #This name is difficult to read in the MS. The most natural transcription would
+    #lead to Crisdin but, due to the visual ambiguities and the poor attestation of
+    #this name, and based on comparison with other genealogies, Black hypothesises
+    #"Eagan" (< Eoghan) instead. - EPT
 
-_:missing-d5125f70
+<#Donnchaidh>
     a foaf:Person;
-    rel:childOf <#Saibara>.
-    #This name is illegible in the MS. - EPT
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf [
+      a foaf:Person;
+      rel:childOf [
+        a foaf:Person;
+        rel:childOf <#DonnSleibe>
+        ];
+    ].
+    #This name is illegible in the MS when viewed normally, but can be clearly read
+    #through spectral imaging. Black suggests that the name "Donnchaidh" has been
+    #deliberately deleted. - EPT
 
-<#Saibara>
+<#DonnSleibe>
     a foaf:Person;
-    irishRel:genName "Saibara";
-    rel:childOf <#DuinnSleibe>.
-    #This name is difficult to read in the MS. - EPT
-
-<#DuinnSleibe>
-    a foaf:Person;
-    irishRel:genName "Duinn Sleibe";
+    irishRel:genName "Donn Sleibe";
     irishRel:nomName "Donn Sleibe";
     rel:childOf <#AodaAlainn>.
     #This name is difficult to read in the MS. - EPT
@@ -72,7 +81,7 @@ _:missing-d5125f70
     a foaf:Person;
     irishRel:genName "Aoda Alainn";
     irishRel:nomName "Aod Alainn";
-    rdfs:comment "re nabartha an buirrce";
+    rdfs:comment "renabartha an buirrce";
     rel:childOf <#Anradan>.
     #This name is difficult to read in the MS. - EPT
 
@@ -85,8 +94,8 @@ _:missing-d5125f70
 <#Flaitbertac>
     a foaf:Person;
     irishRel:genName "Flaitbertac";
-    irishRel:nomName "Flaithbertach".
+    irishRel:nomName "Flaithbertach";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q3073239>.
     #This name is difficult to read in the MS. - EPT
-
 
 }
