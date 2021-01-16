@@ -1,0 +1,213 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_34.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Kindred 34"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2034.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2034.html> .
+
+<#EoinAhIle>
+    a foaf:Person;
+    irishRel:nomName "Eoin a hIle";
+    irishRel:ancestorOfGroup <#ClannDomnaill>, <#ClannRaghnaill>, <#ClannGhofraigh>.
+
+<#ClannDomnaill>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Domnaill".
+
+<#ClannRaghnaill>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Raghnaill".
+
+<#ClannGhofraigh>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Ghofraigh".
+
+<#Ailin>
+    a foaf:Person;
+    irishRel:nomName "Ailin".
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rdfs:comment "do bi dall fadeoigh".
+
+<#Domnall>
+    a foaf:Person;
+    irishRel:nomName "Domnall".
+
+<#AengusRiabach>
+    a foaf:Person;
+    irishRel:nomName "Aengus Riabhach".
+
+<#Dubghall>
+    a foaf:Person;
+    irishRel:nomName "Dubghall".
+
+<#Ruaidri>
+    a foaf:Person;
+    irishRel:nomName "Ruaidri"
+    rel:childOf <#Ailin>.
+
+<#Uisdiun>
+    a foaf:Person;
+    irishRel:nomName "Uisdiun";
+    rel:childOf <#Ailin>.
+
+<#Eoin-4ced7b60>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#Ailin>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Raghnaill>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_33.trig#Domnaill>.
+
+<#Raghnaill>
+    a foaf:Person;
+    irishRel:genName "Raghnaill";
+    irishRel:nomName "Raghnall";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Raghnaill>.
+
+<#Eoin-072fd310>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#Domnaill>, <#Lainglib>.
+
+<#Lainglib>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Lainglib";
+    rel:childOf <#Cimair>.
+
+<#Cimair>
+    a foaf:Person;
+    irishRel:genName "Cimair";
+    irishRel:nomName "Mac Cimair".
+
+<#AlasdairNaCaille>
+    a foaf:Person;
+    irishRel:nomName "Alasdair na Caille";
+    rel:childOf <#Domnaill>.
+
+<#AengusOghar>
+    a foaf:Person;
+    irishRel:nomName "Aenghus Oghar";
+    rel:childOf <#Domnaill>.
+
+<#EoinDall>
+    a foaf:Person;
+    irishRel:nomName "Eoin Dall";
+    owl:sameAs <#Eoin>, <#Eoin-072fd310>;
+    rel:childOf [
+      a foaf:Person;
+      foaf:gender "female";
+      rel:childOf <#MhicCimi>;
+      owl:sameAs <#Lainglib>
+    ].
+
+<#MhicCimi>
+    a foaf:Person;
+    irishRel:genName "Mhic Cimi";
+    owl:sameAs <#Cimair>.
+
+<#Eoin-04ec2f30>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#EoinDall>.
+
+<#AengusRiabhach>
+    a foaf:Person;
+    irishRel:nomName "Aengus Riabhach";
+    owl:sameAs <#AengusRiabach>;
+    rdfs:comment "aen mhac maith aige";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q76060800>.
+    #Black states that this individual died in 1440, but the Wikidata entry has
+    #him dying in 1400. Is this the same person? - EPT
+
+<#AenghusOg>
+    a foaf:Person;
+    irishRel:nomName "Aenghus Og";
+    rdfs:comment "agarobusa fen am aelanach og";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q76060801>.
+    #This Wikidata identification is based on the assumption that that for
+    #<#AengusRiabhach> is accurate. - EPT
+
+_:missing-6f82ddd0
+    a foaf:person;
+    irishRel:fosterChildOf <#AenghusOg>.
+    #Here, either Dubghall Albanach Mac Mic Chathail or a previous compiler refers
+    #is talking about themselves in the first person. - EPT
+
+<#Dubgaill>
+    a foaf:Person;
+    irishRel:genName "Dubgaill";
+    irishRel:nomName "Dubgall";
+    rel:childOf <#Raghnaill-be6bddb0>;
+    owl:sameAs <#Dubghall>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Dubghuill>.
+
+<#Raghnaill-be6bddb0>
+    a foaf:Person;
+    irishRel:genName "Raghnaill";
+    irishRel:nomName "Raghnall";
+    owl:sameAs <#Raghnaill>.
+
+_:missing-dbc990f0
+    a foaf:Person;
+    rel:childOf <#Dubgaill>.
+    #The MS is illegible at this point. - EPT
+
+<#AengusRuadh>
+    a foaf:Person;
+    irishRel:nomName "Aengus Ruadh";
+    rel:childOf <#Dubgaill>.
+
+<#Gofraigh>
+    a foaf:Person;
+    irishRel:genName "Gofraigh";
+    irishRel:nomName "Gofraigh";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q75446762>.
+
+<#Aengus>
+    a foaf:Person;
+    irishRel:nomName "Aengus";
+    rel:childOf <#Gofraigh>;
+    irishRel:numChild 0;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q75388258>.
+
+<#Eoin-92925240>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#Gofraigh>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q75446759>.
+
+<#Somairle>
+    a foaf:Person;
+    irishRel:nomName "Somairle";
+    rel:childOf <#Gofraigh>.
+
+<#Ragnall>
+    a foaf:Person;
+    irishRel:nomName "Ragnall";
+    rel:childOf <#Gofraigh>;
+    owl:sameAs <#Raghnaill>.
+
+}
