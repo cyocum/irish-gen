@@ -15,7 +15,7 @@
 <>
 
     a dctype:Dataset;
-    dcterms:title "Genelach Cloinni Ladmainn"@sga;
+    dcterms:title "Genelaigh Cloinni Ladmainn"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2021.html>;
     dcterms:format "application/trig" ;
     prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2021.html> .
@@ -42,22 +42,22 @@
     a foaf:Person;
     irishRel:genName "Gilla Colaim";
     irishRel:nomName "Gilla Colaim";
-    rel:childOf <#Ladmainn>.
+    rel:childOf <#Ladhmainn>.
 
-<#Ladmainn>
+<#Ladhmainn>
     a foaf:Person;
-    irishRel:genName "Ladmainn";
-    irishRel:nomName "Ladmann";
-    rel:childOf <#Gillaspaig>;
+    irishRel:genName "Ladhmainn";
+    irishRel:nomName "Ladhmann";
+    rel:childOf <#GillaCholaim>;
     rdfs:seeAlso <https://www.poms.ac.uk/rdf/entity/Person/3204>.
     #This name is difficult to read in the MS. - EPT
 
-<#Gillaspaig>
+<#GillaCholaim>
     a foaf:Person;
-    irishRel:genName "Gillaspaig";
-    irishRel:nomName "Gilla Espaig";
+    irishRel:genName "Gilla Cholaim";
+    irishRel:nomName "Gilla Colaim";
     rel:childOf <#Ferchair>.
-    #This name seems to have been written in over "Gilla Colaim". - EPT
+    #This name is difficult to read in the MS. - EPT
 
 <#Ferchair>
     a foaf:Person;
@@ -70,77 +70,68 @@
     a foaf:Person;
     irishRel:genName "Duinn tSleibe";
     irishRel:nomName "Donn Sleibe";
-    rel:childOf <#AedAlainn>.
+    rel:childOf <#Aeda>.
     #This name is difficult to read in the MS. - EPT
 
-<#AedAlainn>
+<#Aeda>
     a foaf:Person;
-    irishRel:genName "Aed Alainn";
-    irishRel:nomName "Aed Alainn";
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
     rdfs:comment ".i. buirce";
-    rel:childOf <#Anradain>.
+    rel:childOf <#Anradhain>.
     #This name is difficult to read in the MS. - EPT
 
-<#Anradain>
+<#Anradhain>
     a foaf:Person;
-    irishRel:genName "Anradain";
-    irishRel:nomName "Anradan";
-    rel:childOf <#Flaitbertaig>.
+    irishRel:genName "Anradhain";
+    irishRel:nomName "Anradhan";
+    rel:childOf <#Fleitbertaig>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q76048219>.
 
-<#Flaitbertaig>
+<#Fleitbertaig>
     a foaf:Person;
-    irishRel:genName "Flaitbertaig";
+    irishRel:genName "Fleitbertaig";
     irishRel:nomName "Flaithbertach";
-    rel:childOf <#Connstantin>.
+    rdfs:comment "in Trosdan";
+    rel:childOf <#Muircertaig>;
+    rdfs:seeAlso <#https://www.wikidata.org/entity/Q3073239>.
     #This name is difficult to read in the MS. - EPT
 
-<#Connstantin>
+<#Muircertaig>
     a foaf:Person;
-    irishRel:genName "Connstantin";
-    irishRel:nomName "Connstantin";
-    rel:childOf <#Muiredhaigh>.
+    irishRel:genName "Muircertaig";
+    irishRel:nomName "Muirchertach";
+    rdfs:comment "Mighig";
+    rel:childOf <#Domnaill>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q75675831>.
     #This name is difficult to read in the MS. - EPT
-
-<#Muiredhaigh>
-    a foaf:Person;
-    irishRel:genName "Muiredhaigh";
-    irishRel:nomName "Muiredhach";
-    rel:childOf _:missing-cdc6a200.
-    #This name is difficult to read in the MS. - EPT
-
-_:missing-cdc6a200
-    a foaf:Person;
-    rel:childOf <#Domnaill>.
-    #The MS is illegible at this point; the space is enough for "mhic" and then a
-    #short name. - EPT
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
-    rel:childOf <#GillaCrist>.
-
-<#GillaCrist>
-    a foaf:Person;
-    irishRel:genName "Gilla Crist";
-    irishRel:nomName "Gilla Crist";
-    rel:childOf <#Murachaidh>.
-    #This name is difficult to read in the MS. - EPT
+    rel:childOf <#Murachaidh>;
+    rdfs:comment "Arda Mhachad";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1152971>.
+    #The epithet ("Arda Mhachad") is badly distorted and Black suggests that it was
+    #subsequently altered to resemble another generation in the pedigree ("mhic damhachad"). - EPT
 
 <#Murachaidh>
     a foaf:Person;
     irishRel:genName "Murachaidh";
     irishRel:nomName "Murachadh";
-    rdfs:comment ".i. Gilla Dub";
-    rel:childOf <#NeillGlunduibh>.
-    #This name and the note are difficult to read in the MS. - EPT
+    rdfs:comment "na cCochaill gCroicend";
+    rel:childOf <#NeillGlunduibh>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q733929>.
+    #This name and epithet are difficult to read in the MS. - EPT
 
 <#NeillGlunduibh>
     a foaf:Person;
     irishRel:genName "Neill Glunduibh";
     irishRel:nomName "Niall Glundubh";
     rdfs:comment "ite";
-    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#NiallGlúndub>.
+    owl:sameAs <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#NiallGlúndub>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1274033>.
     #This name and the note are difficult to read in the MS. Black's reading is based on cognate
     #pedigrees in Irish MSS. - EPT
 
