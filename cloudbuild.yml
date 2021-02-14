@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['pull', 'gcr.io/$PROJECT_ID/irish-gen-build:apache-jena-3-17', '.']
+    args: ['pull', 'gcr.io/$PROJECT_ID/irish-gen-build:apache-jena-3-17']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['run', '--volume', '/workspace:/workspace', 'gcr.io/$PROJECT_ID/irish-gen-build:apache-jena-3-17', 'bash']
 
