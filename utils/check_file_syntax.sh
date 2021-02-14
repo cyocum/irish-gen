@@ -12,7 +12,7 @@ then
     exit 1
 fi
 
-find $IRISH_GEN_HOME  \( -name '*.trig' -o -name '*.ttl' \) -print0 | xargs -0 $JENA_HOME/bin/riot --validate --verbose | egrep -B 1 "WARN|ERROR"
+find $IRISH_GEN_HOME  \( -name '*.trig' -o -name '*.ttl' \) -print0 | xargs -0 $JENA_HOME/bin/riot --validate --verbose 2>&1 | egrep -B 1 "WARN|ERROR"
 
 # if grep does not match something, it will set $? to 1 but
 # in our case if it does not find an ERROR or WARN then that

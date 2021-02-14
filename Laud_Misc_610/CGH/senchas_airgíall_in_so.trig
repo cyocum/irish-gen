@@ -9,6 +9,7 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix biro: <http://purl.org/spar/biro/> .
 
 
 <http://example.com/Laud_Misc_610/CGH> {
@@ -170,10 +171,12 @@
     irishRel:nomName "Mennet Cruithnech";
     irishRel:fosterParentOf <#CollaMend>;
     irishRel:ancestorOfGroup <#DálMennet>;
-    owl:sameAs <http://example.com/LL/h_airgialla.trig#MennetChruithnech>.
+    owl:sameAs <http://example.com/LL/h_airgialla.trig#MennetChruithnech>;
+    biro:isReferencedBy <https://lccn.loc.gov/99054974> .        
 
-# Thomas Charles-Edwards (ECR, p.516) takes Mennet to be a woman. As there is no
-# obvious evidence for this here, this is being left unencoded for now. EPT
+<< <#MennetCruithnech>
+        rdfs:comment "Thomas Charles-Edwards (ECR, p.516) takes Mennet to be a woman. As there is no obvious evidence for this here, this is being left unencoded for now." >>
+        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#MugdornDub>
     a foaf:Person;
