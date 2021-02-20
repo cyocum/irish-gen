@@ -460,9 +460,10 @@
     dcterms:title "Longais maro Muiredach"@sga;
     owl:sameAs <http://www.vanhamel.nl/codecs/Nidu_d%C3%ADr_dermait>;
     prov:wasAttributedTo <#Laidcenn>.
-#Here, a stanza from a longer poem (already given in extenso) is being cited.
-#Can we still say owl:sameAs? Or can we make a new ontology to denote an extract
-#from a larger work? EPT
+
+<< <#LongaismaroMuiredach>
+        rdfs:comment "Here, a stanza from a longer poem (already given in extenso) is being cited. Can we still say owl:sameAs? Or can we make a new ontology to denote an extract from a larger work?" >>
+        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Laidcenn>
     a foaf:Person;
@@ -473,9 +474,11 @@
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Cenél Cróchnae";
     rdfs:comment "Cenél Cróchnae in cethramad prím-aiccme Úa m-Bairrchi. Is fri Ú Breccáin a tóebud." .
-#I'm not sure about this. "Is fri Ú Breccáin a tóebud" seems to mean literally
-# "They are near to Uí Breccáin", that is, they are closely related to Uí Breccáin.
-# But does that mean they are descended from Breccán? Maybe foaf:knows,instead? EPT
+
+<< <#CenélCróchnae>
+        rdfs:comment "Cenél Cróchnae in cethramad prím-aiccme Úa m-Bairrchi. Is fri Ú Breccáin a tóebud." >>
+        rdfs:comment "I'm not sure about this. 'Is fri Ú Breccáin a tóebud' seems to mean literally 'They are near to Uí Breccáin', that is, they are closely related to Uí Breccáin. But does that mean they are descended from Breccán? Maybe foaf:knows,instead?" ;
+        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Breccáin-a5bf6e90>
     a foaf:Person;
@@ -1987,7 +1990,9 @@
     owl:sameAs <#Éinne>;
     owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#Emini>.
 
-# "Émíne" versus "Éinne" could easily be caused by minim confusion. EPT
+<< <#Émíne-faf99e10>
+            rdfs:comment "'Émíne' versus 'Éinne' could easily be caused by minim confusion." >>
+            prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Góedelán>
     a foaf:Person;
@@ -2118,10 +2123,9 @@
     rel:descendantOf <#Cathair>;
     owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#Oengusa-bf1c454a>.
 
-# It is not clear who <#Oengusa> is. The last mentioned "Oengus" is
-# Oengus mac Meic Erca, but the list of sons here does not include Eochaid Guinech,
-# who is his son earlier in this section. For now, it seems inconceivable that
-# he wouldn't be a descendant of Cathair Már, in this section of the genealogies. EPT
+<< <#Oengusa>
+            rdfs:comment "It is not clear who <#Oengusa> is. The last mentioned 'Oengus' is Oengus mac Meic Erca, but the list of sons here does not include Eochaid Guinech, who is his son earlier in this section. For now, it seems inconceivable that he wouldn't be a descendant of Cathair Már, in this section of the genealogies." >>
+            prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Trian>
     a foaf:Person;
@@ -2165,7 +2169,9 @@
     rel:employerOf <#Áed>;
     owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#Cormaic-a3f93360>.
 
-# Obviously one thinks of Cormac mac Airt, but there is no evidence for this. EPT
+<< <#Chormaic>
+            rdfs:comment "Obviously one thinks of Cormac mac Airt, but there is no evidence for this." >>
+            prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#FintanMéth>
     a foaf:Person;
@@ -2255,9 +2261,10 @@
     irishRel:populationGroupName "Chenéol Chruaichne";
     rdfs:comment "Úi Gestáin immorro do Chenéol Chruaichne dóib".
 
-# It is not clear what "dóib" ("of them") points to. Úi Gestain? Dál Mesin Corb?
-# Or does it mean "for them", "as far as they are concerned" i.e. just a meaningless
-# emphatic? I have gone for Dál Mesin Corb as the overarching kin-group, for now. EPT
+<< <#ChenéolChruaichne>
+            rdfs:comment "Úi Gestáin immorro do Chenéol Chruaichne dóib" >>
+            rdfs:comment "It is not clear what 'dóib' ('of them') points to. Úi Gestain? Dál Mesin Corb? Or does it mean 'for them', 'as far as they are concerned' i.e. just a meaningless emphatic? I have gone for Dál Mesin Corb as the overarching kin-group, for now. " ;
+            prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#ÚiNémáin>
     a irishRel:PopulationGroup;
@@ -2509,11 +2516,9 @@
     owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#AedaDemnuin>;
     irishRel:ancestorOfGroup <#ÚiMóenaigCoisseScaible>.
 
-# So, above, in para. 222, we read "Rotha m. Óengusa a quo Úi Fétháin i m-Maig
-# Dá Chonn ro bí Áed di muin Chormaic ind ríg". There, I took "di muin Chormaic" to mean
-# "on account of Cormac" (i.e. by order of Cormac). However, here we have an individual called
-# "Áed Demuin", followed by the name "Cormac". Could a scribe have got confused somewhere? If so,
-# where...? EPT
+<< <#ÁedaDemuin>
+            rdfs:comment "So, above, in para. 222, we read 'Rotha m. Óengusa a quo Úi Fétháin i m-Maig Dá Chonn ro bí Áed di muin Chormaic ind ríg'. There, I took 'di muin Chormaic' to mean 'on account of Cormac' (i.e. by order of Cormac). However, here we have an individual called 'Áed Demuin', followed by the name 'Cormac'. Could a scribe have got confused somewhere? If so, where...?" >>
+            prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Cormaic-094cdea0>
     a foaf:Person;
@@ -2775,7 +2780,9 @@
     owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#Cormaic-e1ec9ca7>;
     foaf:knows <#ChomgallBendchuir>.
 
-# gaveLandTo EPT
+<< <#Cormac-96ea6d80>
+            rdfs:comment "gaveLandTo" >>
+            prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Diarmata-a6dac7d0>
     a foaf:Person;
