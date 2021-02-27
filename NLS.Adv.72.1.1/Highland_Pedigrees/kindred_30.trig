@@ -38,11 +38,14 @@
 _:missing-f07cff10
     a foaf:Person;
     foaf:gender "female";
-    rel:childOf [
-        a foaf:Person;
-        rel:childOf <#Ruaidri>
-        #Possibly "rel:descendantOf": is this a patronymic or a surname? - EPT
-    ].
+    rel:childOf _:missing-7d80e1b0.
+
+_:missing-7d80e1b0
+    a foaf:Person;
+    rel:childOf <#Ruaidri>.
+    << _:missing-7d80e1b0
+          rdfs:comment "Possibly rel:descendantOf: is this a patronymic or a surname?" >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#Ruaidri>
     a foaf:Person;
@@ -82,8 +85,9 @@ _:missing-799cc190
     irishRel:genName "Galtair";
     rdfs:comment ".i. righ Alban";
     rdfs:seeAlso <#https://www.wikidata.org/entity/Q958548>.
-    #There is no king of Scots on record called "Walter". This should possibly read
-    #".i. [sdibard] righ Alban", referring to Walter, 3rd High Steward of Scotland (ob. 1246). - EPT
+    << <#Galtair>
+          rdfs:comment "There is no king of Scots on record called 'Walter'. This should possibly read '.i. [sdibard] righ Alban', referring to Walter, 3rd High Steward of Scotland (ob. 1246)." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#GillaEspaig>
     a foaf:Person;
