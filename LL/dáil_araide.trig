@@ -8,7 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
-
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 
 
@@ -278,8 +278,10 @@
     irishRel:nomName "Fiachaid Findamnas";
     owl:sameAs <http://example.com/LL/dail_araide.trig#FhiachachFind>;
     rel:childOf <#IrielGlunmair>.
-# in dail_araide this are two people #FhiachachFind
-# and #Amnais could this be mistranscription? - CY
+
+<< <#FiachachFindamnais>
+        rdfs:comment "in dail_araide this are two people #FhiachachFind and #Amnais could this be mistranscription?" >>
+        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 <#IrielGlunmair>
     a foaf:Person;
