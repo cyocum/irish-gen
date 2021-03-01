@@ -1,0 +1,115 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_25.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Do Genelach Cloinni Guaire"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2025.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2025.html> .
+
+<#Ceallach>
+    a foaf:Person;
+    irishRel:nomName "Ceallach";
+    rel:childOf <#Poil>.
+
+<#Poil>
+    a foaf:Person;
+    irishRel:genName "Poil";
+    irishRel:nomName "Pol";
+    rel:childOf <#Cellaigh>.
+
+<#Cellaigh>
+    a foaf:Person;
+    irishRel:genName "Cellaigh";
+    irishRel:nomName "Cellach";
+    rdfs:comment "in einigh";
+    rel:childOf <#Turcaill>.
+
+<#Turcaill>
+    a foaf:Person;
+    irishRel:genName "Turcaill";
+    irishRel:nomName "Turcall";
+    rel:childOf <#Ceallaigh>.
+
+<#Ceallaigh>
+    a foaf:Person;
+    irishRel:genName "Ceallaigh";
+    irishRel:nomName "Ceallach";
+    rel:childOf <#Guaire>.
+
+<#Guaire>
+    a foaf:Person;
+    irishRel:genName "Guaire";
+    irishRel:nomName "Guaire";
+    rel:childOf <#Cormaic>.
+
+<#Cormaic>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Airbertaigh>.
+
+<#Airbertaigh>
+    a foaf:Person;
+    irishRel:genName "Airbertaigh";
+    irishRel:nomName "Airbertach";
+    rel:childOf <#Murchaidh>.
+
+<#Murchaidh>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Ferchair>.
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Beathain>.
+
+<#Beathain>
+    a foaf:Person;
+    irishRel:genName "Beathain";
+    irishRel:nomName "Beathan";
+    rel:childOf <#Finnlaeich>.
+
+<#Finnlaeich>
+    a foaf:Person;
+    irishRel:genName "Finnlaeich";
+    irishRel:nomName "Finnlaech";
+    rel:childOf <#FerchairFada>.
+
+<#FerchairFada>
+    a foaf:Person;
+    irishRel:genName "Ferchair Fada";
+    irishRel:nomName "Ferchar Fada";
+    rel:childOf <#Feradaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#FercairFada>.
+
+<#Feradaigh>
+    a foaf:Person;
+    irishRel:genName "Feradaigh";
+    irishRel:nomName "Feradach";
+    rel:childOf <#Ferghusa>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
+
+<#Ferghusa>
+    a foaf:Person;
+    irishRel:genName "Ferghusa";
+    irishRel:nomName "Ferghus";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fergusa>.
+
+}

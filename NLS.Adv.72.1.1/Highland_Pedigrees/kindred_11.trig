@@ -1,0 +1,74 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_11.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Cainnig"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2011.html>, <https://www.1467manuscript.co.uk/MacKenzie%20for%20web2.pdf>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2011.html>, <https://www.1467manuscript.co.uk/MacKenzie%20for%20web2.pdf>.
+
+<#Murchadh>
+    a foaf:Person;
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Cainnigh>.
+
+<#Cainnigh>
+    a foaf:Person;
+    irishRel:genName "Cainnigh";
+    rel:childOf <#Eoin>.
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#Cainnigh-9863bc80>.
+
+<#Cainnigh-9863bc80>
+    a foaf:Person;
+    irishRel:genName "Cainnigh";
+    rel:childOf <#Aonghusa>.
+
+<#Aonghusa>
+    a foaf:Person;
+    irishRel:genName "Aonghusa";
+    irishRel:nomName "Aonghus";
+    rel:childOf <#Cristin>.
+
+<#Cristin>
+    a foaf:Person;
+    irishRel:genName "Cristin";
+    rel:childOf <#Agad>.
+
+<#Agad>
+    a foaf:Person;
+    irishRel:genName "Agad";
+    rel:childOf <#GillaEoinOig>.
+    << <#Agad>
+          rdfs:comment "Black suggests that this is the Norse name, 'Agaðr'." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#GillaEoinOig>
+    a foaf:Person;
+    irishRel:genName "Gilla Eoin Oig";
+    irishRel:nomName "Gilla Eoin Og";
+    rel:childOf <#GillaEoinNahAird>.
+
+<#GillaEoinNahAird>
+    a foaf:Person;
+    irishRel:genName "Gilla Eoin na hAird";
+    irishRel:nomName "Gilla Eoin na hAird".
+
+}

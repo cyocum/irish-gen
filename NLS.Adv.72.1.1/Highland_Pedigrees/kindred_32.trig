@@ -1,0 +1,127 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_32.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Kinded 32"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2032.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2032.html> .
+
+<#RaghnallFinn>
+    a foaf:Person;
+    irishRel:nomName "Raghnall Finn";
+    rel:childOf <#Ruaidri>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q21751050>.
+
+<#Ruaidri>
+    a foaf:Person;
+    irishRel:genName "Ruaidri";
+    irishRel:nomName "Ruaidri";
+    rel:childOf <#Ailin>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q23884905>.
+
+<#Ailin>
+    a foaf:Person;
+    irishRel:genName "Ailin";
+    irishRel:nomName "Ailen";
+    rel:childOf <#Ruaidri-0c602f50>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q4697013>.
+
+<#Ruaidri-0c602f50>
+    a foaf:Person;
+    irishRel:genName "Ruaidri";
+    irishRel:nomName "Ruaidri";
+    rel:childOf <#Raghnaill>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q976433>;
+    rdfs:seeAlso <https://www.poms.ac.uk/rdf/entity/Person/6566>.
+
+<#Raghnaill>
+    a foaf:Person;
+    irishRel:genName "Raghnaill";
+    irishRel:nomName "Raghnall";
+    rel:childOf <#Shomairle>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Raghnaill>.
+
+<#Shomairle>
+    a foaf:Person;
+    irishRel:genName "Shomairle";
+    irishRel:nomName "Somairle";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Somhairle>.
+
+<#RagnallFinn>
+    a foaf:Person;
+    irishRel:nomName "Ragnall Finn";
+    rdfs:comment "ele";
+    rel:childOf <#Loclainn>.
+
+<#Loclainn>
+    a foaf:Person;
+    irishRel:genName "Loclainn";
+    irishRel:nomName "Lochlann";
+    rel:childOf <#Ailin>.
+
+<#Ailin>
+    a foaf:Person;
+    irishRel:genName "Ailin";
+    irishRel:nomName "Ailen";
+    rel:childOf <#Ragnaill>.
+
+<#Ragnaill>
+    a foaf:Person;
+    irishRel:genName "Ragnaill";
+    irishRel:nomName "Ragnall".
+    << <#Ragnaill>
+          rdfs:comment "I am currently unable to identify this individual: Raghnall son of Somhairle (<#Raghnaill>) would be the most natural identification, in terms of reading these pedigrees but he does not have a son called Ailen in other sources." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Fearchar>
+    a foaf:Person;
+    irishRel:nomName "Fearchar";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchadh>
+    a foaf:Person;
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#Dubgaill>.
+
+<#Dubgaill>
+    a foaf:Person;
+    irishRel:genName "Dubgaill";
+    irishRel:nomName "Dubgall";
+    rel:childOf <#Ruaidri-85a6de20>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q3041001>.
+
+<#Ruaidri-85a6de20>
+    a foaf:Person;
+    irishRel:genName "Ruaidri";
+    irishRel:nomName "Ruaidri";
+    rel:childOf <#Ragnaill-a23162e0>;
+    owl:sameAs <#Ruaidri-0c602f50>.
+
+<#Ragnaill-a23162e0>
+    a foaf:Person;
+    irishRel:genName "Ragnaill";
+    irishRel:nomName "Ragnall";
+    owl:sameAs <#Raghnaill>;
+    rdfs:comment "condrecaid Clann Ruaidri 7 Clann Domnaill 7 Clann Dubghaill".
+
+}

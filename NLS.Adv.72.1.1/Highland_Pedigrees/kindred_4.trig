@@ -1,0 +1,228 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_4.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Nechtain"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2004.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2004.html> .
+
+<#Muiris>
+    a foaf:Person;
+    irishRel:nomName "Muiris";
+    rel:childOf <#MaelColaim>.
+
+<#MaelColaim>
+    a foaf:Person;
+    irishRel:genName "Mael Colaim";
+    irishRel:nomName "Mael Colaim";
+    rel:childOf <#Muiris>.
+
+<#Muiris-20ab7930>
+    a foaf:Person;
+    irishRel:genName "Muiris";
+    irishRel:nomName "Muiris";
+    rel:childOf <#MaelColaim-20ab7930>.
+
+<#MaelColaim-20ab7930>
+    a foaf:Person;
+    irishRel:genName "Mael Colaim";
+    irishRel:nomName "Mael Colaim";
+    rel:childOf <#Gibuin>.
+
+<#Gibuin>
+    a foaf:Person;
+    irishRel:genName "Gibuin";
+    irishRel:nomName "Gibun";
+    rel:childOf <#Ferchair>.
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#GillaCrist>.
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#Domhnaill>.
+
+<#Domhnaill>
+    a foaf:Person;
+    irishRel:genName "Domhnaill";
+    irishRel:nomName "Domhnall";
+    rel:childOf <#Neachtain>.
+
+<#Neachtain>
+    a foaf:Person;
+    irishRel:genName "Neachtain";
+    irishRel:nomName "Neachtan";
+    rel:childOf <#Artuir>.
+
+<#Artuir>
+    a foaf:Person;
+    irishRel:genName "Neachtain";
+    irishRel:nomName "Neachtan";
+    rel:childOf <#Gibuin-d0a9cb70>.
+
+<#Gibuin-d0a9cb70>
+    a foaf:Person;
+    irishRel:genName "Gibuin";
+    irishRel:nomName "Gibun";
+    rel:childOf <#Nechtain>.
+
+<#Nechtain>
+    a foaf:Person;
+    irishRel:genName "Nechtain";
+    irishRel:nomName "Nechtan";
+    rel:childOf <#Isog>.
+
+<#Isog>
+    a foaf:Person;
+    irishRel:genName "Isog";
+    irishRel:nomName "Isog";
+    rel:childOf <#GillaMartain>.
+
+<#GillaMartain>
+    a foaf:Person;
+    irishRel:genName "Gilla Martain";
+    irishRel:nomName "Gilla Martain";
+    rel:childOf <#Aenghusa>.
+
+<#Aenghusa>
+    a foaf:Person;
+    irishRel:genName "Aenghusa";
+    irishRel:nomName "Aenghus";
+    rel:childOf <#Imhair>.
+    << <#Aenghusa>
+          rdfs:comment "This name is marked in the MS; Black suggests that it is to be swapped with 'Imhair'." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Imhair>
+    a foaf:Person;
+    irishRel:genName "Imhair";
+    irishRel:nomName "Imhar";
+    rel:childOf <#NeachtainOig>.
+    << <#Imhair>
+          rdfs:comment "This name is marked in the MS; Black suggests that it is to be swapped with 'Aenghusa'." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#NeachtainOig>
+    a foaf:Person;
+    irishRel:genName "Neachtain Oig";
+    irishRel:nomName "Neachtan Og";
+    rel:childOf <#NechtainMedhin>.
+
+<#NechtainMedhin>
+    a foaf:Person;
+    irishRel:genName "Nechtain Medhin";
+    irishRel:nomName "Nechtan Medhon";
+    rel:childOf <#NechtainMhoir>.
+
+<#NechtainMhoir>
+    a foaf:Person;
+    irishRel:genName "Nechtain Mhoir";
+    irishRel:nomName "Nechtan Mor";
+    rel:childOf <#DomnaillDuinn>.
+
+<#DomnaillDuinn>
+    a foaf:Person;
+    irishRel:genName "Domnaill Duinn";
+    irishRel:nomName "Domnall Donn";
+    rel:childOf <#FerchairFhada>.
+
+<#FerchairFhada>
+    a foaf:Person;
+    irishRel:genName "Ferchair Fhada";
+    irishRel:nomName "Ferchar Fada";
+    rel:childOf <#Feradhaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#FercairFada>.
+
+<#Feradhaigh>
+    a foaf:Person;
+    irishRel:genName "Feradhaigh";
+    irishRel:nomName "Feradhach";
+    rel:childOf <#Ferghusa>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
+
+<#Ferghusa>
+    a foaf:Person;
+    irishRel:genName "Ferghusa";
+    irishRel:nomName "Ferghus";
+    rel:childOf <#Nechtain-15ed28c0>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fergusa>.
+
+<#Nechtain-15ed28c0>
+    a foaf:Person;
+    irishRel:genName "Ferghusa";
+    irishRel:nomName "Ferghus";
+    rel:childOf <#Colmain>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Shneachtain>.
+
+<#Colmain>
+    a foaf:Person;
+    irishRel:genName "Colmain";
+    irishRel:nomName "Colman";
+    rel:childOf <#Buadain>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Colmain>.
+
+<#Buadain>
+    a foaf:Person;
+    irishRel:genName "Buadain";
+    irishRel:nomName "Buadan";
+    rel:childOf <#Eathach>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Buadain>.
+
+<#Eathach>
+    a foaf:Person;
+    irishRel:genName "Eathach";
+    irishRel:nomName "Eochu";
+    rel:childOf <#Muiredhaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Eathhach>.
+    << <#Eathach>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Muiredhaigh>
+    a foaf:Person;
+    irishRel:genName "Muiredhaigh";
+    irishRel:nomName "Muiredhach";
+    rel:childOf <#LoairnMoir>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Muiredhaigh>.
+
+<#LoairnMoir>
+    a foaf:Person;
+    irishRel:genName "Loairn Moir";
+    irishRel:nomName "Loarn Mor";
+    rel:childOf <#Eirc>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#LoairnMair>.
+
+<#Eirc>
+    a foaf:Person;
+    irishRel:genName "Eirc";
+    irishRel:nomName "Erc";
+    rel:childOf <#EchachMuinreamair>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_1.trig#Eirc>.
+
+<#EchachMuinreamair>
+    a foaf:Person;
+    irishRel:genName "Echach Muinreamair";
+    irishRel:nomName "Eochu Muinreamar";
+    rel:childOf <#EchachMuinreamair>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_1.trig#EathachMuinnremair>.
+
+}

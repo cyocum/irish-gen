@@ -1,0 +1,112 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_9.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Mhic Eoghain na hOitreach annso"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2009.html>, <https://www.1467manuscript.co.uk/MacEwen%20for%20web.pdf>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2009.html>, <https://www.1467manuscript.co.uk/MacEwen%20for%20web.pdf>.
+
+<#Baltar>
+    a foaf:Person;
+    irishRel:nomName "Baltar";
+    rel:childOf <#Eain>.
+
+<#Eain>
+    a foaf:Person;
+    irishRel:genName "Eain";
+    irishRel:nomName "Eain";
+    rel:childOf <#Eogain>.
+    << <#Eain>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#GillaEpspaig>.
+
+<#GillaEpspaig>
+    a foaf:Person;
+    irishRel:genName "Gilla Epspaig";
+    irishRel:nomName "Gilla Espaig";
+    rel:childOf <#Eagan>.
+    << <#GillaEpspaig>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Eagan>
+    a foaf:Person;
+    irishRel:genName "Eagan";
+    irishRel:nomName "Eoghan";
+    rel:childOf <#Donnchaidh>.
+    << <#Eagan>
+          rdfs:comment "This name is difficult to read in the MS. The most natural transcription would lead to Crisdin but, due to the visual ambiguities and the poor attestation of this name, and based on comparison with other genealogies, Black hypothesises 'Eagan' (< Eoghan) instead." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf [
+      a foaf:Person;
+      rel:childOf [
+        a foaf:Person;
+        rel:childOf <#DonnSleibe>
+        ];
+    ].
+    << <#Donnchaidh>
+          rdfs:comment "This name is illegible in the MS when viewed normally, but can be clearly read through spectral imaging. Black suggests that the name 'Donnchaidh' has been deliberately deleted." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#DonnSleibe>
+    a foaf:Person;
+    irishRel:genName "Donn Sleibe";
+    irishRel:nomName "Donn Sleibe";
+    rel:childOf <#AodaAlainn>.
+    << <#DonnSleibe>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#AodaAlainn>
+    a foaf:Person;
+    irishRel:genName "Aoda Alainn";
+    irishRel:nomName "Aod Alainn";
+    rdfs:comment "renabartha an buirrce";
+    rel:childOf <#Anradan>.
+    << <#AodaAlainn>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Anradan>
+    a foaf:Person;
+    irishRel:genName "Anradan";
+    rel:childOf <#Flaitbertac>.
+    << <#Anradan>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Flaitbertac>
+    a foaf:Person;
+    irishRel:genName "Flaitbertac";
+    irishRel:nomName "Flaithbertach";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q3073239>.
+    << <#Flaitbertac>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+}

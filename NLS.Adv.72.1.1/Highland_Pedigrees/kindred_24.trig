@@ -1,0 +1,198 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_24.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Do Genilach Cloinni Gil Eain"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2024.html>, <https://www.1467manuscript.co.uk/Maclean.pdf>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2024.html>, <https://www.1467manuscript.co.uk/Maclean.pdf>.
+
+<#Laclain>
+    a foaf:Person;
+    irishRel:nomName "Laclain";
+    rel:childOf <#Eoin>.
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#GilleColaim>.
+
+<#GilleColaim>
+    a foaf:Person;
+    irishRel:genName "Gille Colaim";
+    irishRel:nomName "Gilla Colaim";
+    rel:childOf <#MaeilIsog>.
+    << <#GilleColaim>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#MaeilIsog>
+    a foaf:Person;
+    irishRel:genName "Maeil Isog";
+    irishRel:nomName "Mael Isog";
+    rel:childOf <#GillaEoin>.
+
+<#GillaEoin>
+    a foaf:Person;
+    irishRel:genName "Gilla Eoin";
+    irishRel:nomName "Gilla Eoin";
+    rel:childOf <#MhicRait>.
+
+<#MhicRait>
+    a foaf:Person;
+    irishRel:genName "Mhic Rait";
+    irishRel:nomName "Mac Raith";
+    rel:childOf <#Suthain>.
+
+<#Suthain>
+    a foaf:Person;
+    irishRel:genName "Suthain";
+    irishRel:nomName "Suthain";
+    rel:childOf <#Neill>.
+
+<#Neill>
+    a foaf:Person;
+    irishRel:genName "Neill";
+    irishRel:nomName "Niall";
+    rel:childOf <#ConDuiligh>.
+
+<#ConDuiligh>
+    a IrishTitle:Abb;
+    irishRel:genName "Con Duiligh";
+    irishRel:nomName "Cu Duiligh";
+    rdfs:comment "ab Lesa Mor sanab I";
+    foaf:title "ab"@sga, "abbot"@eng;
+    rel:childOf <#RaingRuaidh>.
+
+<#RaingRuaidh>
+    a foaf:Person;
+    irishRel:genName "Raing Ruaidh";
+    irishRel:nomName "Rang Ruadh";
+    rel:childOf <#SanDubgaill>.
+    << <#RaingRuaidh>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#SenDubgaill>
+    a foaf:Person;
+    irishRel:genName "Seandubgaill";
+    irishRel:nomName "Seandubgall";
+    rdfs:comment "a lis";
+    rel:childOf <#FherchairAbradraidh>.
+    << <#SenDubgaill>
+          rdfs:comment "Black remarks that the comment 'a lis' can be taken as 'a[n] lis' (of the monastic garden) or as 'a Lis' (from Lismore). Other MSS have 'Sgoinne' (of Scone) at this point, which is only compatible with the first reading, unless SeanDubghall moved between monasteries in the course of his career." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#FherchairAbradruaidh>
+    a foaf:Person;
+    irishRel:genName "Fherchair Abradruaidh";
+    irishRel:nomName "Ferchar Abradruadh";
+    rel:childOf <#Feradhaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_6.trig#FerchairAbradruadh>.
+    << <#FherchairAbradruaidh>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Feradhaigh>
+    a foaf:Person;
+    irishRel:genName "Feradhaigh";
+    irishRel:nomName "Feradhach";
+    rel:childOf <#Fergusa>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
+
+<#Fergusa>
+    a foaf:Person;
+    irishRel:genName "Fergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Nechtain>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fergusa>.
+    << <#Fergusa>
+          rdfs:comment "This name is illegible in the MS, although the preceding 'mhic' can be read; Black derives it mainly from readings in other MSS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Nechtain>
+    a foaf:Person;
+    irishRel:genName "Nechtain";
+    irishRel:nomName "Nechtan";
+    rel:childOf <#Colmain>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Shneachtain>.
+
+<#Colmain>
+    a foaf:Person;
+    irishRel:genName "Colmain";
+    irishRel:nomName "Colman";
+    rel:childOf <#Leatain>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Colmain>.
+
+<#Leatain>
+    a foaf:Person;
+    irishRel:genName "Leatain";
+    irishRel:nomName "Leatan";
+    rdfs:comment ".i. [...]";
+    rel:childOf <#Morgainn>.
+    << <#Leatain>
+          rdfs:comment "A comment has been added after this name, but, beyond the 'ed ón' abbreviation, it is now illegible. The name Buadan appears in the equivalent location in Kindred 2. Black suggests it has been adapted here to create another ancestor-figure for the MacLeans (i.e. the Leathanaich)." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Morgainn>
+    a foaf:Person;
+    irishRel:genName "Morgainn";
+    irishRel:nomName "Morgann";
+    rel:childOf <#Domhnaill>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Morgainn>.
+
+<#Domhnaill>
+    a foaf:Person;
+    irishRel:genName "Domhnaill";
+    irishRel:nomName "Domhnall";
+    rel:childOf <#Cathmhael>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Domnaill>.
+
+<#Cathmhael>
+    a foaf:Person;
+    irishRel:genName "Cathmhael";
+    irishRel:nomName "Cathmhael";
+    rel:childOf <#Ruaidri>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Cathmhaeil>.
+
+<#Ruaidri>
+    a foaf:Person;
+    irishRel:genName "Ruaidri";
+    irishRel:nomName "Ruaidri";
+    rel:childOf _:missing-d8b35630;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Ruaidhri>.
+    << <#Ruaidri>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+_:missing-d8b35630
+    a foaf:Person;
+    rel:childOf <#Egac>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Aircheallaigh>.
+    << _:missing-d8b35630
+          rdfs:comment "This name is partly illegible in the MS '[...]rullaigh'; Black takes it as a form of 'Aircheallach'." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Egac>
+    a foaf:Person;
+    irishRel:genName "Egac".
+    << <#Egac>
+          rdfs:comment "This name is difficult to read in the MS. Black reads 'cgac' and takes this as a corruption of 'Echach' (genitive of Eochu). I am prepared to read the first 'c' as 'e'. Black suggests that this is Eochaidh Muinreamhair, on account of his appearance in the MacLean pedigree in other MSS. However, in these other MSS, Eochaidh Muinreamhair appears in a different context within the pedigree. This identification thus does not seem justified." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+}

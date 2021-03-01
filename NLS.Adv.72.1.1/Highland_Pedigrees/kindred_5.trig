@@ -1,0 +1,246 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_5.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Do Genelach Cloinni an Toisigh .i. Clann Gilla Chatan"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2005.html>,  <https://www.1467manuscript.co.uk/MackintoshDec2020.pdf>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2005.html>, <https://www.1467manuscript.co.uk/MackintoshDec2020.pdf>.
+
+<#Uilliam>
+    a foaf:Person;
+    irishRel:nomName "Uilliam";
+    rel:childOf <#Uilliam-ccea1240>.
+    << <#Uilliam>
+          rdfs:comment "The relevant section of the MS is now difficult to read and this relies on an earlier transcription by W. F. Skene, backed up by spectral imaging." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Domnall>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#Uilliam-ccea1240>.
+    << <#Domnall>
+          rdfs:comment "The relevant section of the MS is now difficult to read and this relies on an earlier transcription by W. F. Skene, backed up by spectral imaging." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Uilliam-ccea1240>
+    a foaf:Person;
+    irishRel:genName "Uilliam";
+    irishRel:nomName "Uilliam";
+    rel:childOf <#Ferchair>.
+
+<#Ferchair>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Uilliam-2c0266b0>.
+
+<#Uilliam-2c0266b0>
+    a foaf:Person;
+    irishRel:genName "Uilliam";
+    irishRel:nomName "Uilliam";
+    rel:childOf <#GillaMichil>.
+
+<#GillaMichil>
+    a foaf:Person;
+    irishRel:genName "Gilla Michil";
+    irishRel:nomName "Gilla Michil";
+    rel:childOf <#Ferchair-589efe90>.
+
+<#Ferchair-589efe90>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#Oisiab>.
+
+<#Oisiab>
+    a foaf:Person;
+    irishRel:genName "Oisiab";
+    rel:childOf <#GillaCrist>.
+    << <#Oisiab>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#GillaCrist>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#Aigcob>.
+    << <#GillaCrist>
+          rdfs:comment "The relevant section of the MS is now difficult to read and this relies on an earlier transcription by W. F. Skene, backed up with spectral imaging." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Aigcob>
+    a foaf:Person;
+    irishRel:genName "Aigcob";
+    rel:childOf <#Eogain>.
+    << <#Aigcob>
+          rdfs:comment "The relevant section of the MS is now difficult to read and this relies on an earlier transcription by W. F. Skene, backed up with spectral imaging." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Eogain>
+    a foaf:Person;
+    irishRel:genName "Eogain";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Poil>.
+    << <#Eogain>
+          rdfs:comment "The relevant section of the MS is now difficult to read and this relies on an earlier transcription by W. F. Skene, backed up with spectral imaging." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Poil>
+    a foaf:Person;
+    irishRel:genName "Poil";
+    irishRel:nomName "Pol";
+    rel:childOf <#NeillLachlannaigh>.
+    << <#Poil>
+          rdfs:comment "This name is difficult to read in the MS. Even spectral imaging fails to reveal more than the final two letters. Black hypothesises 'Poil' based on the lack of any other known name that would fit." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#NeillLachlannaigh>
+    a foaf:Person;
+    irishRel:genName "Neill Lachlannaigh";
+    irishRel:nomName "Niall Lachlannach";
+    rel:childOf <#Suibne>.
+    << <#NeillLachlannaigh>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Suibne>
+    a foaf:Person;
+    irishRel:genName "Suibne";
+    irishRel:nomName "Suibne";
+    rel:childOf <#Oisiab-1ead0d20>.
+
+<#Oisiab-1ead0d20>
+    a foaf:Person;
+    irishRel:genName "Oisiab";
+    rel:childOf <#Leoid>.
+
+<#Leoid>
+    a foaf:Person;
+    irishRel:genName "Leoid";
+    irishRel:nomName "Leod";
+    rel:childOf <#tSead>.
+    << <#Leoid>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#tSead>
+    a foaf:Person;
+    irishRel:genName "tSead";
+    rel:childOf <#Ferchair-5e8a3bc0>.
+
+<#Ferchair-5e8a3bc0>
+    a foaf:Person;
+    irishRel:genName "Ferchair";
+    irishRel:nomName "Ferchar";
+    rel:childOf <#GillaCrist-780bc640>.
+
+<#GillaCrist-780bc640>
+    a foaf:Person;
+    irishRel:genName "Gilla Crist";
+    irishRel:nomName "Gilla Crist";
+    rel:childOf <#MaeilColaim>.
+
+<#MaeilColaim>
+    a foaf:Person;
+    irishRel:genName "Maeil Colaim";
+    irishRel:nomName "Mael Colaim";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rdfs:comment "re nabartha in caimgilla";
+    rel:childOf <#Murchaidh>.
+
+<#Murchaidh>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf <#Shuibne>.
+
+<#Shuibne>
+    a foaf:Person;
+    irishRel:genName "Shuibne";
+    irishRel:nomName "Suibne";
+    rel:childOf <#Sheadh>.
+
+<#Sheadh>
+    a foaf:Person;
+    irishRel:genName "Theadh";
+    irishRel:nomName "Seth";
+    rel:childOf <#Neachtain>.
+
+<#Neachtain>
+    a foaf:Person;
+    irishRel:genName "Neachtain";
+    irishRel:nomName "Neachtan";
+    rel:childOf <#GillaChatain>.
+
+<#GillaChatain>
+    a foaf:Person;
+    irishRel:genName "Gilla Chatain";
+    irishRel:nomName "Gilla Catain";
+    rdfs:comment "o fuilid Clann Gilla Catain";
+    irishRel:ancestorOfGroup <#ClannGillaCatain>;
+    rel:childOf <#Gallbrait>.
+
+<#ClannGillaCatain>
+    a irishRel:populationGroup;
+    irishRel:populationGroupName "Clann Gilla Catain".
+
+<#Gallbrait>
+    a foaf:Person;
+    irishRel:genName "Gallbrait";
+    irishRel:nomName "Gallbrat";
+    rel:childOf <#Diarmada>.
+
+<#Diarmada>
+    a IrishTitle:FerLéiginn;
+    irishRel:genName "Diarmada";
+    irishRel:nomName "Diarmaid";
+    rdfs:comment "re nabartha an fer leiginn";
+    foaf:title "fer léiginn"@sga, "scholar"@eng;
+    rel:childOf <#Erc>.
+
+<#Erc>
+    a foaf:Person;
+    irishRel:genName "Erc";
+    irishRel:nomName "Erc";
+    rel:childOf <#Conlaith>.
+
+<#Conlaith>
+    a foaf:Person;
+    irishRel:genName "Conlaith";
+    rel:childOf <#FerchairFhota>.
+
+<#FerchairFhota>
+    a foaf:Person;
+    irishRel:genName "Ferchair Fhota";
+    irishRel:nomName "Ferchar Fota";
+    rel:childOf <#Fearadaigh>;
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#FercairFada>.
+
+<#Fearadaigh>
+    a foaf:Person;
+    irishRel:genName "Fearadaigh";
+    irishRel:nomName "Fearadach";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
+
+}

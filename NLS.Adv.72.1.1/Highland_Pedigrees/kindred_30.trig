@@ -1,0 +1,325 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_30.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Craebsgaeiledh Cloinni Domnaill annso .i. Clann Eoin a hIle"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2030.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2030.html> .
+
+<#Eoin>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf _:missing-f07cff10.
+
+<#Ragnall>
+    a foaf:Person;
+    irishRel:nomName "Ragnall";
+    rel:childOf _:missing-f07cff10.
+
+<#Cofraigh>
+    a foaf:Person;
+    irishRel:nomName "Cofraigh";
+    rel:childOf _:missing-f07cff10.
+
+_:missing-f07cff10
+    a foaf:Person;
+    foaf:gender "female";
+    rel:childOf _:missing-7d80e1b0.
+
+_:missing-7d80e1b0
+    a foaf:Person;
+    rel:childOf <#Ruaidri>.
+    << _:missing-7d80e1b0
+          rdfs:comment "Possibly rel:descendantOf: is this a patronymic or a surname?" >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Ruaidri>
+    a foaf:Person;
+    irishRel:genName "Ruaidri";
+    irishRel:nomName "Ruaidri".
+
+<#DomnallOg>
+    a foaf:Person;
+    irishRel:nomName "Domnall Og";
+    rel:childOf _:missing-799cc190.
+
+<#Eoin-923c0260>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf _:missing-799cc190.
+
+<#Aengus>
+    a foaf:Person;
+    irishRel:nomName "Aengus";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1967485>;
+    rel:childOf _:missing-799cc190.
+
+<#Alasdair>
+    a foaf:Person;
+    irishRel:nomName "Alasdair";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q75446743>;
+    rel:childOf _:missing-799cc190.
+
+_:missing-799cc190
+    a foaf:Person;
+    foaf:gender "female";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q75268355>;
+    rel:childOf <#Galtair>.
+
+<#Galtair>
+    a foaf:Person;
+    irishRel:genName "Galtair";
+    rdfs:comment ".i. righ Alban";
+    rdfs:seeAlso <#https://www.wikidata.org/entity/Q958548>.
+    << <#Galtair>
+          rdfs:comment "There is no king of Scots on record called 'Walter'. This should possibly read '.i. [sdibard] righ Alban', referring to Walter, 3rd High Steward of Scotland (ob. 1246)." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#GillaEspaig>
+    a foaf:Person;
+    irishRel:nomName "Gilla Espaig";
+    rel:childOf <#Eoin-6b8d8de0>.
+
+<#Eoin-6b8d8de0>
+    a foaf:Person;
+    irishRel:genName "Eoin";
+    irishRel:nomName "Eoin";
+    rel:childOf <#Raghnaill>.
+
+<#Raghnaill>
+    a foaf:Person;
+    irishRel:genName "Raghnaill";
+    irishRel:nomName "Raghnall";
+    rel:childOf <#AlasdairOig>.
+
+<#AlasdairOig>
+    a foaf:Person;
+    irishRel:genName "Alasdair Oig";
+    irishRel:nomName "Alasdair Og";
+    rel:childOf <#AengusaMoir>;
+    owl:sameAs <#Alasdair>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q2833747>.
+
+<#AengusaMoir>
+    a foaf:Person;
+    irishRel:genName "Aengusa Moir";
+    irishRel:nomName "Aengus Mor";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q1967485>.
+
+<#Gofraigh>
+    a foaf:Person;
+    irishRel:nomName "Gofraigh";
+    rel:childOf <#Aenghusa>.
+
+<#Aenghusa>
+    a foaf:Person;
+    irishRel:genName "Aenghusa";
+    irishRel:nomName "Aenghus";
+    rel:childOf <#AlasdairOig-12b77040>.
+
+<#AlasdairOig-12b77040>
+    a foaf:Person;
+    irishRel:genName "Alasdair Oig";
+    irishRel:nomName "Alasdair Og";
+    rel:childOf <#AengusaMoir-21d3b1b0>;
+    owl:sameAs <#AlasdairOig>.
+
+<#AengusaMoir-21d3b1b0>
+    a foaf:Person;
+    irishRel:genName "Aengusa Moir";
+    irishRel:nomName "Aengus Mor";
+    owl:sameAs <#AengusaMoir>.
+
+<#Somairle>
+    a foaf:Person;
+    irishRel:nomName "Somairle";
+    rel:childOf <#GillaBrigde>.
+
+<#GillaBrigde>
+    a foaf:Person;
+    irishRel:genName "Gilla Brigde";
+    irishRel:nomName "Gilla Brigde";
+    rel:childOf <#Gofraigh-1940c130>.
+
+<#Gofraigh-1940c130>
+    a foaf:Person;
+    irishRel:genName "Gofraigh";
+    irishRel:nomName "Gofraigh";
+    rel:childOf <#AlasdairMhoir>.
+
+<#AlasdairMhoir>
+    a foaf:Person;
+    irishRel:genName "Alasdair Mhoir";
+    irishRel:nomName "Alasdair Mor".
+
+<#Domnall-f5b07310>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#Alasdair-ef9d1f00>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q5290259>.
+
+<#Alasdair-ef9d1f00>
+    a foaf:Person;
+    irishRel:genName "Alasdair";
+    irishRel:nomName "Alasdair";
+    rel:childOf <#Domnaill>;
+    owl:sameAs <#AlasdairMhoir>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q4708438>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Ragnaill>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q3036055>.
+
+<#Ragnaill>
+    a foaf:Person;
+    irishRel:genName "Ragnaill";
+    irishRel:nomName "Ragnall";
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q3417500>.
+
+<#Donnchadh>
+    a foaf:Person;
+    irishRel:nomName "Donnchadh";
+    owl:sameAs <#Donnchaidh>;
+    rel:childOf <#Alasdair-87dd68b0>.
+
+<#Eoin-dc569f60>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    owl:sameAs <#Eoin>;
+    rel:childOf <#Alasdair-87dd68b0>.
+
+<#Alasdair-87dd68b0>
+    a foaf:Person;
+    irishRel:genName "Alasdair";
+    irishRel:nomName "Alasdair";
+    rel:childOf <#Domhnaill>;
+    owl:sameAs <#Alasdair-ef9d1f00>.
+
+<#Domhnaill>
+    a foaf:Person;
+    irishRel:genName "Domhnaill";
+    irishRel:nomName "Domhnall";
+    owl:sameAs <#Domnaill>;
+    rel:childOf <#Raghnaill-bbd4efd0>.
+
+<#Raghnaill-bbd4efd0>
+    a foaf:Person;
+    irishRel:genName "Raghnaill";
+    irishRel:nomName "Raghnall";
+    owl:sameAs <#Ragnaill>.
+
+<#Eoin-7514a490>
+    a foaf:Person;
+    irishRel:nomName "Eoin";
+    rel:childOf <#Donnchaidh>.
+
+<#Gillespaig>
+    a foaf:Person;
+    irishRel:nomName "Gillespaig";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#Alasdair-b4e995d0>.
+
+<#Alasdair-b4e995d0>
+    a foaf:Person;
+    irishRel:genName "Alasdair";
+    irishRel:nomName "Alasdair";
+    rel:childOf <#Domnaill-c29445e0>;
+    owl:sameAs <#Alasdair-ef9d1f00>.
+
+<#Domnaill-c29445e0>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Ragnaill-e1bddf80>;
+    owl:sameAs <#Domnaill>.
+
+<#Ragnaill-e1bddf80>
+    a foaf:Person;
+    irishRel:genName "Ragnaill";
+    irishRel:nomName "Ragnall";
+    owl:sameAs <#Ragnaill>.
+
+<#Toirrdealbhach>
+    a foaf:Person;
+    irishRel:nomName "Toirrdealbhach";
+    rel:childOf <#Eachainn>.
+
+<#Loclann>
+    a foaf:Person;
+    irishRel:nomName "Loclann";
+    rel:childOf <#Eachainn>.
+
+<#Eachainn>
+    a foaf:Person;
+    irishRel:genName "Eachainn";
+    irishRel:nomName "Eachann";
+    rel:childOf <#Alasdair-2d86f730>.
+
+<#Alasdair-2d86f730>
+    a foaf:Person;
+    irishRel:genName "Alasdair";
+    irishRel:nomName "Alasdair";
+    rel:childOf <#Domnaill-400a3160>;
+    owl:sameAs <#Alasdair-ef9d1f00>.
+
+<#Domnaill-400a3160>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Ragnaill-58a8d5f0>;
+    owl:sameAs <#Domnaill>.
+
+<#Ragnaill-58a8d5f0>
+    a foaf:Person;
+    irishRel:genName "Ragnaill";
+    irishRel:nomName "Ragnall";
+    owl:sameAs <#Ragnaill>.
+
+<#Domnall-8567c2e0>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#Aengusa>.
+
+<#Aengusa>
+    a foaf:Person;
+    irishRel:genName "Aengusa";
+    irishRel:nomName "Aengus";
+    rel:childOf <#EoinSprangaigh>.
+
+<#EoinSprangaigh>
+    a foaf:Person;
+    irishRel:genName "Eoin Spangaigh";
+    irishRel:nomName "Eoin Sprangach";
+    rel:child <#AengusaMoir-6013d550>;
+    owl:sameAs <#Eoin-923c0260>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q5980617>.
+
+<#AengusaMoir-6013d550>
+    a foaf:Person;
+    irishRel:genName "Aengusa Moir";
+    irishRel:nomName "Aengus Mor";
+    owl:sameAs <#AengusaMoir>.
+
+}

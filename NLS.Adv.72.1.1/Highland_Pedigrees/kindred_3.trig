@@ -1,0 +1,54 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_3.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Kindred 3"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/Kindred%2003.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/Kindred%2003.html> .
+
+<#MacBethadh>
+    a foaf:Person;
+    irishRel:nomName "Mac Bethadh";
+    rel:childOf <#Finnlaeich>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q244403>.
+
+<#Finnlaeich>
+    a foaf:Person;
+    irishRel:genName "Finnlaeich";
+    irishRel:nomName "Finnlaech";
+    rel:childOf <#Ruaidhri>;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q325259>.
+
+<#Ruaidhri>
+    a foaf:Person;
+    irishRel:genName "Ruaidhri";
+    irishRel:nomName "Ruaidhri";
+    rel:childOf <#Domnaill>.
+
+<#Domnaill>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Morgainn>.
+
+<#Morgainn>
+    a foaf:Person;
+    irishRel:genName "Morgainn";
+    irishRel:nomName "Morgann";
+    owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Morgainn>.
+
+}

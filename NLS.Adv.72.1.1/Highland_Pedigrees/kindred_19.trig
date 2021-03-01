@@ -1,0 +1,135 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_19.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Earrainn"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2019.html>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2019.html> .
+
+<#GillePadraic>
+    a foaf:Person;
+    irishRel:nomName "Gille Padraic";
+    rel:childOf <#Cormaig>.
+
+<#Cormaig>
+    a foaf:Person;
+    irishRel:genName "Cormaig";
+    irishRel:nomName "Cormac";
+    rel:childOf <#GillaPadraigeBarra>.
+
+<#GillaPadraigeBarra>
+    a foaf:Person;
+    irishRel:genName "Gilla Padraige Barra";
+    irishRel:nomName "Gilla Padraige Barra";
+    rel:childOf <#Eogainn>.
+
+<#Eogainn>
+    a foaf:Person;
+    irishRel:genName "Eogainn";
+    irishRel:nomName "Eogan";
+    rel:childOf <#Aranilg>.
+
+<#Aranilg>
+    a foaf:Person;
+    irishRel:genName "Aranilg";
+    rel:childOf <#Mainne>.
+
+<#Mainne>
+    a foaf:Person;
+    irishRel:genName "Mainne";
+    irishRel:nomName "Maine";
+    rel:childOf <#Tormoid>.
+    << <#Mainne>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Tormoid>
+    a foaf:Person;
+    irishRel:genName "Tormoid";
+    irishRel:nomName "Tormod";
+    rel:childOf <#ConBethad>.
+    << <#Tormoid>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#ConBethad>
+    a foaf:Person;
+    irishRel:genName "Con Bethad";
+    irishRel:nomName "Cú Bethad";
+    rel:childOf <#ConBethadh>.
+    << <#ConBethad>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Murchaidh>
+    a foaf:Person;
+    irishRel:genName "Murchaidh";
+    irishRel:nomName "Murchadh";
+    rel:childOf _:missing-d5d54720.
+
+_:missing-d5d54720
+    a foaf:Person;
+    rel:childOf <#Eoghain>.
+    << _:missing-d5d54720
+          rdfs:comment "This name ('t--?---') is illegible in the MS. Black suggests that 'Rormoid' would fit satisfactorily." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Eoghain>
+    a foaf:Person;
+    irishRel:genName "Eoghain";
+    irishRel:nomName "Eoghan";
+    rel:childOf <#Lamrainn>.
+
+<#Lamrainn>
+    a foaf:Person;
+    irishRel:genName "Lamrainn";
+    irishRel:nomName "Lamrann";
+    rdfs:comment ".g.";
+    rel:childOf <#Tocmoit>.
+    << <#Lamrainn>
+          rdfs:comment "This name is difficult to read in the MS. The 'g' could stand for an epithet (e.g. 'guirm')." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Tocmoit>
+    a foaf:Person;
+    irishRel:genName "Tocmoit";
+    irishRel:nomName "Tocmot";
+    rel:childOf <#Baltair>.
+    << <#Tocmoit>
+          rdfs:comment "Black suggests that this name may originally have been 'Tormoid', although the 'c' seems to have been written intentionally." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Baltair>
+    a foaf:Person;
+    irishRel:genName "Baltair";
+    irishRel:nomName "Baltar";
+    rel:childOf <#Mainne-a44554b0>.
+
+<#Mainne-a44554b0>
+    a foaf:Person;
+    irishRel:genName "Mainne";
+    irishRel:nomName "Mainne";
+    rel:childOf <#Ile>.
+
+<#Ile>
+    a foaf:Person;
+    irishRel:genName "Ile".
+    << <#Ile>
+          rdfs:comment "Black suggests that this name could be 'Ailella', with the initial 'i' being the back-stroke of an 'a' and letters forming the last syllable being lost to the right." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+}

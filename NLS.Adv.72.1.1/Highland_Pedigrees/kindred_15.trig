@@ -1,0 +1,125 @@
+@base <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_15.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+<http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cloinni Cailin ann so"@sga;
+    dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2015.html>, <https://www.1467manuscript.co.uk/campbells.pdf>;
+    dcterms:format "application/trig" ;
+    prov:asDerivedFrom <https://www.1467manuscript.co.uk/kindred%2015.html>, <https://www.1467manuscript.co.uk/campbells.pdf>.
+
+<#CailinOg>
+    a foaf:Person;
+    irishRel:nomName "Cailin Og";
+    rel:childOf <#GilleEaspuig>.
+
+<#GilleEaspuig>
+    a foaf:Person;
+    irishRel:genName "Gille Easpuig";
+    irishRel:nomName "Gille Easpuig";
+    rel:childOf <#Cailin>.
+
+<#Cailin>
+    a foaf:Person;
+    irishRel:genName "Cailin";
+    irishRel:nomName "Cailin";
+    rel:childOf <#Ailin>.
+
+<#Ailin>
+    a foaf:Person;
+    irishRel:genName "Ailin";
+    irishRel:nomName "Ailin";
+    rel:childOf <#Neill>.
+
+<#Neill>
+    a foaf:Person;
+    irishRel:genName "Neill";
+    irishRel:nomName "Niall";
+    rel:childOf <#AilinMoir>.
+
+<#AilinMoir>
+    a foaf:Person;
+    irishRel:genName "Ailin Moir";
+    irishRel:nomName "Ailin Mor";
+    rel:childOf <#GilleEspuig>.
+
+<#GilleEspuig>
+    a foaf:Person;
+    irishRel:genName "Gille Espuig";
+    irishRel:nomName "Gille Espuig";
+    rel:childOf <#Dubgaill>.
+
+<#Dubgaill>
+    a foaf:Person;
+    irishRel:genName "Dubgaill";
+    irishRel:nomName "Dubgall";
+    rel:childOf <#Donnchaidh>.
+
+<#Donnchaidh>
+    a foaf:Person;
+    irishRel:genName "Donnchaidh";
+    irishRel:nomName "Donnchadh";
+    rel:childOf <#GilleEaspuig-488a3380>.
+
+<#GilleEaspuig-488a3380>
+    a foaf:Person;
+    irishRel:genName "Gille Easpuig";
+    irishRel:nomName "Gille Easpuig";
+    rel:childOf <#GilleColaim>.
+
+<#GilleColaim>
+    a foaf:Person;
+    irishRel:genName "Gille Colaim";
+    irishRel:nomName "Gille Colaim";
+    rdfs:comment "renabartha mac Duibne";
+    rel:childOf <#Duibne>.
+
+<#Duibne>
+    a foaf:Person;
+    irishRel:genName "Duibne";
+    irishRel:nomName "Duibne";
+    rel:childOf <#Eirenain>.
+
+<#Eirenain>
+    a foaf:Person;
+    irishRel:genName "Eirenain";
+    irishRel:nomName "Eirenan";
+    rel:childOf <#Meirbi>.
+    << <#Eirenain>
+          rdfs:comment "This name is difficult to read in the MS." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+<#Meirbi>
+    a foaf:Person;
+    irishRel:genName "Meirbi";
+    irishRel:nomName "Meirbe";
+    rel:childOf <#Artuir>.
+
+<#Artuir>
+    a foaf:Person;
+    irishRel:genName "Artuir";
+    irishRel:nomName "Artur";
+    rel:childOf <#Iubair>.
+
+<#Iubair>
+    a foaf:Person;
+    irishRel:genName "Iubair";
+    irishRel:nomName "Iubar";
+    rdfs:comment ".i. righ in domain gan rusan".
+    << <#Iubair>
+          rdfs:comment "Black amends the final word of the comment to 'imresan'." >>
+          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+
+}
