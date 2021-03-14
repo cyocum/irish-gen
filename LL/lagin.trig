@@ -21,11 +21,47 @@
     dcterms:format "application/trig" ;
     prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text001.html> .
 
+<#LabraidLongsech-3f7f9a10>
+    a irishTitle:Rí;
+    irishRel:nomName "Labraid Longsech".
+
+<#NadBuidb-757dc6a0>
+    a irishTitle:Rí;
+    irishRel:nomName "Nad Buidb";
+    rel:childOf <#EircBuadaig>;
+    irishRel:descendantOfGroup <#ÚiDega>.
+
+<#EircBuadaig>
+    a foaf:Person;
+    irishRel:nomName "Erc Buadach".
+
+<#ÚiDega>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Úi Dega".
+
+<#Ladcend>
+    a foaf:Person;
+    irishRel:nomName "Ladcend";
+    rel:childOf <#Baircheda>;
+    foaf:title "prímfhili h-Erenn"@sga, "lead poet of Ireland"@eng;
+    owl:sameAs <http://example.com/Rawl_B502/de_regibus_lagenorum.trig#Laidcenn>.
+
+<#Baircheda>
+    a foaf:Person;
+    irishRel:genName "Baircheda";
+    owl:sameAs <http://example.com/Rawl_B502/de_regibus_lagenorum.trig#Bairceda>.
+
+<#DálAraide>
+    a irishRel:PopulationGroup;
+    irishRel:populationGroupName "Dál Araide";
+    owl:sameAs <http://example.com/Rawl_B502/section_11.trig#Dáln-Araide>.
+
 <#LabraidLongsechMoen>
     a foaf:Person;
     irishRel:nomName "Labraid Longsech Moen";
     rel:childOf <#AilellaAne>;
-    rdfs:comment "oenmc Ailella Ane".
+    rdfs:comment "oenmc Ailella Ane";
+    owl:sameAs <#LabraidLongsech-3f7f9a10>.
 
 <#AilellaAne>
     a foaf:Person;
@@ -321,7 +357,8 @@
 
 <#NadBuidb>
     a irishTitle:Rí ;
-    irishRel:nomName "Nad Buidb" .
+    irishRel:nomName "Nad Buidb" ;
+    owl:sameAs <#NadBuidb-757dc6a0>.
 
 <#LabraidLongsech-f0c2f840>
     a foaf:Person;
@@ -332,6 +369,7 @@
       a foaf:Person;
       foaf:gender "female";
       rdfs:comment "ingen rig Fer Morca";
+      owl:sameAs <#Moriath>;
       rel:childOf [
         a irishTitle:Rí;
         rdfs:comment "rig Fer Morca";
@@ -339,7 +377,18 @@
         ];
     ].
 
-#POEM: Ni ceilt ceis ceol de chruitt Chraptini
+<#Moriath>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Moriath";
+    rel:spouseOf <#Máin>;
+    prov:hadPrimarySource <https://www.vanhamel.nl/codecs/Ní_celt_ceis>.
+
+<#Máin>
+    a foaf:Person;
+    irishRel:genName "Máin";
+    owl:sameAs <#LabraidLongsechMoen>;
+    prov:hadPrimarySource <https://www.vanhamel.nl/codecs/Ní_celt_ceis>.
 
 #POEM: Domnais co coic asa
 
