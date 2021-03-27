@@ -1361,13 +1361,17 @@
     a foaf:Person;
     irishRel:nomName "Maelfithrig";
     rel:childOf <#ÁedaÚaridnaig>;
-    irishRel:numChild 2;
-    rel:parentOf [
-      a foaf:Person;
-      rdfs:comment "ní hétur cia hainm in maic aile";
-    ];
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MáelFithrich>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#MaeleFithrig>.
+
+<#Maelfithrig-ec96db84>
+    owl:sameAs <#Maelfithrig>;
+    irishRel:numChild 2;
+    rel:parentOf [
+         a foaf:Person;
+         rdfs:comment "ní hétur cia hainm in maic aile";
+    ] .            
+
 
 <#SílMáilefithrig>
     a irishRel:PopulationGroup;
@@ -1395,7 +1399,6 @@
     irishRel:nomName "Níall Frosach";
     rel:childOf <#Fergal>;
     rdfs:comment "ótá ind rígrad";
-    irishRel:numChild 5;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#NiallFrosach>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillFhrosaig>.
 
@@ -1427,6 +1430,7 @@
     a foaf:Person;
     irishRel:nomName "Colcu";
     rel:childOf <#Fergal>;
+    irishRel:ancestorOfGroup <#ClannCholcan>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Colgu>.
 
 <#ClannCholcan>
@@ -1434,18 +1438,27 @@
     irishRel:populationGroupName "Clann Cholcan";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ClannColgan>.
 
+<#NéillFrossaig>
+    owl:sameAs <#NíallFrosach>;
+    irishRel:genName "Néill Frossaig" ;
+    irishRel:numChild 5;
+    rel:childOf <#Fergaile>.
+
+<#Fergaile>
+    owl:sameAs <#Fergal>;
+    irishRel:genName "Fergaile" .        
+
 <#ÁedOrdnide>
     a foaf:Person;
     irishRel:nomName "Áed Ordnide";
-    rel:childOf <#NíallFrosach>;
-    irishRel:numChild 5;
+    rel:childOf <#NéillFrossaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ÁedOirnidi>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#AedaOrdnidi>.
 
 <#Colmán>
     a foaf:Person;
     irishRel:nomName "Colmán";
-    rel:childOf <#NíallFrosach>;
+    rel:childOf <#NéillFrossaig>;
     irishRel:ancestorOfGroup <#ClannColmáin>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Colmán>.
 
@@ -1457,7 +1470,7 @@
 <#Ferchar>
     a foaf:Person;
     irishRel:nomName "Ferchar";
-    rel:childOf <#NíallFrosach>;
+    rel:childOf <#NéillFrossaig>;
     irishRel:ancestorOfGroup <#MuinterDúinbó>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Ferchar>.
 
@@ -1470,7 +1483,7 @@
     a foaf:Person;
     irishRel:nomName "Muircerthach";
     irishRel:nomName "Muircertach";
-    rel:childOf <#NíallFrosach>;
+    rel:childOf <#NéillFrossaig>;
     irishRel:ancestorOfGroup <#ClannMuirchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Muirchertach>.
 
@@ -1480,19 +1493,23 @@
     rdfs:comment "Locha Enaig";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ClannMuirchertaichLochaEnaich>.
 
+<#ÁedaOrdnide>
+    owl:sameAs <#ÁedOrdnide>;
+    irishRel:numChild 5;
+    irishRel:genName "Áeda Ordnide" .
+
 <#NíallKaille>
     a foaf:Person;
     irishRel:nomName "Níall Kaille";
-    rel:childOf <#ÁedOrdnide>;
+    rel:childOf <#ÁedaOrdnide>;
     foaf:title "rí Érenn"@sga, "king of Ireland"@eng;
-    irishRel:numChild 6;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#NiallKaille>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillKaille>.
 
 <#Maeldúin-d678daa0>
     a foaf:Person;
     irishRel:nomName "Maeldúin";
-    rel:childOf <#ÁedOrdnide>;
+    rel:childOf <#ÁedaOrdnide>;
     irishRel:ancestorOfGroup <#SílMáiledúin>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MaílDúin>.
 
@@ -1540,25 +1557,29 @@
     rdfs:comment "dianid ferann Dúin Druing inn-Inis Eogain";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MáelKalland>.
 
+<#NéillKalle>
+    owl:sameAs <#NíallKaille>;
+    irishRel:genName "Néill Kalle";
+    irishRel:numChild 6 .        
+
 <#ÁedFinnlíath>
     a foaf:Person;
     irishRel:nomName "Áed Finnlíath";
     foaf:title "rí Hérenn"@sga, "king of Ireland"@eng;
-    rel:childOf <#NíallKaille>;
-    irishRel:numChild 2;
+    rel:childOf <#NéillKalle>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ÁedFindliath>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#AedaFindleith>.
 
 <#Dubindrecht>
     a foaf:Person;
-    irishRel:nomName "DubIndrecht";
-    rel:childOf <#NíallKaille>;
+    irishRel:nomName "Dubindrecht";
+    rel:childOf <#NéillKalle>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#DubIndrecht>.
 
 <#Óengus-e67db510>
     a foaf:Person;
     irishRel:nomName "Óengus";
-    rel:childOf <#NíallKaille>;
+    rel:childOf <#NéillKalle>;
     irishRel:ancestorOfGroup <#CenélnÓengusa>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Óengus-f0480130>.
 
@@ -1571,7 +1592,7 @@
 <#Muirchertach>
     a foaf:Person;
     irishRel:nomName "Muirchertach";
-    rel:childOf <#NíallKaille>;
+    rel:childOf <#NéillKalle>;
     irishRel:ancestorOfGroup <#CenélMurchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Muircherdach-cae8f496>.
 
@@ -1584,7 +1605,7 @@
 <#Flaithbertach>
     a foaf:Person;
     irishRel:nomName "Flaithbertach";
-    rel:childOf <#NíallKaille>;
+    rel:childOf <#NéillKalle>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Flaithbertach>.
 
 <#Congalach>
@@ -1601,7 +1622,7 @@
 <#Bráen>
     a foaf:Person;
     irishRel:nomName "Bráen";
-    rel:childOf <#NíallKaille>;
+    rel:childOf <#NéillKalle>;
     irishRel:ancestorOfGroup <#CenélBroén>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Bróen>.
 
@@ -1611,12 +1632,16 @@
     rdfs:comment "i mMaig Ítha";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ClannBróen>.
 
+<#ÁedaFinnláeith>
+    owl:sameAs <#ÁedFinnlíath>;
+    irishRel:genName "Áeda Finnláeith" ;
+    irishRel:numChild 2 .        
+
 <#NíallGlúndubh>
     a foaf:Person;
     foaf:title "rí Ailig"@sga, "king of Ailech"@eng;
     irishRel:nomName "Níall Glúndubh";
-    rel:childOf <#ÁedFinnlíath>;
-    irishRel:numChild 3;
+    rel:childOf <#ÁedaFinnláeith>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#NiallGlúndub>.
 
 <#Domnall-f0480130>
@@ -1627,49 +1652,62 @@
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Domnall-99c469c8>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#Domnaill-29a43c40>.
 
+<#NéillGlúnduibh>
+    owl:sameAs <#NíallGlúndubh>;
+    irishRel:genName "Néill Glúnduibh" ;
+    irishRel:numChild 3 .
+
 <#Muircertach>
     a foaf:Person;
     irishRel:nomName "Muircertach";
-    rel:childOf <#NíallGlúndubh>;
-    irishRel:numChild 4;
+    rel:childOf <#NéillGlúnduibh>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Muirchertach-6d660e19>.
 
 <#Conaing>
     a foaf:Person;
     irishRel:nomName "Conaing";
-    rel:childOf <#NíallGlúndubh>;
+    rel:childOf <#NéillGlúnduibh>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Conaing>.
 
 <#Maelciarán>
     a foaf:Person;
     irishRel:nomName "Maelciarán";
-    rel:childOf <#NíallGlúndubh>;
+    rel:childOf <#NéillGlúnduibh>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MáelCiarán>.
+
+<#Murchertaig>
+    owl:sameAs <#Muircertach>;
+    irishRel:numChild 4 ;
+    rel:childOf <#NéillGlúnduib>.
+
+<#NéillGlúnduib>
+    owl:sameAs <#NéillGlúnduibh>;
+    irishRel:genName "Néill Glúnduib" .        
 
 <#Domnall-a9859da0>
     a foaf:Person;
     foaf:title "rí Hérend"@sga, "king of Ireland"@eng;
     irishRel:nomName "Domnall";
-    rel:childOf <#Muircertach>;
+    rel:childOf <#Murchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Domnall-45677f0c>.
 
 <#Flaithbertach>
     a foaf:Person;
     foaf:title "rí Ailig"@sga, "king of Ailech"@eng;
     irishRel:nomName "Domnall";
-    rel:childOf <#Muircertach>;
+    rel:childOf <#Murchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Flaithbertach-5d2b6b6f>.
 
 <#Murchad>
     a foaf:Person;
     irishRel:nomName "Murchad";
-    rel:childOf <#Muircertach>;
+    rel:childOf <#Murchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Murchad>.
 
 <#Flann>
     a foaf:Person;
     irishRel:nomName "Flann";
-    rel:childOf <#Muircertach>;
+    rel:childOf <#Murchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Flann>.
 
 <#Domnaill-f2785c70>
@@ -1712,9 +1750,14 @@
 <#Fergal-d8fa9090>
     a foaf:Person;
     irishRel:nomName "Fergal";
-    foaf:title "rí Ailig"@ega, "king of Ailech"@eng;
-    rel:childOf <#Domnaill-156941d0>;
+    foaf:title "rí Ailig"@sga, "king of Ailech"@eng;
+    rel:childOf <#Domnaill-df7f80fe>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Fergal>.
+
+<#Domnaill-df7f80fe>
+    owl:sameAs <#Domnaill-156941d0>;
+    irishRel:genName "Domnaill" ;        
+    foaf:title "rí Ailig"@sga .
 
 <#Dondchadh>
     a foaf:Person;
@@ -1725,8 +1768,12 @@
 <#Dubgall>
     a foaf:Person;
     irishRel:nomName "Dubgall";
-    rel:childOf <#Dondchadh>;
+    rel:childOf <#Dondchada>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Dubgall>.
+
+<#Dondchada>
+    owl:sameAs <#Dondchadh>;
+    irishRel:genName "Dondchada" .
 
 <#Flann-38e7e840>
     a foaf:Person;
@@ -1756,8 +1803,12 @@
 <#Murchad>
     a foaf:Person;
     irishRel:nomName "Murchad";
-    rel:descendantOf <#Flaithbertach-b2654960>;
+    rel:descendantOf <#Flaithbertaig-dd59564d>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MurchadÚaFlaithbertaig>.
+
+<#Flaithbertaig-dd59564d>
+    owl:sameAs <#Flaithbertach-b2654960>;
+    irishRel:genName "Flaithbertaig" .        
 
 <#Maelmithig>
     a foaf:Person;
@@ -1783,7 +1834,12 @@
     irishRel:nomName "Baetán";
     owl:sameAs <#Baetán>;
     irishRel:numChild 5;
+    rel:childOf <#Muirchertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Báetáin>.
+
+<#Muirchertaig>
+    a foaf:Person ;
+    irishRel:genName "Muirchertaig" .        
 
 <#Forgus-52654220>
     a foaf:Person;
@@ -1833,6 +1889,7 @@
     a foaf:Personal;
     irishRel:nomName "Colmán Rímid";
     rel:childOf <#Baetáin>;
+    rel:parentOf <#Fína>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ColmánRímid>.
 
 <#Fína>
@@ -1918,12 +1975,12 @@
 <#ÁedOllán>
     a foaf:Person;
     irishRel:nomName "Áed Ollán";
-    rel:childOf <#Fergaile>;
+    rel:childOf <#Fergaile-4e727049>;
     irishRel:numChild 2;
     owl:sameAs <#ÁedAlláin>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ÁedAlláin>.
 
-<#Fergaile>
+<#Fergaile-4e727049>
     a foaf:Person;
     irishRel:genName "Fergaile";
     irishRel:nomName "Fergal";
@@ -1965,13 +2022,14 @@
     a foaf:Person;
     irishRel:nomName "Murchad";
     rel:childOf <#Máeldúin>;
-    irishRel:numChild 3;
+    irishRel:ancestorOfGroup <#HúiChellaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Murchad-20e8e0c0>.
 
 <#Fland-d8670310>
     a foaf:Person;
     irishRel:nomName "Fland";
     rel:childOf <#Máeldúin>;
+    irishRel:ancestorOfGroup <#HúiHuidir>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Flann-e80d1c6a>.
 
 <#HúiChellaig>
@@ -1983,18 +2041,20 @@
     a irishRel:PopulationGroup;
     irishRel:populationGroupName "Húi Huidir";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Úih-Uidir>.
+<#Murchad-f6a942a0>
+    owl:sameAs <#Murchad-be5ac4c0>;
+    irishRel:numChild 3 .       
 
 <#Rúadri>
     a foaf:Person;
     irishRel:nomName "Rúadri";
-    rel:childOf <#Murchad-be5ac4c0>;
-    irishRel:numChild 2;
+    rel:childOf <#Murchad-f6a942a0>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Ruadrí>.
 
 <#Muredach-a038e1b0>
     a foaf:Person;
     irishRel:nomName "Murchad";
-    rel:childOf <#Murchad-be5ac4c0>;
+    rel:childOf <#Murchad-f6a942a0>;
     irishRel:ancestorOf <#HúiFlathbertaig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Muiredach-d1261310>.
 
@@ -2006,8 +2066,7 @@
 <#Erulb>
     a foaf:Person;
     irishRel:nomName "Erulb";
-    rel:childOf <#Murchad-be5ac4c0>;
-    owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Erulb>;
+    rel:childOf <#Murchad-f6a942a0>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Erulb>;
     irishRel:ancestorOfGroup <#MuinterEruilb>.
 
@@ -2016,10 +2075,14 @@
     irishRel:populationGroupName "Muinter Eruilb";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MuinterEruilb>.
 
+<#Rúadri-73c55b38>
+    owl:sameAs <#Rúadri>;
+    irishRel:numChild 2 .        
+
 <#Maelcíaráin>
     a foaf:Person;
     irishRel:nomName "Maelcíaráin";
-    rel:childOf <#Rúadri>;
+    rel:childOf <#Rúadri-73c55b38>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MáelCiaráin>;
     irishRel:ancestorOfGroup <#HóaDomnall>.
 
@@ -2037,7 +2100,6 @@
     a foaf:Person;
     irishRel:nomName "Bern";
     rel:childOf <#Rúadri>;
-    irishRel:numChild 3;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Bern>.
 
 <#MuinterBirn>
@@ -2045,10 +2107,14 @@
     irishRel:populationGroupName "Muinter Birn";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#MuinterBirn>.
 
+<#Bern-5a5d0a0a>
+    owl:sameAs <#Bern>;
+    irishRel:numChild 3 .
+
 <#Anbed>
     a foaf:Person;
     irishRel:nomName "Anbed";
-    rel:childOf <#Bern>;
+    rel:childOf <#Bern-5a5d0a0a>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Anféid>;
     irishRel:ancestorOfGroup <#TellachnAnbed>.
 
@@ -2060,7 +2126,8 @@
 <#CernGuthmar>
     a foaf:Person;
     irishRel:nomName "Cern Guthmar";
-    rel:childOf <#Bern>;
+    rel:childOf <#Bern-5a5d0a0a>;
+    irishRel:ancestorOfGroup <#TellachCruind>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#CernGuthmár>.
 
 <#TellachCruind>
@@ -2077,6 +2144,7 @@
     a foaf:Person;
     irishRel:nomName "Donnacáin";
     rel:childOf <#Bern>;
+    irishRel:ancestorOfGroup <#TellachDonnacáin>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Donnacán>.
 
 <#TellachDonnacáin>
