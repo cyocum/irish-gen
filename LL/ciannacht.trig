@@ -8,9 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-     
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -24,80 +22,100 @@
      <Murchertach>
         a foaf:Person;
         irishRel:nomName "Murchertach";
+        agrelon:hasParent <Tadc-8c2a89f0> ;
         rel:childOf <Tadc-8c2a89f0>.
 
      <Tadc-8c2a89f0>
         a foaf:Person;
         irishRel:nomName "Tadc";
         irishRel:genName "Taidc";
+        agrelon:hasParent <CuDub> ;
         rel:childOf <CuDub>.
         
-     <CuDub>
+     <ConDuib>
         a foaf:Person;
         irishRel:nomName "Cú Dub";
         irishRel:genName "Con Duib";
-        rel:childOf <MaelFhábaill>.
+        agrelon:hasParent <MaelFhábaill> ;
+        rel:childOf <MaelFhábaill> ;
+        owl:sameAs <CuDub> .
+        # This used the nominative rather than the genative in the original URL
+        # the sameAs was created to ensure any links continued to work. - CY
         
      <MaelFhábaill>
         a foaf:Person;
         irishRel:genName "Máel Fhábaill";
         irishRel:nomName "Máel Fáball";
+        agrelon:hasParent <Innerge> ;
         rel:childOf <Innerge>.
 
      <Innerge>
         a foaf:Person;
-        irishRel:nomName "Innerge";
+        irishRel:genName "Innerge";
+        agrelon:hasParent <MaelTemin> ;
         rel:childOf <MaelTemin>.
         
      <MaelTemin>
         a foaf:Person;
-        irishRel:nomName "Mael Temin";
+        irishRel:genName "Mael Temin";
+        agrelon:hasParent <Dathge> ;
         rel:childOf <Dathge>.
         
      <Dathgiusa>
         a foaf:Person;
         irishRel:nomName "Dathgius";
         irishRel:genName "Dathgiusa";
+        agrelon:hasParent <Lachtain> ;
         rel:childOf <Lachtain>.
 
      <Lachtain>
         a foaf:Person;
         irishRel:nomName "Lachtan";
         irishRel:genName "Lachtain";
+        agrelon:hasParent <Fulla> ;
         rel:childOf <Fulla>.
 
      <Fhuluda>
         a foaf:Person;
         irishRel:nomName "Fulla";
         irishRel:genName "Fhuluda";
+        agrelon:hasParent <ConCellaig> ;
         rel:childOf <ConCellaig>.
 
-     <ConCellaig>
+     <Concellaig>
         a foaf:Person;
         irishRel:nomName "Cú Cellach";
         irishRel:genName "Concellaig";
-        rel:childOf <LuthLethstá>.
-        
+        agrelon:hasParent <LuthLethstá> ;
+        rel:childOf <LuthLethstá> ;
+        owl:sameAs <ConCellaig> .
+        # This used an upper case character in the original URL which was not in the MS
+        # the sameAs was created to ensure any links continued to work. - CY
+
      <LuthLethstá>
         a foaf:Person;
         irishRel:nomName "Luth Lethstá";
+        agrelon:hasParent <Crechain> ;
         rel:childOf <Crechain>.
         
      <Crechain>
         a foaf:Person;
         irishRel:nomName "Crechan";
         irishRel:genName "Crechain";
+        agrelon:hasParent <DubainCiannachta> ;
         rel:childOf <DubainCiannachta>.
 
      <DubainCiannachta>
         a foaf:Person;
         irishRel:nomName "Duban Ciannachta";
         irishRel:genName "Dubain Ciannachta";
+        agrelon:hasParent <Find> ;
         rel:childOf <Find>.
         
      <Find>
         a foaf:Person;
         irishRel:nomName "Find";
+        agrelon:hasParent <Findchain> ;
         rel:childOf <Findchain>.
         
      <Findchain>
@@ -105,6 +123,7 @@
         irishRel:nomName "Findchan";
         irishRel:genName "Findchain";
         owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Fhindchain>;
+        agrelon:hasParent <Fheic> ;
         rel:childOf <Fheic>.
         
      <Fheic>
@@ -112,6 +131,7 @@
         irishRel:genName "Fheic";
         irishRel:nomName "Fiac";
         owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Fheic>;
+        agrelon:hasParent <FindchadaUlaig-fc2cf8d0> ;
         rel:childOf <FindchadaUlaig-fc2cf8d0>.
         
      <FindchadaUlaig-fc2cf8d0>
