@@ -1,0 +1,363 @@
+@base <http://example.com/LL/de_chorcomrúad.trig#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+
+        a dctype:Dataset;
+        dcterms:title "De Chorcomrúad"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text021.html>;
+        dcterms:format "application/trig" ;
+        prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text021.html> .
+
+
+<Oscair>
+        a foaf:Person;
+        irishRel:genName "Oscar";
+        irishRel:nomName "Oscair";
+        irishRel:numChild 4.
+
+     <Conbrach>
+        a foaf:Person;
+        irishRel:nomName "Conbrach";
+        rel:childOf <Oscair>.
+
+     <Baeth>
+        a foaf:Person;
+        irishRel:nomName "Baeth";
+        rel:childOf <Oscair>.
+
+     <Fraech>
+        a foaf:Person;
+        irishRel:nomName "Fraech";
+        rel:childOf <Oscair>.
+
+     <Lugbarn>
+        a foaf:Person;
+        irishRel:nomName "Lugbarn";
+        rel:childOf <Oscair>.
+
+     <Conbracc>
+        irishRel:nomName "Conbracc";
+        owl:sameAs <Conbrach>;
+        irishRel:numChild 3.
+
+     <Bruice>
+        a foaf:Person;
+        irishRel:nomName "Bruice";
+        irishRel:numChild 1;
+        rel:childOf <Conbracc>.
+
+     <Cút>
+        a foaf:Person;
+        irishRel:nomName "Cút";
+        rel:childOf <Conbracc>.
+
+     <Linge>
+        a foaf:Person;
+        irishRel:nomName "Linge";
+        rel:childOf <Conbracc>.
+
+     <Tál>
+        a foaf:Person;
+        irishRel:nomName "Tál";
+        irishRel:numChild 2;
+        rel:childOf <Bruice>.
+
+     <MacIer>
+        a foaf:Person;
+        irishRel:nomName "Mac Ier";
+        rel:childOf <Tál>.
+
+     <Amargin>
+        a foaf:Person;
+        irishRel:nomName "Amargin";
+        irishRel:numChild 1;
+        rel:childOf <Tál>.
+
+     <Senach>
+        a foaf:Person;
+        irishRel:nomName "Senach";
+        irishRel:numChild 3;
+        rel:childOf <Amargin>.
+
+     <Senaig>
+        irishRel:nomName "Senaig";
+        owl:sameAs <Senach>.
+
+     <Fuiline>
+        a foaf:Person;
+        irishRel:nomName "Fuiline";
+        rel:childOf <Senaig>.
+
+     <Maelán>
+        a foaf:Person;
+        irishRel:nomName "Maelán";
+        rel:childOf <Senaig>.
+
+     <Cronán>
+        a foaf:Person;
+        irishRel:nomName "Cronán";
+        rel:childOf <Senaig>.
+
+     <Fulini>
+        irishRel:nomName "Fulini";
+        irishRel:numChild 1;
+        owl:sameAs <Fuiline>.
+
+     <Maeldub>
+        a foaf:Person;
+        irishRel:numChild 2;
+        irishRel:nomName "Maeldub".
+
+     <Rudrach>
+        a foaf:Person;
+        irishRel:nomName "Rudrach";
+        rel:childOf <Maeldub>.
+
+     <Maelduib>
+        irishRel:nomName "Maelduib";
+        owl:sameAs <Maeldub>.
+
+     <DubDaChrích>
+        a foaf:Person;
+        irishRel:genName "Dub Da Chrích";
+        irishRel:nomName "Maclaech";
+        rel:childOf <Maelduib>.
+
+     <DubDaLethe>
+        a foaf:Person;
+        irishRel:nomName "Dub Da Lethe";
+        rel:childOf <Maelduib>.
+
+     <Oengus>
+        a foaf:Person;
+        irishRel:nomName "Oengus";
+        rel:childOf <Maelduib>.
+
+     <Orgus>
+        a foaf:Person;
+        irishRel:nomName "Orgus";
+        rel:childOf <Maelduib>.
+
+     <Bruatiud>
+        a foaf:Person;
+        irishRel:nomName "Bruatiud";
+        rel:childOf <Flathbertaig>.
+
+     <Flathbertaig>
+        a foaf:Person;
+        irishRel:genName "Flathbertaig";
+        irishRel:nomName "Flathbertach";
+        rel:childOf <DuibChruib>.
+
+     <DuibChruib>
+        a foaf:Person;
+        irishRel:genName "Duib Chruib";
+        irishRel:nomName "Dub Crub";
+        rel:childOf <Rechtabrat>.
+
+     <Rechtabrat>
+        a foaf:Person;
+        irishRel:genName "Rechtabrat";
+        irishRel:nomName "Rechtabra".
+
+     <Longsech>
+        a foaf:Person;
+        irishRel:genName "Longsech";
+        irishRel:nomName "Longis";
+        rel:childOf <Finnachtai>.
+
+     <Finnachtai>
+        a foaf:Person;
+        irishRel:genName "Finnachtai";
+        irishRel:nomName "Finnachtae";
+        rel:childOf <Banbain>.
+
+     <Banbain>
+        a foaf:Person;
+        irishRel:genName "Banbain";
+        irishRel:nomName "Banban";
+        rel:childOf <Órgusa>.
+
+     <Órgusa>
+        a foaf:Person;
+        irishRel:genName "Órgusa";
+        irishRel:nomName "Órgus";
+        rel:childOf <DuibDaChrích-e369d262>.
+
+     <DuibDaChrích-e369d262>
+        a foaf:Person;
+        irishRel:nomName "Duib Da Chrích";
+        rel:childOf <Maclaig>.
+
+     <Maclaig>
+        a foaf:Person;
+        irishRel:genName "Maclaig";
+        irishRel:nomName "Maclach";
+        rel:childOf <DuibDaChrích-700bf86f>.
+
+     <DuibDaChrích-700bf86f>
+        a foaf:Person;
+        irishRel:nomName "Duib Da Chrích";
+        rel:childOf <Baith>.
+
+     <Baith>
+        a foaf:Person;
+        irishRel:genName "Baith";
+        irishRel:nomName "Bath";
+        rel:childOf <Fuiline-5fe2b6d7>.
+
+     <Fuiline-5fe2b6d7>
+        a foaf:Person;
+        irishRel:genName "Fuiline";
+        irishRel:nomName "Fuilin";
+        rel:childOf <SenaigMáir>.
+
+     <SenaigMáir>
+        a foaf:Person;
+        irishRel:genName "Senaig Máir";
+        irishRel:nomName "Senach Már";
+        rel:childOf <Amairgin>;
+        owl:sameAs <Senach>.
+
+     <Amairgin>
+        a foaf:Person;
+        irishRel:nomName "Amairgin";
+        rel:childOf <Thail>;
+        owl:sameAs <Amargin>.
+
+     <Thail>
+        a foaf:Person;
+        irishRel:genName "Thail";
+        irishRel:nomName "Tal";
+        rel:childOf <Bruice-403a26e0>;
+        owl:sameAs <Tál>.
+
+     <Bruice-403a26e0>
+        a foaf:Person;
+        irishRel:genName "Bruice";
+        irishRel:nomName "Bruc";
+        rel:childOf <Conbroic>;
+        owl:sameAs <Bruice>.
+
+     <Conbroic>
+        irishRel:genName "Conbroic";
+        owl:sameAs <Conbrach>;
+        irishRel:nomName "Cubroc";
+        rel:childOf <Oscair-0c00bf50>.
+
+     <Oscair-0c00bf50>
+        owl:sameAs <Oscair>;
+        irishRel:nomName "Oscar";
+        rel:childOf <Sula>.
+
+     <Sula>
+        a foaf:Person;
+        irishRel:genName "Sula";
+        irishRel:nomName "Suil".
+
+     <Cacher>
+        a foaf:Person;
+        irishRel:nomName "Cacher";
+        rel:childOf <Loegaire>.
+
+     <Loegaire>
+        a foaf:Person;
+        irishRel:nomName "Loegaire";
+        rel:childOf <Fhlandabrat>.
+
+     <Fhlandabrat>
+        a foaf:Person;
+        irishRel:genName "Fhlandabrat";
+        irishRel:nomName "Flandabrae";
+        rel:childOf <Bricceni>.
+
+     <Bricceni>
+        a foaf:Person;
+        irishRel:genName "Bricceni";
+        irishRel:nomName "Briccriu";
+        rel:childOf <Saergusa>.
+
+     <Saergusa>
+        a foaf:Person;
+        irishRel:genName "Saergusa";
+        irishRel:nomName "Saergus";
+        rel:childOf <DuibDaChrích-ac60e383>.
+
+     <DuibDaChrích-ac60e383>
+        a foaf:Person;
+        irishRel:nomName "Duib Da Chrích";
+        owl:sameAs <DuibDaChrích-700bf86f>.
+
+     <MaelsanctBrigte>
+        a foaf:Person;
+        irishRel:genName "Mael sanctBrigte";
+        irishRel:nomName "Mael sanctBrigit";
+        rel:childOf <Lathniat>.
+
+     <Lathniat>
+        a foaf:Person;
+        irishRel:genName "Lathniat";
+        irishRel:nomName "Lathniae";
+        rel:childOf <Taidg>.
+
+     <Taidg>
+        a foaf:Person;
+        irishRel:genName "Taidg";
+        irishRel:nomName "Tadg";
+        rel:childOf <Oengusa>.
+
+     <Oengusa>
+        a foaf:Person;
+        irishRel:genName "Oengusa";
+        irishRel:nomName "Oengus";
+        rel:childOf <DuibDaChrích-999cfb3e>.
+
+     <DuibDaChrích-999cfb3e>
+        a foaf:Person;
+        owl:sameAs <DuibDaChrích-700bf86f>.
+
+     << <DuibDaChrích-999cfb3e>
+        rdfs:comment "which one? there are others" >>
+        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+
+     <MaelCiarain>
+        a foaf:Person;
+        irishRel:genName "Mael Ciarain";
+        irishRel:nomName "Mael Ciaran";
+        rel:childOf <MaeleCaích>.
+
+     <MaeleCaích>
+        a foaf:Person;
+        irishRel:genName "Maele Caích";
+        irishRel:nomName "Mael Caích";
+        rel:childOf <Fhlathrúi>.
+
+     <Fhlathrúi>
+        a foaf:Person;
+        irishRel:genName "Fhlathrúi";
+        irishRel:nomName "Flathroe";
+        rel:childOf <DuibDaLethi>.
+
+     <DuibDaLethi>
+        a foaf:Person;
+        irishRel:nomName "Duib Da Lethi";
+        rel:childOf <DuibDaChrích-6f4b9f5e>.
+
+     <DuibDaChrích-6f4b9f5e> 
+        owl:sameAs <DuibDaChrích-700bf86f>.
+
+     << <DuibDaChrích-6f4b9f5e>
+        rdfs:comment "which one? there are two above which match." >>
+        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+}
