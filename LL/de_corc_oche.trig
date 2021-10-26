@@ -1,0 +1,103 @@
+@base <http://example.com/LL/de_corc_oche.trig#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+
+        a dctype:Dataset;
+        dcterms:title "De Corc Oche"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text021.html>;
+        dcterms:format "application/trig" ;
+        prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text021.html> .
+
+     <Fiangus>
+        a foaf:Person;
+        irishRel:nomName "Fiangus";
+        rel:childOf <Fholachtaig>.
+
+     <Inrechtach>
+        a foaf:Person;
+        irishRel:nomName "Inrechtach";
+        rel:childOf <Fholachtaig>.
+
+     <Fholachtaig>
+        a foaf:Person;
+        irishRel:genName "Fholachtaig";
+        irishRel:nomName "Folachtach";
+        rel:childOf <Guari>.
+
+     <Guari>
+        a foaf:Person;
+        irishRel:genName "Guari";
+        irishRel:nomName "Guare";
+        rel:childOf <Lugdech-9ad77dcd>.
+
+     <Lugdech-9ad77dcd>
+        a foaf:Person;
+        irishRel:genName "Lugdech";
+        irishRel:nomName "Lugdaid";
+        rel:childOf <ColuimChruim>.
+
+     <ColuimChruim>
+        a foaf:Person;
+        irishRel:genName "Coluim Chruim";
+        irishRel:nomName "Colum Crum";
+        rel:childOf <Cainnig>.
+
+     <Cainnig>
+        a foaf:Person;
+        irishRel:genName "Cainnig";
+        irishRel:nomName "Cainnech";
+        rel:childOf <Forgo>.
+
+     <Forgo>
+        a foaf:Person;
+        irishRel:genName "Forgo";
+        irishRel:nomName "Forggu";
+        rel:childOf <MeicEirce>.
+
+     <MeicEirce>
+        a foaf:Person;
+        irishRel:genName "Meic Eirce";
+        irishRel:nomName "Mac Erc";
+        rel:childOf <Imchada-a60ce590>.
+
+     <Imchada-a60ce590>
+        a foaf:Person;
+        irishRel:genName "Imchada";
+        irishRel:nomName "Imchad";
+        rel:childOf <LameFeola>.
+
+     <LameFeola>
+        a foaf:Person;
+        irishRel:genName "Lame Feola";
+        irishRel:nomName "Lam Feóil";
+        rel:childOf <Cliathri>.
+
+     <Cliathri>
+        a foaf:Person;
+        irishRel:genName "Cliathri";
+        irishRel:nomName "Clethre";
+        rel:childOf <Mothaire>.
+
+     <Mothaire>
+        a foaf:Person;
+        irishRel:genName "Mothaire";
+        irishRel:nomName "Mothar";
+        rel:childOf <Fhergusa-3f4958e4>.
+
+     <Fhergusa-3f4958e4>
+        a foaf:Person;
+        irishRel:nomName "Fhergusa";
+        rel:childOf [ a foaf:Person;].
+
+}
