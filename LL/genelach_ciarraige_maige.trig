@@ -1,0 +1,57 @@
+@base <http://example.com/LL/genelach_ciarraige_maige.trig#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+
+        a dctype:Dataset;
+        dcterms:title "Genelach Ciarraige Maige Glais A Quibus Aes Inuentum Est In Hibernia"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text021.html>;
+        dcterms:format "application/trig" ;
+        prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text021.html> .
+
+
+    <Becdegar>
+        a foaf:Person;
+        irishRel:nomName "Becdegar";
+        rel:childOf <Uidreni>.
+
+    <Uidreni>
+        a foaf:Person;
+        irishRel:genName "Uidreni";
+        irishRel:nomName "Uidrene";
+        rel:childOf <Maeluidir>.
+
+    <Maeluidir>
+        a foaf:Person;
+        irishRel:nomName "Maeluidir";
+        rel:childOf <Lathrand>.
+
+    <Lathrand>
+        a foaf:Person;
+        irishRel:genName "Lathrand";
+        irishRel:nomName "Lathru";
+        rel:childOf <Coluim>.
+
+    <Coluim>
+        a foaf:Person;
+        irishRel:genName "Coluim";
+        irishRel:nomName "Colum";
+        rel:childOf <FinnabairCerrda>.
+
+    <FinnabairCerrda>
+        a foaf:Person;
+        irishRel:genName "Finnabair Cerrda";
+        irishRel:nomName "Finnabar Cerrd" ;
+        rdfs:comment "qui inuenit aes in Hibernia mulieribus quibusdam quandam lapidem mouentibus" ;
+
+}
