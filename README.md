@@ -197,8 +197,12 @@ triplestore to enhance IrishGen with narrative source information.
 
 # Utilities
 
-There are several utility Perl scripts which ease the creation and
-curation of the database.  Look in the `utils` directory for
-more information.
+There are several utility Perl and Python scripts which ease the
+creation and curation of the database.  Look in the `utils` directory
+for more information.
 
+# Blog
+
+More specific information about the project can be found on the blog:
+[IrishGen Occasional Topics](https://cyocum.github.io/).
 
