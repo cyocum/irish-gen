@@ -1,0 +1,132 @@
+@base <http://example.com/LL/genelach galeng.trig#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+     <>
+        a dctype:Dataset;
+        dcterms:title "Genelach Galeng"@sga;
+        dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text023.html>;
+        dcterms:format "application/trig" ;
+        prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text023.html> .
+
+     <Leocan>
+        a foaf:Person;
+        foaf:name "Leocan";
+        rel:childOf <Laidgnén>.
+
+     <Laidgnén>
+        a foaf:Person;
+        irishRel:genName "Laidgnén";
+        irishRel:nomName "Ladgnén";
+        rel:childOf <Maelain>.
+
+     <Maelain>
+        a foaf:Person;
+        irishRel:genName "Maelain";
+        irishRel:nomName "Maelan";
+        rel:childOf <Ecnig>.
+
+     <Ecnig>
+        a foaf:Person;
+        irishRel:genName "Ecnig";
+        irishRel:nomName "Ecnech";
+        rel:childOf <Dunchada>.
+
+     <Dunchada>
+        a foaf:Person;
+        irishRel:genName "Dunchada";
+        irishRel:nomName "Dunchad";
+        rel:childOf <Cinaeda>.
+
+     <Cinaeda>
+        a foaf:Person;
+        irishRel:genName "Cinaeda";
+        irishRel:nomName "Cinaed";
+        rel:childOf <Leocain>.
+
+     <Leocain>
+        a foaf:Person;
+        irishRel:genName "Leocain";
+        irishRel:nomName "Leocan";
+        rel:childOf <Dondgaile>.
+
+     <Dondgaile>
+        a foaf:Person;
+        irishRel:nomName "Dondgaile";
+        rel:childOf <Concobuir>.
+
+     <Concobuir>
+        a foaf:Person;
+        irishRel:genName "Concobuir";
+        irishRel:nomName "Conchobar";
+        rel:childOf <Noendenaig>.
+
+     <Noendenaig>
+        a foaf:Person;
+        irishRel:genName "Noendenaig";
+        irishRel:nomName "Noendenach";
+        rel:childOf <MaelMona>.
+
+     <MaelMona>
+        a foaf:Person;
+        irishRel:nomName "Mael Mona";
+        rel:childOf <Adamra>.
+
+     <Adamra>
+        a foaf:Person;
+        irishRel:nomName "Adamra";
+        rel:childOf <Dechraig>.
+
+     <Dechraig>
+        a foaf:Person;
+        irishRel:genName "Dechraig";
+        irishRel:nomName "Dechrach";
+        rel:childOf <Dergthosciúil>.
+
+     <Dergthosciúil>
+        a foaf:Person;
+        irishRel:genName "Dergthosciúil";
+        irishRel:nomName "Dergthoscel";
+        rel:childOf <AirtChoirp>.
+
+     <AirtChoirp>
+        a foaf:Person;
+        irishRel:genName "Airt Choirp";
+        irishRel:nomName "Art Corp";
+        rel:childOf <Loi>.
+
+     <Loi>
+        a foaf:Person;
+        irishRel:nomName "Loi";
+        rel:childOf <Cormaic>.
+
+     <Cormaic>
+        a foaf:Person;
+        irishRel:genName "Cormaic";
+        irishRel:nomName "Cormac";
+        rel:childOf <Taidc-2849f470>;
+        owl:sameAs <CormacGaleng>.
+
+     <Taidc-2849f470>
+        a foaf:Person;
+        irishRel:genName "Taidc";
+        irishRel:nomName "Tadc";
+        rel:childOf <Cein-3223ed70>;
+        owl:sameAs <Tadc>.
+
+     <Cein-3223ed70>
+        a foaf:Person;
+        irishRel:genName "Cein";
+        irishRel:nomName "Cian";
+        owl:sameAs <Céin-77585fd0>.
+}
