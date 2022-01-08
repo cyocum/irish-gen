@@ -405,20 +405,20 @@
     <Glass>
         a foaf:Person;
         irishRel:nomName "Glass";
-        rel:childOf <ConaillChostamail>;
-        rel:childOf <Creidne>.
+        agrelon:hasParent <ConaillChostamail>, <Creidne> ;
+        rel:childOf <ConaillChostamail>, <Creidne>.
 
     <Runtar>
         a foaf:Person;
         irishRel:nomName "Runtar";
-        rel:childOf <ConaillChostamail>;
-        rel:childOf <Creidne>.
+        agrelon:hasParent <ConaillChostamail>, <Creidne> ;
+        rel:childOf <ConaillChostamail>, <Creidne> .
 
     <Imda>
         a foaf:Person;
         irishRel:nomName "Imda";
-        rel:childOf <ConaillChostamail>;
-        rel:childOf <Creidne>.
+        agrelon:hasParent <ConaillChostamail>, <Creidne> ;
+        rel:childOf <ConaillChostamail>, <Creidne>.
 
     <ConaillChostamail>
         a foaf:Person;
@@ -435,6 +435,8 @@
         irishRel:nomName "Creidne";
         foaf:gender "female";
         foaf:title "banfhennid"@sga;
+        agrelon:hasParent <ConaillChostamail> ;
+        agrelon:hasSpouse <ConaillChostamail> ;
         rel:childOf <ConaillChostamail>;
         rel:spouseOf <ConaillChostamail>.
 
@@ -447,11 +449,14 @@
         irishRel:nomName "Aife";
         foaf:gender "female";
         rel:spouseOf <ConaillChostamail>;
+        agrelon:hasSpouse <ConaillChostamail> ;
+        agrelon:hasVitalLethalContact <Creidne> ;
         rel:antagonistOf <Creidne>.
 
     <ConallCostamail>
         a foaf:Person;
         irishRel:nomName "Conall Costamail";
+        agrelon:hasParent <Fhianchada> ;
         rel:childOf <Fhianchada>;
         owl:sameAs <ConaillChostamail>.
 
@@ -459,36 +464,42 @@
         a foaf:Person;
         irishRel:genName "Fhianchada";
         irishRel:nomName "Fianchad";
+        agrelon:hasParent <Oengusa> ;
         rel:childOf <Oengusa>.
 
     <Oengusa>
         a foaf:Person;
         irishRel:genName "Oengusa";
         irishRel:nomName "Óengus";
+        agrelon:hasParent <Gaith> ;
         rel:childOf <Gaith>.
 
     <Gaith>
         a foaf:Person;
         irishRel:genName "Gaith";
         irishRel:nomName "Gaeth";
+        agrelon:hasParent <Enbláith> ;
         rel:childOf <Enbláith>.
 
     <Enbláith>
         a foaf:Person;
         irishRel:genName "Enbláith";
         irishRel:nomName "Enbláth";
+        agrelon:hasParent <Rochada> ;
         rel:childOf <Rochada>.
 
     <Rochada>
         a foaf:Person;
         irishRel:genName "Rochada";
         irishRel:nomName "Rochaid";
+        agrelon:hasParent <IriéilGlunmair> ;
         rel:childOf <IriéilGlunmair>.
 
     <IriéilGlunmair>
         a foaf:Person;
         irishRel:genName "Iriéil Glunmair";
         irishRel:nomName "Irial Glunmar";
+        agrelon:hasParent <ConaillCernaig> ;
         rel:childOf <ConaillCernaig>;
         owl:sameAs <http://example.com/LL/dáil_araide.trig#IrielGlunmair>.
 
@@ -496,6 +507,7 @@
         a foaf:Person;
         irishRel:genName "Conaill Cernaig";
         irishRel:nomName "Conall Cernach";
+        agrelon:hasParent <Amargin> ;
         rel:childOf <Amargin>;
         owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#ConaillCernaich>;
         owl:sameAs <http://example.com/LL/dáil_araide.trig#ConaillCernaig>.
@@ -510,8 +522,9 @@
         a foaf:Person;
         irishRel:nomName "Lebarcham";
         foaf:gender "female";
-        rel:childOf <Oe>;
-        rel:childOf <Adarce>;
+        agrelon:hasParent <Oe>, <Adarce> ;
+        rel:childOf <Oe>, <Adarce>;
+        agrelon:hasSpouse <ChoinChulainn> ;
         rel:spouseOf <ChoinChulainn>.
 
     <Oe>
@@ -531,15 +544,15 @@
     <Caulnia>
         a foaf:Person;
         irishRel:nomName "Caulnia";
-        rel:childOf <ChoinChulainn>;
-        rel:childOf <Lebarcham>;
+        agrelon:hasParent <ChoinChulainn>, <Lebarcham> ;
+        rel:childOf <ChoinChulainn>, <Lebarcham>;
         rdfs:comment "Is dib Corco Caullain & Dal Cualni i Cruithniu.".
 
     <Condlúan>
         a foaf:Person;
         irishRel:nomName "Condlúan";
-        rel:childOf <ChoinChulainn>;
-        rel:childOf <Lebarcham>;
+        agrelon:hasParent <ChoinChulainn>, <Lebarcham> ;
+        rel:childOf <ChoinChulainn>, <Lebarcham>;
         rdfs:comment "Is dib Corco Caullain & Dal Cualni i Cruithniu.".
 
     <CorcoCaullain>
