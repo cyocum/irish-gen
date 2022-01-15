@@ -1,4 +1,4 @@
-@base <http://example.com/LL/corcomruad.trig>.
+@base <http://example.com/LL/corcomruad.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -8,9 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -21,168 +19,196 @@
     dcterms:format "application/trig" ;
     prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text078.html> .
 
-<#Conchobor>
+<Conchobor>
     a foaf:Person;
     foaf:name "Conchobor";
-    rel:childOf <#Flaind>.
+    agrelon:hasParent <Flaind> ;
+    rel:childOf <Flaind>.
 
-<#Flaind>
+<Flaind>
     a foaf:Person;
     foaf:name "Flaind";
-    foaf:name "Fland";	
-    rel:childOf <#MáelSechnaill>.
+    foaf:name "Fland";
+    agrelon:hasParent <MáelSechnaill> ;
+    rel:childOf <MáelSechnaill>.
 
-<#MáelSechnaill>
+<MáelSechnaill>
     a foaf:Person;
     foaf:name "Máel Sechnaill";
     foaf:name "Máel Sechnall";
-    rel:childOf <#Argdai>.
+    agrelon:hasParent <Argdai> ;
+    rel:childOf <Argdai>.
 
-<#Argdai>
+<Argdai>
     a foaf:Person;
     foaf:name "Argdai";
     foaf:name "Argda";
-    rel:childOf <#Samredain>.
+    agrelon:hasParent <Samredain> ;
+    rel:childOf <Samredain>.
 
-<#Samredain>
+<Samredain>
     a foaf:Person;
     foaf:name "Samredain";
     foaf:name "Samredan";
-    rel:childOf <#Fhlaithbertaig>.
+    agrelon:hasParent <Fhlaithbertaig> ;
+    rel:childOf <Fhlaithbertaig>.
 
-<#Fhlaithbertaig>
+<Fhlaithbertaig>
     a foaf:Person;
     foaf:name "Fhlaithbertaig";
     foaf:name "Flaithbertach";
-    rel:childOf <#DubRaib>.
+    agrelon:hasParent <DubRaib> ;
+    rel:childOf <DubRaib>.
 
-<#DubRaib>
+<DubRaib>
     a foaf:Person;
     foaf:name "Dub Raib";
     foaf:name "Dub Rab";
-    rel:childOf <#Maclaich>.
+    agrelon:hasParent <Maclaich> ;
+    rel:childOf <Maclaich>.
 
-<#Maclaich>
+<Maclaich>
     a foaf:Person;
     foaf:name "Maclaich";
     foaf:name "Maclach";
-    rel:childOf <#DuibDaChrich>.
+    agrelon:hasParent <DuibDaChrich> ;
+    rel:childOf <DuibDaChrich>.
 
-<#DuibDaChrich>
+<DuibDaChrich>
     a foaf:Person;
     foaf:name "Duib Da Chrich";
     foaf:name "Dub Da Chrich";
-    rel:childOf <#Angid>.
+    agrelon:hasParent <Angid> ;
+    rel:childOf <Angid>.
 
-<#Angid>
+<Angid>
     a foaf:Person;
     foaf:name "Angid";
-    rel:childOf <#Andil>.
+    agrelon:hasParent <Andil> ;
+    rel:childOf <Andil>.
 
-<#Andil>
+<Andil>
     a foaf:Person;
     foaf:name "Andil";
-    rel:childOf <#MaeleBile>.
+    agrelon:hasParent <MaeleBile> ;
+    rel:childOf <MaeleBile>.
 
-<#MaeleBile>
+<MaeleBile>
     a foaf:Person;
     foaf:name "Maele Bile";
     foaf:name "Mael Bile";
-    rel:childOf <#Dermata>.
+    agrelon:hasParent <Dermata> ;
+    rel:childOf <Dermata>.
 
-<#Dermata>
+<Dermata>
     a foaf:Person;
     foaf:name "Dermata";
     foaf:name "Dermait";
-    rel:childOf <#Sínaig>.
+    agrelon:hasParent <Sínaig> ;
+    rel:childOf <Sínaig>.
 
-<#Sínaig>
+<Sínaig>
     a foaf:Person;
     foaf:name "Sínaig";
     foaf:name "Sínach";
-    rel:childOf <#Drona>.
+    agrelon:hasParent <Drona> ;
+    rel:childOf <Drona>.
 
-<#Drona>
+<Drona>
     a foaf:Person;
     foaf:name "Drona";
-    rel:childOf <#Amrit>.
+    agrelon:hasParent <Amrit> ;
+    rel:childOf <Amrit>.
 
-<#Amrit>
+<Amrit>
     a foaf:Person;
     foaf:name "Amrit";
-    rel:childOf <#Cuscraid>.
+    agrelon:hasParent <Cuscraid> ;
+    rel:childOf <Cuscraid>.
 
-<#Cuscraid>
+<Cuscraid>
     a foaf:Person;
     foaf:name "Cuscraid";
     foaf:name "Cuscrad";
-    rel:childOf <#MesseNued>.
+    agrelon:hasParent <MesseNued> ;
+    rel:childOf <MesseNued>.
 
-<#MesseNued>
+<MesseNued>
     a foaf:Person;
     foaf:name "Messe Nued";
     foaf:name "Messen Nued";
-    rel:childOf <#MeisenSuled>.
+    agrelon:hasParent <MeisenSuled> ;
+    rel:childOf <MeisenSuled>.
 
-<#MeisenSuled>
+<MeisenSuled>
     a foaf:Person;
     foaf:name "Meisen Suled";
     foaf:name "Messen Sulad";
-    rel:childOf <#MeicErca>.
+    agrelon:hasParent <MeicErca> ;
+    rel:childOf <MeicErca>.
 
-<#MeicErca>
+<MeicErca>
     a foaf:Person;
     foaf:name "Meic Erca";
     foaf:name "Mac Erc";
-    rel:childOf <#Maethon>.
+    agrelon:hasParent <Maethon> ;
+    rel:childOf <Maethon>.
 
-<#Maethon>
+<Maethon>
     a foaf:Person;
     foaf:name "Maethon";
-    rel:childOf <#Necta>.
+    agrelon:hasParent <Necta> ;
+    rel:childOf <Necta>.
 
-<#Necta>
+<Necta>
     a foaf:Person;
     foaf:name "Necta";
     foaf:name "Nect";
-    rel:childOf <#AedGnoíFirGaiLethain>.
+    agrelon:hasParent <AedGnoíFirGaiLethain> ;
+    rel:childOf <AedGnoíFirGaiLethain>.
 
-<#AedGnoíFirGaiLethain>
+<AedGnoíFirGaiLethain>
     a foaf:Person;
     foaf:name "Aed Gnoí Fir Gai Lethain";
     foaf:name "Aed Gnoe Fer Gai Lethain";
-    rel:childOf <#Fheidlimthe>.
+    agrelon:hasParent <Fheidlimthe> ;
+    rel:childOf <Fheidlimthe>.
 
-<#Fheidlimthe>
+<Fheidlimthe>
     a foaf:Person;
     foaf:name "Fheidlimthe";
     foaf:name "Feidlimid";
-    rel:childOf <#Medrúi>.
+    agrelon:hasParent <Medrúi> ;
+    rel:childOf <Medrúi>.
 
-<#Medrúi>
+<Medrúi>
     a foaf:Person;
     foaf:name "Medrúi";
-    rel:childOf <#Fhollomnu>.
+    agrelon:hasParent <Fhollomnu> ;
+    rel:childOf <Fhollomnu>.
 
-<#Fhollomnu>
+<Fhollomnu>
     a foaf:Person;
     foaf:name "Fhollomnu";
     foaf:name "Follomem";
-    rel:childOf <#CuircDothi>.
+    agrelon:hasParent <CuircDothi> ;
+    rel:childOf <CuircDothi>.
 
-<#CuircDothi>
+<CuircDothi>
     a foaf:Person;
     foaf:name "Cuirc Dothi";
     foaf:name "Corc Doth";
-    rel:childOf <#Fhergusa>.
+    agrelon:hasParent <Fhergusa> ;
+    rel:childOf <Fhergusa>.
 
-<#Fhergusa>
+<Fhergusa>
     a foaf:Person;
     foaf:name "Fhergusa";
     foaf:name "Fergus";
-    rel:childOf <#Rosa>.
+    agrelon:hasParent <Rosa> ;
+    rel:childOf <Rosa>.
 
-<#Rosa>
+<Rosa>
     a foaf:Person;
     foaf:name "Rosa";
     foaf:name "Ross".
