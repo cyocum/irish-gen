@@ -1,4 +1,4 @@
-@base <http://example.com/LL/dail_araide.trig>.
+@base <http://example.com/LL/dail_araide.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -8,10 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -22,275 +19,317 @@
     dcterms:format "application/trig" ;
     prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text063.html> .
 
-<#Dondchad>
+<Dondchad>
     a foaf:Person;
     irishRel:nomName"Dondchad";
-    rel:childOf <#Aeda>.
+    agrelon:hasParent <Aeda>;
+    rel:childOf <Aeda>.
 
-<#Aeda>
+<Aeda>
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
-    rel:childOf <#Longsig>.
+    agrelon:hasParent <Longsig>;
+    rel:childOf <Longsig>.
 
-<#Longsig>
+<Longsig>
     a foaf:Person;
     irishRel:genName "Longsig";
     irishRel:nomName "Longsech";
-    rel:childOf <#Etig>.
+    agrelon:hasParent <Etig>;
+    rel:childOf <Etig>.
 
-<#Etig>
+<Etig>
     a foaf:Person;
     irishRel:genName "Etig";
     irishRel:nomName "Etech";
-    rel:childOf <#Lethlobair>.
+    agrelon:hasParent <Lethlobair>;
+    rel:childOf <Lethlobair>.
 
-<#Lethlobair>
+<Lethlobair>
     a foaf:Person;
     irishRel:genName "Lethlobair";
     irishRel:nomName "Lethlobar";
-    rel:childOf <#Longsig-f30c4d91>.
+    agrelon:hasParent <Longsig-f30c4d91>;
+    rel:childOf <Longsig-f30c4d91>.
 
-<#Longsig-f30c4d91>
+<Longsig-f30c4d91>
     a foaf:Person;
     irishRel:genName "Longsig";
     irishRel:nomName "Longsech";
-    rel:childOf <#Thommaltaig>.
+    agrelon:hasParent <Thommaltaig> ;
+    rel:childOf <Thommaltaig>.
 
-<#Thommaltaig>
+<Thommaltaig>
     a foaf:Person;
     irishRel:genName "Thommaltaig";
     irishRel:nomName "Thommaltach";
-    rel:childOf <#Indrechtaig>.
+    agrelon:hasParent <Indrechtaig> ;
+    rel:childOf <Indrechtaig>.
 
-<#Indrechtaig>
+<Indrechtaig>
     a foaf:Person;
     irishRel:genName "Indrechtaig";
     irishRel:nomName "Indrechtach";
-    rel:childOf <#Lethlobair-3296a478>.
+    agrelon:hasParent <Lethlobair-3296a478> ;
+    rel:childOf <Lethlobair-3296a478>.
 
-<#Lethlobair-3296a478>
+<Lethlobair-3296a478>
     a foaf:Person;
     irishRel:genName "Lethlobair";
     irishRel:nomName "Lethlobar";
-    rel:childOf <#EchachIarlathi>.
+    agrelon:hasParent <EchachIarlathi> ;
+    rel:childOf <EchachIarlathi>.
 
-<#EchachIarlathi>
+<EchachIarlathi>
     a foaf:Person;
     irishRel:genName "Echach Iarlathi";
     irishRel:nomName "Echaid Iarlath";
-    rel:childOf <#Fhiachnai>.
+    agrelon:hasParent <Fhiachnai> ;
+    rel:childOf <Fhiachnai>.
 
-<#Fhiachnai>
+<Fhiachnai>
     a foaf:Person;
     irishRel:genName "Fhiachnai";
     irishRel:nomName "Fiachna";
-    rel:childOf <#Boetain>.
+    agrelon:hasParent <Boetain> ;
+    rel:childOf <Boetain>.
 
-<#Boetain>
+<Boetain>
     a foaf:Person;
     irishRel:genName "Boetain";
     irishRel:nomName "Boetan";
-    rel:childOf <#Echach>.
+    agrelon:hasParent <Echach> ;
+    rel:childOf <Echach>.
 
-<#Echach>
+<Echach>
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Echaid";
-    rel:childOf <#Condlai>.
+    agrelon:hasParent <Condlai> ;
+    rel:childOf <Condlai>.
 
-<#Condlai>
+<Condlai>
     a foaf:Person;
     irishRel:genName "Condlai";
     irishRel:nomName "Condla";
-    rel:childOf <#Coelbaith>.
+    agrelon:hasParent <Coelbaith> ;
+    rel:childOf <Coelbaith>.
 
-<#Coelbaith>
+<Coelbaith>
     a foaf:Person;
     irishRel:genName "Coelbaith";
     irishRel:nomName "Coelbath";
-    rel:childOf <#CruindBaDrúi>.
+    agrelon:hasParent <CruindBaDrúi> ;
+    rel:childOf <CruindBaDrúi>.
 
-<#CruindBaDrúi>
+<CruindBaDrúi>
     a foaf:Person;
     irishRel:genName "Cruind Ba Drúi";
     irishRel:nomName "Crund Ba Drúi";
-    rel:childOf <#Echach-f5b16dd9>.
+    agrelon:hasParent <Echach-f5b16dd9> ;
+    rel:childOf <Echach-f5b16dd9>.
     #same as <conaille_murthemni.trig#CruindBaDrui> ? - CY
 
-<#Echach-f5b16dd9>
+<Echach-f5b16dd9>
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Echaid";
-    rel:childOf <#Lugdach>.
+    agrelon:hasParent <Lugdach> ;
+    rel:childOf <Lugdach>.
 
-<#Lugdach>
+<Lugdach>
     a foaf:Person;
     irishRel:genName "Lugdach";
     irishRel:nomName "Lugdaid";
-    rel:childOf <#Rosa>.
+    agrelon:hasParent <Rosa> ;
+    rel:childOf <Rosa>.
 
-<#Rosa>
+<Rosa>
     a foaf:Person;
     irishRel:genName "Rosa";
     irishRel:nomName "Ross";
-    rel:childOf <#Imchada>.
+    agrelon:hasParent <Imchada> ;
+    rel:childOf <Imchada>.
 
-<#Imchada>
+<Imchada>
     a foaf:Person;
     irishRel:genName "Imchada";
     irishRel:nomName "Imchad";
-    rel:childOf <#Fheidlimthi>.
+    agrelon:hasParent <Fheidlimthi> ;
+    rel:childOf <Fheidlimthi>.
 
-<#Fheidlimthi>
+<Fheidlimthi>
     a foaf:Person;
     irishRel:genName "Fheidlimthi";
     irishRel:nomName "Fheidlimid";
-    rel:childOf <#MeicCaiss>.
+    agrelon:hasParent  <MeicCaiss> ;
+    rel:childOf <MeicCaiss>.
 
-<#MeicCaiss>
+<MeicCaiss>
     a foaf:Person;
     irishRel:genName "Meic Caiss";
     irishRel:nomName "Mac Cass";
-    rel:childOf <#FhiachachAraide>.
+    agrelon:hasParent <FhiachachAraide> ;
+    rel:childOf <FhiachachAraide>.
 
 # From this point on until otherwise indicated, the code follows a marginal insertion in the manuscript
 # which the CELT edition places elsewhere (https://celt.ucc.ie//published/G800011F/index.html). Analysis of
 # the context, however, suggests that this is the proper location for it. EPT
 
-<#AraideBibre>
+<AraideBibre>
     a foaf:Person;
     irishRel:nomName "Araide Bibre";
     foaf:title "cáinte"@sga, "satirist"@eng;
     foaf:title "rechtaire"@sga, "steward"@eng;
-    rel:employedBy <#Cormac>;
+    agrelon:hasEmployer <Cormac> ;
+    rel:employedBy <Cormac>;
     rdfs:comment "in cáinte de Mumnechaib ba sé ba rectaire do Chormac .h. Chuind".
 
-<#Cormac>
+<Cormac>
     a foaf:Person;
     irishRel:nomName "Cormac";
-    rel:descendantOf <#Chuind>;
+    agrelon:hasAncestor <Chuind> ;
+    rel:descendantOf <Chuind>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#CormaicUlfhota>.
 
-<#Chuind>
+<Chuind>
     a foaf:Person;
     irishRel:genName "Chuind";
     irishRel:nomName "Cond";
     owl:sameAs <http://example.com/LL/rig_ailig.trig#CuindCetchathaig>;
-    owl:sameAs <#CondCetchathach>.
+    owl:sameAs <CondCetchathach>.
 
-<#Cairech>
+<Cairech>
     a foaf:Person;
     irishRel:nomName "Cairech";
     foaf:gender "female";
-    rel:spouseOf <#AraideBibre>.
+    agrelon:hasSpouse <AraideBibre> ;
+    rel:spouseOf <AraideBibre>.
 
-<#Fiacha>
+<Fiacha>
     a foaf:Person;
     irishRel:genName "Fiacha";
     irishRel:nomName "Fiacha Araide";
-    owl:sameAs <#FhiachachAraide>;
-    rel:childOf <#Oengusa>;
-    irishRel:fosterChildOf <#Cairech>;
+    owl:sameAs <FhiachachAraide>;
+    agrelon:hasParent <Oengusa> ;
+    rel:childOf <Oengusa>;
+    agrelon:hasFosterParent <Cairech> ;
+    irishRel:fosterChildOf <Cairech>;
     rdfs:comment "a quo Dal Araide".
 
-<#Oengusa>
+<Oengusa>
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Oengus";
-    owl:sameAs <#OengusaGobnenn>.
+    owl:sameAs <OengusaGobnenn>.
 
 # This is the end of the marginal insertion (see comment above) and the main text resumes. EPT
 
-<#FhiachachAraide>
+<FhiachachAraide>
     a foaf:Person;
     irishRel:genName "Fhiachach Araide";
     irishRel:nomName "Fiachaid Araid";
-    rel:childOf <#OengusaGobnenn>.
+    agrelon:hasParent <OengusaGobnenn> ;
+    rel:childOf <OengusaGobnenn>.
 
-<#OengusaGobnenn>
+<OengusaGobnenn>
     a foaf:Person;
     irishRel:genName "Oengusa Gobnenn";
     irishRel:nomName "Oengus Goibneen";
-    rel:childOf <#Fhergusa>.
+    agrelon:hasParent <Fhergusa> ;
+    rel:childOf <Fhergusa>.
 
-<#Fhergusa>
+<Fhergusa>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
-    rel:childOf <#Tipraite>.
+    agrelon:hasParent <Tipraite> ;
+    rel:childOf <Tipraite>.
 
-<#Tipraite>
+<Tipraite>
     a foaf:Person;
     irishRel:nomName"Tipraite";
-    rel:childOf <#Bresail>.
+    agrelon:hasParent <Bresail> ;
+    rel:childOf <Bresail>.
 
-<#Bresail>
+<Bresail>
     a foaf:Person;
     irishRel:genName "Bresail";
     irishRel:nomName "Bresal";
-    rel:childOf <#Fheirbb>.
+    agrelon:hasParent <Fheirbb> ;
+    rel:childOf <Fheirbb>.
 
-<#Fheirbb>
+<Fheirbb>
     a foaf:Person;
     irishRel:genName "Fheirbb";
     irishRel:nomName "Ferbb";
-    rel:childOf <#Máeil>.
+    agrelon:hasParent <Máeil> ;
+    rel:childOf <Máeil>.
 
-<#Máeil>
+<Máeil>
     a foaf:Person;
     irishRel:genName "Máeil";
     irishRel:nomName "Máel";
-    rel:childOf <#Rochride>.
+    agrelon:hasParent <Rochride> ;
+    rel:childOf <Rochride>.
 
-<#Rochride>
+<Rochride>
     a foaf:Person;
     irishRel:genName "Rochride";
     irishRel:nomName "Rochrid";
-    rel:childOf <#Cathbath>.
+    agrelon:hasParent <Cathbath> ;
+    rel:childOf <Cathbath>.
 
-<#Cathbath>
+<Cathbath>
     a foaf:Person;
     irishRel:genName "Cathbath";
     irishRel:nomName "Cathbad";
-    rel:childOf <#Aillchatho>.
+    agrelon:hasParent <Aillchatho> ;
+    rel:childOf <Aillchatho>.
 
-<#Aillchatho>
+<Aillchatho>
     a foaf:Person;
     irishRel:nomName "Aillchatho";
-    rel:childOf <#Findchada>.
+    agrelon:hasParent <Findchada> ;
+    rel:childOf <Findchada>.
 
-<#Findchada>
+<Findchada>
     a foaf:Person;
     irishRel:genName "Findchada";
     irishRel:nomName "Findchad";
-    rel:childOf <#Muridaig>.
+    agrelon:hasParent <Muridaig> ;
+    rel:childOf <Muridaig>.
 
-<#Muridaig>
+<Muridaig>
     a foaf:Person;
     irishRel:genName "Muridaig";
     irishRel:nomName "Muridach";
-    rel:childOf <#FhiachachFind>.
+    agrelon:hasParent <FhiachachFind> ;
+    rel:childOf <FhiachachFind>.
 
-<#FhiachachFind>
+<FhiachachFind>
     a foaf:Person;
     irishRel:genName "Fhiachach Find";
     irishRel:nomName "Fiachaid Find";
-    rel:childOf <#Amnais>.
+    agrelon:hasParent <Amnais> ;
+    rel:childOf <Amnais>.
 
-<#Amnais>
+<Amnais>
     a foaf:Person;
     irishRel:genName "Amnais";
     irishRel:nomName "Amnas";
-    rel:childOf <#IrielGlúnmair>.
+    agrelon:hasParent <IrielGlúnmair> ;
+    rel:childOf <IrielGlúnmair>.
 
-<#IrielGlúnmair>
+<IrielGlúnmair>
     a foaf:Person;
     irishRel:genName "Iriel Glúnmair";
     irishRel:nomName "Irel Glúnmar";
-    rel:childOf <#ConaillCernaig>.
+    agrelon:hasParent <ConaillCernaig> ;
+    rel:childOf <ConaillCernaig>.
 
-<#ConaillCernaig>
+<ConaillCernaig>
     owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#ConaillCernaig>;
     irishRel:genName "Conaill Cernaig";
     irishRel:nomName "Conall Cernach".
