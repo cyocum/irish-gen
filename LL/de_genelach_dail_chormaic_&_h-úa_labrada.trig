@@ -9,10 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelach Dail Chormaic & H-Úa Labrada"@Sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text002.html>;
@@ -22,6 +22,7 @@
 <Cormac>
     a foaf:Person;
     irishRel:nomName "Cormac";
+    agrelon:hasParent <ConCorbb>;
     rel:childOf <ConCorbb>.
 
 <ConCorbb-d2451e3d>
@@ -32,47 +33,54 @@
 <Imchad>
     a foaf:Person;
     irishRel:nomName "Imchad";
+    agrelon:hasParent <Cormac>;
     rel:childOf <Cormac>.
 
 <Labraid>
     a foaf:Person;
     irishRel:nomName "Labraid";
+    agrelon:hasParent <Imchad>;
     rel:childOf <Imchad>.
 
 <Lugaid>
     a foaf:Person;
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
 
 <Cathub>
     a foaf:Person;
     irishRel:nomName "Cathub";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
 
 <Caeldub>
     a foaf:Person;
     irishRel:nomName "Caeldub";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
 
 <Cainnech>
     a foaf:Person;
     irishRel:nomName "Cainnech";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
 
 <Cáirthend>
     a foaf:Person;
     irishRel:nomName "Cáirthend";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
 
 <NioCulend>
     a foaf:Person;
     irishRel:nomName "Nio Culend";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
 
 <DiagBec>
     a foaf:Person;
     irishRel:nomName "Diag Bec";
+    agrelon:hasParent <Labraid>;
     rel:childOf <Labraid>.
-
-
 }
