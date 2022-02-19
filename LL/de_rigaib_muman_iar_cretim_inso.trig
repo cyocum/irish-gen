@@ -1,4 +1,4 @@
-@base <http://example.com/LL/de_rigaib_muman_iar_cretim_inso.trig>.
+@base <http://example.com/LL/de_rigaib_muman_iar_cretim_inso.trig#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,633 +9,674 @@
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Rigaib Muman Iar Cretim Inso"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text006.html>;
     dcterms:format "application/trig" ;
     prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text006.html> .
 
-<#Oengus>
+<Oengus>
     a irishTitles:Rí ;
-    irishTitles:reignLength 36 ;
-    rel:childOf <#NathFraich>;
-    irishTitles:succeededBy <#Eocho>;
+        irishTitles:reignLength 36 ;
+        agrelon:hasParent <NathFraich>;
+    rel:childOf <NathFraich>;
+    irishTitles:succeededBy <Eocho>;
     irishRel:nomName "Oengus" ;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Oengusa>.
 
-<#NathFraich>
+<NathFraich>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich-47cc38b6>.
 
-<#Eocho>
+<Eocho>
     a irishTitles:Rí ;
-    irishTitles:succeededBy <#Feidlimid>;
-    rel:childOf <#Oengusa>;
+        irishTitles:succeededBy <Feidlimid>;
+        agrelon:hasParent <Oengusa>;
+    rel:childOf <Oengusa>;
     irishRel:nomName "Eocho";
     irishTitles:reignEndedBy "marb"@sga .
 
-<#Oengusa>
+<Oengusa>
     a foaf:Person ;
     irishRel:nomName "Oengusa" .
 
-<#Feidlimid>
+<Feidlimid>
     a irishTitles:Rí ;
     irishTitles:reignLength 6 ;
     irishRel:nomName "Feidlimid" ;
-    irishTitles:succeededBy <#Dubgilla>.
+    irishTitles:succeededBy <Dubgilla>.
 
-<#Dubgilla>
+<Dubgilla>
     a irishTitles:Rí ;
     irishRel:nomName "Dubgilla" ;
-    irishTitles:succeededBy <#CrimthannCrom>.
+    irishTitles:succeededBy <CrimthannCrom>.
 
-<#CrimthannCrom>
+<CrimthannCrom>
     a irishTitles:Rí ;
     irishRel:nomName "Crimthann Crom" ;
-    irishTitles:reignLength 22 ;
-    rel:childOf <#Echach>;
-    irishTitles:succeededBy <#CorpreCrom>.
+        irishTitles:reignLength 22 ;
+        agrelon:hasParent <Echach>;
+    rel:childOf <Echach>;
+    irishTitles:succeededBy <CorpreCrom>.
 
-<#Echach>
+<Echach>
     a foaf:Person ;
     irishRel:nomName "Echach" .
 
-<#CorpreCrom>
+<CorpreCrom>
     a irishTitles:Rí ;
     irishRel:nomName "Corpre Crom" ;
-    irishTitles:reignLength 22 ;
-    rel:childOf <#Crimthann-9c1e7313>;
-    irishTitles:succeededBy <#FergusScandail>.
+        irishTitles:reignLength 22 ;
+        agrelon:hasParent <Crimthann-9c1e7313>;
+    rel:childOf <Crimthann-9c1e7313>;
+    irishTitles:succeededBy <FergusScandail>.
 
-<#Crimthann-9c1e7313>
+<Crimthann-9c1e7313>
     a foaf:Person ;
     irishRel:nomName "Crimthann" .
 
-<#FergusScandail>
+<FergusScandail>
     a irishTitles:Rí ;
     irishRel:nomName "Fergus Scandail" ;
-    owl:sameAs <http://example.com/LL/n_echach.trigFergusScandal>;
-    rel:childOf <#Crimthann-ee5be33f> ;
+        owl:sameAs <http://example.com/LL/n_echach.trigFergusScandal>;
+        agrelon:hasParent <Crimthann-ee5be33f>;
+    rel:childOf <Crimthann-ee5be33f> ;
     irishTitles:reignLength 12 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Garban> ;
-    irishTitles:succeededBy <#Garbith>.
+        irishTitles:succeededBy <Garban>, <Garbith> .
 
-<#Crimthann-ee5be33f>
+<Crimthann-ee5be33f>
     a foaf:Person ;
     irishRel:nomName "Crimthann" .
 
-<#Garban>
+<Garban>
     a irishTitles:Rí ;
     irishRel:nomName "Garban" ;
     irishTitles:reignLength 7 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#Amalgaid>.
+    irishTitles:succeededBy <Amalgaid>.
 
-<#Garbith>
+<Garbith>
     a irishTitles:Rí ;
     irishRel:nomName "Garbith" ;
     irishTitles:reignLength 7 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#Amalgaid>.
+    irishTitles:succeededBy <Amalgaid>.
 
-<#Amalgaid>
+<Amalgaid>
     a irishTitles:Rí ;
     irishRel:nomName "Amalgaid" ;
     irishTitles:reignLength 10 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#AedBennain>.
+    irishTitles:succeededBy <AedBennain>.
 
-<#AedBennain>
+<AedBennain>
     a irishTitles:Rí ;
     irishRel:nomName "Aed Bennain" ;
     irishTitles:reignLength 9 ;
     owl:sameAs <http://example.com/LL/eoganachta_casil#AedaBennain>;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Feidlimid-5052304a>.
+    irishTitles:succeededBy <Feidlimid-5052304a>.
 
-<#Feidlimid-5052304a>
+<Feidlimid-5052304a>
     a irishTitles:Rí ;
-    irishRel:nomName "Feidlimid" ;
-    rel:childOf <#Carpri>;
-    irishTitles:succeededBy <#Fingin>.
+        irishRel:nomName "Feidlimid" ;
+        agrelon:hasParent <Carpri>;
+    rel:childOf <Carpri>;
+    irishTitles:succeededBy <Fingin>.
 
-<#Carpri>
+<Carpri>
     a foaf:Person ;
     irishRel:nomName "Carpri" .
 
-<#Fingin>
+<Fingin>
     a irishTitles:Rí ;
-    irishRel:nomName "Fingin" ;
-    rel:childOf <#Aeda>;
+        irishRel:nomName "Fingin" ;
+        agrelon:hasParent <Aeda>;
+    rel:childOf <Aeda>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Fhingin>;
     irishTitles:reignLength 23 ;
-    irishTitles:succeededBy <#Cathal>.
+    irishTitles:succeededBy <Cathal>.
 
-<#Aeda>
+<Aeda>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AedaDuib>.
 
-<#Cathal>
+<Cathal>
     a irishTitles:Rí ;
-    irishRel:nomName "Cathal" ;
-    rel:childOf <#Aeda-1675c29e>;
+        irishRel:nomName "Cathal" ;
+        agrelon:hasParent <Aeda-1675c29e>;
+    rel:childOf <Aeda-1675c29e>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cathail-dd8d5bfe>;
     irishTitles:reignLength 20 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#FalbeFland>.
+    irishTitles:succeededBy <FalbeFland>.
 
-<#Aeda-1675c29e>
+<Aeda-1675c29e>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AedaFlaindCathrach>.
 
-<#FalbeFland>
+<FalbeFland>
     a irishTitles:Rí ;
-    irishRel:nomName "Falbe Fland" ;
-    rel:childOf <#Aeda-70251d9b>;
+        irishRel:nomName "Falbe Fland" ;
+        agrelon:hasParent <Aeda-70251d9b>;
+    rel:childOf <Aeda-70251d9b>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Falbe-d0114e86>;
     owl:sameAs <http://example.com/Rawl_B502/cenél_conaill.trig#FaílbeFlaind>;
     irishTitles:reignLength 20 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Cuan>.
+    irishTitles:succeededBy <Cuan>.
 
-<#Aeda-70251d9b>
+<Aeda-70251d9b>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Aeda>.
 
-<#Cuan>
+<Cuan>
     a irishTitles:Rí ;
-    irishRel:nomName "Cuan" ;
-    rel:childOf <#Amalgaid-eae7a30c> ;
+        irishRel:nomName "Cuan" ;
+        agrelon:hasParent <Amalgaid-eae7a30c>;
+    rel:childOf <Amalgaid-eae7a30c> ;
     owl:sameAs <http://example.com/LL/conaill_gabra.trig#Cuan>;
     owl:sameAs <http://example.com/LL/h_n_enna.trig#Cuain>;
     irishTitles:reignLength 10 ;
     irishTitles:reignEndedBy "ec"@sga, "marbad"@sga ;
-    irishTitles:succeededBy <#Moenach>.
+    irishTitles:succeededBy <Moenach>.
 
-<#Amalgaid-eae7a30c>
+<Amalgaid-eae7a30c>
     owl:sameAs <http://example.com/LL/h_n_enna.trig#Amalgada>.
 
-<#Moenach>
+<Moenach>
     a irishTitles:Rí ;
-    irishRel:nomName "Moenach" ;
-    rel:childOf <#Fingin-337a7443>;
+        irishRel:nomName "Moenach" ;
+        agrelon:hasParent <Fingin-337a7443>;
+    rel:childOf <Fingin-337a7443>;
     owl:sameAs <http://example.com/LL/conaill_gabra.trig#Amalgada>;
     irishTitles:reignLength 12 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#CucenMathair>.
+    irishTitles:succeededBy <CucenMathair>.
 
-<#Fingin-337a7443>
+<Fingin-337a7443>
     a foaf:Person ;
     irishRel:nomName "Fingin" .
 
-<#CucenMathair>
+<CucenMathair>
     a irishTitles:Rí ;
-    irishRel:nomName "Cu cen Mathair" ;
-    rel:childOf <#Cathail>;
+        irishRel:nomName "Cu cen Mathair" ;
+        agrelon:hasParent <Cathail>;
+    rel:childOf <Cathail>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#ConcenMathair>;
     irishTitles:reignLength 3 ;
     irishTitles:reignEndedBy "éc"@sga ;
-    irishTitles:succeededBy <#Colggu>.
+    irishTitles:succeededBy <Colggu>.
 
-<#Cathail>
+<Cathail>
     a foaf:Person ;
     irishRel:nomName "Cathail" .
 
-<#Colggu>
+<Colggu>
     a irishTitles:Rí ;
-    irishRel:nomName "Colggu" ;
-    rel:childOf <#Failbe>;
+        irishRel:nomName "Colggu" ;
+        agrelon:hasParent <Failbe>;
+    rel:childOf <Failbe>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Colggan>;
     irishTitles:reignLength 13 ;
-    irishTitles:succeededBy <#Finguine>.
+    irishTitles:succeededBy <Finguine>.
 
-<#Failbe>
+<Failbe>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Failbe>.
 
-<#Finguine>
+<Finguine>
     a irishTitles:Rí ;
-    irishRel:nomName "Finguine" ;
-    rel:childOf <#CucenMathair>;
+        irishRel:nomName "Finguine" ;
+        agrelon:hasParent <CucenMathair>;
+    rel:childOf <CucenMathair>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Finguine-0d06490f>;
     irishTitles:reignLength 17 ;
     irishTitles:reignEndedBy "éc"@sga ;
-    irishTitles:succeededBy <#Eterscél>.
+    irishTitles:succeededBy <Eterscél>.
 
-<#Eterscél>
+<Eterscél>
     a irishTitles:Rí ;
-    foaf:name "Eterscél" ;
-    rel:childOf <#MaelUmai>;
+        foaf:name "Eterscél" ;
+        agrelon:hasParent <MaelUmai>;
+    rel:childOf <MaelUmai>;
     irishTitles:reignLength 6 ;
     irishTitles:reignEndedBy "i clérchecht"@sga ;
-    irishTitles:succeededBy <#Cormac>.
+    irishTitles:succeededBy <Cormac>.
 
-<#MaelUmai>
+<MaelUmai>
     a foaf:Person ;
     irishRel:nomName "Mael Umai" .
 
-<#Cormac>
+<Cormac>
     a irishTitles:Rí ;
-    irishRel:nomName "Cormac" ;
-    rel:childOf <#Ailella>;
+        irishRel:nomName "Cormac" ;
+        agrelon:hasParent <Ailella>;
+    rel:childOf <Ailella>;
     irishTitles:reignLength 9 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    rel:antagonistOf <#Cormac-40403180>;
-    irishTitles:succeededBy <#Cathasach>.
+    rel:antagonistOf <Cormac-40403180>;
+    irishTitles:succeededBy <Cathasach>.
 
-<#Ailella>
+<Ailella>
     a foaf:Person ;
     irishRel:nomName "Ailella", "Ailill" .
 
-<#Cormac-40403180>
+<Cormac-40403180>
     a irishTitles:Rí ;
     irishRel:nomName "Cormac" ;
-    owl:sameAs <#Cormac>;
-    foaf:title "king"@en, "ri"@sga;
-    rel:childOf <#Ailella-7086ceed>.
+    owl:sameAs <Cormac>;
+        foaf:title "king"@en, "ri"@sga;
+        agrelon:hasParent <Ailella-7086ceed>;
+    rel:childOf <Ailella-7086ceed>.
 
-<#Ailella-7086ceed>
+<Ailella-7086ceed>
     a foaf:Person ;
     irishRel:genName "Ailella" ;
     irishRel:nomName "Ailill" ;
-    owl:sameAs <#Ailella>;
-    rel:childOf <#Moenaig>.
+        owl:sameAs <Ailella>;
+        agrelon:hasParent <Moenaig>;
+    rel:childOf <Moenaig>.
 
-<#Moenaig>
+<Moenaig>
     a foaf:Person ;
     irishRel:genName "Moenaig" ;
     irishRel:nomName "Moenach" .
 
-<#Cathasach>
+<Cathasach>
     a irishTitles:Rí ;
-    irishRel:nomName "Cathasach" ;
-    rel:childOf <#Etersceoil>;
+        irishRel:nomName "Cathasach" ;
+        agrelon:hasParent <Etersceoil>;
+    rel:childOf <Etersceoil>;
     irishTitles:reignLength 27 ;
-    irishTitles:succeededBy <#Cathal-448a54c3>;
-    irishTitles:succeededBy <#MaelDuin>.
+    irishTitles:succeededBy <Cathal-448a54c3>;
+    irishTitles:succeededBy <MaelDuin>.
 
-<#Etersceoil>
+<Etersceoil>
     a foaf:Person ;
     irishRel:genName "Etersceoil" ;
     irishRel:nomName "Eterscel" .
 
-<#Cathal-448a54c3>
+<Cathal-448a54c3>
     a irishTitles:Rí ;
-    irishRel:nomName "Cathal" ;
-    rel:childOf <#Finguine-89c7db28>;
+        irishRel:nomName "Cathal" ;
+        agrelon:hasParent <Finguine-89c7db28>;
+    rel:childOf <Finguine-89c7db28>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cathail-19db5f66>;
     irishTitles:reignLength 29 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Artri>.
+    irishTitles:succeededBy <Artri>.
 
-<#Finguine-89c7db28>
+<Finguine-89c7db28>
     a foaf:Person ;
     irishRel:nomName "Finguine" ;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Finguine-0d06490f>.
 
-<#MaelDuin>
+<MaelDuin>
     a irishTitles:Rí ;
-    irishRel:nomName "Mael Duin" ;
-    rel:childOf <#AedaBennain-a15216a4>;
+        irishRel:nomName "Mael Duin" ;
+        agrelon:hasParent <AedaBennain-a15216a4>;
+    rel:childOf <AedaBennain-a15216a4>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MaelDuin-c3f2ab7c>;
-    irishTitles:succeededBy <#Artri>.
+    irishTitles:succeededBy <Artri>.
 
-<#AedaBennain-a15216a4>
+<AedaBennain-a15216a4>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AedaBennain>.
 
-<#Artri>
+<Artri>
     a irishTitles:Rí ;
-    irishRel:nomName "Artri" ;
-    rel:childOf <#Cathail-311873d5>;
+        irishRel:nomName "Artri" ;
+        agrelon:hasParent <Cathail-311873d5>;
+    rel:childOf <Cathail-311873d5>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Artríg>;
     irishTitles:reignLength 20 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Tuathal>.
+    irishTitles:succeededBy <Tuathal>.
 
-<#Cathail-311873d5>
+<Cathail-311873d5>
     a foaf:Person ;
     irishRel:genName "Cathail" ;
     irishRel:nomName "Cathal" ;
-    owl:sameAs <#Cathal-448a54c3>.
+    owl:sameAs <Cathal-448a54c3>.
 
-<#Tuathal>
+<Tuathal>
     a irishTitles:Rí ;
-    irishRel:nomName "Tuathal" ;
-    rel:childOf <#Artri>;
+        irishRel:nomName "Tuathal" ;
+        agrelon:hasParent <Artri>;
+    rel:childOf <Artri>;
     irishTitles:reignLength 14 ;
-    irishTitles:succeededBy <#Feidlimid-70604dda>;
+    irishTitles:succeededBy <Feidlimid-70604dda>;
     rdfs:comment "secundum quosdam"@lat .
 
-<#Feidlimid-70604dda>
+<Feidlimid-70604dda>
     a irishTitles:Rí ;
-    irishRel:nomName "Feidlimid" ;
-    rel:childOf <#Crimthainn>;
+        irishRel:nomName "Feidlimid" ;
+        agrelon:hasParent <Crimthainn>;
+    rel:childOf <Crimthainn>;
     irishTitles:reignLength 27 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Olchobor>;
+    irishTitles:succeededBy <Olchobor>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Feidlimid-aef0a7fe>.
 
-<#Crimthainn>
+<Crimthainn>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Crimthainn-0d3a6d0c>.
 
-<#Olchobor>
+<Olchobor>
     a irishTitles:Rí ;
-    irishRel:nomName "Olchobor" ;
-    rel:childOf <#Cinaeda>;
+        irishRel:nomName "Olchobor" ;
+        agrelon:hasParent <Cinaeda>;
+    rel:childOf <Cinaeda>;
     irishTitles:reignLength 3 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Algenan>.
+    irishTitles:succeededBy <Algenan>.
 
-<#Cinaeda>
+<Cinaeda>
     a foaf:Person ;
     irishRel:genName "Cinaeda" ;
     irishRel:nomName "Cinaed" .
 
-<#Algenan>
+<Algenan>
     a irishTitles:Rí ;
-    irishRel:nomName "Algenan" ;
-    rel:childOf <#Dondgaili>;
+        irishRel:nomName "Algenan" ;
+        agrelon:hasParent <Dondgaili>;
+    rel:childOf <Dondgaili>;
     irishTitles:reignLength 3 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#MaelGuala>.
+    irishTitles:succeededBy <MaelGuala>.
 
-<#Dondgaili>
+<Dondgaili>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Dondgaile-fb7f7a0c>.
 
-<#MaelGuala>
+<MaelGuala>
     a irishTitles:Rí ;
-    irishRel:nomName "Mael Guala" ;
-    rel:childOf <#Dondgaili>;
+        irishRel:nomName "Mael Guala" ;
+        agrelon:hasParent <Dondgaili>;
+    rel:childOf <Dondgaili>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MaelGuala>;
     irishTitles:reignLength 7 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#MaelFathartaig>.
+    irishTitles:succeededBy <MaelFathartaig>.
 
-<#MaelFathartaig>
+<MaelFathartaig>
     a irishTitles:Rí ;
     irishRel:nomName "Mael Fathartaig" ;
     irishTitles:reignLength 10 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#CendFaelad>.
+    irishTitles:succeededBy <CendFaelad>.
 
-<#CendFaelad>
+<CendFaelad>
     a irishTitles:Rí, irishTitles:Abb ;
-    irishRel:nomName "Cend Faelad" ;
-    rel:childOf <#Mochthigirn>;
+        irishRel:nomName "Cend Faelad" ;
+        agrelon:hasParent <Mochthigirn>;
+    rel:childOf <Mochthigirn>;
     irishTitles:reignLength 13 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Dunchad>.
+    irishTitles:succeededBy <Dunchad>.
 
-<#Mochthigirn>
+<Mochthigirn>
     a foaf:Person ;
     irishRel:genName "Mochthigirn" ;
     irishRel:nomName "Mochthigern" .
 
-<#Dunchad>
+<Dunchad>
     a irishTitles:Rí ;
     irishRel:nomName "Dunchad" ;
     irishTitles:reignLength 16 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#DubLachtna>.
+    irishTitles:succeededBy <DubLachtna>.
 
-<#DubLachtna>
+<DubLachtna>
     a irishTitles:Rí ;
-    irishRel:nomName "Dub Lachtna" ;
-    rel:childOf <#MaelGuala-ab470deb>;
-    rel:childOf <#Loegaire>;
+        irishRel:nomName "Dub Lachtna" ;
+        agrelon:hasParent <MaelGuala-ab470deb>, <Loegaire>;
+    rel:childOf <MaelGuala-ab470deb>, <Loegaire>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#DubLachtna>;
     irishTitles:reignLength 7 ;
-    irishTitles:succeededBy <#Finguine-85143518>.
+    irishTitles:succeededBy <Finguine-85143518>.
 
-<#MaelGuala-ab470deb>
+<MaelGuala-ab470deb>
     a foaf:Person ;
     irishRel:nomName "Mael Guala" ;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MaelGuala>;
-    owl:sameAs <#MaelGuala>.
+    owl:sameAs <MaelGuala>.
 
-<#Finguine-85143518>
+<Finguine-85143518>
     a irishTitles:Rí ;
-    irishRel:nomName "Finguine" ;
-    rel:childOf <#DubLachtna>;
+        irishRel:nomName "Finguine" ;
+        agrelon:hasParent <DubLachtna>;
+    rel:childOf <DubLachtna>;
     irishTitles:reignLength 7 ;
     rdfs:comment " Cend Gécain ros-marb per dolum" .
 
-<#Loegaire>
+<Loegaire>
     a foaf:Person ;
     irishRel:nomName "Loegaire" .
 
-<#Cormac-e5d4a1c0>
+<Cormac-e5d4a1c0>
     a irishTitles:Rí ;
-    irishRel:nomName "Cormac" ;
-    rel:childOf <#Culennain>;
+        irishRel:nomName "Cormac" ;
+        agrelon:hasParent <Culennain>;
+    rel:childOf <Culennain>;
     irishTitles:reignLength 7 ;
-    rel:antagonistOf <#Cerball>.
+    rel:antagonistOf <Cerball>.
 
-<#Culennain>
+<Culennain>
     a foaf:Person;
     foaf:name "Culennain";
     foaf:name "Culennan".
 
-<#Cerball>
+<Cerball>
     a foaf:Person ;
-    irishRel:nomName "Cerball" ;
-    rel:childOf <#Muridaig>;
-    rel:antagonistOf <#FiachAlbe> .
+        irishRel:nomName "Cerball" ;
+        agrelon:hasParent <Muridaig>;
+    rel:childOf <Muridaig>;
+    rel:antagonistOf <FiachAlbe> .
 
-<#Muridaig>
+<Muridaig>
     a foaf:Person ;
     irishRel:nomName "Muridaig" .
 
-<#FiachAlbe>
+<FiachAlbe>
     a foaf:Person ;
     irishRel:nomName "Fiach Albe" .
 
-<#Flaithbertach>
+<Flaithbertach>
     a irishTitles:Rí ;
-    irishRel:nomName "Flaithbertach" ;
-    rel:childOf <#Inmainen>;
+        irishRel:nomName "Flaithbertach" ;
+        agrelon:hasParent <Inmainen>;
+    rel:childOf <Inmainen>;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Lorcan>.
+    irishTitles:succeededBy <Lorcan>.
 
-<#Inmainen>
+<Inmainen>
     a foaf:Person ;
     irishRel:nomName "Inmainen" .
 
-<#Lorcan>
+<Lorcan>
     a irishTitles:Rí ;
     irishRel:nomName "Lorcan" ;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Lorcain>;
     irishTitles:reignLength 9 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#CellachánCasil>.
+    irishTitles:succeededBy <CellachánCasil>.
 
-<#CellachánCasil>
+<CellachánCasil>
     a irishTitles:Rí ;
     irishRel:nomName "Cellachán Casil" ;
     owl:sameAs <http://example.com/LL/rig_desmuman.trig#Cellachain>;
     irishTitles:reignLength 10 ;
-    irishTitles:succeededBy <#MaelFathartaig-c172e885>.
+    irishTitles:succeededBy <MaelFathartaig-c172e885>.
 
-<#MaelFathartaig-c172e885>
+<MaelFathartaig-c172e885>
     a irishTitles:Rí ;
-    irishRel:nomName "Mael Fathartaig" ;
-    rel:childOf <#Dondchada>;
+        irishRel:nomName "Mael Fathartaig" ;
+        agrelon:hasParent <Dondchada>;
+    rel:childOf <Dondchada>;
     irishTitles:reignLength 3 ;
-    irishTitles:succeededBy <#DubDaBairend>.
+    irishTitles:succeededBy <DubDaBairend>.
 
-<#Dondchada>
+<Dondchada>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Dondchada-0c00bda2>.
 
-<#DubDaBairend>
+<DubDaBairend>
     a irishTitles:Rí ;
     irishRel:nomName "Dub Da Bairend" ;
     irishTitles:reignLength 2 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#FerGráid>.
+    irishTitles:succeededBy <FerGráid>.
 
-<#FerGráid>
+<FerGráid>
     a irishTitles:Rí ;
-    irishRel:nomName "Fer Gráid" ;
-    rel:childOf <#Ailgenain>;
+        irishRel:nomName "Fer Gráid" ;
+        agrelon:hasParent <Ailgenain>;
+    rel:childOf <Ailgenain>;
     irishTitles:reignLength 5 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#Mathgamain>.
+    irishTitles:succeededBy <Mathgamain>.
 
-<#Ailgenain>
+<Ailgenain>
     a foaf:Person ;
     irishRel:nomName "Ailgenain", "Ailgenan" .
 
-<#Mathgamain>
+<Mathgamain>
     a irishTitles:Rí ;
-    irishRel:nomName "Mathgamain" ;
-    rel:childOf <#Cennetig>;
+        irishRel:nomName "Mathgamain" ;
+        agrelon:hasParent <Cennetig>;
+    rel:childOf <Cennetig>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#Mathgamain-39e4b6cf>;
     irishTitles:reignLength 17 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#MaelMuad>.
+    irishTitles:succeededBy <MaelMuad>.
 
-<#Cennetig>
+<Cennetig>
     a foaf:Person ;
     irishRel:genName "Cennetig" ;
     irishRel:nomName "Cennetech" ;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#Cennétig>.
 
-<#MaelMuad>
+<MaelMuad>
     a irishTitles:Rí ;
-    irishRel:nomName "Mael Muad" ;
-    rel:childOf <#Brain>;
+        irishRel:nomName "Mael Muad" ;
+        agrelon:hasParent <Brain>;
+    rel:childOf <Brain>;
     owl:sameAs <http://example.com/LL/n_echach.trig#MaelMuad>;
     irishTitles:reignLength 2 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#Brian-da4b783d>.
+    irishTitles:succeededBy <Brian-da4b783d>.
 
-<#Brain>
+<Brain>
     owl:sameAs <http://example.com/LL/n_echach.trig#Brain>.
 
-<#Brian-da4b783d>
+<Brian-da4b783d>
     a irishTitles:Rí ;
-    irishRel:nomName "Brian" ;
-    rel:childOf <#Cennetig-783f737f>;
+        irishRel:nomName "Brian" ;
+        agrelon:hasParent <Cennetig-783f737f>;
+    rel:childOf <Cennetig-783f737f>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Briain>;
     irishTitles:reignLength 36 ;
     rdfs:comment "A marbad i cath Corad Cluana Tarb la Lagniu & Gullu" ;
-    irishTitles:succeededBy <#Donchad>.
+    irishTitles:succeededBy <Donchad>.
 
-<#Cennetig-783f737f>
-    owl:sameAs <#Cennetig>;
+<Cennetig-783f737f>
+    owl:sameAs <Cennetig>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Cennetig>.
 
-<#Donchad>
+<Donchad>
     a irishTitles:Rí ;
-    irishRel:nomName "Donchad" ;
-    rel:childOf <#Briain>;
+        irishRel:nomName "Donchad" ;
+        agrelon:hasParent <Briain>;
+    rel:childOf <Briain>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#Dondchad>;
     irishTitles:reignEndedBy "ec"@sga ;
     rdfs:comment "a ec ac dul do Róim" ;
-    irishTitles:succeededBy <#Dungal>.
+    irishTitles:succeededBy <Dungal>.
 
-<#Briain>
-    owl:sameAs <#Brian-da4b783d>;
+<Briain>
+    owl:sameAs <Brian-da4b783d>;
     a foaf:Person ;
     irishRel:nomName "Briain" .
 
-<#Dungal>
+<Dungal>
     a irishTitles:Rí ;
-    irishRel:nomName "Dungal" ;
-    rel:childOf <#MaelFatharlaig>;
+        irishRel:nomName "Dungal" ;
+        agrelon:hasParent <MaelFatharlaig>;
+    rel:childOf <MaelFatharlaig>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Dungal>;
     rdfs:comment ".h. Dondchad" ;
     irishTitles:reignLength 1 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#Tairdelbach>.
+    irishTitles:succeededBy <Tairdelbach>.
 
-<#MaelFatharlaig>
-    owl:sameAs <#MaelFathartaig-c172e885>.
+<MaelFatharlaig>
+    owl:sameAs <MaelFathartaig-c172e885>.
 
-<#Tairdelbach>
+<Tairdelbach>
     a irishTitles:Rí ;
     irishRel:nomName "Tairdelbach" ;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Tairdelbaig>;
     irishTitles:reignLength 22 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Murchertach>.
+    irishTitles:succeededBy <Murchertach>.
 
-<#Murchertach>
+<Murchertach>
     a irishTitles:Rí ;
-    irishRel:nomName "Murchertach" ;
-    rel:childOf <#Tairdelbach>;
+        irishRel:nomName "Murchertach" ;
+        agrelon:hasParent <Tairdelbach>;
+    rel:childOf <Tairdelbach>;
     irishTitles:reignLength 16 ;
-    irishTitles:succeededBy <#Diarmait>.
+    irishTitles:succeededBy <Diarmait>.
 
-<#Diarmait>
+<Diarmait>
     a irishTitles:Rí ;
-    irishRel:nomName "Diarmait" ;
-    rel:descendantOf <#Briain-85c8c4d2>;
+        irishRel:nomName "Diarmait" ;
+        agrelon:hasAncestor <Briain-85c8c4d2> ;
+    rel:descendantOf <Briain-85c8c4d2>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Diarmata>;
     irishTitles:reignLength 9 ;
     irishTitles:reignEndedBy "ec"@sga ;
     rdfs:comment "mis"@sga ;
-    irishTitles:succeededBy <#Tadc>.
+    irishTitles:succeededBy <Tadc>.
 
-<#Briain-85c8c4d2>
-    owl:sameAs <#Brian-da4b783d>;
+<Briain-85c8c4d2>
+    owl:sameAs <Brian-da4b783d>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Briain>.
 
-<#Tadc>
+<Tadc>
     a irishTitles:Rí ;
-    irishRel:nomName "Tadc" ;
-    rel:childOf <#Carthaig>;
+        irishRel:nomName "Tadc" ;
+        agrelon:hasParent <Carthaig>;
+    rel:childOf <Carthaig>;
     irishTitles:reignLength 6 ;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Cormac-d5ba8d9d>.
+    irishTitles:succeededBy <Cormac-d5ba8d9d>.
 
-<#Carthaig>
+<Carthaig>
     a foaf:Person ;
     irishRel:nomName "Carthaig" .
 
-<#Cormac-d5ba8d9d>
+<Cormac-d5ba8d9d>
     a irishTitles:Rí ;
-    irishRel:nomName "Cormac" ;
-    rel:childOf <#Carthaig>;
+        irishRel:nomName "Cormac" ;
+        agrelon:hasParent <Carthaig>;
+    rel:childOf <Carthaig>;
     irishTitles:reignLength 6 ;
     irishTitles:reignEndedBy "marb"@sga ;
-    irishTitles:succeededBy <#Conchobor>.
+    irishTitles:succeededBy <Conchobor>.
 
-<#Conchobor>
+<Conchobor>
     a irishTitles:Rí ;
     irishRel:nomName "Conchobor" ;
-    owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Conchobor>;
-    rel:childOf <#Diarmait>;
+        owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Conchobor>;
+        agrelon:hasParent <Diarmait>;
+    rel:childOf <Diarmait>;
     irishTitles:reignEndedBy "ec"@sga ;
-    irishTitles:succeededBy <#Tairdelbach-2911e106>.
+    irishTitles:succeededBy <Tairdelbach-2911e106>.
 
-<#Tairdelbach-2911e106>
+<Tairdelbach-2911e106>
     a irishTitles:Rí ;
     irishRel:nomName "Tairdelbach" ;
-    owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Tairdelbach>;
-    rel:childOf <#Diarmait>;
+        owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#Tairdelbach>;
+        agrelon:hasParent <Diarmait>;
+    rel:childOf <Diarmait>;
     irishTitles:reignEndedBy "ec"@sga .
 }
