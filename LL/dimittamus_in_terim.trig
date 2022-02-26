@@ -9,6 +9,7 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -22,6 +23,8 @@
     a foaf:Person;
     irishRel:nomName "Findcháem";
     foaf:gender "female";
+    agrelon:hasParent <Chathbad> ;
+    agrelon:hasChild <ConaillCernaig> ;
     rel:childOf <Chathbad>;
     rel:parentOf <ConaillCernaig>.
 
@@ -37,8 +40,8 @@
     irishRel:ancestorOfGroup <ClannaConaillCernaig>.
 
 << <ConaillCernaig>
-        rdfs:comment "same as eli_descirt.trig and laigsi.trig #ConaillCernaig ?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+    rdfs:comment "same as eli_descirt.trig and laigsi.trig #ConaillCernaig ?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 <ClannaConaillCernaig>
     a irishRel:PopulationGroup ;
@@ -48,7 +51,10 @@
 <Dáln-Araide>
     a irishRel:PopulationGroup ;
     irishRel:populationGroupName "Dál n-Araide" .
-#same as dáil_araide.trig Dál n-Araide? - CY
+
+<< <Dáln-Araide>
+    rdfs:comment "same as dáil_araide.trig Dál n-Araide?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 <hEchachUlad>
     a irishRel:PopulationGroup ;
@@ -62,26 +68,31 @@
 <Eogan>
     a foaf:Person;
     irishRel:nomName "Eogan";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>.
 
 <Tlactga>
     a foaf:Person;
     irishRel:nomName "Tlactga";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>.
 
 <Cathnia>
     a foaf:Person;
     irishRel:nomName "Cathnia";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>.
 
 <Uathnia>
     a foaf:Person;
     irishRel:nomName "Uathnia";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>.
 
 <Druthnia>
     a foaf:Person;
     irishRel:nomName "Druthnia";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>;
     irishRel:populationGroupName <Dálm-Bundruini>.
 
@@ -92,11 +103,13 @@
 <UathneTire>
     a foaf:Person;
     irishRel:nomName "Uathne Tire";
+    agrelon:hasParent <Uathnia>;
     rel:childOf <Uathnia>.
 
 <UathneChliach>
     a foaf:Person;
     irishRel:nomName "Uathne Chliach";
+    agrelon:hasParent <Uathnia>;
     rel:childOf <Uathnia>.
 
 <ClandSem>
@@ -162,6 +175,7 @@
 <Caenraige>
     a foaf:Person;
     irishRel:nomName "Caenraige";
+    agrelon:hasParent <Cathnia>;
     rel:childOf <Cathnia>.
 
 <Mongan>
@@ -177,6 +191,7 @@
     a irishTitles:Rí ;
     foaf:title "ríg la Ultu"@sga, "king of Ulster"@en;
     owl:sameAs <http://example.com/LL/do_fhorshlontib_ulad_co_coitchiunn.trig#Conchobuir>;
+    agrelon:hasParent <Nessa>;
     rel:childOf <Nessa>.
 
 <Nessa>
@@ -186,41 +201,49 @@
 <Findchad>
     a foaf:Person;
     irishRel:nomName "Findchad";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Glasne>
     a foaf:Person;
     irishRel:nomName "Glasne";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Conaing>
     a foaf:Person;
     irishRel:nomName "Conaing";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Fiachra>
     a foaf:Person;
     irishRel:nomName "Fiachra";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Fiachna>
     a foaf:Person;
     irishRel:nomName "Fiachna";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Furbaide>
     a foaf:Person;
     irishRel:nomName "Furbaide";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Benna>
     a foaf:Person;
     irishRel:nomName "Benna";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Láma>
     a foaf:Person;
     irishRel:nomName "Láma";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Lamraige>
@@ -230,12 +253,14 @@
 <Lama>
     a foaf:Person;
     irishRel:nomName "Lama";
+    agrelon:hasParent <Eirc>;
     rel:childOf <Eirc>.
 
 <Eirc>
     a foaf:Person;
     irishRel:genName "Eirc";
     irishRel:nomName "Erc";
+    agrelon:hasParent <Findscópe>;
     rel:childOf <Findscópe>.
 
 <Findscópe>
@@ -243,6 +268,7 @@
     irishRel:genName "Findscópe";
     irishRel:nomName "Findscóp";
     foaf:gender "female";
+    agrelon:hasParent <ConChulaind>;
     rel:childOf <ConChulaind>.
 
 <ConChulaind>
