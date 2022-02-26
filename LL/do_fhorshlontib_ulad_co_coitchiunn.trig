@@ -8,6 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -20,12 +21,14 @@
 <FergnaGarb>
     a foaf:Person;
     irishRel:nomName "Fergna Garb";
+    agrelon:hasParent <Salaich>;
     rel:childOf <Salaich>.
 
 <Salaich>
     a foaf:Person;
     irishRel:genName "Salaich";
-    irishRel:nomName "Salach";	
+    irishRel:nomName "Salach";
+    agrelon:hasParent <LoairnMair>;
     rel:childOf <LoairnMair>.
 
 <LoairnMair>
@@ -49,7 +52,9 @@
     a foaf:Person;
     irishRel:genName "Chonget Chonganchnes";
     irishRel:nomName "Conget Chnganchnes";
+    agrelon:hasSibling <Corc>, <ConallCass>, <Corc>;
     rel:siblingOf <Corc>, <ConallCass>, <Corc>;
+    agrelon:hasParent <Dedad>;
     rel:childOf <Dedad>.
     
 <Dedad>
@@ -60,8 +65,8 @@
     a foaf:Person;
     irishRel:nomName "Celtchair";
     irishRel:numChild 3;
-    rel:childOf <Uithechair>;
-    rel:childOf <Lithechair>.
+    agrelon:hasParent <Uithechair>, <Lithechair>;
+    rel:childOf <Uithechair>, <Lithechair> .
 
 <Lithechair>
     a foaf:Person;
@@ -71,12 +76,14 @@
     a foaf:Person;
     irishRel:nomName "Bél";
     foaf:gender "female";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>.
 
 <Nemdaille>
     a foaf:Person;
     irishRel:nomName "Nemdaille";
     foaf:gender "female";
+    agrelon:hasParent <Celtchair>;
     rel:childOf <Celtchair>.
 
 <ScadarcAngain>
@@ -84,6 +91,8 @@
     irishRel:nomName "Scadarc Angain";
     foaf:gender "female";
     rel:childOf <Celtchair-472a82f0>;
+    agrelon:hasParent <Celtchair-472a82f0>;
+    agrelon:hasSpouse <ChongetChonganchnis> ;
     rel:spouseOf <ChongetChonganchnis>.
 
 <ChongetChonganchnis>
@@ -94,19 +103,23 @@
 <Uithechair>
     a foaf:Person;
     irishRel:nomName "Uithechair";
+    agrelon:hasChild <Celtchair>;
     rel:parentOf <Celtchair>.
 
 <Dronae>
     a foaf:Person;
     irishRel:nomName "Dronae";
+    agrelon:hasSpouse <Celtchair> ;
     rel:spouseOf <Celtchair>;
     foaf:gender "female";
+    agrelon:hasParent <Conchobuir>;
     rel:childOf <Conchobuir>.
 
 <Conchobuir>
     a foaf:Person;
     irishRel:nomName "Conchobuir";
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1124002>;
+    agrelon:hasParent <Nesa>;
     rel:childOf <Nesa>.
 
 <Nesa>
@@ -118,6 +131,7 @@
     a foaf:Person;
     irishRel:nomName "Lugdach";
     irishRel:numChild 6;
+    agrelon:hasParent <OengusaFind>;
     rel:childOf <OengusaFind>.
 
 <OengusaFind>
@@ -128,41 +142,50 @@
 <Aed>
     a foaf:Person;
     irishRel:nomName "Aed";
+    agrelon:hasParent <Lugdach>;
     rel:childOf <Lugdach>.
 
 <Daig>
     a foaf:Person;
     irishRel:nomName "Daig";
+    agrelon:hasParent <Lugdach>;
     rel:childOf <Lugdach>.
 
 <Dallan>
     a foaf:Person;
     irishRel:nomName "Dallan";
+    agrelon:hasParent <Lugdach>;
     rel:childOf <Lugdach>.
 
 <Indiu>
     a foaf:Person;
     irishRel:nomName "Indiu";
     foaf:gender "female";
+    agrelon:hasParent <Lugdach>;
     rel:childOf <Lugdach>.
 
 <Indiach>
     a foaf:Person;
     irishRel:nomName "Indiach";
     foaf:gender "female";
+    agrelon:hasParent <Lugdach>;
     rel:childOf <Lugdach>.
 
 <Sciath>
     a foaf:Person;
     irishRel:nomName "Sciath";
     foaf:gender "female";
+    agrelon:hasParent <Lugdach>;
     rel:childOf <Lugdach>;
+    agrelon:hasSpouse <Taidc> ;
     rel:spouseOf <Taidc>.
 
 <Néill>
     a foaf:Person;
     irishRel:nomName "Néill";
+    agrelon:hasParent <Echach>;
     rel:childOf <Echach>;
+    agrelon:hasSpouse <Indiu>;
     rel:spouseOf <Indiu>.
 
 <Echach>
@@ -172,16 +195,19 @@
 <Conaill>
     a foaf:Person;
     irishRel:nomName "Conaill";
+    agrelon:hasParent <Indiu>;
     rel:childOf <Indiu>.
 
 <Eogain>
     a foaf:Person;
     irishRel:nomName "Eogain";
+        agrelon:hasParent <Indiu>;
     rel:childOf <Indiu>.
 
 <Indecht>
     irishRel:nomName "Indecht";
     owl:sameAs <Indiach>;
+    agrelon:hasSpouse <Buti>;
     rel:spouseOf <Buti>.
 
 <Buti>
@@ -191,18 +217,21 @@
 <Colgu>
     a foaf:Person;
     irishRel:nomName "Colgu";
+    agrelon:hasParent <Indecht>, <Buti>;
     rel:childOf <Indecht>, <Buti>.
 
 <Crimthann>
     a foaf:Person;
     irishRel:nomName "Crimthann";
+        agrelon:hasParent <Indecht>, <Buti>;
     rel:childOf <Indecht>, <Buti>.
 
 
 <Taidc>
     a foaf:Person;
     irishRel:genName "Taidc";
-    irishRel:nomName "Tadc";        
+    irishRel:nomName "Tadc";
+    agrelon:hasParent <Céin>;
     rel:childOf <Céin>.
 
 <Céin>
