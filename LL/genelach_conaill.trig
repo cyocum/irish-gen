@@ -1,0 +1,105 @@
+@base <http://example.com/LL/genelach_conaill.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Conaill"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Lorcan>
+    a foaf:Person;
+    irishRel:nomName "Lorcan";
+    rel:childOf <#Condlígain>.
+
+<#Condlígain>
+    a foaf:Person;
+    irishRel:genName "Condlígain";
+    irishRel:nomName "Condlígan";
+    rel:childOf <#Corcrain>.
+
+<#Corcrain>
+    a foaf:Person;
+    irishRel:genName "Corcrain";
+    irishRel:nomName "Corcran";
+    rel:childOf <#Cuirc-0102ecad>.
+
+<#Cuirc-0102ecad>
+    a foaf:Person;
+    irishRel:genName "Cuirc";
+    irishRel:nomName "Curc";
+    rel:childOf <#Artgaile-27660aa6>.
+
+<#Artgaile-27660aa6>
+    a foaf:Person;
+    irishRel:genName "Artgaile";
+    irishRel:nomName "Artgal";
+    rel:childOf <#Domnaill-5188dbf0>.
+
+<#Domnaill-5188dbf0>
+    a foaf:Person;
+    irishRel:genName "Domnaill";
+    irishRel:nomName "Domnall";
+    rel:childOf <#Conaill>.
+
+<#Conaill>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#Snedgusa-aa58c1ba>.
+
+<#Snedgusa-aa58c1ba>
+    a foaf:Person;
+    irishRel:genName "Snedgusa";
+    irishRel:nomName "Snedgus";
+    rel:childOf <#NathFraich-564c0cc3>.
+
+<#NathFraich-564c0cc3>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich>;
+    rel:childOf <#Colgan-247d2281>.
+
+<#Colgan-247d2281>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Colggan>;
+    rel:childOf <#FailbeFlaind-16feb59e>.
+
+<#FailbeFlaind-16feb59e>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Failbe>.
+
+<#Domnall-d2d74e11>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#Cathail-bb959d14>.
+
+<#Cathail-bb959d14>
+    a foaf:Person;
+    irishRel:genName "Cathail";
+    irishRel:nomName "Cathal";
+    rel:childOf <#DuibShlane>.
+
+<#DuibShlane>
+    a foaf:Person;
+    irishRel:genName "Duib Shlane";
+    irishRel:nomName "Dub Slane";
+    rel:childOf <#Corcrain-f359c77a>.
+
+<#Corcrain-f359c77a>
+    owl:sameAs <#Corcrain>;
+    rel:childOf <#Cuirc-b015240c>.
+
+<#Cuirc-b015240c>
+    owl:sameAs <#Cuirc-0102ecad>.
+
+}
