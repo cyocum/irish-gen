@@ -1,0 +1,85 @@
+@base <http://example.com/LL/genelach_cerddraige_tuilche_gossa.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Cerddraige Tuilche Gossa. Ideo Cerddraige Dicuntur Ar Ba Cerdd Cach Fer Díb Co Morfessiur"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#MoThemnioc>
+    a foaf:Person;
+    foaf:nick "Temnen";
+    rel:childOf <#Carban>.
+
+<#Carban>
+    a foaf:Person;
+    irishRel:genName "Carban";
+    irishRel:nomName "Corbban";
+    rel:childOf <#Lugeda>.
+
+<#Lugeda>
+    a foaf:Person;
+    irishRel:genName "Lugeda";
+    irishRel:nomName "Luged";
+    rel:childOf <#Themin>.
+
+<#Themin>
+    a foaf:Person;
+    irishRel:genName "Themin";
+    irishRel:nomName "Temen";
+    rel:childOf <#Themnen>.
+
+<#Themnen>
+    a foaf:Person;
+    irishRel:genName "Themnen";
+    irishRel:nomName "Temnean";
+    rel:childOf <#Senaig>.
+
+<#Senaig>
+    a foaf:Person;
+    irishRel:genName "Senaig";
+    irishRel:nomName "Senach";
+    rel:childOf <#Cerddain>.
+
+<#Cerddain>
+    a foaf:Person;
+    irishRel:genName "Cerddain";
+    irishRel:nomName "Cerddan";
+    rel:childOf <#CerddaBice>.
+
+<#CerddaBice>
+    a foaf:Person;
+    irishRel:genName "Cerdda Bice";
+    irishRel:nomName "Cerdd Bec";
+    rel:childOf <#Cerdraige>.
+
+<#Cerdraige>
+    a foaf:Person;
+    irishRel:genName "Cerdraige";
+    irishRel:nomName "Cerdraig";
+    rel:childOf <#Thigernaig>.
+
+<#Thigernaig>
+    a foaf:Person;
+    irishRel:genName "Thigernaig";
+    irishRel:nomName "Thigernach";
+    rel:childOf <#AilellaOloim-ca5a75f5>.
+
+<#AilellaOloim-ca5a75f5>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AilellaOloim>.
+
+}
