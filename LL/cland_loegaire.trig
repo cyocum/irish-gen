@@ -1,0 +1,53 @@
+@base <http://example.com/LL/cland_loegaire.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+
+    a dctype:Dataset;
+    dcterms:title "Genelach Eoganachta Casil"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#CuChalma>
+    a foaf:Person;
+    irishRel:nomName "Cu Chalma";
+    rel:childOf <#CindFáelad>.
+
+<#CindFáelad>
+    a foaf:Person;
+    irishRel:genName "Cind Fáelad";
+    irishRel:nomName "Cend Fáelad";
+    rel:childOf <#Muridaig-92b4305b>.
+
+<#Muridaig-92b4305b>
+    a foaf:Person;
+    irishRel:genName "Muridaig";
+    irishRel:nomName "Muridach";
+    rel:childOf <#Lachtnai>.
+
+<#Lachtnai>
+    a foaf:Person;
+    irishRel:genName "Lachtnai";
+    irishRel:nomName "Lachtnae";
+    rel:childOf <#Loegaire-257f3273>.
+
+<#Loegaire-257f3273>
+    owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Loegaire-d41447df>;
+    rel:childOf <#MaelFhínain-6abd6b43>.
+
+<#MaelFhínain-6abd6b43>
+    owl:sameAs <http://example.com/LL/cland_cerbaill.trig#MaelFhínain>.
+
+}
