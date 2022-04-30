@@ -1,0 +1,170 @@
+@base <http://example.com/LL/h_ú_muridaig.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "H-Ú Muridaig"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Fogartach>
+    a foaf:Person;
+    irishRel:nomName "Fogartach";
+    rel:childOf <#Finnachta>.
+
+<#Finnachta>
+    a foaf:Person;
+    irishRel:genName "Finnachta";
+    irishRel:nomName "Finnacht";
+    rel:childOf <#Gaiscedaig>.
+
+<#Gaiscedaig>
+    a foaf:Person;
+    irishRel:genName "Gaiscedaig";
+    irishRel:nomName "Gaiscedach";
+    rel:childOf <#MaelAnfaid>.
+
+<#MaelAnfaid>
+    a foaf:Person;
+    irishRel:genName "Mael Anfaid";
+    irishRel:nomName "Mael Anfad";
+    rel:childOf <#DuibTorrain>.
+
+<#DuibTorrain>
+    a foaf:Person;
+    irishRel:genName "Duib Torrain";
+    irishRel:nomName "Dub Torran";
+    rel:childOf <#DuibThuatain>.
+
+<#DuibThuatain>
+    a foaf:Person;
+    irishRel:genName "Duib Thuatain";
+    irishRel:nomName "Dub Tuatan";
+    rel:childOf <#Colmain-1df7e54e>.
+
+<#Colmain-1df7e54e>
+    a foaf:Person;
+    irishRel:genName "Colmain";
+    irishRel:nomName "Colman";
+    rel:childOf <#Crimthainn>.
+
+<#Crimthainn>
+    a foaf:Person;
+    irishRel:genName "Crimthainn";
+    irishRel:nomName "Crimthann";
+    rel:childOf <#NadShluaig>.
+
+<#NadShluaig>
+    a foaf:Person;
+    irishRel:genName "Nad Shluaig";
+    irishRel:nomName "Nad Sluach";
+    rel:childOf <#Muridaig-db308a1b>.
+
+<#Muridaig-db308a1b>
+    a foaf:Person;
+    irishRel:genName "Muridaig";
+    irishRel:nomName "Muridach";
+    rel:childOf <#Tháil>.
+
+<#Tháil>
+    a foaf:Person;
+    irishRel:genName "Tháil";
+    irishRel:nomName "Thál";
+    rel:childOf <#Dega>.
+
+<#Dega>
+    a foaf:Person;
+    irishRel:genName "Dega";
+    irishRel:nomName "Deg";
+    rel:childOf <#Cuirc-2ac5fe39>.
+
+<#Cuirc-2ac5fe39>
+    owl:sameAs <#Cuirc>;
+    rel:childOf <#Lugdech-880bdb8a>.
+
+<#Lugdech-880bdb8a>
+    owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Lugdech>.
+
+<#MaelCorgais>
+    a foaf:Person;
+    irishRel:nomName "Mael Corgais";
+    rel:childOf <#Oengusa-27d8640a>.
+
+<#Oengusa-27d8640a>
+    a foaf:Person;
+    irishRel:genName "Oengusa";
+    irishRel:nomName "Oengus";
+    rel:childOf <#Elothaig>.
+
+<#Elothaig>
+    a foaf:Person;
+    irishRel:genName "Elothaig";
+    irishRel:nomName "Elothach";
+    rel:childOf <#Anbthenaig>.
+
+<#Anbthenaig>
+    a foaf:Person;
+    irishRel:genName "Anbthenaig";
+    irishRel:nomName "Anbthenach";
+    rel:childOf <#ConRiaguill>.
+
+<#ConRiaguill>
+    a foaf:Person;
+    irishRel:genName "Con Riaguill";
+    irishRel:nomName "Cu Riagull";
+    rel:childOf <#Thommin>.
+
+<#Thommin>
+    a foaf:Person;
+    irishRel:genName "Thommin";
+    irishRel:nomName "Tommen";
+    rel:childOf <#Ronain>.
+
+<#Ronain>
+    a foaf:Person;
+    irishRel:genName "Ronain";
+    irishRel:nomName "Ronan";
+    rel:childOf <#NadSluaig>.
+
+<#NadSluaig>
+    irishRel:genName "Nad Sluaig";
+    irishRel:nomName "Nad Sluach";
+    owl:sameAs <#NadShluaig>.
+
+<#Ronain-68e5b83d>
+    owl:sameAs <#Ronain>;
+    rel:childOf <#Eoganain-068d1cf6>.
+
+<#Eoganain-068d1cf6>
+    a foaf:Person;
+    irishRel:genName "Eoganain";
+    irishRel:nomName "Eoganan";
+    rel:childOf <#Muredaig>.
+
+<#Muredaig>
+    irishRel:genName "Muredaig";
+    irishRel:nomName "Muredach";
+    owl:sameAs <#Muridaig-db308a1b>;
+    rel:childOf <#Thail-5edcacd4>.
+
+<#Thail-5edcacd4>
+    irishRel:genName "Thail";
+    irishRel:nomName "Tal";
+    owl:sameAs <#Tháil>;
+    rel:childOf <#Dega-f64ca1d8>.
+
+<#Dega-f64ca1d8>
+    owl:sameAs <#Dega>.
+}
