@@ -1,0 +1,68 @@
+@base <http://example.com/LL/genelach_h_cathbath.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. Cathbath"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Gainemach>
+    a foaf:Person;
+    irishRel:nomName "Gainemach";
+    rel:childOf <#BrocainDibig>.
+
+<#BrocainDibig>
+    a foaf:Person;
+    irishRel:genName "Brocain Dibig";
+    irishRel:nomName "Brocan Dibech";
+    rel:childOf <#Dicolla>.
+
+<#Dicolla>
+    a foaf:Person;
+    irishRel:genName "Dicolla";
+    irishRel:nomName "Dicoll";
+    rel:childOf <#Crundmáil>.
+
+<#Crundmáil>
+    a foaf:Person;
+    irishRel:genName "Crundmáil";
+    irishRel:nomName "Crundmál";
+    rel:childOf <#Colmáin>.
+
+<#Colmáin>
+    a foaf:Person;
+    irishRel:genName "Colmáin";
+    irishRel:nomName "Colmán";
+    rel:childOf <#Airgnaid>.
+
+<#Airgnaid>
+    a foaf:Person;
+    irishRel:genName "Airgnaid";
+    irishRel:nomName "Airgnad";
+    rel:childOf <#Cuirc-9228cee4>.
+
+<#Cuirc-9228cee4>
+    a foaf:Person;
+    irishRel:genName "Cuirc";
+    irishRel:nomName "Curc";
+    rel:childOf <#Ailella-7555ec9d>.
+
+<#Ailella-7555ec9d>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill".
+
+}
