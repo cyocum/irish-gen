@@ -1,0 +1,206 @@
+@base <http://example.com/LL/de_h_dedad.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "De .H. Dedad"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Dare>
+    a foaf:Person;
+    irishRel:nomName "Dare";
+    rel:childOf <#Blaithmeic>.
+
+<#Blaithmeic>
+    a foaf:Person;
+    irishRel:genName "Blaithmeic";
+    irishRel:nomName "Blaithmac";
+    rel:childOf <#Noetan>.
+
+<#Noetan>
+    a foaf:Person;
+    irishRel:nomName "Noetan";
+    rel:childOf <#Cerceain>.
+
+<#Cerceain>
+    a foaf:Person;
+    irishRel:genName "Cerceain";
+    irishRel:nomName "Cercean";
+    rel:childOf <#Breccaen>.
+
+<#Breccaen>
+    a foaf:Person;
+    irishRel:genName "Breccaen";
+    irishRel:nomName "Breccan";
+    rel:childOf <#Trichem>.
+
+<#Trichem>
+    a foaf:Person;
+    irishRel:nomName "Trichem";
+    rel:childOf <#Rainnetha>.
+
+<#Rainnetha>
+    a foaf:Person;
+    irishRel:genName "Rainnetha";
+    irishRel:nomName "Rainneth";
+    rel:childOf <#Braccain>.
+
+<#Braccain>
+    a foaf:Person;
+    irishRel:genName "Braccain";
+    irishRel:nomName "Braccan";
+    rel:childOf <#Dedad-5e067523>.
+
+<#Dedad-5e067523>
+    a foaf:Person;
+    irishRel:nomName "Dedad";
+    rel:childOf <#Degluine>.
+
+<< <#Dedad-5e067523>
+        rdfs:comment "unclear if dedad here is the same as dedad above" >>
+        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+
+<#Degluine>
+    a foaf:Person;
+    irishRel:genName "Degluine";
+    irishRel:nomName "Deglun".
+
+<#Dedad-db219163>
+    irishRel:numChild 2;
+    owl:sameAs <#Dedad-5e067523>;
+    rel:childOf <#DaireCerba>.
+
+<#DaireCerba>
+    a foaf:Person;
+    irishRel:nomName "Daire Cerba";
+    rel:childOf <#Etarsceli>.
+
+<#Etarsceli>
+    a foaf:Person;
+    irishRel:genName "Etarsceli";
+    irishRel:nomName "Etarscel";
+    rel:childOf <#Degloth>.
+
+<#Degloth>
+    a foaf:Person;
+    irishRel:nomName "Degloth";
+    rel:childOf <#FiachachOeli-27d05ca2>.
+
+<#FiachachOeli-27d05ca2>
+    owl:sameAs <http://example.com/LL/genelach_fiachrach_oeli_d_uib_duach.trig#FiachrachOeli>.
+
+<#Braccan>
+    owl:sameAs <#Braccain>;
+    irishRel:nomName "Braccan";
+    irishRel:numChild 5;
+    rel:childOf <#Dedad-db219163>.
+
+<#Ailill-05c10da0>
+    a foaf:Person;
+    irishRel:nomName "Ailill";
+    irishRel:numChild 3;
+    rel:childOf <#Dedad-db219163>.
+
+<#Naennid>
+    a foaf:Person;
+    irishRel:nomName "Naennid";
+    rel:childOf <#Braccain>.
+
+<#Feidlimid-27e87944>
+    a foaf:Person;
+    irishRel:nomName "Feidlimid";
+    rel:childOf <#Braccain>.
+
+<#Cobthach>
+    a foaf:Person;
+    irishRel:nomName "Cobthach";
+    rel:childOf <#Braccain>.
+
+<#Eogan>
+    a foaf:Person;
+    irishRel:nomName "Eogan";
+    rel:childOf <#Braccain>.
+
+<#Cron>
+    a foaf:Person;
+    irishRel:nomName "Cron";
+    rel:childOf <#Braccain>.
+
+<#Fiachra-5a1641a1>
+    a foaf:Person;
+    irishRel:nomName "Fiachra";
+    rel:childOf <#Ailill-05c10da0>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_úa_n_dedaid.trig#Fiachra>.
+
+<#NathFraich-5fc18c4c>
+    a foaf:Person;
+    irishRel:nomName "Nath Fraich";
+    rel:childOf <#Ailill-05c10da0>.
+
+<#Tigernach>
+    a foaf:Person;
+    irishRel:nomName "Tigernach";
+    rel:childOf <#Ailill-05c10da0>.
+
+<#Ailill-2940e429>
+    owl:sameAs <#Ailill-05c10da0>.
+
+<#Dau>
+    a foaf:Person;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus" ;
+    irishRel:nomName "Dau";
+    rel:childOf <#Ailill-2940e429>.
+
+<#Det>
+    a foaf:Person;
+    irishRel:nomName "Det";
+    rel:childOf <#Ailill-2940e429>;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus".
+
+<#Dera>
+    a foaf:Person;
+    irishRel:nomName "Dera";
+    rel:childOf <#Ailill-2940e429>;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus".
+
+<#Liathan>
+    a foaf:Person;
+    irishRel:nomName "Liathan";
+    rel:childOf <#Ailill-2940e429>;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus".
+
+<#Fidach>
+    a foaf:Person;
+    irishRel:nomName "Fidach";
+    rel:childOf <#Ailill-2940e429>;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus".
+
+<#Fidgenid>
+    a foaf:Person;
+    irishRel:nomName "Fidgenid";
+    rel:childOf <#Ailill-2940e429>;
+    rel:siblingOf <#DareCerbae>;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus".
+
+<#DareCerbae>
+    irishRel:nomName "Dare Cerbae";
+    owl:sameAs <#DaireCerba>;
+    rdfs:comment "Sed alii aliter dicunt ut praediximus".
+
+<< <#DareCerbae>
+        rdfs:comment "This is really confusing, particularly when read alongside 'Senchas Síl Ébir'. I would read this as stating that everyone from Dau to Fidgenid are the sons 'filios' of Dáre Cerbae. But I am biased from having just read that in Senchas Síl Ebir (although, 'ut praediximus'). Note, however, that the Dáre Cerbae in SSE is not the same person as <#DaireCerba> here (different parentage)." >>
+        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+}
