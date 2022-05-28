@@ -1,0 +1,226 @@
+@base <http://example.com/LL/genelach_h_liathan.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. Liathan"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Anmchaid>
+    a foaf:Person;
+    irishRel:nomName "Anmchaid";
+    rel:childOf <#Dunchada-8b4a3f6f>.
+
+<#Dunchada-8b4a3f6f>
+    a foaf:Person;
+    irishRel:genName "Dunchada";
+    irishRel:nomName "Dunchad";
+    rel:childOf <#Ronain-17d89dfa>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_éoganachta_caisil_i_cenél_fíngin.trig#Donnchada>.
+
+<#Ronain-17d89dfa>
+    a foaf:Person;
+    irishRel:genName "Ronain";
+    irishRel:nomName "Ronan";
+    rel:childOf <#Dicolla-513c4950>.
+
+<#Dicolla-513c4950>
+    a foaf:Person;
+    irishRel:genName "Dicolla";
+    irishRel:nomName "Dicoll";
+    rel:childOf <#FhergusaTuli>.
+
+<#FhergusaTuli>
+    a foaf:Person;
+    irishRel:genName "Fhergusa Tuli";
+    irishRel:nomName "Fergus Tuile";
+    rel:childOf <#FeradaigDornmair>.
+
+<#FeradaigDornmair>
+    a foaf:Person;
+    irishRel:genName "Feradaig Dornmair";
+    irishRel:nomName "Feradach Dornmar";
+    rel:childOf <#CálleniDuib>.
+
+<#CálleniDuib>
+    a foaf:Person;
+    irishRel:genName "Cálleni Duib";
+    irishRel:nomName "Cállen Dub";
+    rel:childOf <#MeicCaille>.
+
+<#MeicCaille>
+    a foaf:Person;
+    irishRel:genName "Meic Caille";
+    irishRel:nomName "Mac Caill";
+    rel:childOf <#Brocc>.
+
+<#Brocc>
+    a foaf:Person;
+    irishRel:nomName "Brocc";
+    rel:childOf <#EchdachLiathain>.
+
+<#EchdachLiathain>
+    a foaf:Person;
+    irishRel:genName "Echdach Liathain";
+    irishRel:nomName "Echaid Liathan";
+    rel:childOf <#DareCerba>;
+    owl:sameAs <http://example.com/Rawl_B502/de_genelogia_conaill_meic_echach_liatháin.trig#EchachLiatháin>;
+    owl:sameAs <http://example.com/Rawl_B502/genelogia_úa_liatháin.trig#EochaidLiathán>.
+
+<#DareCerba>
+    a foaf:Person;
+    irishRel:genName "Dare Cerba";
+    irishRel:nomName "Daire Cerbba";
+    rel:childOf <#ManeMunchain-72f5f4eb>.
+
+<#ManeMunchain-72f5f4eb>
+    a foaf:Person;
+    irishRel:genName "Mane Munchain";
+    irishRel:nomName "Mane Munchan";
+    rel:childOf <#AilellaFlaindBic-3236fe6a>.
+
+<#AilellaFlaindBic-3236fe6a>
+    owl:sameAs <#AilellaFlaindBic>;
+    rel:childOf <#AilellaFlaindMóir-fb9b28ea>.
+
+<#AilellaFlaindMóir-fb9b28ea>
+    owl:sameAs <#AilellaFlaindMóir>;
+    rel:childOf <#FiachachMullethain-5c4f3aa6>.
+
+<#FiachachMullethain-5c4f3aa6>
+    owl:sameAs <#FhiachachMullethain>.
+
+<#FiacraFerDáLiach>
+    a foaf:Person;
+    irishRel:nomName "Fiacra Fer Dá Liach".
+
+<#CoborMongfhind>
+    a foaf:Person;
+    foaf:gender "female";
+    irishRel:nomName "Cobor Mongfhind";
+    rel:parentOf <#FhiachachMullethain-d81291dc>.
+
+<#FhiachachMullethain-d81291dc>
+    owl:sameAs <#FhiachachMullethain>.
+
+<#Tuathal>
+    a foaf:Person;
+    irishRel:nomName "Tuathal";
+    rel:childOf <#Dondchada-602dd708>;
+    irishRel:ancestorOfGroup <#hGlassin>.
+
+<#hGlassin>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Glassin" .
+
+<#Dondchada-602dd708>
+    irishRel:numChild 2;
+    owl:sameAs <http://example.com/LL/genelach_eoganachta_casil_cenel_fingin.trig#Dondchada-0c00bda2>.
+
+<#Anmchaid-fdc100f0>
+    owl:sameAs <#Anmchaid>;
+    rel:childOf <#Dondchada-602dd708>;
+    irishRel:ancestorOfGroup <#hAnmchada>.
+
+<#hAnmchada>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Anmchada" .
+
+<#Anmchada>
+    irishRel:genName "Anmchada";
+    irishRel:nomName "Anmchad";
+    irishRel:numChild 7;
+    owl:sameAs <#Anmchaid>.
+
+<#FaelchadMór>
+    a foaf:Person;
+    irishRel:nomName "Faelchad Mór";
+    rel:childOf <#Anmchada>.
+
+<#Torpad>
+    a foaf:Person;
+    irishRel:nomName "Torpad";
+    rel:childOf <#Anmchada>.
+
+<#Flathnia>
+    a foaf:Person;
+    irishRel:nomName "Flathnia";
+    rel:childOf <#Anmchada>.
+
+<#AedFind-b5360a9f>
+    a foaf:Person;
+    irishRel:nomName "Aed Find";
+    rel:childOf <#Anmchada>.
+
+<#Cinaed>
+    a foaf:Person;
+    irishRel:nomName "Cinaed";
+    rel:childOf <#Anmchada>.
+
+<#Domnall-1078157e>
+    a foaf:Person;
+    irishRel:nomName "Domnall";
+    rel:childOf <#Anmchada>.
+
+<#Flandchad-9d3a9cbc>
+    a foaf:Person;
+    irishRel:nomName "Flandchad";
+    rel:childOf <#Anmchada>.
+
+<#Liathan-1f08f095>
+    a foaf:Person;
+    irishRel:numChild 7;
+    irishRel:nomName "Liathan";
+    owl:sameAs <#EchdachLiathain>.
+
+<#CorpreCael>
+    a foaf:Person;
+    irishRel:nomName "Corpre Cael";
+    rel:childOf <#Liathan-1f08f095>.
+
+<#CorcCorb>
+    a foaf:Person;
+    irishRel:nomName "Corc Corb";
+    rel:childOf <#Liathan-1f08f095>.
+
+<#MacBrocc>
+    a foaf:Person;
+    irishRel:nomName "Mac Brocc";
+    rel:childOf <#Liathan-1f08f095>.
+
+<#AilillTassach>
+    a foaf:Person;
+    irishRel:nomName "Ailill Tassach";
+    rel:childOf <#Liathan-1f08f095>;
+    rdfs:comment ".i. ar Tassach".
+
+<#Bairich>
+    a foaf:Person;
+    irishRel:nomName "Bairich";
+    rel:childOf <#Liathan-1f08f095>;
+    rdfs:comment "quem dicunt Mac h-Úi Chuirind fuisse".
+
+<#Fiacha-5d86aac6>
+    a foaf:Person;
+    irishRel:nomName "Fiacha";
+    rel:childOf <#Liathan-1f08f095>.
+
+<#CrimthandSlébeConall>
+    a foaf:Person;
+    irishRel:nomName "Crimthand Slébe Conall";
+    rel:childOf <#Liathan-1f08f095>.
+
+}
