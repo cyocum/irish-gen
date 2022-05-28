@@ -1,0 +1,79 @@
+@base <http://example.com/LL/dena_h-acmib.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Dena H-Acmib"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Flathruae>
+    a foaf:Person;
+    irishRel:nomName "Flathruae";
+    rel:childOf <#Dungalaig>.
+
+<#Dungalaig>
+    a foaf:Person;
+    irishRel:genName "Dungalaig";
+    irishRel:nomName "Dungalach";
+    rel:childOf <#Fhergusa-f29eb5d1>.
+
+<#Fhergusa-f29eb5d1>
+    a foaf:Person;
+    irishRel:genName "Fhergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Cuanach>.
+
+<#Cuanach>
+    a foaf:Person;
+    irishRel:genName "Cuanach";
+    irishRel:nomName "Cuanaid";
+    rel:childOf <#Cuain>.
+
+<#Cuain>
+    a foaf:Person;
+    irishRel:genName "Cuain";
+    irishRel:nomName "Cuan";
+    rel:childOf <#Conaill-7d341f8d>.
+
+<#Conaill-7d341f8d>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#Fhergusa-72a9707a>.
+
+<#Fhergusa-72a9707a>
+    a foaf:Person;
+    irishRel:genName "Fhergusa";
+    irishRel:nomName "Fergus";
+    rel:childOf <#Endai>.
+
+<#Endai>
+    a foaf:Person;
+    irishRel:genName "Endai";
+    irishRel:nomName "Endae";
+    rel:childOf <#LugdechFind>.
+
+<#LugdechFind>
+    a foaf:Person;
+    irishRel:genName "Lugdech Find";
+    irishRel:nomName "Lugaid Find";
+    rel:childOf <#FiachachFidgente>.
+
+<#FiachachFidgente>
+    a foaf:Person;
+    irishRel:genName "Fiachach Fidgente";
+    irishRel:nomName "Fiachu Fidgente".
+}
