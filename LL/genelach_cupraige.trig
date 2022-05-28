@@ -13,7 +13,6 @@
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Cupraige"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
@@ -23,18 +22,21 @@
 <#Faelchu>
     a foaf:Person;
     irishRel:nomName "Faelchu";
+    agrelon:hasParent <#Airmedaig>;
     rel:childOf <#Airmedaig>.
 
 <#Airmedaig>
     a foaf:Person;
     irishRel:genName "Airmedaig";
     irishRel:nomName "Airmedach";
+    agrelon:hasParent <#MaelAnfaid-a734b6c8>;
     rel:childOf <#MaelAnfaid-a734b6c8>.
 
 <#MaelAnfaid-a734b6c8>
     a foaf:Person;
     irishRel:genName "Mael Anfaid";
     irishRel:nomName "Mael Anfad";
+    agrelon:hasParent <#DimmaDicholla>;
     rel:childOf <#DimmaDicholla>.
 
 <#DimmaDicholla>
@@ -42,27 +44,32 @@
     irishRel:genName "Dimma Dicholla";
     irishRel:nomName "Dimmae Dicholl";
     irishRel:numChild 2;
+    agrelon:hasParent <#Gubbi>;
     rel:childOf <#Gubbi>.
 
 <#Gubbi>
     a foaf:Person;
     irishRel:genName "Gubbi";
     irishRel:nomName "Gubbe";
+    agrelon:hasParent <#Cormaic-4a647f3a>;
     rel:childOf <#Cormaic-4a647f3a>.
 
 <#Cormaic-4a647f3a>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Carthind>;
     rel:childOf <#Carthind>.
 
 <#Carthind>
     a foaf:Person;
     irishRel:nomName "Carthind";
+    agrelon:hasParent <#Oengusa-7dd77d85>;
     rel:childOf <#Oengusa-7dd77d85>.
 
 <#Oengusa-7dd77d85>
     owl:sameAs <#Oengusa>;
+    agrelon:hasParent <#NathFraich-22e4ba31>;
     rel:childOf <#NathFraich-22e4ba31>.
 
 <#NathFraich-22e4ba31>
@@ -71,6 +78,6 @@
 <#Aelaithach>
     a foaf:Person;
     irishRel:nomName "Aelaithach";
+    agrelon:hasParent <#DimmaDicholla>;
     rel:childOf <#DimmaDicholla>.
-
 }
