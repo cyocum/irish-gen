@@ -1,0 +1,177 @@
+@base <http://example.com/LL/genelach_h_corpri.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "Genelach .H. Corpri"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+
+<#CendFaelad-25064abe>
+    a foaf:Person;
+    irishRel:nomName "Cend Faelad";
+    rel:childOf <#DuibDaBairend-1b4e89f4>.
+
+<#DuibDaBairend-1b4e89f4>
+    a foaf:Person;
+    irishRel:nomName "Duib Da Bairend";
+    rel:childOf <#AedaRóin>.
+
+<#AedaRóin>
+    a foaf:Person;
+    irishRel:genName "Aeda Róin";
+    irishRel:nomName "Aed Rón";
+    rel:childOf <#Eoganain-73d727ce>.
+
+<#Eoganain-73d727ce>
+    a foaf:Person;
+    irishRel:genName "Eoganain";
+    irishRel:nomName "Eoganan";
+    rel:childOf <#Crundmáel>.
+
+<#Crundmáel>
+    a foaf:Person;
+    irishRel:nomName "Crundmáel";
+    rel:childOf <#Aeda-01586574>.
+
+<#Aeda-01586574>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Oengusa-8cd84606>.
+
+<#Oengusa-8cd84606>
+    a foaf:Person;
+    irishRel:genName "Oengusa";
+    irishRel:nomName "Oengus";
+    rel:childOf <#Lapae>.
+
+<#Lapae>
+    a foaf:Person;
+    irishRel:genName "Lapae";
+    irishRel:nomName "Lappae";
+    rel:childOf <#Ailella-cc97e148>.
+
+<#Ailella-cc97e148>
+    a foaf:Person;
+    irishRel:genName "Ailella";
+    irishRel:nomName "Ailill";
+    rel:childOf <#Cendfhotae>.
+
+<#Cendfhotae>
+    a foaf:Person;
+    irishRel:nomName "Cendfhotae";
+    rel:childOf <#h-Irc-5154ce58>.
+
+<#h-Irc-5154ce58>
+    a foaf:Person;
+    irishRel:genName "h-Irc";
+    irishRel:nomName "Erc";
+    rel:childOf <#Corpri-274d0e71>.
+
+<#Corpri-274d0e71>
+    a foaf:Person;
+    irishRel:genName "Corpri";
+    irishRel:nomName "Corpre";
+    rel:childOf <#Brioin-ee377414>.
+
+<#Brioin-ee377414>
+    a foaf:Person;
+    irishRel:genName "Brioin";
+    irishRel:nomName "Brion";
+    rel:childOf <#FiachachFidgente-7a5cd1fe>.
+
+<#FiachachFidgente-7a5cd1fe>
+    owl:sameAs <http://example.com/LL/dena_h-acmib.trig#FiachachFidgente>.
+
+<#Corpri-4aaa264b>
+    owl:sameAs <#Corpri-274d0e71>;
+    irishRel:numChild 5;
+    rel:childOf <#Briuin-9c258176>.
+
+<#Briuin-9c258176>
+    irishRel:genName "Briuin";
+    irishRel:nomName "Briun";
+    owl:sameAs <#Brioin-ee377414>.
+
+<#Erc-abecc22f>
+    a foaf:Person;
+    irishRel:nomName "Erc";
+    rel:childOf <#Corpri-4aaa264b>.
+
+<#Echen>
+    a foaf:Person;
+    irishRel:nomName "Echen";
+    rel:childOf <#Corpri-4aaa264b>;
+    irishRel:ancestorOfGroup <#FirThamnaig>, <#hGarbain>.
+
+<#FirThamnaig>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName "Fir Thamnaig" .
+
+<#hGarbain>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Garbain" .
+
+<#MeicBrocain>
+    a foaf:Person ;
+    irishRel:genName "Meic Brocain" ;
+    irishRel:nomName "Mac Brocan" ;
+    irishRel:descendantOfGroup <#hGarbain>.
+
+<#Tren>
+    a foaf:Person;
+    irishRel:nomName "Tren";
+    rel:childOf <#Corpri-4aaa264b>.
+
+<#Setna-737e844e>
+    a foaf:Person;
+    irishRel:nomName "Setna";
+    rel:childOf <#Corpri-4aaa264b>.
+
+<#CormacIrbirae>
+    a foaf:Person;
+    irishRel:nomName "Cormac Irbirae";
+    rel:childOf <#Corpri-4aaa264b>.
+
+<#Mane-794f57a5>
+    a foaf:Person;
+    irishRel:nomName "Mane";
+    rel:childOf <#Echein>.
+
+<#hChille>
+    a irishRel:PopulationGroup ;
+    irishRel:populationGroupName ".h. Chille" ;
+    rdfs:comment "ón Omnae"@sga .
+
+<#Echein>
+    irishRel:genName "Echein";
+    irishRel:nomName "Echen";
+    owl:sameAs <#Echen>.
+
+<#Andall>
+    a foaf:Person;
+    irishRel:nomName "Andall";
+    rel:childOf <#Riatai>.
+
+<#Riatai>
+    a foaf:Person;
+    irishRel:genName "Riatai";
+    irishRel:nomName "Riata";
+    rdfs:comment "h-i tirib Ciarraige des Cechair" ;
+    rel:childOf <#Echein>.
+
+}
