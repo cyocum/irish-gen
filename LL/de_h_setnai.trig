@@ -1,0 +1,145 @@
+@base <http://example.com/LL/de_h_setnai.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "De .H. Setnai"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+
+<#Conallach>
+    a foaf:Person;
+    irishRel:nomName "Conallach";
+    rel:childOf <#Maelodrain>.
+
+<#Maelodrain>
+    a foaf:Person;
+    irishRel:genName "Maelodrain";
+    irishRel:nomName "Maelodran";
+    rel:childOf <#Marcain>.
+
+<#Marcain>
+    a foaf:Person;
+    irishRel:genName "Marcain";
+    irishRel:nomName "Marcan";
+    rel:childOf <#Aeda-be58ab72>.
+
+<#Aeda-be58ab72>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Fiachach-14bb383a>.
+
+<#Fiachach-14bb383a>
+    a foaf:Person;
+    irishRel:genName "Fiachach";
+    irishRel:nomName "Fiachaid";
+    rel:childOf <#Cendlachain>.
+
+<#Cendlachain>
+    a foaf:Person;
+    irishRel:genName "Cendlachain";
+    irishRel:nomName "Cendlachan";
+    rel:childOf <#Cuirc-22d63099>.
+
+<#Cuirc-22d63099>
+    a foaf:Person;
+    irishRel:genName "Cuirc";
+    irishRel:nomName "Cuic";
+    rel:childOf <#Shetnai>.
+
+<#Shetnai>
+    a foaf:Person;
+    irishRel:nomName "Shetnai";
+    rel:childOf <#FiachachFidgente-b0fd7722>.
+
+<#FiachachFidgente-b0fd7722>
+    owl:sameAs <http://example.com/LL/dena_h-acmib.trig#FiachachFidgente>.
+
+<#Setnai-0e372e23>
+    irishRel:nomName "Setnai";
+    irishRel:numChild 3;
+    owl:sameAs <#Shetnai>.
+
+<#Corc>
+    irishRel:nomName "Corc";
+    owl:sameAs <#Cuirc-22d63099>;
+    rel:childOf <#Setnai-0e372e23>.
+
+<#Findchad-48c3707c>
+    a foaf:Person;
+    irishRel:nomName "Findchad";
+    rel:childOf <#Setnai-0e372e23>.
+
+<#Fintat>
+    a foaf:Person;
+    irishRel:nomName "Fintat";
+    rel:childOf <#Setnai-0e372e23>.
+
+<#FerAnbuis>
+    a foaf:Person;
+    irishRel:nomName "Fer Anbuis";
+    rel:childOf <#Aldebuir>.
+
+<#Aldebuir>
+    a foaf:Person;
+    irishRel:genName "Aldebuir";
+    irishRel:nomName "Aldebur";
+    rel:childOf <#Suibne-a979325b>.
+
+<#Suibne-a979325b>
+    a foaf:Person;
+    irishRel:nomName "Suibne";
+    rel:childOf <#Colmain-0923b172>.
+
+<#Colmain-0923b172>
+    a foaf:Person;
+    irishRel:genName "Colmain";
+    irishRel:nomName "Colman";
+    rel:childOf <#Critain>.
+
+<#Critain>
+    a foaf:Person;
+    irishRel:genName "Critain";
+    irishRel:nomName "Critan";
+    rel:childOf <#MeicRithe>.
+
+<#MeicRithe>
+    a foaf:Person;
+    irishRel:genName "Meic Rithe";
+    irishRel:nomName "Mac Rith";
+    rel:childOf <#Cormaic-51f069fc>.
+
+<#Cormaic-51f069fc>
+    a foaf:Person;
+    irishRel:genName "Cormaic";
+    irishRel:nomName "Cormac";
+    rel:childOf <#Intait-798bc046>.
+
+<#Intait-798bc046>
+    irishRel:genName "Intait";
+    irishRel:nomName "Intat";
+    owl:sameAs <#Fintat>;
+    rel:childOf <#Shetnai-c461adea>.
+
+<#Shetnai-c461adea>
+    owl:sameAs <#Shetnai>;
+    rel:childOf <#FiachachFidgente-1801d13d>.
+
+<#FiachachFidgente-1801d13d>
+    owl:sameAs <#FiachachFidgente-b0fd7722>.
+
+}
