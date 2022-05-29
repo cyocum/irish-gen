@@ -1,0 +1,104 @@
+@base <http://example.com/LL/de_ceniul_lupae.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "De Ceniul Lupae"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#FlandResad>
+    a foaf:Person;
+    irishRel:nomName "Fland Resad";
+    rel:childOf <#Cummascaig>.
+
+<#Cummascaig>
+    a foaf:Person;
+    irishRel:genName "Cummascaig";
+    irishRel:nomName "Cummascach";
+    rel:childOf <#h-Irc-32335064>.
+
+<#h-Irc-32335064>
+    a foaf:Person;
+    irishRel:genName "h-Irc";
+    irishRel:nomName "Erc";
+    rel:childOf <#Sathcheill>.
+
+<#Sathcheill>
+    a foaf:Person;
+    irishRel:genName "Sathcheill";
+    irishRel:nomName "Sathchell";
+    rel:childOf <#Lapae-fc297310>.
+
+<#Lapae-fc297310>
+    owl:sameAs <http://example.com/LL/genelach_h_corpri.trig#Lapae>.
+
+<#Snedgal>
+    a foaf:Person;
+    irishRel:nomName "Snedgal";
+    rel:childOf <#Concon>.
+
+<#Concon>
+    a foaf:Person;
+    irishRel:genName "Concon";
+    irishRel:nomName "Concu";
+    rel:childOf <#CindFaelad>.
+
+<#CindFaelad>
+    a foaf:Person;
+    irishRel:nomName "Cind Faelad";
+    rel:childOf <#Aeda-dbe9b4d9>.
+
+<#Aeda-dbe9b4d9>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed";
+    rel:childOf <#Oengusa-2b8cac1d>.
+
+<#Oengusa-2b8cac1d>
+    a foaf:Person;
+    irishRel:genName "Oengusa";
+    irishRel:nomName "Oengus";
+    rel:childOf <#LapaeCongus>.
+
+<#LapaeCongus>
+    a foaf:Person;
+    irishRel:genName "Lapae Congus";
+    irishRel:nomName "Lappae Congus";
+    rel:childOf <#Coibdenaig>.
+
+<#Coibdenaig>
+    a foaf:Person;
+    irishRel:genName "Coibdenaig";
+    irishRel:nomName "Coibdenach";
+    rel:childOf <#Falbi-bf26124c>.
+
+<#Falbi-bf26124c>
+    a foaf:Person;
+    irishRel:genName "Falbi";
+    irishRel:nomName "Falbe";
+    rel:childOf <#Garbain>.
+
+<#Garbain>
+    a foaf:Person;
+    irishRel:genName "Garbain";
+    irishRel:nomName "Garban";
+    rel:childOf <#Aeda-f064ab94>.
+
+<#Aeda-f064ab94>
+    a foaf:Person;
+    irishRel:genName "Aeda";
+    irishRel:nomName "Aed".
+}
