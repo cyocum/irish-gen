@@ -1,0 +1,83 @@
+@base <http://example.com/LL/de_ceniul_meic_meic_h-Erce.trig>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
+@prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
+
+<http://example.com/LL> {
+<>
+    a dctype:Dataset;
+    dcterms:title "De Ceniul Meic Meic H-Erce"@sga;
+    dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text007.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text007.html> .
+
+<#Tuathal-1884dfee>
+    a foaf:Person;
+    irishRel:nomName "Tuathal";
+    rel:childOf <#Murthe>.
+
+<#Murthe>
+    a foaf:Person;
+    irishRel:nomName "Murthe";
+    rel:childOf <#MaeliTuile>.
+
+<#MaeliTuile>
+    a foaf:Person;
+    irishRel:genName "Maeli Tuile";
+    irishRel:nomName "Mael Tuil";
+    rel:childOf <#Cuan-78c6188e>.
+
+<#Cuan-78c6188e>
+    a foaf:Person;
+    irishRel:nomName "Cuan";
+    rel:childOf <#Conaill-e76f9e58>.
+
+<#Conaill-e76f9e58>
+    a foaf:Person;
+    irishRel:genName "Conaill";
+    irishRel:nomName "Conall";
+    rel:childOf <#Grilline>.
+
+<#Grilline>
+    a foaf:Person;
+    irishRel:genName "Grilline";
+    irishRel:nomName "Grillin";
+    rel:childOf <#Erce-712bdda4>.
+
+<#Erce-712bdda4>
+    a foaf:Person;
+    irishRel:genName "Erce";
+    irishRel:nomName "Erc";
+    rel:childOf <#AilellaCendfotai>.
+
+<#AilellaCendfotai>
+    irishRel:genName "Ailella Cendfotai";
+    irishRel:nomName "Ailill Cindfotae";
+    owl:sameAs <http://example.com/LL/genelach_h_corpri.trig#Cendfhotae>;
+    rel:childOf <#h-Irc-b3af4a1d>.
+
+<#h-Irc-b3af4a1d>
+    owl:sameAs <http://example.com/LL/genelach_h_corpri.trig#h-Irc-5154ce58>;
+    rel:childOf <#Carpri-e95033a3>.
+
+<#Carpri-e95033a3>
+    irishRel:nomName "Carpri";
+    owl:sameAs <http://example.com/LL/genelach_h_corpri.trig#Corpri-274d0e71>;
+    rel:childOf <#Brioin-171a5ba3>.
+
+<#Brioin-171a5ba3>
+    owl:sameAs <http://example.com/LL/genelach_h_corpri.trig#Brioin-ee377414>;
+    rel:childOf <#FiachrachFidgente-b8adecc7>.
+
+<#FiachrachFidgente-b8adecc7>
+    owl:sameAs <http://example.com/LL/genelach_h_corpri.trig#FiachachFidgente-7a5cd1fe>.
+
+}
