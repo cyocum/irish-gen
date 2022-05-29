@@ -1,4 +1,4 @@
-@base <http://example.com/LL/genelach_ciarraige_cuirche.trig#>.
+@base <http://example.com/LL/genelach_ciarraige_cuirche.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -10,75 +10,73 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
-
 <http://example.com/LL> {
 <>
-
         a dctype:Dataset;
         dcterms:title "Genelach Ciarraige Cuirche"@sga;
         dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text021.html>;
         dcterms:format "application/trig" ;
         prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text021.html> .
 
-     <h-Irc> 
+     <#h-Irc> 
         a foaf:Person;
         irishRel:numChild 3;
         irishRel:nomName "Erc";
         irishRel:genName "h-Irc".
 
-     << <h-Irc>
-        rdfs:comment "sameas <h-Ér> ?" >>
+     << <#h-Irc>
+        rdfs:comment "sameas <#h-Ér> ?" >>
         prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
-     <Coel>
+     <#Coel>
         a foaf:Person;
         irishRel:nomName "Coel";
-        rel:childOf <h-Irc>.
+        rel:childOf <#h-Irc>.
 
-     <Lugach>
+     <#Lugach>
         a foaf:Person;
         irishRel:nomName "Lugach";
-        rel:childOf <h-Irc>.
+        rel:childOf <#h-Irc>.
 
-     <Losc>
+     <##Losc>
         a foaf:Person;
         irishRel:nomName "Loseoc";
-        rel:antagonistOf <Oengus-c25a9c43>;
-        rel:childOf <h-Irc>.
+        rel:antagonistOf <#Oengus-c25a9c43>;
+        rel:childOf <#h-Irc>.
 
-     <Oengus-c25a9c43>
+     <#Oengus-c25a9c43>
         a foaf:Person;
         irishRel:nomName "Oengus";
-        rel:childOf <NadFraich>.
+        rel:childOf <#NadFraich>.
 
-     <NadFraich>
+     <#NadFraich>
         a foaf:Person;
         irishRel:genName "Nad Fraich";
         irishRel:nomName "Nad Frach".
 
-     << <NadFraich>
+     << <#NadFraich>
         rdfs:comment "are these the same as http://example.com/LL/genelach_h_cendselaig.trig#Oengusa-4cb1c4cb or http://example.com/LL/eoganachta_casil.trig#Oenguis-d5a279b1 ?" >>
         prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
-     <Cendlachan>
+     <#Cendlachan>
         a foaf:Person;
         irishRel:nomName "Cendlachan";
-        rel:childOf <Brocain>.
+        rel:childOf <#Brocain>.
 
-    <Brocain>
+    <#Brocain>
         a foaf:Person;
         irishRel:genName "Brocain";
         irishRel:nomName "Brocan";
         rdfs:comment "de h-Uib Dubthaige tar Luachair Dubthach".
 
-    <Dinnu>
+    <#Dinnu>
         a foaf:Person;
         irishRel:nomName "Dinnu";
         irishRel:numChild 2;
-        rel:childOf <Currich>.
+        rel:childOf <#Currich>.
 
-    <Currich>
+    <#Currich>
         a foaf:Person;
         irishRel:nomName "Currich";
-        rel:childOf <Brocain>.
+        rel:childOf <#Brocain>.
 }
