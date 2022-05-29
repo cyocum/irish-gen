@@ -8,13 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Fer Fernmaige"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text047.html>;
@@ -24,93 +21,109 @@
 <#Lethlobur>
     a foaf:Person;
     foaf:name "Lethlobur";
+    agrelon:hasParent <#Fogartaich>;
     rel:childOf <#Fogartaich>.
 
 <#Fogartaich>
     a foaf:Person;
     foaf:name "Fogartaich";
     foaf:name "Fogartach";
+    agrelon:hasParent <#Muridaig>;
     rel:childOf <#Muridaig>.
 
 <#Muridaig>
     a foaf:Person;
     foaf:name "Muridaig";
     foaf:name "Muiredach";
+    agrelon:hasParent <#Ladcnen>;
     rel:childOf <#Ladcnen>.
 
 <#Ladcnen>
     a foaf:Person;
     foaf:name "Ladcnen";
     foaf:name "Laidcnen";
+    agrelon:hasParent <#Fogartaig>;
     rel:childOf <#Fogartaig>.
 
 <#Fogartaig>
     a foaf:Person;
     foaf:name "Fogartaig";
     foaf:name "Fogartach";
+    agrelon:hasParent <#Donnocain>;
     rel:childOf <#Donnocain>.
 
 <#Donnocain>
     a foaf:Person;
     foaf:name "Donnocain";
     foaf:name "Donnocan";
+    agrelon:hasParent <#Fogartaig-2ea886f0>;
     rel:childOf <#Fogartaig-2ea886f0>.
 
 <#Fogartaig-2ea886f0>
     a foaf:Person;
     foaf:name "Fogartaig";
+    agrelon:hasParent <#Ruadrach>;
     rel:childOf <#Ruadrach>.
 
 <#Ruadrach>
     a foaf:Person;
     foaf:name "Ruadrach";
     foaf:name "Ruaidri";
+    agrelon:hasParent <#MaelFothartaig>;
     rel:childOf <#MaelFothartaig>.
 
 <#MaelFothartaig>
     a foaf:Person;
     foaf:name "Mael Fothartaig";
+    agrelon:hasParent <#Artrach>;
     rel:childOf <#Artrach>.
 
 <#Artrach>
     a foaf:Person;
     foaf:name "Artrach";
     foaf:name "Artrí";
+    agrelon:hasParent <#Aithechda>;
     rel:childOf <#Aithechda>.
 
 <#Aithechda>
     a foaf:Person;
     foaf:name "Aithechda";
     foaf:name "Aithechdae";
+    agrelon:hasParent <#MaelDuib>;
     rel:childOf <#MaelDuib>.
 
 <#MaelDuib>
     a foaf:Person;
     foaf:name "Mael Duib";
+    agrelon:hasParent <#MaelFhathartaig>;
     rel:childOf <#MaelFhathartaig>.
 
 <#MaelFhathartaig>
     a foaf:Person;
     foaf:name "Mael Fhathartaig";
     foaf:name "Mael Fotharaig";
+    agrelon:hasParent <#Cronain>;
     rel:childOf <#Cronain>.
 
 <#Cronain>
     a foaf:Person;
     foaf:name "Cronain";
     foaf:name "Cronan";
+    agrelon:hasParent <#Fhergusa>;
     rel:childOf <#Fhergusa>.
 
 <#Fhergusa>
     a foaf:Person;
     foaf:name "Fhergusa";
     foaf:name "Fergus";
+    agrelon:hasParent <#NadShluaig>;
     rel:childOf <#NadShluaig>.
 
 <#NadShluaig>
     a foaf:Person;
     foaf:name "Nad Shluaig";
     foaf:name "Nad Sluag";
+    agrelon:hasParent <#Carpri>;
     rel:childOf <#Carpri>;
     owl:sameAs <http://example.com/LL/h_airgialla.trig#NadSluaig>.
 
