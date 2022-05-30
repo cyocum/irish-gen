@@ -8,6 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -17,30 +18,34 @@
     dcterms:format "application/trig" ;
     prov:wasDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text002.html> .
 
-
 <#DubDaChrich-ea5d7622>
     a foaf:Person;
     irishRel:nomName "Dub Da Chrich";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>.
 
 <#Fergaile>
     a foaf:Person;
     irishRel:genName "Fergaile";
     irishRel:nomName "Fergal";
+    agrelon:hasParent <#Dungaile>;
     rel:childOf <#Dungaile>.
 
 <#Dungaile>
     a foaf:Person;
     irishRel:genName "Dungaile";
     irishRel:nomName "Dungal";
+    agrelon:hasParent <#DuibDaChrich-7db8712d>;
     rel:childOf <#DuibDaChrich-7db8712d>.
 
 <#DuibDaChrich-7db8712d>
     owl:sameAs <http://example.com/LL/genelach_clainde_cobthaig.trig#DuibdaChrich>;
+    agrelon:hasParent <#MaelOchtraig-4b18ec79>;
     rel:childOf <#MaelOchtraig-4b18ec79>.
 
 <#MaelOchtraig-4b18ec79>
     owl:sameAs <http://example.com/LL/genelach_clainde_cobthaig.trig#MaelOchtraig>;
+    agrelon:hasParent <#Nazair-f4ee7ba0>;
     rel:childOf <#Nazair-f4ee7ba0>.
 
 <#Nazair-f4ee7ba0>
@@ -50,11 +55,12 @@
     a foaf:Person;
     irishRel:numChild 4;
     irishRel:nomName "Duib Da Chrichs";
+    agrelon:hasParent <#MaelOchtraig-a03330ac>;
     rel:childOf <#MaelOchtraig-a03330ac>.
 
 << <#DuibDaChrichs>
-        rdfs:comment "same as Duib Da Chrich? {p. 1351}" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+    rdfs:comment "same as Duib Da Chrich? {p. 1351}" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 <#MaelOchtraig-a03330ac>
     owl:sameAs <#MaelOchtraig-4b18ec79>.
@@ -62,21 +68,24 @@
 <#Congal-7d1ecccc>
     a foaf:Person;
     irishRel:nomName "Congal";
+    agrelon:hasAncestor <#DuibDaChrich-7db8712d>;
     rel:descendantOf <#DuibDaChrich-7db8712d>.
 
 <#CúChatha>
     a foaf:Person;
     irishRel:nomName "Cú Chatha";
+    agrelon:hasAncestor <#DuibDaChrich-7db8712d>;
     rel:descendantOf <#DuibDaChrich-7db8712d>.
 
 <#Dongal>
     a foaf:Person;
     irishRel:nomName "Dongal";
+    agrelon:hasAncestor <#DuibDaChrich-7db8712d>;
     rel:descendantOf <#DuibDaChrich-7db8712d>.
 
 <#Dungal-17a9e31c>
     a foaf:Person;
     irishRel:nomName "Dungal";
+    agrelon:hasAncestor <#DuibDaChrich-7db8712d>;
     rel:descendantOf <#DuibDaChrich-7db8712d>.
-
 }
