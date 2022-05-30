@@ -8,13 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Corco Bascind"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text077.html>;
@@ -24,6 +21,7 @@
 <#Cathrannach>
     a foaf:Person;
     irishRel:nomName "Cathrannach";
+    agrelon:hasParent <#MeicRaith>;
     rel:childOf <#MeicRaith>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Cathrannach>.
 
@@ -31,6 +29,7 @@
     a foaf:Person;
     irishRel:genName "Meic Raith";
     irishRel:nomName "Mac Raith";
+    agrelon:hasParent <#Bascind>;
     rel:childOf <#Bascind>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#MeicRaith>.
 
@@ -38,6 +37,7 @@
     a foaf:Person;
     irishRel:genName "Bascind";
     irishRel:nomName "Baiscend";
+    agrelon:hasParent <#Briain>;
     rel:childOf <#Briain>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Bascind>.
 
@@ -45,6 +45,7 @@
     a foaf:Person;
     irishRel:genName "Briain";
     irishRel:nomName "Brian";
+    agrelon:hasParent <#Murchada>;
     rel:childOf <#Murchada>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Briain>.
 
@@ -52,6 +53,7 @@
     a foaf:Person;
     irishRel:genName "Murchada";
     irishRel:nomName "Murchad";
+    agrelon:hasParent <#Cathrannaig>;
     rel:childOf <#Cathrannaig>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Murchada>.
 
@@ -59,6 +61,7 @@
     a foaf:Person;
     irishRel:genName "Cathrannaig";
     irishRel:nomName "Cathrannach";
+    agrelon:hasParent <#Aeda>;
     rel:childOf <#Aeda>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Cathrannaig>.
 
@@ -66,6 +69,7 @@
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aeda";
+    agrelon:hasParent <#Rectabrat>;
     rel:childOf <#Rectabrat>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Aeda>.
 
@@ -73,6 +77,7 @@
     a foaf:Person;
     irishRel:genName "Rectabrat";
     irishRel:nomName "Rectabra";
+    agrelon:hasParent <#Aithechdai>;
     rel:childOf <#Aithechdai>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Rectabrat>.
 
@@ -80,6 +85,7 @@
     a foaf:Person;
     irishRel:genName "Aithechdai";
     irishRel:nomName "Aithechda";
+    agrelon:hasParent <#Thalamnaig>;
     rel:childOf <#Thalamnaig>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Athechdai>.
 
@@ -87,6 +93,7 @@
     a foaf:Person;
     irishRel:genName "Thalamnaig";
     irishRel:nomName "Talamnach";
+    agrelon:hasParent <#Laidcind>;
     rel:childOf <#Laidcind>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Thalamnaig>.
 
@@ -94,6 +101,7 @@
     a foaf:Person;
     irishRel:genName "Laidcind";
     irishRel:nomName "Laidcend";
+    agrelon:hasParent <#Baetain>;
     rel:childOf <#Baetain>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Laidgcind>.
 
@@ -101,6 +109,7 @@
     a foaf:Person;
     irishRel:genName "Baetain";
     irishRel:nomName "Baetan";
+    agrelon:hasParent <#Dondnain>;
     rel:childOf <#Dondnain>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Báitain>.
 
@@ -108,6 +117,7 @@
     a foaf:Person;
     irishRel:genName "Dondnain";
     irishRel:nomName "Dondnan";
+    agrelon:hasParent <#Mongain>;
     rel:childOf <#Mongain>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Donnain>.
 
@@ -115,6 +125,7 @@
     a foaf:Person;
     irishRel:genName "Mongain";
     irishRel:nomName "Mongan";
+    agrelon:hasParent <#Cuirp>;
     rel:childOf <#Cuirp>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Mogain>.
 
@@ -122,12 +133,14 @@
     a foaf:Person;
     irishRel:genName "Cuirp";
     irishRel:nomName "Corp";
+    agrelon:hasParent <#Cet>;
     rel:childOf <#Cet>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Cuirp>.
 
 <#Cet>
     a foaf:Person;
     irishRel:nomName "Cet";
+    agrelon:hasParent <#Déice>;
     rel:childOf <#Déice>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Cett>.
 
@@ -135,6 +148,7 @@
     a foaf:Person;
     irishRel:genName "Déice";
     irishRel:nomName "Décce";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Decci>.
 
@@ -142,6 +156,7 @@
     a foaf:Person;
     irishRel:genName "Imchada";
     irishRel:nomName "Imchad";
+    agrelon:hasParent <#Cuirp-0e7497d0>;
     rel:childOf <#Cuirp-0e7497d0>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Imchada>.
 
@@ -149,6 +164,7 @@
     a foaf:Person;
     irishRel:genName "Cuirp";
     irishRel:nomName "Corp";
+    agrelon:hasParent <#Lugdech>;
     rel:childOf <#Lugdech>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Cuirp-fdb5bfa8>.
 
@@ -156,12 +172,14 @@
     a foaf:Person;
     irishRel:genName "Lugdech";
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#Oengusa>, <#Ailella>;
     rel:childOf <#Oengusa>, <#Ailella>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#Cuirp-fdb5bfa8>.
 
 <#Ailella>
     a foaf:Person;
     irishRel:nomName "Ailella";
+    agrelon:hasParent <#CairpriBaschain>;
     rel:childOf <#CairpriBaschain>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#AilellaBascain>.
     
@@ -177,6 +195,7 @@
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Oengus";
+    agrelon:hasParent <#CairpriBaschain>;
     rel:childOf <#CairpriBaschain>;
     owl:sameAs <http://example.com/LL/corco_bascind.trig#OengusaCorpri>.
 
