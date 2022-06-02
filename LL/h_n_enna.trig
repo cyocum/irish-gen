@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach .H. N-Enna"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text071.html>;
@@ -23,76 +21,90 @@
 <#Conchobor>
     a foaf:Person;
     irishRel:nomName "Conchobor";
+    agrelon:hasParent <#GillaiAilbe>;
     rel:childOf <#GillaiAilbe>.
 
 <#GillaiAilbe>
     a foaf:Person;
     irishRel:genName "Gillai Ailbe";
     irishRel:nomName "Gilla Ailbe";
+    agrelon:hasParent <#MeicMaras>;
     rel:childOf <#MeicMaras>.
 
 <#MeicMaras>
     a foaf:Person;
     irishRel:genName "Meic Maras";
     irishRel:nomName "Mac Maras";
+    agrelon:hasParent <#Ciarmaic>;
     rel:childOf <#Ciarmaic>.
 
 <#Ciarmaic>
     a foaf:Person;
     irishRel:genName "Ciarmaic";
     irishRel:nomName "Ciarmac";
+    agrelon:hasParent <#MaelGuala>;
     rel:childOf <#MaelGuala>.
 
 <#MaelGuala>
     a foaf:Person;
     irishRel:nomName "Mael Guala";
+    agrelon:hasParent <#Rind>;
     rel:childOf <#Rind>.
 
 <#Rind>
     a foaf:Person;
     irishRel:nomName "Rind";
+    agrelon:hasParent <#FhindShláine>;
     rel:childOf <#FhindShláine>.
 
 <#FhindShláine>
     a foaf:Person;
     irishRel:genName "Fhind Shláine";
     irishRel:nomName "Find Slán";
+    agrelon:hasParent <#Cerbaill>;
     rel:childOf <#Cerbaill>.
 
 <#Cerbaill>
     a foaf:Person;
     irishRel:genName "Cerbaill";
     irishRel:nomName "Cerball";
+    agrelon:hasParent <#Corne>;
     rel:childOf <#Corne>.
 
 <#Corne>
     a foaf:Person;
     irishRel:nomName "Corne";
+    agrelon:hasParent <#Olchobair>;
     rel:childOf <#Olchobair>.
 
 <#Olchobair>
     a foaf:Person;
     irishRel:genName "Olchobair";
     irishRel:nomName "Olchobar";
+    agrelon:hasParent <#DuibIndrecht>;
     rel:childOf <#DuibIndrecht>.
 
 <#DuibIndrecht>
     a foaf:Person;
     irishRel:genName "Duib Indrecht";
     irishRel:nomName "Dub Indrecht";
+    agrelon:hasParent <#Cathasaig>;
     rel:childOf <#Cathasaig>.
 
 <#Cathasaig>
     a foaf:Person;
     irishRel:genName "Cathasaig";
     irishRel:nomName "Cathasach";
+    agrelon:hasParent <#Usnig>;
     rel:childOf <#Usnig>;
+    agrelon:hasParent <#MaeleUmai>;
     rel:childOf <#MaeleUmai>.
 
 <#Usnig>
     a foaf:Person;
     irishRel:genName "Usnig";
     irishRel:nomName "Uisnech";
+    agrelon:hasParent <#Cuain>;
     rel:childOf <#Cuain>;
     rdfs:comment "m Usnig nó m Maele Umai".
 
@@ -100,6 +112,7 @@
     a foaf:Person;
     irishRel:genName "Maele Umai";
     irishRel:nomName "Mael Umai";
+    agrelon:hasParent <#Cuain>;
     rel:childOf <#Cuain>;
     rdfs:comment "m Usnig nó m Maele Umai".
 
@@ -107,35 +120,41 @@
     a foaf:Person;
     irishRel:genName "Cuain";
     irishRel:nomName "Cuan";
+    agrelon:hasParent <#Amalgada>;
     rel:childOf <#Amalgada>.
 
 <#Amalgada>
     a foaf:Person;
     irishRel:genName "Amalgada";
     irishRel:nomName "Amalgaid";
+    agrelon:hasParent <#Ennai>;
     rel:childOf <#Ennai>.
 
 <#Ennai>
     a foaf:Person;
     irishRel:genName "Ennai";
     irishRel:nomName "Enna";
+    agrelon:hasParent <#Crimthaind>;
     rel:childOf <#Crimthaind>.
 
 <#Crimthaind>
     a foaf:Person;
     irishRel:genName "Crimthaind";
     irishRel:nomName "Crimthand";
+    agrelon:hasParent <#Ailella>;
     rel:childOf <#Ailella>.
 
 <#Ailella>
     a foaf:Person;
     irishRel:genName "Ailella";
     irishRel:nomName "Ailill";
+    agrelon:hasParent <#NadFraich>;
     rel:childOf <#NadFraich>.
 
 <#NadFraich>
     a foaf:Person;
     irishRel:nomName "Nad Fraich";
+    agrelon:hasParent <#Cuirc>;
     rel:childOf <#Cuirc>;
     owl:sameAs <http://example.com/LL/rig_desmuman.trig#NadFraich>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich-47cc38b6>.
@@ -144,6 +163,7 @@
     a foaf:Person;
     irishRel:genName "Cuirc";
     irishRel:nomName "Corc";
+    agrelon:hasParent <#Lugdech>;
     rel:childOf <#Lugdech>;
     owl:sameAs <http://example.com/LL/rig_desmuman.trig#Cuirc>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Cuirc>;
