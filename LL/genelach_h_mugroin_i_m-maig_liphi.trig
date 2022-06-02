@@ -8,6 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -21,10 +22,12 @@
     irishRel:nomName "Mugron";
     irishRel:numChild 4;
     owl:sameAs <http://example.com/LL/genelach_h_riacain.trig#Mugroin-307c0b8e>;
+    agrelon:hasParent <#Oengusa-0e9e49e0>;
     rel:childOf <#Oengusa-0e9e49e0>.
 
 <#Oengusa-0e9e49e0>
     owl:sameAs <http://example.com/LL/genelach_h_riacain.trig#Oengusa-e104e325>;
+    agrelon:hasParent <#FlaindDaChongal-6bbf9a2f>;
     rel:childOf <#FlaindDaChongal-6bbf9a2f>.
 
 <#FlaindDaChongal-6bbf9a2f>
@@ -33,29 +36,34 @@
 <#MaelSinchill>
     a foaf:Person;
     irishRel:nomName "Mael Sinchill";
+    agrelon:hasParent <#Mugron>;
     rel:childOf <#Mugron>.
 
 <#MaelFinni>
     a foaf:Person;
     irishRel:nomName "Mael Finni";
+    agrelon:hasParent <#Mugron>;
     rel:childOf <#Mugron>.
 
 <#MaelCarmain>
     a foaf:Person;
     irishRel:nomName "Mael Carmain";
+    agrelon:hasParent <#Mugron>;
     rel:childOf <#Mugron>.
 
 <#Colgu-cce2ddfe>
     a foaf:Person;
     irishRel:nomName "Colgu";
+    agrelon:hasParent <#Mugron>;
     rel:childOf <#Mugron>;
     rdfs:comment "Et Colgu quem diximus" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_colgcan.trig#Colgcan-c4b86860>,
-               <http://example.com/LL/flaith_clainde_colgan.trig#Colgan>.
+           <http://example.com/LL/flaith_clainde_colgan.trig#Colgan>.
 
 <#Matudain>
     a foaf:Person;
     irishRel:nomName "Matudain";
+    agrelon:hasParent <#Aeda-6e404403>;
     rel:childOf <#Aeda-6e404403>.
 
 <#ClandMelShinchill>
@@ -107,6 +115,7 @@
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasAncestor <#MaelSinchill>;
     rel:descendantOf <#MaelSinchill>;
     irishRel:ancestorGroupOf <#hMatudain>.
 
@@ -115,12 +124,14 @@
     irishRel:genName "Thig";
     irishRel:nomName "Tig";
     foaf:gender "female";
+    agrelon:hasParent <#Baeth>;
     rel:childOf <#Baeth>;
     irishRel:ancestorOfGroup <#hChinaeda>.
 
 <#Baeth>
     a foaf:Person;
     irishRel:nomName "Baeth";
+    agrelon:hasAncestor <#MaelSinchill>;
     rel:descendantOf <#MaelSinchill>.
 
 <#MeicGussain>
@@ -131,6 +142,7 @@
     a foaf:Person;
     irishRel:genName "Mugroin";
     irishRel:nomName "Mugron";
+    agrelon:hasAncestor <#MaelCarmain>;
     rel:descendantOf <#MaelCarmain>;
     irishRel:ancestorOfGroup <#MeicGussain>.
 
