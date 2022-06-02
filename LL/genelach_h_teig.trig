@@ -8,6 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -19,6 +20,7 @@
 
 <#TuathalTigech-1f756487>
     owl:sameAs <http://example.com/LL/genelach_h_máil.trig#TuathalTigech>;
+    agrelon:hasParent <#ManiMail>;
     rel:childOf <#ManiMail>.
 
 <#ManiMail>
@@ -28,6 +30,7 @@
 <#FergusForcraid>
     a foaf:Person;
     irishRel:nomName "Fergus Forcraid";
+    agrelon:hasParent <#TuathalTigech-1f756487>;
     rel:childOf <#TuathalTigech-1f756487>;
     irishRel:ancestorOfGroup <#Síln-Aeda>.
 
@@ -39,6 +42,7 @@
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Shenaig>;
     rel:childOf <#Shenaig>.
 
 <#Shenaig>
@@ -46,11 +50,13 @@
     irishRel:genName "Shenaig";
     irishRel:nomName "Shenach";
     irishRel:numChild 3;
+    agrelon:hasAncestor <#FergusForcraid>
     rel:descendantOf <#FergusForcraid>.
 
 <#EchenMár>
     a foaf:Person;
     irishRel:nomName "Echen Már";
+    agrelon:hasParent <#TuathalTigech-1f756487>;
     rel:childOf <#TuathalTigech-1f756487>;
     irishRel:ancestorOfGroup <#hShubni>, <#hDicolla>, <#hChraigLagen>.
 
@@ -69,6 +75,7 @@
 <#EchenBec>
     a foaf:Person;
     irishRel:nomName "Echen Bec";
+    agrelon:hasParent <#TuathalTigech-1f756487>;
     rel:childOf <#TuathalTigech-1f756487>.
 
 <#hChrochain>
@@ -86,11 +93,13 @@
 <#Chrochain>
     a foaf:Person;
     irishRel:nomName "Chrochain";
+    agrelon:hasParent <#TuathalTigech-1f756487>;
     rel:childOf <#TuathalTigech-1f756487>.
 
 <#Lugaid-94ed46fd>
     a foaf:Person;
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#TuathalTigech-1f756487>;
     rel:childOf <#TuathalTigech-1f756487>;
     irishRel:ancestorOfGroup <#hLugach>.
 
@@ -101,16 +110,19 @@
 <#Aed-da26c957>
     a foaf:Person;
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Shenaig>;
     rel:childOf <#Shenaig>.
 
 <#Ernine-95707285>
     a foaf:Person;
     irishRel:nomName "Ernine";
+    agrelon:hasParent <#Shenaig>;
     rel:childOf <#Shenaig>.
 
 <#Cilline-12e1977c>
     a foaf:Person;
     irishRel:nomName "Cilline";
+    agrelon:hasParent <#Shenaig>;
     rel:childOf <#Shenaig>.
 
 }
