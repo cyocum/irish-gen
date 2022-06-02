@@ -8,13 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach H. Celicain"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text042.html>;
@@ -24,12 +21,14 @@
 <#Lorcan>
     a foaf:Person;
     irishRel:nomName "Lorcan";
+    agrelon:hasParent <#GillaiPatric>;
     rel:childOf <#GillaiPatric>.
 
 <#GillaiPatric>
     a foaf:Person;
     irishRel:genName "Gillai Patric";
     irishRel:nomName "Gilla Patric";
+    agrelon:hasParent <#Matudain>;
     rel:childOf <#Matudain>;
     owl:sameAs <http://example.com/LL/h_mbresail.trig#GillaPatric>.
 
@@ -37,6 +36,7 @@
     a foaf:Person;
     irishRel:genName "Matudain";
     irishRel:nomName "Matudan";
+    agrelon:hasParent <#Aeda>;
     rel:childOf <#Aeda>;
     owl:sameAs <http://example.com/LL/h_mbresail.trig#Matudain>.
 
@@ -44,12 +44,14 @@
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Trenfhir>;
     rel:childOf <#Trenfhir>.
 
 <#Trenfhir>
     a foaf:Person;
     irishRel:genName "Trenfhir";
     irishRel:nomName "Trenfer";
+    agrelon:hasParent <#Celicain>;
     rel:childOf <#Celicain>;
     owl:sameAs <http://example.com/LL/h_mbresail.trig#Trenfhir>.
 
@@ -57,22 +59,26 @@
     a foaf:Person;
     irishRel:genName "Celicain";
     irishRel:nomName "Ceilecan";
+    agrelon:hasParent <#Garbith>;
     rel:childOf <#Garbith>.
 
 <#Garbith>
     a foaf:Person;
     irishRel:nomName "Garbith";
+    agrelon:hasParent <#Aeda-ca2809f0>;
     rel:childOf <#Aeda-ca2809f0>.
 
 <#Aeda-ca2809f0>
     a foaf:Person;
     irishRel:nomName "Aeda";
+    agrelon:hasParent <#MaelDuin>;
     rel:childOf <#MaelDuin>;
     owl:sameAs <http://example.com/LL/h_mbresail.trig#Aeda>.
 
 <#MaelDuin>
     a foaf:Person;
     irishRel:nomName "Mael Duin";
+    agrelon:hasParent <#Dondgail>;
     rel:childOf <#Dondgail>;
     owl:sameAs <http://example.com/LL/h_mbresail.trig#MaelaDuin>.
 
@@ -80,6 +86,7 @@
     a foaf:Person;
     irishRel:genName "Dondgail";
     irishRel:nomName "Dondgal";
+    agrelon:hasParent <#Buachalla>;
     rel:childOf <#Buachalla>;
     owl:sameAs <http://example.com/LL/h_mbresail.trig#Dondgaile>.
 
@@ -88,6 +95,7 @@
     owl:sameAs <http://example.com/LL/h_mbresail.trig#Buachalla>;
     irishRel:genName "Buachalla";
     irishRel:nomName "Buachaile";
+    agrelon:hasParent <#ConchobuirChorraig>;
     rel:childOf <#ConchobuirChorraig>.
 
 <#ConchobuirChorraig>
