@@ -8,6 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -36,21 +37,16 @@
 
 _:missing-a1696134
     a foaf:Person;
-    foaf:gender "female";
-    rel:parentOf <#BresalEnechglas-f6d8f987>;
-    rel:parentOf <#DáreBarrach>;
-    rel:parentOf <#CrimthanneÁn>;
-    rel:parentOf <#RosFailge>;
-    rel:parentOf <#EchachTimmine>;
+        foaf:gender "female";
+        agrelon:hasChild <#BresalEnechglas-f6d8f987>, <#DáreBarrach>, <#CrimthanneÁn>, <#RosFailge>, <#EchachTimmine>;
+        rel:parentOf <#BresalEnechglas-f6d8f987>, <#DáreBarrach>, <#CrimthanneÁn>, <#RosFailge>, <#EchachTimmine>;
     rdfs:comment "Eocho Timmin & Bresal Enechglas & Ros Failge et Dáre Barrach & Crimthann Án mc oénmathar insin" .
 
 <#EchachTimmine>
     a foaf:Person;
-    irishRel:nomName "Echach Timmine";
-    rel:siblingOf <#BresalEnechglas-f6d8f987>;
-    rel:siblingOf <#RosFailge>;
-    rel:siblingOf <#DáreBarrach>;
-    rel:siblingOf <#CrimthanneÁn>.
+        irishRel:nomName "Echach Timmine";
+        agrelon:hasSibling  <#BresalEnechglas-f6d8f987>, <#RosFailge>, <#DáreBarrach>, <#CrimthanneÁn>;
+    rel:siblingOf <#BresalEnechglas-f6d8f987>, <#RosFailge>, <#DáreBarrach>, <#CrimthanneÁn>.
 
 <#NathÍ-7f74158c>
     owl:sameAs <#NathÍ-c8ae4b5b>;
