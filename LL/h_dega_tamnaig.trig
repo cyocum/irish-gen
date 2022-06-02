@@ -1,4 +1,4 @@
-@base <http://example.com/LL/h_dega_tamnaig.trig#>.
+@base <http://example.com/LL/h_dega_tamnaig.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -8,13 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "H. Dega Tamnaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text122.html>;
@@ -24,76 +21,89 @@
 <#Suibne>
     a foaf:Person;
     irishRel:nomName "Suibne";
+    agrelon:hasParent <#Caróc>;
     rel:childOf <#Caróc>.
 
 <#Caróc>
     a foaf:Person;
     irishRel:nomName "Caróc";
+    agrelon:hasParent <#MaelChróin>;
     rel:childOf <#MaelChróin>.
 
 <#MaelChróin>
     a foaf:Person;
     irishRel:nomName "Mael Chróin";
     irishRel:nomName "Mael Cróin";
+    agrelon:hasParent <#Mugróin>;
     rel:childOf <#Mugróin>.
 
 <#Mugróin>
     a foaf:Person;
     irishRel:genName "Mugróin";
     irishRel:nomName "Mugrón";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Conaill>;
     rel:childOf <#Conaill>.
 
 <#Conaill>
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Rechtada>;
     rel:childOf <#Rechtada>.
 
 <#Rechtada>
     a foaf:Person;
     irishRel:genName "Rechtada";
     irishRel:nomName "Rechtaid";
+    agrelon:hasParent <#Rechtáin>;
     rel:childOf <#Rechtáin>.
 
 <#Rechtáin>
     a foaf:Person;
     irishRel:genName "Rechtáin";
     irishRel:nomName "Rechtán";
+    agrelon:hasParent <#MaeleAnsid>;
     rel:childOf <#MaeleAnsid>.
 
 <#MaeleAnsid>
     a foaf:Person;
     irishRel:genName "Maele Ansid";
     irishRel:nomName "Mael Asid";
+    agrelon:hasParent <#Dimma>;
     rel:childOf <#Dimma>.
 
 <#Dimma>
     a foaf:Person;
     irishRel:nomName "Dimma";
+    agrelon:hasParent <#Ildánaich>;
     rel:childOf <#Ildánaich>.
 
 <#Ildánaich>
     a foaf:Person;
     irishRel:genName "Ildánaich";
     irishRel:nomName "Ildánach";
+    agrelon:hasParent <#Laisrenn>;
     rel:childOf <#Laisrenn>.
 
 <#Laisrenn>
     a foaf:Person;
     irishRel:genName "Laisrenn";
     irishRel:nomName "Laisren";
+    agrelon:hasParent <#Saráin>;
     rel:childOf <#Saráin>.
 
 <#Saráin>
     a foaf:Person;
     irishRel:genName "Saráin";
     irishRel:nomName "Sarán";
+    agrelon:hasParent <#Senaig>;
     rel:childOf <#Senaig>;
     owl:sameAs <http://example.com/LL/h_osráin.trig#Saráin>.
 
