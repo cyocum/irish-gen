@@ -8,6 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -21,41 +22,48 @@
     a foaf:Person;
     irishRel:nomName "Colum";
     foaf:title "nóem"@sga, "saint"@en;
+    agrelon:hasParent <#Nannida-334a35f0>;
     rel:childOf <#Nannida-334a35f0>.
 
 <#Nannida-334a35f0>
     a foaf:Person;
     irishRel:nomName "Nannida";
+    agrelon:hasParent <#Nazair-161e1bad>;
     rel:childOf <#Nazair-161e1bad>.
 
 <#Nazair-161e1bad>
     a foaf:Person;
     irishRel:genName "Nazair";
     irishRel:nomName "Nazar";
+    agrelon:hasParent <#CrimthainnBic>;
     rel:childOf <#CrimthainnBic>.
 
 <#CrimthainnBic>
     a foaf:Person;
     irishRel:genName "Crimthainn Bic";
     irishRel:nomName "Crimthann Bec";
+    agrelon:hasParent <#Echach-84cda7bd>;
     rel:childOf <#Echach-84cda7bd>.
 
 <#Echach-84cda7bd>
     a foaf:Person;
     irishRel:genName "Echach";
     irishRel:nomName "Echaid";
+    agrelon:hasParent <#Oengusa-e75452f7>;
     rel:childOf <#Oengusa-e75452f7>.
 
 <#Oengusa-e75452f7>
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Oengus";
+    agrelon:hasParent <#CrimthainnÁinMoir>;
     rel:childOf <#CrimthainnÁinMoir>.
 
 <#CrimthainnÁinMoir>
     a foaf:Person;
     irishRel:genName "Crimthainn Áin Moir";
     irishRel:nomName "Crimthann Án Mor";
+    agrelon:hasParent <#Cathair-3a1402a6>;
     rel:childOf <#Cathair-3a1402a6>;
     owl:sameAs <#CrimthannÁn>.
 
@@ -69,12 +77,14 @@
     a foaf:Person;
     irishRel:nomName "Mo Medoc";
     foaf:title "Midshúi"@sga;
+    agrelon:hasParent <#Midgnai>;
     rel:childOf <#Midgnai>.
 
 <#Midgnai>
     a foaf:Person;
     irishRel:genName "Midgnai";
     irishRel:nomName "Midgna";
+    agrelon:hasParent <#Nannida-f5cb8bca>;
     rel:childOf <#Nannida-f5cb8bca>.
 
 <#Nannida-f5cb8bca>
@@ -83,6 +93,7 @@
 <#ColumCule>
     a foaf:Person;
     irishRel:nomName "Colum Cule";
+    agrelon:hasParent <#Midgna-0ddb8493>;
     rel:childOf <#Midgna-0ddb8493>;
     rdfs:comment ".i. is e fil i Cluain Cáin".
 
