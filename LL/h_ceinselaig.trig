@@ -8,13 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach .H. Ceinselaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text081.html>;
@@ -24,52 +21,62 @@
 <#Diarmait>
     a foaf:Person;
     irishRel:nomName "Diarmait";
-    rel:childOf [
-        a foaf:Person;
-        rel:childOf <#Dondchada>
-    ].
+    agrelon:hasParent _:missing-f3bfdfcf ;
+    rel:childOf _:missing-f3bfdfcf.
+
+_:missing-f3bfdfcf
+    a foaf:Person;
+    rel:childOf <#Dondchada>.
 
 <#Dondchada>
     a foaf:Person;
     irishRel:genName "Dondchada";
     irishRel:nomName "Dondchad";
+    agrelon:hasParent <#MurchadaAthCliath>;
     rel:childOf <#MurchadaAthCliath>.
 
 <#MurchadaAthCliath>
     a foaf:Person;
     irishRel:genName "Murchada Ath Cliath";
     irishRel:nomName "Murchad Ath Cliath";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>.
 
 <#Diarmata>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
-    rel:childOf [
-        a foaf:Person;
-        rel:childOf <#maelí>
-    ].
+    agrelon:hasParent _:missing-76251701 ;
+    rel:childOf _:missing-76251701.
+
+_:missing-76251701
+    a foaf:Person;
+    rel:childOf <#maelí>.
     
 <#maelí>
     a foaf:Person;
+    agrelon:hasParent <#Dondchada-8289fc07>;
     rel:childOf <#Dondchada-8289fc07>.
 
 <#Dondchada-8289fc07>
     a foaf:Person;
     irishRel:genName "Dondchada";
     irishRel:nomName "Dondchad";
+    agrelon:hasParent <#Diarmata-90179f20>;
     rel:childOf <#Diarmata-90179f20>.
 
 <#Diarmata-90179f20>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Cellaig>;
     rel:childOf <#Cellaig>.
 
 <#Cellaig>
@@ -79,12 +86,13 @@
     rel:descendantOf <#EnnaeCendselaig>.
 
 << <#Cellaig>
-        rdfs:comment "While I can't make any sense of '[gap: illegible/extent: ? letters] c-cath & Broen' either, we surely don't need to leave <#Cellaig> and descendants unconnected to the genealogies. Presumably <#Cellaig> is rel:descendantOf <#EnnaeCendselaig> otherwise he wouldn't be here?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "While I can't make any sense of '[gap: illegible/extent: ? letters] c-cath & Broen' either, we surely don't need to leave <#Cellaig> and descendants unconnected to the genealogies. Presumably <#Cellaig> is rel:descendantOf <#EnnaeCendselaig> otherwise he wouldn't be here?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Broen>
     a foaf:Person;
     irishRel:nomName "Broen";
+    agrelon:hasParent <#MaelMorda>;
     rel:childOf <#MaelMorda>.
 
 <#MaelMorda>
@@ -95,62 +103,73 @@
     a foaf:Person;
     irishRel:genName "Cinaeda";
     irishRel:nomName "Cinaed";
+    agrelon:hasParent <#Corpri>;
     rel:childOf <#Corpri>.
 
 <#Corpri>
     a foaf:Person;
     irishRel:genName "Corpri";
     irishRel:nomName "Coirpre";
+    agrelon:hasParent <#Diarmata-78ba3056>;
     rel:childOf <#Diarmata-78ba3056>.
 
 <#Diarmata-78ba3056>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Aeda>;
     rel:childOf <#Aeda>.
 
 <#Aeda>
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Rudgaile>;
     rel:childOf <#Rudgaile>.
 
 <#Rudgaile>
     a foaf:Person;
     irishRel:nomName "Rudgaile";
+    agrelon:hasParent <#Onchon>;
     rel:childOf <#Onchon>.
 
 <#Onchon>
     a foaf:Person;
     irishRel:genName "Onchon";
     irishRel:nomName "Onchú";
+    agrelon:hasParent <#Faelain>;
     rel:childOf <#Faelain>.
 
 <#Faelain>
     a foaf:Person;
     irishRel:genName "Faelain";
     irishRel:nomName "Faelan";
-    rel:childOf [
-        a foaf:Person;
-        rel:childOf <#Shilain>
-    ].
+    agrelon:hasParent _:missing-e1119923 ;
+    rel:childOf _:missing-e1119923.
+
+_:missing-e1119923
+    a foaf:Person;
+    rel:childOf <#Shilain>.
 
 <#Shilain>
     a foaf:Person;
     irishRel:genName "Shilain";
     irishRel:nomName "Sílan";
+    agrelon:hasParent <#EogainCháech>;
     rel:childOf <#EogainCháech>.
 
 <#EogainCháech>
     a foaf:Person;
     irishRel:genName "Eogain Cháech";
     irishRel:nomName "Eogan Cáech";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#Eogan-2f23aa46>.
 
 <#NathÍ>
     a foaf:Person;
     irishRel:nomName "Nath Í";
+    agrelon:hasParent <#Crimthaind>;
     rel:childOf <#Crimthaind>;
     owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#NathÍ-6c69a50e>.
 
@@ -158,6 +177,7 @@
     a foaf:Person;
     irishRel:genName "Crimthaind";
     irishRel:nomName "Crimthand";
+    agrelon:hasParent <#EnnaeCendselaig>;
     rel:childOf <#EnnaeCendselaig>;
     owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#Crimthand-70ddc258>.
 
@@ -165,21 +185,23 @@
     a foaf:Person;
     irishRel:genName "Ennae Cendselaig";
     irishRel:nomName "Enna Cennselach";
+    agrelon:hasParent <#Labrada>;
     rel:childOf <#Labrada>;
     owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#EnnaGensalach>.
 
 << <#EnnaeCendselaig>
-        rdfs:comment "sameAs http://example.com/LL/dal_corpri_arad.trig#Chendselaig ?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+    rdfs:comment "sameAs http://example.com/LL/dal_corpri_arad.trig#Chendselaig ?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 << <#EnnaeCendselaig>
-        rdfs:comment "Yup, but I found a more direct mention in that tract, hiding beneath a weird spelling variant." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "Yup, but I found a more direct mention in that tract, hiding beneath a weird spelling variant." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Labrada>
     a foaf:Person;
     irishRel:genName "Labrada";
     irishRel:nomName "Labraid";
+    agrelon:hasParent <#BresailBelaig>;
     rel:childOf <#BresailBelaig>;
     owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#LabradaLaidig>.
 
@@ -187,6 +209,7 @@
     a foaf:Person;
     irishRel:genName "Bresail Belaig";
     irishRel:nomName "Bresal Belach";
+    agrelon:hasParent <#FiachachBaccid>;
     rel:childOf <#FiachachBaccid>;
     owl:sameAs <http://example.com/LL/genelach_h_cendselaig.trig#BresailBelaig>.
 
@@ -194,6 +217,7 @@
     a foaf:Person;
     foaf:name "Fiachach Baccid";
     foaf:name "Fiachu Baccid";
+    agrelon:hasParent <#CathairMoir>;
     rel:childOf <#CathairMoir>;
     owl:sameAs <http://example.com/LL/de_genelach_dáil_nia_corbb.trig#FiachuBaccid>.
 
