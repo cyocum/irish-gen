@@ -1,4 +1,4 @@
-@base <http://example.com/LL/sil_onchon.ttl>.
+@base <http://example.com/LL/sil_onchon.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -8,7 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
@@ -21,41 +21,48 @@
 <#Cellach-41c8ec04>
     a foaf:Person;
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Cinaíd>;
     rel:childOf <#Cinaíd>.
 
 <#Cinaíd>
     a foaf:Person;
     irishRel:nomName "Cinaíd";
+    agrelon:hasParent <#Corpri-a6e96891>;
     rel:childOf <#Corpri-a6e96891>.
 
 <#Corpri-a6e96891>
     a foaf:Person;
     irishRel:genName "Corpri";
     irishRel:nomName "Corpre";
+    agrelon:hasParent <#Diarmata-a80e03d4>;
     rel:childOf <#Diarmata-a80e03d4>.
 
 <#Diarmata-a80e03d4>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Aeda-efc55139>;
     rel:childOf <#Aeda-efc55139>.
 
 <#Aeda-efc55139>
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Rudgaile-bea4cce4>;
     rel:childOf <#Rudgaile-bea4cce4>.
 
 <#Rudgaile-bea4cce4>
     a foaf:Person;
     irishRel:genName "Rudgaile";
     irishRel:nomName "Rudgail";
+    agrelon:hasParent <#Onchon-556aa629>;
     rel:childOf <#Onchon-556aa629>.
 
 <#Onchon-556aa629>
     a foaf:Person;
     irishRel:genName "Onchon";
     irishRel:nomName "Onchu";
+    agrelon:hasParent <#Faelchon-2d566349>;
     rel:childOf <#Faelchon-2d566349>.
 
 <#Faelchon-2d566349>
