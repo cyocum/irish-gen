@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Síl Anmchada"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text118.html>;
@@ -23,65 +21,76 @@
 <#Godra>
     a foaf:Person;
     irishRel:nomName "Godra";
+    agrelon:hasParent <#Dunadaig>;
     rel:childOf <#Dunadaig>.
 
 <#Dunadaig>
     a foaf:Person;
     irishRel:genName "Dunadaig";
     irishRel:nomName "Dunadach";
+    agrelon:hasParent <#Godrai-8b110cb0>;
     rel:childOf <#Godrai-8b110cb0>.
 
 <#Godrai-8b110cb0>
     a foaf:Person;
     irishRel:genName "Godrai";
     irishRel:nomName "Godra";
+    agrelon:hasParent <#Longsig>;
     rel:childOf <#Longsig>.
 
 <#Longsig>
     a foaf:Person;
     irishRel:genName "Longsig";
     irishRel:nomName "Loingsech";
+    agrelon:hasParent <#Dunadaig-d7955430>;
     rel:childOf <#Dunadaig-d7955430>.
 
 <#Dunadaig-d7955430>
     a foaf:Person;
     irishRel:genName "Dunadaig";
     irishRel:nomName "Dunadach";
+    agrelon:hasParent <#Cobthaig>;
     rel:childOf <#Cobthaig>.
 
 <#Cobthaig>
     a foaf:Person;
     irishRel:genName "Cobthaig";
     irishRel:nomName "Cobthach";
+    agrelon:hasParent <#MaelDuin>;
     rel:childOf <#MaelDuin>.
 
 <#MaelDuin>
     a foaf:Person;
     irishRel:nomName "Mael Duin";
+    agrelon:hasParent <#Dondgalaig>;
     rel:childOf <#Dondgalaig>.
 
 <#Dondgalaig>
     a foaf:Person;
     irishRel:genName "Dondgalaig";
     irishRel:nomName "Dondgalach";
+    agrelon:hasParent <#Anmchada>;
     rel:childOf <#Anmchada>.
 
 <#Anmchada>
     a foaf:Person;
     irishRel:genName "Anmchada";
     irishRel:nomName "Anmchad";
+    agrelon:hasParent <#EogainBúaic>;
     rel:childOf <#EogainBúaic>.
 
 <#EogainBúaic>
     a foaf:Person;
     irishRel:genName "Eogain Búaic";
     irishRel:nomName "Eogan Búaic";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#CorpriChruim>;
     rel:childOf <#CorpriChruim>.
 
 <#CorpriChruim>
