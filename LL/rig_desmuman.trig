@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Rig Desmuman"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text070.html>;
@@ -23,12 +21,14 @@
 <#Diarmait>
     a foaf:Person;
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Muridaig>;
     rel:childOf <#Muridaig>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cormac>.
 
@@ -36,6 +36,7 @@
     a foaf:Person;
     irishRel:genName "Muridaig";
     irishRel:nomName "Muiredach";
+    agrelon:hasParent <#Carthaig>;
     rel:childOf <#Carthaig>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Muridaig>.
 
@@ -43,6 +44,7 @@
     a foaf:Person;
     irishRel:genName "Carthaig";
     irishRel:nomName "Carthach";
+    agrelon:hasParent <#Shairbrethaig>;
     rel:childOf <#Shairbrethaig>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Carthaig>.
 
@@ -50,6 +52,7 @@
     a foaf:Person;
     irishRel:genName "Shairbrethaig";
     irishRel:nomName "Saerbrethach";
+    agrelon:hasParent <#Cellachain>;
     rel:childOf <#Cellachain>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Sairbretaig>.
 
@@ -57,6 +60,7 @@
     a foaf:Person;
     irishRel:genName "Cellachain";
     irishRel:nomName "Cellachan";
+    agrelon:hasParent <#Buadachain>;
     rel:childOf <#Buadachain>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cellachain>.
 
@@ -64,6 +68,7 @@
     a foaf:Person;
     irishRel:genName "Buadachain";
     irishRel:nomName "Buadachan";
+    agrelon:hasParent <#Lactnai>;
     rel:childOf <#Lactnai>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Buadachain>.
 
@@ -71,6 +76,7 @@
     a foaf:Person;
     irishRel:genName "Lactnai";
     irishRel:nomName "Lachtna";
+    agrelon:hasParent <#Artgaile>;
     rel:childOf <#Artgaile>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Lactnai>.
 
@@ -78,6 +84,7 @@
     a foaf:Person;
     irishRel:genName "Artgaile";
     irishRel:nomName "Artgal";
+    agrelon:hasParent <#Shnedgusa>;
     rel:childOf <#Shnedgusa>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Artgaile>.
 
@@ -85,6 +92,7 @@
     a foaf:Person;
     irishRel:genName "Shnedgusa";
     irishRel:nomName "Snedgus";
+    agrelon:hasParent <#Dondgaile>;
     rel:childOf <#Dondgaile>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Snedgusa>.
 
@@ -92,6 +100,7 @@
     a foaf:Person;
     irishRel:genName "Dondgaile";
     irishRel:nomName "Dondgal";
+    agrelon:hasParent <#Fhaelgusa>;
     rel:childOf <#Fhaelgusa>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Dondgaile>.
 
@@ -99,12 +108,14 @@
     a foaf:Person;
     irishRel:genName "Fhaelgusa";
     irishRel:nomName "Faelgus";
+    agrelon:hasParent <#NadFraich>;
     rel:childOf <#NadFraich>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Faelgusa>.
 
 <#NadFraich>
     a foaf:Person;
     irishRel:nomName "Nad Fraich";
+    agrelon:hasParent <#Colgen>;
     rel:childOf <#Colgen>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich>.
 
@@ -112,6 +123,7 @@
     a foaf:Person;
     irishRel:genName "Colgen";
     irishRel:nomName "Colgu";
+    agrelon:hasParent <#FhailbeFlaind>;
     rel:childOf <#FhailbeFlaind>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Colggan>.
 
@@ -119,6 +131,7 @@
     a foaf:Person;
     irishRel:genName "Fhailbe Flaind";
     irishRel:nomName "Failbe Fland";
+    agrelon:hasParent <#Aeda>;
     rel:childOf <#Aeda>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Failbe>.
 
@@ -126,6 +139,7 @@
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Crimthaind>;
     rel:childOf <#Crimthaind>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Aeda>.
 
@@ -133,6 +147,7 @@
     a foaf:Person;
     irishRel:genName "Crimthaind";
     irishRel:nomName "Crimthand";
+    agrelon:hasParent <#Fheidlimthe>;
     rel:childOf <#Fheidlimthe>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Crimthaind>.
 
@@ -140,6 +155,7 @@
     a foaf:Person;
     irishRel:genName "Fheidlimthe";
     irishRel:nomName "Feidlimid";
+    agrelon:hasParent <#Oengusa>;
     rel:childOf <#Oengusa>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Feidlimthe>.
 
@@ -147,12 +163,14 @@
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Oengus";
+    agrelon:hasParent <#NadFraich-80743f9d>;
     rel:childOf <#NadFraich-80743f9d>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Oengusa>.
 
 <#NadFraich-80743f9d>
     a foaf:Person;
     irishRel:nomName "Nad Fraich";
+    agrelon:hasParent <#Cuirc>;
     rel:childOf <#Cuirc>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich-47cc38b6>.
 
@@ -160,6 +178,7 @@
     a foaf:Person;
     irishRel:genName "Cuirc";
     irishRel:nomName "Corc";
+    agrelon:hasParent <#Lugdech>;
     rel:childOf <#Lugdech>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cuirc>.
 
@@ -167,19 +186,23 @@
     a foaf:Person;
     irishRel:genName "Lugdech";
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#AilellaFlaindBic>;
     rel:childOf <#AilellaFlaindBic>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Lugdech>.
 
 <#AilellaFlaindBic>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AilellaFlaindBic>;
+    agrelon:hasParent <#FhiachachMullethain>;
     rel:childOf <#FhiachachMullethain>.
 
 <#FhiachachMullethain>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#FhiachachMullethain>;
+    agrelon:hasParent <#Eogain>;
     rel:childOf <#Eogain>.
 
 <#Eogain>
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#EogainMóir>;
+    agrelon:hasParent <#AilellaUluim>;
     rel:childOf <#AilellaUluim>.
 
 <#AilellaUluim>
