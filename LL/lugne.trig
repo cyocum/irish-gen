@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Lugne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text120.html>;
@@ -23,41 +21,48 @@
 <#Aed>
     a foaf:Person;
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Taichlig>;
     rel:childOf <#Taichlig>.
 
 <#Taichlig>
     a foaf:Person;
     irishRel:genName "Taichlig";
     irishRel:nomName "Taichlech";
+    agrelon:hasParent <#Murchada>;
     rel:childOf <#Murchada>.
 
 <#Murchada>
     a foaf:Person;
     irishRel:genName "Murchada";
     irishRel:nomName "Murchad";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Murchada-ddc93ff0>;
     rel:childOf <#Murchada-ddc93ff0>.
 
 <#Murchada-ddc93ff0>
     a foaf:Person;
     irishRel:nomName "Murchada";
+    agrelon:hasParent <#Murgiusa>;
     rel:childOf <#Murgiusa>.
 
 <#Murgiusa>
     a foaf:Person;
     irishRel:genName "Murgiusa";
     irishRel:nomName "Muirges";
+    agrelon:hasParent <#EgraFaprig>;
     rel:childOf <#EgraFaprig>.
 
 <#EgraFaprig>
     a foaf:Person;
     irishRel:genName "Egra Faprig";
     irishRel:nomName "Egra Faprech";
+    agrelon:hasParent <#Soergusa>;
     rel:childOf <#Soergusa>;
     rdfs:comment "a quo .h. Egra".
 
@@ -65,18 +70,21 @@
     a foaf:Person;
     irishRel:genName "Soergusa";
     irishRel:nomName "Soergus";
+    agrelon:hasParent <#Becce>;
     rel:childOf <#Becce>.
 
 <#Becce>
     a foaf:Person;
     irishRel:genName "Becce";
     irishRel:nomName "Becc";
+    agrelon:hasParent <#Lathgusa>;
     rel:childOf <#Lathgusa>.
 
 <#Lathgusa>
     a foaf:Person;
     irishRel:genName "Lathgusa";
     irishRel:nomName "Lathgus";
+    agrelon:hasParent <#CindFaelad>;
     rel:childOf <#CindFaelad>;
     irishRel:ancestorOfGroup <#ClandLathgusa>.
 
@@ -88,34 +96,40 @@
     a foaf:Person;
     irishRel:genName "Cind Faelad";
     irishRel:nomName "Cend Faelad";
+    agrelon:hasParent <#Findbairr>;
     rel:childOf <#Findbairr>.
 
 <#Findbairr>
     a foaf:Person;
     irishRel:genName "Findbairr";
     irishRel:nomName "Findbarr";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>.
 
 <#Diarmata>
     a foaf:Person;
     irishRel:genName "Diarmata";
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Dala>;
     rel:childOf <#Dala>.
 
 <#Dala>
     a foaf:Person;
     irishRel:nomName "Dala";
+    agrelon:hasParent <#Eoin>;
     rel:childOf <#Eoin>.
 
 <#Eoin>
     a foaf:Person;
     irishRel:nomName "Eoin";
+    agrelon:hasParent <#Ithchaire>;
     rel:childOf <#Ithchaire>;
     owl:sameAs <http://example.com/LL/lugni_connacht.trig#Iden>.
 
 <#Ithchaire>
     a foaf:Person;
     irishRel:nomName "Ithchaire";
+    agrelon:hasParent <#AirtChirp>;
     rel:childOf <#AirtChirp>;
     owl:sameAs <http://example.com/LL/lugni_connacht.trig#Idchuir>.
 
