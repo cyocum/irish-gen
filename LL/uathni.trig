@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/LL> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Uathni"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G800011F/text079.html>;
@@ -24,11 +22,13 @@
     a foaf:Person;
     irishRel:genName "Culen";
     irishRel:nomName "Cuilén";
+    agrelon:hasParent <#Iarlai>;
     rel:childOf <#Iarlai>.
 
 <#Iarlai>
     a foaf:Person;
     irishRel:nomName "Iarlai";
+    agrelon:hasParent <#Matudain>;
     rel:childOf <#Matudain>.
 
 << <#Iarlai>
@@ -40,125 +40,146 @@
     a foaf:Person;
     irishRel:genName "Matudain";
     irishRel:nomName "Matudán";
+    agrelon:hasParent <#Ruadri>;
     rel:childOf <#Ruadri>.
 
 <#Ruadri>
     a foaf:Person;
     irishRel:genName "Ruadri";
     irishRel:nomName "Ruaidri";
+    agrelon:hasParent <#Cathniat>;
     rel:childOf <#Cathniat>.
 
 <#Cathniat>
     a foaf:Person;
     irishRel:genName "Cathniat";
     irishRel:nomName "Cathnia";
+    agrelon:hasParent <#Cathalain>;
     rel:childOf <#Cathalain>.
 
 <#Cathalain>
     a foaf:Person;
     irishRel:genName "Cathalain";
     irishRel:nomName "Cathalán";
+    agrelon:hasParent <#Dermata>;
     rel:childOf <#Dermata>.
 
 <#Dermata>
     a foaf:Person;
     irishRel:genName "Dermata";
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Oengusa>;
     rel:childOf <#Oengusa>.
 
 <#Oengusa>
     a foaf:Person;
     irishRel:genName "Oengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Gormgaile>;
     rel:childOf <#Gormgaile>.
 
 <#Gormgaile>
     a foaf:Person;
     irishRel:genName "Gormgaile";
     irishRel:nomName "Gormgal";
+    agrelon:hasParent <#Fhlathim>;
     rel:childOf <#Fhlathim>.
 
 <#Fhlathim>
     a foaf:Person;
     irishRel:genName "Fhlathim";
     irishRel:nomName "Flathem";
+    agrelon:hasParent <#Fhogarthaig>;
     rel:childOf <#Fhogarthaig>.
 
 <#Fhogarthaig>
     a foaf:Person;
     irishRel:genName "Fhogarthaig";
     irishRel:nomName "Fogartach";
+    agrelon:hasParent <#Dondgalaig>;
     rel:childOf <#Dondgalaig>.
 
 <#Dondgalaig>
     a foaf:Person;
     irishRel:genName "Dondgalaig";
     irishRel:nomName "Dondgalach";
+    agrelon:hasParent <#Fhothaid>;
     rel:childOf <#Fhothaid>.
 
 <#Fhothaid>
     a foaf:Person;
     irishRel:genName "Fhothaid";
     irishRel:nomName "Fothad";
+    agrelon:hasParent <#Thomain>;
     rel:childOf <#Thomain>.
 
 <#Thomain>
     a foaf:Person;
     irishRel:genName "Thomain";
     irishRel:nomName "Toman";
+    agrelon:hasParent <#Fhinain>;
     rel:childOf <#Fhinain>.
 
 <#Fhinain>
     a foaf:Person;
     irishRel:genName "Fhinain";
     irishRel:nomName "Finan";
+    agrelon:hasParent <#Fhiachrach>;
     rel:childOf <#Fhiachrach>.
 
 <#Fhiachrach>
     a foaf:Person;
     irishRel:genName "Fhiachrach";
     irishRel:nomName "Fiachra";
+    agrelon:hasParent <#Fhintain>;
     rel:childOf <#Fhintain>.
 
 <#Fhintain>
     a foaf:Person;
     irishRel:genName "Fhintain";
     irishRel:nomName "Fintan";
+    agrelon:hasParent <#NadFraich>;
     rel:childOf <#NadFraich>.
 
 <#NadFraich>
     a foaf:Person;
     irishRel:nomName "Nad Fraich";
+    agrelon:hasParent <#Lasre>;
     rel:childOf <#Lasre>.
 
 <#Lasre>
     a foaf:Person;
     irishRel:nomName "Lasre";
     # Lasar (fem. name)? Or Laisren? Perhaps leave as is? EPT
+    agrelon:hasParent <#MeicCaille>;
     rel:childOf <#MeicCaille>.
 
 <#MeicCaille>
     a foaf:Person;
     irishRel:genName "Meic Caille";
     irishRel:nomName "Mac Caille";
+    agrelon:hasParent <#Fhergusa>;
     rel:childOf <#Fhergusa>.
 
 <#Fhergusa>
     a foaf:Person;
     irishRel:genName "Fhergusa";
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#Dallain>;
     rel:childOf <#Dallain>.
 
 <#Dallain>
     a foaf:Person;
     irishRel:genName "Dallain";
     irishRel:nomName "Dallán";
+    agrelon:hasParent <#Fhachtnai>;
     rel:childOf <#Fhachtnai>.
 
 <#Fhachtnai>
     a foaf:Person;
     irishRel:genName "Fhachtnai";
     irishRel:nomName "Fachtna";
+    agrelon:hasParent <#Fothaid>;
     rel:childOf <#Fothaid>.
 
 <#Fothaid>
