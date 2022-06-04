@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Echdach Dano"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text017.html>;
@@ -23,24 +22,28 @@
 <#Eocho>
     a foaf:Person;
     irishRel:nomName "Eocho";
+    agrelon:hasParent <#Rudgaile>;
     rel:childOf <#Rudgaile>.
 
 <#Rudgaile>
     a foaf:Person;
     irishRel:genName "Rudgaile";
     irishRel:nomName "Rudgail";
+    agrelon:hasParent <#Conaill>;
     rel:childOf <#Conaill>.
 
 <#Conaill>
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Caissín>;
     rel:childOf <#Caissín>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_úa_caissíne_in_so.trig#Cormac>.
 
@@ -58,10 +61,12 @@
 <#Congal>
     a foaf:Person;
     irishRel:nomName "Congal";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 
 <#MenmaAdar>
     a foaf:Person;
     irishRel:nomName "Menma Adar";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 }
