@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Dúnaile"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text007.html>;
@@ -22,6 +21,7 @@
 <#Séitrechán>
     a foaf:Person;
     irishRel:nomName "Séitrechán";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>;
     owl:sameAs <http://example.com/LL/cland_dungaile.trig#Sétrachán>.
 
@@ -29,6 +29,7 @@
     a foaf:Person;
     irishRel:nomName "Cellach";
     irishRel:genName "Cellaich";
+    agrelon:hasParent <#Flaithim>;
     rel:childOf <#Flaithim>;
     owl:sameAs <http://example.com/LL/cland_dungaile.trig#Cellaich>.
 
@@ -36,6 +37,7 @@
     a foaf:Person;
     irishRel:nomName "Flaithem";
     irishRel:genName "Flaithim";
+    agrelon:hasParent <#Forbasaich>;
     rel:childOf <#Forbasaich>;
     owl:sameAs <http://example.com/LL/cland_dungaile.trig#Fhlathim>.
 
@@ -43,6 +45,7 @@
     a foaf:Person;
     irishRel:nomName "Forbasach";
     irishRel:genName "Forbasaich";
+    agrelon:hasParent <#Dúngaile>;
     rel:childOf <#Dúngaile>;
     owl:sameAs <http://example.com/LL/cland_dungaile.trig#Forbasaig>.
 
@@ -50,6 +53,7 @@
     a foaf:Person;
     irishRel:nomName "Dúngal";
     irishRel:genName "Dúngaile";
+    agrelon:hasParent <#Snédgusa>;
     rel:childOf <#Snédgusa>;
     owl:sameAs <http://example.com/LL/cland_dungaile.trig#Dúngaile>;
     owl:sameAs <http://example.com/Rawl_B502/clann_taidc_inso.trig#Dúngal>.
