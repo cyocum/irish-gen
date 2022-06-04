@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "94"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
@@ -26,6 +25,7 @@
     irishRel:nomName "Macha";
     irishTitles:reignLength 7;
     irishTitles:succeededBy <#RechtaidRigderg>;
+    agrelon:hasParent <#ÁedaRuaid>;
     rel:childOf <#ÁedaRuaid>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#Macha>.
 
@@ -33,6 +33,7 @@
     a foaf:Person;
     irishRel:genName "Áeda Ruaid";
     irishRel:nomName "Áed Ruad";
+    agrelon:hasParent <#Baduirn>;
     rel:childOf <#Baduirn>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#ÁedRuad>.
 
@@ -47,6 +48,7 @@
     irishRel:nomName "Rechtaid Rigderg";
     irishTitles:reignLength 20;
     irishTitles:succeededBy <#ÚgaineMór>;
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.trig#RechtaidRigderg>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#RectaidRigderc>;
@@ -56,6 +58,7 @@
     a foaf:Person;
     irishRel:nomName "Lugaid";
     irishRel:genName "Lugdach";
+    agrelon:hasParent <#Echach>;
     rel:childOf <#Echach>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#Lugaid-f61af760>.
 
@@ -63,6 +66,7 @@
     a foaf:Person;
     irishRel:nomName "Eochu";
     irishRel:genName "Echach";
+    agrelon:hasParent <#AilellaFind>;
     rel:childOf <#AilellaFind>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#Eochaid-46fd4120>.
 
@@ -70,6 +74,7 @@
     a foaf:Person;
     irishRel:nomName "Ailill Find";
     irishRel:genName "Ailella Find";
+    agrelon:hasParent <#Airt>;
     rel:childOf <#Airt>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#AilillFind>.
 
@@ -77,6 +82,7 @@
     a foaf:Person;
     irishRel:nomName "Art";
     irishRel:genName "Airt";
+    agrelon:hasParent <#LugdachLaídich>;
     rel:childOf <#LugdachLaídich>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#Art>.
 
@@ -84,6 +90,7 @@
     a foaf:Person;
     irishRel:nomName "Lugaid Laidech";
     irishRel:genName "Lugdach Laídich";
+    agrelon:hasParent <#EchachUarchés>;
     rel:childOf <#EchachUarchés>;
     owl:sameAs <http://example.com/Rawl_B502/_92.trig#Lugaid-655f1030>.
 
@@ -108,7 +115,9 @@
     irishRel:accName "Úgaine Mór";
     irishRel:nomName "Úgaine Mór";
     irishRel:fosterChildOf <#Macha>, <#Cimbáeda>;
+    agrelon:hasParent <#EchachBuadaig>;
     rel:childOf <#EchachBuadaig>;
+    agrelon:hasSpouse <#CessairCáemchruthaich>;
     rel:spouseOf <#CessairCáemchruthaich>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_cimbáeda.trig#ÚgaineMór>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#ÚgaineMór>;
@@ -124,14 +133,17 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Cessair Cáemchruthaich";
-    rel:childOf [
+    agrelon:hasParent _:missing-7be588e7 ;
+    rel:childOf _:missing-7be588e7.
+
+_:missing-7be588e7
       a foaf:Person;
-      foaf:title "rí Franc"@sga, "king of the Franks"@eng;
-    ].
+      foaf:title "rí Franc"@sga, "king of the Franks"@eng .
 
 <#Badbchad>
     a foaf:Person;
     irishRel:nomName "Badbchad";
+    agrelon:hasVitalLethalContact <#ÚgaineMór>;
     rel:antagonistOf <#ÚgaineMór>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#Badbchad>.
 
@@ -148,6 +160,7 @@
     irishRel:nomName "Cobthach Cóel Breg";
     irishTitles:reignLength 50;
     irishTitles:succeededBy <#LabraidLoingsechMóen>;
+    agrelon:hasVitalLethalContact <#LáegaireLorcc>;
     rel:antagonistOf <#LáegaireLorcc>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#CobthachCóel>.
 
@@ -156,7 +169,9 @@
     irishRel:nomName "Labraid Loingsech Móen";
     irishTitles:reignLength 19;
     irishTitles:succeededBy <#Meilge>;
+    agrelon:hasParent <#AilellaÁine>;
     rel:childOf <#AilellaÁine>;
+    agrelon:hasVitalLethalContact <#CobthachCóelBreg>;
     rel:antagonistOf <#CobthachCóelBreg>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#LabraidLoingsechMóen>;
     owl:sameAs <http://example.com/LL/lagin.trig#LabraidLongsechMoen>.
@@ -165,6 +180,7 @@
     a foaf:Person;
     irishRel:genName "Ailella Áine";
     irishRel:nomName "Ailill Áine";
+    agrelon:hasParent <#LáegaireLorcc>;
     rel:childOf <#LáegaireLorcc>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#AilellaÁine>.
 
@@ -173,7 +189,9 @@
     irishRel:nomName "Meilge";
     irishTitles:reignLength 17;
     irishTitles:succeededBy <#MogCorb>;
+    agrelon:hasParent <#CobthachCóelBreg>;
     rel:childOf <#CobthachCóelBreg>;
+    agrelon:hasVitalLethalContact <#LabraidLoingsechMóen>;
     rel:antagonistOf <#LabraidLoingsechMóen>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ríg_n_alban.trig#Meilge>.
 
@@ -183,14 +201,16 @@
     irishRel:nomName "Mug Corb";
     irishTitles:reignLength 7;
     irishTitles:succeededBy <#h-Óengusn-Ollam>;
+    agrelon:hasParent <#RechtaidRigderg>;
     rel:childOf <#RechtaidRigderg>;
+    agrelon:hasVitalLethalContact <#Meilge>;
     rel:antagonistOf <#Meilge>;
     owl:sameAs <http://example.com/LL/lagin.trig#MugCorb>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.trig#MugCorp>.
 
 << <#MogCorb>
-        rdfs:comment "It hardly seems credible that Mug Corb could be son of Rechtaid Rigderg. Over 70 years separates them." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "It hardly seems credible that Mug Corb could be son of Rechtaid Rigderg. Over 70 years separates them." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#h-Óengusn-Ollam>
     a irishTitles:Rí;
@@ -198,32 +218,40 @@
     irishRel:nomName "Óengus Ollam";
     irishTitles:reignLength 18;
     irishTitles:succeededBy <#Irero>;
+    agrelon:hasAncestor <#LabraidLoingsechMóen>;
     rel:descendantOf <#LabraidLoingsechMóen>;
+    agrelon:hasVitalLethalContact <#MogCorb>;
     rel:antagonistOf <#MogCorb>;
     owl:sameAs <http://example.com/Rawl_B502/fursunnud_naile.trig#OengusOllam>.
 
 <#Irero>
     a irishTitles:Rí;
     irishRel:nomName "Irero";
+    agrelon:hasParent <#Meilge>;
     rel:childOf <#Meilge>;
     irishTitles:reignLength 7;
     irishTitles:succeededBy <#FerCorb>;
+    agrelon:hasVitalLethalContact <#h-Óengusn-Ollam>;
     rel:antagonistOf <#h-Óengusn-Ollam>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ríg_n_alban.trig#h-Irero>.
 
 <#FerCorb>
     a irishTitles:Rí;
     irishRel:nomName "Fer Corb";
+    agrelon:hasParent <#MogCorb>;
     rel:childOf <#MogCorb>;
     irishTitles:reignLength 11;
     irishTitles:succeededBy <#Condla>;
+    agrelon:hasVitalLethalContact <#Irero>;
     rel:antagonistOf <#Irero>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FerCorb>.
 
 <#Condla>
     a irishTitles:Rí;
     irishRel:nomName "Condla";
+    agrelon:hasParent <#Irero>;
     rel:childOf <#Irero>;
+    agrelon:hasVitalLethalContact <#FerCorb>;
     rel:antagonistOf <#FerCorb>;
     irishTitles:reignLength 4;
     irishTitles:succeededBy <#AilillCasfiaclach>;
@@ -233,6 +261,7 @@
 <#AilillCasfiaclach>
     a irishTitles:Rí;
     irishRel:nomName "Ailill Casfiaclach";
+    agrelon:hasParent <#Condla>;
     rel:childOf <#Condla>;
     irishTitles:reignLength 26;
     irishTitles:succeededBy <#h-AmadairFlidaisFoltchaín>;
@@ -243,6 +272,7 @@
     a irishTitles:Rí;
     irishRel:accName "h-Amadair Flidais Foltchaín";
     irishRel:nomName "Amadair Flidais Foltchaín";
+    agrelon:hasParent <#FerCorb>;
     rel:childOf <#FerCorb>;
     irishTitles:reignLength 5;
     irishTitles:succeededBy <#h-Eochaidn-Altlethan>;
@@ -255,6 +285,7 @@
     irishRel:nomName "Eochu Altlethan";
     irishTitles:reignLength 11;
     irishTitles:succeededBy <#FergusFortamuil>;
+    agrelon:hasVitalLethalContact <#h-AmadairFlidaisFoltchaín>;
     rel:antagonistOf <#h-AmadairFlidaisFoltchaín>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#EochaidAltlethan>.
 
@@ -272,6 +303,7 @@
     irishRel:nomName "Óengus Tuirmech Temra";
     irishTitles:reignLength 60;
     irishTitles:succeededBy <#ConallCollomrach>;
+    agrelon:hasVitalLethalContact <#FergusFortamuil>;
     rel:antagonistOf <#FergusFortamuil>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ríg_n_alban.trig#ÓengusaTurbichTemra>.
 
@@ -296,6 +328,7 @@
     irishRel:nomName "Énna Airgtech";
     irishTitles:reignLength 20;
     irishTitles:succeededBy <#CrimthannCoscrach>;
+    agrelon:hasVitalLethalContact <#NiadSegamain>;
     rel:antagonistOf <#NiadSegamain>.
 
 <#CrimthannCoscrach>
@@ -314,6 +347,7 @@
     irishTitles:reignLength 70;
     irishTitles:succeededBy <#FintaitMór>;
     rdfs:comment "Cóic ríg fichet uad for h- Érinn";
+    agrelon:hasParent <#Sittride>;
     rel:childOf <#Sittride>;
     irishRel:ancestorOfGroup <#Dáln-Araide>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Rudraige>;
@@ -323,6 +357,7 @@
     a foaf:Person;
     irishRel:genName "Olloman Fótla";
     irishRel:nomName "Ollam Fótla";
+    agrelon:hasParent <#FiachachFínscothaig>;
     rel:childOf <#FiachachFínscothaig>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_cimbáeda.trig#OllomanFótla>;
     irishRel:ancestorOf <#Dáln-Araide>.
@@ -344,6 +379,7 @@
     a foaf:Person;
     irishRel:nomName "Sittride";
     irishRel:genName "Sittride";
+    agrelon:hasParent <#Duib>;
     rel:childOf <#Duib>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Sithri>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.trig#Sittride>.
@@ -352,6 +388,7 @@
     a foaf:Person;
     irishRel:nomName "Dub";
     irishRel:genName "Duib";
+    agrelon:hasParent <#Fhomuir>;
     rel:childOf <#Fhomuir>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Duib>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.trig#Duib>.
@@ -360,6 +397,7 @@
     a foaf:Person;
     irishRel:nomName "Fomor";
     irishRel:genName "Fhomuir";
+    agrelon:hasParent <#Argatmáir>;
     rel:childOf <#Argatmáir>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Fomoir>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_n_echach.trig#Fomuir>.
@@ -374,6 +412,7 @@
 <#FintaitMór>
     a irishTitles:Rí;
     irishRel:nomName "Fintait Mór";
+    agrelon:hasParent <#NiadSegamain>;
     rel:childOf <#NiadSegamain>;
     irishTitles:reignLength 9;
     irishTitles:succeededBy <#BressalBódíbad>;
@@ -385,7 +424,9 @@
     irishRel:nomName "Bressal Bódíbad";
     irishTitles:reignLength 11;
     irishTitles:succeededBy <#LugaidLuaigni>;
+    agrelon:hasParent <#Rudraige>;
     rel:childOf <#Rudraige>;
+    agrelon:hasVitalLethalContact <#FintaitMór>;
     rel:antagonistOf <#FintaitMór>;
     rdfs:comment "Is de as-rubrad Bressal Bódíbad de: tánic díth do buaib h-Érenn ina flaith conná térna díb acht óentarb & samaisc i n-Glind na Samaisce.";
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#BresalBodíbad-68e1b210>.
@@ -395,13 +436,17 @@
     irishRel:nomName "Lugaid Luaigni";
     irishTitles:reignLength 15;
     irishTitles:succeededBy <#CongalCláringnech>;
+    agrelon:hasParent <#FintaitMór>;
     rel:childOf <#FintaitMór>;
+    agrelon:hasVitalLethalContact <#BressalBódíbad>;
     rel:antagonistOf <#BressalBódíbad>.
 
 <#CongalCláringnech>
     a irishTitles:Rí;
     irishRel:nomName "Congal Cláringnech";
+    agrelon:hasParent <#Rudraige>;
     rel:childOf <#Rudraige>;
+    agrelon:hasVitalLethalContact <#LugaidLuaigni>;
     rel:antagonistOf <#LugaidLuaigni>;
     irishTitles:reignLength 15;
     irishTitles:succeededBy <#DuachDaltaDedaid>;
@@ -413,6 +458,7 @@
     irishTitles:reignLength 10;
     irishTitles:succeededBy <#FachtnaFáthach>;
     irishRel:fosterChildOf <#Dedaid>;
+    agrelon:hasVitalLethalContact <#CongalCláringnech>;
     rel:antagonistOf <#CongalCláringnech>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.trig#DuachDaltaDedaid>.
 
@@ -427,8 +473,10 @@
     irishRel:nomName "Fachtna Fáthach";
     irishTitles:reignLength 16;
     irishTitles:succeededBy <#EochuFeidlech>;
+    agrelon:hasParent <#Rudraige>, <#Rossa>;
     rel:childOf <#Rudraige>, <#Rossa>;
     rdfs:comment "Fachtna Fáthach mc Rudraige (nó Rossa)";
+    agrelon:hasVitalLethalContact <#DuachDaltaDedaid>;
     rel:antagonistOf <#DuachDaltaDedaid>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FachtnaFathach>.
 
@@ -443,7 +491,9 @@
     irishRel:nomName "Eochu Feidlech";
     irishTitles:reignLength 12;
     irishTitles:succeededBy <#EochaidAirem>;
+    agrelon:hasParent <#Find>;
     rel:childOf <#Find>;
+    agrelon:hasVitalLethalContact <#FachtnaFáthach>;
     rel:antagonistOf <#FachtnaFáthach>;
     owl:sameAs <http://example.com/LL/lagin.trig#EchachFeidlig>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#EochuFeidlech-e8f620e5>.
@@ -452,6 +502,7 @@
     a foaf:Person;
     irishRel:genName "Find";
     irishRel:nomName "Find";
+    agrelon:hasParent <#Fintain>;
     rel:childOf <#Fintain>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#Find>.
 
@@ -459,6 +510,7 @@
     a foaf:Person;
     irishRel:genName "Fintain";
     irishRel:nomName "Fintan";
+    agrelon:hasParent <#Findguill>;
     rel:childOf <#Findguill>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#Fhintain>.
 
@@ -471,6 +523,7 @@
     irishRel:nomName "Eochaid Airem";
     irishTitles:reignLength 15;
     irishTitles:succeededBy <#EtarscélMár>;
+    agrelon:hasSibling <#EochuFeidlech>;
     rel:siblingOf <#EochuFeidlech>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#EochuAirem>.
 
@@ -479,6 +532,7 @@
     irishRel:nomName "Etarscél Már";
     irishTitles:reignLength 5;
     irishTitles:succeededBy <#NuaduNecht>;
+    agrelon:hasAncestor <#Ieir>;
     rel:descendantOf <#Ieir>;
     owl:sameAs <http://example.com/LL/de_rigaib_muman_iar_cretim_inso.trig#Eterscél>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#EterscélMór>;
@@ -503,6 +557,7 @@
     irishRel:nomName "Nuadu Necht";
     irishTitles:reignLength 0.42;
     irishTitles:succeededBy <#ConaireMár>;
+    agrelon:hasParent <#SétnaiSíthbaicc>;
     rel:childOf <#SétnaiSíthbaicc>;
     owl:sameAs <http://example.com/LL/lagin.trig#NuaduNecht>;
     owl:sameAs <http://example.com/Rawl_B502/bunad_laigen.trig#NuaduNecht>.
@@ -525,6 +580,7 @@
     foaf:knows <#EtarscélMár>;
     foaf:title "cóicedach"@sga, "provincial king"@eng;
     irishRel:nomName "Conchobar";
+    agrelon:hasParent <#Nessa>;
     rel:childOf <#Nessa>;
     owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#Conchobuir>.
 
@@ -539,6 +595,7 @@
     foaf:knows <#EtarscélMár>;
     foaf:title "cóicedach"@sga, "provincial king"@eng;
     irishRel:nomName "Cairpre Nia Fer";
+    agrelon:hasParent <#Rossa-27452f97>;
     rel:childOf <#Rossa-27452f97>;
     owl:sameAs <http://example.com/LL/lagin.trig#CoirpreNiaFer>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#CairpreNiaFer>.
@@ -555,6 +612,7 @@
     foaf:knows <#EtarscélMár>;
     foaf:title "cóicedach"@sga, "provincial king"@eng;
     irishRel:nomName "Tigernach Tétbuillech";
+    agrelon:hasParent <#Luchta>;
     rel:childOf <#Luchta>.
 
 <#Luchta>
@@ -566,6 +624,7 @@
     foaf:knows <#EtarscélMár>;
     foaf:title "cóicedach"@sga, "provincial king"@eng;
     irishRel:nomName "Ailill";
+    agrelon:hasParent <#RossaRuaid>, <#MátaMuirisce>;
     rel:childOf <#RossaRuaid>, <#MátaMuirisce>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#Ailill>.
 
@@ -586,6 +645,7 @@
     foaf:knows <#EtarscélMár>;
     foaf:title "cóicedach"@sga, "provincial king"@eng;
     irishRel:nomName "Cú Ruí";
+    agrelon:hasParent <#Dáire>;
     rel:childOf <#Dáire>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#CúRúi>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXXXVII.trig#CúRaoí>.
@@ -594,6 +654,7 @@
     a foaf:Person;
     irishRel:genName "Dáire";
     irishRel:nomName "Dáire";
+    agrelon:hasParent <#Dedad>;
     rel:childOf <#Dedad>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXXXVII.trig#Dáire>;
     owl:sameAs <http://example.com/LL/sil_birn.trig#Dári>.
@@ -601,6 +662,7 @@
 <#Dedad>
     a foaf:Person;
     irishRel:genName "Dedad";
+    agrelon:hasParent <#Sin>;
     rel:childOf <#Sin>;
     owl:sameAs <#Dedaid>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXXXVII.trig#Deadhadh>;
@@ -626,7 +688,9 @@
     a foaf:Person;
     irishRel:accName "h-Ingcél Cáech";
     irishRel:nomName "Ingcél Cáech";
+    agrelon:hasVitalLethalContact <#ConaireMár>;
     rel:antagonistOf <#ConaireMár>;
+    agrelon:hasAncestor <#Chon.icc>;
     rel:descendantOf <#Chon.icc>.
 
 <#Chon.icc>
@@ -637,26 +701,32 @@
 <#DuindDésa>
     a foaf:Person;
     irishRel:genName "Duind Désa";
-    rel:descendantOfGroup <#Laignib>.
+    irishRel:descendantOfGroup <#Laignib>.
 
 <#FerGel>
     a foaf:Person;
     irishRel:nomName "Fer Gel";
+    agrelon:hasParent <#DuindDésa>;
     rel:childOf <#DuindDésa>;
+    agrelon:hasVitalLethalContact <#ConaireMár>;
     rel:antagonistOf <#ConaireMár>;
     rdfs:comment ".i. trí Ruadchind Laigen".
 
 <#FerRoguin>
     a foaf:Person;
     irishRel:nomName "Fer Roguin";
+    agrelon:hasParent <#DuindDésa>;
     rel:childOf <#DuindDésa>;
+    agrelon:hasVitalLethalContact <#ConaireMár>;
     rel:antagonistOf <#ConaireMár>;
     rdfs:comment ".i. trí Ruadchind Laigen".
 
 <#LomnaDrúth>
     a foaf:Person;
     irishRel:nomName "Lomna Drúth";
+    agrelon:hasParent <#DuindDésa>;
     rel:childOf <#DuindDésa>;
+    agrelon:hasVitalLethalContact <#ConaireMár>;
     rel:antagonistOf <#ConaireMár>;
     rdfs:comment ".i. trí Ruadchind Laigen".
 
@@ -665,26 +735,34 @@
     irishRel:nomName "Lugaid Riab n-Derg";
     irishTitles:reignLength 25;
     irishTitles:succeededBy <#ConchobarAbratruad>;
+    agrelon:hasAcquaintance <#DeirbiForgaill>;
     rel:acquaintanceOf <#DeirbiForgaill>;
-    rel:childOf [
-        a foaf:Person;
-        owl:sameAs <http://example.com/LL/rig_ailig.trig#Bres>;
-    ];
-    rel:childOf [
-        a foaf:Person;
-        owl:sameAs <http://example.com/LL/rig_ailig.trig#Lothar>;
-    ];
-    rel:childOf [
-        a foaf:Person;
-        owl:sameAs <http://example.com/LL/rig_ailig.trig#Nar>;
-    ];
+    agrelon:hasParent _:missing-a8ba5262;
+    rel:childOf _:missing-a8ba5262;
+    agrelon:hasParent _:missing-85cf1698;
+    rel:childOf _:missing-85cf1698;
+    agrelon:hasParent _:missing-39359565;
+    rel:childOf _:missing-39359565;
     rdfs:comment "mc trí Find n-Emna";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_na_cróeb_coibnesta_inso_sís.trig#LugaidRiabn-Derg>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#LugdachRiabn-Derg>.
 
+_:missing-a8ba5262
+    a foaf:Person;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#Bres>.
+
+_:missing-85cf1698
+    a foaf:Person;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#Lothar>.
+
+_:missing-39359565
+    a foaf:Person;
+    owl:sameAs <http://example.com/LL/rig_ailig.trig#Nar>.
+
 <#CúChulainn>
     a foaf:Person;
     irishRel:nomName "Cú Chulainn";
+    agrelon:hasAcquaintance <#LugaidRiabn-Derg>;
     rel:acquaintanceOf <#LugaidRiabn-Derg>;
     owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#ConChulaind>.
 
@@ -693,10 +771,12 @@
     foaf:gender "female";
     irishRel:genName "Deirbi Forgaill";
     irishRel:nomName "Derb Forgaill";
-    rel:childOf [
+    agrelon:hasParent _:missing-b5cba52e ;
+    rel:childOf _:missing-b5cba52e.
+
+_:missing-b5cba52e
       a foaf:Person;
-      foaf:title "rí Lochlainne"@sga, "king of Scandinavia"@eng;
-    ].
+      foaf:title "rí Lochlainne"@sga, "king of Scandinavia"@eng .
 
 <#Failetsunnaeterdáfhert>
     dcterms:title "Failet sunna eter dá fhert";
@@ -715,6 +795,7 @@
     a foaf:Person;
     irishRel:genName "Find Fhiled";
     irishRel:nomName "Find File";
+    agrelon:hasParent <#RossaRuaid-9ec0cf03>;
     rel:childOf <#RossaRuaid-9ec0cf03>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#FindFile-a68034e0>.
 
@@ -728,6 +809,7 @@
 <#Crimthann>
     a irishTitles:Rí;
     irishRel:nomName "Crimthann";
+    agrelon:hasParent <#Lugdach-4416da10>;
     rel:childOf <#Lugdach-4416da10>;
     irishTitles:reignLength 13;
     irishTitles:succeededBy <#CairpreCattchen>;
@@ -750,6 +832,7 @@
     a foaf:Person;
     irishRel:genName "Moraind";
     irishRel:nomName "Morand";
+    agrelon:hasParent <#CairpreCattchen>;
     rel:childOf <#CairpreCattchen>.
 
 <#FeradachFechtnach>
@@ -757,6 +840,7 @@
     irishRel:nomName "Feradach Fechtnach";
     irishTitles:reignLength 22;
     irishTitles:succeededBy <#FiatachFind>;
+    agrelon:hasParent <#Crimthann>;
     rel:childOf <#Crimthann>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#FheradaichFindFechtnaig>.
 
@@ -780,6 +864,7 @@
     a foaf:Person;
     irishRel:genName "Dáre";
     irishRel:nomName "Dáire";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Dare>;
     owl:sameAs <http://example.com/Rawl_B502/anmann_in_so_na_ríg_ó_chimbáeth_co_conchobor.trig#Dáre>.
@@ -793,7 +878,9 @@
 <#FiachuFindfolaid>
     a irishTitles:Rí;
     irishRel:nomName "Fiachu Findfolad";
+    agrelon:hasParent <#FeradachFechtnach>;
     rel:childOf <#FeradachFechtnach>;
+    agrelon:hasVitalLethalContact <#FiatachFind>;
     rel:antagonistOf <#FiatachFind>;
     irishTitles:reignLength 17;
     irishTitles:succeededBy <#Éllim>;
@@ -802,15 +889,18 @@
 <#Éllim>
     a irishTitles:Rí;
     irishRel:nomName "Éllim";
+    agrelon:hasParent <#Condrach>;
     rel:childOf <#Condrach>;
     irishTitles:reignLength 20;
     irishTitles:succeededBy <#TuathalTechtmar>;
+    agrelon:hasVitalLethalContact <#FiachuFindfolaid>;
     rel:antagonistOf <#FiachuFindfolaid>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Ellim>.
 
 <#Condrach>
     a foaf:Person;
     irishRel:genName "Condrach";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Conrach>.
 
@@ -825,7 +915,9 @@
     irishRel:nomName "Tuathal Techtmar";
     irishTitles:reignLength 30;
     irishTitles:succeededBy <#Mál>;
+    agrelon:hasParent <#FiachuFindfolaid>;
     rel:childOf <#FiachuFindfolaid>;
+    agrelon:hasVitalLethalContact <#Éllim>;
     rel:antagonistOf <#Éllim>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#TuathailTectmair>.
 
@@ -834,7 +926,9 @@
     irishRel:nomName "Mál";
     irishTitles:reignLength 4;
     irishTitles:succeededBy <#Feidelmid>;
+    agrelon:hasParent <#Rochride>;
     rel:childOf <#Rochride>;
+    agrelon:hasVitalLethalContact <#TuathalTechtmar>;
     rel:antagonistOf <#TuathalTechtmar>;
     owl:sameAs <http://example.com/Rawl_B502/na_ríg_immorro_iar_conchobor.trig#Mál>.
 
@@ -849,7 +943,9 @@
     irishRel:nomName "Feidelmid";
     irishTitles:reignLength 9;
     irishTitles:succeededBy <#CatháerMár>;
+    agrelon:hasParent <#TuathalTechtmar>;
     rel:childOf <#TuathalTechtmar>;
+    agrelon:hasVitalLethalContact <#Mál>;
     rel:antagonistOf <#Mál>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#FheidlimidRechtada>.
 
@@ -859,7 +955,9 @@
     irishTitles:reignLength 3;
     rdfs:comment "nó coíca bliadan ut alii putant";
     irishTitles:succeededBy <#ConnCétchathach>;
+    agrelon:hasParent <#FeidelmidFirAurglais>;
     rel:childOf <#FeidelmidFirAurglais>;
+    agrelon:hasVitalLethalContact <#Luaigni>;
     rel:antagonistOf <#Luaigni>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#CathaírMáir>;
     owl:sameAs <http://example.com/Rawl_B502/de_peritia_síl_fiachach_ba_h-aiccid.trig#Cathair-fb12e850>.
@@ -881,6 +979,7 @@
     irishRel:nomName "Conn Cétchathach";
     irishTitles:reignLength 20;
     irishTitles:succeededBy <#Conaire>;
+    agrelon:hasParent <#Feidelmid>;
     rel:childOf <#Feidelmid>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#CuindCetchathaig>.
 
@@ -888,6 +987,7 @@
     a foaf:Person;
     irishRel:accName "Tipraiti Tírech";
     irishRel:nomName "Tipraite Tírech";
+    agrelon:hasParent <#Mál>;
     rel:childOf <#Mál>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Tipraite>.
 
@@ -898,6 +998,7 @@
     irishTitles:succeededBy <#Artt>;
     foaf:knows <#ConnCétchathach>;
     rdfs:comment "cliamain Cuind";
+    agrelon:hasParent <#MogaLáma>;
     rel:childOf <#MogaLáma>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hérimóin_annso_fo_héirind.trig#ConaireCóem>.
 
@@ -912,7 +1013,9 @@
     a foaf:Person;
     irishRel:nomName "Nemed";
     irishRel:accName "Nemed";
+    agrelon:hasParent <#Srabcind>;
     rel:childOf <#Srabcind>;
+    agrelon:hasVitalLethalContact <#Conaire>;
     rel:antagonistOf <#Conaire>.
 
 <#Srabcind>
@@ -926,6 +1029,7 @@
     irishRel:nomName "Artt";
     irishTitles:reignLength 30;
     irishTitles:succeededBy <#Lugaid>;
+    agrelon:hasParent <#ConnCétchathach>;
     rel:childOf <#ConnCétchathach>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#ArtOenfhir>.
 
@@ -933,19 +1037,23 @@
     a foaf:Person;
     irishRel:genName "Lugdach";
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#Lugaid>;
     rel:childOf <#Lugaid>;
+    agrelon:hasVitalLethalContact <#Artt>;
     rel:antagonistOf <#Artt>.
 
 << <#Lugdach-348fd460>
-        rdfs:comment "This individual appears in no other sources that I know of. It seems that Lugaid Mac Con has been duplicated in error." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "This individual appears in no other sources that I know of. It seems that Lugaid Mac Con has been duplicated in error." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Lugaid>
     a irishTitles:Rí;
     irishRel:nomName "Lugaid";
     irishTitles:reignLength 30;
     irishTitles:succeededBy <#FergusDubdétach>;
+    agrelon:hasParent <#Con>;
     rel:childOf <#Con>;
+    agrelon:hasVitalLethalContact <#Artt>;
     rel:antagonistOf <#Artt>;
     owl:sameAs <http://example.com/Rawl_B502/clanna_ébeir_h_i_l_leith_chuind.trig#Lugaid>.
 
@@ -958,6 +1066,7 @@
 <#Ferchess>
     a foaf:Person;
     irishRel:nomName "Ferchess";
+    agrelon:hasParent <#Commáin>;
     rel:childOf <#Commáin>.
 
 <#Commáin>
@@ -971,6 +1080,7 @@
     irishRel:nomName "Fergus Dubdétach";
     irishTitles:reignLength 1;
     irishTitles:succeededBy <#Cormac>;
+    agrelon:hasParent <#Fhindchada>;
     rel:childOf <#Fhindchada>;
     owl:sameAs <http://example.com/Rawl_B502/na_ríg_immorro_iar_conchobor.trig#FergusDubdétach>.
 
@@ -985,7 +1095,9 @@
     irishRel:nomName "Cormac";
     irishTitles:succeededBy <#EochuGunnat>;
     irishTitles:reignLength 40;
+    agrelon:hasParent <#Artt>;
     rel:childOf <#Artt>;
+    agrelon:hasVitalLethalContact <#FergusDubdétach>;
     rel:antagonistOf <#FergusDubdétach>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#CormaicUlfhota>.
 
@@ -994,6 +1106,7 @@
     irishRel:nomName "Eochu Gunnat";
     irishTitles:reignLength 1;
     irishTitles:succeededBy <#CairpreLiphechair>;
+    agrelon:hasParent <#Feicc>;
     rel:childOf <#Feicc>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#EochuGunnat>.
 
@@ -1002,6 +1115,7 @@
     irishRel:nomName "Fiacc";
     irishRel:genName "Feicc";
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Féic-2b4aaea0>;
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>.
 
 <#Imchada>
@@ -1013,7 +1127,9 @@
 <#Lugaid-c607bff0>
     a foaf:Person;
     irishRel:nomName "Lugaid";
+    agrelon:hasVitalLethalContact <#EochuGunnat>; 
     rel:antagonistOf <#EochuGunnat>;
+    agrelon:hasParent <#MeiccÓengusa>;
     rel:childOf <#MeiccÓengusa>.
 
 <#MeiccÓengusa>
@@ -1026,12 +1142,14 @@
     irishRel:nomName "Cairpre Liphechair";
     irishTitles:succeededBy <#Senioth>, <#Sárnia>;
     irishTitles:reignLength 26;
+    agrelon:hasParent <#Cormac>;
     rel:childOf <#Cormac>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#CarpriLiphechair>.
 
 <#Senioth>
     a foaf:Person;
     irishRel:nomName "Senioth";
+    agrelon:hasVitalLethalContact <#CairpreLiphechair>;
     rel:antagonistOf <#CairpreLiphechair>;
     irishRel:descendantOfGroup <#Laignib>;
     rdfs:comment "dá Ruad Róirenn".
@@ -1039,6 +1157,7 @@
 <#Sárnia>
     a foaf:Person;
     irishRel:nomName "Sárnia";
+    agrelon:hasVitalLethalContact <#CairpreLiphechair>;
     rel:antagonistOf <#CairpreLiphechair>;
     irishRel:descendantOfGroup <#Laignib>;
     rdfs:comment "dá Ruad Róirenn".
@@ -1054,6 +1173,7 @@
     a irishTitles:Rí;
     irishRel:nomName "Fothud Airgtech";
     irishTitles:reignLength 1;
+    agrelon:hasVitalLethalContact <#FothudAirgtech>;
     rel:antagonistOf <#FothudAirgtech>;
     owl:sameAs <http://example.com/LL/eli_descirt.trig#FothadArgdech>;
     owl:sameAs <http://example.com/Rawl_B502/item_na_fothaid.trig#FothaidAirgtich>.
@@ -1063,6 +1183,7 @@
     irishRel:nomName "Fiachu Sraiptine";
     irishTitles:succeededBy <#CollaUais>;
     irishTitles:reignLength 27;
+    agrelon:hasParent <#CairpreLiphechair>;
     rel:childOf <#CairpreLiphechair>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#FhiachachSraptini>.
 
@@ -1070,18 +1191,21 @@
     a foaf:Person;
     irishRel:nomName "Colla";
     owl:sameAs <#CollaUais>;
+    agrelon:hasVitalLethalContact <#FiachuSraiptine>;
     rel:antagonistOf <#FiachuSraiptine>;
     owl:sameAs <http://example.com/LL/h_airgialla.trig#CollaOss>.
 
 <#Colla-9426dc71>
     a foaf:Person;
     irishRel:nomName "Colla";
+    agrelon:hasVitalLethalContact <#FiachuSraiptine>;
     rel:antagonistOf <#FiachuSraiptine>;
     owl:sameAs <http://example.com/LL/h_airgialla.trig#CollaMend>.
 
 <#Colla-94270380>
     a foaf:Person;
     irishRel:nomName "Colla";
+    agrelon:hasVitalLethalContact <#FiachuSraiptine>;
     rel:antagonistOf <#FiachuSraiptine>;
     owl:sameAs <http://example.com/LL/h_airgialla.trig#CollaFochrich>.
 
@@ -1096,6 +1220,7 @@
     irishRel:nomName "Muiredach Tírech";
     irishTitles:reignLength 30;
     irishTitles:succeededBy <#Cóelbad>;
+    agrelon:hasVitalLethalContact <#CollaUais>;
     rel:antagonistOf <#CollaUais>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#MuridaigTirig>.
 
@@ -1104,7 +1229,9 @@
     irishRel:nomName "Cóelbad";
     irishTitles:reignLength 1;
     irishTitles:succeededBy <#EochaidMugmedón>;
+    agrelon:hasParent <#CruindBaDruí>;
     rel:childOf <#CruindBaDruí>;
+    agrelon:hasVitalLethalContact <#MuiredachTírech>;
     rel:antagonistOf <#MuiredachTírech>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_dál_araide.trig#Cóelbad>.
 
@@ -1119,6 +1246,7 @@
     irishRel:nomName "Eochaid Mugmedón";
     irishTitles:reignLength 8;
     irishTitles:succeededBy <#Crimthand>;
+    agrelon:hasVitalLethalContact <#Cóelbad>;
     rel:antagonistOf <#Cóelbad>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#EchachMugmedóin>.
 
@@ -1127,6 +1255,7 @@
     irishRel:nomName "Crimthand";
     irishTitles:reignLength 13;
     irishTitles:succeededBy <#NiallNoígiallach>;
+    agrelon:hasParent <#Fidaig>;
     rel:childOf <#Fidaig>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#CrimthandMór>.
 
@@ -1140,8 +1269,11 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Mongfind";
+    agrelon:hasParent <#Fidaig>;
     rel:childOf <#Fidaig>;
+    agrelon:hasSibling <#Crimthand>;
     rel:siblingOf <#Crimthand>;
+    agrelon:hasVitalLethalContact <#Crimthand>;
     rel:antagonistOf <#Crimthand>.
 
 <#NiallNoígiallach>
@@ -1150,13 +1282,15 @@
     irishTitles:reignLength 27;
     irishTitles:succeededBy <#DathÍ>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillNóigiallaig>,
-               <http://example.com/LL/loegaire.trig#NeillNoigiallaig>;
+           <http://example.com/LL/loegaire.trig#NeillNoigiallaig>;
     rdfs:seeAlso <#MacEchachardorddan>.
 
 <#Eochaid-07c7a990>
     a foaf:Person;
     irishRel:nomName "Eochaid";
+    agrelon:hasVitalLethalContact <#NiallNoígiallach>;
     rel:antagonistOf <#NiallNoígiallach>;
+    agrelon:hasParent <#ÉnnaCeinselaig>;
     rel:childOf <#ÉnnaCeinselaig>;
     rdfs:seeAlso <#MacEchachardorddan>.
 
@@ -1186,6 +1320,7 @@
     irishRel:nomName "Dath Í";
     irishTitles:reignLength 60;
     irishTitles:succeededBy <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#Lóegaire>;
+    agrelon:hasParent <#FiachrachSraiptine>;
     rel:childOf <#FiachrachSraiptine>;
     owl:sameAs <http://example.com/LL/h_fiachach_aidni.trig#NathÍ>.
 }
