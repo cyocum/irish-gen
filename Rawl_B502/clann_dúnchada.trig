@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Dúnchada"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#Colmán>
     a foaf:Person;
     irishRel:nomName "Colmán";
+    agrelon:hasParent <#Cináeda>;
     rel:childOf <#Cináeda>.
 
 <#Cináeda>
     a foaf:Person;
     irishRel:genName "Cináeda";
     irishRel:nomName "Cináeda";
+    agrelon:hasParent <#Máeláin>;
     rel:childOf <#Máeláin>.
 
 <#Máeláin>
     a foaf:Person;
     irishRel:genName "Máeláin";
     irishRel:nomName "Máelán";
+    agrelon:hasParent <#DubDáBraine>;
     rel:childOf <#DubDáBraine>.
 
 <#DubDáBraine>
     a foaf:Person;
     irishRel:genName "Dub Dá Braine";
     irishRel:nomName "Dub Dá Brain";
+    agrelon:hasParent <#Dúnchada>;
     rel:childOf <#Dúnchada>.
 
 <#Dúnchada>
@@ -47,6 +50,7 @@
     irishRel:genName "Dúnchada";
     irishRel:nomName "Dúnchad";
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige.trig#Dúnchad>;
+    agrelon:hasParent <#FlainnFéorna>;
     rel:childOf <#FlainnFéorna>.
 
 <#FlainnFéorna>
