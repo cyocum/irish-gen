@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Amorgin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,30 +21,35 @@
 <#Findobur>
     a foaf:Person;
     irishRel:nomName "Findobur";
+    agrelon:hasParent <#Ruidnéil>;
     rel:childOf <#Ruidnéil>.
 
 <#Ruidnéil>
     a foaf:Person;
     irishRel:genName "Ruidnéil";
     irishRel:nomName "Ruidnél";
+    agrelon:hasParent <#Foraind>;
     rel:childOf <#Foraind>.
 
 <#Foraind>
     a foaf:Person;
     irishRel:genName "Foraind";
     irishRel:nomName "Forand";
+    agrelon:hasParent <#Airmedaich>;
     rel:childOf <#Airmedaich>.
 
 <#Airmedaich>
     a foaf:Person;
     irishRel:genName "Airmedaich";
     irishRel:nomName "Airmedach";
+    agrelon:hasParent <#Cúáin>;
     rel:childOf <#Cúáin>.
 
 <#Cúáin>
     a foaf:Person;
     irishRel:genName "Cúáin";
     irishRel:nomName "Cúán";
+    agrelon:hasParent <#ConBile>;
     rel:childOf <#ConBile>.
 
 <#ConBile>
@@ -53,34 +57,40 @@
     irishRel:genName "Con Bile";
     irishRel:nomName "Cu Bile";
     irishRel:numChild 3 ;
+    agrelon:hasParent <#Finnáin>;
     rel:childOf <#Finnáin>.
 
 <#Finnáin>
     a foaf:Person;
     irishRel:genName "Finnáin";
     irishRel:nomName "Finnán";
+    agrelon:hasParent <#Fuatach>;
     rel:childOf <#Fuatach>.
 
 <#Fuatach>
     a foaf:Person;
     irishRel:genName "Fuatach";
     irishRel:nomName "Fuataid";
+    agrelon:hasParent <#Gnóe>;
     rel:childOf <#Gnóe>.
 
 <#Gnóe>
     a foaf:Person;
     irishRel:genName "Gnóe";
+    agrelon:hasParent <#Blaí>;
     rel:childOf <#Blaí>.
 
 <#Blaí>
     a foaf:Person;
     irishRel:genName "Blaí";
+    agrelon:hasParent <#h-Eircc>;
     rel:childOf <#h-Eircc>.
 
 <#h-Eircc>
     a foaf:Person;
     irishRel:genName "h-Eircc";
     irishRel:nomName "Ircc";
+    agrelon:hasParent <#Amargein>;
     rel:childOf <#Amargein>.
 
 <#Amargein>
@@ -91,17 +101,20 @@
 <#Scellán>
     a foaf:Person ;
     irishRel:nomName "Scellán" ;
+    agrelon:hasParent <#ConBile>;
     rel:childOf <#ConBile>.
 
 <#Chúán>
     a foaf:Person ;
     irishRel:nomName "Chúán" ;
+    agrelon:hasParent <#ConBile>;
     rel:childOf <#ConBile>;
     owl:sameAs <#Cúáin>.
 
 <#Fidchuire>
     a foaf:Person ;
     irishRel:nomName "Fidchuire" ;
+    agrelon:hasParent <#ConBile>;
     rel:childOf <#ConBile>.
 
 }
