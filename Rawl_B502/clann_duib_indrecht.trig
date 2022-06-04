@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Duib Indrecht"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,35 +21,41 @@
 <#Artucán>
     a foaf:Person;
     irishRel:nomName "Artucán";
+    agrelon:hasParent <#Rechtabrat>;
     rel:childOf <#Rechtabrat>.
 
 <#Rechtabrat>
     a foaf:Person;
     irishRel:genName "Rechtabrat";
     irishRel:nomName "Rechtabra";
+    agrelon:hasParent <#MáelTuile>;
     rel:childOf <#MáelTuile>.
 
 <#MáelTuile>
     a foaf:Person;
     irishRel:genName "Máel Tuile";
+    agrelon:hasParent <#Feideilmeda>;
     rel:childOf <#Feideilmeda>.
 
 <#Feideilmeda>
     a foaf:Person;
     irishRel:genName "Feideilmeda";
     irishRel:nomName "Feideilmed";
+    agrelon:hasParent <#DuibDáThuath>;
     rel:childOf <#DuibDáThuath>.
 
 <#DuibDáThuath>
     a foaf:Person;
     irishRel:genName "Duib Dá Thuath";
     irishRel:nomName "Dub Dá Thuath";
+    agrelon:hasParent <#DuibIndrecht>;
     rel:childOf <#DuibIndrecht>.
 
 <#DuibIndrecht>
     a foaf:Person;
     irishRel:genName "Duib Indrecht";
     owl:sameAs <http://example.com/Rawl_B502/úi_fáebairdatha.trig#DubIndrecht>;
+    agrelon:hasParent <#ConCáich>;
     rel:childOf <#ConCáich>.
 
 <#ConCáich>
