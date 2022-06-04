@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Cerbaill"@sga ;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,6 +22,7 @@
 <#Écertach>
     a foaf:Person;
     irishRel:nomName "Écertach";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Ecertach>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Cormaic>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:genName "Cellaich";
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#MáelFínáin>;
     rel:childOf <#MáelFínáin>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Cellaig>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:genName "Máel Fínáin";
     irishRel:nomName "Máel Fínán";
+    agrelon:hasParent <#Arttgaile>;
     rel:childOf <#Arttgaile>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#MaelFhínain>.
 
@@ -63,24 +66,28 @@
 <#Fáelán>
     a foaf:Person;
     irishRel:nomName "Fáelán";
+    agrelon:hasParent <#MáelFínáin-bef8e616>;
     rel:childOf <#MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Fáelan>.
 
 <#Mugrón>
     a foaf:Person;
     irishRel:nomName "Mugrón";
+    agrelon:hasParent <#MáelFínáin-bef8e616>;
     rel:childOf <#MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Mugron>.
 
 <#Cerball>
     a foaf:Person;
     irishRel:nomName "Cerball";
+    agrelon:hasParent <#MáelFínáin-bef8e616>;
     rel:childOf <#MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Cerball>.
 
 <#Láegaire>
     a foaf:Person;
     irishRel:nomName "Láegaire";
+    agrelon:hasParent <#MáelFínáin-bef8e616>;
     rel:childOf <#MáelFínáin-bef8e616>;
     owl:sameAs <http://example.com/LL/cland_cerbaill.trig#Loegaire-d41447df>.
 
