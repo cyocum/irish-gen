@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Con Coingelt"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#Luithech>
     a foaf:Person;
     irishRel:genName "Luithech";
+    agrelon:hasParent <#MáeliCoba>;
     rel:childOf <#MáeliCoba>.
 
 <#MáeliCoba>
     a foaf:Person;
     irishRel:genName "Máeli Coba";
     irishRel:nomName "Máel Coba";
+    agrelon:hasParent <#Saimedaich>;
     rel:childOf <#Saimedaich>.
 
 <#Saimedaich>
     a foaf:Person;
     irishRel:genName "Saimedaich";
     irishRel:nomName "Saimedach";
+    agrelon:hasParent <#ConConggelt>;
     rel:childOf <#ConConggelt>.
 
 <#ConConggelt>
     a foaf:Person;
     irishRel:genName "Con Conggelt";
     owl:sameAs <http://example.com/Rawl_B502/úi_fáebairdatha.trig#CúChoingelt>;
+    agrelon:hasParent <#ConCáich>;
     rel:childOf <#ConCáich>.
 
 <#ConCáich>
