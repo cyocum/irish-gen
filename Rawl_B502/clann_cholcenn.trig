@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Cholcenn"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,28 +21,33 @@
 <#Nessán>
     a foaf:Person;
     irishRel:nomName "Nessán";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Condlae>;
     rel:childOf <#Condlae>.
 
 <#Condlae>
     a foaf:Person;
     irishRel:genName "Condlae";
+    agrelon:hasParent <#Condmaig>;
     rel:childOf <#Condmaig>.
 
 <#Condmaig>
     a foaf:Person;
     irishRel:genName "Condmaig";
     irishRel:nomName "Condmach";
+    agrelon:hasParent <#Colcenn>;
     rel:childOf <#Colcenn>.
 
 <#Colcenn>
     a foaf:Person;
     irishRel:genName "Colcenn";
+    agrelon:hasParent <#Comraite>;
     rel:childOf <#Comraite>;
     owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Colggo>.
 
