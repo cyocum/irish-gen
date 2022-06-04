@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Aingeda"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,28 +21,33 @@
 <#Findobur>
     a foaf:Person;
     irishRel:nomName "Findobur";
+    agrelon:hasParent <#Braccáin>;
     rel:childOf <#Braccáin>.
 
 <#Braccáin>
     a foaf:Person;
     irishRel:genName "Braccáin";
     irishRel:nomName "Braccán";
+    agrelon:hasParent <#Ailgellaich>;
     rel:childOf <#Ailgellaich>.
 
 <#Ailgellaich>
     a foaf:Person;
     irishRel:genName "Ailgellaich";
     irishRel:nomName "Ailgellach";
+    agrelon:hasParent <#Eichlech>;
     rel:childOf <#Eichlech>.
 
 <#Eichlech>
     a foaf:Person;
     irishRel:genName "Eichlech";
+    agrelon:hasParent <#Aingeda>;
     rel:childOf <#Aingeda>.
 
 <#Aingeda>
     a foaf:Person;
     irishRel:genName "Aingeda";
+    agrelon:hasParent <#Báeth>;
     rel:childOf <#Báeth>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.trig#Aingid>.
 
