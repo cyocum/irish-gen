@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Arttgaile"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,12 +21,14 @@
 <#Cuanu>
     a foaf:Person;
     irishRel:nomName "Cuanu";
+    agrelon:hasParent <#Dúnamail>;
     rel:childOf <#Dúnamail>.
 
 <#Dúnamail>
     a foaf:Person;
     irishRel:genName "Dúnamail";
     irishRel:nomName "Dúnamal";
+    agrelon:hasParent <#FlainnFéorna>;
     rel:childOf <#FlainnFéorna>.
 
 <#FlainnFéorna>
