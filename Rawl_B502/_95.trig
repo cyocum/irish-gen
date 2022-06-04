@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "95"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
@@ -29,6 +28,7 @@
 <#Éremón>
     a irishTitles:Rí;
     irishRel:nomName "Éremón";
+    agrelon:hasParent <#Militis>;
     rel:childOf <#Militis>;
     owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.trig#Erímon>;
     owl:sameAs <http://example.com/LL/lagin.trig#h-Erimoin>;
@@ -36,20 +36,23 @@
     irishTitles:reignLength 6;
     irishTitles:succeededBy [
       a irishTitles:Rí;
-      rel:childOf <#Éremón>;
+      agrelon:hasParent <#Éremón>;
+    rel:childOf <#Éremón>;
       irishTitles:succeededBy <#IarélProfeta>;
       irishTitles:reignLength 3;
       owl:sameAs <http://example.com/Rawl_B502/hic_sunt_nomina_incredentium.trig#Muimne>;
       irishTitles:coRulerWith [
         a irishTitles:Rí;
-        rel:childOf <#Éremón>;
+        agrelon:hasParent <#Éremón>;
+    rel:childOf <#Éremón>;
         irishTitles:succeededBy <#IarélProfeta>;
         irishTitles:reignLength 3;
         owl:sameAs <http://example.com/Rawl_B502/hic_sunt_nomina_incredentium.trig#Luigni>;
         irishTitles:coRulerWith [
           a irishTitles:Rí;
           irishTitles:succeededBy <#IarélProfeta>;
-          rel:childOf <#Éremón>;
+          agrelon:hasParent <#Éremón>;
+    rel:childOf <#Éremón>;
           owl:sameAs <http://example.com/Rawl_B502/hic_sunt_nomina_incredentium.trig#Laigne>;
           irishTitles:reignLength 3;
           ]
@@ -61,12 +64,14 @@
     a irishTitles:Rí;
     irishRel:nomName "Iarél Profeta";
     irishTitles:reignLength 10;
+    agrelon:hasParent <#Éremón>;
     rel:childOf <#Éremón>;
     owl:sameAs <http://example.com/LL/lagin.trig#IriailFatha>.
 
 <#Éber>
     a foaf:Person;
     irishRel:nomName "Éber";
+    agrelon:hasParent <#Militis>;
     rel:childOf <#Militis>;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.trig#Éber>;
     owl:sameAs <http://example.com/LL/section_135.trig#Ebir>;
