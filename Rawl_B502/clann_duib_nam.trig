@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Duib Nam"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,18 +21,21 @@
 <#Nechtain>
     a foaf:Person;
     irishRel:nomName "Nechtain";
+    agrelon:hasParent <#Airechtaich>;
     rel:childOf <#Airechtaich>.
 
 <#Airechtaich>
     a foaf:Person;
     irishRel:genName "Airechtaich";
     irishRel:nomName "Airechtach";
+    agrelon:hasParent <#Torptha>;
     rel:childOf <#Torptha>.
 
 <#Torptha>
     a foaf:Person;
     irishRel:genName "Torptha";
     irishRel:nomName "Torpth";
+    agrelon:hasParent <#DuibNam>;
     rel:childOf <#DuibNam>.
 
 <#DuibNam>
@@ -41,6 +43,7 @@
     irishRel:genName "Duib Nam";
     irishRel:nomName "Dub Nam";
     owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.trig#DubConam>;
+    agrelon:hasParent <#Dúngusa>;
     rel:childOf <#Dúngusa>.
 
 <#Dúngusa>
