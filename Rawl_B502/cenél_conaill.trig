@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Cenél Conaill"@sga ;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,6 +22,7 @@
 <#Lorccán>
     a foaf:Person;
     irishRel:nomName "Lorccán";
+    agrelon:hasParent <#Condlígáin>;
     rel:childOf <#Condlígáin>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Lorcan>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:genName "Condlígáin";
     irishRel:nomName "Condlígán";
+    agrelon:hasParent <#Corcráin>;
     rel:childOf <#Corcráin>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Condlígain>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:genName "Corcráin";
     irishRel:nomName "Corcrán";
+    agrelon:hasParent <#Cuircc>;
     rel:childOf <#Cuircc>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Corcrain>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:genName "Cuircc";
     irishRel:nomName "Curcc";
+    agrelon:hasParent <#Arttgaile>;
     rel:childOf <#Arttgaile>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Cuirc-0102ecad>.
 
@@ -51,6 +54,7 @@
     a foaf:Person;
     irishRel:genName "Arttgaile";
     irishRel:nomName "Arttgal";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Artgaile-27660aa6>.
 
@@ -58,6 +62,7 @@
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Conaill>;
     rel:childOf <#Conaill>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Domnaill-5188dbf0>.
 
@@ -65,6 +70,7 @@
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Snéidgusa>;
     rel:childOf <#Snéidgusa>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Conaill>.
 
@@ -72,12 +78,14 @@
     a foaf:Person;
     irishRel:genName "Snéidgusa";
     irishRel:nomName "Snéidgus";
+    agrelon:hasParent <#NadFraích>;
     rel:childOf <#NadFraích>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Snedgusa-aa58c1ba>.
 
 <#NadFraích>
     a foaf:Person;
     irishRel:genName "Nad Fraích";
+    agrelon:hasParent <#Colgan>;
     rel:childOf <#Colgan>;
     owl:sameAs <http://example.com/Rawl_B502/clann_faílbe_id_est_clann_donngaile.trig#NadFraích-712e64ec>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#NathFraich-564c0cc3>.
@@ -86,6 +94,7 @@
     a foaf:Person;
     irishRel:genName "Colgan";
     irishRel:nomName "Colgu";
+    agrelon:hasParent <#FaílbeFlaind>;
     rel:childOf <#FaílbeFlaind>;
     owl:sameAs <http://example.com/Rawl_B502/clann_faílbe_id_est_clann_donngaile.trig#Colgan-291b0a0c>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Colgan-247d2281>.
@@ -100,6 +109,7 @@
 <#Domnall>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Cathail>;
     rel:childOf <#Cathail>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Domnall-d2d74e11>.
 
@@ -107,6 +117,7 @@
     a foaf:Person;
     irishRel:genName "Cathail";
     irishRel:nomName "Cathal";
+    agrelon:hasParent <#DuibSláine>;
     rel:childOf <#DuibSláine>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Cathail-bb959d14>.
 
@@ -114,6 +125,7 @@
     a foaf:Person;
     irishRel:genName "Duib Sláine";
     irishRel:nomName "Dub Sláine";
+    agrelon:hasParent <#Corcráin-1cd25d31>;
     rel:childOf <#Corcráin-1cd25d31>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#DuibShlane>.
 
@@ -122,6 +134,7 @@
     irishRel:genName "Corcráin";
     irishRel:nomName "Corcrán";
     owl:sameAs <#Corcráin>;
+    agrelon:hasParent <#Cuircc-c8604440>;
     rel:childOf <#Cuircc-c8604440>;
     owl:sameAs <http://example.com/LL/genelach_conaill.trig#Corcrain-f359c77a>.
 
