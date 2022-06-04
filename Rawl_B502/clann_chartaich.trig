@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Chartaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#Congal>
     a foaf:Person;
     irishRel:nomName "Congal";
+    agrelon:hasParent <#Cuangilláin>;
     rel:childOf <#Cuangilláin>.
 
 <#Cuangilláin>
     a foaf:Person;
     irishRel:genName "Cuangilláin";
     irishRel:nomName "Cuangillán";
+    agrelon:hasParent <#Fairchellaich>;
     rel:childOf <#Fairchellaich>.
 
 <#Fairchellaich>
     a foaf:Person;
     irishRel:genName "Fairchellaich";
     irishRel:nomName "Fairchellach";
+    agrelon:hasParent <#Ailgnaich>;
     rel:childOf <#Ailgnaich>.
 
 <#Ailgnaich>
     a foaf:Person;
     irishRel:genName "Ailgnaich";
     irishRel:nomName "Ailgnach";
+    agrelon:hasParent <#Cartaich>;
     rel:childOf <#Cartaich>.
 
 <#Cartaich>
@@ -47,22 +50,26 @@
     irishRel:genName "Cartaich";
     irishRel:nomName "Cartach";
     rdfs:comment "is é Bolgc Druince in sin" ;
+    agrelon:hasParent <#Deirg>;
     rel:childOf <#Deirg>.
 
 <#Deirg>
     a foaf:Person;
     irishRel:genName "Deirg";
+    agrelon:hasParent <#Carthaich>;
     rel:childOf <#Carthaich>.
 
 <#Carthaich>
     a foaf:Person;
     irishRel:genName "Carthaich";
     irishRel:nomName "Carthach";
+    agrelon:hasParent <#Cathuib>;
     rel:childOf <#Cathuib>.
 
 <#Cathuib>
     a foaf:Person;
     irishRel:genName "Cathuib";
+    agrelon:hasParent <#Áine>;
     rel:childOf <#Áine>;
     owl:sameAs <http://example.com/Rawl_B502/úi_ábartaich.trig#Cathuib>.
 
