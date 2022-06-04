@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Díumassaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,29 +21,34 @@
 <#Cináed>
     a foaf:Person;
     irishRel:nomName "Cináed";
+    agrelon:hasParent <#MáelScrípáin>;
     rel:childOf <#MáelScrípáin>.
 
 <#MáelScrípáin>
     a foaf:Person;
     irishRel:genName "Máel Scrípáin";
+    agrelon:hasParent <#Aelgile>;
     rel:childOf <#Aelgile>.
 
 <#Aelgile>
     a foaf:Person;
     irishRel:genName "Aelgile";
     irishRel:nomName "Aelgil";
+    agrelon:hasParent <#Sáergaile>;
     rel:childOf <#Sáergaile>.
 
 <#Sáergaile>
     a foaf:Person;
     irishRel:genName "Sáergaile";
     irishRel:nomName "Sáergail";
+    agrelon:hasParent <#Díumasaich>;
     rel:childOf <#Díumasaich>.
 
 <#Díumasaich>
     a foaf:Person;
     irishRel:genName "Díumasaich";
     irishRel:nomName "Díumasach";
+    agrelon:hasParent <#Báeth>;
     rel:childOf <#Báeth>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.trig#Díummassach>.
 
