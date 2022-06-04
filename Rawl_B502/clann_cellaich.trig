@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Cellaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,30 +21,35 @@
 <#Gaissiud>
     a foaf:Person;
     irishRel:nomName "Gaissiud";
+    agrelon:hasParent <#Mográin>;
     rel:childOf <#Mográin>.
 
 <#Mográin>
     a foaf:Person;
     irishRel:genName "Mográin";
     irishRel:nomName "Mográn";
+    agrelon:hasParent <#Fogartaich>;
     rel:childOf <#Fogartaich>.
 
 <#Fogartaich>
     a foaf:Person;
     irishRel:genName "Fogartaich";
     irishRel:nomName "Fogartach";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Echaid";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>.
 
 <#Cellaich>
     a foaf:Person;
     irishRel:genName "Cellaich";
     owl:sameAs <http://example.com/Rawl_B502/úi_fáebairdatha.trig#Cellach-3e9ea817>;
+    agrelon:hasParent <#ConCáich>;
     rel:childOf <#ConCáich>.
 
 <#ConCáich>
