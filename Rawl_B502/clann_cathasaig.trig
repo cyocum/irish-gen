@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Cathasaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,18 +21,21 @@
 <#MáelCluichi>
     a foaf:Person;
     irishRel:nomName "Máel Cluichi";
+    agrelon:hasParent <#Flannabrat>;
     rel:childOf <#Flannabrat>.
 
 <#Flannabrat>
     a foaf:Person;
     irishRel:genName "Flannabrat";
     irishRel:nomName "Flannabra";
+    agrelon:hasParent <#Catháin>;
     rel:childOf <#Catháin>.
 
 <#Catháin>
     a foaf:Person;
     irishRel:genName "Catháin";
     irishRel:nomName "Cathán";
+    agrelon:hasParent <#Cathasaig>;
     rel:childOf <#Cathasaig>.
 
 <#Cathasaig>
@@ -41,6 +43,7 @@
     irishRel:genName "Cathasaig";
     irishRel:nomName "Cathasach";
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige.trig#Cathasach>;
+    agrelon:hasParent <#FlainnFéorna>;
     rel:childOf <#FlainnFéorna>.
 
 <#FlainnFéorna>
