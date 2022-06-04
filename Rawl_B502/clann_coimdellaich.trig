@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Coimdellaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,30 +21,35 @@
 <#Cellach>
     a foaf:Person;
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Cináeda>;
     rel:childOf <#Cináeda>.
 
 <#Cináeda>
     a foaf:Person;
     irishRel:genName "Cináeda";
     irishRel:nomName "Cináed";
+    agrelon:hasParent <#DuibDáThuath>;
     rel:childOf <#DuibDáThuath>.
 
 <#DuibDáThuath>
     a foaf:Person;
     irishRel:genName "Duib Dá Thuath";
     irishRel:nomName "Dub Dá Thuath";
+    agrelon:hasParent <#Rudgaile>;
     rel:childOf <#Rudgaile>.
 
 <#Rudgaile>
     a foaf:Person;
     irishRel:genName "Rudgaile";
     irishRel:nomName "Rudgail";
+    agrelon:hasParent <#Comdellaich>;
     rel:childOf <#Comdellaich>.
 
 <#Comdellaich>
     a foaf:Person;
     irishRel:genName "Comdellaich";
     irishRel:nomName "Comdellach";
+    agrelon:hasParent <#Báeth>;
     rel:childOf <#Báeth>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.trig#Comdellach> .
 
