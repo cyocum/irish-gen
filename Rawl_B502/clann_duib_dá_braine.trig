@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Duib Dá Braine"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#Dubodor>
     a foaf:Person;
     irishRel:nomName "Dubodor";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Áeda>;
     rel:childOf <#Áeda>.
 
 <#Áeda>
     a foaf:Person;
     irishRel:genName "Áeda";
     irishRel:nomName "Áed";
+    agrelon:hasParent <#DuibDáBraine>;
     rel:childOf <#DuibDáBraine>.
 
 <#DuibDáBraine>
@@ -47,6 +50,7 @@
     irishRel:genName "Duib Dá Braine";
     irishRel:nomName "Dub Dá Braine";
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige.trig#DubDáBraine>;
+    agrelon:hasParent <#Colmáin>;
     rel:childOf <#Colmáin>.
 
 <#Colmáin>
