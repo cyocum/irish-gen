@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Columba Dicitur"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
@@ -27,7 +26,9 @@
 <#Colum>
     a foaf:Person;
     irishRel:nomName "Colum";
+    agrelon:hasParent <#Nainnida>;
     rel:childOf <#Nainnida>;
+    agrelon:hasAncestor <#Nadstáir>, <#CrimthaindBic>, <#Catháer>;
     rel:descendantOf <#Nadstáir>;
     rel:descendantOf <#CrimthaindBic>;
     rel:descendantOf <#Catháer>;
@@ -51,6 +52,7 @@
     a foaf:Person;
     irishRel:nomName "Crimthand Bec";
     irishRel:genName "Crimthaind Bic";
+    agrelon:hasParent <#Echach>;
     rel:childOf <#Echach>;
     rdfs:seeAlso <#Níbucráebcrínfeda>.
 
@@ -58,6 +60,7 @@
     a foaf:Person;
     irishRel:nomName "Eochu";
     irishRel:genName "Echach";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.trig#Echach>;
     rdfs:seeAlso <#Níbucráebcrínfeda>.
@@ -66,6 +69,7 @@
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
+    agrelon:hasParent <#CrimthaindÁin>;
     rel:childOf <#CrimthaindÁin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_m-bairrche.trig#Óengusa>;
     rdfs:seeAlso <#Níbucráebcrínfeda>.
