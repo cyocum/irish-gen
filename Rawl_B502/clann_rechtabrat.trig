@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Rechtabrat"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,12 +21,14 @@
 <#Timmiucán>
     a foaf:Person;
     irishRel:nomName "Timmiucán";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormaic";
+    agrelon:hasParent <#Rechtabrat>;
     rel:childOf <#Rechtabrat>.
 
 <#Rechtabrat>
@@ -35,6 +36,7 @@
     irishRel:genName "Rechtabrat";
     irishRel:nomName "Rechtabra";
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige.trig#Rechtabra>;
+    agrelon:hasParent <#FlainnFéorna>;
     rel:childOf <#FlainnFéorna>.
 
 <#FlainnFéorna>
