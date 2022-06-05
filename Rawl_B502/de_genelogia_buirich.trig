@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Buirich";
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -34,21 +33,25 @@
 <#Ailill>
     a foaf:Person;
     irishRel:nomName "Ailill";
+    agrelon:hasParent <#Buirich>;
     rel:childOf <#Buirich>.
 
 <#Óengus>
     a foaf:Person;
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Buirich>;
     rel:childOf <#Buirich>.
 
 <#Canainn>
     a foaf:Person;
     irishRel:nomName "Canainn";
+    agrelon:hasParent <#Buirich>;
     rel:childOf <#Buirich>.
 
 <#Dero>
     a foaf:Person;
     irishRel:nomName "Dero";
+    agrelon:hasParent <#Buirich>;
     rel:childOf <#Buirich>.
 
 <#MeiccBrócc>
@@ -60,22 +63,27 @@
 <#EchoSnac>
     a foaf:Person;
     irishRel:nomName "Echo Snac";
+    agrelon:hasParent <#MeiccBrócc>;
     rel:childOf <#MeiccBrócc>.
 
 <#Óengus-e434921b>
     a foaf:Person;
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#MeiccBrócc>;
     rel:childOf <#MeiccBrócc>.
 
 <#Milige>
     a foaf:Person;
     irishRel:nomName "Milige";
+    agrelon:hasParent <#MeiccBrócc>;
     rel:childOf <#MeiccBrócc>.
 
 <#Muiredach>
     a foaf:Person;
     irishRel:nomName "Muiredach";
+    agrelon:hasParent <#MeiccBrócc>;
     rel:childOf <#MeiccBrócc>;
+    agrelon:hasOffspring <#Samgaisced>;
     rel:ancestorOf <#Samgaisced>.
 
 <#Samgaisced>
@@ -86,16 +94,19 @@
     a foaf:Person;
     irishRel:nomName "Mac Aidche";
     irishRel:nomName "Máel Dofhinnu" ;
+    agrelon:hasParent <#MeiccBrócc>;
     rel:childOf <#MeiccBrócc>.
 
 <#Torlugaid>
     a foaf:Person;
     irishRel:nomName "Torlugaid";
+    agrelon:hasParent <#MeiccBrócc>;
     rel:childOf <#MeiccBrócc>.
 
 <#ÁedUlach>
     a foaf:Person;
     irishRel:nomName "Áed Ulach";
+    agrelon:hasParent <#MeiccAidchi>;
     rel:childOf <#MeiccAidchi>.
 
 <#MeiccAidchi>
@@ -106,6 +117,7 @@
 <#Tigernach>
     a foaf:Person;
     irishRel:nomName "Tigernach";
+    agrelon:hasParent <#h-Uis>;
     rel:childOf <#h-Uis>;
     rel:ancestorOf <#Laidgneán>.
 
@@ -122,14 +134,15 @@
     a foaf:Person ;
     irishRel:nomName "Amalgaid" ;
     rdfs:comment "defecit"@lat ;
+    agrelon:hasParent <#MeiccAidchi>;
     rel:childOf <#MeiccAidchi>.
 
 <#Derer>
     a foaf:Person ;
     irishRel:nomName "Derer" ;
     foaf:gender "female" ;
+    agrelon:hasSpouse <#MeiccBrócc>;
     rel:spouseOf <#MeiccBrócc>;
+    agrelon:hasChild <#EchoSnac>, <#Óengus>, <#Milige>, <#Muiredach>, <#MacAidche>, <#Torlugaid>, <#Amalgaid>;
     rel:parentOf <#EchoSnac>, <#Óengus>, <#Milige>, <#Muiredach>, <#MacAidche>, <#Torlugaid>, <#Amalgaid>.
-
-
 }
