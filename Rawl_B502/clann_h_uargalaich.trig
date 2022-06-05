@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann H-Uargalaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#Finguine>
     a foaf:Person;
     irishRel:genName "Finguine";
+    agrelon:hasParent <#Congaile>;
     rel:childOf <#Congaile>.
 
 <#Congaile>
     a foaf:Person;
     irishRel:genName "Congaile";
     irishRel:nomName "Congail";
+    agrelon:hasParent <#Írgalaich>;
     rel:childOf <#Írgalaich>.
 
 <#Írgalaich>
     a foaf:Person;
     irishRel:genName "Írgalaich";
     irishRel:nomName "Írgalach";
+    agrelon:hasParent <#Lergaile>;
     rel:childOf <#Lergaile>.
 
 <#Lergaile>
     a foaf:Person;
     irishRel:genName "Lergaile";
     irishRel:nomName "Lergail";
+    agrelon:hasParent <#h-Uargalaich>;
     rel:childOf <#h-Uargalaich>.
 
 <#h-Uargalaich>
@@ -47,6 +50,7 @@
     irishRel:genName "h-Uargalaich";
     irishRel:nomName "h-Uargalach";
     owl:sameAs <http://example.com/Rawl_B502/úi_fáebairdatha.trig#h-Uargalach>;
+    agrelon:hasParent <#ConCáich>;
     rel:childOf <#ConCáich>.
 
 <#ConCáich>
