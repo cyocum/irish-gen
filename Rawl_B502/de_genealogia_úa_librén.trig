@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genealogia Úa Librén"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -23,6 +22,7 @@
 <#Flathróe>
     a foaf:Person;
     irishRel:nomName "Flathróe";
+    agrelon:hasParent <#Echach>;
     rel:childOf <#Echach>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Flaithnia>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:nomName "Eochu";
     irishRel:genName "Echach";
+    agrelon:hasParent <#Forannáin>;
     rel:childOf <#Forannáin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Echach-b23491e5>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:nomName "Forannán";
     irishRel:genName "Forannáin";
+    agrelon:hasParent <#Librén>;
     rel:childOf <#Librén>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Fhorannain>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:nomName "Librén";
     irishRel:genName "Librén";
+    agrelon:hasParent <#Furudráin>;
     rel:childOf <#Furudráin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Libriain>.
 
@@ -51,6 +54,7 @@
     a foaf:Person;
     irishRel:nomName "Furudrán";
     irishRel:genName "Furudráin";
+    agrelon:hasParent <#Beccáin>;
     rel:childOf <#Beccáin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Fhurudrain-e780e724>.
 
@@ -58,18 +62,21 @@
     a foaf:Person;
     irishRel:nomName "Beccán";
     irishRel:genName "Beccáin";
+    agrelon:hasParent <#Librén-18395c3e>;
     rel:childOf <#Librén-18395c3e>.
 
 <#Librén-18395c3e>
     a foaf:Person;
     irishRel:nomName "Librén";
     irishRel:genName "Librén";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
+    agrelon:hasParent <#Trena>;
     rel:childOf <#Trena>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Oengusa>.
 
@@ -77,6 +84,7 @@
     a foaf:Person;
     irishRel:nomName "Tren";
     irishRel:genName "Trena";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Trena-05061dd1>.
 
@@ -84,6 +92,7 @@
     a foaf:Person;
     irishRel:nomName "Fergus";
     irishRel:genName "Fergusa";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Fhergusa-59dddd77>.
 
@@ -91,6 +100,7 @@
     a foaf:Person;
     irishRel:nomName "Cormac";
     irishRel:genName "Cormaic";
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Cormaic-a7212584>.
 
