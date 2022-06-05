@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Fidchuire"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,36 +21,42 @@
 <#Fáelchad>
     a foaf:Person;
     irishRel:nomName "Fáelchad";
+    agrelon:hasParent <#Mugróin>;
     rel:childOf <#Mugróin>.
 
 <#Mugróin>
     a foaf:Person;
     irishRel:genName "Mugróin";
     irishRel:nomName "Mugróin";
+    agrelon:hasParent <#Crecháin>;
     rel:childOf <#Crecháin>.
 
 <#Crecháin>
     a foaf:Person;
     irishRel:genName "Crecháin";
     irishRel:nomName "Crechán";
+    agrelon:hasParent <#Aurthuile>;
     rel:childOf <#Aurthuile>.
 
 <#Aurthuile>
     a foaf:Person;
     irishRel:genName "Aurthuile";
     irishRel:nomName "Aurthuil";
+    agrelon:hasParent <#Árrachtaich>;
     rel:childOf <#Árrachtaich>.
 
 <#Árrachtaich>
     a foaf:Person;
     irishRel:genName "Árrachtaich";
     irishRel:nomName "Árrachtach";
+    agrelon:hasParent <#Fidchuire>;
     rel:childOf <#Fidchuire>.
 
 <#Fidchuire>
     a foaf:Person;
     irishRel:genName "Fidchuire";
     irishRel:nomName "Fidchuir";
+    agrelon:hasParent <#Cúáin>;
     rel:childOf <#Cúáin>.
 
 <#Cúáin>
