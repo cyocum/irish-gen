@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Óengusa Dano"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text017.html>;
@@ -23,24 +22,28 @@
 <#Óengus>
     a foaf:Person;
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Flaind>;
     rel:childOf <#Flaind>.
 
 <#Flaind>
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
+    agrelon:hasParent <#Nárgaile>;
     rel:childOf <#Nárgaile>.
 
 <#Nárgaile>
     a foaf:Person;
     irishRel:genName "Nárgaile";
     irishRel:nomName "Nárgail";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:genName "Eochu";
+    agrelon:hasParent <#Caissín>;
     rel:childOf <#Caissín>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_úa_caissíne_in_so.trig#Eochu>.
 
