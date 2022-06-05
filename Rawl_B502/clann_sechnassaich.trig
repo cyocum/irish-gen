@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Sechnassaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text007.html>;
@@ -22,6 +21,7 @@
 <#Cellach>
     a foaf:Person;
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Lígáin>;
     rel:childOf <#Lígáin>;
     owl:sameAs <http://example.com/LL/cland_shechnasaig.trig#Cellach>.
 
@@ -29,6 +29,7 @@
     a foaf:Person;
     irishRel:nomName "Lígán";
     irishRel:genName "Lígáin";
+    agrelon:hasParent <#Célechair>;
     rel:childOf <#Célechair>;
     owl:sameAs <http://example.com/LL/cland_shechnasaig.trig#Lígáin>.
 
@@ -36,6 +37,7 @@
     a foaf:Person;
     irishRel:nomName "Célechar";
     irishRel:genName "Célechair";
+    agrelon:hasParent <#Muiredaich>;
     rel:childOf <#Muiredaich>;
     owl:sameAs <http://example.com/LL/cland_shechnasaig.trig#Ceilechair>.
 
@@ -43,6 +45,7 @@
     a foaf:Person;
     irishRel:nomName "Muiredach";
     irishRel:genName "Muiredaich";
+    agrelon:hasParent <#Dúngusa>;
     rel:childOf <#Dúngusa>;
     owl:sameAs <http://example.com/LL/cland_shechnasaig.trig#Muridaig>.
 
@@ -50,6 +53,7 @@
     a foaf:Person;
     irishRel:nomName "Dúngus";
     irishRel:genName "Dúngusa";
+    agrelon:hasParent <#Sechnasaich>;
     rel:childOf <#Sechnasaich>;
     owl:sameAs <http://example.com/LL/cland_shechnasaig.trig#Dúngusa>.
 
@@ -57,6 +61,7 @@
     a foaf:Person;
     irishRel:nomName "Sechnasach";
     irishRel:genName "Sechnasaich";
+    agrelon:hasParent <#Faílbe>;
     rel:childOf <#Faílbe>;
     owl:sameAs <http://example.com/Rawl_B502/clann_taidc_inso.trig#Sechnasach>;
     owl:sameAs <http://example.com/LL/cland_shechnasaig.trig#Shechnasaig>.
