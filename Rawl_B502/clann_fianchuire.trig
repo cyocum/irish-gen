@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Fianchuire"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#Niall>
     a foaf:Person;
     irishRel:nomName "Niall";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 
 <#Fergusa>
     a foaf:Person;
     irishRel:genName "Fergusa";
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#Fidchuire>;
     rel:childOf <#Fidchuire>.
 
 <#Fidchuire>
     a foaf:Person;
     irishRel:genName "Fidchuire";
     irishRel:nomName "Fidchuir";
+    agrelon:hasParent <#ComraitteCoiclich>;
     rel:childOf <#ComraitteCoiclich>;
     owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Fianchuire>.
 
 <#ComraitteCoiclich>
     a foaf:Person;
     irishRel:genName "Comraitte Coiclich";
+    agrelon:hasParent <#Lachténe>;
     rel:childOf <#Lachténe>;
     owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Comraite>.
 
@@ -47,12 +50,14 @@
     a foaf:Person;
     irishRel:genName "Lachténe";
     irishRel:nomName "Lachtén";
+    agrelon:hasParent <#Trianduib>;
     rel:childOf <#Trianduib>.
 
 <#Trianduib>
     a foaf:Person;
     irishRel:genName "Trianduib";
     irishRel:nomName "Triandub";
+    agrelon:hasParent <#Thrichim>;
     rel:childOf <#Thrichim>.
 
 <#Thrichim>
