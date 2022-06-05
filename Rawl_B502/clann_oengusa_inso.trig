@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Oengusa Inso"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
@@ -23,30 +22,35 @@
 <#Móenach>
     a foaf:Person;
     irishRel:nomName "Móenach";
+    agrelon:hasParent <#Bresaláin>;
     rel:childOf <#Bresaláin>.
 
 <#Bresaláin>
     a foaf:Person;
     irishRel:nomName "Bresalán";
     irishRel:genName "Bresaláin";
+    agrelon:hasParent <#Rónáin>;
     rel:childOf <#Rónáin>.
 
 <#Rónáin>
     a foaf:Person;
     irishRel:nomName "Rónán";
     irishRel:genName "Rónáin";
+    agrelon:hasParent <#Fiachrach>;
     rel:childOf <#Fiachrach>.
 
 <#Fiachrach>
     a foaf:Person;
     irishRel:nomName "Fiachra";
     irishRel:genName "Fiachrach";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
+    agrelon:hasParent <#Crimthaind>;
     rel:childOf <#Crimthaind>;
     owl:sameAs <http://example.com/Rawl_B502/item_úi_théig.trig#Óengus>.
 
@@ -59,12 +63,14 @@
 <#Fiachra>
     a foaf:Person;
     irishRel:nomName "Fiachra";
+    agrelon:hasParent <#MáelDoraid>;
     rel:childOf <#MáelDoraid>.
 
 <#MáelDoraid>
     a foaf:Person;
     irishRel:nomName "Máel Doraid";
     irishRel:genName "Máel Doraid";
+    agrelon:hasParent <#Rónáin-fe64ef50>;
     rel:childOf <#Rónáin-fe64ef50>.
 
 <#Rónáin-fe64ef50>
@@ -76,30 +82,35 @@
 <#Fergus>
     a foaf:Person;
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#Artúir>;
     rel:childOf <#Artúir>.
 
 <#Artúir>
     a foaf:Person;
     irishRel:nomName "Artúr";
     irishRel:genName "Artúir";
+    agrelon:hasParent <#Coscraich>;
     rel:childOf <#Coscraich>.
 
 <#Coscraich>
     a foaf:Person;
     irishRel:nomName "Coscrach";
     irishRel:genName "Coscraich";
+    agrelon:hasParent <#Dúnchada>;
     rel:childOf <#Dúnchada>.
 
 <#Dúnchada>
     a foaf:Person;
     irishRel:nomName "Dúnchad";
     irishRel:genName "Dúnchada";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa-6e1db430>
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
+    agrelon:hasParent <#Móenaich>;
     rel:childOf <#Móenaich>.
 
 <#Móenaich>
