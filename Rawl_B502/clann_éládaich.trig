@@ -8,7 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
@@ -27,14 +27,16 @@
 <#Ilmaide>
     a foaf:Person;
     irishRel:nomName "Ilmaide";
+    agrelon:hasParent <#Móenaich>;
     rel:childOf <#Móenaich>;
     owl:sameAs <http://example.com/LL/cland_conglais.trig#Ilmaid>;
-    rel:descendantOfGroup <#ClannÉládaich>.
+    irishRel:descendantOfGroup <#ClannÉládaich>.
 
 <#Móenaich>
     a foaf:Person;
     irishRel:genName "Móenaich";
     irishRel:nomName "Móenach";
+    agrelon:hasParent <#Cináeda>;
     rel:childOf <#Cináeda>;
     owl:sameAs <http://example.com/LL/cland_conglais.trig#Móenaig>.
 
@@ -42,6 +44,7 @@
     a foaf:Person;
     irishRel:nomName "Cináed";
     irishRel:genName "Cináeda";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>;
     owl:sameAs <http://example.com/LL/cland_conglais.trig#Cinaeda>.
 
@@ -49,6 +52,7 @@
     a foaf:Person;
     irishRel:nomName "Cormac";
     irishRel:genName "Cormaic";
+    agrelon:hasParent <#Muiredaich>;
     rel:childOf <#Muiredaich>;
     owl:sameAs <http://example.com/LL/cland_conglais.trig#Cormaic>.
 
@@ -56,6 +60,7 @@
     a foaf:Person;
     irishRel:nomName "Muiredach";
     irishRel:genName "Muiredaich";
+    agrelon:hasParent <#DuibThonn>;
     rel:childOf <#DuibThonn>;
     owl:sameAs <http://example.com/LL/cland_conglais.trig#Muridaig>.
 
