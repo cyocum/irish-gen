@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/clann_sáráin_m_duibi.trig>.
+@base <http://example.com/Rawl_B502/clann_étnú_m_duibe.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Sáráin M Duibi"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,50 +21,59 @@
 <#Flann>
     a foaf:Person;
     irishRel:nomName "Flann";
+    agrelon:hasParent <#Flaithróe>;
     rel:childOf <#Flaithróe>.
 
 <#Flaithróe>
     a foaf:Person;
     irishRel:genName "Flaithróe";
+    agrelon:hasParent <#Cathróe>;
     rel:childOf <#Cathróe>.
 
 <#Cathróe>
     a foaf:Person;
     irishRel:genName "Cathróe";
+    agrelon:hasParent <#Flannáin>;
     rel:childOf <#Flannáin>.
 
 <#Flannáin>
     a foaf:Person;
     irishRel:genName "Flannáin";
     irishRel:nomName "Flannán";
+    agrelon:hasParent <#Dimrada>;
     rel:childOf <#Dimrada>.
 
 <#Dimrada>
     a foaf:Person;
     irishRel:genName "Dimrada";
     irishRel:nomName "Dimraid";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>.
 
 <#Cellaich>
     a foaf:Person;
     irishRel:genName "Cellaich";
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Cerbba>;
     rel:childOf <#Cerbba>.
 
 <#Cerbba>
     a foaf:Person;
     irishRel:genName "Cerbba";
     rdfs:comment "[gap: cut off by binder/extent: 3 letters]" ;
+    agrelon:hasParent <#Cairdidi>;
     rel:childOf <#Cairdidi>.
 
 <#Cairdidi>
     a foaf:Person;
     irishRel:genName "Cairdidi";
+    agrelon:hasParent <#Étnú>;
     rel:childOf <#Étnú>.
 
 <#Étnú>
     a foaf:Person;
     irishRel:genName "Étnú";
+    agrelon:hasParent <#Dubi>;
     rel:childOf <#Dubi>;
     owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#Étrú>.
 
@@ -77,23 +85,27 @@
 <#Dubainech>
     a foaf:Person;
     irishRel:nomName "Dubainech";
+    agrelon:hasParent <#Suibne>;
     rel:childOf <#Suibne>.
 
 <#Suibne>
     a foaf:Person;
     irishRel:genName "Suibne";
+    agrelon:hasParent <#Sóergaile>;
     rel:childOf <#Sóergaile>.
 
 <#Sóergaile>
     a foaf:Person;
     irishRel:genName "Sóergaile";
     irishRel:nomName "Sóergail";
+    agrelon:hasParent <#Clothachtaich>;
     rel:childOf <#Clothachtaich>.
 
 <#Clothachtaich>
     a foaf:Person;
     irishRel:genName "Clothachtaich";
     irishRel:nomName "Clothachtach";
+    agrelon:hasParent <#Cerbbáin>;
     rel:childOf <#Cerbbáin>.
 
 <#Cerbbáin>
