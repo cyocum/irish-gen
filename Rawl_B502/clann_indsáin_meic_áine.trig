@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Indsáin Meic Áine"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -23,30 +22,35 @@
     a foaf:Person;
     irishRel:nomName "Mo Chromma";
     rdfs:comment "dísertach"@sga, "hermit"@eng ;
+    agrelon:hasParent <#Rígáin>;
     rel:childOf <#Rígáin>.
 
 <#Rígáin>
     a foaf:Person;
     irishRel:genName "Rígáin";
     irishRel:nomName "Rígán";
+    agrelon:hasParent <#Insáin>;
     rel:childOf <#Insáin>.
 
 <#Insáin>
     a foaf:Person;
     irishRel:genName "Insáin";
     irishRel:nomName "Insán";
+    agrelon:hasParent <#Áine>;
     rel:childOf <#Áine>;
     owl:sameAs <http://example.com/Rawl_B502/úi_ábartaich.trig#Indsán>.
 
 <#Áine>
     a foaf:Person;
     irishRel:genName "Áine";
+    agrelon:hasParent <#Ambrit>;
     rel:childOf <#Ambrit>;
     owl:sameAs <http://example.com/Rawl_B502/úi_ábartaich.trig#Áine>.
 
 <#Ambrit>
     a foaf:Person;
     irishRel:genName "Ambrit";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>.
 
 <#Imchada>
@@ -58,27 +62,32 @@
 <#Cammíne>
     a foaf:Person;
     irishRel:nomName "Cammíne";
+    agrelon:hasParent <#Colmáin>;
     rel:childOf <#Colmáin>.
 
 <#Colmáin>
     a foaf:Person;
     irishRel:genName "Colmáin";
     irishRel:nomName "Colmáin";
+    agrelon:hasParent <#Comarbaich>;
     rel:childOf <#Comarbaich>.
 
 <#Comarbaich>
     a foaf:Person;
     irishRel:genName "Comarbaich";
     irishRel:nomName "Comarbaich";
+    agrelon:hasParent <#Insáin-db0ac4fb>;
     rel:childOf <#Insáin-db0ac4fb>.
 
 <#Insáin-db0ac4fb>
     owl:sameAs <#Insáin>;
+    agrelon:hasParent <#Áine-7341247f>;
     rel:childOf <#Áine-7341247f>.
 
 <#Áine-7341247f>
     a foaf:Person;
     irishRel:genName "Áine";
+    agrelon:hasParent <#Aimbrit-be2b4b97>;
     rel:childOf <#Aimbrit-be2b4b97>.
 
 <#Aimbrit-be2b4b97>
