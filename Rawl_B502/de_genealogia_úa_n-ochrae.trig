@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genealogia Úa n-Óchrae"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -23,6 +22,7 @@
 <#DubDáChrích>
     a foaf:Person;
     irishRel:nomName "Dub Dá Chrích";
+    agrelon:hasParent <#h-Írgusa>;
     rel:childOf <#h-Írgusa>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#DubhdaChrích>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:nomName "Írgus";
     irishRel:genName "h-Írgusa";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Írgusa>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:nomName "Eochaid";
     irishRel:genName "Echdach";
+    agrelon:hasParent <#Éogain>;
     rel:childOf <#Éogain>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Echdach>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:nomName "Éogan";
     irishRel:genName "Éogain";
+    agrelon:hasParent <#MáelAnfaid>;
     rel:childOf <#MáelAnfaid>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Eogain>.
 
@@ -51,6 +54,7 @@
     a foaf:Person;
     irishRel:nomName "Máel Anfaid";
     irishRel:genName "Máel Anfaid";
+    agrelon:hasParent <#Sáráin>;
     rel:childOf <#Sáráin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#MaelAnfaid>.
 
@@ -58,6 +62,7 @@
     a foaf:Person;
     irishRel:nomName "Sárán";
     irishRel:genName "Sáráin";
+    agrelon:hasParent <#Feradaig>;
     rel:childOf <#Feradaig>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Sharain>.
 
@@ -65,6 +70,7 @@
     a foaf:Person;
     irishRel:nomName "Feradach";
     irishRel:genName "Feradaig";
+    agrelon:hasParent <#SenaigBloit>;
     rel:childOf <#SenaigBloit>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Feradaig>.
 
@@ -72,6 +78,7 @@
     a foaf:Person;
     irishRel:nomName "Senach Blot";
     irishRel:genName "Senaig Bloit";
+    agrelon:hasParent <#Nannida>;
     rel:childOf <#Nannida>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Senaig>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Blait>.
@@ -80,6 +87,7 @@
     a foaf:Person;
     irishRel:nomName "Nannid";
     irishRel:genName "Nannida";
+    agrelon:hasParent <#FergusaÓenochrae>;
     rel:childOf <#FergusaÓenochrae>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Nannida>.
 
@@ -87,6 +95,7 @@
     a foaf:Person;
     irishRel:nomName "Fergus Óenochrae";
     irishRel:genName "Fergusa Óenochrae";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#OengusaOenochrae>.
 
@@ -94,6 +103,7 @@
     a foaf:Person;
     irishRel:nomName "Lugaid";
     irishRel:genName "Lugdach";
+    agrelon:hasParent <#Labrada>;
     rel:childOf <#Labrada>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.trig#Lugdach>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Lugdach>.
@@ -102,6 +112,7 @@
     a foaf:Person;
     irishRel:nomName "Labraid";
     irishRel:genName "Labrada";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Labrada>.
 
@@ -109,6 +120,7 @@
     a foaf:Person;
     irishRel:nomName "Imchad";
     irishRel:genName "Imchada";
+    agrelon:hasParent <#Corbmaic>;
     rel:childOf <#Corbmaic>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Imchada>.
 
@@ -116,6 +128,7 @@
     a foaf:Person;
     irishRel:nomName "Corbmac";
     irishRel:genName "Corbmaic";
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_n-ochrae.trig#Cormaic>.
 
