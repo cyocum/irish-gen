@@ -8,7 +8,7 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
@@ -22,41 +22,48 @@
 <#Nechtain>
     a foaf:Person;
     irishRel:nomName "Nechtain";
+    agrelon:hasParent <#Liatháin>;
     rel:childOf <#Liatháin>.
 
 <#Liatháin>
     a foaf:Person;
     irishRel:genName "Liatháin";
     irishRel:nomName "Liathán";
+    agrelon:hasParent <#Cobthaich>;
     rel:childOf <#Cobthaich>.
 
 <#Cobthaich>
     a foaf:Person;
     irishRel:genName "Cobthaich";
     irishRel:nomName "Cobthach";
+    agrelon:hasParent <#Fidchellaich>;
     rel:childOf <#Fidchellaich>.
 
 <#Fidchellaich>
     a foaf:Person;
     irishRel:genName "Fidchellaich";
     irishRel:nomName "Fidchellach";
+    agrelon:hasParent <#DuibThuilche>;
     rel:childOf <#DuibThuilche>.
 
 <#DuibThuilche>
     a foaf:Person;
     irishRel:genName "Duib Thuilche";
     irishRel:nomName "Dub Thuilche";
+    agrelon:hasParent <#Baáin>;
     rel:childOf <#Baáin>.
 
 <#Baáin>
     a foaf:Person;
     irishRel:genName "Baáin";
     irishRel:nomName "Baán";
+    agrelon:hasParent <#Saiglenn>;
     rel:childOf <#Saiglenn>.
 
 <#Saiglenn>
     a foaf:Person;
     irishRel:genName "Saiglenn";
+    agrelon:hasParent <#Firbb>;
     rel:childOf <#Firbb>;
     owl:sameAs <http://example.com/Rawl_B502/clann_forgill.trig#Saiglenn>.
 
