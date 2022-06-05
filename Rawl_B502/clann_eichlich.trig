@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Eichlich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,35 +21,41 @@
 <#Cond>
     a foaf:Person;
     irishRel:nomName "Cond";
+    agrelon:hasParent <#Condmaich>;
     rel:childOf <#Condmaich>.
 
 <#Condmaich>
     a foaf:Person;
     irishRel:genName "Condmaich";
     irishRel:nomName "Condmach";
+    agrelon:hasParent <#Comdelaich>;
     rel:childOf <#Comdelaich>.
 
 <#Comdelaich>
     a foaf:Person;
     irishRel:genName "Comdelaich";
     irishRel:nomName "Comdelach";
+    agrelon:hasParent <#Léitmich>;
     rel:childOf <#Léitmich>.
 
 <#Léitmich>
     a foaf:Person;
     irishRel:genName "Léitmich";
     irishRel:nomName "Léitmech";
+    agrelon:hasParent <#Nárgusa>;
     rel:childOf <#Nárgusa>.
 
 <#Nárgusa>
     a foaf:Person;
     irishRel:genName "Nárgusa";
     irishRel:nomName "Nárgus";
+    agrelon:hasParent <#Báeth>;
     rel:childOf <#Báeth>.
 
 <#Báeth>
     a foaf:Person;
     irishRel:genName "Báeth";
+    agrelon:hasParent <#MáeliTadraich>;
     rel:childOf <#MáeliTadraich>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.trig#Báeth>.
 
@@ -58,34 +63,40 @@
     a foaf:Person;
     irishRel:genName "Máeli Tadraich";
     irishRel:nomName "Máel Tadraich";
+    agrelon:hasParent <#Luigdech>;
     rel:childOf <#Luigdech>.
 
 <#Luigdech>
     a foaf:Person;
     irishRel:genName "Luigdech";
     irishRel:nomName "Luigaid";
+    agrelon:hasParent <#Luchta>;
     rel:childOf <#Luchta>.
 
 <#Luchta>
     a foaf:Person;
     irishRel:genName "Luchta";
     irishRel:nomName "Lucht";
+    agrelon:hasParent <#Aindlenn>;
     rel:childOf <#Aindlenn>.
 
 <#Aindlenn>
     a foaf:Person;
     irishRel:genName "Aindlenn";
+    agrelon:hasParent <#Luchtae>;
     rel:childOf <#Luchtae>.
 
 <#Luchtae>
     a foaf:Person;
     irishRel:genName "Luchtae";
     irishRel:nomName "Luchta";
+    agrelon:hasParent <#Cathráe>;
     rel:childOf <#Cathráe>.
 
 <#Cathráe>
     a foaf:Person;
     irishRel:genName "Cathráe";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>.
 
 <#Imchada>
