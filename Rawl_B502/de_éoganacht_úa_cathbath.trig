@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Éoganacht Úa Cathbath"@sga ;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,6 +22,7 @@
 <#Conaic>
     a foaf:Person;
     irishRel:nomName "Conaic";
+    agrelon:hasParent <#Lárchada>;
     rel:childOf <#Lárchada>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Conaic>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:genName "Lárchada";
     irishRel:nomName "Lárchad";
+    agrelon:hasParent <#DuibRubai>;
     rel:childOf <#DuibRubai>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Larcada>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:genName "Duib Rubai";
     irishRel:nomName "Dub Rubae";
+    agrelon:hasParent <#Fiangalaich>;
     rel:childOf <#Fiangalaich>;
     owl:sameAs <http://example.com/LL/n_echach.trig#DuibRubai>.
 
@@ -44,12 +46,14 @@
     a foaf:Person;
     irishRel:genName "Fiangalaich";
     irishRel:nomName "Fiangalach";
+    agrelon:hasParent <#Colmáin>;
     rel:childOf <#Colmáin>.
 
 <#Colmáin>
     a foaf:Person;
     irishRel:genName "Colmáin";
     irishRel:nomName "Colmán";
+    agrelon:hasParent <#Aurgnaid>;
     rel:childOf <#Aurgnaid>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Colmain>.
 
@@ -57,6 +61,7 @@
     a foaf:Person;
     irishRel:genName "Aurgnaid";
     irishRel:nomName "Aurgnad";
+    agrelon:hasParent <#Thuircc>;
     rel:childOf <#Thuircc>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Aurgnaith>.
 
@@ -64,6 +69,7 @@
     a foaf:Person;
     irishRel:genName "Thuircc";
     irishRel:nomName "Turcc";
+    agrelon:hasParent <#Ailella>;
     rel:childOf <#Ailella>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Tuirc>.
 
@@ -71,6 +77,7 @@
     a foaf:Person;
     irishRel:genName "Ailella";
     irishRel:nomName "Ailill";
+    agrelon:hasParent <#Cathbath>;
     rel:childOf <#Cathbath>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Ailella-6728738e>.
 
@@ -78,6 +85,7 @@
     a foaf:Person;
     irishRel:genName "Cathbath";
     irishRel:nomName "Cathbad";
+    agrelon:hasParent <#Luigdech>;
     rel:childOf <#Luigdech>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Cathbath>.
 
@@ -85,6 +93,7 @@
     a foaf:Person;
     irishRel:genName "Luigdech";
     irishRel:genName "Luigaid";
+    agrelon:hasParent <#AilellaFlainnBic>;
     rel:childOf <#AilellaFlainnBic>.
 
 <#AilellaFlainnBic>
@@ -98,6 +107,7 @@
     a foaf:Person;
     irishRel:genName "Ailella";
     irishRel:numChild 6;
+    agrelon:hasParent <#Cathbath>;
     rel:childOf <#Cathbath>;
     owl:sameAs <#Ailella>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Ailella-eb4f70e0>.
@@ -105,36 +115,42 @@
 <#Cormac>
     a foaf:Person;
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Ailella-1adc1331>;
     rel:childOf <#Ailella-1adc1331>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Cormac-34ab9027>.
 
 <#Torcc>
     a foaf:Person;
     irishRel:nomName "Torcc";
+    agrelon:hasParent <#Ailella-1adc1331>;
     rel:childOf <#Ailella-1adc1331>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Tor>.
 
 <#Trian>
     a foaf:Person;
     irishRel:nomName "Trian";
+    agrelon:hasParent <#Ailella-1adc1331>;
     rel:childOf <#Ailella-1adc1331>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Trien>.
 
 <#Énna>
     a foaf:Person;
     irishRel:nomName "Énna";
+    agrelon:hasParent <#Ailella-1adc1331>;
     rel:childOf <#Ailella-1adc1331>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Enna>.
 
 <#Ercc>
     a foaf:Person;
     irishRel:nomName "Ercc";
+    agrelon:hasParent <#Ailella-1adc1331>;
     rel:childOf <#Ailella-1adc1331>;
     owl:sameAs <http://example.com/LL/n_echach.trig#Erc>.
 
 <#MacArde>
     a foaf:Person;
     irishRel:nomName "Mac Arde";
+    agrelon:hasParent <#Ailella-1adc1331>;
     rel:childOf <#Ailella-1adc1331>;
     owl:sameAs <http://example.com/LL/n_echach.trig#MacArda>.
 }
