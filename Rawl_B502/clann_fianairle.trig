@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Fianairle"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,29 +21,34 @@
 <#Eochuid>
     a foaf:Person;
     irishRel:nomName "Eochuid";
+    agrelon:hasParent <#Ailella>;
     rel:childOf <#Ailella>.
 
 <#Ailella>
     a foaf:Person;
     irishRel:genName "Ailella";
     irishRel:nomName "Ailill";
+    agrelon:hasParent <#Gaiscedaich>;
     rel:childOf <#Gaiscedaich>.
 
 <#Gaiscedaich>
     a foaf:Person;
     irishRel:genName "Gaiscedaich";
     irishRel:nomName "Gaiscedach";
+    agrelon:hasParent <#Lemnata>;
     rel:childOf <#Lemnata>.
 
 <#Lemnata>
     a foaf:Person;
     irishRel:genName "Lemnata";
     irishRel:nomName "Lemnat";
+    agrelon:hasParent <#Fianairle>;
     rel:childOf <#Fianairle>.
 
 <#Fianairle>
     a foaf:Person;
     irishRel:genName "Fianairle";
+    agrelon:hasParent <#Comraite>;
     rel:childOf <#Comraite>;
     owl:sameAs <http://example.com/Rawl_B502/úi_thómmáin.trig#Fianairle>.
 
