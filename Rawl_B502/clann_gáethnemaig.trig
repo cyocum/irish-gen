@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Gáethnemaig"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,46 +21,54 @@
 <#Mugrón>
     a foaf:Person;
     irishRel:nomName "Mugrón";
+    agrelon:hasParent <#MáelÓenaich>;
     rel:childOf <#MáelÓenaich>.
 
 <#MáelÓenaich>
     a foaf:Person;
     irishRel:genName "Máel Óenaich";
     irishRel:nomName "Máel Óenach";
+    agrelon:hasParent <#MeicCellaich>;
     rel:childOf <#MeicCellaich>.
 
 <#MeicCellaich>
     a foaf:Person;
     irishRel:genName "Meic Cellaich";
     irishRel:nomName "Mac Cellach";
+    agrelon:hasParent <#Anmchellaich>;
     rel:childOf <#Anmchellaich>.
 
 <#Anmchellaich>
     a foaf:Person;
     irishRel:genName "Anmchellaich";
     irishRel:nomName "Anmchellach";
+    agrelon:hasParent <#Sescgamna>;
     rel:childOf <#Sescgamna>.
 
 <#Sescgamna>
     a foaf:Person;
     irishRel:genName "Sescgamna";
     irishRel:nomName "Sescgamn";
+    agrelon:hasParent <#Rónáin>;
     rel:childOf <#Rónáin>.
 
 <#Rónáin>
     a foaf:Person;
     irishRel:genName "Rónáin";
     irishRel:nomName "Rónán";
+    agrelon:hasParent <#Rithi>;
     rel:childOf <#Rithi>.
 
 <#Rithi>
     a foaf:Person;
     irishRel:genName "Rithi";
+    agrelon:hasParent <#Rethach>;
     rel:childOf <#Rethach>.
 
 <#Rethach>
     a foaf:Person;
     irishRel:genName "Rethach";
+    agrelon:hasParent <#Ferrbba>;
     rel:childOf <#Ferrbba>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.trig#Rethech>.
 
