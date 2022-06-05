@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Flaind"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,30 +21,35 @@
 <#Nian>
     a foaf:Person;
     irishRel:nomName "Nian";
+    agrelon:hasParent <#Dathgaile>;
     rel:childOf <#Dathgaile>.
 
 <#Dathgaile>
     a foaf:Person;
     irishRel:genName "Dathgaile";
     irishRel:nomName "Dathgail";
+    agrelon:hasParent <#Cernaich>;
     rel:childOf <#Cernaich>.
 
 <#Cernaich>
     a foaf:Person;
     irishRel:genName "Cernaich";
     irishRel:nomName "Cernach";
+    agrelon:hasParent <#Élóthaich>;
     rel:childOf <#Élóthaich>.
 
 <#Élóthaich>
     a foaf:Person;
     irishRel:genName "Élóthaich";
     irishRel:nomName "Élóthach";
+    agrelon:hasParent <#Flaind>;
     rel:childOf <#Flaind>.
 
 <#Flaind>
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
+    agrelon:hasParent <#Báeth>;
     rel:childOf <#Báeth>;
     owl:sameAs <http://example.com/Rawl_B502/úib_luchta.trig#Flann>.
 
