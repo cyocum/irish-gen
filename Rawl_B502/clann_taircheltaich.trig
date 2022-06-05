@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Taircheltaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,18 +21,21 @@
 <#MáelTuile>
     a foaf:Person;
     irishRel:nomName "Máel Tuile";
+    agrelon:hasParent <#Flaithgile>;
     rel:childOf <#Flaithgile>.
 
 <#Flaithgile>
     a foaf:Person;
     irishRel:genName "Flaithgile";
     irishRel:nomName "Flaithgil";
+    agrelon:hasParent <#Sechnasaich>;
     rel:childOf <#Sechnasaich>.
 
 <#Sechnasaich>
     a foaf:Person;
     irishRel:genName "Sechnasaich";
     irishRel:nomName "Sechnasach";    
+    agrelon:hasParent <#Tairceltaich>;
     rel:childOf <#Tairceltaich>.
 
 <#Tairceltaich>
@@ -41,6 +43,7 @@
     irishRel:genName "Tairceltaich";
     irishRel:nomName "Tairceltach";
     owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.trig#Tairchellach>;
+    agrelon:hasParent <#Dúngusa>;
     rel:childOf <#Dúngusa>.
 
 <#Dúngusa>
@@ -48,18 +51,21 @@
     irishRel:genName "Dúngusa";
     irishRel:nomName "Dúngus";
     owl:sameAs <http://example.com/Rawl_B502/úi_dúngusa.trig#Flanngusa>;
+    agrelon:hasParent <#Fáeláin>;
     rel:childOf <#Fáeláin>.
 
 <#Fáeláin>
     a foaf:Person;
     irishRel:genName "Fáeláin";
     irishRel:nomName "Fáelán";
+    agrelon:hasParent <#Luigdech>;
     rel:childOf <#Luigdech>.
 
 <#Luigdech>
     a foaf:Person;
     irishRel:genName "Luigdech";
     irishRel:nomName "Luigaid";
+    agrelon:hasParent <#Fiachnae>;
     rel:childOf <#Fiachnae>.
 
 <#Fiachnae>
