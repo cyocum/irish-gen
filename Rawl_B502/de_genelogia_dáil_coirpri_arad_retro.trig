@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Dáil Coirpri Arad; Retro Haec Genealogia Recitur"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -24,6 +23,7 @@
     a foaf:Person;
     irishRel:nomName "Flaithbertach";
     irishRel:genName "Flaithbertach";
+    agrelon:hasParent <#Crunnmaíl>;
     rel:childOf <#Crunnmaíl>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Flaithbertach>.
 
@@ -31,6 +31,7 @@
     a foaf:Person;
     irishRel:nomName "Crunnmáel";
     irishRel:genName "Crunnmaíl";
+    agrelon:hasParent <#Commáin>;
     rel:childOf <#Commáin>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Crunmael>.
 
@@ -38,6 +39,7 @@
     a foaf:Person;
     irishRel:nomName "Commán";
     irishRel:genName "Commáin";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Commáin>.
 
@@ -45,6 +47,7 @@
     a foaf:Person;
     irishRel:nomName "Fínán";
     irishRel:genName "Fínáin";
+    agrelon:hasParent <#Fhaigir>;
     rel:childOf <#Fhaigir>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fhinain>.
 
@@ -52,6 +55,7 @@
     a foaf:Person;
     irishRel:nomName "Faiger";
     irishRel:genName "Fhaigir";
+    agrelon:hasParent <#Eirníne>;
     rel:childOf <#Eirníne>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Faigfhir>.
 
@@ -59,6 +63,7 @@
     a foaf:Person;
     irishRel:nomName "Eirníne";
     irishRel:genName "Eirníne";
+    agrelon:hasParent <#Féicc>;
     rel:childOf <#Féicc>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ernine>.
 
@@ -66,6 +71,7 @@
     a foaf:Person;
     irishRel:nomName "Fiacc";
     irishRel:genName "Féicc";
+    agrelon:hasParent <#MeicIeir>;
     rel:childOf <#MeicIeir>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Feic>.
 
@@ -73,6 +79,7 @@
     a foaf:Person;
     irishRel:nomName "Mac Iar";
     irishRel:genName "Meic Ieir";
+    agrelon:hasParent <#Gossa>;
     rel:childOf <#Gossa>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ieir>.
 
@@ -80,6 +87,7 @@
     a foaf:Person;
     irishRel:nomName "Goss";
     irishRel:genName "Gossa";
+    agrelon:hasParent <#Fabrich>;
     rel:childOf <#Fabrich>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Gussa>.
 
@@ -87,6 +95,7 @@
     a foaf:Person;
     irishRel:nomName "Fabrech";
     irishRel:genName "Fabrich";
+    agrelon:hasParent <#Máil>;
     rel:childOf <#Máil>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fobrich>.
 
@@ -94,6 +103,7 @@
     a foaf:Person;
     irishRel:nomName "Mál";
     irishRel:genName "Máil";
+    agrelon:hasParent <#Ainmerech>;
     rel:childOf <#Ainmerech>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Maeil>.
 
@@ -101,6 +111,7 @@
     a foaf:Person;
     irishRel:nomName "Ainmere";
     irishRel:genName "Ainmerech";
+    agrelon:hasParent <#FirRoith>;
     rel:childOf <#FirRoith>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Ainmerech>.
 
@@ -108,6 +119,7 @@
     a foaf:Person;
     irishRel:nomName "Fer Roth";
     irishRel:genName "Fir Roith";
+    agrelon:hasParent <#Muine>;
     rel:childOf <#Muine>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#FirRoith>.
 
@@ -115,6 +127,7 @@
     a foaf:Person;
     irishRel:nomName "Muine";
     irishRel:genName "Muine";
+    agrelon:hasParent <#FirNeud>;
     rel:childOf <#FirNeud>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Muine>.
 
@@ -122,6 +135,7 @@
     a foaf:Person;
     irishRel:nomName "Fer Neud";
     irishRel:genName "Fir Neud";
+    agrelon:hasParent <#FirLugdach>;
     rel:childOf <#FirLugdach>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#FirNued>.
 
@@ -129,6 +143,7 @@
     a foaf:Person;
     irishRel:nomName "Fer Lugdach";
     irishRel:genName "Fir Lugdach";
+    agrelon:hasParent <#Buain>;
     rel:childOf <#Buain>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#FirLugdach>.
 
@@ -136,6 +151,7 @@
     a foaf:Person;
     irishRel:nomName "Buan";
     irishRel:genName "Buain";
+    agrelon:hasParent <#Argatibair>;
     rel:childOf <#Argatibair>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Buain>.
 
@@ -143,6 +159,7 @@
     a foaf:Person;
     irishRel:nomName "Argatibar";
     irishRel:genName "Argatibair";
+    agrelon:hasParent <#CairpreCluichechair>;
     rel:childOf <#CairpreCluichechair>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Argatibair>.
 
@@ -150,6 +167,7 @@
     a foaf:Person;
     irishRel:nomName "Cairpre Cluichechair";
     irishRel:genName "Cairpre Cluichechair";
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#CairpreCluichechair>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#CorpriCluchechair>.
@@ -158,6 +176,7 @@
     a foaf:Person;
     irishRel:nomName "Cú Corb";
     irishRel:genName "Con Corb";
+    agrelon:hasVitalLethalContact <#Arttn-Óenfer>;
     rel:antagonistOf <#Arttn-Óenfer>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#ConCorb>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#ConCorbb>.
@@ -172,6 +191,7 @@
     a foaf:Person;
     irishRel:nomName "Laider";
     foaf:title "ara"@sga, "charioteer"@eng;
+    agrelon:hasEmployer <#ConCorb>;
     rel:employedBy <#ConCorb>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#Laider>.
 
@@ -187,28 +207,32 @@
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#ÓengusaMúisc>;
     foaf:knows [
       a foaf:Person;
-      rel:childOf <#Ethni>;
+      agrelon:hasParent <#Ethni>;
+    rel:childOf <#Ethni>;
       owl:sameAs <#CairpreCluichechair>
     ];
     foaf:knows [
       a foaf:Person;
-      rel:childOf <#Ethni>;
+      agrelon:hasParent <#Ethni>;
+    rel:childOf <#Ethni>;
       owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#Tecca>;
     ];
     foaf:knows [
       a foaf:Person;
-      rel:childOf <#Ethni>;
+      agrelon:hasParent <#Ethni>;
+    rel:childOf <#Ethni>;
       owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#Énna>
     ];
     foaf:knows [
       a foaf:Person;
-      rel:childOf <#Ethni>;
+      agrelon:hasParent <#Ethni>;
+    rel:childOf <#Ethni>;
       owl:sameAs <http://example.com/Rawl_B502/de_genelogia_dáil_coirpri_arad.trig#Dila>
     ];
     irishTitles:succeededBy <#CairpreCluichechair>;
     rdfs:comment "Do-bert iarum Óengus ferann do mc a ingine & do-breth leth do Chairpriu a óenur fri cethri macco ind arad & do-bert flaithius dó foraib sicut hodie apparet.".
 
 << <#Oengus>
-        rdfs:comment "rel:gaveLandTo (x4)?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "rel:gaveLandTo (x4)?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 }
