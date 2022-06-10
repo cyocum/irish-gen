@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Dáil Coirpri Arad"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -23,7 +22,9 @@
 <#CairpreCluichechair>
     a foaf:Person;
     irishRel:nomName "Cairpre Cluichechair";
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
+    agrelon:hasParent <#EithneSithbaicce>;
     rel:childOf <#EithneSithbaicce>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#CoirpreCruaid>;
     rdfs:comment "is uad atá Dál Carpri Arad ut diximus";
@@ -40,6 +41,7 @@
     foaf:gender "female";
     irishRel:genName "Eithne Sithbaicce";
     irishRel:nomName "Eithne Sithbacc";
+    agrelon:hasParent <#ÓengusaMúisc>;
     rel:childOf <#ÓengusaMúisc>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#Ethne>.
 
@@ -57,7 +59,9 @@
     a foaf:Person;
     irishRel:nomName "Eithne";
     owl:sameAs <#EithneSithbaicce>;
+    agrelon:hasSpouse <#ChoinCorp>;
     rel:spouseOf <#ChoinCorp>;
+    agrelon:hasSpouse <#Laider>;
     rel:spouseOf <#Laider>;
     irishRel:numChild 2.
 
@@ -70,19 +74,23 @@
 <#MesinCorb>
     a foaf:Person;
     irishRel:nomName "Mesin Corb";
+    agrelon:hasParent <#ChoinCorp>;
     rel:childOf <#ChoinCorp>;
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>;
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#MessinCorb>.
 
 <#CoirpreDíchmaircc>
     a foaf:Person;
     irishRel:nomName "Coirpre Díchmaircc";
+    agrelon:hasParent <#ChoinCorp>;
     rel:childOf <#ChoinCorp>;
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>.
 
-        << <#CoirpreDíchmaircc>
-        rdfs:comment "owl:sameAs <#CairpreCluichechair> or <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#CoirpreCruaid>?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    << <#CoirpreDíchmaircc>
+    rdfs:comment "owl:sameAs <#CairpreCluichechair> or <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#CoirpreCruaid>?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Laider>
     a foaf:Person;
@@ -91,6 +99,7 @@
     rdfs:comment "do Ultaib";
     rdfs:comment "a quo Dál n-Araidi";
     irishRel:ancestorOfGroup <#Dáln-Araidi>;
+    agrelon:hasEmployer <#ConCorb-e24586c0>;
     rel:employedBy <#ConCorb-e24586c0>;
     irishRel:numChild 4;
     owl:sameAs <http://example.com/LL/lagin.trig#Laider>;
@@ -106,7 +115,9 @@
 <#Tecca>
     a foaf:Person;
     irishRel:nomName "Tecca";
+    agrelon:hasParent <#Laider>;
     rel:childOf <#Laider>;
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Thoeca>;
     owl:sameAs <http://example.com/LL/lagin.trig#Toeccae>;
@@ -115,13 +126,16 @@
 <#AilbeImblecha>
     a foaf:Person;
     irishRel:nomName "Ailbe Imblecha";
+    agrelon:hasAncestor <#Tecca>;
     rel:descendantOf <#Tecca>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q4531465>.
 
 <#Énna>
     a foaf:Person;
     irishRel:nomName "Énna";
+    agrelon:hasParent <#Laider>;
     rel:childOf <#Laider>;
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Noene>;
     owl:sameAs <http://example.com/LL/lagin.trig#Ennae>;
@@ -130,7 +144,9 @@
 <#Dila>
     a foaf:Person;
     irishRel:nomName "Dila";
+    agrelon:hasParent <#Laider>;
     rel:childOf <#Laider>;
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Dail>;
     owl:sameAs <http://example.com/LL/lagin.trig#Dila>;
@@ -139,7 +155,9 @@
 <#Artta>
     a foaf:Person;
     irishRel:nomName "Artta";
+    agrelon:hasParent <#Laider>;
     rel:childOf <#Laider>;
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Arta>;
     owl:sameAs <http://example.com/LL/lagin.trig#Arta>;
@@ -148,14 +166,17 @@
 <#Cairpre>
     a foaf:Person;
     irishRel:nomName "Cairpre";
-    rel:childOf [
-      a foaf:Person;
-      rel:childOf <#CairpreMúsc>;
-      owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#Ethne>
-    ];
+    agrelon:hasParent _:missing-e40d70a3;
+    rel:childOf _:missing-e40d70a3;
     foaf:title "fili"@sga, "poet"@eng;
     owl:sameAs <#CairpreCluichechair>.
 
+_:missing-e40d70a3
+      a foaf:Person;
+      agrelon:hasParent <#CairpreMúsc>;
+      rel:childOf <#CairpreMúsc>;
+      owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#Ethne>.
+        
 <#CairpreMúsc>
     a foaf:Person;
     irishRel:accName "Cairpre Músc";
@@ -171,6 +192,6 @@
     rdfs:comment "Ní tárlaic iarum Óengus aniar acht do-bert ferann dó lais tiar .i. Tír n-Duais ar ba fili in Cairpre.".
 
 << <#Óengus>
-        rdfs:comment "rel:givesLandTo" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "rel:givesLandTo" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 }
