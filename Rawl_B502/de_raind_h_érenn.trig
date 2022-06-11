@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Raind H-Érenn Inso"@sga ;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -33,6 +32,7 @@
 <#MugNuadat>
     a foaf:Person;
     irishRel:nomName "Mug Nuadat";
+    agrelon:hasParent <#Dergthene>;
     rel:childOf <#Dergthene>;
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#MogaNeit>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_síl_ébir.trig#MugNuadat>.
@@ -46,12 +46,14 @@
     a foaf:Person;
     irishRel:nomName "Ailill Aulum";
     irishRel:numChild 19 ;
+    agrelon:hasParent <#ÉoganMár>;
     rel:childOf <#ÉoganMár>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#AilellaUluimm>.
 
 <#LugaidLága>
     a foaf:Person;
     irishRel:nomName "Lugaid Lága";
+    agrelon:hasParent <#ÉoganMár>;
     rel:childOf <#ÉoganMár>.
 
 <#CormacCass>
@@ -62,6 +64,7 @@
 <#FiachuMullethan>
     a foaf:Person;
     irishRel:nomName "Fiachu Mullethan";
+    agrelon:hasParent <#Éogain>;
     rel:childOf <#Éogain>.
 
 <#Éogain>
@@ -71,12 +74,14 @@
 <#LugaidMend>
     a foaf:Person;
     irishRel:nomName "Lugaid Mend";
+    agrelon:hasParent <#ÓengusaTírich>;
     rel:childOf <#ÓengusaTírich>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#LugdachMind>.
 
 <#ÓengusaTírich>
     a foaf:Person;
     irishRel:genName "Óengusa Tírich";
+    agrelon:hasParent <#FirChuirp>;
     rel:childOf <#FirChuirp>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#OengusaTirig>.
 
@@ -84,6 +89,7 @@
     a foaf:Person;
     irishRel:genName "Fir Chuirp" ;
     irishRel:nomName "Fer Cuirp" ;
+    agrelon:hasParent <#MogaCoirp>;
     rel:childOf <#MogaCoirp>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#FhirChoirp>.
 
@@ -91,6 +97,7 @@
     a foaf:Person;
     irishRel:genName "Moga Coirp";
     irishRel:nomName "Mog Cuirp";
+    agrelon:hasParent <#CormaicCaiss>;
     rel:childOf <#CormaicCaiss>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#MogaCoirp>.
 
@@ -102,6 +109,7 @@
 <#Óengus>
     a foaf:Person;
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#NadFraích>;
     rel:childOf <#NadFraích>.
 
 <#NadFraích>
@@ -109,18 +117,19 @@
     irishRel:genName "Nad Fraích".
 
 << <#NadFraích>
-        rdfs:comment "there are a bunch of Nad Fraích in LL for Munster. I am not sure which are meant here" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+    rdfs:comment "there are a bunch of Nad Fraích in LL for Munster. I am not sure which are meant here" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 <#DímmaDub>
     a foaf:Person;
     irishRel:nomName "Dímma Dub";
+    agrelon:hasParent <#Rónáin>;
     rel:childOf <#Rónáin>;
     foaf:title "rii Dáil Chais"@sga .
 
 << <#DímmaDub>
-        rdfs:comment "same as http://example.com/LL/eoganachta_casil.ttlDimmaDub ?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
+    rdfs:comment "same as http://example.com/LL/eoganachta_casil.ttlDimmaDub ?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0002-7241-3264> .
 
 <#Rónáin>
     a irishTitle:Rí;
@@ -131,17 +140,20 @@
     a irishTitle:Rí ;
     irishRel:nomName "Faílbe Fland" ;
     foaf:title "rígi Caissil"@sga ;
+    agrelon:hasVitalLethalContact <#DímmaDub>;
     rel:antagonistOf <#DímmaDub>.
 
 <#Eochaid>
     a foaf:Person;
     irishRel:nomName "Eochaid";
+    agrelon:hasParent <#Cais>;
     rel:childOf <#Cais>.
 
 <#Cais>
     a foaf:Person;
     irishRel:genName "Cais";
     irishRel:nomName "Cais";
+    agrelon:hasParent <#Cuircc>;
     rel:childOf <#Cuircc>.
 
 <#Cuircc>
@@ -152,6 +164,7 @@
 <#ConallEchluath>
     a foaf:Person ;
     irishRel:nomName "Conall Echluath" ;
+    agrelon:hasVitalLethalContact <#Eochaid>;
     rel:antagonistOf <#Eochaid>;
     owl:sameAs <http://example.com/LL/rig_tuadmuman.trig#ConaillEchluaith>.
 
@@ -162,6 +175,7 @@
 <#Corcc>
     a foaf:Person;
     irishRel:nomName "Corcc";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
     foaf:knows <#CarpreCruithnechán>.
 
@@ -179,6 +193,7 @@
     foaf:gender "female" ;
     irishRel:nomName "Cóemfhind" ;
     irishRel:ancestorOfGroup <#Tornai>;
+    agrelon:hasParent <#CarpreCruithnechán>;
     rel:childOf <#CarpreCruithnechán>.
 
 <#Tornai>
