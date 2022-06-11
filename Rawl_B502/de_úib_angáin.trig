@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Úib Angáin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -28,36 +27,43 @@
 <#Duib>
     a foaf:Person ;
     irishRel:nomName "Duib" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
     
 <#h-Uaire>
     a foaf:Person ;
     irishRel:nomName "h-Uaire" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
 
 <#Daigre>
     a foaf:Person ;
     irishRel:nomName "Daigre" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
 
 <#Finndchain>
     a foaf:Person ;
     irishRel:nomName "Finndchain" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
     
 <#Cairiub>
     a foaf:Person ;
     irishRel:nomName "Cairiub" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
 
 <#Bruiniuch>
     a foaf:Person ;
     irishRel:nomName "Bruiniuch" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
 
 <#Linge>
     a foaf:Person ;
     irishRel:nomName "Linge" ;
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>.
 
 <#DubDíbech>
@@ -100,27 +106,32 @@
 <#Collae>
     a foaf:Person ;
     irishRel:nomName "Collae" ;
+    agrelon:hasParent <#Duibe>;
     rel:childOf <#Duibe>.
 
 <#Sárán>
     a foaf:Person ;
     irishRel:nomName "Sárán" ;
+    agrelon:hasParent <#Duibe>;
     rel:childOf <#Duibe>.
 
 <#Étrú>
     a foaf:Person ;
     irishRel:nomName "Étrú" ;
+    agrelon:hasParent <#Duibe>;
     rel:childOf <#Duibe>.
 
 <#DuibDáBarc>
     a foaf:Person ;
     irishRel:genName "Duib Dá Barc" ;
     irishRel:nomName "Dub Dá Barc" ;
+    agrelon:hasAncestor <#Sárán>;
     rel:descendantOf <#Sárán>.
 
 <#MacLéigind>
     a foaf:Person ;
     irishRel:nomName "Mac Léigind" ;
+    agrelon:hasParent <#DuibDáBarc>;
     rel:childOf <#DuibDáBarc>.
 
 }
