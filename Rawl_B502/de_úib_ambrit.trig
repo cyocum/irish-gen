@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Úib Ambrit"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,6 +21,7 @@
 <#Ambrit>
     a foaf:Person;
     irishRel:genName "Ambrit";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/Rawl_B502/clann_indsáin_meic_áine.trig#Ambrit>.
 
@@ -33,11 +33,13 @@
 <#Cóenniu>
     a foaf:Person ;
     irishRel:nomName "Cóenniu" ;
+    agrelon:hasParent <#Ambrit>;
     rel:childOf <#Ambrit>.
 
 <#Feirbb>
     a foaf:Person ;
     irishRel:nomName "Feirbb" ;
+    agrelon:hasParent <#Ambrit>;
     rel:childOf <#Ambrit>.
     
 }
