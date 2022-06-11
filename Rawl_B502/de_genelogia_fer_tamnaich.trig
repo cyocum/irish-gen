@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Fer Tamnaich";
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,47 +22,55 @@
 <#Airechtach>
     a foaf:Person;
     irishRel:nomName "Airechtach";
+    agrelon:hasParent <#Cuanach>;
     rel:childOf <#Cuanach>.
 
 <#Cuanach>
     a foaf:Person;
     irishRel:genName "Cuanach";
     irishRel:nomName "Cuanaid";
+    agrelon:hasParent <#MáeliOchtraich>;
     rel:childOf <#MáeliOchtraich>.
 
 <#MáeliOchtraich>
     a foaf:Person;
     irishRel:genName "Máeli Ochtraich";
     irishRel:nomName "Máel Ochtrach";
+    agrelon:hasParent <#Lonáin>;
     rel:childOf <#Lonáin>.
 
 <#Lonáin>
     a foaf:Person;
     irishRel:genName "Lonáin";
     irishRel:nomName "Lonán";
+    agrelon:hasParent <#FeideilmidDaimDásachtaich>;
     rel:childOf <#FeideilmidDaimDásachtaich>.
 
 <#FeideilmidDaimDásachtaich>
     a foaf:Person;
     irishRel:genName "Feideilmid Daim Dásachtaich";
     irishRel:nomName "Feideilmid Dam Dásachtach";
+    agrelon:hasParent <#Rossa>;
     rel:childOf <#Rossa>.
 
 <#Rossa>
     a foaf:Person;
     irishRel:genName "Rossa";
     irishRel:nomName "Ross";
+    agrelon:hasParent <#Echen>;
     rel:childOf <#Echen>.
 
 <#Echen>
     a foaf:Person;
     irishRel:genName "Echen";
+    agrelon:hasParent <#Rossa-caed346b>;
     rel:childOf <#Rossa-caed346b>.
 
 <#Rossa-caed346b>
     a foaf:Person;
     irishRel:genName "Rossa";
     irishRel:nomName "Ross";
+    agrelon:hasParent <#Brioin>;
     rel:childOf <#Brioin>.
 
 <#Brioin>
