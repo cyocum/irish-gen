@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/de_genelogia_fer_tamnaig_item_uí_lappae.trig>.
+@base <http://example.com/Rawl_B502/de_genelogia_fer_tamnaig_item_úi_lappae.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Fer Tamnaig. Item Úi Lappae.";
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,24 +22,28 @@
 <#FlannRessach>
     a foaf:Person;
     irishRel:nomName "Flann Ressach";
+    agrelon:hasParent <#Cummascaich>;
     rel:childOf <#Cummascaich>.
 
 <#Cummascaich>
     a foaf:Person;
     irishRel:genName "Cummascaich";
     irishRel:nomName "Cummascach";
+    agrelon:hasParent <#Eircc>;
     rel:childOf <#Eircc>.
 
 <#Eircc>
     a foaf:Person;
     irishRel:genName "Eircc";
     irishRel:nomName "Ercc";
+    agrelon:hasParent <#Saithgil>;
     rel:childOf <#Saithgil>.
 
 <#Saithgil>
     a foaf:Person;
     irishRel:genName "Saithgil";
     irishRel:nomName "Saithgel";
+    agrelon:hasParent <#Lappae>;
     rel:childOf <#Lappae>.
 
 <#Lappae>
