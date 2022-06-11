@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Úa Cairpri";
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,6 +22,7 @@
 <#CennFáelad>
     a foaf:Person;
     irishRel:nomName "Cenn Fáelad";
+    agrelon:hasParent <#DuibDáBairenn>;
     rel:childOf <#DuibDáBairenn>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#CindFáelad>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:genName "Duib Dá Bairenn";
     irishRel:nomName "Dub Dá Bairenn";
+    agrelon:hasParent <#ÁedaRóin>;
     rel:childOf <#ÁedaRóin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#DuibDáBairenn>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:genName "Áeda Róin";
     irishRel:nomName "Áed Róin";
+    agrelon:hasParent <#Éoganáin>;
     rel:childOf <#Éoganáin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#ÁedaRóin>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:genName "Éoganáin";
     irishRel:nomName "Éoganán";
+    agrelon:hasParent <#Crundmaíl>;
     rel:childOf <#Crundmaíl>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Éoganáin>.
 
@@ -51,6 +54,7 @@
     a foaf:Person;
     irishRel:genName "Crundmaíl";
     irishRel:nomName "Crundmael";
+    agrelon:hasParent <#Áeda>;
     rel:childOf <#Áeda>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Crunnmaíl>.
 
@@ -58,6 +62,7 @@
     a foaf:Person;
     irishRel:genName "Áeda";
     irishRel:nomName "Áed";
+    agrelon:hasParent <#ÓengusaLappae>;
     rel:childOf <#ÓengusaLappae>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Áedo>.
 
@@ -65,6 +70,7 @@
     a foaf:Person;
     irishRel:genName "Óengusa Lappae";
     irishRel:nomName "Óengus Lappae";
+    agrelon:hasParent <#AilellaCennfhota>;
     rel:childOf <#AilellaCennfhota>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Óengusa>.
 
@@ -72,6 +78,7 @@
     a foaf:Person;
     irishRel:genName "Ailella Cennfhota";
     irishRel:nomName "Ailill Cennfhota";
+    agrelon:hasParent <#Eircc>;
     rel:childOf <#Eircc>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#AilellaCennfota>.
 
@@ -79,6 +86,7 @@
     a foaf:Person;
     irishRel:genName "Eircc";
     irishRel:nomName "Ercc";
+    agrelon:hasParent <#Cairpri>;
     rel:childOf <#Cairpri>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#h-Eircc>.
 
@@ -86,6 +94,7 @@
     a foaf:Person;
     irishRel:genName "Cairpri";
     irishRel:nomName "Carpre";
+    agrelon:hasParent <#Brioin>;
     rel:childOf <#Brioin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgeinti.trig#Cairpri>.
 
@@ -93,6 +102,7 @@
     a foaf:Person;
     irishRel:genName "Brioin";
     irishRel:nomName "Brion";
+    agrelon:hasParent <#FiachachFidgeinte>;
     rel:childOf <#FiachachFidgeinte>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgente.trig#Brioin>.
 
@@ -109,6 +119,7 @@
 <#Ercc>
     a foaf:Person;
     irishRel:nomName "Ercc";
+    agrelon:hasParent <#Cairpri-b2588c6d>;
     rel:childOf <#Cairpri-b2588c6d>;
     owl:sameAs <#Eircc>.
 
@@ -123,18 +134,22 @@
 <#Echen>
     a foaf:Person;
     irishRel:nomName "Echen";
+    agrelon:hasParent <#Cairpri-b2588c6d>;
     rel:childOf <#Cairpri-b2588c6d>;
     irishRel:ancestorOfGroup <#FirThamnaig>, <#MeicBrócáinÚiGairbáin>.
 
 <#Trian>
     a foaf:Person;
     irishRel:nomName "Trian";
+    agrelon:hasParent <#Cairpri-b2588c6d>;
     rel:childOf <#Cairpri-b2588c6d>;
+    agrelon:hasOffspring <#ÁedaGairb>;
     rel:ancestorOf <#ÁedaGairb>.
 
 <#CúCháech>
     a foaf:Person;
     irishRel:nomName "Cú Cháech";
+    agrelon:hasParent <#ÁedaGairb>;
     rel:childOf <#ÁedaGairb>.
 
 <#ÁedaGairb>
@@ -145,6 +160,7 @@
 <#Sétna>
     a foaf:Person;
     irishRel:nomName "Sétna";
+    agrelon:hasParent <#Cairpri-b2588c6d>;
     rel:childOf <#Cairpri-b2588c6d>;
     irishRel:ancestorOfGroup <#MeicConh-Íraich>.
 
@@ -155,6 +171,7 @@
 <#CormacInbirte>
     a foaf:Person;
     irishRel:nomName "Cormac Inbirte";
+    agrelon:hasParent <#Cairpri-b2588c6d>;
     rel:childOf <#Cairpri-b2588c6d>;
     irishRel:ancestorOfGroup <#MeicCáechLuinge>.
 
