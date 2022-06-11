@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Do Forsloindtib Dál Cairpri nó Tácraige"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
@@ -22,6 +21,7 @@
 <#Odor>
     a foaf:Person;
     irishRel:nomName "Odor";
+    agrelon:hasParent <#Folachtáin>;
     rel:childOf <#Folachtáin>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Adoer>.
 
@@ -29,6 +29,7 @@
     a foaf:Person;
     irishRel:nomName "Folachtán";
     irishRel:genName "Folachtáin";
+    agrelon:hasParent <#Brócáin>;
     rel:childOf <#Brócáin>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Fholachtain>.
 
@@ -36,6 +37,7 @@
     a foaf:Person;
     irishRel:nomName "Brócán";
     irishRel:genName "Brócáin";
+    agrelon:hasParent <#Cailgga>;
     rel:childOf <#Cailgga>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Brocain>.
 
@@ -43,12 +45,14 @@
     a foaf:Person;
     irishRel:nomName "Calgga";
     irishRel:genName "Cailgga";
+    agrelon:hasParent <#Ardda>;
     rel:childOf <#Ardda>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#CalceAirdde>.
 
 <#Ardda>
     a foaf:Person;
     irishRel:nomName "Ardda";
+    agrelon:hasParent <#Saír>;
     rel:childOf <#Saír>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#CalceAirdde>.
 
@@ -56,12 +60,14 @@
     a foaf:Person;
     irishRel:nomName "Sar";
     irishRel:genName "Saír";
+    agrelon:hasParent <#Tóeccae>;
     rel:childOf <#Tóeccae>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#LudechSoer>.
 
 <#Tóeccae>
     a foaf:Person;
     irishRel:genName "Tóeccae";
+    agrelon:hasParent <#LoidirAradImrosnada>;
     rel:childOf <#LoidirAradImrosnada>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Thoeca>.
 
@@ -69,6 +75,7 @@
     a foaf:Person;
     irishRel:nomName "Loider Arad Imrosnada";
     irishRel:genName "Loidir Arad Imrosnada";
+    agrelon:hasParent <#FirThlachtga>;
     rel:childOf <#FirThlachtga>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Imrosnada>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#Laidir>.
@@ -77,6 +84,7 @@
     a foaf:Person;
     irishRel:nomName "Fer Tlachtga";
     irishRel:genName "Fir Thlachtga";
+    agrelon:hasParent <#Rossa>;
     rel:childOf <#Rossa>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#FhirThlactgai>.
 
@@ -84,6 +92,7 @@
     a foaf:Person;
     irishRel:nomName "Ross";
     irishRel:genName "Rossa";
+    agrelon:hasParent <#Rudraigi>;
     rel:childOf <#Rudraigi>;
     owl:sameAs <http://example.com/LL/senchas_síl_h_ír_fo_h-erinn_in_so_sis.trig#Rosa>.
 
@@ -103,18 +112,21 @@
 <#Fergus>
     a foaf:Person;
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#Róich>;
     rel:childOf <#Róich>;
     owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Fergus>.
 
 <#FerCécht>
     a foaf:Person;
     irishRel:nomName "Fer Cécht";
+    agrelon:hasParent <#Róich>;
     rel:childOf <#Róich>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#FerCeug>.
 
 <#FerTlachtga>
     a foaf:Person;
     irishRel:nomName "Fer Tlachtga";
+    agrelon:hasParent <#Róich>;
     rel:childOf <#Róich>;
     owl:sameAs <http://example.com/LL/do_thaicraige_arad.trig#FerTlachtga>.
 }
