@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "INCIPIUNT PAUCA DE NOMINIBUS LAGINENSIUM ET DE REGIBUS ET ORIGINIBUS ET DE GENELOGIIS ET (DI)VISIONIBUS EORUM."@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text001.html>;
@@ -22,7 +21,9 @@
 <#LabraidLongsechMóen>
     a foaf:Person;
     irishRel:nomName "Labraid Longsech Móen";
+    agrelon:hasParent <#AilellaÁine>;
     rel:childOf <#AilellaÁine>;
+    agrelon:hasAncestor <#LóegaireLorcc>;
     rel:descendantOf <#LóegaireLorcc>;
     owl:sameAs <http://example.com/LL/lagin.trig#LabraidLongsechMoen>.
 
@@ -35,6 +36,7 @@
 <#LóegaireLorcc>
     a foaf:Person;
     irishRel:nomName "Lóegaire Lorcc";
+    agrelon:hasParent <#AugaineMáir>;
     rel:childOf <#AugaineMáir>;
     owl:sameAs <http://example.com/LL/lagin.trig#LoegaireLuirc>;
     rdfs:comment "is h-é senathair Laigin";
