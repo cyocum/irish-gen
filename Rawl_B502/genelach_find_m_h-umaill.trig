@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Find m. h-Umaill"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
@@ -23,6 +22,7 @@
 <#Find>
     a foaf:Person;
     irishRel:nomName "Find";
+    agrelon:hasParent <#h-Umaill>;
     rel:childOf <#h-Umaill>;
     owl:sameAs <http://example.com/LL/lagin.trig#Find>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:nomName "Umall";
     irishRel:genName "h-Umaill";
+    agrelon:hasParent <#Trénmóir>;
     rel:childOf <#Trénmóir>;
     owl:sameAs <http://example.com/LL/lagin.trig#Cumaill>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:nomName "Trénmór";
     irishRel:genName "Trénmóir";
+    agrelon:hasParent <#Suailt>;
     rel:childOf <#Suailt>;
     owl:sameAs <http://example.com/LL/lagin.trig#Trenmóir>.
 
@@ -56,24 +58,28 @@
 <#Gnáthaltach>
     a foaf:Person;
     irishRel:nomName "Gnáthaltach";
+    agrelon:hasParent <#Nuadat>;
     rel:childOf <#Nuadat>;
     owl:sameAs <http://example.com/Rawl_B502/dúil_láechsluinte_lagen.trig#Gnáthaltaig>.
 
 <#Fothad-bc968710>
     a foaf:Person;
     irishRel:nomName "Fotad";
+    agrelon:hasAncestor <#Gnáthaltach>;
     rel:descendantOf <#Gnáthaltach>;
     owl:sameAs <http://example.com/Rawl_B502/dúil_láechsluinte_lagen.trig#Fothaid-4f7bb5d0>.
 
 <#Fothad-c4004360>
     a foaf:Person;
     irishRel:nomName "Fotad";
+    agrelon:hasAncestor <#Gnáthaltach>;
     rel:descendantOf <#Gnáthaltach>;
     owl:sameAs <http://example.com/Rawl_B502/dúil_láechsluinte_lagen.trig#Fothaid-573c44b0>.
 
 <#Fothad-cdd8b5c0>
     a foaf:Person;
     irishRel:nomName "Fotad";
+    agrelon:hasAncestor <#Gnáthaltach>;
     rel:descendantOf <#Gnáthaltach>;
     owl:sameAs <http://example.com/Rawl_B502/dúil_láechsluinte_lagen.trig#Fothaid-5d3e33a0>.
 
@@ -86,6 +92,7 @@
     a foaf:Person;
     irishRel:nomName "Find";
     owl:sameAs <http://example.com/LL/lagin.trig#Find>, <#Find>;
+    agrelon:hasAncestor <#Baíscne>;
     rel:descendantOf <#Baíscne>.
 
 <#FergusFairrce>
@@ -102,6 +109,7 @@
 <#FindFile>
     a foaf:Person;
     irishRel:nomName "Find File";
+    agrelon:hasParent <#Rosa>;
     rel:childOf <#Rosa>;
     owl:sameAs <http://example.com/LL/lagin.trig#FindFile>.
 
@@ -113,6 +121,7 @@
 <#Fothad-96f26bc0>
     a foaf:Person;
     irishRel:nomName "Fothad";
+    agrelon:hasAncestor <#Maicnia>;
     rel:descendantOf <#Maicnia>;
     owl:sameAs <#Fothad-bc968710>;
     rdfs:seeAlso <#NatríFothaid>.
@@ -120,6 +129,7 @@
 <#Fothad-96f26bc1>
     a foaf:Person;
     irishRel:nomName "Fothad";
+    agrelon:hasAncestor <#Maicnia>;
     rel:descendantOf <#Maicnia>;
     owl:sameAs <#Fothad-c4004360>;
     rdfs:seeAlso <#NatríFothaid>.
@@ -127,6 +137,7 @@
 <#Fothad-96f26bc2>
     a foaf:Person;
     irishRel:nomName "Fothad";
+    agrelon:hasAncestor <#Maicnia>;
     rel:descendantOf <#Maicnia>;
     owl:sameAs <#Fothad-cdd8b5c0>;
     rdfs:seeAlso <#NatríFothaid>.
@@ -136,6 +147,7 @@
     irishRel:nomName "Maicnia";
     owl:sameAs <http://example.com/Rawl_B502/item_na_fothaid.trig#Maicniad>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#Lugdach>;
     rel:descendantOf <#Lugdach>.
 
 <#Lugdach>
@@ -144,6 +156,7 @@
     irishRel:genName "Lugdach";
     owl:sameAs <http://example.com/Rawl_B502/item_na_fothaid.trig#Lugdach>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#DáreDerg>;
     rel:descendantOf <#DáreDerg>.
 
 <#DáreDerg>
@@ -156,6 +169,7 @@
     a foaf:Person;
     irishRel:nomName "Gnáthaltach";
     owl:sameAs <http://example.com/Rawl_B502/item_na_fothaid.trig#Gnáthaltaich>, <#Gnáthaltach>;
+    agrelon:hasAncestor <#NuaduNecht>;
     rel:descendantOf <#NuaduNecht>;
     rdfs:seeAlso <#NatríFothaid>.
 
@@ -175,6 +189,7 @@
     irishRel:nomName "Find";
     rdfs:seeAlso <#NatríFothaid>;
     irishRel:descendantOfGroup <#Galéoin>;
+    agrelon:hasAncestor <#Umaill>;
     rel:descendantOf <#Umaill>.
 
 <#Umaill>
@@ -183,6 +198,7 @@
     irishRel:nomName "Umall";
     rdfs:seeAlso <#NatríFothaid>;
     owl:sameAs <http://example.com/LL/lagin.trig#Cumaill>;
+    agrelon:hasAncestor <#Trénmór>;
     rel:descendantOf <#Trénmór>.
 
 <#Trénmór>
@@ -190,6 +206,7 @@
     irishRel:nomName "Trénmór";
     owl:sameAs <http://example.com/LL/lagin.trig#Trenmóir>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#Soailt>;
     rel:descendantOf <#Soailt>.
 
 <#Soailt>
@@ -197,6 +214,7 @@
     irishRel:nomName "Soailt";
     owl:sameAs <http://example.com/LL/lagin.trig#Suaelt>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#Baíscne-db7b0f20>;
     rel:descendantOf <#Baíscne-db7b0f20>.
 
 <#Baíscne-db7b0f20>
@@ -204,6 +222,7 @@
     irishRel:nomName "Baiscne";
     owl:sameAs <#Baiscne>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#NuaduNecht-db7b0f21>;
     rel:descendantOf <#NuaduNecht-db7b0f21>.
 
 <#NuaduNecht-db7b0f21>
@@ -223,6 +242,7 @@
     irishRel:nomName "Find File";
     owl:sameAs <#FindFile>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#RossRuad>;
     rel:descendantOf <#RossRuad>.
 
 <#RossRuad>
@@ -230,6 +250,7 @@
     irishRel:nomName "Ross Ruad";
     owl:sameAs <#Rosa>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#Fergus>;
     rel:descendantOf <#Fergus>.
 
 <#Fergus>
@@ -237,6 +258,7 @@
     irishRel:nomName "Fergus";
     owl:sameAs <#FergusFairrce>;
     rdfs:seeAlso <#NatríFothaid>;
+    agrelon:hasAncestor <#NuaduNecht-ef71ba00>;
     rel:descendantOf <#NuaduNecht-ef71ba00>.
 
 <#NuaduNecht-ef71ba00>
