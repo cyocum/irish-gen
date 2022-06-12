@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "GENELACH CLAINNE FERCHAIR"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -23,47 +22,55 @@
 <#GillaMartan>
     a foaf:Person;
     irishRel:nomName "Gilla Martan";
+    agrelon:hasParent <#DuibEssa>;
     rel:childOf <#DuibEssa>.
 
 <#DuibEssa>
     a foaf:Person;
     irishRel:genName "Duib Essa";
     irishRel:nomName "Dub Essa";
+    agrelon:hasParent <#Donnchada>;
     rel:childOf <#Donnchada>.
 
 <#Donnchada>
     a foaf:Person;
     irishRel:genName "Donnchada";
     irishRel:nomName "Donnchad";
+    agrelon:hasParent <#Cernaich>;
     rel:childOf <#Cernaich>.
 
 <#Cernaich>
     a foaf:Person;
     irishRel:genName "Cernaich";
     irishRel:nomName "Cernach";
+    agrelon:hasParent <#Máelgairb>;
     rel:childOf <#Máelgairb>.
 
 <#Máelgairb>
     a foaf:Person;
     irishRel:genName "Máelgairb";
+    agrelon:hasParent <#Beraich>;
     rel:childOf <#Beraich>.
 
 <#Beraich>
     a foaf:Person;
     irishRel:genName "Beraich";
     irishRel:nomName "Berach";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#NéillFrossaig>;
     rel:childOf <#NéillFrossaig>.
 
 <#NéillFrossaig>
     a foaf:Person;
     irishRel:genName "Néill Frossaig";
     irishRel:nomName "Niall Frossach";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_síl_máeli_dúin.trig#NéillFrossaig>,
                <http://example.com/Rawl_B502/haec_sunt_credentium_nomina.trig#NiallFrossach>.  
