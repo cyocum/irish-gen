@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Corcco M'Druad"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -24,12 +23,14 @@
     irishRel:nomName "Conchobor" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Conchobor>;
     owl:sameAs <http://example.com/LL/corcomruad.trig#Conchobor>;
+    agrelon:hasParent <#MáelSechnaill>;
     rel:childOf <#MáelSechnaill>.
 
 <#Lochlaind>
     a foaf:Person ;
     irishRel:nomName "Lochlaind" ;
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Lochlaind>;
+    agrelon:hasParent <#MáelSechnaill>;
     rel:childOf <#MáelSechnaill>.
 
 <#MáelSechnaill>
@@ -38,6 +39,7 @@
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#MáelSechnaill>;
     owl:sameAs <http://example.com/LL/corcomruad.trig#MáelSechnaill>;
     irishRel:numChild 2 ;
+    agrelon:hasParent <#Argddai>;
     rel:childOf <#Argddai>.
 
 <#Argddai>
@@ -46,6 +48,7 @@
     irishRel:nomName "Argdda";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Argdai>;
     owl:sameAs <http://example.com/LL/corcomruad.trig#Argdai>;
+    agrelon:hasParent <#Sairennáin>;
     rel:childOf <#Sairennáin>.
 
 <#Sairennáin>
@@ -53,6 +56,7 @@
     irishRel:genName "Sairennáin";
     irishRel:nomName "Sairennán";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Samredain>;
+    agrelon:hasParent <#Flaithbertaich>;
     rel:childOf <#Flaithbertaich>.
 
 <#Flaithbertaich>
@@ -60,6 +64,7 @@
     irishRel:genName "Flaithbertaich";
     irishRel:nomName "Flaithbertach";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Fhlaithbertaig>;
+    agrelon:hasParent <#DuibRuip>;
     rel:childOf <#DuibRuip>.
 
 <#DuibRuip>
@@ -67,17 +72,20 @@
     irishRel:genName "Duib Ruip";
     irishRel:nomName "Dub Ruip";
     owl:sameAs <http://example.com/LL/corcomruad.trig#DubRaib>;
+    agrelon:hasParent <#Rechtabrat>;
     rel:childOf <#Rechtabrat>.
 
 <#Rechtabrat>
     a foaf:Person;
     irishRel:genName "Rechtabrat";
     irishRel:nomName "Rechtabra";
+    agrelon:hasParent <#Láeg>;
     rel:childOf <#Láeg>.
 
 <#Láeg>
     a foaf:Person;
     irishRel:genName "Láeg";
+    agrelon:hasParent <#DuibDáChrích>;
     rel:childOf <#DuibDáChrích>.
 
 <#DuibDáChrích>
@@ -86,12 +94,14 @@
     irishRel:genName "Dub Dá Chrích";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#DubDáChrích>;
     owl:sameAs <http://example.com/LL/corcomruad.trig#DuibDaChrich>;
+    agrelon:hasParent <#Báethellaich>;
     rel:childOf <#Báethellaich>.
 
 <#Báethellaich>
     a foaf:Person;
     irishRel:genName "Báethellaich";
     irishRel:nomName "Báethellach";
+    agrelon:hasParent <#Máelduib>;
     rel:childOf <#Máelduib>.
 
 <#Máelduib>
@@ -99,11 +109,13 @@
     irishRel:genName "Máelduib";
     irishRel:nomName "Máeldub";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Máeldub>;
+    agrelon:hasParent <#Cuilíuin>;
     rel:childOf <#Cuilíuin>.
 
 <#Cuilíuin>
     a foaf:Person;
     irishRel:genName "Cuilíuin";
+    agrelon:hasParent <#Senaich>;
     rel:childOf <#Senaich>.
 
 <#Senaich>
@@ -112,12 +124,14 @@
     irishRel:nomName "Senaich";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Senach>;
     owl:sameAs <http://example.com/LL/corcomruad.trig#Sínaig>;
+    agrelon:hasParent <#Amargein>;
     rel:childOf <#Amargein>.
 
 <#Amargein>
     a foaf:Person;
     irishRel:genName "Amargein";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Amargein>;
+    agrelon:hasParent <#Táil>;
     rel:childOf <#Táil>.
 
 <#Táil>
@@ -125,18 +139,21 @@
     irishRel:genName "Táil";
     irishRel:nomName "Táil";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Tál>;
+    agrelon:hasParent <#Bruicci>;
     rel:childOf <#Bruicci>.
 
 <#Bruicci>
     a foaf:Person;
     irishRel:genName "Bruicci";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Bruicce>;
+    agrelon:hasParent <#Conbruic>;
     rel:childOf <#Conbruic>.
 
 <#Conbruic>
     a foaf:Person;
     irishRel:genName "Conbruic";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Conbracc>;
+    agrelon:hasParent <#Cúscraid>;
     rel:childOf <#Cúscraid>.
 
 <#Cúscraid>
@@ -144,18 +161,21 @@
     irishRel:genName "Cúscraid";
     irishRel:nomName "Cúscrad";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Cuscraid>;
+    agrelon:hasParent <#MessenNued>;
     rel:childOf <#MessenNued>.
 
 <#MessenNued>
     a foaf:Person;
     irishRel:genName "Messen Nued";
     owl:sameAs <http://example.com/LL/corcomruad.trig#MesseNued>;
+    agrelon:hasParent <#MessenSulad>;
     rel:childOf <#MessenSulad>.
 
 <#MessenSulad>
     a foaf:Person;
     irishRel:genName "Messen Sulad";
     owl:sameAs <http://example.com/LL/corcomruad.trig#MesseNued>;
+    agrelon:hasParent <#MeicEirce>;
     rel:childOf <#MeicEirce>.
 
 <#MeicEirce>
@@ -163,6 +183,7 @@
     irishRel:genName "Meic Eirce";
     irishRel:nomName "Mac Eirce";
     owl:sameAs <http://example.com/LL/corcomruad.trig#MeicErca>;
+    agrelon:hasParent <#Oscair>;
     rel:childOf <#Oscair>.
 
 <#Oscair>
@@ -170,12 +191,14 @@
     irishRel:genName "Oscair";
     irishRel:nomName "Oscar";
     owl:sameAs <http://example.com/Rawl_B502/genelach_corco_m_druad.trig#Oscair>;
+    agrelon:hasParent <#Ochon>;
     rel:childOf <#Ochon>.
 
 <#Ochon>
     a foaf:Person;
     irishRel:genName "Ochon";
     irishRel:nomName "Ochu";
+    agrelon:hasParent <#Nechtain>;
     rel:childOf <#Nechtain>.
 
 <#Nechtain>
@@ -183,11 +206,13 @@
     irishRel:genName "Nechtain";
     irishRel:nomName "Nechtan";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Necta>;
+    agrelon:hasParent <#ArtChuirp>;
     rel:childOf <#ArtChuirp>.
 
 <#ArtChuirp>
     a foaf:Person;
     irishRel:genName "Art Chuirp";
+    agrelon:hasParent <#ÁedaGnóeFirGaíLethain>;
     rel:childOf <#ÁedaGnóeFirGaíLethain>.
 
 <#ÁedaGnóeFirGaíLethain>
@@ -195,11 +220,13 @@
     irishRel:genName "Áeda Gnóe Fir Gaí Lethain";
     irishRel:nomName "Áed Gnóe Fir Gaí Lethain";
     owl:sameAs <http://example.com/LL/corcomruad.trig#AedGnoíFirGaiLethain>;
+    agrelon:hasParent <#Aislithi>;
     rel:childOf <#Aislithi>.
 
 <#Aislithi>
     a foaf:Person;
     irishRel:genName "Aislithi";
+    agrelon:hasParent <#MeDruad>;
     rel:childOf <#MeDruad>.
 
 <#MeDruad>
@@ -207,24 +234,28 @@
     irishRel:genName "Me Druad";
     irishRel:nomName "Ma Druad";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Medrúi>;
+    agrelon:hasParent <#Ollomna>;
     rel:childOf <#Ollomna>.
 
 <#Ollomna>
     a foaf:Person;
     irishRel:genName "Ollomna";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Fhollomnu>;
+    agrelon:hasParent <#Déodai>;
     rel:childOf <#Déodai>.
 
 <#Déodai>
     a foaf:Person;
     irishRel:genName "Déodai";
     irishRel:nomName "Déoda";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Eochu";
+    agrelon:hasParent <#Cuircc>;
     rel:childOf <#Cuircc>.
 
 <#Cuircc>
@@ -232,6 +263,7 @@
     irishRel:genName "Cuircc";
     irishRel:nomName "Curcc";
     owl:sameAs <http://example.com/LL/corcomruad.trig#CuircDothi>;
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 
 <#Fergusa>
@@ -239,6 +271,7 @@
     irishRel:genName "Fergusa";
     irishRel:nomName "Fergus";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Fhergusa>;
+    agrelon:hasParent <#Rossa>;
     rel:childOf <#Rossa>.
 
 <#Rossa>
@@ -246,6 +279,7 @@
     irishRel:genName "Rossa";
     irishRel:nomName "Ross";
     owl:sameAs <http://example.com/LL/corcomruad.trig#Rosa>;
+    agrelon:hasParent <#Rudraigi>;
     rel:childOf <#Rudraigi>.
 
 <#Rudraigi>
