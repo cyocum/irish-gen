@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Caílle Fallomain"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
@@ -22,48 +21,56 @@
 <#Fiachra>
     a foaf:Person;
     irishRel:nomName "Fiachra";
+    agrelon:hasParent <#Cathaláin>;
     rel:childOf <#Cathaláin>.
 
 <#Cathaláin>
     a foaf:Person;
     irishRel:genName "Cathaláin";
     irishRel:nomName "Cathalán";
+    agrelon:hasParent <#Brótuda>;
     rel:childOf <#Brótuda>.
 
 <#Brótuda>
     a foaf:Person;
     irishRel:genName "Brótuda";
     irishRel:nomName "Brótud";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Fiachrach>;
     rel:childOf <#Fiachrach>.
 
 <#Fiachrach>
     a foaf:Person;
     irishRel:genName "Fiachrach";
     irishRel:nomName "Fiachraid";
+    agrelon:hasParent <#Fallomuin>;
     rel:childOf <#Fallomuin>.
 
 <#Fallomuin>
     a foaf:Person;
     irishRel:genName "Fallomuin";
     irishRel:nomName "Fallomun";
+    agrelon:hasParent <#ConCongalt>;
     rel:childOf <#ConCongalt>.
 
 <#ConCongalt>
     a foaf:Person;
     irishRel:genName "Con Congalt";
     irishRel:nomName "Cu Congalt";
+    agrelon:hasParent <#Fáelchon>;
     rel:childOf <#Fáelchon>.
 
 <#Fáelchon>
     a foaf:Person;
     irishRel:genName "Fáelchon";
     irishRel:nomName "Fáelchu";
+    agrelon:hasParent <#Findmóna>;
     rel:childOf <#Findmóna>.
 
 <#Findmóna>
