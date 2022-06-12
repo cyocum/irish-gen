@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Fer Droma Lighen"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,57 +21,67 @@
 <#GillaMeicLiac>
     a foaf:Person;
     irishRel:nomName "Gilla Meic Liac";
+    agrelon:hasParent <#Echthigirn>;
     rel:childOf <#Echthigirn>.
 
 <#Echthigirn>
     a foaf:Person;
     irishRel:genName "Echthigirn";
+    agrelon:hasParent <#Donngaile>;
     rel:childOf <#Donngaile>.
 
 <#Donngaile>
     a foaf:Person;
     irishRel:genName "Donngaile";
     irishRel:nomName "Donngal";
+    agrelon:hasParent <#Cellacháin>;
     rel:childOf <#Cellacháin>.
 
 <#Cellacháin>
     a foaf:Person;
     irishRel:genName "Cellacháin";
     irishRel:nomName "Cellachán";
+    agrelon:hasParent <#Domailén>;
     rel:childOf <#Domailén>.
 
 <#Domailén>
     a foaf:Person;
     irishRel:genName "Domailén";
+    agrelon:hasParent <#Donngaile-85dfc8e8>;
     rel:childOf <#Donngaile-85dfc8e8>.
 
 <#Donngaile-85dfc8e8>
     a foaf:Person;
     irishRel:genName "Donngaile";
+    agrelon:hasParent <#Sechnassaich>;
     rel:childOf <#Sechnassaich>.
 
 <#Sechnassaich>
     a foaf:Person;
     irishRel:genName "Sechnassaich";
     irishRel:nomName "Sechnassach";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>.
 
 <#Cellaich>
     a foaf:Person;
     irishRel:genName "Cellaich";
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Echaid";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#ÁedaFindléith>;
     rel:childOf <#ÁedaFindléith>.
 
 <#ÁedaFindléith>
