@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Delbna Móre"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
@@ -22,6 +21,7 @@
 <#Gormucán>
     a foaf:Person;
     irishRel:nomName "Gormucán";
+    agrelon:hasParent <#Anfída>;
     rel:childOf <#Anfída>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Gormucan>.
 
@@ -29,11 +29,13 @@
     a foaf:Person;
     irishRel:genName "Anfída";
     irishRel:nomName "Anfíd";
+    agrelon:hasParent <#MáelMíchíl>;
     rel:childOf <#MáelMíchíl>.
 
 <#MáelMíchíl>
     a foaf:Person;
     irishRel:genName "Máel Míchíl";
+    agrelon:hasParent <#Cochláin>;
     rel:childOf <#Cochláin>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#MaelMichil>.
 
@@ -41,12 +43,14 @@
     a foaf:Person;
     irishRel:genName "Cochláin";
     irishRel:nomName "Cochlán";
+    agrelon:hasParent <#Coimded>;
     rel:childOf <#Coimded>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Cochláin>.
 
 <#Coimded>
     a foaf:Person;
     irishRel:genName "Coimded";
+    agrelon:hasParent <#Donngusa>;
     rel:childOf <#Donngusa>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Comdeith>.
 
@@ -54,6 +58,7 @@
     a foaf:Person;
     irishRel:genName "Donngusa";
     irishRel:nomName "Donngus";
+    agrelon:hasParent <#Clothchon>;
     rel:childOf <#Clothchon>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Dondgusa>.
 
@@ -61,6 +66,7 @@
     a foaf:Person;
     irishRel:genName "Clothchon";
     irishRel:nomName "Clothchu";
+    agrelon:hasParent <#Comgaill>;
     rel:childOf <#Comgaill>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Clothchon>.
 
@@ -68,24 +74,28 @@
     a foaf:Person;
     irishRel:genName "Comgaill";
     irishRel:nomName "Comgall";
+    agrelon:hasParent <#Sáráin>;
     rel:childOf <#Sáráin>.
 
 <#Sáráin>
     a foaf:Person;
     irishRel:genName "Sáráin";
     irishRel:nomName "Sárán";
+    agrelon:hasParent <#Brócáin>;
     rel:childOf <#Brócáin>.
 
 <#Brócáin>
     a foaf:Person;
     irishRel:genName "Brócáin";
     irishRel:nomName "Brócán";
+    agrelon:hasParent <#Comgaill-05400497>;
     rel:childOf <#Comgaill-05400497>.
 
 <#Comgaill-05400497>
     a foaf:Person;
     irishRel:genName "Comgaill";
     irishRel:nomName "Comgall";
+    agrelon:hasParent <#Blait>;
     rel:childOf <#Blait>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Comgaill>.
 
@@ -93,12 +103,14 @@
     a foaf:Person;
     irishRel:genName "Blait";
     irishRel:nomName "Blat";
+    agrelon:hasParent <#Sige>;
     rel:childOf <#Sige>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Blait>.
 
 <#Sige>
     a foaf:Person;
     irishRel:genName "Sige";
+    agrelon:hasParent <#Aindiled>;
     rel:childOf <#Aindiled>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Sige>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Shige>.
@@ -106,6 +118,7 @@
 <#Aindiled>
     a foaf:Person;
     irishRel:genName "Aindiled";
+    agrelon:hasParent <#Beccáin>;
     rel:childOf <#Beccáin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Andiled>;
     owl:sameAs <http://example.com/LL/delbna_móre.trig#Andiled>.
@@ -114,6 +127,7 @@
     a foaf:Person;
     irishRel:genName "Beccáin";
     irishRel:nomName "Beccán";
+    agrelon:hasParent <#Delbáeth>;
     rel:childOf <#Delbáeth>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_delbna_bethra.trig#Beccáin>.
 
