@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Clainne Rotaidi"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
@@ -23,6 +22,7 @@
 <#CúLang>
     a foaf:Person;
     irishRel:nomName "Cú Lang";
+    agrelon:hasParent <#Flannchada>;
     rel:childOf <#Flannchada>;
     owl:sameAs <http://example.com/LL/genelach_clainde_rotaide.trig#CúLang>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:nomName "Flannchad";
     irishRel:genName "Flannchada";
+    agrelon:hasParent <#Rotaide>;
     rel:childOf <#Rotaide>;
     owl:sameAs <http://example.com/LL/genelach_clainde_rotaide.trig#Flandchada>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:nomName "Rotaide";
     irishRel:genName "Rotaide";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>;
     owl:sameAs <http://example.com/LL/genelach_clainde_rotaide.trig#Rotaide>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:nomName "Diarmait";
     irishRel:genName "Diarmata";
+    agrelon:hasParent <#Branacáin>;
     rel:childOf <#Branacáin>;
     owl:sameAs <http://example.com/LL/genelach_clainde_rotaide.trig#Diarmata-851a11be>.
 
@@ -51,6 +54,7 @@
     a foaf:Person;
     irishRel:nomName "Branacán";
     irishRel:genName "Branacáin";
+    agrelon:hasParent <#Flannchada-b33f0200>;
     rel:childOf <#Flannchada-b33f0200>;
     owl:sameAs <http://example.com/LL/genelach_clainde_rotaide.trig#Branacain-884c0aea>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_colcan_ó_thíg_cainén.trig#Branacáin>.
@@ -64,30 +68,35 @@
 <#Domnall>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Labrada>;
     rel:childOf <#Labrada>.
 
 <#Labrada>
     a foaf:Person;
     irishRel:nomName "Labraid";
     irishRel:genName "Labrada";
+    agrelon:hasParent <#Rotaide-90db7da0>;
     rel:childOf <#Rotaide-90db7da0>.
 
 <#Rotaide-90db7da0>
     a foaf:Person;
     irishRel:nomName "Rotaide";
     irishRel:genName "Rotaide";
+    agrelon:hasParent <#Diarmata-9850aba0>;
     rel:childOf <#Diarmata-9850aba0>.
 
 <#Diarmata-9850aba0>
     a foaf:Person;
     irishRel:nomName "Diarmait";
     irishRel:genName "Diarmata";
+    agrelon:hasParent <#Énnacáin>;
     rel:childOf <#Énnacáin>.
 
 <#Énnacáin>
     a foaf:Person;
     irishRel:nomName "Énnacán";
     irishRel:genName "Énnacáin";
+    agrelon:hasParent <#Flannchada-f7e0c820>;
     rel:childOf <#Flannchada-f7e0c820>.
 
 <#Flannchada-f7e0c820>
