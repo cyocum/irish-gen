@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Clainne Birn"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,65 +21,76 @@
 <#CúLacha>
     a foaf:Person;
     irishRel:nomName "Cú Lacha";
+    agrelon:hasParent <#ConChaille>;
     rel:childOf <#ConChaille>.
 
 <#ConChaille>
     a foaf:Person;
     irishRel:genName "Con Chaille";
     irishRel:nomName "Cu Calle";
+    agrelon:hasParent <#Muredaich>;
     rel:childOf <#Muredaich>.
 
 <#Muredaich>
     a foaf:Person;
     irishRel:genName "Muredaich";
     irishRel:nomName "Muredach";
+    agrelon:hasParent <#Fergail>;
     rel:childOf <#Fergail>.
 
 <#Fergail>
     a foaf:Person;
     irishRel:genName "Fergail";
     irishRel:nomName "Fergal";
+    agrelon:hasParent <#Muiredaich>;
     rel:childOf <#Muiredaich>.
 
 <#Muiredaich>
     a foaf:Person;
     irishRel:genName "Muiredaich";
     irishRel:nomName "Muiredach";
+    agrelon:hasParent <#Birnn>;
     rel:childOf <#Birnn>.
 
 <#Birnn>
     a foaf:Person;
     irishRel:genName "Birnn";
+    agrelon:hasParent <#Ruadrach>;
     rel:childOf <#Ruadrach>.
 
 <#Ruadrach>
     a foaf:Person;
     irishRel:genName "Ruadrach";
     irishRel:nomName "Ruadaid";
+    agrelon:hasParent <#Murchada>;
     rel:childOf <#Murchada>.
 
 <#Murchada>
     a foaf:Person;
     irishRel:genName "Murchada";
     irishRel:nomName "Murchad";
+    agrelon:hasParent <#MáelDúin>;
     rel:childOf <#MáelDúin>.
 
 <#MáelDúin>
     a foaf:Person;
     irishRel:genName "Máel Dúin";
     irishRel:nomName "Máel Dún";
+    agrelon:hasParent <#ÁedaAlláin>;
     rel:childOf <#ÁedaAlláin>.
 
 <#ÁedaAlláin>
     a foaf:Person;
     irishRel:genName "Áeda Alláin";
     irishRel:nomName "Áed Allán";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>.
 
 <#Fergaile>
     a foaf:Person;
     irishRel:genName "Fergaile";
     irishRel:nomName "Fergale";
+    agrelon:hasParent <#MáelDúin-3df4160c>;
     rel:childOf <#MáelDúin-3df4160c>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_néill.trig#Fergaile>.
 
