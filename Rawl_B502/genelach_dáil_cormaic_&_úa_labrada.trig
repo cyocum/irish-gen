@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Dáil Cormaic & Úa Labrada"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -25,6 +24,7 @@
     irishRel:nomName "Corbmac";
     owl:sameAs <http://example.com/Rawl_B502/mínugud_senchusa_laigin_and_so_sís.trig#Corbmac>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Cormac>;
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
     irishRel:numChild 1.
 
@@ -38,12 +38,14 @@
 <#Imchad>
     a foaf:Person;
     irishRel:nomName "Imchad";
+    agrelon:hasParent <#Corbmac>;
     rel:childOf <#Corbmac>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Imchad>.
 
 <#Labraid>
     a foaf:Person;
     irishRel:nomName "Labraid";
+    agrelon:hasParent <#Imchad>;
     rel:childOf <#Imchad>;
     rdfs:comment "ó tát Úi Labrada";
     irishRel:ancestorOfGroup <#ÚiLabrada>;
@@ -57,42 +59,49 @@
 <#Luguid>
     a foaf:Person;
     irishRel:nomName "Luguid";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Lugaid>.
 
 <#Cathbud>
     a foaf:Person;
     irishRel:nomName "Cathdub";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Cathub>.
 
 <#Cóeldub>
     a foaf:Person;
     irishRel:nomName "Cóeldub";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Caeldub>.
 
 <#Cainnech>
     a foaf:Person;
     irishRel:nomName "Cainnech";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Cainnech>.
 
 <#Cáirthenn>
     a foaf:Person;
     irishRel:nomName "Cáirthenn";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Cáirthend>.
 
 <#NioCuillenn>
     a foaf:Person;
     irishRel:nomName "Nio Cuillenn";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#NioCulend>.
 
 <#DaigBec>
     a foaf:Person;
     irishRel:nomName "Daig Bec";
+    agrelon:hasParent <#Labraid>;
     rel:childOf <#Labraid>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#DiagBec>.
 
@@ -101,6 +110,7 @@
     irishRel:genName "Lugdach";
     irishRel:nomName "Lugaid";
     owl:sameAs <#Luguid>;
+    agrelon:hasOffspring <#Ochrai>;
     rel:ancestorOf <#Ochrai>.
 
 <#Ochrai>
