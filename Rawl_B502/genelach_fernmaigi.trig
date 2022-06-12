@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Fernmaigi"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,106 +21,124 @@
 <#Lethlobur>
     a foaf:Person;
     irishRel:nomName "Lethlobur";
+    agrelon:hasParent <#Fogartaich>;
     rel:childOf <#Fogartaich>.
 
 <#Fogartaich>
     a foaf:Person;
     irishRel:genName "Fogartaich";
     irishRel:nomName "Fogartach";
+    agrelon:hasParent <#Muiredaich>;
     rel:childOf <#Muiredaich>.
 
 <#Muiredaich>
     a foaf:Person;
     irishRel:genName "Muiredaich";
     irishRel:nomName "Muiredach";
+    agrelon:hasParent <#Laidcnén>;
     rel:childOf <#Laidcnén>.
 
 <#Laidcnén>
     a foaf:Person;
     irishRel:genName "Laidcnén";
+    agrelon:hasParent <#Fogartaich-3daaca84>;
     rel:childOf <#Fogartaich-3daaca84>.
 
 <#Fogartaich-3daaca84>
     a foaf:Person;
     irishRel:genName "Fogartaich";
     irishRel:nomName "Fogartach";
+    agrelon:hasParent <#Ruadrach>;
     rel:childOf <#Ruadrach>.
 
 <#Ruadrach>
     a foaf:Person;
     irishRel:genName "Ruadrach";
     irishRel:nomName "Ruadraid";
+    agrelon:hasParent <#Artach>;
     rel:childOf <#Artach>.
 
 <#Artach>
     a foaf:Person;
     irishRel:genName "Artach";
     irishRel:nomName "Artaid";
+    agrelon:hasParent <#Aithechdai>;
     rel:childOf <#Aithechdai>.
 
 <#Aithechdai>
     a foaf:Person;
     irishRel:genName "Aithechdai";
     irishRel:nomName "Aithechda";
+    agrelon:hasParent <#MáelFothardaig>;
     rel:childOf <#MáelFothardaig>.
 
 <#MáelFothardaig>
     a foaf:Person;
     irishRel:genName "Máel Fothardaig";
     irishRel:nomName "Máel Fothardach";
+    agrelon:hasParent <#MáelDuib>;
     rel:childOf <#MáelDuib>.
 
 <#MáelDuib>
     a foaf:Person;
     irishRel:genName "Máel Duib";
     irishRel:nomName "Máel Dub";
+    agrelon:hasParent <#Crónáin>;
     rel:childOf <#Crónáin>.
 
 <#Crónáin>
     a foaf:Person;
     irishRel:genName "Crónáin";
     irishRel:nomName "Crónán";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 
 <#Fergusa>
     a foaf:Person;
     irishRel:genName "Fergusa";
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#NadSluaig>;
     rel:childOf <#NadSluaig>.
 
 <#NadSluaig>
     a foaf:Person;
     irishRel:genName "Nad Sluaig";
     irishRel:nomName "Nad Sluach";
+    agrelon:hasParent <#CairpriDaimArgait>;
     rel:childOf <#CairpriDaimArgait>.
 
 <#CairpriDaimArgait>
     a foaf:Person;
     irishRel:genName "Carpre Dam Argat";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Echaid";
+    agrelon:hasParent <#CrimthaindLéith>;
     rel:childOf <#CrimthaindLéith>.
 
 <#CrimthaindLéith>
     a foaf:Person;
     irishRel:genName "Crimthaind Léith";
     irishRel:nomName "Crimthand Léth";
+    agrelon:hasParent <#Féicc>;
     rel:childOf <#Féicc>.
 
 <#Féicc>
     a foaf:Person;
     irishRel:genName "Féicc";
     irishRel:nomName "Fécc";
+    agrelon:hasParent <#DegaDuirn>;
     rel:childOf <#DegaDuirn>.
 
 <#DegaDuirn>
     a foaf:Person;
     irishRel:genName "Dega Duirn";
     irishRel:nomName "Deg Duirn";
+    agrelon:hasParent <#Rochada>;
     rel:childOf <#Rochada>;
     owl:sameAs <http://example.com/Rawl_B502/alia_peritia_de_genelogiis_&_de_generibus_hibernensium.trig#DaigDuirn>.
 
@@ -129,12 +146,14 @@
     a foaf:Person;
     irishRel:genName "Rochada";
     irishRel:nomName "Rochad";
+    agrelon:hasParent <#CollaFochríth>;
     rel:childOf <#CollaFochríth>;
     owl:sameAs <http://example.com/LL/h_airgialla.trig#Rochad>.
 
 <#CollaFochríth>
     a foaf:Person;
     irishRel:genName "Colla Fochríth";
+    agrelon:hasParent <#EchdachDomplíuin>;
     rel:childOf <#EchdachDomplíuin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_na_n-airther.trig#CollaFochrich> .
 
