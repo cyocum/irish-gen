@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Clainne Fínsnechtai m. Dúnchada"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
@@ -22,42 +21,49 @@
 <#MáelMugnai>
     a foaf:Person;
     irishRel:nomName "Máel Mugnai";
+    agrelon:hasParent <#Cernaich>;
     rel:childOf <#Cernaich>.
 
 <#Cernaich>
     a foaf:Person;
     irishRel:genName "Cernaich";
     irishRel:nomName "Cernach";
+    agrelon:hasParent <#Cummascaich>;
     rel:childOf <#Cummascaich>.
 
 <#Cummascaich>
     a foaf:Person;
     irishRel:genName "Cummascaich";
     irishRel:nomName "Cummascach";
+    agrelon:hasParent <#Tommaltaich>;
     rel:childOf <#Tommaltaich>.
 
 <#Tommaltaich>
     a foaf:Person;
     irishRel:genName "Tommaltaich";
     irishRel:nomName "Tommaltach";
+    agrelon:hasParent <#Cathail>;
     rel:childOf <#Cathail>.
 
 <#Cathail>
     a foaf:Person;
     irishRel:genName "Cathail";
     irishRel:nomName "Cathal";
+    agrelon:hasParent <#Fínnachta>;
     rel:childOf <#Fínnachta>.
 
 <#Fínnachta>
     a foaf:Person;
     irishRel:genName "Fínnachta";
     irishRel:nomName "Fínnacht";
+    agrelon:hasParent <#Dúnchada>;
     rel:childOf <#Dúnchada>.
 
 <#Dúnchada>
     a foaf:Person;
     irishRel:genName "Dúnchada";
     irishRel:nomName "Dúnchada";
+    agrelon:hasParent <#ÁedaSláine>;
     rel:childOf <#ÁedaSláine>.
 
 <#ÁedaSláine>
