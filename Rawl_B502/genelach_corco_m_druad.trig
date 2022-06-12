@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Corco M'Druad"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text024.html>;
@@ -24,6 +23,7 @@
     irishRel:genName "Máel Sechnaill" ;
     irishRel:nomName "Máel Sechnall" ;
     irishRel:numChild 2 ;
+    agrelon:hasParent <#Argdai>;
     rel:childOf <#Argdai>.
 
 <#Argdai>
@@ -34,11 +34,13 @@
 <#Conchobor>
     a foaf:Person ;
     irishRel:nomName "Conchobor" ;
+    agrelon:hasParent <#MáelSechnaill>;
     rel:childOf <#MáelSechnaill>.
 
 <#Lochlaind>
     a foaf:Person ;
     irishRel:nomName "Lochlaind" ;
+    agrelon:hasParent <#MáelSechnaill>;
     rel:childOf <#MáelSechnaill>.
 
 <#Oscair>
@@ -51,37 +53,44 @@
     a foaf:Person ;
     irishRel:nomName "Conbracc" ;
     irishRel:numChild 3 ;
+    agrelon:hasParent <#Oscair>;
     rel:childOf <#Oscair>.
 
 <#Báeth>
     a foaf:Person ;
     irishRel:nomName "Báeth" ;
+    agrelon:hasParent <#Oscair>;
     rel:childOf <#Oscair>.
 
 <#Fráech>
     a foaf:Person ;
     irishRel:nomName "Fráech" ;
+    agrelon:hasParent <#Oscair>;
     rel:childOf <#Oscair>.
 
 <#Lugbarnn>
     a foaf:Person ;
     irishRel:nomName "Lugbarnn" ;
+    agrelon:hasParent <#Oscair>;
     rel:childOf <#Oscair>.
 
 <#Bruicce>
     a foaf:Person ;
     irishRel:nomName "Bruicce" ;
     irishRel:numChild 1 ;
+    agrelon:hasParent <#Conbracc>;
     rel:childOf <#Conbracc>.
 
 <#Cút>
     a foaf:Person ;
     irishRel:nomName "Cút" ;
+    agrelon:hasParent <#Conbracc>;
     rel:childOf <#Conbracc>.
 
 <#Lingue>
     a foaf:Person ;
     irishRel:nomName "Lingue" ;
+    agrelon:hasParent <#Conbracc>;
     rel:childOf <#Conbracc>.
 
 <#Tál>
@@ -90,16 +99,19 @@
     irishRel:genName "Tháil" ;
     irishRel:genName "Táil" ;
     irishRel:numChild 2 ;
+    agrelon:hasParent <#Bruicce>;
     rel:childOf <#Bruicce>.
 
 <#MacIeir>
     a foaf:Person ;
     irishRel:nomName "Mac Ieir" ;
+    agrelon:hasParent <#Tál>;
     rel:childOf <#Tál>.
 
 <#Amargein>
     a foaf:Person ;
     irishRel:nomName "Amargein" ;
+    agrelon:hasParent <#Tál>;
     rel:childOf <#Tál>.
 
 <#Senach>
@@ -107,22 +119,26 @@
     irishRel:nomName "Senach" ;
     irishRel:genName "Senaich" ;
     irishRel:numChild 3 ;
+    agrelon:hasParent <#Amargein>;
     rel:childOf <#Amargein>.
 
 <#Fuilne>
     a foaf:Person ;
     irishRel:nomName "Fuilne" ;
     irishRel:nomName "Fuillne" ;
+    agrelon:hasParent <#Senach>;
     rel:childOf <#Senach>.
 
 <#Máelán>
     a foaf:Person ;
     irishRel:nomName "Máelán" ;
+    agrelon:hasParent <#Senach>;
     rel:childOf <#Senach>.
 
 <#Crónán>
     a foaf:Person ;
     irishRel:nomName "Crónán" ;
+    agrelon:hasParent <#Senach>;
     rel:childOf <#Senach>.
 
 
@@ -130,42 +146,50 @@
     a foaf:Person ;
     irishRel:nomName "Máeldub" ;
     irishRel:numChild 2 ;
+    agrelon:hasParent <#Fuilne>;
     rel:childOf <#Fuilne>.
 
 <#Rudrad>
     a foaf:Person ;
     irishRel:nomName "Rudrad" ;
+    agrelon:hasParent <#Máeldub>;
     rel:childOf <#Máeldub>.
 
 <#DubDáChrích>
     a foaf:Person ;
     irishRel:nomName "Dub Dá Chrích" ;
     irishRel:numChild 5 ;
+    agrelon:hasParent <#Máeldub>;
     rel:childOf <#Máeldub>.
 
 <#Maclóech>
     a foaf:Person ;
     irishRel:nomName "Maclóech" ;
+    agrelon:hasParent <#DubDáChrích>;
     rel:childOf <#DubDáChrích>.
 
 <#DubDáLeithe>
     a foaf:Person ;
     irishRel:nomName "Dub Dá Leithe" ;
+    agrelon:hasParent <#DubDáChrích>;
     rel:childOf <#DubDáChrích>.
 
 <#Óengus>
     a foaf:Person ;
     irishRel:nomName "Óengus" ;
+    agrelon:hasParent <#DubDáChrích>;
     rel:childOf <#DubDáChrích>.
 
 <#h-Órgus>
     a foaf:Person ;
     irishRel:nomName "h-Órgus" ;
     irishRel:nomName "Órgus" ;
+    agrelon:hasParent <#DubDáChrích>;
     rel:childOf <#DubDáChrích>.
 
 <#Óengus-19af22b8>
     a foaf:Person ;
     irishRel:nomName "Óengus" ;
+    agrelon:hasParent <#DubDáChrích>;
     rel:childOf <#DubDáChrích>.
 }
