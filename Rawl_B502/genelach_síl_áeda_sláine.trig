@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Síl Áeda Sláine"@sga;
     dcterms:isFormatOf <https://celt.ucc.ie/published/G105003/text014.html>;
@@ -22,12 +21,14 @@
 <#Donnchad>
     a foaf:Person;
     irishRel:nomName "Donnchad";
+    agrelon:hasParent <#Dondchada>;
     rel:childOf <#Dondchada>.
 
 <#Dondchada>
     a foaf:Person;
     irishRel:genName "Dondchada";
     irishRel:nomName "Dondchad";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Donnchada>.
 
@@ -35,6 +36,7 @@
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Congalaig>;
     rel:childOf <#Congalaig>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Domnaill>.
 
@@ -42,6 +44,7 @@
     a foaf:Person;
     irishRel:genName "Congalaig";
     irishRel:genName "Congalach";
+    agrelon:hasParent <#MáelMithig>;
     rel:childOf <#MáelMithig>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#CongalaigCnogba>.
 
@@ -49,6 +52,7 @@
     a foaf:Person;
     irishRel:genName "Máel Mithig";
     irishRel:nomName "Máel Mithig";
+    agrelon:hasParent <#Flannacáin>;
     rel:childOf <#Flannacáin>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#MaelMithig>.
 
@@ -56,6 +60,7 @@
     a foaf:Person;
     irishRel:genName "Flannacáin";
     irishRel:nomName "Flannacán";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Fhlannacain>.
 
@@ -63,6 +68,7 @@
     a foaf:Person;
     irishRel:genName "Cellaich";
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Congalaig-5e9c4ab7>;
     rel:childOf <#Congalaig-5e9c4ab7>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Cellaig>.
 
@@ -70,6 +76,7 @@
     a foaf:Person;
     irishRel:genName "Congalaig";
     irishRel:nomName "Congalach";
+    agrelon:hasParent <#Conaing>;
     rel:childOf <#Conaing>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Congalaig>.
 
@@ -77,6 +84,7 @@
     a foaf:Person;
     irishRel:genName "Conaing";
     irishRel:nomName "Conaing";
+    agrelon:hasParent <#Amalgada>;
     rel:childOf <#Amalgada>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Conaing>.
 
@@ -84,6 +92,7 @@
     a foaf:Person;
     irishRel:genName "Amalgada";
     irishRel:nomName "Amalgad";
+    agrelon:hasParent <#Congalaich>;
     rel:childOf <#Congalaich>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Amalgada>.
 
@@ -91,6 +100,7 @@
     a foaf:Person;
     irishRel:genName "Congalaich";
     irishRel:nomName "Congalach";
+    agrelon:hasParent <#ÁedaSláine>;
     rel:childOf <#ÁedaSláine>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#Congalaig-9c5c2ad0>.
 
@@ -98,6 +108,7 @@
     a foaf:Person;
     irishRel:genName "Áeda Sláine";
     irishRel:nomName "Áed Sláine";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>;
     owl:sameAs <http://example.com/LL/sil_aeda_slaine.trig#AedaSlaine>.
 
