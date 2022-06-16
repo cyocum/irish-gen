@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Síl Máeli Dúin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,36 +21,42 @@
 <#Cléirchéin>
     a foaf:Person;
     irishRel:nomName "Cléirchéin";
+    agrelon:hasParent <#MáeliDúin>;
     rel:childOf <#MáeliDúin>.
 
 <#MáeliDúin>
     a foaf:Person;
     irishRel:genName "Máeli Dúin";
     irishRel:nomName "Máeli Dún";
+    agrelon:hasParent <#Donnacáin>;
     rel:childOf <#Donnacáin>.
 
 <#Donnacáin>
     a foaf:Person;
     irishRel:genName "Donnacáin";
     irishRel:nomName "Donnacán";
+    agrelon:hasParent <#Néill>;
     rel:childOf <#Néill>.
 
 <#Néill>
     a foaf:Person;
     irishRel:genName "Néill";
     irishRel:nomName "Niall";
+    agrelon:hasParent <#MáelDúin-2ef0652b>;
     rel:childOf <#MáelDúin-2ef0652b>.
 
 <#MáelDúin-2ef0652b>
     a foaf:Person;
     irishRel:genName "Máel Dúin";
     irishRel:nomName "Máel Dún";
+    agrelon:hasParent <#ÁedaOirdnidi>;
     rel:childOf <#ÁedaOirdnidi>.
 
 <#ÁedaOirdnidi>
     a foaf:Person;
     irishRel:genName "Áeda Oirdnidi";
     irishRel:nomName "Áed Oirdnidi";
+    agrelon:hasParent <#NéillFrossaig>;
     rel:childOf <#NéillFrossaig>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#AedaOrdnidi>.
 
@@ -59,6 +64,7 @@
     a foaf:Person;
     irishRel:genName "Néill Frossaig";
     irishRel:nomName "Niall Frossach";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillFhrosaig>.
 
