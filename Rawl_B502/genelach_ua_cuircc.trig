@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Ua Cuircc"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -23,6 +22,7 @@
 <#Arttacán>
     a foaf:Person;
     irishRel:nomName "Arttacán";
+    agrelon:hasParent <#Taidc>;
     rel:childOf <#Taidc>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Artacan>.
 
@@ -30,6 +30,7 @@
     a foaf:Person;
     irishRel:nomName "Tadc";
     irishRel:genName "Taidc";
+    agrelon:hasParent <#Sinill>;
     rel:childOf <#Sinill>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Taidcg>.
 
@@ -37,6 +38,7 @@
     a foaf:Person;
     irishRel:nomName "Sinell";
     irishRel:genName "Sinill";
+    agrelon:hasParent <#Ánchoraig>;
     rel:childOf <#Ánchoraig>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Sinill>.
 
@@ -44,6 +46,7 @@
     a foaf:Person;
     irishRel:nomName "Anchorach";
     irishRel:genName "Ánchoraig";
+    agrelon:hasParent <#Siadalta>;
     rel:childOf <#Siadalta>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Anchoraig>.
 
@@ -51,6 +54,7 @@
     a foaf:Person;
     irishRel:genName "Siadalta";
     irishRel:nomName "Siadaltae";
+    agrelon:hasParent <#Máelhuidir>;
     rel:childOf <#Máelhuidir>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Siadalta>.
 
@@ -58,6 +62,7 @@
     a foaf:Person;
     irishRel:nomName "Máelodor";
     irishRel:genName "Máelhuidir";
+    agrelon:hasParent <#Oen>;
     rel:childOf <#Oen>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Maeluidir-784bd41d>.
 
@@ -65,6 +70,7 @@
     a foaf:Person;
     irishRel:nomName "Oen";
     irishRel:genName "Oen";
+    agrelon:hasParent <#Colmáin>;
     rel:childOf <#Colmáin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#hIuin>.
 
@@ -72,12 +78,14 @@
     a foaf:Person;
     irishRel:nomName "Colmán";
     irishRel:genName "Colmáin";
+    agrelon:hasParent <#Cuircc>;
     rel:childOf <#Cuircc>.
 
 <#Cuircc>
     a foaf:Person;
     irishRel:nomName "Corcc";
     irishRel:genName "Cuircc";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>;
     rdfs:comment "Bánhuma díre eneclainni in chenéoil-sin";
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Cuirc>.
@@ -86,6 +94,7 @@
     a foaf:Person;
     irishRel:nomName "Fergus";
     irishRel:genName "Fergusa";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_librén.trig#Fergusa>.
 
@@ -93,6 +102,7 @@
     a foaf:Person;
     irishRel:nomName "Cormac`";
     irishRel:genName "Cormaic";
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
     owl:sameAs <http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Cormaic>.
 
