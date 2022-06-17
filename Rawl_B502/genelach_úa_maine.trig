@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Úa Maine"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text020.html>;
@@ -23,28 +22,33 @@
 <#Díumassach>
     a foaf:Person;
     irishRel:nomName "Díumassach";
+    agrelon:hasParent <#Coibdenaich>;
     rel:childOf <#Coibdenaich>.
 
 <#Coibdenaich>
     a foaf:Person;
     irishRel:genName "Coibdenaich";
     irishRel:nomName "Coibdenach";
+    agrelon:hasParent <#Cuanach>;
     rel:childOf <#Cuanach>.
 
 <#Cuanach>
     a foaf:Person;
     irishRel:genName "Cuanach";
     irishRel:nomName "Cuanaid";
+    agrelon:hasParent <#Amalgaid>;
     rel:childOf <#Amalgaid>.
 
 <#Amalgaid>
     a foaf:Person;
     irishRel:genName "Amalgaid";
+    agrelon:hasParent <#Feideilmthi>;
     rel:childOf <#Feideilmthi>.
 
 <#Feideilmthi>
     a foaf:Person;
     irishRel:genName "Feideilmthi";
+    agrelon:hasParent <#Énnai>;
     rel:childOf <#Énnai>.
 
 <#Énnai>
@@ -52,11 +56,13 @@
     irishRel:genName "Énnai";
     irishRel:nomName "Énna";
     irishRel:numChild 3 ;
+    agrelon:hasParent <#MaineChirr>;
     rel:childOf <#MaineChirr>.
 
 <#MaineChirr>
     a foaf:Person;
     irishRel:genName "Maine Chirr";
+    agrelon:hasParent <#ÓengusaBuilg>;
     rel:childOf <#ÓengusaBuilg>.
 
 <#ÓengusaBuilg>
@@ -69,50 +75,60 @@
     irishRel:nomName "Feideilmid" ;
     irishRel:numChild 7 ;
     owl:sameAs <#Feideilmthi>;
+    agrelon:hasParent <#Énnai>;
     rel:childOf <#Énnai>.
 
 <#Dau>
     a foaf:Person ;
     irishRel:nomName "Dau" ;
+    agrelon:hasParent <#Énnai>;
     rel:childOf <#Énnai>.
 
 <#Fergus>
     a foaf:Person ;
     irishRel:nomName "Fergus" ;
+    agrelon:hasParent <#Énnai>;
     rel:childOf <#Énnai>.
 
 <#Combrat>
     a foaf:Person ;
     irishRel:nomName "Combrat" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 
 <#Émíne>
     a foaf:Person ;
     irishRel:nomName "Émíne" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 
 <#Fergus-698aa202>
     a foaf:Person ;
     irishRel:nomName "Fergus" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 
 <#Fergal>
     a foaf:Person ;
     irishRel:nomName "Fergal" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 
 <#Aurthanu>
     a foaf:Person ;
     irishRel:nomName "Aurthanu" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 
 <#Óengus>
     a foaf:Person ;
     irishRel:nomName "Óengus" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 
 <#Fiachna>
     a foaf:Person ;
     irishRel:nomName "Fiachna" ;
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>.
 }
