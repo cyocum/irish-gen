@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Úa Lomthuile"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text003.html>;
@@ -25,6 +24,7 @@
     foaf:title "suí-epscop"@sga, "sage-bishop"@eng;
     foaf:title "rí Lagen"@sga, "king of Leinster"@eng;
     irishRel:nomName "Flann";
+    agrelon:hasParent <#Nuadat>;
     rel:childOf <#Nuadat>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Fland>.
 
@@ -36,6 +36,7 @@
     a foaf:Person;
     irishRel:nomName "Nuadu";
     irishRel:genName "Nuadat";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Nuadat>.
 
@@ -43,6 +44,7 @@
     a foaf:Person;
     irishRel:nomName "Cellach";
     irishRel:genName "Cellaich";
+    agrelon:hasParent <#Furudráin>;
     rel:childOf <#Furudráin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Cellaich>.
 
@@ -50,6 +52,7 @@
     a foaf:Person;
     irishRel:nomName "Furudrán";
     irishRel:genName "Furudráin";
+    agrelon:hasParent <#Fóelleáin>;
     rel:childOf <#Fóelleáin>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Fhurudrain>.
 
@@ -57,6 +60,7 @@
     a foaf:Person;
     irishRel:nomName "Fóelleán";
     irishRel:genName "Fóelleáin";
+    agrelon:hasParent <#Lomthuile>;
     rel:childOf <#Lomthuile>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Fhoilleain>.
 
@@ -64,18 +68,21 @@
     a foaf:Person;
     irishRel:nomName "Lomthuile";
     irishRel:genName "Lomthuile";
+    agrelon:hasParent <#Ceisse>;
     rel:childOf <#Ceisse>.
 
 <#Ceisse>
     a foaf:Person;
     irishRel:nomName "Cess";
     irishRel:genName "Ceisse";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>.
 
 <#Lugdach>
     a foaf:Person;
     irishRel:nomName "Lugaid";
     irishRel:genName "Lugdach";
+    agrelon:hasParent <#Labrada>;
     rel:childOf <#Labrada>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Lugdach-6a6a8874>.
 
@@ -83,6 +90,7 @@
     a foaf:Person;
     irishRel:nomName "Labraid";
     irishRel:genName "Labrada";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Labrada-a03ae63f>.
 
@@ -90,6 +98,7 @@
     a foaf:Person;
     irishRel:nomName "Imchad";
     irishRel:genName "Imchada";
+    agrelon:hasParent <#Corbmaic>;
     rel:childOf <#Corbmaic>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Imchada-cae36390>.
 
@@ -97,6 +106,7 @@
     a foaf:Person;
     irishRel:nomName "Corbmac";
     irishRel:genName "Corbmaic";
+    agrelon:hasParent <#ConCorb>;
     rel:childOf <#ConCorb>;
     owl:sameAs <http://example.com/LL/genelach_h-úa_lomthuile.trig#Cormaic-4e04018b>.
 
