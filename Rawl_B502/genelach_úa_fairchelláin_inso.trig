@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Úa Fairchelláin inso"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text007.html>;
@@ -22,47 +21,55 @@
 <#Finnia>
     a foaf:Person;
     irishRel:nomName "Finnia";
+    agrelon:hasParent <#Fintain>;
     rel:childOf <#Fintain>.
 
 <#Fintain>
     a foaf:Person;
     irishRel:nomName "Fintan";
     irishRel:genName "Fintain";
+    agrelon:hasParent <#Conchraid>;
     rel:childOf <#Conchraid>.
 
 <#Conchraid>
     a foaf:Person;
     irishRel:nomName "Conchrad";
     irishRel:genName "Conchraid";
+    agrelon:hasParent <#Dairchella>;
     rel:childOf <#Dairchella>.
 
 <#Dairchella>
     a foaf:Person;
     irishRel:genName "Dairchella";
+    agrelon:hasParent <#Senaig>;
     rel:childOf <#Senaig>.
 
 <#Senaig>
     a foaf:Person;
     irishRel:nomName "Senach";
     irishRel:genName "Senaig";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 
 <#Fergusa>
     a foaf:Person;
     irishRel:nomName "Fergus";
     irishRel:genName "Fergusa";
+    agrelon:hasParent <#DiarmataTáide>;
     rel:childOf <#DiarmataTáide>.
 
 <#DiarmataTáide>
     a foaf:Person;
     irishRel:nomName "Diarmata Táide";
     irishRel:genName "Diarmata Táide";
+    agrelon:hasParent <#AilellaTaulduib->;
     rel:childOf <#AilellaTaulduib->.
 
 <#AilellaTaulduib->
     a foaf:Person;
     irishRel:nomName "Ailill Taulduib-";
     irishRel:genName "Ailella Taulduib-";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Ailill>.
 
@@ -70,6 +77,7 @@
     a foaf:Person;
     irishRel:nomName "Celtchar";
     irishRel:genName "Celtchair";
+    agrelon:hasParent <#Cuithechair>;
     rel:childOf <#Cuithechair>;
     owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#Celtchair>;
     owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Celtchair>;
@@ -85,6 +93,7 @@
 <#Éogan>
     a foaf:Person;
     irishRel:nomName "Éogan";
+    agrelon:hasParent <#Fintain>;
     rel:childOf <#Fintain>;
     owl:sameAs <http://example.com/LL/dimittamus_in_terim.trig#Eogan>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Éogan>.
@@ -98,6 +107,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Brigit";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
     irishRel:ancestorOfGroup "Úi Brigtén".
 
@@ -116,13 +126,16 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Ném";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
+    agrelon:hasSpouse <#Conganchnis>;
     rel:spouseOf <#Conganchnis>.
 
 <#Conganchnis>
     a foaf:Person;
     irishRel:genName "Conganchnis";
     irishRel:nomName "Conganchnes";
+    agrelon:hasParent <#Dedaid>;
     rel:childOf <#Dedaid>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Conganchnes>;
     irishRel:ancestorOfGroup <#Corcraige>, <#Bentraige>, <#Gabraige>, <#Cuachraige>.
@@ -154,62 +167,75 @@
     a foaf:Person;
     irishRel:nomName "Coemgen";
     irishRel:genName "Coemgin";
+    agrelon:hasParent <#Conganchnis>;
     rel:childOf <#Conganchnis>;
     irishRel:numChild 3.
 
 <#ConallGlas>
     a foaf:Person;
     irishRel:nomName "Conall Glas";
+    agrelon:hasParent <#Coemgin>;
     rel:childOf <#Coemgin>.
 
 <#Buachail>
     a foaf:Person;
     irishRel:nomName "Buachail";
+    agrelon:hasParent <#Coemgin>;
     rel:childOf <#Coemgin>.
 
 <#Corc>
     a foaf:Person;
     irishRel:nomName "Corc";
+    agrelon:hasParent <#Coemgin>;
     rel:childOf <#Coemgin>.
 
 <#Bil>
     a foaf:Person;
     irishRel:nomName "Bil";
-    rel:childOf [
+    agrelon:hasParent _:missing-3760a5fa ;
+    rel:childOf _:missing-3760a5fa.
+
+_:missing-3760a5fa
       a foaf:Person;
       foaf:gender "female";
-      rel:childOf <#Celtchair>
-    ].
+      rel:childOf <#Celtchair>.
 
 <#MacDaill>
     a foaf:Person;
     irishRel:nomName "Mac Daill";
-    rel:childOf [
+    agrelon:hasParent _:missing-5970d641 ;
+    rel:childOf _:missing-5970d641.
+
+_:missing-5970d641
       a foaf:Person;
       foaf:gender "female";
-      rel:childOf <#Celtchair>
-    ].
+      rel:childOf <#Celtchair>.
 
 <#Scáthdercc>
     a foaf:Person;
     irishRel:nomName "Scáthdercc";
-    rel:childOf [
+    agrelon:hasParent _:missing-53cd89d1 ;
+    rel:childOf _:missing-53cd89d1.
+
+_:missing-53cd89d1
       a foaf:Person;
       foaf:gender "female";
-      rel:childOf <#Celtchair>
-    ].
+      rel:childOf <#Celtchair>.
 
 <#Anga>
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Anga";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
+    agrelon:hasParent <#DarÓma>;
     rel:childOf <#DarÓma>.
 
 <#DarÓma>
     a foaf:Person;
     foaf:gender "female";
     irishRel:genName "Dar Óma";
+    agrelon:hasParent <#Conchobuir>;
     rel:childOf <#Conchobuir>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#DarÓmae>.
 
@@ -224,22 +250,29 @@
     a foaf:Person;
     irishRel:genName "Taiccthich";
     irishRel:nomName "Taiccthech";
+    agrelon:hasParent <#Anga>;
     rel:childOf <#Anga>;
+    agrelon:hasParent <#Énnae>;
     rel:childOf <#Énnae>;
+    agrelon:hasAncestor <#FirMara>;
     rel:descendantOf <#FirMara>.
 
 <#Donnáin>
     a foaf:Person;
     irishRel:genName "Donnáin";
     irishRel:nomName "Donnán";
+    agrelon:hasParent <#Anga>;
     rel:childOf <#Anga>;
+    agrelon:hasParent <#Énnae>;
     rel:childOf <#Énnae>;
+    agrelon:hasAncestor <#FirMara>;
     rel:descendantOf <#FirMara>.
 
 <#Énnae>
     a foaf:Person;
     irishRel:genName "Énnae";
     irishRel:nomName "Énna";
+    agrelon:hasParent <#Sétnae>;
     rel:childOf <#Sétnae>.
 
 <#Sétnae>
@@ -251,5 +284,6 @@
     a foaf:Person;
     irishRel:nomName "Fer Mara";
     irishRel:genName "Fir Mara";
+    agrelon:hasParent <#Conchobuir>;
     rel:childOf <#Conchobuir>.
 }
