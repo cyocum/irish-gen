@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Úa Timmíne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text004.html>;
@@ -23,6 +22,7 @@
 <#EchuTimmíne>
     a foaf:Person;
     irishRel:nomName "Echu Timmíne";
+    agrelon:hasSibling <#BresalEnechglas>;
     rel:siblingOf <#BresalEnechglas>;
     owl:sameAs <http://example.com/Rawl_B502/de_peritia_&_de_genealogis_dál_niad_cuirp_incipit.trig#EochuTimmíne>;
     rdfs:comment "Inna chotlud dano báe Eochu intan do-breth ferand dia bráthair & sé fóendalta. Co n-ebert Bresal, ‘Is tim sin, a Eochaid’. Conid de sin ro lil Timmíne.";
@@ -42,11 +42,13 @@ _:missing-968e2ee0
     a foaf:Person;
     irishRel:nomName "Nath Í";
     irishRel:numChild 7;
+    agrelon:hasParent <#EchuTimmíne>;
     rel:childOf <#EchuTimmíne>.
 
 <#MacMáel>
     a foaf:Person;
     irishRel:nomName "Mac Máel";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     irishRel:ancestorOfGroup <#ÚiMáelglais>, <#ÚiAndamaig>.
 
@@ -61,6 +63,7 @@ _:missing-968e2ee0
 <#Feidelmith>
     a foaf:Person;
     irishRel:nomName "Feidelmith";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     owl:sameAs <http://example.com/LL/genelach_h_timmin.trig#Feidlimid-ff6df05b>;
     irishRel:ancestorOfGroup <#ÚiBáetáin>, <#ÚiCrunmáel>.
@@ -76,6 +79,7 @@ _:missing-968e2ee0
 <#Conall>
     a foaf:Person;
     irishRel:nomName "Conall";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     owl:sameAs <http://example.com/LL/genelach_h_timmin.trig#Conall-bf8c4538>;
     irishRel:ancestorOfGroup <#ÚiChommáin>.
@@ -87,6 +91,7 @@ _:missing-968e2ee0
 <#Crimthan>
     a foaf:Person;
     irishRel:nomName "Crimthan";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     owl:sameAs <http://example.com/LL/genelach_h_timmin.trig#Crimthand-06627ab8>;
     irishRel:ancestorOfGroup <#ÚiBuide>.
@@ -98,6 +103,7 @@ _:missing-968e2ee0
 <#Éogan>
     a foaf:Person;
     irishRel:nomName "Éogan";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     owl:sameAs <http://example.com/LL/genelach_h_timmin.trig#Eogan-666737d0>;
     irishRel:ancestorOfGroup <#ÚiBáetáin-4e1ea4a9>.
@@ -109,6 +115,7 @@ _:missing-968e2ee0
 <#Cormac>
     a foaf:Person;
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     owl:sameAs <http://example.com/LL/genelach_h_timmin.trig#Cormac-d9c1590d>;
     irishRel:ancestorOfGroup <#ÚiChuimmi>.
@@ -120,6 +127,7 @@ _:missing-968e2ee0
 <#BresalTuathach>
     a foaf:Person;
     irishRel:nomName "Bresal Tuathach";
+    agrelon:hasParent <#NathÍ>;
     rel:childOf <#NathÍ>;
     irishRel:ancestorOfGroup <#ÚiChruimthirÁeda>.
 
