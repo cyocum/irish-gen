@@ -9,7 +9,7 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
@@ -23,6 +23,7 @@
 <#Sétanta>
     a foaf:Person ;
     irishRel:nomName "Sétanta" ;
+    agrelon:hasParent <#Soaltaich>;
     rel:childOf <#Soaltaich>;
     owl:sameAs <#CúChaulaind>.
 
@@ -30,28 +31,33 @@
     a foaf:Person;
     irishRel:genName "Cú Chaulaind";
     irishRel:nomName "Cú Cauland";
+    agrelon:hasParent <#Soaltaich>;
     rel:childOf <#Soaltaich>.
 
 <#Soaltaich>
     a foaf:Person;
     irishRel:genName "Soaltaich";
     irishRel:nomName "Soaltach";
+    agrelon:hasParent <#Becalta>;
     rel:childOf <#Becalta>.
 
 <#Becalta>
     a foaf:Person;
     irishRel:genName "Becalta";
+    agrelon:hasParent <#Móralta>;
     rel:childOf <#Móralta>.
 
 <#Móralta>
     a foaf:Person;
     irishRel:genName "Móralta";
+    agrelon:hasParent <#Dubthaich>;
     rel:childOf <#Dubthaich>.
 
 <#Dubthaich>
     a foaf:Person;
     irishRel:genName "Dubthaich";
     irishRel:nomName "Dubthach";
+    agrelon:hasParent <#Ibair>;
     rel:childOf <#Ibair>.
 
 <#Ibair>
