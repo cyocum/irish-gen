@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Haec Sunt Credentium Nomina"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text008.html>;
@@ -23,6 +22,7 @@
 <#Lóegaire>
     a irishTitles:Rí;
     irishRel:nomName "Lóegaire";
+    agrelon:hasParent <#Néill>;
     rel:childOf <#Néill>;
     irishTitles:reignLength 30;
     owl:sameAs <http://example.com/Rawl_B502/genelach_ceníuil_loígaire.trig#Lóegaire>;
@@ -43,6 +43,7 @@
 <#Lugaid>
     a irishTitles:Rí;
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#Láegairi>;
     rel:childOf <#Láegairi>;
     irishTitles:reignLength 20;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1272142>;
@@ -57,6 +58,7 @@
 <#Murchertach>
     a irishTitles:Rí;
     irishRel:nomName "Murchertach";
+    agrelon:hasParent <#Ercca>;
     rel:childOf <#Ercca>;
     irishTitles:reignLength 24;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#Muirchertaich>;
@@ -78,6 +80,7 @@
 <#Diarmait>
     a irishTitles:Rí;
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Cerbaill>;
     rel:childOf <#Cerbaill>;
     irishTitles:reignLength 22;
     owl:sameAs <http://example.com/Rawl_B502/section_11.trig#Diarmait>;
@@ -131,6 +134,7 @@
 <#Áed>
     a irishTitles:Rí;
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Ainmerech>;
     rel:childOf <#Ainmerech>;
     irishTitles:reignLength 23;
     owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.trig#Aeda>;
@@ -176,6 +180,7 @@
 <#SuibneMenn>
     a irishTitles:Rí;
     irishRel:nomName "Suibne Menn";
+    agrelon:hasParent <#Fiachna>;
     rel:childOf <#Fiachna>;
     irishTitles:reignLength 16;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1274138>.
@@ -188,6 +193,7 @@
 <#Domnall-026b8f20>
     a irishTitles:Rí;
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Áeda>;
     rel:childOf <#Áeda>;
     irishTitles:reignLength 17;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1154319>;
@@ -202,22 +208,24 @@
 <#Conall>
     a irishTitles:Rí;
     irishRel:nomName "Conall";
+    agrelon:hasParent <#MáeliCoba>;
     rel:childOf <#MáeliCoba>;
     irishTitles:coRulerWith <#Cellach>;
     irishTitles:reignLength 16.
 
 << <#Conall>
-        rdfs:comment "I have searched thoroughly for Conall and Cellach, sons of Máel Coba, in the existing data and cannot find them." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "I have searched thoroughly for Conall and Cellach, sons of Máel Coba, in the existing data and cannot find them." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Cellach>
     a irishTitles:Rí;
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#MáeliCoba>;
     rel:childOf <#MáeliCoba>.
 
 << <#Cellach>
-        rdfs:comment "I have searched thoroughly for Conall and Cellach, sons of Máel Coba, in the existing data and cannot find them." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "I have searched thoroughly for Conall and Cellach, sons of Máel Coba, in the existing data and cannot find them." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#MáeliCoba>
     a foaf:Person;
@@ -229,6 +237,7 @@
     a irishTitles:Rí;
     irishRel:nomName "Blaithmac";
     irishTitles:reignLength 10;
+    agrelon:hasParent <#ÁedaSláine>;
     rel:childOf <#ÁedaSláine>;
     irishTitles:coRulerWith <#Diarmait-b17659a0>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1562062>.
@@ -236,6 +245,7 @@
 <#Diarmait-b17659a0>
     a irishTitles:Rí;
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#ÁedaSláine>;
     rel:childOf <#ÁedaSláine>;
     owl:sameAs <http://example.com/Rawl_B502/item_síl_áeda_sláine.trig#Diarmata>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q258386>.
@@ -249,6 +259,7 @@
 <#Sechnassach>
     a irishTitles:Rí;
     irishRel:nomName "Sechnassach";
+    agrelon:hasParent <#Blaithmeic>;
     rel:childOf <#Blaithmeic>;
     irishTitles:reignLength 7;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1561936>.
@@ -268,6 +279,7 @@
 <#FínnachtaFledach>
     a irishTitles:Rí;
     irishRel:nomName "Fínnachta Fledach";
+    agrelon:hasParent <#Dúnchada>;
     rel:childOf <#Dúnchada>;
     irishTitles:reignLength 10;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1154354>;
@@ -282,6 +294,7 @@
 <#Longsech>
     a irishTitles:Rí;
     irishRel:nomName "Longsech";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>;
     irishTitles:reignLength 9;
     owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.trig#Longsig-1931a480>.
@@ -301,6 +314,7 @@
 <#Fergal>
     a irishTitles:Rí;
     irishRel:nomName "Fergal";
+    agrelon:hasParent <#MáeliDúin>;
     rel:childOf <#MáeliDúin>;
     irishTitles:reignLength 10;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#Fhergaile>;
@@ -322,6 +336,7 @@
 <#Cináed>
     a irishTitles:Rí;
     irishRel:nomName "Cináed";
+    agrelon:hasParent <#Írgalaich>;
     rel:childOf <#Írgalaich>;
     irishTitles:reignLength 6;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1562008>.
@@ -334,6 +349,7 @@
 <#Flaithbertach>
     a irishTitles:Rí;
     irishRel:nomName "Flaithbertach";
+    agrelon:hasParent <#Loingseich>;
     rel:childOf <#Loingseich>;
     irishTitles:reignLength 9;
     owl:sameAs <http://example.com/LL/rig_ceniuil_conaill.trig#Flaithbertach>;
@@ -355,6 +371,7 @@
 <#Domnall-4dc61ba0>
     a irishTitles:Rí;
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Murchada>;
     rel:childOf <#Murchada>;
     irishTitles:reignLength 19;
     owl:sameAs <http://example.com/LL/ríg_mide.trig#Domnaill-62ce7e6e>.
@@ -375,6 +392,7 @@
 <#Donnchad>
     a irishTitles:Rí;
     irishRel:nomName "Donnchad";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>;
     irishTitles:reignLength 27;
     owl:sameAs <http://example.com/LL/ríg_mide.trig#Dondchada-528df248>.
@@ -388,10 +406,11 @@
 <#ÁedOirnide>
     a irishTitles:Rí;
     irishRel:nomName "Áed Oirnide";
+    agrelon:hasParent <#Néill-cac79a70>;
     rel:childOf <#Néill-cac79a70>;
     irishTitles:reignLength 27;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#ÁedOirnidi>,
-               <http://example.com/Rawl_B502/genelach_clainne_néill.trig#ÁedaOirdnide>;
+           <http://example.com/Rawl_B502/genelach_clainne_néill.trig#ÁedaOirdnide>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1283150>.
 
 <#Néill-cac79a70>
@@ -403,6 +422,7 @@
 <#Conchobar>
     a irishTitles:Rí;
     irishRel:nomName "Conchobar";
+    agrelon:hasParent <#Donnchada>;
     rel:childOf <#Donnchada>;
     irishTitles:reignLength 14;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1283158>.
@@ -423,6 +443,7 @@
 <#MáelSechnaill>
     a irishTitles:Rí;
     irishRel:nomName "Máel Sechnaill";
+    agrelon:hasParent <#MáelRuanaid>;
     rel:childOf <#MáelRuanaid>;
     irishTitles:reignLength 16;
     owl:sameAs <http://example.com/LL/ríg_mide.trig#MaelShechnaill-5133529e>;
@@ -445,6 +466,7 @@
 <#Flann>
     a irishTitles:Rí;
     irishRel:nomName "Flann";
+    agrelon:hasParent <#MáelSechnaill-e52ab5e0>;
     rel:childOf <#MáelSechnaill-e52ab5e0>;
     irishTitles:reignLength 38;
     owl:sameAs <http://example.com/LL/ríg_mide.trig#Fhlaind>;
@@ -461,11 +483,12 @@
     irishRel:nomName "Niall Glúndub";
     irishTitles:reignLength 3;
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_síl_chuind_inso_sís.trig#NiallGlúndub>,
-               <http://example.com/Rawl_B502/genelach_clainne_domnaill.trig#NéillGlúnduib>.
+           <http://example.com/Rawl_B502/genelach_clainne_domnaill.trig#NéillGlúnduib>.
 
 <#Donnchad-5e450f70>
     a irishTitles:Rí;
     irishRel:nomName "Donnchad";
+    agrelon:hasParent <#Flainn>;
     rel:childOf <#Flainn>;
     irishTitles:reignLength 38;
     owl:sameAs <http://example.com/LL/ríg_mide.trig#Dondchada>;
@@ -480,6 +503,7 @@
 <#Congalach>
     a irishTitles:Rí;
     irishRel:nomName "Congalach";
+    agrelon:hasParent <#MáelMithig>;
     rel:childOf <#MáelMithig>;
     irishTitles:reignLength 13;
     owl:sameAs <http://example.com/Rawl_B502/genelach_síl_áeda_sláine.trig#Congalaig>.
@@ -493,6 +517,7 @@
 <#Domnall-adf859a0>
     a irishTitles:Rí;
     irishRel:nomName "Domnall";
+    agrelon:hasAncestor <#Néill-bdb6a770>;
     rel:descendantOf <#Néill-bdb6a770>;
     irishTitles:reignLength 25;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#Domnaill-29a43c40>.
@@ -564,6 +589,7 @@
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Néill-59772720>;
     rel:childOf <#Néill-59772720>;
     owl:sameAs <#Conull>;
     rdfs:comment "[seven kings of Ireland descended from Conall were burned or killed violently]";
@@ -579,6 +605,7 @@
 <#Muirchertach>
     a foaf:Person;
     irishRel:nomName "Muirchertach";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#Murchertach>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -587,6 +614,7 @@
 <#Báetán-23a8eec0>
     a foaf:Person;
     irishRel:nomName "Báetán";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#Báetán>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -595,6 +623,7 @@
 <#Eochaid-31eb7200>
     a foaf:Person;
     irishRel:nomName "Eochaid";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#Eochaid>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -603,6 +632,7 @@
 <#Suibni>
     a foaf:Person;
     irishRel:nomName "Suibni";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#SuibneMenn>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -611,6 +641,7 @@
 <#Colmán>
     a foaf:Person;
     irishRel:nomName "Colmán";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#ColmánRímid>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -619,6 +650,7 @@
 <#Fergal-81cfb740>
     a foaf:Person;
     irishRel:nomName "Fergal";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#Fergal>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -627,6 +659,7 @@
 <#Áed-8e7be310>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#ÁedOirnide>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -635,6 +668,7 @@
 <#Nial>
     a foaf:Person;
     irishRel:nomName "Nial";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#NiallFrossach>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -643,6 +677,7 @@
 <#Nial-b1a61d60>
     a foaf:Person;
     irishRel:nomName "Níall";
+    agrelon:hasAncestor <#Éogain>;
     rel:descendantOf <#Éogain>;
     owl:sameAs <#NiallCaille>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -658,6 +693,7 @@
 <#Báetán-72c1ff50>
     a foaf:Person;
     irishRel:nomName "Báetán";
+    agrelon:hasAncestor <#ConaillGulbain>;
     rel:descendantOf <#ConaillGulbain>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
     rdfs:comment "[died violently]".
@@ -665,6 +701,7 @@
 <#Anmere>
     a foaf:Person;
     irishRel:nomName "Anmere";
+    agrelon:hasAncestor <#ConaillGulbain>;
     rel:descendantOf <#ConaillGulbain>;
     owl:sameAs <#Ainmere>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -673,6 +710,7 @@
 <#Áed-7af57440>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasAncestor <#ConaillGulbain>;
     rel:descendantOf <#ConaillGulbain>;
     owl:sameAs <#Áedh-Uaridnach>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -681,6 +719,7 @@
 <#Conuall>
     a foaf:Person;
     irishRel:nomName "Conuall";
+    agrelon:hasAncestor <#ConaillGulbain>;
     rel:descendantOf <#ConaillGulbain>;
     owl:sameAs <#Conall>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>.
@@ -688,6 +727,7 @@
 <#MáelCobae>
     a foaf:Person;
     irishRel:nomName "Máel Cobae";
+    agrelon:hasAncestor <#ConaillGulbain>;
     rel:descendantOf <#ConaillGulbain>;
     owl:sameAs <#MáeliCoba>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -696,6 +736,7 @@
 <#Loingsech-88d1bba0>
     a foaf:Person;
     irishRel:nomName "Loingsech";
+    agrelon:hasAncestor <#ConaillGulbain>;
     rel:descendantOf <#ConaillGulbain>;
     owl:sameAs <#Loingseich>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -711,6 +752,7 @@
 <#Diarmait-0b4c7bf0>
     a foaf:Person;
     irishRel:nomName "Diarmait";
+    agrelon:hasAncestor <#Conaill-ad716270>;
     rel:descendantOf <#Conaill-ad716270>;
     owl:sameAs <#Diarmait>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -719,6 +761,7 @@
 <#Áed-0fa66030>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasAncestor <#Conaill-ad716270>;
     rel:descendantOf <#Conaill-ad716270>;
     owl:sameAs <#ÁedSláine>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -727,6 +770,7 @@
 <#CennFáelad-beb2b150>
     a foaf:Person;
     irishRel:nomName "Cenn Fáelad";
+    agrelon:hasAncestor <#Conaill-ad716270>;
     rel:descendantOf <#Conaill-ad716270>;
     owl:sameAs <#CennFáelad>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -735,6 +779,7 @@
 <#Fínnachta>
     a foaf:Person;
     irishRel:nomName "Fínnachta";
+    agrelon:hasAncestor <#Conaill-ad716270>;
     rel:descendantOf <#Conaill-ad716270>;
     owl:sameAs <#FínnachtaFledach>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -743,6 +788,7 @@
 <#Sechnasach>
     a foaf:Person;
     irishRel:nomName "Sechnasach";
+    agrelon:hasAncestor <#Conaill-ad716270>;
     rel:descendantOf <#Conaill-ad716270>;
     owl:sameAs <#Sechnassach>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -751,6 +797,7 @@
 <#Cináed-1c443420>
     a foaf:Person;
     irishRel:nomName "Cináed";
+    agrelon:hasAncestor <#Conaill-ad716270>;
     rel:descendantOf <#Conaill-ad716270>;
     owl:sameAs <#Cináed>;
     rdfs:seeAlso <#Cialíndondrígraidráinruaid>;
@@ -831,6 +878,7 @@
 <#Murchertach-47bdc110>
     a foaf:Person;
     irishRel:nomName "Murchertach";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -839,6 +887,7 @@
 <#Domnall-58db29b0>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -847,6 +896,7 @@
 <#Fergus-6b8525c0>
     a foaf:Person;
     irishRel:nomName "Fergus";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -855,6 +905,7 @@
 <#Báetán>
     a foaf:Person;
     irishRel:nomName "Báetán";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -863,6 +914,7 @@
 <#Eochaid-cd395ac0>
     a foaf:Person;
     irishRel:nomName "Eochaid";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -871,6 +923,7 @@
 <#ColmánRímid-d90a41c0>
     a foaf:Person;
     irishRel:nomName "Colmán Rímid";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -879,10 +932,12 @@
 <#Áedh-Uaridnach-271b9bc0>
     a foaf:Person;
     irishRel:nomName "Áed Uairidnach";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
     owl:sameAs <#Áedh-Uaridnach>;
+    agrelon:hasParent <#Domnaill-02ce6540>;
     rel:childOf <#Domnaill-02ce6540>.
 
 <#Domnaill-02ce6540>
@@ -895,6 +950,7 @@
 <#Suibni-94158ec0>
     a foaf:Person;
     irishRel:nomName "Suibni";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -903,6 +959,7 @@
 <#Fergal-0ec04c50>
     a foaf:Person;
     irishRel:nomName "Fergal";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -911,15 +968,18 @@
 <#ÁedAlldáin>
     a foaf:Person;
     irishRel:nomName "Áed Alldáin";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
     owl:sameAs <#ÁedAlláin>;
+    agrelon:hasParent <#Fergal-0ec04c50>;
     rel:childOf <#Fergal-0ec04c50>.
 
 <#NiallFrossach-44697b10>
     a foaf:Person;
     irishRel:nomName "Niall Frossach";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -928,6 +988,7 @@
 <#ÁedOrdain>
     a foaf:Person;
     irishRel:nomName "Áed Ordain";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -936,6 +997,7 @@
 <#NiallCailli>
     a foaf:Person;
     irishRel:nomName "Niall Cailli";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -944,6 +1006,7 @@
 <#ÁedFindliath-880167c0>
     a foaf:Person;
     irishRel:nomName "Áed Findliath";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -952,6 +1015,7 @@
 <#NiallGlúndub-a03f75c0>
     a foaf:Person;
     irishRel:nomName "Niall Glúndub";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -960,6 +1024,7 @@
 <#Domnall-ad08c680>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasAncestor <#Éogain-a3f61c80>;
     rel:descendantOf <#Éogain-a3f61c80>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -974,6 +1039,7 @@
 <#Ainmere-43a439d0>
     a foaf:Person;
     irishRel:nomName "Ainmere";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -982,6 +1048,7 @@
 <#Báetán-636d6ed0>
     a foaf:Person;
     irishRel:nomName "Báetán";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -990,6 +1057,7 @@
 <#Áed-f9284620>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -998,6 +1066,7 @@
 <#MáelCoba-2b33dbc0>
     a foaf:Person;
     irishRel:nomName "Máel Coba";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1006,6 +1075,7 @@
 <#Domnall-37e0a3d0>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1014,6 +1084,7 @@
 <#Cellach-6482b9f0>
     a foaf:Person;
     irishRel:nomName "Cellach";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1022,6 +1093,7 @@
 <#ConallCáel>
     a foaf:Person;
     irishRel:nomName "Conall Cáel";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1030,6 +1102,7 @@
 <#Longsech-8c19eb50>
     a foaf:Person;
     irishRel:nomName "Longsech";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1038,6 +1111,7 @@
 <#Congal>
     a foaf:Person;
     irishRel:nomName "Congal";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1046,10 +1120,12 @@
 <#Flaithbertach-93449332>
     a foaf:Person;
     irishRel:nomName "Flaithbertach";
+    agrelon:hasAncestor <#Chonall>;
     rel:descendantOf <#Chonall>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
     owl:sameAs <#Flaithbertach>;
+    agrelon:hasParent <#Longsech-8c19eb50>;
     rel:childOf <#Longsech-8c19eb50>.
 
 <#Cholmáin-08e3df60>
@@ -1061,6 +1137,7 @@
 <#Domnall-2f4e5090>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1069,6 +1146,7 @@
 <#Dúnchad>
     a foaf:Person;
     irishRel:nomName "Dúnchad";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1077,6 +1155,7 @@
 <#Conchobar-581612b0>
     a foaf:Person;
     irishRel:nomName "Conchobar";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1085,6 +1164,7 @@
 <#MáelSechnaill-7c222180>
     a foaf:Person;
     irishRel:nomName "Máel Sechnaill";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1093,24 +1173,29 @@
 <#Flann-ad68b970>
     a foaf:Person;
     irishRel:nomName "Flann";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
     owl:sameAs <#Flann>;
+    agrelon:hasParent <#MáelSechnaill-7c222180>;
     rel:childOf <#MáelSechnaill-7c222180>.
 
 <#Donnchad-c4907570>
     a foaf:Person;
     irishRel:nomName "Donnchad";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
     owl:sameAs <#Donnchad>;
+    agrelon:hasParent <#Flann>;
     rel:childOf <#Flann>.
 
 <#MáelSechnaill-df0364d0>
     a foaf:Person;
     irishRel:nomName "Máel Sechnaill";
+    agrelon:hasAncestor <#Cholmáin-08e3df60>;
     rel:descendantOf <#Cholmáin-08e3df60>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1134,6 +1219,7 @@
 <#Blaithmac-a4f538d0>
     a foaf:Person;
     irishRel:nomName "Blaithmac";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1142,6 +1228,7 @@
 <#Diarmait-baa6f6a0>
     a foaf:Person;
     irishRel:nomName "Diarmait";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1150,6 +1237,7 @@
 <#Sechnassach-d3a6a6f0>
     a foaf:Person;
     irishRel:nomName "Sechnasach";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1158,6 +1246,7 @@
 <#CennFáelad-ee57b0c0>
     a foaf:Person;
     irishRel:nomName "Cenn Fáelad";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1166,6 +1255,7 @@
 <#FínnachtaFled>
     a foaf:Person;
     irishRel:nomName "Fínnachta Fled";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1174,6 +1264,7 @@
 <#Fogartach-628beba0>
     a foaf:Person;
     irishRel:nomName "Fogartach";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1182,6 +1273,7 @@
 <#Cináed-946bb650>
     a foaf:Person;
     irishRel:nomName "Cináed";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
@@ -1190,11 +1282,13 @@
 <#Congalach-b2889ae0>
     a foaf:Person;
     irishRel:nomName "Congalach";
+    agrelon:hasAncestor <#ÁedaSláine-5bb9fc20>;
     rel:descendantOf <#ÁedaSláine-5bb9fc20>;
     foaf:title "king of Ireland"@eng;
     rdfs:seeAlso <#SérígdécÉogainanall>;
     owl:sameAs <#Congalach>;
     owl:sameAs <#CongalachCnogba>;
+    agrelon:hasParent <#MáelMithig-eb8eb040>;
     rel:childOf <#MáelMithig-eb8eb040>.
 
 <#MáelMithig-eb8eb040>
