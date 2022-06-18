@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Úa N-Echach Muman"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text019.html>;
@@ -23,92 +22,108 @@
 <#Domnall>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#DuibDáBairenn>;
     rel:childOf <#DuibDáBairenn>.
 
 <#DuibDáBairenn>
     a foaf:Person;
     irishRel:genName "Duib Dá Bairenn";
+    agrelon:hasParent <#Domnaill-3c87e6e9>;
     rel:childOf <#Domnaill-3c87e6e9>.
 
 <#Domnaill-3c87e6e9>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#DuibDáBairenn-6df6d169>;
     rel:childOf <#DuibDáBairenn-6df6d169>.
 
 <#DuibDáBairenn-6df6d169>
     a foaf:Person;
     irishRel:genName "Duib Dá Bairenn";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Flaithniad>;
     rel:childOf <#Flaithniad>.
 
 <#Flaithniad>
     a foaf:Person;
     irishRel:genName "Flaithniad";
     irishRel:nomName "Flaithnia";
+    agrelon:hasParent <#Anilte>;
     rel:childOf <#Anilte>.
 
 <#Anilte>
     a foaf:Person;
     irishRel:genName "Anilte";
+    agrelon:hasParent <#Dúnlaing>;
     rel:childOf <#Dúnlaing>.
 
 <#Dúnlaing>
     a foaf:Person;
     irishRel:genName "Dúnlaing";
     irishRel:nomName "Dúnlang";
+    agrelon:hasParent <#Élódaich>;
     rel:childOf <#Élódaich>.
 
 <#Élódaich>
     a foaf:Person;
     irishRel:genName "Élódaich";
     irishRel:nomName "Élódach";
+    agrelon:hasParent <#Selbaich>;
     rel:childOf <#Selbaich>.
 
 <#Selbaich>
     a foaf:Person;
     irishRel:genName "Selbaich";
     irishRel:nomName "Selbach";
+    agrelon:hasParent <#Cláirenich>;
     rel:childOf <#Cláirenich>.
 
 <#Cláirenich>
     a foaf:Person;
     irishRel:genName "Cláirenich";
     irishRel:nomName "Cláirench";
+    agrelon:hasParent <#Cairpre>;
     rel:childOf <#Cairpre>.
 
 <#Cairpre>
     a foaf:Person;
     irishRel:genName "Cairpre";
     irishRel:nomName "Carpre";
+    agrelon:hasParent <#Aeda>;
     rel:childOf <#Aeda>.
 
 <#Aeda>
     a foaf:Person;
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
+    agrelon:hasParent <#Láegaire>;
     rel:childOf <#Láegaire>.
 
 <#Láegaire>
     a foaf:Person;
     irishRel:genName "Láegaire";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Eochu";
+    agrelon:hasParent <#Caiss>;
     rel:childOf <#Caiss>.
 
 <#Caiss>
     a foaf:Person;
     irishRel:genName "Caiss";
     irishRel:nomName "Cass";
+    agrelon:hasParent <#Cuircc>;
     rel:childOf <#Cuircc>.
 
 <#Cuircc>
@@ -116,6 +131,7 @@
     irishRel:genName "Cuircc";
     irishRel:nomName "Curcc";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cuirc>;
+    agrelon:hasParent <#AilellaFlaindBic>;
     rel:childOf <#AilellaFlaindBic>.
 
 <#AilellaFlaindBic>
@@ -123,6 +139,7 @@
     irishRel:genName "Ailella Flaind Bic";
     irishRel:nomName "Ailill Fland Bec";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#AilellaFlaindBic>;
+    agrelon:hasParent <#FiachachMullethain>;
     rel:childOf <#FiachachMullethain>.
 
 <#FiachachMullethain>
@@ -130,6 +147,7 @@
     irishRel:genName "Fiachach Mullethain";
     irishRel:nomName "Fiachaid Mullethan";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#FhiachachMullethain>;
+    agrelon:hasParent <#Éogain>;
     rel:childOf <#Éogain>.
 
 <#Éogain>
@@ -137,6 +155,7 @@
     irishRel:genName "Éogain";
     irishRel:nomName "Éogan";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#EogainMóir>;
+    agrelon:hasParent <#AilellaAuluimb>;
     rel:childOf <#AilellaAuluimb>.
 
 <#AilellaAuluimb>
