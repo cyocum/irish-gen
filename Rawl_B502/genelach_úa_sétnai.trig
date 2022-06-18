@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "De Genelogia Úa Láegaire";
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text016.html>;
@@ -23,48 +22,56 @@
 <#Conallach>
     a foaf:Person;
     irishRel:nomName "Conallach";
+    agrelon:hasParent <#Máelodráin>;
     rel:childOf <#Máelodráin>.
 
 <#Máelodráin>
     a foaf:Person;
     irishRel:genName "Máelodráin";
     irishRel:nomName "Máelodrán";
+    agrelon:hasParent <#Marcáin>;
     rel:childOf <#Marcáin>.
 
 <#Marcáin>
     a foaf:Person;
     irishRel:genName "Marcáin";
     irishRel:nomName "Marcán";
+    agrelon:hasParent <#Áeda>;
     rel:childOf <#Áeda>.
 
 <#Áeda>
     a foaf:Person;
     irishRel:genName "Áeda";
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Fiachrach>;
     rel:childOf <#Fiachrach>.
 
 <#Fiachrach>
     a foaf:Person;
     irishRel:genName "Fiachrach";
     irishRel:nomName "Fiachraid";
+    agrelon:hasParent <#Cellacháin>;
     rel:childOf <#Cellacháin>.
 
 <#Cellacháin>
     a foaf:Person;
     irishRel:genName "Cellacháin";
     irishRel:nomName "Cellachán";
+    agrelon:hasParent <#Cuircc>;
     rel:childOf <#Cuircc>.
 
 <#Cuircc>
     a foaf:Person;
     irishRel:genName "Cuircc";
     irishRel:nomName "Curcc";
+    agrelon:hasParent <#Sétnai>;
     rel:childOf <#Sétnai>.
 
 <#Sétnai>
     a foaf:Person;
     irishRel:genName "Sétnai";
     irishRel:nomName "Sétna";
+    agrelon:hasParent <#FiachachFidgeinte>;
     rel:childOf <#FiachachFidgeinte>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_fidgente.trig#Sétna>.
 
@@ -82,16 +89,19 @@
 <#Corcc>
     a foaf:Person;
     irishRel:nomName "Corcc";
+    agrelon:hasParent <#Sétnae>;
     rel:childOf <#Sétnae>;
     owl:sameAs <#Cuircc>.
 
 <#Findchad>
     a foaf:Person;
     irishRel:nomName "Findchad";
+    agrelon:hasParent <#Sétnae>;
     rel:childOf <#Sétnae>.
 
 <#Intat>
     a foaf:Person;
     irishRel:nomName "Intat";
+    agrelon:hasParent <#Sétnae>;
     rel:childOf <#Sétnae>.
 }
