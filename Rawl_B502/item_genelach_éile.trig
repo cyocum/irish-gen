@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Genelach Éile"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text018.html>;
@@ -23,6 +22,7 @@
     a foaf:Person;
     irishRel:nomName "Rígbarddán";
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Rigbardain>;
+    agrelon:hasParent <#ConCoirne>;
     rel:childOf <#ConCoirne>.
 
 <#ConCoirne>
@@ -30,6 +30,7 @@
     irishRel:genName "Con Coirne";
     irishRel:nomName "Cu Corne";
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#ConChorne>;
+    agrelon:hasParent <#Móenaich>;
     rel:childOf <#Móenaich>.
 
 <#Móenaich>
@@ -37,6 +38,7 @@
     irishRel:genName "Móenaich";
     irishRel:nomName "Móenach";
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Máinaig>;
+    agrelon:hasParent <#Cerbeill>;
     rel:childOf <#Cerbeill>.
 
 <#Cerbeill>
@@ -45,6 +47,7 @@
     irishRel:nomName "Cerbell";
     rdfs:comment "cuius filius Gilla Pátric" ;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cerbaill>;
+    agrelon:hasParent <#Dúnlainge>;
     rel:childOf <#Dúnlainge>.
 
 <#Dúnlainge>
@@ -52,6 +55,7 @@
     irishRel:genName "Dúnlainge";
     irishRel:nomName "Dúnlach";
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Dublaige>;
+    agrelon:hasParent <#Cnáimíne>;
     rel:childOf <#Cnáimíne>.
 
 <#Cnáimíne>
@@ -59,12 +63,14 @@
     irishRel:genName "Cnáimíne";
     irishRel:nomName "Cnáimen";
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cnamín>;
+    agrelon:hasParent <#MáelRuanaid>;
     rel:childOf <#MáelRuanaid>.
 
 <#MáelRuanaid>
     a foaf:Person;
     irishRel:genName "Máel Ruanaid";
     irishRel:nomName "Máel Ruanad";
+    agrelon:hasParent <#Sechnassaich>;
     rel:childOf <#Sechnassaich>.
 
 <#Sechnassaich>
