@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Clann Donngaile"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text019.html>;
@@ -23,6 +22,7 @@
 <#Donnchad>
     a foaf:Person;
     irishRel:nomName "Donnchad";
+    agrelon:hasParent <#Carthaich>;
     rel:childOf <#Carthaich>.
 
 <#Carthaich>
@@ -30,6 +30,7 @@
     irishRel:genName "Carthaich";
     irishRel:nomName "Carthach";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Carthaig>;
+    agrelon:hasParent <#Saírbrethaich>;
     rel:childOf <#Saírbrethaich>.
 
 <#Saírbrethaich>
@@ -37,6 +38,7 @@
     irishRel:genName "Saírbrethaich";
     irishRel:nomName "Saírbrethach";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Sairbretaig>;
+    agrelon:hasParent <#Cellacháin>;
     rel:childOf <#Cellacháin>.
 
 <#Cellacháin>
@@ -44,6 +46,7 @@
     irishRel:genName "Cellacháin";
     irishRel:nomName "Cellachán";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Cellachain>;
+    agrelon:hasParent <#Buadacháin>;
     rel:childOf <#Buadacháin>.
 
 <#Buadacháin>
@@ -51,6 +54,7 @@
     irishRel:genName "Buadacháin";
     irishRel:nomName "Buadachán";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Buadachain>;
+    agrelon:hasParent <#Lachtnae>;
     rel:childOf <#Lachtnae>.
 
 <#Lachtnae>
@@ -58,6 +62,7 @@
     irishRel:genName "Lachtnae";
     irishRel:nomName "Lachtna";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Lactnai>;
+    agrelon:hasParent <#Arttgaile>;
     rel:childOf <#Arttgaile>.
 
 <#Arttgaile>
@@ -65,6 +70,7 @@
     irishRel:genName "Arttgaile";
     irishRel:nomName "Arttgail";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Artgaile>;
+    agrelon:hasParent <#Snéidgaile>;
     rel:childOf <#Snéidgaile>.
 
 <#Snéidgaile>
@@ -72,6 +78,7 @@
     irishRel:genName "Snéidgaile";
     irishRel:nomName "Snéidgail";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Snedgusa>;
+    agrelon:hasParent <#Donngaile>;
     rel:childOf <#Donngaile>.
 
 <#Donngaile>
@@ -79,6 +86,7 @@
     irishRel:genName "Donngaile";
     irishRel:nomName "Donngail";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Dondgaile>;
+    agrelon:hasParent <#Fáelgusa>;
     rel:childOf <#Fáelgusa>.
 
 <#Fáelgusa>
@@ -86,18 +94,21 @@
     irishRel:genName "Fáelgusa";
     irishRel:nomName "Fáelgus";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Faelgusa>;
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#NadFróech>;
     rel:childOf <#NadFróech>.
 
 <#NadFróech>
     a foaf:Person;
     irishRel:genName "Nad Fróech";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#NathFraich>;
+    agrelon:hasParent <#Colgan>;
     rel:childOf <#Colgan>.
 
 <#Colgan>
@@ -105,29 +116,34 @@
     irishRel:genName "Colgan";
     irishRel:nomName "Colgu";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Colggan>;
+    agrelon:hasParent <#Faílbe>;
     rel:childOf <#Faílbe>.
 
 <#Faílbe>
     a foaf:Person;
     irishRel:genName "Faílbe";
     owl:sameAs <http://example.com/LL/eoganachta_casil.trig#Failbe>;
+    agrelon:hasParent <#Flaind>;
     rel:childOf <#Flaind>.
 
 <#Flaind>
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
+    agrelon:hasParent <#Áeda>;
     rel:childOf <#Áeda>.
 
 <#Áeda>
     a foaf:Person;
     irishRel:genName "Áeda";
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Fíngin>;
     rel:childOf <#Fíngin>.
 
 <#Fíngin>
     a foaf:Person;
     irishRel:genName "Fíngin";
+    agrelon:hasParent <#Áeda-821261bd>;
     rel:childOf <#Áeda-821261bd>.
 
 <#Áeda-821261bd>
