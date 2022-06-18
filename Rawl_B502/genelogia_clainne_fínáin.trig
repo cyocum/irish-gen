@@ -1,4 +1,4 @@
-@base <http://example.com/Rawl_B502/genelogia_clainne.fínáin.trig>.
+@base <http://example.com/Rawl_B502/genelogia_clainne_fínáin.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelogia Clainne Fínáin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
@@ -23,6 +22,7 @@
     a foaf:Person;
     irishRel:genName "Fínáin";
     irishRel:nomName "Fínán";
+    agrelon:hasParent <#Saigir>;
     rel:childOf <#Saigir>;
     irishRel:numChild 7;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Fhinain>.
@@ -35,55 +35,65 @@
 <#Commán>
     a foaf:Person;
     irishRel:nomName "Commán";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>;
     owl:sameAs <http://example.com/LL/dal_corpri_arad.trig#Commáin>.
 
 <#Dímma>
     a foaf:Person;
     irishRel:nomName "Dímma";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>.
 
 <#Laidcnén>
     a foaf:Person;
     irishRel:nomName "Laidcnén";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>.
 
 <#Máelodrán>
     a foaf:Person;
     irishRel:nomName "Máelodrán";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>.
 
 <#Diarmait>
     a foaf:Person;
     irishRel:nomName "Diarmait";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>.
 
 <#FiaccCatech>
     a foaf:Person;
     irishRel:nomName "Fiacc Catech";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>.
 
 <#Fáelán>
     a foaf:Person;
     irishRel:nomName "Fáelán";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>.
 
 <#Diucaill>
     a foaf:Person;
     irishRel:nomName "Diucall";
     irishRel:genName "Diucaill";
+    agrelon:hasParent <#MeiccLiacc>;
     rel:childOf <#MeiccLiacc>.
 
 <#MeiccLiacc>
     a foaf:Person;
     irishRel:nomName "Macc Liacc";
     irishRel:genName "Meicc Liacc";
+    agrelon:hasParent <#Ólchon>;
     rel:childOf <#Ólchon>.
 
 <#Ólchon>
     a foaf:Person;
     irishRel:nomName "Ólchú";
     irishRel:genName "Ólchon";
+    agrelon:hasParent <#Mengáin>;
     rel:childOf <#Mengáin>.
 
 <#Mengáin>
@@ -128,23 +138,27 @@
 <#Suanach>
     a foaf:Person;
     irishRel:nomName "Suanach";
+    agrelon:hasParent <#CummíneSrenn>;
     rel:childOf <#CummíneSrenn>.
 
 <#CummíneSrenn>
     a foaf:Person;
     irishRel:nomName "Cumméne Srenn";
     irishRel:genName "Cummíne Srenn";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>.
 
 <#Báethgus>
     a foaf:Person;
     irishRel:nomName "Báethgus";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>.
 
 <#Diarmata>
     a foaf:Person;
     irishRel:nomName "Diarmait";
     irishRel:genName "Diarmata";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>;
     owl:sameAs <#Diarmait>.
 
@@ -152,6 +166,7 @@
     a foaf:Person;
     irishRel:nomName "Fínán";
     irishRel:genName "Fínáin";
+    agrelon:hasParent <#Saigir>;
     rel:childOf <#Saigir>;
     owl:sameAs <#Fínáin>.
 
@@ -164,18 +179,21 @@
     a foaf:Person;
     irishRel:nomName "Dúnamal";
     irishRel:genName "Dúnamail";
+    agrelon:hasParent <#CummíneMáir>;
     rel:childOf <#CummíneMáir>.
 
 <#CummíneMáir>
     a foaf:Person;
     irishRel:nomName "Cumméne Már";
     irishRel:genName "Cummíne Máir";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>.
 
 <#Diarmata-38f47090>
     a foaf:Person;
     irishRel:nomName "Diarmait";
     irishRel:genName "Diarmata";
+    agrelon:hasParent <#Dímmae>;
     rel:childOf <#Dímmae>.
 
 <#Dímmae>
