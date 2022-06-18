@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Úa Tuirtri"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text12.html>;
@@ -22,6 +21,7 @@
 <#Furudrán>
     a foaf:Person;
     irishRel:nomName "Furudrán";
+    agrelon:hasParent <#Béicce>;
     rel:childOf <#Béicce>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#Furudráin>.
 
@@ -29,6 +29,7 @@
     a foaf:Person;
     irishRel:genName "Béicce";
     irishRel:nomName "Bécc";
+    agrelon:hasParent <#Cuanach>;
     rel:childOf <#Cuanach>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#Béicce>.
 
@@ -36,24 +37,28 @@
     a foaf:Person;
     irishRel:genName "Cuanach";
     irishRel:nomName "Cuanaid";
+    agrelon:hasParent <#Dáire>;
     rel:childOf <#Dáire>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#Cuanach>.
 
 <#Dáire>
     a foaf:Person;
     irishRel:genName "Dáire";
+    agrelon:hasParent <#Feideilmid>;
     rel:childOf <#Feideilmid>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#Dáre>.
 
 <#Feideilmid>
     a foaf:Person;
     irishRel:genName "Feideilmid";
+    agrelon:hasParent <#Echíne>;
     rel:childOf <#Echíne>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#Feidelmid>.
 
 <#Echíne>
     a foaf:Person;
     irishRel:genName "Echíne";
+    agrelon:hasParent <#FiachachTuirtri>;
     rel:childOf <#FiachachTuirtri>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#Feichíne>.
 
@@ -61,6 +66,7 @@
     a foaf:Person;
     irishRel:genName "Fiachach Tuirtri";
     irishRel:nomName "Fiachaid Tuirtle";
+    agrelon:hasParent <#CollaÓiss>;
     rel:childOf <#CollaÓiss>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_úa_tuirtri.trig#FiachrachTuirtle>.
 
@@ -73,29 +79,34 @@
 <#Bressal>
     a foaf:Person;
     irishRel:nomName "Bressal";
+    agrelon:hasParent <#FergusaForcraid>;
     rel:childOf <#FergusaForcraid>.
 
 <#FergusaForcraid>
     a foaf:Person;
     irishRel:genName "Fergusa Forcraid";
     irishRel:nomName "Fergus Forcraid";
+    agrelon:hasParent <#MáelFothardaich>;
     rel:childOf <#MáelFothardaich>.
 
 <#MáelFothardaich>
     a foaf:Person;
     irishRel:genName "Máel Fothardaich";
     irishRel:nomName "Máel Fothardach";
+    agrelon:hasParent <#Suibne>;
     rel:childOf <#Suibne>.
 
 <#Suibne>
     a foaf:Person;
     irishRel:genName "Suibne";
+    agrelon:hasParent <#Furudráin>;
     rel:childOf <#Furudráin>.
 
 <#Furudráin>
     a foaf:Person;
     irishRel:genName "Furudráin";
     irishRel:nomName "Furudrán";
+    agrelon:hasParent <#Béicce-455b76da>;
     rel:childOf <#Béicce-455b76da>;
     owl:sameAs <#Furudrán>.
 
@@ -107,18 +118,21 @@
 <#Congus>
     a foaf:Person;
     irishRel:nomName "Congus";
+    agrelon:hasParent <#Moínaich>;
     rel:childOf <#Moínaich>.
 
 <#Moínaich>
     a foaf:Person;
     irishRel:genName "Moínaich";
     irishRel:nomName "Moínach";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Béicce-d3834fab>;
     rel:childOf <#Béicce-d3834fab>.
 
 <#Béicce-d3834fab>
@@ -129,35 +143,41 @@
 <#CúDínaisc>
     a foaf:Person;
     irishRel:nomName "Cú Dínaisc";
+    agrelon:hasParent <#Rothechtaid>;
     rel:childOf <#Rothechtaid>.
 
 <#Rothechtaid>
     a foaf:Person;
     irishRel:genName "Rothechtaid";
     irishRel:nomName "Rothechtach";
+    agrelon:hasParent <#Rónáin>;
     rel:childOf <#Rónáin>.
 
 <#Rónáin>
     a foaf:Person;
     irishRel:genName "Rónáin";
     irishRel:nomName "Rónán";
+    agrelon:hasParent <#Ultáin>;
     rel:childOf <#Ultáin>.
 
 <#Ultáin>
     a foaf:Person;
     irishRel:genName "Ultáin";
     irishRel:nomName "Ultán";
+    agrelon:hasParent <#Suibne-2c2587ad>;
     rel:childOf <#Suibne-2c2587ad>.
 
 <#Suibne-2c2587ad>
     a foaf:Person;
     irishRel:genName "Suibne";
+    agrelon:hasParent <#Furudráin-58bb7089>;
     rel:childOf <#Furudráin-58bb7089>;
     owl:sameAs <#Suibne>.
 
 <#Furudráin-58bb7089>
     a foaf:Person;
     irishRel:genName "Furudráin";
+    agrelon:hasParent <#Béicce-e6db7203>;
     rel:childOf <#Béicce-e6db7203>;
     owl:sameAs <#Furudrán>.
 
@@ -175,17 +195,20 @@
 <#Subne-97244f5b>
     a foaf:Person;
     irishRel:nomName "Subne";
+    agrelon:hasParent <#Béicce-311b0b6b>;
     rel:childOf <#Béicce-311b0b6b>;
     owl:sameAs <#Suibne>.
 
 <#Rónán>
     a foaf:Person;
     irishRel:nomName "Rónán";
+    agrelon:hasParent <#Béicce-311b0b6b>;
     rel:childOf <#Béicce-311b0b6b>.
 
 <#Furudrán-6ff4c752>
     a foaf:Person;
     irishRel:nomName "Furudrán";
+    agrelon:hasParent <#Béicce-311b0b6b>;
     rel:childOf <#Béicce-311b0b6b>;
     owl:sameAs <#Furudrán>.
 }
