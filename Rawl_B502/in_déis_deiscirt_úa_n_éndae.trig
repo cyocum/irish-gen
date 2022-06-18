@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitles: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "In Déis Deiscirt Úa N-Éndae"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text017.html>;
@@ -23,6 +22,7 @@
 <#ÉnnaTéith>
     a foaf:Person;
     irishRel:genName "Énna Téith";
+    agrelon:hasParent <#Conaill>;
     rel:childOf <#Conaill>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#EnnaTéith>.
 
@@ -45,6 +45,7 @@
 <#Fínán>
     a foaf:Person;
     irishRel:genName "Fínán";
+    agrelon:hasParent <#Diarmata>;
     rel:childOf <#Diarmata>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#Finan>.
 
@@ -56,18 +57,21 @@
 <#Congal>
     a foaf:Person;
     irishRel:genName "Congal";
+    agrelon:hasParent <#MáelAithgeáin>;
     rel:childOf <#MáelAithgeáin>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#Congal-d427cacb>.
 
 <#MáelAithgeáin>
     a foaf:Person;
     irishRel:genName "Máel Aithgeáin";
+    agrelon:hasParent <#Diarmata-50ccf9a6>;
     rel:childOf <#Diarmata-50ccf9a6>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#MaelAthgen>.
     
 <#DiarmataDubTómma>
     a foaf:Person;
     irishRel:genName "Diarmata Dub Tómma";
+    agrelon:hasParent <#Diarmata-2d6184ef>;
     rel:childOf <#Diarmata-2d6184ef>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#DiarmataDubTonna>.
 
@@ -79,6 +83,7 @@
 <#Conall>
     a foaf:Person;
     irishRel:genName "Conall";
+    agrelon:hasParent <#DuibNaill>;
     rel:childOf <#DuibNaill>;
     owl:sameAs <http://example.com/LL/tairdelbaig.trig#Conaill-dbf782c8>.
 
