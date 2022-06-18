@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Genelach Fernmaigi"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,35 +21,41 @@
 <#MaccLégind>
     a foaf:Person;
     irishRel:nomName "Macc Légind";
+    agrelon:hasParent <#Cairill>;
     rel:childOf <#Cairill>.
 
 <#Cairill>
     a foaf:Person;
     irishRel:genName "Cairill";
+    agrelon:hasParent <#Crícháin>;
     rel:childOf <#Crícháin>.
 
 <#Crícháin>
     a foaf:Person;
     irishRel:genName "Crícháin";
     irishRel:nomName "Críchán";
+    agrelon:hasParent <#Lorccáin>;
     rel:childOf <#Lorccáin>.
 
 <#Lorccáin>
     a foaf:Person;
     irishRel:genName "Lorccáin";
     irishRel:nomName "Lorccán";
+    agrelon:hasParent <#Donnacáin>;
     rel:childOf <#Donnacáin>.
 
 <#Donnacáin>
     a foaf:Person;
     irishRel:genName "Donnacáin";
     irishRel:nomName "Donnacán";
+    agrelon:hasParent <#Fogartaich>;
     rel:childOf <#Fogartaich>.
 
 <#Fogartaich>
     a foaf:Person;
     irishRel:genName "Fogartaich";
     irishRel:nomName "Fogartach";
+    agrelon:hasParent <#Ruadrach>;
     rel:childOf <#Ruadrach>.
 
 <#Ruadrach>
@@ -61,34 +66,40 @@
 <#Donnocán-ad5da4fb>
     a foaf:Person;
     irishRel:nomName "Donnocán";
+    agrelon:hasParent <#MáelMaire>;
     rel:childOf <#MáelMaire>.
 
 <#MáelMaire>
     a foaf:Person;
     irishRel:genName "Máel Maire";
+    agrelon:hasParent <#Flannacáin>;
     rel:childOf <#Flannacáin>.
 
 <#Flannacáin>
     a foaf:Person;
     irishRel:genName "Flannacáin";
     irishRel:nomName "Flannacán";
+    agrelon:hasParent <#Ruadrach-768e7a49>;
     rel:childOf <#Ruadrach-768e7a49>.
 
 <#Ruadrach-768e7a49>
     a foaf:Person;
     irishRel:genName "Ruadrach";
+    agrelon:hasParent <#Mathgamna>;
     rel:childOf <#Mathgamna>.
 
 <#Mathgamna>
     a foaf:Person;
     irishRel:genName "Mathgamna";
     irishRel:nomName "Mathgamain";
+    agrelon:hasParent <#Laidgneáin>;
     rel:childOf <#Laidgneáin>.
 
 <#Laidgneáin>
     a foaf:Person;
     irishRel:genName "Laidgneáin";
     irishRel:nomName "Laidgneán";
+    agrelon:hasParent <#Fogartaich-82b77cee>;
     rel:childOf <#Fogartaich-82b77cee>.
 
 <#Fogartaich-82b77cee>
