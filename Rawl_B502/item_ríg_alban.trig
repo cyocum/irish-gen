@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Ríg Alban"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text026.html>;
@@ -22,12 +21,14 @@
 <#MáelSnechtae>
     a foaf:Person;
     irishRel:nomName "Máel Snechtae";
+    agrelon:hasParent <#Lulaich>;
     rel:childOf <#Lulaich>.
 
 <#Lulaich>
     a foaf:Person;
     irishRel:genName "Lulaich";
     irishRel:nomName "Lulach";
+    agrelon:hasParent <#GillaiComgáin>;
     rel:childOf <#GillaiComgáin>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q117633>.
 
@@ -35,6 +36,7 @@
     a foaf:Person;
     irishRel:genName "Gillai Comgáin";
     irishRel:nomName "Gillae Comgán";
+    agrelon:hasParent <#MáelBrigti>;
     rel:childOf <#MáelBrigti>;
     rdfs:seeAlso <https://www.wikidata.org/wiki/Q3106025>.
 
@@ -42,101 +44,118 @@
     a foaf:Person;
     irishRel:genName "Máel Brigti";
     irishRel:nomName "Máel Brigit";
+    agrelon:hasParent <#Ruaidrí>;
     rel:childOf <#Ruaidrí>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q3276310>.
 
 <#Ruaidrí>
     a foaf:Person;
     irishRel:genName "Ruaidrí";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Morggáin>;
     rel:childOf <#Morggáin>.
 
 <#Morggáin>
     a foaf:Person;
     irishRel:genName "Morggáin";
     irishRel:nomName "Morggán";
+    agrelon:hasParent <#Cathamail>;
     rel:childOf <#Cathamail>.
 
 <#Cathamail>
     a foaf:Person;
     irishRel:genName "Cathamail";
     irishRel:nomName "Cathamal";
+    agrelon:hasParent <#Ruaidrí-c7f01847>;
     rel:childOf <#Ruaidrí-c7f01847>.
 
 <#Ruaidrí-c7f01847>
     a foaf:Person;
     irishRel:genName "Ruaidrí";
+    agrelon:hasParent <#Ailgelaich>;
     rel:childOf <#Ailgelaich>.
 
 <#Ailgelaich>
     a foaf:Person;
     irishRel:genName "Ailgelaich";
     irishRel:nomName "Ailgelach";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Feradaich>;
     rel:childOf <#Feradaich>.
 
 <#Feradaich>
     a foaf:Person;
     irishRel:genName "Feradaich";
     irishRel:nomName "Feradach";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>.
 
 <#Fergusa>
     a foaf:Person;
     irishRel:genName "Fergusa";
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#Nechtain>;
     rel:childOf <#Nechtain>.
 
 <#Nechtain>
     a foaf:Person;
     irishRel:genName "Nechtain";
     irishRel:nomName "Nechtan";
+    agrelon:hasParent <#Colmáin>;
     rel:childOf <#Colmáin>.
 
 <#Colmáin>
     a foaf:Person;
     irishRel:genName "Colmáin";
     irishRel:nomName "Colmán";
+    agrelon:hasParent <#Báetáin>;
     rel:childOf <#Báetáin>.
 
 <#Báetáin>
     a foaf:Person;
     irishRel:genName "Báetáin";
     irishRel:nomName "Báetán";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>.
 
 <#Echdach>
     a foaf:Person;
     irishRel:genName "Echdach";
     irishRel:nomName "Echaid";
+    agrelon:hasParent <#Muiredaich>;
     rel:childOf <#Muiredaich>.
 
 <#Muiredaich>
     a foaf:Person;
     irishRel:genName "Muiredaich";
     irishRel:nomName "Muiredach";
+    agrelon:hasParent <#Loairn>;
     rel:childOf <#Loairn>.
 
 <#Loairn>
     a foaf:Person;
     irishRel:genName "Loairn";
     irishRel:nomName "Loarn";
+    agrelon:hasParent <#Eircc>;
     rel:childOf <#Eircc>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q951677>.
 
 <#Eircc>
     a foaf:Person;
     irishRel:genName "Eircc";
+    agrelon:hasParent <#EchachMuinremuir>;
     rel:childOf <#EchachMuinremuir>.
 
 <#EchachMuinremuir>
@@ -147,22 +166,26 @@
 <#MacBethad>
     a foaf:Person;
     irishRel:nomName "Mac Bethad";
+    agrelon:hasParent <#Findláech>;
     rel:childOf <#Findláech>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q244403>.
 
 <#Findláech>
     a foaf:Person;
     irishRel:genName "Findláech";
+    agrelon:hasParent <#Ruaidrí-f3156c32>;
     rel:childOf <#Ruaidrí-f3156c32>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q325259>.
 
 <#Ruaidrí-f3156c32>
     owl:sameAs <#Ruaidrí>;
+    agrelon:hasParent <#Domnaill-71f8e372>;
     rel:childOf <#Domnaill-71f8e372>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q3446425>.
 
 <#Domnaill-71f8e372>
     owl:sameAs <#Domnaill>;
+    agrelon:hasParent <#Morgáin-43e94352>;
     rel:childOf <#Morgáin-43e94352>.
 
 <#Morgáin-43e94352>
