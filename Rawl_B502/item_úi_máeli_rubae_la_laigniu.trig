@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Úi Máeli Rubae La Laigniu"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text014.html>;
@@ -23,41 +22,48 @@
 <#Brónán>
     a foaf:Person;
     irishRel:nomName "Brónán";
+    agrelon:hasParent <#Aileráin>;
     rel:childOf <#Aileráin>.
 
 <#Aileráin>
     a foaf:Person;
     irishRel:genName "Aileráin";
     irishRel:nomName "Ailerán";
+    agrelon:hasParent <#Corccráin>;
     rel:childOf <#Corccráin>.
 
 <#Corccráin>
     a foaf:Person;
     irishRel:genName "Corccráin";
     irishRel:nomName "Corccrán";
+    agrelon:hasParent <#Dúngaile>;
     rel:childOf <#Dúngaile>.
 
 <#Dúngaile>
     a foaf:Person;
     irishRel:genName "Dúngaile";
     irishRel:nomName "Dúngal";
+    agrelon:hasParent <#Niallgusa>;
     rel:childOf <#Niallgusa>.
 
 <#Niallgusa>
     a foaf:Person;
     irishRel:genName "Niallgusa";
     irishRel:nomName "Niallgus";
+    agrelon:hasParent <#Báeth>;
     rel:childOf <#Báeth>.
 
 <#Báeth>
     a foaf:Person;
     irishRel:genName "Báeth";
+    agrelon:hasParent <#Dícolla>;
     rel:childOf <#Dícolla>.
 
 <#Dícolla>
     a foaf:Person;
     irishRel:genName "Dícolla";
     irishRel:nomName "Dícoll";
+    agrelon:hasParent <#Crítáin>;
     rel:childOf <#Crítáin>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_éogain_bricc.trig#Dícolla>;
     owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Dicholla>.
@@ -66,6 +72,7 @@
     a foaf:Person;
     irishRel:genName "Crítáin";
     irishRel:nomName "Crítán";
+    agrelon:hasParent <#Airmedaich>;
     rel:childOf <#Airmedaich>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_éogain_bricc.trig#Crítáin>;
     owl:sameAs <http://example.com/LL/na_n_dese_breg.trig#Crítain>.
