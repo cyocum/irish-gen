@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Síl Máeli Dúin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,34 +21,40 @@
 <#DubDarach>
     a foaf:Person;
     irishRel:nomName "Dub Darach";
+    agrelon:hasParent <#Flaind>;
     rel:childOf <#Flaind>.
 
 <#Flaind>
     a foaf:Person;
     irishRel:genName "Flaind";
     irishRel:nomName "Fland";
+    agrelon:hasParent <#Cínacáin>;
     rel:childOf <#Cínacáin>.
 
 <#Cínacáin>
     a foaf:Person;
     irishRel:genName "Cínacáin";
     irishRel:nomName "Cínacán";
+    agrelon:hasParent <#Flannacáin>;
     rel:childOf <#Flannacáin>.
 
 <#Flannacáin>
     a foaf:Person;
     irishRel:genName "Flannacáin";
+    agrelon:hasParent <#DubIndrecht>;
     rel:childOf <#DubIndrecht>.
 
 <#DubIndrecht>
     a foaf:Person;
     irishRel:genName "Dub Indrecht";
+    agrelon:hasParent <#NéillCaille>;
     rel:childOf <#NéillCaille>.
 
 <#NéillCaille>
     a foaf:Person;
     irishRel:genName "Néill Caille";
     irishRel:nomName "Niall Caill";
+    agrelon:hasParent <#ÁedaOirdnidi>;
     rel:childOf <#ÁedaOirdnidi>.
 
 <#ÁedaOirdnidi>
