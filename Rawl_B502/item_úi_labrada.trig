@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Item Úi Labrada"@sga;
     dcterms:isFormatOf <https://celt.ucc.ie/published/G800011F/text002.html>;
@@ -23,6 +22,7 @@
 <#Cáirthenn>
     a foaf:Person;
     irishRel:nomName "Cáirthenn";
+    agrelon:hasParent <#Labrada>;
     rel:childOf <#Labrada>;
     owl:sameAs <http://example.com/LL/http://example.com/LL/de_genelach_dail_chormaic_&_h-úa_labrada.trig#Cáirthend>.
 
@@ -36,6 +36,7 @@
     a foaf:Person;
     irishRel:nomName "Cumméne";
     irishRel:genName "Chuimmíne";
+    agrelon:hasParent <#Cáirthenn>;
     rel:childOf <#Cáirthenn>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Chummini>;
     rdfs:comment "Úi Chuimmine".
@@ -44,6 +45,7 @@
     a foaf:Person;
     irishRel:nomName "Brócán";
     irishRel:genName "Brócáin";
+    agrelon:hasParent <#Cáirthenn>;
     rel:childOf <#Cáirthenn>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Bróccain>;
     rdfs:comment "Úi Brócáin".
@@ -52,6 +54,7 @@
     a foaf:Person;
     irishRel:nomName "Gedgcán";
     irishRel:genName "Gedgcáin";
+    agrelon:hasParent <#Cáirthenn>;
     rel:childOf <#Cáirthenn>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Gedgain>;
     rdfs:comment "Úi Gedgcáin".
@@ -60,6 +63,7 @@
     a foaf:Person;
     irishRel:nomName "Fiannán";
     irishRel:genName "Fiannáin";
+    agrelon:hasParent <#Cáirthenn>;
     rel:childOf <#Cáirthenn>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Fiannáin>;
     rdfs:comment "Úi Fiannáin".
@@ -68,6 +72,7 @@
     a foaf:Person;
     irishRel:nomName "Dímmae";
     irishRel:genName "Dímmae";
+    agrelon:hasParent <#Cáirthenn>;
     rel:childOf <#Cáirthenn>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Dimmae-14001510>;
     rdfs:comment "Úi Dímmae".
@@ -75,6 +80,7 @@
 <#Lill>
     a foaf:Person;
     irishRel:genName "Lill";
+    agrelon:hasParent <#Cáirthenn>;
     rel:childOf <#Cáirthenn>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Lill>;
     rdfs:comment "Úi Lill".
@@ -84,7 +90,8 @@
     irishRel:genName "Coelbad";
     irishRel:nomName "Coelbad";
     owl:sameAs <http://example.com/Rawl_B502/genelach_dáil_cormaic_&_úa_labrada.trig#Cóeldub>,
-               <http://example.com/LL/item_h-úi_labrada.trig#Chaelbad>;
+           <http://example.com/LL/item_h-úi_labrada.trig#Chaelbad>;
+    agrelon:hasParent <#Labrada-319eaab0>;
     rel:childOf <#Labrada-319eaab0>.
 
 <#Labrada-319eaab0>
@@ -98,6 +105,7 @@
     irishRel:nomName "Aed";
     irishRel:genName "Aeda";
     foaf:title "epscop"@sga, "bishop"@eng;
+    agrelon:hasAncestor <#Coelbad>;
     rel:descendantOf <#Coelbad>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Aeda-88b47561>;
     rdfs:comment "Úi Epscuip Áeda".
@@ -106,6 +114,7 @@
     a foaf:Person;
     irishRel:nomName "Cruthán";
     irishRel:genName "Crutháin";
+    agrelon:hasAncestor <#Coelbad>;
     rel:descendantOf <#Coelbad>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Cruthain>;
     rdfs:comment "Úi Chrutháin secundum alios".
@@ -117,12 +126,13 @@
     rdfs:comment "[secundum alios], Úi Lill".
 
 << <#Lill-75e2def2>
-        rdfs:comment "<#Lill>, above, is a descendant of Cairthend, not of Coelbad." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "<#Lill>, above, is a descendant of Cairthend, not of Coelbad." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#DaigBec>
     a foaf:Person;
     irishRel:nomName "Daig Bec";
+    agrelon:hasParent <#Labrada-319eaab0>;
     rel:childOf <#Labrada-319eaab0>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#DaigBec>;
     rdfs:comment "Úi Dega Bic .i. Úi Muiredaig. Is leo Ráth Dromma & Methus Úa m-Bic & Tech Midnann & Cell Clochair.".
@@ -131,6 +141,7 @@
     a foaf:Person;
     irishRel:genName "Muiredaig";
     irishRel:nomName "Muiredach";
+    agrelon:hasAncestor <#DaigBec>;
     rel:descendantOf <#DaigBec>;
     rdfs:comment "Úi Muiredaig";
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Muridaig-4bf7e050>.
@@ -139,6 +150,7 @@
     a foaf:Person;
     irishRel:nomName "Cainnech";
     irishRel:genName "Cainnich";
+    agrelon:hasParent <#Labrada-319eaab0>;
     rel:childOf <#Labrada-319eaab0>;
     rdfs:comment "a quo Úi Chainnich";
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Cainnech-4bf7e051>.
@@ -147,6 +159,7 @@
     a foaf:Person;
     irishRel:nomName "Bróccéne";
     irishRel:genName "Bróccéni";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     rdfs:comment "Úi Bróccéni";
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Broceni>.
@@ -155,6 +168,7 @@
     a foaf:Person;
     irishRel:nomName "Ciméne";
     irishRel:genName "Chimíni";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Cummeni>;
     rdfs:comment "Úi Chimíni".
@@ -162,6 +176,7 @@
 <#Thoichthe>
     a foaf:Person;
     irishRel:genName "Thoichthe";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Thogae>;
     rdfs:comment "Úi Thoichthe".
@@ -170,6 +185,7 @@
     a foaf:Person;
     irishRel:nomName "Amalgaid";
     irishRel:genName "Amalgaid";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Amalgaid>;
     rdfs:comment "Úi Amalgaid".
@@ -178,6 +194,7 @@
     a foaf:Person;
     irishRel:nomName "Dímmae";
     irishRel:genName "Dímmae";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Dimmae>;
     rdfs:comment "Úi Dímmae".
@@ -186,6 +203,7 @@
     a foaf:Person;
     irishRel:nomName "Culén";
     irishRel:genName "Chuiléni";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Chulén>;
     rdfs:comment "Úi Chuiléni".
@@ -194,6 +212,7 @@
     a foaf:Person;
     irishRel:nomName "Attán";
     irishRel:genName "Attáin";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Attain>;
     rdfs:comment "Úi Attáin".
@@ -202,6 +221,7 @@
     a foaf:Person;
     irishRel:nomName "Gaimdechar";
     irishRel:genName "Gaimdechair";
+    agrelon:hasAncestor <#Cainnech>;
     rel:descendantOf <#Cainnech>;
     owl:sameAs <http://example.com/LL/item_h-úi_labrada.trig#Gaimdegair>;
     rdfs:comment "Úi Gaimdechair".
