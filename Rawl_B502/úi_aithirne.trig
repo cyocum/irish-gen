@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Aithirne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,58 +21,68 @@
 <#MáelTuile>
     a foaf:Person;
     irishRel:nomName "Máel Tuile";
+    agrelon:hasParent <#Gormgaili>;
     rel:childOf <#Gormgaili>.
 
 <#Gormgaili>
     a foaf:Person;
     irishRel:genName "Gormgaili";
     irishRel:nomName "Gormgaile";
+    agrelon:hasParent <#Flaithgiusa>;
     rel:childOf <#Flaithgiusa>.
 
 <#Flaithgiusa>
     a foaf:Person;
     irishRel:genName "Flaithgiusa";
     irishRel:nomName "Flaithgius";
+    agrelon:hasParent <#Fithchellaich>;
     rel:childOf <#Fithchellaich>.
 
 <#Fithchellaich>
     a foaf:Person;
     irishRel:genName "Fithchellaich";
     irishRel:nomName "Fithchellach";
+    agrelon:hasParent <#Indellaich>;
     rel:childOf <#Indellaich>.
 
 <#Indellaich>
     a foaf:Person;
     irishRel:genName "Indellaich";
     irishRel:nomName "Indellach";
+    agrelon:hasParent <#Fiangusa>;
     rel:childOf <#Fiangusa>.
 
 <#Fiangusa>
     a foaf:Person;
     irishRel:genName "Fiangusa";
     irishRel:genName "Fiangusa";
+    agrelon:hasParent <#Aithirne>;
     rel:childOf <#Aithirne>.
 
 <#Aithirne>
     a foaf:Person;
     irishRel:genName "Aithirne";
+    agrelon:hasParent <#Bláith>;
     rel:childOf <#Bláith>.
 
 <#Bláith>
     a foaf:Person;
     irishRel:genName "Bláith";
     irishRel:nomName "Bláth";
+    agrelon:hasParent <#Conh-Uidir>;
     rel:childOf <#Conh-Uidir>.
 
 <#Conh-Uidir>
     a foaf:Person;
     irishRel:genName "Con h-Uidir";
     irishRel:nomName "Cu h-Uidir";
+    agrelon:hasParent <#Fíngin>;
     rel:childOf <#Fíngin>.
 
 <#Fíngin>
     a foaf:Person;
     irishRel:genName "Fíngin";
+    agrelon:hasParent <#Collae>;
     rel:childOf <#Collae>.
 
 <#Collae>
