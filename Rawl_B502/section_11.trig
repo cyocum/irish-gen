@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 11";
     dcterms:isFormatOf <https://celt.ucc.ie/published/G105003/text011.html>;
@@ -28,6 +27,7 @@
 <#CatháerMár>
     a foaf:Person;
     irishRel:datName "Catháer Már";
+    agrelon:hasParent <#Feidelmid>;
     rel:childOf <#Feidelmid>;
     owl:sameAs <http://example.com/LL/comuammand_na_n-genelach.trig#CathairMór>;
     rdfs:comment "fodlaiter sáerchlanna Laigen & h-it fortuatha acht sin" .
@@ -52,6 +52,7 @@
 <#CobthachCóelBreg>
     a foaf:Person;
     irishRel:nomName "Cobthach Cóel Breg";
+    agrelon:hasParent <#Úgaine>;
     rel:childOf <#Úgaine>;
     irishRel:ancestorOfGroup <#LethCuind>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_colmáin.trig#CobthaichCóilBreg>.
@@ -63,6 +64,7 @@
 <#Láegaire>
     a foaf:Person;
     irishRel:nomName "Láegaire";
+    agrelon:hasParent <#Úgaine>;
     rel:childOf <#Úgaine>;
     rdfs:comment "a quo Laigin" .
 
@@ -90,11 +92,13 @@
 <#Glass>
     a foaf:Person;
     irishRel:nomName "Glass";
+    agrelon:hasParent <#NuadaitArgatlám>;
     rel:childOf <#NuadaitArgatlám>.
 
 <#CúOiss>
     a foaf:Person;
     irishRel:nomName "Cú Oiss";
+    agrelon:hasParent <#NuadaitArgatlám>;
     rel:childOf <#NuadaitArgatlám>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_éoganachta_caissil_16.trig#ConOiss>.
 
@@ -286,6 +290,7 @@
 <#Murchad>
     a foaf:Person;
     irishRel:nomName "Murchad";
+    agrelon:hasParent <#Brain>;
     rel:childOf <#Brain>;
     irishRel:ancestorOfGroup <#ÚiFáeláin>, <#ÚiDúnchada>, <#ÚiMuiredaich>.
 
@@ -326,6 +331,7 @@
 <#Diarmait>
     a foaf:Person;
     irishRel:datName "Diarmait";
+    agrelon:hasParent <#Cerbaill>;
     rel:childOf <#Cerbaill>;
     irishRel:ancestorOfGroup <#ClannColmáin>, <#Síln-ÁedaSláine>.
 
@@ -344,6 +350,7 @@
 <#Flaithbertach>
     a foaf:Person;
     irishRel:datName "Flaithbertach";
+    agrelon:hasParent <#Loingsich>;
     rel:childOf <#Loingsich>.
 
 <#Loingsich>
@@ -361,12 +368,14 @@
 <#Delbáeth>
     a foaf:Person;
     irishRel:datName "Delbáeth";
+    agrelon:hasParent <#Caiss>;
     rel:childOf <#Caiss>;
     rdfs:comment "condrecat na cóic Delbna fri Mumain" .
 
 <#Caiss>
     a foaf:Person;
     irishRel:genName "Caiss";
+    agrelon:hasParent <#ConaillEchluaith>;
     rel:childOf <#ConaillEchluaith>.
 
 <#ConaillEchluaith>
@@ -376,6 +385,7 @@
 <#Cian>
     a foaf:Person;
     irishRel:datName "Cian";
+    agrelon:hasParent <#AilellaAuluimb>;
     rel:childOf <#AilellaAuluimb>;
     irishRel:ancestorOfGroup <#Ciannachta>;
     irishRel:antagonistOfGroup <#Desmumain>.
@@ -396,6 +406,7 @@
 <#Fergus>
     a foaf:Person;
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#Róich>;
     rel:childOf <#Róich>;
     owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Fergus>;
     rdfs:comment "condrecat na Cuirc & na Céir & na Conmeicc ex maiore parte" .
@@ -422,6 +433,7 @@
 <#Celtchair>
     a foaf:Person;
     irishRel:nomName "Celtchair";
+    agrelon:hasParent <#Cuithechair>;
     rel:childOf <#Cuithechair>;
     owl:sameAs <http://example.com/Rawl_B502/senchas_síl_h_ir_fo_h_érind.trig#Celtchair>;
     irishRel:ancestorOfGroup <#h-UaithniTíri>, <#h-UaithniChliach>, <#dáfortuaithArad>, <#Seimninan-Déisse>, <#Cenna>, <#ÚiFairchellaich>.
