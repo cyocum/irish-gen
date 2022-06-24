@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Nunc Glasraige"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
@@ -23,54 +22,63 @@
     a foaf:Person;
     irishRel:nomName "Cú Maige";
     irishRel:genName "Cú Maige";
+    agrelon:hasParent <#Ingordail>;
     rel:childOf <#Ingordail>.
 
 <#Ingordail>
     a foaf:Person;
     irishRel:nomName "Ingordal";
     irishRel:genName "Ingordail";
+    agrelon:hasParent <#Ernáine>;
     rel:childOf <#Ernáine>.
 
 <#Ernáine>
     a foaf:Person;
     irishRel:nomName "Ernán";
     irishRel:genName "Ernáine";
+    agrelon:hasParent <#Áedgega>;
     rel:childOf <#Áedgega>.
 
 <#Áedgega>
     a foaf:Person;
     irishRel:nomName "Áedgeg";
     irishRel:genName "Áedgega";
+    agrelon:hasParent <#Fintain>;
     rel:childOf <#Fintain>.
 
 <#Fintain>
     a foaf:Person;
     irishRel:nomName "Fintan";
     irishRel:genName "Fintain";
+    agrelon:hasParent <#McReithe>;
     rel:childOf <#McReithe>.
 
 <#McReithe>
     a foaf:Person;
     irishRel:nomName "Mac Reithe";
     irishRel:genName "Meic Reithe";
+    agrelon:hasParent <#M.Daimle>;
     rel:childOf <#M.Daimle>.
 
 <#M.Daimle>
     a foaf:Person;
     irishRel:nomName "Mac Daimle";
     irishRel:genName "Meic Daimle";
+    agrelon:hasParent <#Dega>;
     rel:childOf <#Dega>.
 
 <#Dega>
     a foaf:Person;
     irishRel:nomName "Daig";
     irishRel:genName "Dega";
+    agrelon:hasParent <#Cairpri>;
     rel:childOf <#Cairpri>.
 
 <#Cairpri>
     a foaf:Person;
     irishRel:nomName "Cairpre";
     irishRel:genName "Cairpri";
+    agrelon:hasParent <#Néill>;
     rel:childOf <#Néill>;
     owl:sameAs <http://example.com/LL/cairpri_móir.trig#Corpri>.
 
@@ -83,15 +91,17 @@
 
 <#DerccuGlasfile>
     a foaf:Person;
-    irishRel:nomName "Derccu Glasfile";
+      irishRel:nomName "Derccu Glasfile";
+      agrelon:hasFosterSibling <#Cairpri>;
     rel:fosterSiblingOf <#Cairpri>.
 
 <#CofescorlethiarLuachair>
     dcterms:title "Co fes cor leth iar Luachair"@sga;
     prov:wasAttributedTo [
-      a foaf:Person;
-      foaf:gender "female";
-      rel:parentOf <#Dega>
+    a foaf:Person;
+        foaf:gender "female";
+        agrelon:hasParent <#Dega>;
+        rel:parentOf <#Dega>
     ];
     rdfs:comment "Hinc máthair Dega m. Cairpri cecinit".
 }
