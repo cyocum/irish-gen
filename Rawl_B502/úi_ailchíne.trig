@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Ailchíne"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,40 +21,47 @@
 <#Conn>
     a foaf:Person;
     irishRel:nomName "Conn";
+    agrelon:hasParent <#Áeducáin>;
     rel:childOf <#Áeducáin>.
 
 <#Áeducáin>
     a foaf:Person;
     irishRel:genName "Áeducáin";
     irishRel:nomName "Áeducán";
+    agrelon:hasParent <#Flainn>;
     rel:childOf <#Flainn>.
 
 <#Flainn>
     a foaf:Person;
     irishRel:genName "Flainn";
     irishRel:nomName "Flann";
+    agrelon:hasParent <#Airechtaich>;
     rel:childOf <#Airechtaich>.
 
 <#Airechtaich>
     a foaf:Person;
     irishRel:genName "Airechtaich";
     irishRel:nomName "Airechtach";
+    agrelon:hasParent <#Mergusa>;
     rel:childOf <#Mergusa>.
 
 <#Mergusa>
     a foaf:Person;
     irishRel:genName "Mergusa";
     irishRel:nomName "Mergus";
+    agrelon:hasParent <#Ailchíne>;
     rel:childOf <#Ailchíne>.
 
 <#Ailchíne>
     a foaf:Person;
     irishRel:genName "Ailchíne";
+    agrelon:hasParent <#Saiglenn>;
     rel:childOf <#Saiglenn>.
 
 <#Saiglenn>
     a foaf:Person;
     irishRel:genName "Saiglenn";
+    agrelon:hasParent <#Firbb>;
     rel:childOf <#Firbb>;
     owl:sameAs <http://example.com/Rawl_B502/clann_forgill.trig#Saiglenn>.
 
