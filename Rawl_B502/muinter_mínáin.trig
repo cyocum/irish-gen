@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Muinter Mínáin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text024.html>;
@@ -22,18 +21,21 @@
 <#MáelMeda>
     a foaf:Person;
     irishRel:nomName "Máel Meda";
+    agrelon:hasParent <#Mínáin>;
     rel:childOf <#Mínáin>.
 
 <#Mínáin>
     a foaf:Person;
     irishRel:genName "Mínáin";
     irishRel:nomName "Mínán";
+    agrelon:hasParent <#Rechtabrat>;
     rel:childOf <#Rechtabrat>.
 
 <#Rechtabrat>
     a foaf:Person;
     irishRel:genName "Rechtabrat";
     irishRel:nomName "Rechtabra";
+    agrelon:hasParent <#Flaithniad>;
     rel:childOf <#Flaithniad>.
 
 <#Flaithniad>
@@ -44,11 +46,13 @@
 <#Mugrón>
     a foaf:Person;
     irishRel:genName "Mugrón";
+    agrelon:hasParent <#Flaithniad-e0a1d742>;
     rel:childOf <#Flaithniad-e0a1d742>.
 
 <#Flaithniad-e0a1d742>
     a foaf:Person;
     irishRel:genName "Flaithniad";
+    agrelon:hasParent <#Rechtabrat-064d0924>;
     rel:childOf <#Rechtabrat-064d0924>.
 
 <#Rechtabrat-064d0924>
