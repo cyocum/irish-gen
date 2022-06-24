@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Nunc Uí Diabulbaine"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text006.html>;
@@ -22,6 +21,7 @@
 <#CummairDiabulban>
     a foaf:Person;
     irishRel:nomName "Cummair Diabulban";
+    agrelon:hasParent <#Conglais>;
     rel:childOf <#Conglais>;
     rdfs:comment "Is de atá Cummair Diabulbane & Druim Senchuimre qui habuit duas uxores unaque in his duabus non erat frequens et ob hoc Diabulbane dictus est.".
 
@@ -29,6 +29,7 @@
     a foaf:Person;
     irishRel:genName "Conglais";
     irishRel:nomName "Cú Glas";
+    agrelon:hasParent <#Nóes>;
     rel:childOf <#Nóes>;
     irishRel:descendantOfGroup <#ChiannachtGlinniGemen>.
 
@@ -44,12 +45,14 @@
 <#Nóes>
     a foaf:Person;
     irishRel:genName "Nóes";
+    agrelon:hasParent <#Fincháin>;
     rel:childOf <#Fincháin>.
 
 <#Fincháin>
     a foaf:Person;
     irishRel:nomName "Finchán";
     irishRel:genName "Fincháin";
+    agrelon:hasParent <#Féicc>;
     rel:childOf <#Féicc>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Fhindchain>.
 
@@ -57,6 +60,7 @@
     a foaf:Person;
     irishRel:nomName "Fíacc";
     irishRel:genName "Féicc";
+    agrelon:hasParent <#ImchadaUlaich>;
     rel:childOf <#ImchadaUlaich>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Fheic>.
 
@@ -64,6 +68,7 @@
     a foaf:Person;
     irishRel:nomName "Imchad Ulach";
     irishRel:genName "Imchada Ulaich";
+    agrelon:hasParent <#Condlae>;
     rel:childOf <#Condlae>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#FhindchadaUlig>.
 
@@ -71,6 +76,7 @@
     a foaf:Person;
     irishRel:nomName "Condla";
     irishRel:genName "Condlae";
+    agrelon:hasParent <#Thaidc>;
     rel:childOf <#Thaidc>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Conla>.
 
@@ -78,6 +84,7 @@
     a foaf:Person;
     irishRel:nomName "Tadc";
     irishRel:genName "Thaidc";
+    agrelon:hasParent <#Céin>;
     rel:childOf <#Céin>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Taidc>.
 
@@ -85,6 +92,7 @@
     a foaf:Person;
     irishRel:nomName "Cían";
     irishRel:genName "Céin";
+    agrelon:hasParent <#Ailella>;
     rel:childOf <#Ailella>;
     owl:sameAs <http://example.com/LL/ciannachta_glinni_gaimen.trig#Cein>.
 
