@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Étálaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,40 +21,47 @@
 <#Scandlán>
     a foaf:Person;
     irishRel:nomName "Scandlán";
+    agrelon:hasParent <#Cuiliussáin>;
     rel:childOf <#Cuiliussáin>.
 
 <#Cuiliussáin>
     a foaf:Person;
     irishRel:genName "Cuiliussáin";
     irishRel:nomName "Cuiliussán";
+    agrelon:hasParent <#Ólchobair>;
     rel:childOf <#Ólchobair>.
 
 <#Ólchobair>
     a foaf:Person;
     irishRel:genName "Ólchobair";
     irishRel:nomName "Ólchobar";
+    agrelon:hasParent <#Fiangáeth>;
     rel:childOf <#Fiangáeth>.
 
 <#Fiangáeth>
     a foaf:Person;
     irishRel:genName "Fiangáeth";
+    agrelon:hasParent <#Bratheman>;
     rel:childOf <#Bratheman>.
 
 <#Bratheman>
     a foaf:Person;
     irishRel:genName "Bratheman";
+    agrelon:hasParent <#Étálaich>;
     rel:childOf <#Étálaich>.
 
 <#Étálaich>
     a foaf:Person;
     irishRel:genName "Étálaich";
     irishRel:nomName "Étálach";
+    agrelon:hasParent <#MáeliDoburchon>;
     rel:childOf <#MáeliDoburchon>.
 
 <#MáeliDoburchon>
     a foaf:Person;
     irishRel:genName "Máeli Doburchon";
     irishRel:nomName "Máel Doburchon";
+    agrelon:hasParent <#MeicLaisre>;
     rel:childOf <#MeicLaisre>.
 
 <#MeicLaisre>
@@ -63,12 +69,14 @@
     irishRel:genName "Meic Laisre";
     irishRel:nomName "Mac Laisre";
     owl:sameAs <http://example.com/Rawl_B502/úi_congusa.trig#MeiccLaisre>;
+    agrelon:hasParent <#Daurthecht>;
     rel:childOf <#Daurthecht>.
 
 <#Daurthecht>
     a foaf:Person;
     irishRel:genName "Daurthecht";
     owl:sameAs <http://example.com/Rawl_B502/genelach_ciarraige_luachra.trig#Daurthacht>;
+    agrelon:hasParent <#Senaich>;
     rel:childOf <#Senaich>.
 
 <#Senaich>
