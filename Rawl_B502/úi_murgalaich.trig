@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Murgalaich"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,36 +21,42 @@
 <#Fland>
     a foaf:Person;
     irishRel:nomName "Fland";
+    agrelon:hasParent <#Flaithim>;
     rel:childOf <#Flaithim>.
 
 <#Flaithim>
     a foaf:Person;
     irishRel:genName "Flaithim";
     irishRel:nomName "Flaithem";
+    agrelon:hasParent <#Thorptha>;
     rel:childOf <#Thorptha>.
 
 <#Thorptha>
     a foaf:Person;
     irishRel:genName "Thorptha";
     irishRel:nomName "Torpth";
+    agrelon:hasParent <#Duinechda>;
     rel:childOf <#Duinechda>.
 
 <#Duinechda>
     a foaf:Person;
     irishRel:genName "Duinechda";
     irishRel:nomName "Duinechd";
+    agrelon:hasParent <#Murgalaich>;
     rel:childOf <#Murgalaich>.
 
 <#Murgalaich>
     a foaf:Person;
     irishRel:genName "Murgalaich";
     irishRel:nomName "Murgalach";
+    agrelon:hasParent <#Midlaige>;
     rel:childOf <#Midlaige>.
 
 <#Midlaige>
     a foaf:Person;
     irishRel:genName "Midlaige";
     irishRel:nomName "Midlach";
+    agrelon:hasParent <#Brain>;
     rel:childOf <#Brain>.
 
 <#Brain>
