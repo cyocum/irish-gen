@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Findtigirn"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,35 +21,41 @@
 <#Scandlán>
     a foaf:Person;
     irishRel:genName "Scan(d)lán";
+    agrelon:hasParent <#Beirgíne>;
     rel:childOf <#Beirgíne>.
 
 <#Beirgíne>
     a foaf:Person;
     irishRel:genName "Beirgíne";
     irishRel:nomName "Beirgín";
+    agrelon:hasParent <#Cobthaich>;
     rel:childOf <#Cobthaich>.
 
 <#Cobthaich>
     a foaf:Person;
     irishRel:genName "Cobthaich";
     irishRel:nomName "Cobthach";
+    agrelon:hasParent <#Ailella>;
     rel:childOf <#Ailella>.
 
 <#Ailella>
     a foaf:Person;
     irishRel:genName "Ailella";
     irishRel:nomName "Ailill";
+    agrelon:hasParent <#Fintigirn>;
     rel:childOf <#Fintigirn>.
 
 <#Fintigirn>
     a foaf:Person;
     irishRel:genName "Fintigirn";
+    agrelon:hasParent <#Cobfhir>;
     rel:childOf <#Cobfhir>.
 
 <#Cobfhir>
     a foaf:Person;
     irishRel:genName "Cobfhir";
     irishRel:nomName "Cobfher";
+    agrelon:hasParent <#Doithnennaich>;
     rel:childOf <#Doithnennaich>.
 
 <#Doithnennaich>
