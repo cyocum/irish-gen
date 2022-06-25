@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Líga"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,58 +21,68 @@
 <#Léithíne>
     a foaf:Person;
     irishRel:nomName "Léithíne";
+    agrelon:hasParent <#Flannáin>;
     rel:childOf <#Flannáin>.
 
 <#Flannáin>
     a foaf:Person;
     irishRel:genName "Flannáin";
     irishRel:nomName "Flannán";
+    agrelon:hasParent <#Sétnae>;
     rel:childOf <#Sétnae>.
 
 <#Sétnae>
     a foaf:Person;
     irishRel:genName "Sétnae";
+    agrelon:hasParent <#Cluichechair>;
     rel:childOf <#Cluichechair>.
 
 <#Cluichechair>
     a foaf:Person;
     irishRel:genName "Cluichechair";
     irishRel:nomName "Cluichechar";
+    agrelon:hasParent <#Colmáin>;
     rel:childOf <#Colmáin>.
 
 <#Colmáin>
     a foaf:Person;
     irishRel:genName "Colmáin";
     irishRel:nomName "Colmán";
+    agrelon:hasParent <#Líga>;
     rel:childOf <#Líga>.
 
 <#Líga>
     a foaf:Person;
     irishRel:genName "Líga";
     irishRel:nomName "Líg";
+    agrelon:hasParent <#ConApaig>;
     rel:childOf <#ConApaig>.
 
 <#ConApaig>
     a foaf:Person;
     irishRel:genName "Con Apaig";
     irishRel:nomName "Cu Apaig";
+    agrelon:hasParent <#Éitcheáin>;
     rel:childOf <#Éitcheáin>.
 
 <#Éitcheáin>
     a foaf:Person;
     irishRel:genName "Éitcheáin";
     irishRel:nomName "Éitcheán";
+    agrelon:hasParent <#Cruinnmáel>;
     rel:childOf <#Cruinnmáel>.
 
 <#Cruinnmáel>
     a foaf:Person;
     irishRel:genName "Cruinnmáel";
+    agrelon:hasParent <#Eithlenn>;
     rel:childOf <#Eithlenn>.
 
 <#Eithlenn>
     a foaf:Person;
     irishRel:genName "Eithlenn";
     irishRel:nomName "Ethlenn";
+    agrelon:hasParent <#Firbb>;
     rel:childOf <#Firbb>.
 
 <#Firbb>
@@ -89,41 +98,49 @@
 <#Rethu>
     a foaf:Person ;
     irishRel:nomName "Rethu" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
 
 <#Lugaid>
     a foaf:Person ;
     irishRel:nomName "Lugaid" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
 
 <#Luigdech>
     a foaf:Person ;
     irishRel:nomName "Luigdech" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
     
 <#Ciara>
     a foaf:Person ;
     irishRel:nomName "Ciara" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
     
 <#h-Ercc>
     a foaf:Person ;
     irishRel:nomName "h-Ercc" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
 
 <#Conliath>
     a foaf:Person ;
     irishRel:nomName "Conliath" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
     
 <#Báethlug>
     a foaf:Person ;
     irishRel:nomName "Báethlug" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
 
 <#Áedlug>
     a foaf:Person ;
     irishRel:nomName "Áedlug" ;
+    agrelon:hasParent <#Coinenn>;
     rel:childOf <#Coinenn>.
 
 <#Retach>
@@ -134,30 +151,36 @@
 <#Cáirthenn>
     a foaf:Person ;
     irishRel:nomName "Cáirthenn" ;
+    agrelon:hasParent <#Retach>;
     rel:childOf <#Retach>.
 
 <#Cúán>
     a foaf:Person ;
     irishRel:nomName "Cúán" ;
+    agrelon:hasParent <#Retach>;
     rel:childOf <#Retach>.
 
 <#Fintan>
     a foaf:Person ;
     irishRel:nomName "Fintan" ;
+    agrelon:hasParent <#Retach>;
     rel:childOf <#Retach>.
 
 <#Druídén>
     a foaf:Person ;
     irishRel:nomName "Druídén" ;
+    agrelon:hasParent <#Retach>;
     rel:childOf <#Retach>.
 
 <#Luguidén>
     a foaf:Person ;
     irishRel:nomName "Luguidén" ;
+    agrelon:hasParent <#Retach>;
     rel:childOf <#Retach>.
 
 <#Donnán>
     a foaf:Person ;
     irishRel:nomName "Donnán" ;
+    agrelon:hasParent <#Retach>;
     rel:childOf <#Retach>.
 }
