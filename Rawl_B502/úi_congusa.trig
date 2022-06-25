@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Congusa"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,47 +21,55 @@
 <#Scandlán>
     a foaf:Person;
     irishRel:nomName "Scandlán";
+    agrelon:hasParent <#Gerruidir>;
     rel:childOf <#Gerruidir>.
 
 <#Gerruidir>
     a foaf:Person;
     irishRel:genName "Gerruidir";
     irishRel:nomName "Gerruider";
+    agrelon:hasParent <#Conbercaich>;
     rel:childOf <#Conbercaich>.
 
 <#Conbercaich>
     a foaf:Person;
     irishRel:genName "Conbercaich";
     irishRel:nomName "Conbercach";
+    agrelon:hasParent <#Ailgelaich>;
     rel:childOf <#Ailgelaich>.
 
 <#Ailgelaich>
     a foaf:Person;
     irishRel:genName "Ailgelaich";
     irishRel:nomName "Ailgelach";
+    agrelon:hasParent <#Congalaich>;
     rel:childOf <#Congalaich>.
 
 <#Congalaich>
     a foaf:Person;
     irishRel:genName "Congalaich";
     irishRel:nomName "Congalach";
+    agrelon:hasParent <#Congusa>;
     rel:childOf <#Congusa>.
 
 <#Congusa>
     a foaf:Person;
     irishRel:genName "Congusa";
     irishRel:nomName "Congus";
+    agrelon:hasParent <#Crundmaíl>;
     rel:childOf <#Crundmaíl>.
 
 <#Crundmaíl>
     a foaf:Person;
     irishRel:genName "Crundmaíl";
+    agrelon:hasParent <#Banbáin>;
     rel:childOf <#Banbáin>.
 
 <#Banbáin>
     a foaf:Person;
     irishRel:genName "Banbáin";
     irishRel:nomName "Banbán";
+    agrelon:hasParent <#MeiccLaisre>;
     rel:childOf <#MeiccLaisre>.
 
 <#MeiccLaisre>
