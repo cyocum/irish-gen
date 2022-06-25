@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 7: Cenél Cóelbad corice so; Cenél immorru Áeda asso sís"@sga;
     dcterms:identifier "LMisc610_CGH_07";
@@ -24,6 +23,7 @@
 <#Áed>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Fergusa>;
     rel:childOf <#Fergusa>;
     irishRel:numChild 7;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/cráeb_ceniúil_fergusa_inso.trig#Áed>;
@@ -39,6 +39,7 @@
 <#Lóegaire>
     a foaf:Person;
     irishRel:nomName "Lóegaire";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>;
     irishRel:ancestorOfGroup <#TellachCinaeda>, <#TellachMuredaig>, <#ÓLoegaire>;
     owl:sameAs <http://example.com/Rawl_B502/genelach_clainne_áeda_m._fergusa.trig#Láegaire>.
@@ -105,6 +106,7 @@
 <#Taután>
     a foaf:Person;
     irishRel:nomName "Taután";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>;
     irishRel:ancestorOfGroup <#ÓeThúatáin>.
 
@@ -128,6 +130,7 @@
 <#Úanaind>
     a foaf:Person;
     irishRel:nomName "Úanaind";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>;
     irishRel:ancestorOfGroup <#ÓeÚanainn>.
 
@@ -143,6 +146,7 @@
 <#Comán>
     a foaf:Person;
     irishRel:nomName "Comán";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>;
     irishRel:ancestorOfGroup <#ÓeCommáin>.
 
@@ -158,6 +162,7 @@
 <#Breccán>
     a foaf:Person;
     irishRel:nomName "Breccán";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>;
     irishRel:ancestorOfGroup <#ÓBrecán>.
 
@@ -173,11 +178,13 @@
 <#Lannán>
     a foaf:Person;
     irishRel:nomName "Lannán";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>.
 
 <#Ubbán>
     a foaf:Person;
     irishRel:nomName "Ubbán";
+    agrelon:hasParent <#Áed>;
     rel:childOf <#Áed>;
     irishRel:ancestorOfGroup <#ÓHubbán>.
 
