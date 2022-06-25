@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Duiblu"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,41 +21,48 @@
 <#Conn>
     a foaf:Person;
     irishRel:nomName "Conn";
+    agrelon:hasParent <#Rechtabrat>;
     rel:childOf <#Rechtabrat>.
 
 <#Rechtabrat>
     a foaf:Person;
     irishRel:genName "Rechtabrat";
+    agrelon:hasParent <#DuibSláine>;
     rel:childOf <#DuibSláine>.
 
 <#DuibSláine>
     a foaf:Person;
     irishRel:genName "Duib Sláine";
     irishRel:nomName "Dub Sláine";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>.
 
 <#Fergaile>
     a foaf:Person;
     irishRel:genName "Fergaile";
     irishRel:nomName "Fergail";
+    agrelon:hasParent <#Congeltaich>;
     rel:childOf <#Congeltaich>.
 
 <#Congeltaich>
     a foaf:Person;
     irishRel:genName "Congeltaich";
     irishRel:nomName "Congeltach";
+    agrelon:hasParent <#Eichlich>;
     rel:childOf <#Eichlich>.
 
 <#Eichlich>
     a foaf:Person;
     irishRel:genName "Eichlich";
     irishRel:nomName "Eichlech";
+    agrelon:hasParent <#Duiblu>;
     rel:childOf <#Duiblu>.
 
 <#Duiblu>
     a foaf:Person;
     irishRel:genName "Duiblu";
     irishRel:genName "Duible";
+    agrelon:hasParent <#MáelTuile>;
     rel:childOf <#MáelTuile>.
 
 <#MáelTuile>
