@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Duibleisc"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text020.html>;
@@ -23,11 +22,13 @@
 <#ÓengusNemderg>
     a foaf:Person;
     irishRel:nomName "Óengus Nemderg";
+    agrelon:hasParent <#Duibleisc>;
     rel:childOf <#Duibleisc>.
 
 <#Duibleisc>
     a foaf:Person;
     irishRel:genName "Duibleisc";
+    agrelon:hasParent <#Luigdech>;
     rel:childOf <#Luigdech>.
 
 <#Luigdech>
@@ -43,10 +44,12 @@
 <#Énna>
     a foaf:Person ;
     irishRel:nomName "Énna" ;
+    agrelon:hasParent <#ÓengusaCennfota>;
     rel:childOf <#ÓengusaCennfota>.
 
 <#Muredach>
     a foaf:Person ;
     irishRel:nomName "Muredach" ;
+    agrelon:hasParent <#ÓengusaCennfota>;
     rel:childOf <#ÓengusaCennfota>.
 }
