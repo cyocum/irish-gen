@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Cholla"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,47 +21,55 @@
 <#DubInbe>
     a foaf:Person;
     irishRel:nomName "Dub Inbe";
+    agrelon:hasParent <#Meráin>;
     rel:childOf <#Meráin>.
 
 <#Meráin>
     a foaf:Person;
     irishRel:genName "Meráin";
     irishRel:nomName "Merán";
+    agrelon:hasParent <#DuibDúin>;
     rel:childOf <#DuibDúin>.
 
 <#DuibDúin>
     a foaf:Person;
     irishRel:genName "Duib Dúin";
     irishRel:nomName "Dub Dúin";
+    agrelon:hasParent <#Fairchellai(ch)>;
     rel:childOf <#Fairchellai(ch)>.
 
 <#Fairchellaich>
     a foaf:Person;
     irishRel:genName "Fairchellai(ch)";
     irishRel:nomName "Fairchella(ch)";
+    agrelon:hasParent <#FirDála>;
     rel:childOf <#FirDála>.
 
 <#FirDála>
     a foaf:Person;
     irishRel:genName "Fir Dála";
     irishRel:nomName "Fer Dála";
+    agrelon:hasParent <#Conh-Uidir>;
     rel:childOf <#Conh-Uidir>.
 
 <#Conh-Uidir>
     a foaf:Person;
     irishRel:genName "Con h-Uidir";
+    agrelon:hasParent <#Fíngin>;
     rel:childOf <#Fíngin>;
     owl:sameAs <http://example.com/Rawl_B502/úi_aithirne.trig#Conh-Uidir>.
 
 <#Fíngin>
     a foaf:Person;
     irishRel:genName "Fíngin";
+    agrelon:hasParent <#Collae>;
     rel:childOf <#Collae>;
     owl:sameAs <http://example.com/Rawl_B502/úi_aithirne.trig#Fíngin>.
 
 <#Collae>
     a foaf:Person;
     irishRel:genName "Collae";
+    agrelon:hasParent <#Duba>;
     rel:childOf <#Duba>;
     owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#Collae>.
 
