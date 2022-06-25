@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Fiachrach Find"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text14.html>;
@@ -22,29 +21,34 @@
 <#Flannacán>
     a foaf:Person;
     irishRel:nomName "Flannacán";
+    agrelon:hasParent <#Néill>;
     rel:childOf <#Néill>.
 
 <#Néill>
     a foaf:Person;
     irishRel:genName "Néill";
     irishRel:nomName "Niall";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Maclaích>;
     rel:childOf <#Maclaích>.
 
 <#Maclaích>
     a foaf:Person;
     irishRel:genName "Maclaích";
+    agrelon:hasParent <#Condálaich>;
     rel:childOf <#Condálaich>.
 
 <#Condálaich>
     a foaf:Person;
     irishRel:genName "Condálaich";
     irishRel:nomName "Condálach";
+    agrelon:hasParent <#Amalgada>;
     rel:childOf <#Amalgada>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Condalaig>.
 
@@ -52,6 +56,7 @@
     a foaf:Person;
     irishRel:genName "Amalgada";
     irishRel:nomName "Amalgad";
+    agrelon:hasParent <#Deinmedaig>;
     rel:childOf <#Deinmedaig>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Amalgaid>.
 
@@ -59,6 +64,7 @@
     a foaf:Person;
     irishRel:genName "Deinmedaig";
     irishRel:nomName "Deinmedach";
+    agrelon:hasParent <#Dímmae>;
     rel:childOf <#Dímmae>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Déinmetaig>.
 
@@ -66,6 +72,7 @@
     a foaf:Person;
     irishRel:genName "Dímmae";
     irishRel:nomName "Dímma";
+    agrelon:hasParent <#Laidgneáin>;
     rel:childOf <#Laidgneáin>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Dimmai>.
 
@@ -73,12 +80,14 @@
     a foaf:Person;
     irishRel:genName "Laidgneáin";
     irishRel:nomName "Laidgneán";
+    agrelon:hasParent <#Máelhuidir>;
     rel:childOf <#Máelhuidir>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Laidcnen>.
 
 <#Máelhuidir>
     a foaf:Person;
     irishRel:genName "Máelhuidir";
+    agrelon:hasParent <#Áeda>;
     rel:childOf <#Áeda>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Maeludir>.
 
@@ -86,6 +95,7 @@
     a foaf:Person;
     irishRel:genName "Áeda";
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Fínáin>;
     rel:childOf <#Fínáin>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Aeda>.
 
@@ -93,6 +103,7 @@
     a foaf:Person;
     irishRel:genName "Fínáin";
     irishRel:nomName "Fínán";
+    agrelon:hasParent <#Amalgada-44c956b0>;
     rel:childOf <#Amalgada-44c956b0>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Fhinain>.
 
@@ -100,6 +111,7 @@
     a foaf:Person;
     irishRel:genName "Amalgada";
     irishRel:nomName "Amalgad";
+    agrelon:hasParent <#FiachrachFind>;
     rel:childOf <#FiachrachFind>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Amalgaid-39c57d70>.
 
@@ -107,6 +119,7 @@
     a foaf:Person;
     irishRel:genName "Fiachrach Find";
     irishRel:nomName "Fiachaid Find";
+    agrelon:hasParent <#Bresail>;
     rel:childOf <#Bresail>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#FiachrachFind>.
 
@@ -114,6 +127,7 @@
     a foaf:Person;
     irishRel:genName "Bresail";
     irishRel:nomName "Bresal";
+    agrelon:hasParent <#MaineM>;
     rel:childOf <#MaineM>;
     owl:sameAs <http://example.com/LL/h_fiachrach117.trig#Bresail>.
 
