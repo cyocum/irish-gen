@@ -9,20 +9,20 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix nsl: <http://www.dbpedia.org/resource/> .
-@prefix vaem: <http://www.linkedmodel.org/schema/vaem#>.
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/AnaS> {
 <>
-a dctype:Dataset;
-dcterms:title "Acallam na Senórach: Section 50";
-dcterms:isFormatOf <https://celt.ucc.ie//published/G303000/text050.html>;
-dcterms:format "application/trig" ;
-prov:wasDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
+    a dctype:Dataset;
+    dcterms:title "Acallam na Senórach: Section 50";
+    dcterms:isFormatOf <https://celt.ucc.ie//published/G303000/text050.html>;
+    dcterms:format "application/trig" ;
+    prov:wasDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
 
 <#Fhind>
     a foaf:Person;
     irishRel:nomName "Finn";
+    agrelon:hasParent <#Cumaill>;
     rel:childOf <#Cumaill>;
     irishRel:descendantOfGroup <#Laignib>;
     irishRel:descendantOfGroup <#UibTairrsig>;
@@ -52,13 +52,16 @@ prov:wasDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
     a foaf:Person;
     irishRel:nomName "Find";
     owl:sameAs <#Fhind>;
+    agrelon:hasParent <#Cumaill-ee5516b0>;
     rel:childOf <#Cumaill-ee5516b0>;
+    agrelon:hasParent <#MuirneMunchaem>;
     rel:childOf <#MuirneMunchaem>.
 
 <#Cumaill-ee5516b0>
     a foaf:Person;
     irishRel:genName "Cumaill";
     irishRel:nomName "Cumall";
+    agrelon:hasParent <#Treduirnn>;
     rel:childOf <#Treduirnn>;
     owl:sameAs <#Cumaill>.
 
@@ -66,18 +69,21 @@ prov:wasDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
     a foaf:Person;
     irishRel:genName "Treduirnn";
     irishRel:nomName "Tredorn";
+    agrelon:hasParent <#Trenmoir>;
     rel:childOf <#Trenmoir>.
 
 <#Trenmoir>
     a foaf:Person;
     irishRel:genName "Trenmoir";
     irishRel:nomName "Trenmor";
+    agrelon:hasParent <#CairpriGarbsroin>;
     rel:childOf <#CairpriGarbsroin>.
 
 <#CairpriGarbsroin>
     a foaf:Person;
     irishRel:genName "Cairpri Garbsroin";
     irishRel:nomName "Cairpre Garbsron";
+    agrelon:hasParent <#FiachachFobricc>;
     rel:childOf <#FiachachFobricc>.
 
 <#FiachachFobricc>
@@ -90,6 +96,7 @@ prov:wasDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Muirne Munchaem";
+    agrelon:hasParent <#Taidg>;
     rel:childOf <#Taidg>;
     owl:sameAs <http://example.com/LLAdd/LLAdd1.trig#MuirneMunchaem>.
 
@@ -97,13 +104,14 @@ prov:wasDerivedFrom <https://celt.ucc.ie//published/G303000/text050.html> .
     a foaf:Person;
     irishRel:nomName "Tadg";
     owl:sameAs <http://example.com/LLAdd/LLAdd1.trig#Taidhg>;
+    agrelon:hasParent <#Nuadut>;
     rel:childOf <#Nuadut>.
 
 <#Nuadut>
     a foaf:Person;
     irishRel:genName "Nuadu";
     owl:sameAs <http://example.com/LLAdd/LLAdd1.trig#Nuadat>;
-    rel:descendantOfGroup <#TuathaDeDanann>.
+    irishRel:descendantOfGroup <#TuathaDeDanann>.
 
 <#TuathaDeDanann>
     a irishRel:PopulationGroup;
