@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Brócáin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,24 +21,28 @@
 <#MacSaiglenn>
     a foaf:Person;
     irishRel:nomName "Mac Saiglenn";
+    agrelon:hasParent <#Damáin>;
     rel:childOf <#Damáin>.
 
 <#Damáin>
     a foaf:Person;
     irishRel:genName "Damáin";
     irishRel:nomName "Damán";
+    agrelon:hasParent <#Mellach>;
     rel:childOf <#Mellach>.
 
 <#Mellach>
     a foaf:Person;
     irishRel:genName "Mellach";
     irishRel:nomName "Mellaid";
+    agrelon:hasParent <#Linge>;
     rel:childOf <#Linge>.
 
 <#Linge>
     a foaf:Person;
     irishRel:genName "Linge";
     irishRel:nomName "Ling";
+    agrelon:hasParent <#Angáin>;
     rel:childOf <#Angáin>;
     owl:sameAs <http://example.com/Rawl_B502/de_úib_angáin.trig#Linge>.
 
