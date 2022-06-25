@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Dúnchada Bic"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,30 +21,35 @@
 <#Dubóc>
     a foaf:Person;
     irishRel:nomName "Dubóc";
+    agrelon:hasParent <#Néill>;
     rel:childOf <#Néill>.
 
 <#Néill>
     a foaf:Person;
     irishRel:genName "Néill";
     irishRel:nomName "Niall";
+    agrelon:hasParent <#Sechnasaich>;
     rel:childOf <#Sechnasaich>.
 
 <#Sechnasaich>
     a foaf:Person;
     irishRel:genName "Sechnasaich";
     irishRel:nomName "Sechnasach";
+    agrelon:hasParent <#Rechtgusa>;
     rel:childOf <#Rechtgusa>.
 
 <#Rechtgusa>
     a foaf:Person;
     irishRel:genName "Rechtgusa";
     irishRel:nomName "Rechtgus";
+    agrelon:hasParent <#Dúnchada>;
     rel:childOf <#Dúnchada>.
 
 <#Dúnchada>
     a foaf:Person;
     irishRel:genName "Dúnchada";
     irishRel:nomName "Dúnchad";
+    agrelon:hasParent <#Rechtabrat>;
     rel:childOf <#Rechtabrat>.
 
 <#Rechtabrat>
@@ -54,30 +58,35 @@
 <#Meiscell>
     a foaf:Person;
     irishRel:nomName "Meiscell";
+    agrelon:hasParent <#Finnocáin>;
     rel:childOf <#Finnocáin>.
 
 <#Finnocáin>
     a foaf:Person;
     irishRel:genName "Finnocáin";
     irishRel:nomName "Finnocán";
+    agrelon:hasParent <#Thipraite>;
     rel:childOf <#Thipraite>.
 
 <#Thipraite>
     a foaf:Person;
     irishRel:genName "Thipraite";
     irishRel:nomName "Tipraite";
+    agrelon:hasParent <#Óengusa>;
     rel:childOf <#Óengusa>.
 
 <#Óengusa>
     a foaf:Person;
     irishRel:genName "Óengusa";
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Flaithbertaich>;
     rel:childOf <#Flaithbertaich>.
 
 <#Flaithbertaich>
     a foaf:Person;
     irishRel:genName "Flaithbertaich";
     irishRel:nomName "Flaithbertach";
+    agrelon:hasParent <#Dúnchada-285e5c74>;
     rel:childOf <#Dúnchada-285e5c74>.
 
 <#Dúnchada-285e5c74>
@@ -85,6 +94,7 @@
     irishRel:genName "Dúnchada";
     irishRel:nomName "Dúnchad";
     owl:sameAs <#Dúnchada>;
+    agrelon:hasParent <#Rechtabrat-00d339e1>;
     rel:childOf <#Rechtabrat-00d339e1>.
 
 <#Rechtabrat-00d339e1>
@@ -92,6 +102,7 @@
     irishRel:genName "Rechtabrat";
     irishRel:nomName "Rechtabra";
     owl:sameAs <#Rechtabrat>;
+    agrelon:hasParent <#MáelTuili>;
     rel:childOf <#MáelTuili>.
 
 <#MáelTuili>
@@ -100,36 +111,42 @@
 <#Flaithem>
     a foaf:Person;
     irishRel:nomName "Flaithem";
+    agrelon:hasParent <#Muilléith>;
     rel:childOf <#Muilléith>.
 
 <#Muilléith>
     a foaf:Person;
     irishRel:genName "Muilléith";
     irishRel:nomName "Muilléth";
+    agrelon:hasParent <#DuibDáLeithi>;
     rel:childOf <#DuibDáLeithi>.
 
 <#DuibDáLeithi>
     a foaf:Person;
     irishRel:genName "Duib Dá Leithi";
     irishRel:nomName "Dub Dá Leith";
+    agrelon:hasParent <#Conchobuir>;
     rel:childOf <#Conchobuir>.
 
 <#Conchobuir>
     a foaf:Person;
     irishRel:genName "Conchobuir";
     irishRel:nomName "Conchobur";
+    agrelon:hasParent <#Duinechda>;
     rel:childOf <#Duinechda>.
 
 <#Duinechda>
     a foaf:Person;
     irishRel:genName "Duinechda";
     irishRel:nomName "Duinechd";
+    agrelon:hasParent <#Dúnchada-4abe9461>;
     rel:childOf <#Dúnchada-4abe9461>.
 
 <#Dúnchada-4abe9461>
     a foaf:Person;
     irishRel:genName "Dúnchada";
     irishRel:nomName "Dúnchad";
+    agrelon:hasParent <#Rechtabrat-7d96e553>;
     rel:childOf <#Rechtabrat-7d96e553>.
 
 <#Rechtabrat-7d96e553>
@@ -137,6 +154,7 @@
     irishRel:genName "Rechtabrat";
     irishRel:nomName "Rechtabra";
     owl:sameAs <#Rechtabrat>;
+    agrelon:hasParent <#MáelTuile>;
     rel:childOf <#MáelTuile>.
 
 <#MáelTuile>
