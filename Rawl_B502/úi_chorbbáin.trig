@@ -8,11 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Rawl_B502> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Úi Chorbbáin"@sga;
     dcterms:isFormatOf <http://www.ucc.ie/celt/published/G105003/text023.html>;
@@ -22,36 +21,42 @@
 <#DubInbe>
     a foaf:Person;
     irishRel:nomName "Dub Inbe";
+    agrelon:hasParent <#Gaiscedaig>;
     rel:childOf <#Gaiscedaig>.
 
 <#Gaiscedaig>
     a foaf:Person;
     irishRel:genName "Gaiscedaig";
     irishRel:nomName "Gaiscedach";
+    agrelon:hasParent <#Cellaich>;
     rel:childOf <#Cellaich>.
 
 <#Cellaich>
     a foaf:Person;
     irishRel:genName "Cellaich";
     irishRel:nomName "Cellach";
+    agrelon:hasParent <#Échtgaile>;
     rel:childOf <#Échtgaile>.
 
 <#Échtgaile>
     a foaf:Person;
     irishRel:genName "Échtgaile";
     irishRel:nomName "Échtgail";
+    agrelon:hasParent <#Sírladaich>;
     rel:childOf <#Sírladaich>.
 
 <#Sírladaich>
     a foaf:Person;
     irishRel:genName "Sírladaich";
     irishRel:nomName "Sírladach";
+    agrelon:hasParent <#FhirShin>;
     rel:childOf <#FhirShin>.
 
 <#FhirShin>
     a foaf:Person;
     irishRel:genName "Fhir Shin";
     irishRel:nomName "Fer Shin";
+    agrelon:hasParent <#Corbbáin>;
     rel:childOf <#Corbbáin>.
 
 <#Corbbáin>
@@ -62,23 +67,27 @@
 <#Flaithnia>
     a foaf:Person;
     irishRel:nomName "Flaithnia";
+    agrelon:hasParent <#Becenich>;
     rel:childOf <#Becenich>.
 
 <#Becenich>
     a foaf:Person;
     irishRel:genName "Becenich";
     irishRel:nomName "Becenech";
+    agrelon:hasParent <#Domdosna>;
     rel:childOf <#Domdosna>.
 
 <#Domdosna>
     a foaf:Person;
     irishRel:genName "Domdosna";
+    agrelon:hasParent <#Donnchaire>;
     rel:childOf <#Donnchaire>.
 
 <#Donnchaire>
     a foaf:Person;
     irishRel:genName "Donnchaire";
     irishRel:nomName "Donnchair";        
+    agrelon:hasParent <#FirSin>;
     rel:childOf <#FirSin>.
 
 <#FirSin>
@@ -86,6 +95,7 @@
     irishRel:genName "Fir Sin";
     irishRel:nomName "Fer Sin";
     owl:sameAs <#FhirShin>;
+    agrelon:hasParent <#Corbbáin-f6754fbb>;
     rel:childOf <#Corbbáin-f6754fbb>.
 
 <#Corbbáin-f6754fbb>
@@ -94,30 +104,35 @@
 <#Banbán>
     a foaf:Person;
     irishRel:nomName "Banbán";
+    agrelon:hasParent <#Donngaile>;
     rel:childOf <#Donngaile>.
 
 <#Donngaile>
     a foaf:Person;
     irishRel:genName "Donngaile";
     irishRel:nomName "Donngail";
+    agrelon:hasParent <#Donngalaich>;
     rel:childOf <#Donngalaich>.
 
 <#Donngalaich>
     a foaf:Person;
     irishRel:genName "Donngalaich";
     irishRel:nomName "Donngalach";
+    agrelon:hasParent <#Aurchlosaich>;
     rel:childOf <#Aurchlosaich>.
 
 <#Aurchlosaich>
     a foaf:Person;
     irishRel:genName "Aurchlosaich";
     irishRel:nomName "Aurchlosach";
+    agrelon:hasParent <#FirSin-dd90a6db>;
     rel:childOf <#FirSin-dd90a6db>.
 
 <#FirSin-dd90a6db>
     a foaf:Person;
     irishRel:genName "Fir Sin";
     owl:sameAs <#FhirShin>;
+    agrelon:hasParent <#Corbbáin-1a004406>;
     rel:childOf <#Corbbáin-1a004406>.
 
 <#Corbbáin-1a004406>
