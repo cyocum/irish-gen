@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 34: Do fhorshlointib hÚa ndEchach in so sís"@sga;
     dcterms:identifier "LMisc610_CGH_34";
@@ -61,6 +60,7 @@
     a foaf:Person;
     irishRel:nomName "Fachtna";
     irishRel:ancestorOfGroup <#Conaille>;
+    agrelon:hasParent <#Senchada>;
     rel:childOf <#Senchada>.
 
 <#Senchada>
@@ -75,6 +75,7 @@
     a foaf:Person;
     irishRel:genName "Celtchair";
     irishRel:nomName "Celtchar";
+    agrelon:hasParent <#Cuithechair>;
     rel:childOf <#Cuithechair>;
     irishRel:ancestorOfGroup <#Rosraige>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Celtchair>.
