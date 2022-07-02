@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 14: De causis quibus exules Aquilonensium ad Muminenses adducti sunt"@sga;
     dcterms:identifier "LMisc610_CGH_14";
@@ -25,6 +24,7 @@
     a foaf:Person;
     irishRel:genName "Fergusa";
     irishRel:nomName "Fergus";
+    agrelon:hasParent <#RosaRóig>;
     rel:childOf <#RosaRóig>;
     owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Fergus>;
     owl:sameAs <http://example.com/LL/senchas_coitechenn_clainde_fergusa.trig#Fhergusa>;
@@ -80,6 +80,7 @@
 <#Én>
     a foaf:Person;
     irishRel:nomName "Én";
+    agrelon:hasParent <#Mauguirn>;
     rel:childOf <#Mauguirn>.
 
 <#Mauguirn>
@@ -89,6 +90,7 @@
 <#Corc>
     a foaf:Person;
     irishRel:nomName "Corc";
+    agrelon:hasParent <#Luigthig>;
     rel:childOf <#Luigthig>;
     foaf:knows <#Én>.
 
@@ -99,6 +101,7 @@
 <#Corp>
     a foaf:Person;
     irishRel:nomName "Corp";
+    agrelon:hasParent <#Ainirmae>;
     rel:childOf <#Ainirmae>.
 
 <#Ainirmae>
@@ -108,6 +111,7 @@
 <#Coinniu>
     a foaf:Person;
     irishRel:nomName "Coinniu";
+    agrelon:hasParent <#Seghu>;
     rel:childOf <#Seghu>;
     rdfs:comment "oc Dún Choinnenn & oc Comarthu".
 
@@ -124,12 +128,15 @@
 <#Cethernd>
     a foaf:Person;
     irishRel:nomName "Cethernd";
+    agrelon:hasParent <#Fintain>;
     rel:childOf <#Fintain>;
-    rel:parentOf [
-      a foaf:Person;
-      foaf:gender "female";
-    ];
+    agrelon:hasChild _:missing-2925a612;
+    rel:parentOf _:missing-2925a612;
     irishRel:ancestorOfGroup <#CorcoSelgind>.
+
+_:missing-2925a612
+   a foaf:Person;
+   foaf:gender "female" .    
 
 <#Fintain>
     a foaf:Person;
@@ -144,16 +151,20 @@
     a foaf:Person;
     irishRel:nomName "Fergus";
     owl:sameAs <#Fergusa>;
+    agrelon:hasVitalLethalContact <#Cethernd>;
     rel:antagonistOf <#Cethernd>.
 
 <#FerDeodae>
     a foaf:Person;
     irishRel:nomName "Fer Deodae";
-    rel:antagonistOf [
+    agrelon:hasVitalLethalContact _:missing-272c15c7 ;
+    rel:antagonistOf _:missing-272c15c7.
+
+_:missing-272c15c7
       a foaf:Person;
-      rel:childOf <#Fergus>;
-      owl:sameAs <#Fecc>;
-    ].
+      agrelon:hasParent <#Fergus>;
+    rel:childOf <#Fergus>;
+      owl:sameAs <#Fecc>.
 
 <#Fecc>
     a foaf:Person;
@@ -168,7 +179,9 @@
 <#Solchenn>
     a foaf:Person;
     irishRel:nomName "Solchenn";
+    agrelon:hasParent <#Cethernd>;
     rel:childOf <#Cethernd>;
+    agrelon:hasVitalLethalContact <#Fecc>;
     rel:antagonistOf <#Fecc>;
     irishRel:ancestorOfGroup <#CorcoSolgind>.
 
@@ -194,7 +207,7 @@
     owl:sameAs <http://vanhamel.nl/codecs/Conailla_Medb_m%C3%ADchuru>.
 
 << <>
-        rdfs:comment "This section is very terse and the connections between characters are not always apparent. It should be reviewed against the IrishGen database and other sources once more material has been added. Also, a translation exists of 'Conailla medb michura' in Études Celtiques 29; this will be consulted when the opportunity permits." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "This section is very terse and the connections between characters are not always apparent. It should be reviewed against the IrishGen database and other sources once more material has been added. Also, a translation exists of 'Conailla medb michura' in Études Celtiques 29; this will be consulted when the opportunity permits." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 }
