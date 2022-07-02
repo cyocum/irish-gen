@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 35: Do fhorshlointib Ulad íar coitchenn in so sís"@sga;
     dcterms:identifier "LMisc610_CGH_35";
@@ -50,6 +49,7 @@
 <#FergnaGarb>
     a foaf:Person;
     irishRel:nomName "Fergna Garb";
+    agrelon:hasParent <#Salaich>;
     rel:childOf <#Salaich>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#FergnaGarb>.
 
@@ -57,6 +57,7 @@
     a foaf:Person;
     irishRel:genName "Salaich";
     irishRel:nomName "Salach";
+    agrelon:hasParent <#LoairndMáir>;
     rel:childOf <#LoairndMáir>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Salaich>.
 
@@ -88,7 +89,9 @@
     a foaf:Person;
     irishRel:genName "Chonget Conganchnes";
     irishRel:nomName "Congat Conganchnes";
+    agrelon:hasParent <#Dedad>;
     rel:childOf <#Dedad>;
+    agrelon:hasSibling <#Búachaill>, <#ConallCass>, <#Corc>;
     rel:siblingOf <#Búachaill>, <#ConallCass>, <#Corc>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#ChongetChonganchnis>.
 
@@ -109,6 +112,7 @@
     a foaf:Person;
     irishRel:genName "Celtchair";
     irishRel:nomName "Celtchar";
+    agrelon:hasParent <#Cuithechair>;
     rel:childOf <#Cuithechair>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_fhorshlointib_húa_ndechach.trig#Celtchair>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Cheltchar>.
@@ -117,6 +121,7 @@
     a foaf:Person;
     irishRel:genName "Cuithechair";
     irishRel:nomName "Cuithechar";
+    agrelon:hasParent <#Cuithechair>;
     rel:childOf <#Cuithechair>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_fhorshlointib_húa_ndechach.trig#Cuithechair>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Cuithechair>.
@@ -125,6 +130,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Ibell";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Ibel>.
 
@@ -132,6 +138,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Ném";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Némdaille>.
 
@@ -139,6 +146,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Dalle";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Némdaille>.
 
@@ -146,7 +154,9 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Scadarc Angain";
+    agrelon:hasParent <#Celtchair>;
     rel:childOf <#Celtchair>;
+    agrelon:hasSpouse <#ChongetConganchnes>;
     rel:spouseOf <#ChongetConganchnes>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Scáthdarcc>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Angain>.
@@ -155,11 +165,13 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Drónae";
+    agrelon:hasParent <#Chonchobair>;
     rel:childOf <#Chonchobair>.
 
 <#Chonchobair>
     a foaf:Person;
     irishRel:genName "Chonchobair";
+    agrelon:hasParent <#Nessa>;
     rel:childOf <#Nessa>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Conchobuir>.
 
@@ -173,6 +185,7 @@
     a foaf:Person;
     irishRel:genName "Lugdach";
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#ÓengusaFind>;
     rel:childOf <#ÓengusaFind>;
     irishRel:numChild 6;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Lugdach>;
@@ -188,18 +201,21 @@
 <#Áed>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Áed>.
 
 <#Daig>
     a foaf:Person;
     irishRel:nomName "Daig";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Daig>.
 
 <#Dallán>
     a foaf:Person;
     irishRel:nomName "Dallán";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Dallán>.
 
@@ -207,7 +223,9 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Iniu";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
+    agrelon:hasSpouse <#Néill>;
     rel:spouseOf <#Néill>;
     rel:parentOf <#Conaill>, <#Eogain>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Indu>.
@@ -216,7 +234,9 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Indiacht";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
+    agrelon:hasSpouse <#Buiti>;
     rel:spouseOf <#Buiti>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Indécht>.
 
@@ -224,7 +244,9 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Scíath";
+    agrelon:hasParent <#Lugdach>;
     rel:childOf <#Lugdach>;
+    agrelon:hasSpouse <#Taidg>;
     rel:spouseOf <#Taidg>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Sciath>.
 
@@ -232,6 +254,7 @@
     a foaf:Person;
     irishRel:genName "Néill";
     irishRel:nomName "Níall";
+    agrelon:hasParent <#Echach>;
     rel:childOf <#Echach>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Néill>;
     owl:sameAs <http://example.com/LL/rig_ailig.trig#NeillNóigiallaig>.
@@ -267,12 +290,14 @@
 <#Colcu>
     a foaf:Person;
     irishRel:nomName "Colcu";
+    agrelon:hasParent <#Buiti>;
     rel:childOf <#Buiti>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Colgo>.
 
 <#Crumthand>
     a foaf:Person;
     irishRel:nomName "Crumthand";
+    agrelon:hasParent <#Buiti>;
     rel:childOf <#Buiti>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Crimthan>.
 
@@ -280,6 +305,7 @@
     a foaf:Person;
     irishRel:genName "Taidg";
     irishRel:nomName "Tadg";
+    agrelon:hasParent <#Céin>;
     rel:childOf <#Céin>;
     owl:sameAs <http://example.com/Rawl_B502/do_forslointib_ulad_iar_coitchiund_in_so.trig#Taidg>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Taidc>.
@@ -292,7 +318,6 @@
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cian>.
 
 << <>
-        rdfs:comment "The chronology here makes no sense. Two women from the same generation cannot be spouses of Tadc mac Céin (Cormac mac Airt's general; so 2nd cent. AD) and Níall Noígiallach (4th/5th cent. AD)." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
-
+    rdfs:comment "The chronology here makes no sense. Two women from the same generation cannot be spouses of Tadc mac Céin (Cormac mac Airt's general; so 2nd cent. AD) and Níall Noígiallach (4th/5th cent. AD)." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 }
