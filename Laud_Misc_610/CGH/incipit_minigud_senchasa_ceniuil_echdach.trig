@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 2: Incipit Minigud Senchasa Ceniuil Echdach"@sga;
     dcterms:identifier "LMisc610_CGH_02";
@@ -24,6 +23,7 @@
 <#Eochaid>
     a foaf:Person;
     irishRel:nomName "Eochaid";
+    agrelon:hasParent <#Eogain>;
     rel:childOf <#Eogain>;
     irishRel:numChild 6;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Eochaid-cbd6d220>.
@@ -43,6 +43,7 @@
 <#Doe>
     a foaf:Person;
     irishRel:nomName "Doe";
+    agrelon:hasParent <#Eochaid>;
     rel:childOf <#Eochaid>;
     foaf:title "rí"@sga, "king"@eng;
     rdfs:comment "ri Húa Fiachrach uile & cheniúil Echdach, condorchair la Húib Mic Carthind ic Áth Guirt in chatha";
@@ -55,6 +56,7 @@
 <#Cíarán>
     a foaf:Person;
     irishRel:nomName "Cíarán";
+    agrelon:hasParent <#Eochaid>;
     rel:childOf <#Eochaid>;
     irishRel:ancestorOfGroup <#SílCíaráin>.
 
@@ -82,6 +84,7 @@
 <#Feidilmid>
     a foaf:Person;
     irishRel:nomName "Feidilmid";
+    agrelon:hasParent <#Eochaid>;
     rel:childOf <#Eochaid>;
     irishRel:ancestorOfGroup <#HúiChellaig>, <#HuiCharadáin>, <#HúiThigernaig>, <#HúiDrucáin>, <#HúiRuissi>.
 
@@ -108,6 +111,7 @@
 <#Maelfeirn>
     a foaf:Person;
     irishRel:nomName "Maelfeirn";
+    agrelon:hasParent <#Eochaid>;
     rel:childOf <#Eochaid>;
     irishRel:ancestorOfGroup <#MuinterRoismicnErcca>.
 
@@ -139,6 +143,7 @@
 <#Assán>
     a foaf:Person;
     irishRel:nomName "Assán";
+    agrelon:hasParent <#Eochaid>;
     rel:childOf <#Eochaid>;
     irishRel:ancestorOfGroup <#HúiRethithe>, <#HúiDrennáin>, <#HúiGingnig>.
 
@@ -157,6 +162,7 @@
 <#Meinne>
     a foaf:Person;
     irishRel:nomName "Meinne";
+    agrelon:hasParent <#Eochaid>;
     rel:childOf <#Eochaid>;
     irishRel:ancestorOfGroup <#HúiChanán>, <#HúiChoirne>.
 
