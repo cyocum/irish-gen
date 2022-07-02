@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 4: Cróeb Cheniúil Binnig Inso"@sga;
     dcterms:identifier "LMisc610_CGH_04";
@@ -24,6 +23,7 @@
 <#EochoBinnech>
     a foaf:Person;
     irishRel:nomName "Eocho Binnech";
+    agrelon:hasParent <#Eogain>;
     rel:childOf <#Eogain>;
     irishRel:numChild 7;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Bindech>.
@@ -37,12 +37,14 @@
 <#Láréin>
     a foaf:Person;
     irishRel:nomName "Láréin";
+    agrelon:hasParent <#EochoBinnech>;
     rel:childOf <#EochoBinnech>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Láréin>;
     rel:childOf <#Láréin>;
     irishRel:ancestorOfGroup <#CenélBinnigGlindi>, <#CenélBinnigLochaDrochait>, <#CenélBinnigTúaitheRois>.
 
@@ -62,6 +64,7 @@
     a foaf:Person;
     irishRel:genName "Áedáin";
     irishRel:nomName "Áedán";
+    agrelon:hasParent <#Láréin>;
     rel:childOf <#Láréin>;
     irishRel:ancestorOfGroup <#FirMaigeLocha>.
 
@@ -79,6 +82,7 @@
     a foaf:Person;
     irishRel:genName "Díarmada";
     irishRel:nomName "Díarmait";
+    agrelon:hasParent <#Láréin>;
     rel:childOf <#Láréin>;
     irishRel:ancestorOfGroup <#ClandOsséne>, <#HúiThomrair>, <#MuinterThaigenaCommairche>.
 
@@ -106,17 +110,20 @@
 <#Fothudnacanóne>
     a foaf:Person;
     irishRel:nomName "Fothud na canóne";
+    agrelon:hasAncestor <#Díarmada>;
     rel:descendantOf <#Díarmada>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q7401234>.
 
 <#Flannabrafíal>
     a foaf:Person;
     irishRel:nomName "Flannabra fíal";
+    agrelon:hasAncestor <#Díarmada>;
     rel:descendantOf <#Díarmada>.
 
 <#Crimthand>
     a foaf:Person;
     irishRel:nomName "Crimthand";
+    agrelon:hasParent <#EochoBinnech>;
     rel:childOf <#EochoBinnech>;
     irishRel:ancestorOfGroup <#ClandForballaig>, <#ClandOdrán>.
 
@@ -140,6 +147,7 @@
 <#Eocho>
     a foaf:Person;
     irishRel:nomName "Eocho";
+    agrelon:hasParent <#EochoBinnech>;
     rel:childOf <#EochoBinnech>;
     irishRel:ancestorOfGroup <#HúiLachnán>, <#HúiChormaic>, <#HúiThúathgaile>.
 
@@ -158,6 +166,7 @@
 <#Dáre>
     a foaf:Person;
     irishRel:nomName "Dáre";
+    agrelon:hasParent <#EochoBinnech>;
     rel:childOf <#EochoBinnech>;
     irishRel:ancestorGroupOf <#HúiCáichdamán>, <#HúiMagán>.
 
@@ -172,6 +181,7 @@
 <#Mane>
     a foaf:Person;
     irishRel:nomName "Mane";
+    agrelon:hasParent <#EochoBinnech>;
     rel:childOf <#EochoBinnech>.
 
 <#HúiCúanán>
@@ -182,17 +192,20 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Brigit";
+    agrelon:hasParent <#Mane>;
     rel:childOf <#Mane>.
 
 <#Gocán>
     a foaf:Person;
     irishRel:nomName "Gocán";
+    agrelon:hasParent <#EochoBinnech>;
     rel:childOf <#EochoBinnech>;
     rdfs:comment "díbaid acht bec".
 
 <#Odor>
     a foaf:Person;
     irishRel:nomName "Odor";
+    agrelon:hasAncestor <#Duibdúanaig>, <#Gocán>;
     rel:descendantOf <#Duibdúanaig>;
     rel:descendantOf <#Gocán>;
     rdfs:comment "i nÓentrub.".
@@ -205,13 +218,16 @@
 <#Congaland>
     a foaf:Person;
     irishRel:genName "Congaland";
+    agrelon:hasAncestor <#Gocán>;
     rel:descendantOf <#Gocán>;
     irishRel:numChild 4.
 
 <#Dathgel>
     a foaf:Person;
     irishRel:nomName "Dathgel";
+    agrelon:hasAncestor <#Odor>;
     rel:descendantOf <#Odor>;
+    agrelon:hasParent <#Congaland>;
     rel:childOf <#Congaland>;
     rdfs:comment "i Loch Drochait";
     irishRel:ancestorOfGroup <#TellachhúaRerge>, <#TellachMaelóenaig>.
@@ -227,7 +243,9 @@
 <#Drucán>
     a foaf:Person;
     irishRel:nomName "Drucán";
+    agrelon:hasAncestor <#Odor>;
     rel:descendantOf <#Odor>;
+    agrelon:hasParent <#Congaland>;
     rel:childOf <#Congaland>;
     rdfs:comment "i Loch Drochait".
 
@@ -239,7 +257,9 @@
     a foaf:Person;
     irishRel:nomName "Tnúthgal";
     irishRel:nomName "Tnúthgal Admall";
+    agrelon:hasAncestor <#Odor>;
     rel:descendantOf <#Odor>;
+    agrelon:hasParent <#Congaland>;
     rel:childOf <#Congaland>;
     rdfs:comment "i Loch Drochait";
     irishRel:ancestorOfGroup <#TellachAdmaill>.
@@ -252,6 +272,7 @@
     a foaf:Person;
     irishRel:nomName "Fabaide";
     rel:descendantOf <#Odor>;
+    agrelon:hasParent <#Congaland>;
     rel:childOf <#Congaland>;
     rdfs:comment "i Loch Drochait";
     irishRel:ancestorOfGroup <#TellachFabaide>.
@@ -281,6 +302,7 @@
 <#Díangus>
     a foaf:Person;
     irishRel:nomName "Díangus";
+    agrelon:hasParent <#Máiledúin-cd624b70>;
     rel:childOf <#Máiledúin-cd624b70>;
     irishRel:numChild 3.
 
@@ -288,6 +310,7 @@
     a foaf:Person;
     irishRel:genName "Máiledúin";
     irishRel:nomName "Máel Dúin";
+    agrelon:hasParent <#Failbe>;
     rel:childOf <#Failbe>.
 
 <#Failbe>
@@ -296,17 +319,19 @@
     rel:descendantOf <#EochoBinnech>.
 
 << <#Failbe>
-        rdfs:comment "The descent of <#Failbe> from <#EochoBinnech> is implied by his presence in this section; otherwise, it is not clear how he fits in." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "The descent of <#Failbe> from <#EochoBinnech> is implied by his presence in this section; otherwise, it is not clear how he fits in." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Nógus>
     a foaf:Person;
     irishRel:nomName "Nógus";
+    agrelon:hasParent <#Díangus>;
     rel:childOf <#Díangus>.
 
 <#Cernach>
     a foaf:Person;
     irishRel:nomName "Cernach";
+    agrelon:hasParent <#Nógus>;
     rel:childOf <#Nógus>;
     irishRel:ancestorOfGroup <#CenélCernaig>.
 
@@ -317,6 +342,7 @@
 <#Faelcú>
     a foaf:Person;
     irishRel:nomName "Faelcú";
+    agrelon:hasParent <#Nógus>;
     rel:childOf <#Nógus>;
     irishRel:ancestorOfGroup <#HúiThenán>, <#HúiChonCathaise>.
 
@@ -331,6 +357,7 @@
 <#Dubchú>
     a foaf:Person;
     irishRel:nomName "Dubchú";
+    agrelon:hasParent <#Nógus>;
     rel:childOf <#Nógus>;
     irishRel:ancestorOfGroup <#HúiChatanaig>, <#HúiLagéin>.
 
@@ -345,6 +372,7 @@
 <#Muirgius>
     a foaf:Person;
     irishRel:nomName "Muirgius";
+    agrelon:hasParent <#Díangus>;
     rel:childOf <#Díangus>;
     irishRel:ancestorOfGroup <#HúiDraignén>.
 
@@ -355,6 +383,7 @@
 <#Nárchú>
     a foaf:Person;
     irishRel:nomName "Nárchú";
+    agrelon:hasParent <#Díangus>;
     rel:childOf <#Díangus>;
     irishRel:ancestorOfGroup <#HúiFurudran>.
 
@@ -365,13 +394,14 @@
 <#Cathgus>
     a foaf:Person;
     irishRel:nomName "Cathgus";
+    agrelon:hasParent <#Cobraid>;
     rel:childOf <#Cobraid>;
     rel:descendantOf <#EochoBinnech>;
     irishRel:ancestorOfGroup <#hóiChonaill>.
 
 << <#Cathgus>
-        rdfs:comment "Again, this is implied by his presence in the section, nothing more." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "Again, this is implied by his presence in the section, nothing more." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Cobraid>
     a foaf:Person;
@@ -381,7 +411,7 @@
     a foaf:Person;
     irishRel:nomName "Murir";
     rel:descendantOf <#Cathgus>;
-    rel:descendantOfGroup <#hóiChonaill>.
+    irishRel:descendantOfGroup <#hóiChonaill>.
 
 <#hóiChonaill>
     a irishRel:PopulationGroup;
@@ -390,6 +420,7 @@
 <#Cuac>
     a foaf:Person;
     irishRel:nomName "Cuac";
+    agrelon:hasParent <#Maelchon>;
     rel:childOf <#Maelchon>;
     irishRel:ancestorOfGroup <#MuinterChuaic>.
 
@@ -401,48 +432,56 @@
     a foaf:Person;
     irishRel:nomName "Maelchú";
     irishRel:genName "Maelchon";
+    agrelon:hasParent <#Odrán>;
     rel:childOf <#Odrán>.
 
 <#Odrán>
     a foaf:Person;
     irishRel:nomName "Odru";
     irishRel:genName "Odrán";
+    agrelon:hasParent <#Fáilgussa>;
     rel:childOf <#Fáilgussa>.
 
 <#Fáilgussa>
     a foaf:Person;
     irishRel:nomName "Fáilgus";
     irishRel:genName "Fáilgussa";
+    agrelon:hasParent <#Failgniaith>;
     rel:childOf <#Failgniaith>.
 
 <#Failgniaith>
     a foaf:Person;
     irishRel:nomName "Failgniath";
     irishRel:genName "Failgniaith";
+    agrelon:hasParent <#Airmedaig>;
     rel:childOf <#Airmedaig>.
 
 <#Airmedaig>
     a foaf:Person;
     irishRel:nomName "Airmedach";
     irishRel:genName "Airmedaig";
+    agrelon:hasParent <#Cathbath>;
     rel:childOf <#Cathbath>.
 
 <#Cathbath>
     a foaf:Person;
     irishRel:nomName "Cathbath";
     irishRel:genName "Cathbath";
+    agrelon:hasParent <#Erblaind>;
     rel:childOf <#Erblaind>.
 
 <#Erblaind>
     a foaf:Person;
     irishRel:nomName "Erbland";
     irishRel:genName "Erblaind";
+    agrelon:hasParent <#Gúare>;
     rel:childOf <#Gúare>.
 
 <#Gúare>
     a foaf:Person;
     irishRel:nomName "Gúaire";
     irishRel:genName "Gúare";
+    agrelon:hasParent <#Colmán>;
     rel:childOf <#Colmán>.
 
 <#Colmán>
@@ -452,12 +491,13 @@
     rel:descendantOf <#Crimthand>.
 
 << <#Colmán>
-        rdfs:comment "Earlier, both Cland Odrán and Muinter Chúaich are said to descend from <#Crimthand>. But can we infer this as a result?" >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "Earlier, both Cland Odrán and Muinter Chúaich are said to descend from <#Crimthand>. But can we infer this as a result?" >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Fiachan>
     a foaf:Person;
     irishRel:nomName "Fiachan";
+    agrelon:hasParent <#Cronmacán>;
     rel:childOf <#Cronmacán>;
     irishRel:ancestorOfGroup <#TellachFiachán>.
 
@@ -468,6 +508,7 @@
 <#Cronmacán>
     a foaf:Person;
     irishRel:nomName "Cronmacán";
+    agrelon:hasParent <#Odrán>;
     rel:childOf <#Odrán>.
 
 <#TellachBranán>
@@ -488,18 +529,21 @@
 <#Branán>
     a foaf:Person;
     irishRel:nomName "Branán";
+    agrelon:hasParent <#Uititén-fd7f3e30>;
     rel:childOf <#Uititén-fd7f3e30>;
     irishRel:ancestorOfGroup <#TellachBranán>.
 
 <#Cathalán>
     a foaf:Person;
     irishRel:nomName "Cathalán";
+    agrelon:hasParent <#Uititén-fd7f3e30>;
     rel:childOf <#Uititén-fd7f3e30>;
     irishRel:ancestorOfGroup <#TellachCathalán>.
 
 <#DuibRoilbe>
     a foaf:Person;
     irishRel:nomName "DuibRoilbe";
+    agrelon:hasParent <#Uititén-fd7f3e30>;
     rel:childOf <#Uititén-fd7f3e30>;
     irishRel:ancestorOfGroup <#TellachDuibRoilbe>.
 
