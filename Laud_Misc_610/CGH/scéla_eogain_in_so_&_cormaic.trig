@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 15: Scéla Eogain in so & Cormaic"@sga;
     dcterms:identifier "LMisc610_CGH_16";
@@ -30,7 +29,8 @@
 <#Treth>
     a foaf:Person;
     irishRel:nomName "Treth";
-    irishRel:descendantOf <#moccuCreccai>;
+    irishRel:descendantOfGroup <#moccuCreccai>;
+    agrelon:hasChild <#Moncha>;
     rel:parentOf <#Moncha>.
 
 <#moccuCreccai>
@@ -41,24 +41,29 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Moncha";
+    agrelon:hasSpouse <#EuganMór>;
     rel:spouseOf <#EuganMór>.
 
 <#MacCon>
     a foaf:Person;
     irishRel:nomName "Mac Con";
     owl:sameAs <http://example.com/Rawl_B502/mínigud_senchais_ébir_inso.trig#MacCon>;
+    agrelon:hasVitalLethalContact <#EuganMór>;
     rel:antagonistOf <#EuganMór>.
 
 <#FíachoMuillethan>
     a foaf:Person;
     irishRel:nomName "Fíacho Muillethan";
+    agrelon:hasParent <#Moncha>;
     rel:childOf <#Moncha>;
+    agrelon:hasParent <#EuganMór>;
     rel:childOf <#EuganMór>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FiachaMullethan>.
 
 <#Art>
     a foaf:Person;
     irishRel:nomName "Art";
+    agrelon:hasParent <#Cuind>;
     rel:childOf <#Cuind>;
     irishRel:fosterChildOf <#FíachnaeCassán>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#ArtÓenfer>.
@@ -74,7 +79,9 @@
     foaf:gender "female";
     irishRel:accName "hAchtán";
     irishRel:nomName "Achtán";
+    agrelon:hasSpouse <#Art>;
     rel:spouseOf <#Art>;
+    agrelon:hasParent <#hUilcAiche>;
     rel:childOf <#hUilcAiche>.
 
 <#hUilcAiche>
@@ -98,6 +105,7 @@
     irishRel:genName "Maic Con";
     irishRel:nomName "Mac Con";
     owl:sameAs <#MacCon>;
+    agrelon:hasParent <#Luigthech>;
     rel:childOf <#Luigthech>.
 
 <#Luigthech>
@@ -119,6 +127,7 @@
 <#LugidMacnía>
     a foaf:Person;
     irishRel:nomName "Lugid Macnía";
+    agrelon:hasParent <#MaicCon>;
     rel:childOf <#MaicCon>;
     rdfs:comment ".i. óenainm";
     irishRel:numChild 4;
@@ -127,21 +136,25 @@
 <#Dau>
     a foaf:Person;
     irishRel:nomName "Dau";
+    agrelon:hasParent <#LugidMacnía>;
     rel:childOf <#LugidMacnía>.
 
 <#Trian>
     a foaf:Person;
     irishRel:nomName "Trian";
+    agrelon:hasParent <#LugidMacnía>;
     rel:childOf <#LugidMacnía>.
 
 <#Eochu>
     a foaf:Person;
     irishRel:nomName "Eochu";
+    agrelon:hasParent <#LugidMacnía>;
     rel:childOf <#LugidMacnía>.
 
 <#Lugith>
     a foaf:Person;
     irishRel:nomName "Lugith";
+    agrelon:hasParent <#LugidMacnía>;
     rel:childOf <#LugidMacnía>.
 
   }
