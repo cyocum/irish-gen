@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 10: De Peritia Fhothart so sis"@sga;
     dcterms:identifier "LMisc610_CGH_10";
@@ -27,7 +26,9 @@
     rdfs:comment "fúath déa ar a chóeme";
     irishRel:ancestorOfGroup <#Fotharta>;
     owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#EochaidFuathn-Airt>;
+    agrelon:hasParent <#FedilmtheRechtada>;
     rel:childOf <#FedilmtheRechtada>;
+    agrelon:hasSibling <#ChundChétchadach>;
     rel:siblingOf <#ChundChétchadach>;
     irishRel:numChild 2.
 
@@ -42,6 +43,7 @@
     irishRel:genName "Fedilmthe Rechtada";
     irishRel:nomName "Fedilmid Rechtada";
     owl:sameAs <http://example.com/Rawl_B502/do_primforslointib_Lagen_inso.trig#FeidelmidRechtada>;
+    agrelon:hasParent <#TúathailTechtmair>;
     rel:childOf <#TúathailTechtmair>.
 
 <#TúathailTechtmair>
@@ -59,12 +61,14 @@
 <#Óengus>
     a foaf:Person;
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#EochaidFindFúathnairt>;
     rel:childOf <#EochaidFindFúathnairt>;
     irishRel:ancestorOfGroup <#Fotharta-eb4acd90>.
 
 <#CíanCúldub>
     a foaf:Person;
     irishRel:nomName "Cían Cúldub";
+    agrelon:hasParent <#EochaidFindFúathnairt>;
     rel:childOf <#EochaidFindFúathnairt>;
     irishRel:ancestorOfGroup <#Fotharta-eb4acd90>.
 
