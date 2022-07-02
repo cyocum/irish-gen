@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 15: De quabsis torchi Corco Ché"@sga;
     dcterms:identifier "LMisc610_CGH_15";
@@ -42,6 +41,7 @@
 <#Corc>
     a foaf:Person;
     irishRel:nomName "Corc";
+    agrelon:hasParent <#Láre>;
     rel:childOf <#Láre>;
     irishRel:fosterChildOf <#CorcoChé>;
     irishRel:ancestorOfGroup <#EoganachtHúamaicLáre>;
@@ -67,12 +67,14 @@
     a foaf:Person;
     foaf:title "drúth"@sga, "druid"@eng;
     irishRel:nomName "Mídend";
+    agrelon:hasEmployer <#Eochath>;
     rel:employedBy <#Eochath>.
 
 <#Eochath>
     a foaf:Person;
     irishRel:nomName "Eochaid";
     irishRel:genName "Eochath";
+    agrelon:hasParent <#Muireda>;
     rel:childOf <#Muireda>.
 
 <#Muireda>
@@ -88,11 +90,12 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "hUiriu";
+    agrelon:hasParent <#Eochath>;
     rel:childOf <#Eochath>.
 
 << <#hUiriu>
-        rdfs:comment "Cf. LU, ll. 3083-3085." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "Cf. LU, ll. 3083-3085." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Luccreth>
     a foaf:Person;
@@ -101,8 +104,8 @@
     rdfs:seeAlso <https://www.wikidata.org/entity/Q6696417>.
 
 << <#Luccreth>
-        rdfs:comment "Meyer reads 'utla creth profetauit', which follows the word division in the manuscript. However, this makes no sense. It is more likely that it reads 'ut Lucreth profetauit' (as Lucreth prophesied), particularly as Luccreth appears earlier in the Laud text." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "Meyer reads 'utla creth profetauit', which follows the word division in the manuscript. However, this makes no sense. It is more likely that it reads 'ut Lucreth profetauit' (as Lucreth prophesied), particularly as Luccreth appears earlier in the Laud text." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#BamolMídendmidlaige>
     dcterms:title "Ba mol Mídend midlaige";
@@ -110,8 +113,8 @@
     owl:sameAs <https://www.vanhamel.nl/codecs/Ba_mol_Midend_midlaige>.
 
 << <#BamolMídendmidlaige> 
-        rdfs:comment "This poem has been edited and translated recently (ITS 65). The translation will be consulted and any further data added." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "This poem has been edited and translated recently (ITS 65). The translation will be consulted and any further data added." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#CíarraigeLóchrae>
     a irishRel:PopulationGroup;
@@ -127,6 +130,7 @@
     a foaf:Person;
     irishRel:genName "Choirpre";
     irishRel:nomName "Coirpre";
+    agrelon:hasParent <#Corc-48820840>;
     rel:childOf <#Corc-48820840>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#CarpreCruithnechán>.
 
