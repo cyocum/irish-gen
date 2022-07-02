@@ -9,10 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 18: Di raind etir maccu Eilella Flanc Bicc"@sga;
     dcterms:identifier "LMisc610_CGH_18";
@@ -30,22 +30,26 @@
 <#Fidach>
     a foaf:Person;
     irishRel:nomName "Fidach";
+    agrelon:hasParent <#EilellaFlancBicc>;
     rel:childOf <#EilellaFlancBicc>.
 
 <#CrimthanMór>
     a foaf:Person;
     irishRel:nomName "Crimthan Mór";
+    agrelon:hasParent <#Fidach>;
     rel:childOf <#Fidach>.
 
 <#Luigtheg>
     a foaf:Person;
     irishRel:nomName "Luigtheg";
+    agrelon:hasParent <#EilellaFlancBicc>;
     rel:childOf <#EilellaFlancBicc>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Lugaid>.
 
 <#MaineMuncháin>
     a foaf:Person;
     irishRel:nomName "Maine Muncháin";
+    agrelon:hasParent <#EilellaFlancBicc>;
     rel:childOf <#EilellaFlancBicc>;
     owl:sameAs <http://example.com/Rawl_B502/genelogia_úa_liatháin.trig#MaineMunchaín>;
     rdfs:comment "Emmon nhDáre & in Mane";
@@ -54,6 +58,7 @@
 <#DáreCherbae>
     a foaf:Person;
     irishRel:nomName "Dáre Cherbae";
+    agrelon:hasParent <#EilellaFlancBicc>;
     rel:childOf <#EilellaFlancBicc>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#DáreCerba>;
     owl:sameAs <http://example.com/LL/genelach_h_liathan.trig#DareCerba>;
@@ -73,7 +78,9 @@
 _:missing-4c26e030
     a foaf:Person;
     foaf:gender "female";
+    agrelon:hasAncestor <#MogaRoith>;
     rel:descendantOf <#MogaRoith>;
+    agrelon:hasChild <#MaineMuncháin>, <#DáreCherbae>;
     rel:parentOf <#MaineMuncháin>, <#DáreCherbae>.
 
 <#MogaRoith>
@@ -84,8 +91,8 @@ _:missing-4c26e030
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_bunad_imthecht_eoganachta_in_so.trig#MugRuith>.
 
 << <#MogaRoith> 
-        rdfs:comment "The phrase '.i. Síl Moga Roith [in] druad' appears but it is not at all clear what it refers to. This reading is provisional." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "The phrase '.i. Síl Moga Roith [in] druad' appears but it is not at all clear what it refers to. This reading is provisional." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Dáre>
     a foaf:Person;
@@ -97,35 +104,41 @@ _:missing-4c26e030
 <#Fíachra>
     a foaf:Person;
     irishRel:nomName "Fíachra";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FiachaFidgenid>.
 
 <#Eocha>
     a foaf:Person;
     irishRel:nomName "Eocha";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#EochoLiathán>.
 
 <#Íth>
     a foaf:Person;
     irishRel:nomName "Íth";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>.
 
 <#Fidach-3b6ee830>
     a foaf:Person;
     irishRel:nomName "Fidach";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Fidach>.
 
 <#Dan>
     a foaf:Person;
     irishRel:nomName "Dan";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Dau>.
 
 <#Ded>
     a foaf:Person;
     irishRel:nomName "Ded";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>;
     owl:sameAs <http://example.com/Rawl_B502/de_genelogia_síl_ébir_16.trig#Dedad>;
     owl:sameAs <http://example.com/LL/de_h_dedad.trig#Det>.
@@ -133,12 +146,14 @@ _:missing-4c26e030
 <#Dera>
     a foaf:Person;
     irishRel:nomName "Dera";
+    agrelon:hasParent <#Dáre>;
     rel:childOf <#Dáre>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#Der>.
 
 <#Mafemis>
     a foaf:Person;
     irishRel:nomName "Mafemis";
+    agrelon:hasParent <#EochachGairb>;
     rel:childOf <#EochachGairb>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/do_minigud_senchais_fer_muman.trig#Mafemis>.
 
@@ -155,23 +170,27 @@ _:missing-4c26e030
     rdfs:comment "a quo tota plebs Muman".
 
 << <#EochoMumu> 
-        rdfs:comment "In other sources (e.g. LL/senchas_síl_ébir), Eochu Garb (aka Eochu Mumu) is the son of Mafemis.">>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "In other sources (e.g. LL/senchas_síl_ébir), Eochu Garb (aka Eochu Mumu) is the son of Mafemis.">>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#MaccArdae>
     a foaf:Person;
     irishRel:nomName "Macc Ardae";
+    agrelon:hasParent <#Fidach>;
     rel:childOf <#Fidach>;
     foaf:title "rí"@sga, "king"@eng;
     rdfs:comment "ba rí Cíarraigi Lúachrae co muir";
-    rel:childOf [
-      a foaf:Person;
-      foaf:gender "female";
-      rel:parentOf <#ChíaránMacAntSáir>;
-    ];
+    agrelon:hasParent _:missing-b333d45d ;
+    rel:childOf _:missing-b333d45d;
     foaf:knows <#ChíaránMacAntSáir>;
     foaf:knows <#Bréndán>;
     foaf:knows <#MochutaRathin>.
+
+_:missing-b333d45d
+    a foaf:Person;
+    foaf:gender "female";
+    agrelon:hasChild <#ChíaránMacAntSáir>;
+    rel:parentOf <#ChíaránMacAntSáir>.
 
 <#ChíaránMacAntSáir>
     a foaf:Person;
@@ -224,6 +243,7 @@ _:missing-4c26e030
 <#Luigid>
     a foaf:Person;
     irishRel:nomName "Luigid";
+    agrelon:hasParent <#Óche>;
     rel:childOf <#Óche>;
     foaf:knows <#Bréndán>.
 
@@ -314,7 +334,7 @@ _:missing-4c26e030
     owl:sameAs <#Comgán>.
 
 << <#Comgáin>
-        rdfs:comment "It is not clear to me which lineage is the 'forthúath' to which Comgán swears brotherhood. The Eoganachta or some branch thereof?" >>
+    rdfs:comment "It is not clear to me which lineage is the 'forthúath' to which Comgán swears brotherhood. The Eoganachta or some branch thereof?" >>
     prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#CrimthanOdor>
@@ -327,6 +347,7 @@ _:missing-4c26e030
     a foaf:Person;
     irishRel:nomName "Óengus";
     irishRel:genName "Óengusa";
+    agrelon:hasParent <#Nadfráich>;
     rel:childOf <#Nadfráich>;
     owl:sameAs <http://example.com/LL/genelach_ciarraige_cuirche.trig#Oengus-c25a9c43>.
 
@@ -354,6 +375,7 @@ _:missing-4c26e030
 <#Crimthan>
     a foaf:Person;
     irishRel:nomName "Crimthan";
+    agrelon:hasParent <#nDercomanath>;
     rel:childOf <#nDercomanath>;
     foaf:title "ríg Caisil"@sga, "king of Cashel"@eng.
 
@@ -361,6 +383,7 @@ _:missing-4c26e030
     a foaf:Person;
     irishRel:nomName "Dercomanath";
     irishRel:genName "nDercomanath";
+    agrelon:hasParent <#Feidlimthe>;
     rel:childOf <#Feidlimthe>.
 
 <#Feidlimthe>
@@ -372,12 +395,13 @@ _:missing-4c26e030
 <#Crimthan-6bdc50b0>
     a foaf:Person;
     irishRel:nomName "Crimthan";
+    agrelon:hasParent <#Fedlimthi>;
     rel:childOf <#Fedlimthi>;
     owl:sameAs <#Crimthan>.
 
 << <#Crimthan-6bdc50b0>
-        rdfs:comment "Identifications uncertain; this Crimthan speaks to the Ciarraige as if he is kind of Cashel but he has a different patrilineage." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "Identifications uncertain; this Crimthan speaks to the Ciarraige as if he is kind of Cashel but he has a different patrilineage." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Fedlimthi>
     a foaf:Person;
@@ -387,37 +411,46 @@ _:missing-4c26e030
 <#Condlae>
     a foaf:Person;
     irishRel:nomName "Condlae";
+    agrelon:hasParent <#Ferchéte>;
     rel:childOf <#Ferchéte>;
     foaf:title "rí"@sga, "king"@eng;
     rdfs:comment "rí for hÉrnaib";
-    rel:childOf [
-      a foaf:Person;
-      foaf:gender "female";
-      rel:childOf <#Fhergusa>;
-      rdfs:comment "A hÉspáin";
-    ].
+    agrelon:hasParent _:missing-df0b824c ;
+    rel:childOf _:missing-df0b824c.
+
+_:missing-df0b824c
+    a foaf:Person;
+    foaf:gender "female";
+    agrelon:hasParent <#Fhergusa>;
+    rel:childOf <#Fhergusa>;
+    rdfs:comment "A hÉspáin" .
 
 <#Ferchéte>
     a foaf:Person;
     irishRel:genName "Ferchéte";
+    agrelon:hasParent <#Dedad>;
     rel:childOf <#Dedad>.
 
 <#Dedad>
     a foaf:Person;
     irishRel:genName "Dedad";
+    agrelon:hasParent <#Ferchéte>;
     rel:childOf <#Ferchéte>.
 
 <#Fhergusa>
     a foaf:Person;
     irishRel:nomName "Fergus";
     irishRel:genName "Fhergusa";
+    agrelon:hasParent <#Carpait>;
     rel:childOf <#Carpait>;
+    agrelon:hasFriend <#Condlae>;
     rel:friendOf <#Condlae>.
 
 <#Carpait>
     a foaf:Person;
     irishRel:nomName "Carpat";
     irishRel:genName "Carpait";
+    agrelon:hasParent <#Néit>;
     rel:childOf <#Néit>.
 
 <#Néit>
@@ -427,10 +460,10 @@ _:missing-4c26e030
     rdfs:comment "diatá Carnd hUí Néit".
 
 << <#Néit>
-        rdfs:comment "As 'the hill of the *descendants* of Néit', Carn Uí Néit does not seem likely to be associated with Néit himself. However, it is not clear which of his descendants named here it is associated with. The Metrical Dindsenchas (Poem 40) relates this place to a completely different Néit." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "As 'the hill of the *descendants* of Néit', Carn Uí Néit does not seem likely to be associated with Néit himself. However, it is not clear which of his descendants named here it is associated with. The Metrical Dindsenchas (Poem 40) relates this place to a completely different Néit." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 << <>
-        rdfs:comment "The section ends with a length passage detailing the mutual obligations of various Munster kingdoms and peoples to each other and the priveliges certain groups reserve to themselves. No genealogical material is immediately available, although some new kin groups are mentioned and closer analysis might allow conclusions to be drawn as to their relationship to one another." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "The section ends with a length passage detailing the mutual obligations of various Munster kingdoms and peoples to each other and the priveliges certain groups reserve to themselves. No genealogical material is immediately available, although some new kin groups are mentioned and closer analysis might allow conclusions to be drawn as to their relationship to one another." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 }
