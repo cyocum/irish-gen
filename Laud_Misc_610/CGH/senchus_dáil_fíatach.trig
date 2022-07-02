@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 32: Senchus Dáil Fíatach in so"@sga;
     dcterms:identifier "LMisc610_CGH_32";
@@ -35,12 +34,14 @@
 <#Sírchath>
     a foaf:Person;
     irishRel:nomName "Sírchath";
+    agrelon:hasParent <#FíatachFind>;
     rel:childOf <#FíatachFind>;
     owl:sameAs <http://example.com/LL/do_cheniul_shuibne.trig#Sirchada>.
 
 <#Ogman>
     a foaf:Person;
     irishRel:nomName "Ogman";
+    agrelon:hasParent <#FíatachFind>;
     rel:childOf <#FíatachFind>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Ogman>.
 
@@ -49,12 +50,14 @@
     irishRel:genName "Imchada";
     irishRel:nomName "Imchad";
     irishRel:numChild 5;
+    agrelon:hasParent <#Findchoda>;
     rel:childOf <#Findchoda>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Imchada>.
 
 <#Findchoda>
     a foaf:Person;
     irishRel:genName "Findchoda";
+    agrelon:hasParent <#Fhogamain>;
     rel:childOf <#Fhogamain>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Fhinnachta>.
 
@@ -67,6 +70,7 @@
 <#FergusFoltlebor>
     a foaf:Person;
     irishRel:nomName "Fergus Foltlebor";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#FergusFoltlebor>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#FergusFoltlebor>.
@@ -74,21 +78,24 @@
 <#FergusTeneFoBrega>
     a foaf:Person;
     irishRel:nomName "Fergus Tene Fo Brega";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#FergusTeni>.
 
 <#FergusDoDeriBrega>
     a foaf:Person;
     irishRel:nomName "Fergus Do Deri Brega";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>.
 
 << <#FergusDoDeriBrega>
-        rdfs:comment "<#FergusDoDeriBrega> does not appear in the CELT text but does appear in Meyer's edition." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "<#FergusDoDeriBrega> does not appear in the CELT text but does appear in Meyer's edition." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#ÓengusFoscriche>
     a foaf:Person;
     irishRel:nomName "Óengus Foscriche ";
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#OengusFoscriche>.
 
@@ -96,24 +103,27 @@
     a foaf:Person;
     irishRel:nomName "Fergus Dubdétach";
     foaf:knows <#Cían>, <#EochaidTóebfhota>;
+    agrelon:hasParent <#Imchada>;
     rel:childOf <#Imchada>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#FergusDubdétach>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#FergusDubdetach>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#FergusDubdétach>.
 
 << <#FergusDubdétach>
-        rdfs:comment "It is not explicitly stated in Laud Misc 610 that <#FergusDubdétach> is a son of <#Imchada> but this is stated elsewhere (e.g. LL) and only 4 of 5 sons are mentioned otherwise." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "It is not explicitly stated in Laud Misc 610 that <#FergusDubdétach> is a son of <#Imchada> but this is stated elsewhere (e.g. LL) and only 4 of 5 sons are mentioned otherwise." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Cían>
     a foaf:Person;
     irishRel:nomName "Cían";
+    agrelon:hasParent <#AilellaÁuluim>;
     rel:childOf <#AilellaÁuluim>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Cian>.
 
 <#EochaidTóebfhota>
     a foaf:Person;
     irishRel:nomName "Eochaid Tóebfhota";
+    agrelon:hasParent <#AilellaÁuluim>;
     rel:childOf <#AilellaÁuluim>;
     owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#EochoTaebfhota>.
 
@@ -125,14 +135,18 @@
 <#Tadg>
     a foaf:Person;
     irishRel:nomName "Tadg";
+    agrelon:hasParent <#Cían>;
     rel:childOf <#Cían>;
+    agrelon:hasVitalLethalContact <#FergusDubdétach>;
     rel:antagonistOf <#FergusDubdétach>;
     owl:sameAs <http://example.com/LL/clanna_ébir_i_l-leith_chuind.trig#Taidc>.
 
 <#Cormac>
     a foaf:Person;
     irishRel:nomName "Cormac";
+    agrelon:hasAncestor <#Cuind>;
     rel:descendantOf <#Cuind>;
+    agrelon:hasVitalLethalContact <#FergusDubdétach>;
     rel:antagonistOf <#FergusDubdétach>;
     owl:sameAs <http://example.com/Rawl_B502/_94.trig#Cormac>.
 
@@ -147,6 +161,7 @@
     irishRel:genName "Dubthaig";
     irishRel:nomName "Dubthach";
     irishRel:numChild 3;
+    agrelon:hasParent <#Míannaig>;
     rel:childOf <#Míannaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Dubthaig>.
 
@@ -154,6 +169,7 @@
     a foaf:Person;
     irishRel:genName "Míannaig";
     irishRel:nomName "Míannach";
+    agrelon:hasParent <#Lúgdhach>;
     rel:childOf <#Lúgdhach>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Miannaig>.
 
@@ -166,6 +182,7 @@
 <#Áed>
     a foaf:Person;
     irishRel:nomName "Áed";
+    agrelon:hasParent <#Dubthaig>;
     rel:childOf <#Dubthaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Aed>;
     rdfs:comment "non habuit semen".
@@ -173,6 +190,7 @@
 <#Daig>
     a foaf:Person;
     irishRel:nomName "Daig";
+    agrelon:hasParent <#Dubthaig>;
     rel:childOf <#Dubthaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Daig>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/senchus_síl_hír.trig#Daig>;
@@ -196,12 +214,14 @@
     a foaf:Person;
     irishRel:nomName "Dallán";
     irishRel:numChild 2;
+    agrelon:hasParent <#Dubthaig>;
     rel:childOf <#Dubthaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Dallan>.
 
 <#Forgo>
     a foaf:Person;
     irishRel:nomName "Forgo";
+    agrelon:hasParent <#Dallán>;
     rel:childOf <#Dallán>;
     irishRel:numChild 12;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Forg>.
@@ -209,6 +229,7 @@
 <#Óengus>
     a foaf:Person;
     irishRel:nomName "Óengus";
+    agrelon:hasParent <#Dallán>;
     rel:childOf <#Dallán>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Oengus-b6f4ab70>.
 
@@ -216,13 +237,16 @@
     a foaf:Person;
     irishRel:nomName "Eochaid";
     foaf:title "rígéices"@sga, "royal sage"@eng;
+    agrelon:hasParent <#Óengus>;
     rel:childOf <#Óengus>;
     rdfs:comment "qui hosptitatus est apud Damíne & qui sepultus est in Domnach Cuilind".
 
 <#Muirbran>
     a foaf:Person;
     irishRel:nomName "Muirbran";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
+    agrelon:hasVitalLethalContact <#MuiredachMunderg>;
     rel:antagonistOf <#MuiredachMunderg>;
     rdfs:comment "Is hésidhe riris in flaith fri óssar na claindi .i. fri Muiredach m. Forgo íarna thimna dó";
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Murbran>.
@@ -230,6 +254,7 @@
 <#Combrat>
     a foaf:Person;
     irishRel:nomName "Combrat";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#CenélCombraite>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Combrat>.
@@ -242,6 +267,7 @@
 <#Condad>
     a foaf:Person;
     irishRel:nomName "Condad";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Connaid>.
 
@@ -253,6 +279,7 @@
 <#Énna>
     a foaf:Person;
     irishRel:nomName "Énna";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     rdfs:comment "cuius semen non est";
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Enna>.
@@ -260,6 +287,7 @@
 <#Nem>
     a foaf:Person;
     irishRel:nomName "Nem";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#hUíNemand>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Nem>.
@@ -273,6 +301,7 @@
 <#Lugaid>
     a foaf:Person;
     irishRel:nomName "Lugaid";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#hUíLuighdech>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Lugaid>.
@@ -285,6 +314,7 @@
 <#Bresal>
     a foaf:Person;
     irishRel:nomName "Bresal";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#hÚiBresail>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Bresal>.
@@ -297,6 +327,7 @@
 <#Loingthe>
     a foaf:Person;
     irishRel:nomName "Loingthe";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#hUiLoingthe>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Longthe>.
@@ -309,6 +340,7 @@
 <#Conall>
     a foaf:Person;
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#hÚiChonaill>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Conall>.
@@ -321,6 +353,7 @@
 <#Cremthand>
     a foaf:Person;
     irishRel:nomName "Cremthand";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:ancestorOfGroup <#CenélCrimthaind>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Crimthand>.
@@ -333,14 +366,17 @@
 <#ÓengusIbtach>
     a foaf:Person;
     irishRel:nomName "Óengus Ibtach";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
-    rel:childOf [
-      a foaf:Person;
-      foaf:gender "female";
-      irishRel:descendantOfGroup <#Ibtacha>;
-    ];
+    agrelon:hasParent _:missing-8bcbd256;
+    rel:childOf _:missing-8bcbd256;
     irishRel:ancestorOfGroup <#hUíIbdaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#OengusIbtach>.
+
+_:missing-8bcbd256
+      a foaf:Person;
+      foaf:gender "female";
+      irishRel:descendantOfGroup <#Ibtacha>.
 
 <#Ibtacha>
     a irishRel:PopulationGroup;
@@ -355,6 +391,7 @@
 <#MuiredachMunderg>
     a foaf:Person;
     irishRel:nomName "Muiredach Munderg";
+    agrelon:hasParent <#Forgo>;
     rel:childOf <#Forgo>;
     irishRel:numChild 5;
     rdfs:comment "quem benedixit Patricius ut alii aiunt in regnum Hibernie";
@@ -370,18 +407,21 @@
 <#Cairill>
     a foaf:Person;
     irishRel:nomName "Cairill";
+    agrelon:hasParent <#MuiredachMunderg>;
     rel:childOf <#MuiredachMunderg>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Cairell>.
 
 <#Eochaid-9d6f9af0>
     a foaf:Person;
     irishRel:nomName "Eochaid";
+    agrelon:hasParent <#MuiredachMunderg>;
     rel:childOf <#MuiredachMunderg>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Eocho>.
 
 <#Brénaind>
     a foaf:Person;
     irishRel:nomName "Brénaind";
+    agrelon:hasParent <#MuiredachMunderg>;
     rel:childOf <#MuiredachMunderg>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Brenaind>.
 
@@ -393,6 +433,7 @@
 <#EoganMérchrom>
     a foaf:Person;
     irishRel:nomName "Eogan Mérchrom";
+    agrelon:hasParent <#MuiredachMunderg>;
     rel:childOf <#MuiredachMunderg>;
     irishRel:numChild 7;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#EoganMerchrom>.
@@ -405,6 +446,7 @@
 <#Maelodor>
     a foaf:Person;
     irishRel:nomName "Maelodor";
+    agrelon:hasParent <#MuiredachMunderg>;
     rel:childOf <#MuiredachMunderg>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Maelodor>.
 
@@ -416,42 +458,49 @@
 <#Congal>
     a foaf:Person;
     irishRel:nomName "Congal";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Congal>.
 
 <#Blaithmac>
     a foaf:Person;
     irishRel:nomName "Blaithmac";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Blaithmac>.
 
 <#Suibni>
     a foaf:Person;
     irishRel:nomName "Suibni";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Subni>.
 
 <#Fínán>
     a foaf:Person;
     irishRel:nomName "Fínán";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Finan>.
 
 <#Rónán>
     a foaf:Person;
     irishRel:nomName "Rónán";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Ronán>.
 
 <#Erníne>
     a foaf:Person;
     irishRel:nomName "Erníne";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Érnine>.
 
 <#Cummíne>
     a foaf:Person;
     irishRel:nomName "Cummíne";
+    agrelon:hasParent <#EoganMérchrom>;
     rel:childOf <#EoganMérchrom>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Cummine>.
 
@@ -459,17 +508,19 @@
     a foaf:Person;
     irishRel:genName "Conaill Chostadaig";
     irishRel:numChild 7;
+    agrelon:hasParent <#Cairill>;
     rel:childOf <#Cairill>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#ConaillChostodaig>;
     rdfs:comment "ar ba flaith side fon óenchumma. Ba sí a ráth Óchtar Cuillche nó Cholland i nDruimnib Breg. Is inte randsat maic Chairill a n-orba.".
 
 << <#ConaillChostadaig>
-        rdfs:comment "It is not clear who <#ConaillChostadaig> is. However, the statement 'is inte randsat maic Chairill a n-orba' could be taken as implying that he is a son of <#Cairill>." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "It is not clear who <#ConaillChostadaig> is. However, the statement 'is inte randsat maic Chairill a n-orba' could be taken as implying that he is a son of <#Cairill>." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Cablíni>
     a foaf:Person;
     irishRel:nomName "Cablíni";
+    agrelon:hasParent <#ConaillChostadaig>;
     rel:childOf <#ConaillChostadaig>;
     irishRel:ancestorOfGroup <#CenélCablíni>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Cablin>.
@@ -482,30 +533,35 @@
 <#Ainmere>
     a foaf:Person;
     irishRel:nomName "Ainmere";
+    agrelon:hasParent <#ConaillChostadaig>;
     rel:childOf <#ConaillChostadaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Ainmeri>.
 
 <#Cormac-f40f29e0>
     a foaf:Person;
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#ConaillChostadaig>;
     rel:childOf <#ConaillChostadaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Cormac>.
 
 <#Fandléni>
     a foaf:Person;
     irishRel:nomName "Fandléni";
+    agrelon:hasParent <#ConaillChostadaig>;
     rel:childOf <#ConaillChostadaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Fandleni>.
 
 <#BruitBúalid>
     a foaf:Person;
     irishRel:nomName "Bruit Búalid";
+    agrelon:hasParent <#ConaillChostadaig>;
     rel:childOf <#ConaillChostadaig>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#BruitBualid>.
 
 <#Ginfhiach>
     a foaf:Person;
     irishRel:nomName "Ginfhiach";
+    agrelon:hasParent <#ConaillChostadaig>;
     rel:childOf <#ConaillChostadaig>;
     irishRel:ancestorOfGroup <#CenélnGeno>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Ginfhiach>.
@@ -518,6 +574,7 @@
 <#Baetán>
     a foaf:Person;
     irishRel:nomName "Baetán";
+    agrelon:hasParent <#Cairill>;
     rel:childOf <#Cairill>;
     foaf:title "rí hÉirenn"@sga, "king of Ireland"@eng;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Baetán>;
@@ -526,6 +583,7 @@
 <#CúGabraige>
     a foaf:Person;
     irishRel:nomName "Cú Gabraige";
+    agrelon:hasParent <#Flaind>;
     rel:childOf <#Flaind>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#CuGabraige>.
 
@@ -533,6 +591,7 @@
     a foaf:Person;
     irishRel:nomName "Fland";
     irishRel:genName "Flaind";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Flaind>.
 
@@ -540,13 +599,16 @@
     a foaf:Person;
     irishRel:nomName "Fergal";
     irishRel:genName "Fergaile";
+    agrelon:hasParent <#Dairchello>;
     rel:childOf <#Dairchello>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Fergaile>.
 
 <#Dairchello>
     a foaf:Person;
     irishRel:genName "Dairchello";
+    agrelon:hasParent <#Baetáin>;
     rel:childOf <#Baetáin>;
+    agrelon:hasParent <#CummineDuibne>;
     rel:childOf <#CummineDuibne>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Dairchello>.
 
@@ -554,6 +616,7 @@
     a foaf:Person;
     irishRel:nomName "Baetán";
     irishRel:genName "Baetáin";
+    agrelon:hasParent <#Cairill-eb915390>;
     rel:childOf <#Cairill-eb915390>;
     owl:sameAs <#Baetán>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Baetain>.
@@ -582,6 +645,7 @@
 <#Domongart>
     a foaf:Person;
     irishRel:nomName "Domongart";
+    agrelon:hasParent <#Predae>;
     rel:childOf <#Predae>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Domangart>.
 
@@ -597,6 +661,7 @@
     irishRel:numChild 7;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Fergaile-105b99f2>;
     irishRel:descendantOfGroup <#hÚiIbdaig>;
+    agrelon:hasVitalLethalContact <#hÚiEchach>;
     rel:antagonistOf <#hÚiEchach>;
     foaf:title "ríg Ulad"@sga, "king of Ulster"@eng.
 
@@ -612,6 +677,7 @@
 <#Fingen>
     a foaf:Person;
     irishRel:nomName "Fingen";
+    agrelon:hasParent <#Demman>;
     rel:childOf <#Demman>;
     irishRel:ancestorOfGroup <#CenélFingin>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Fingen>.
@@ -624,18 +690,21 @@
 <#Glassán>
     a foaf:Person;
     irishRel:nomName "Glassán";
+    agrelon:hasParent <#Demman>;
     rel:childOf <#Demman>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Glassan>.
 
 <#Gúairi>
     a foaf:Person;
     irishRel:nomName "Gúairi";
+    agrelon:hasParent <#Demman>;
     rel:childOf <#Demman>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Guare>.
 
 <#Colmán>
     a foaf:Person;
     irishRel:nomName "Colmán";
+    agrelon:hasParent <#Demman>;
     rel:childOf <#Demman>;
     foaf:title "cléirech"@sga, "cleric"@eng;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Colman>.
@@ -643,6 +712,7 @@
 <#Fíachnai>
     a foaf:Person;
     irishRel:nomName "Fíachnai";
+    agrelon:hasParent <#Demman>, <#Garbae>;
     rel:childOf <#Demman>, <#Garbae>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Fiachna>.
 
@@ -650,6 +720,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:genName "Garbae";
+    agrelon:hasParent <#Néilléne>;
     rel:childOf <#Néilléne>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Garbae>.
 
@@ -672,14 +743,18 @@
 <#Dúnchad>
     a foaf:Person;
     irishRel:nomName "Dúnchad";
+    agrelon:hasParent <#Fíachnai>;
     rel:childOf <#Fíachnai>;
+    agrelon:hasParent <#CummineDuibne>;
     rel:childOf <#CummineDuibne>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Dunchad>.
 
 <#Maeldúin>
     a foaf:Person;
     irishRel:nomName "Maeldúin";
+    agrelon:hasParent <#Fíachnai>;
     rel:childOf <#Fíachnai>;
+    agrelon:hasParent <#CummineDuibne>;
     rel:childOf <#CummineDuibne>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#MaelDuin>.
 
@@ -694,6 +769,7 @@
     a foaf:Person;
     irishRel:genName "Furudrán";
     irishRel:nomName "Furudrán";
+    agrelon:hasParent <#DuibThuirtri>;
     rel:childOf <#DuibThuirtri>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Furudrain>.
 
@@ -706,6 +782,7 @@
 <#Murchad>
     a foaf:Person;
     irishRel:nomName "Murchad";
+    agrelon:hasVitalLethalContact <#Maeldúin>;
     rel:antagonistOf <#Maeldúin>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Murchad>;
     rdfs:comment "Is hé dano roort maccu Baetáin maic Cairill & maccu a bráthar i nDun Mognae".
@@ -718,18 +795,21 @@
 <#Demman-ce0b4340>
     a foaf:Person;
     irishRel:nomName "Demman";
+    agrelon:hasParent <#Conroch>;
     rel:childOf <#Conroch>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Demman>.
 
 <#Conroch>
     a foaf:Person;
     irishRel:genName "Conroch";
+    agrelon:hasParent <#CongaileCendfhota>;
     rel:childOf <#CongaileCendfhota>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Conroch>.
 
 <#CongaileCendfhota>
     a foaf:Person;
     irishRel:genName "Congaile Cendfhota";
+    agrelon:hasParent <#Dúnchada>;
     rel:childOf <#Dúnchada>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#CongaileCendfhotai>.
 
@@ -737,6 +817,7 @@
     a foaf:Person;
     irishRel:nomName "Dúnchad";
     irishRel:genName "Dúnchada";
+    agrelon:hasParent <#Fíachnai-13a6a110>;
     rel:childOf <#Fíachnai-13a6a110>;
     owl:sameAs <#Dúnchad>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Dunchada>.
@@ -752,6 +833,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Dub Locha";
+    agrelon:hasParent <#Fíachnai>, <#CumneDub>;
     rel:childOf <#Fíachnai>, <#CumneDub>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#DubLacha>.
 
@@ -766,7 +848,9 @@
     a foaf:Person;
     irishRel:genName "Mongáin";
     irishRel:nomName "Mongán";
+    agrelon:hasParent <#Fíachnaí>;
     rel:childOf <#Fíachnaí>;
+    agrelon:hasSpouse <#DubLocha>;
     rel:spouseOf <#DubLocha>;
     irishRel:numChild 2;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Mongain>.
@@ -781,6 +865,7 @@
     a foaf:Person;
     irishRel:genName "Cholcon";
     irishRel:nomName "Colcu";
+    agrelon:hasParent <#Mongáin>, <#DubLocha>;
     rel:childOf <#Mongáin>, <#DubLocha>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Cholgan>.
 
@@ -788,18 +873,21 @@
     a foaf:Person;
     irishRel:genName "Chonaill";
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Mongáin>, <#DubLocha>;
     rel:childOf <#Mongáin>, <#DubLocha>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Conaill>.
 
 <#Suibni>
     a foaf:Person;
     irishRel:nomName "Suibni";
+    agrelon:hasParent <#Fíachnai-13a6a110>;
     rel:childOf <#Fíachnai-13a6a110>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Suibne-92960f13>.
 
 <#Maelcoba>
     a foaf:Person;
     irishRel:nomName "Maelcoba";
+    agrelon:hasParent <#Fíachnai-13a6a110>;
     rel:childOf <#Fíachnai-13a6a110>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#MaelCoba>.
 
@@ -813,6 +901,7 @@
     a foaf:Person;
     irishRel:genName "Baetáin";
     irishRel:nomName "Baetán";
+    agrelon:hasParent <#Echdach>;
     rel:childOf <#Echdach>;
     owl:sameAs <http://example.com/LL/senchas_dáil_fhiatach.trig#Baetain-ae991bf3>.
 
