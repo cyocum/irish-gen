@@ -1,4 +1,4 @@
-@base <http://example.com/Laud_Misc_610/CGH/incipit_cróeb_choibniusa_fer_maige_ítha.trig>.
+@base <http://example.com/Laud_Misc_610/CGH/incipit_cróeb_choibniusaf_fer_maige_ítha.trig>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -9,11 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Laud_Misc_610/CGH> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Section 3: Incipit Cróeb Choibniusa Fer Maige Ítha"@sga;
     dcterms:identifier "LMisc610_CGH_03";
@@ -35,6 +34,7 @@
 <#NíallFrossach>
     a foaf:Person;
     irishRel:nomName "Niall Frossach";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#NíallFrosach>;
     rdfs:seeAlso <#TrímicFergailenan-arg>.
@@ -42,6 +42,7 @@
 <#ÁedOllán>
     a foaf:Person;
     irishRel:nomName "Áed Ollán";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#ÁedAlláin>;
     rdfs:seeAlso <#TrímicFergailenan-arg>.
@@ -49,6 +50,7 @@
 <#Conchobar>
     a foaf:Person;
     irishRel:nomName "Conchobar";
+    agrelon:hasParent <#Fergaile>;
     rel:childOf <#Fergaile>;
     owl:sameAs <http://example.com/Laud_Misc_610/CGH/_1.trig#Conchobor>;
     rdfs:seeAlso <#TrímicFergailenan-arg>.
@@ -62,6 +64,7 @@
 <#Cinaed>
     a foaf:Person;
     irishRel:nomName "Cinaed";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HóiMamáin>, <#HóiMothlacháin>, <#HúiMugrón>, <#HóiGartnén>, <#HúiUittitén>.
 
@@ -88,6 +91,7 @@
 <#Díarmait>
     a foaf:Person;
     irishRel:nomName "Díarmait";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#MuinterChennetig>, <#HóiChairelláin>, <#HúiMuredaig>.
 
@@ -106,6 +110,7 @@
 <#Corrán>
     a foaf:Person;
     irishRel:nomName "Corráh";
+    agrelon:hasAncestor <#Díarmait>;
     rel:descendantOf <#Díarmait>;
     irishRel:ancestorOfGroup <#MuinterChorrán>.
 
@@ -116,6 +121,7 @@
 <#Flaithbertach>
     a foaf:Person;
     irishRel:nomName "Flaithbertach";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HúiDubdai>, <#HúiBáigill>, <#HóeMerleich>, <#HóiDuláich>.
 
@@ -138,6 +144,7 @@
 <#LongsechMór>
     a foaf:Person;
     irishRel:nomName "Longsech Mór";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HóiChathalán>, <#HúiMáilbresail>, <#HóiMurchertaig>.
 
@@ -156,6 +163,7 @@
 <#LongsechBec>
     a foaf:Person;
     irishRel:nomName "Longsech Bec";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HúiMaelán>.
 
@@ -166,6 +174,7 @@
 <#Brógán>
     a foaf:Person;
     irishRel:nomName "Brógán";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HúiBresláin>.
 
@@ -176,6 +185,7 @@
 <#Máeltinne>
     a foaf:Person;
     irishRel:nomName "Máeltinne";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HúiMáilfinne>.
 
@@ -186,6 +196,7 @@
 <#Dubindrecht>
     a foaf:Person;
     irishRel:nomName "Dubindrecht";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HúiDoblechán>, <#HóiThanaide>, <#HóiLathrai>.
 
@@ -204,6 +215,7 @@
 <#Furudrán>
     a foaf:Person;
     irishRel:nomName "Furudrán";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HóiGottáin>, <#HóiMuredaig>, <#HóiBranacán>.
 
@@ -222,6 +234,7 @@
 <#Cumascach>
     a foaf:Person;
     irishRel:nomName "Cumascach";
+    agrelon:hasAncestor <#Furudrán>;
     rel:descendantOf <#Furudrán>;
     irishRel:ancestorOfGroup <#HúiChuind>, <#HúiMueregaid>.
 
@@ -236,6 +249,7 @@
 <#Drucán>
     a foaf:Person;
     irishRel:nomName "Furudrán";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#HúiEochathán>, <#HóiLongsig>.
 
@@ -250,6 +264,7 @@
 <#Cummascach>
     a foaf:Person;
     irishRel:nomName "Cummascach";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>;
     irishRel:ancestorOfGroup <#clandFocartaig>, <#HóiChináith>, <#HóiMáilmaill>, <#HúiDubucáin>.
 
@@ -277,6 +292,7 @@
 <#Dondchad>
     a foaf:Person;
     irishRel:nomName "Dondchad";
+    agrelon:hasParent <#Conchobar-0a270ef0>;
     rel:childOf <#Conchobar-0a270ef0>.
 
   }
