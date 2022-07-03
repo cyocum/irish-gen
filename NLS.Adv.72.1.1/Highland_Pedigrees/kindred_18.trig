@@ -9,12 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Cloinni Echthigerna"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2018.html>, <https://www.1467manuscript.co.uk/MacEachernFOR%20WEB.pdf>;
@@ -24,18 +22,21 @@
 <#GillaAinndrias>
     a foaf:Person;
     irishRel:nomName "Gilla Ainndrias";
+    agrelon:hasParent <#Cailin>;
     rel:childOf <#Cailin>.
 
 <#Cailin>
     a foaf:Person;
     irishRel:genName "Cailin";
     irishRel:nomName "Cailin";
+    agrelon:hasParent <#Imair>;
     rel:childOf <#Imair>.
 
 <#Imair>
     a foaf:Person;
     irishRel:genName "Imair";
     irishRel:nomName "Imar";
+    agrelon:hasParent <#Imair>;
     rel:childOf <#Imair>.
     << <#Imair>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -45,59 +46,69 @@
     a foaf:Person;
     irishRel:genName "Gilla Crist";
     irishRel:nomName "Gilla Crist";
+    agrelon:hasParent <#Mhicraith>;
     rel:childOf <#Mhicraith>.
 
 <#Mhicraith>
     a foaf:Person;
     irishRel:genName "Mhicraith";
     irishRel:nomName "Macraith";
+    agrelon:hasParent <#Muircertaigh>;
     rel:childOf <#Muircertaigh>.
 
 <#Muircertaigh>
     a foaf:Person;
     irishRel:genName "Muircertaigh";
     irishRel:nomName "Muirchertach";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Oisiab>;
     rel:childOf <#Oisiab>.
 
 <#Oisiab>
     a foaf:Person;
     irishRel:genName "Oisiab";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Finnlaeith>;
     rel:childOf <#Finnlaeith>.
 
 <#Finnlaeith>
     a foaf:Person;
     irishRel:genName "Finnlaeith";
     irishRel:nomName "Finnlaeth";
+    agrelon:hasParent <#Nicail>;
     rel:childOf <#Nicail>.
 
 <#Nicail>
     a foaf:Person;
     irishRel:genName "Nicail";
     irishRel:nomName "Nical";
+    agrelon:hasParent <#Maine>;
     rel:childOf <#Maine>.
 
 <#Maine>
     a foaf:Person;
     irishRel:genName "Maine";
     irishRel:nomName "Maine";
+    agrelon:hasParent <#Muirethaigh>;
     rel:childOf <#Muirethaigh>.
 
 <#Muirethaigh>
     a foaf:Person;
     irishRel:genName "Muirethaigh";
     irishRel:nomName "Muiredach";
+    agrelon:hasParent <#GillaCrist>;
     rel:childOf <#GillaCrist>.
     << <#Muirethaigh>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -109,6 +120,7 @@
     irishRel:nomName "Gilla Crist";
     rdfs:comment "in tris ab ar sainganndrias";
     foaf:title "ab"@sga, "abbot"@eng;
+    agrelon:hasParent <#Ectigerna>;
     rel:childOf <#Ectigerna>.
     << <#GillaCrist>
           rdfs:comment "The name and comment are very difficult to read in the MS" >>
@@ -118,6 +130,7 @@
     a foaf:Person;
     irishRel:genName "Ectigerna";
     irishRel:nomName "Echtigern";
+    agrelon:hasParent _:missing-01e355a0;
     rel:childOf _:missing-01e355a0.
     << <#Ectigerna>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -125,6 +138,7 @@
 
 _:missing-01e355a0
     a foaf:Person;
+    agrelon:hasParent <#GillandriasMoir>;
     rel:childOf <#GillandriasMoir>.
     << _:missing-01e355a0
           rdfs:comment "This name is omitted ('mhic mhic') in the MS." >>
@@ -134,6 +148,7 @@ _:missing-01e355a0
     a foaf:Person;
     irishRel:genName "Gillandrias Moir";
     irishRel:nomName "Gille Andrias Mor";
+    agrelon:hasParent <#Eittigerna>;
     rel:childOf <#Eittigerna>.
     << <#GillandriasMoir>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -143,6 +158,7 @@ _:missing-01e355a0
     a foaf:Person;
     irishRel:genName "Eittigerna";
     irishRel:nomName "Echthigern";
+    agrelon:hasParent <#Ath>;
     rel:childOf <#Ath>.
     << <#Eittigerna>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -160,6 +176,7 @@ _:missing-01e355a0
     a foaf:Person;
     irishRel:genName "Echtigerne";
     irishRel:nomName "Echthigern";
+    agrelon:hasParent <#Betain>;
     rel:childOf <#Betain>.
     << <#Echtigern>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -168,6 +185,7 @@ _:missing-01e355a0
 <#Betain>
     a foaf:Person;
     irishRel:genName "Betain";
+    agrelon:hasParent _:missing-66a13c40;
     rel:childOf _:missing-66a13c40.
     << <#Betain>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -176,6 +194,7 @@ _:missing-01e355a0
 _:missing-66a13c40
     a irishTitle:Barún;
     foaf:title "an baran"@sga, "the baron"@eng;
+    agrelon:hasParent <#Conaill>;
     rel:childOf <#Conaill>.
     << _:missing-66a13c40
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -185,12 +204,14 @@ _:missing-66a13c40
     a foaf:Person;
     irishRel:genName "Conaill";
     irishRel:nomName "Conall";
+    agrelon:hasParent <#Cormaic-8300c3f0>;
     rel:childOf <#Cormaic-8300c3f0>.
 
 <#Cormaic-8300c3f0>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Eachthigerna>;
     rel:childOf <#Eachthigerna>.
     << <#Cormaic-8300c3f0>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -200,6 +221,7 @@ _:missing-66a13c40
     a foaf:Person;
     irishRel:genName "Eatach";
     irishRel:nomName "Eochu";
+    agrelon:hasParent <#BeithirMoir>;
     rel:childOf <#BeithirMoir>.
     << <#Eachthigerna>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -208,6 +230,7 @@ _:missing-66a13c40
 <#BeithirMoir>
     a foaf:Person;
     irishRel:genName "Beithir Moir";
+    agrelon:hasParent <#Dugaill>;
     rel:childOf <#Dugaill>.
     << <#BeithirMoir>
           rdfs:comment "This name is difficult to read in the MS." >>
