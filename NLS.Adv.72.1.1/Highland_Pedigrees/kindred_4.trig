@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Mhic Nechtain"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2004.html>;
@@ -23,90 +21,105 @@
 <#Muiris>
     a foaf:Person;
     irishRel:nomName "Muiris";
+    agrelon:hasParent <#MaelColaim>;
     rel:childOf <#MaelColaim>.
 
 <#MaelColaim>
     a foaf:Person;
     irishRel:genName "Mael Colaim";
     irishRel:nomName "Mael Colaim";
+    agrelon:hasParent <#Muiris>;
     rel:childOf <#Muiris>.
 
 <#Muiris-20ab7930>
     a foaf:Person;
     irishRel:genName "Muiris";
     irishRel:nomName "Muiris";
+    agrelon:hasParent <#MaelColaim-20ab7930>;
     rel:childOf <#MaelColaim-20ab7930>.
 
 <#MaelColaim-20ab7930>
     a foaf:Person;
     irishRel:genName "Mael Colaim";
     irishRel:nomName "Mael Colaim";
+    agrelon:hasParent <#Gibuin>;
     rel:childOf <#Gibuin>.
 
 <#Gibuin>
     a foaf:Person;
     irishRel:genName "Gibuin";
     irishRel:nomName "Gibun";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#GillaCrist>;
     rel:childOf <#GillaCrist>.
 
 <#GillaCrist>
     a foaf:Person;
     irishRel:genName "Gilla Crist";
     irishRel:nomName "Gilla Crist";
+    agrelon:hasParent <#Domhnaill>;
     rel:childOf <#Domhnaill>.
 
 <#Domhnaill>
     a foaf:Person;
     irishRel:genName "Domhnaill";
     irishRel:nomName "Domhnall";
+    agrelon:hasParent <#Neachtain>;
     rel:childOf <#Neachtain>.
 
 <#Neachtain>
     a foaf:Person;
     irishRel:genName "Neachtain";
     irishRel:nomName "Neachtan";
+    agrelon:hasParent <#Artuir>;
     rel:childOf <#Artuir>.
 
 <#Artuir>
     a foaf:Person;
     irishRel:genName "Neachtain";
     irishRel:nomName "Neachtan";
+    agrelon:hasParent <#Gibuin-d0a9cb70>;
     rel:childOf <#Gibuin-d0a9cb70>.
 
 <#Gibuin-d0a9cb70>
     a foaf:Person;
     irishRel:genName "Gibuin";
     irishRel:nomName "Gibun";
+    agrelon:hasParent <#Nechtain>;
     rel:childOf <#Nechtain>.
 
 <#Nechtain>
     a foaf:Person;
     irishRel:genName "Nechtain";
     irishRel:nomName "Nechtan";
+    agrelon:hasParent <#Isog>;
     rel:childOf <#Isog>.
 
 <#Isog>
     a foaf:Person;
     irishRel:genName "Isog";
     irishRel:nomName "Isog";
+    agrelon:hasParent <#GillaMartain>;
     rel:childOf <#GillaMartain>.
 
 <#GillaMartain>
     a foaf:Person;
     irishRel:genName "Gilla Martain";
     irishRel:nomName "Gilla Martain";
+    agrelon:hasParent <#Aenghusa>;
     rel:childOf <#Aenghusa>.
 
 <#Aenghusa>
     a foaf:Person;
     irishRel:genName "Aenghusa";
     irishRel:nomName "Aenghus";
+    agrelon:hasParent <#Imhair>;
     rel:childOf <#Imhair>.
     << <#Aenghusa>
           rdfs:comment "This name is marked in the MS; Black suggests that it is to be swapped with 'Imhair'." >>
@@ -116,6 +129,7 @@
     a foaf:Person;
     irishRel:genName "Imhair";
     irishRel:nomName "Imhar";
+    agrelon:hasParent <#NeachtainOig>;
     rel:childOf <#NeachtainOig>.
     << <#Imhair>
           rdfs:comment "This name is marked in the MS; Black suggests that it is to be swapped with 'Aenghusa'." >>
@@ -125,30 +139,35 @@
     a foaf:Person;
     irishRel:genName "Neachtain Oig";
     irishRel:nomName "Neachtan Og";
+    agrelon:hasParent <#NechtainMedhin>;
     rel:childOf <#NechtainMedhin>.
 
 <#NechtainMedhin>
     a foaf:Person;
     irishRel:genName "Nechtain Medhin";
     irishRel:nomName "Nechtan Medhon";
+    agrelon:hasParent <#NechtainMhoir>;
     rel:childOf <#NechtainMhoir>.
 
 <#NechtainMhoir>
     a foaf:Person;
     irishRel:genName "Nechtain Mhoir";
     irishRel:nomName "Nechtan Mor";
+    agrelon:hasParent <#DomnaillDuinn>;
     rel:childOf <#DomnaillDuinn>.
 
 <#DomnaillDuinn>
     a foaf:Person;
     irishRel:genName "Domnaill Duinn";
     irishRel:nomName "Domnall Donn";
+    agrelon:hasParent <#FerchairFhada>;
     rel:childOf <#FerchairFhada>.
 
 <#FerchairFhada>
     a foaf:Person;
     irishRel:genName "Ferchair Fhada";
     irishRel:nomName "Ferchar Fada";
+    agrelon:hasParent <#Feradhaigh>;
     rel:childOf <#Feradhaigh>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#FercairFada>.
 
@@ -156,6 +175,7 @@
     a foaf:Person;
     irishRel:genName "Feradhaigh";
     irishRel:nomName "Feradhach";
+    agrelon:hasParent <#Ferghusa>;
     rel:childOf <#Ferghusa>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fearadhaigh>.
 
@@ -163,6 +183,7 @@
     a foaf:Person;
     irishRel:genName "Ferghusa";
     irishRel:nomName "Ferghus";
+    agrelon:hasParent <#Nechtain-15ed28c0>;
     rel:childOf <#Nechtain-15ed28c0>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Fergusa>.
 
@@ -170,6 +191,7 @@
     a foaf:Person;
     irishRel:genName "Ferghusa";
     irishRel:nomName "Ferghus";
+    agrelon:hasParent <#Colmain>;
     rel:childOf <#Colmain>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Shneachtain>.
 
@@ -177,6 +199,7 @@
     a foaf:Person;
     irishRel:genName "Colmain";
     irishRel:nomName "Colman";
+    agrelon:hasParent <#Buadain>;
     rel:childOf <#Buadain>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Colmain>.
 
@@ -184,6 +207,7 @@
     a foaf:Person;
     irishRel:genName "Buadain";
     irishRel:nomName "Buadan";
+    agrelon:hasParent <#Eathach>;
     rel:childOf <#Eathach>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Buadain>.
 
@@ -191,6 +215,7 @@
     a foaf:Person;
     irishRel:genName "Eathach";
     irishRel:nomName "Eochu";
+    agrelon:hasParent <#Muiredhaigh>;
     rel:childOf <#Muiredhaigh>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Eathhach>.
     << <#Eathach>
@@ -201,6 +226,7 @@
     a foaf:Person;
     irishRel:genName "Muiredhaigh";
     irishRel:nomName "Muiredhach";
+    agrelon:hasParent <#LoairnMoir>;
     rel:childOf <#LoairnMoir>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#Muiredhaigh>.
 
@@ -208,6 +234,7 @@
     a foaf:Person;
     irishRel:genName "Loairn Moir";
     irishRel:nomName "Loarn Mor";
+    agrelon:hasParent <#Eirc>;
     rel:childOf <#Eirc>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#LoairnMair>.
 
@@ -215,6 +242,7 @@
     a foaf:Person;
     irishRel:genName "Eirc";
     irishRel:nomName "Erc";
+    agrelon:hasParent <#EchachMuinreamair>;
     rel:childOf <#EchachMuinreamair>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_1.trig#Eirc>.
 
@@ -222,6 +250,7 @@
     a foaf:Person;
     irishRel:genName "Echach Muinreamair";
     irishRel:nomName "Eochu Muinreamar";
+    agrelon:hasParent <#EchachMuinreamair>;
     rel:childOf <#EchachMuinreamair>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_1.trig#EathachMuinnremair>.
 
