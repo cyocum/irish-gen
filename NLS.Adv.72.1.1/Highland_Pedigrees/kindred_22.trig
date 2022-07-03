@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Mhic Gilla Maeil"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2022.html>, <https://www.1467manuscript.co.uk/MacMillan%20FOR%20WEB.pdf>;
@@ -23,6 +21,7 @@
 <#GillaColaimOg>
     a foaf:Person;
     irishRel:nomName "Gilla Colaim Og";
+    agrelon:hasParent <#GillaColaimMoir>;
     rel:childOf <#GillaColaimMoir>.
     << <#GillaColaimOg>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -32,6 +31,7 @@
     a foaf:Person;
     irishRel:genName "Gilla Colaim Mhoir";
     irishRel:nomName "Gilla Colaim Mor";
+    agrelon:hasParent <#MaelMuire>;
     rel:childOf <#MaelMuire>.
     << <#GillaColaimMhoir>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -41,6 +41,7 @@
     a foaf:Person;
     irishRel:genName "Mael Muire";
     irishRel:nomName "Mael Muire";
+    agrelon:hasParent <#Cainnig>;
     rel:childOf <#Cainnig>.
     << <#MaelMuire>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -50,12 +51,14 @@
     a foaf:Person;
     irishRel:genName "Cainnig";
     irishRel:nomName "Cainnech";
+    agrelon:hasParent <#Dubgaill>;
     rel:childOf <#Dubgaill>.
 
 <#Dubgaill>
     a foaf:Person;
     irishRel:genName "Dubgaill";
     irishRel:nomName "Dubgall";
+    agrelon:hasParent <#GillaColaim>;
     rel:childOf <#GillaColaim>.
     << <#Dubgaill>
           rdfs:comment "This name is difficult to read in the MS; Black suggests that it could have been amended from 'Dubgaill', which is the reading in the cognate pedigree in Mac Firbhisigh, to 'Gila Maeil' by an unidentified hand that interferes a number of times in the text." >>
@@ -65,6 +68,7 @@
     a foaf:Person;
     irishRel:genName "Gilla Colaim";
     irishRel:nomname "Gilla Colaim";
+    agrelon:hasParent <#GillCriost>;
     rel:childOf <#GillCriost>.
 
 <#GillCriost>
@@ -73,6 +77,7 @@
     irishRel:nomName "Gill Criost";
     irishRel:nomName "in Gilla Maeil";
     rdfs:comment "dar comainm in Gilla Maeil";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
     << <#GillCriost>
           rdfs:comment "The name and comment are difficult to read in the MS." >>
@@ -82,6 +87,7 @@
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Airbertaigh>;
     rel:childOf <#Airbertaigh>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Cormaic>.
 
