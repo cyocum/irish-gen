@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Kinded 32"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2032.html>;
@@ -23,6 +21,7 @@
 <#RaghnallFinn>
     a foaf:Person;
     irishRel:nomName "Raghnall Finn";
+    agrelon:hasParent <#Ruaidri>;
     rel:childOf <#Ruaidri>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q21751050>.
 
@@ -30,6 +29,7 @@
     a foaf:Person;
     irishRel:genName "Ruaidri";
     irishRel:nomName "Ruaidri";
+    agrelon:hasParent <#Ailin>;
     rel:childOf <#Ailin>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q23884905>.
 
@@ -37,6 +37,7 @@
     a foaf:Person;
     irishRel:genName "Ailin";
     irishRel:nomName "Ailen";
+    agrelon:hasParent <#Ruaidri-0c602f50>;
     rel:childOf <#Ruaidri-0c602f50>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q4697013>.
 
@@ -44,6 +45,7 @@
     a foaf:Person;
     irishRel:genName "Ruaidri";
     irishRel:nomName "Ruaidri";
+    agrelon:hasParent <#Raghnaill>;
     rel:childOf <#Raghnaill>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q976433>;
     rdfs:seeAlso <https://www.poms.ac.uk/rdf/entity/Person/6566>.
@@ -52,6 +54,7 @@
     a foaf:Person;
     irishRel:genName "Raghnaill";
     irishRel:nomName "Raghnall";
+    agrelon:hasParent <#Shomairle>;
     rel:childOf <#Shomairle>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Raghnaill>.
 
@@ -65,18 +68,21 @@
     a foaf:Person;
     irishRel:nomName "Ragnall Finn";
     rdfs:comment "ele";
+    agrelon:hasParent <#Loclainn>;
     rel:childOf <#Loclainn>.
 
 <#Loclainn>
     a foaf:Person;
     irishRel:genName "Loclainn";
     irishRel:nomName "Lochlann";
+    agrelon:hasParent <#Ailin>;
     rel:childOf <#Ailin>.
 
 <#Ailin>
     a foaf:Person;
     irishRel:genName "Ailin";
     irishRel:nomName "Ailen";
+    agrelon:hasParent <#Ragnaill>;
     rel:childOf <#Ragnaill>.
 
 <#Ragnaill>
@@ -90,23 +96,27 @@
 <#Fearchar>
     a foaf:Person;
     irishRel:nomName "Fearchar";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchadh>
     a foaf:Person;
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchaidh>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Dubgaill>;
     rel:childOf <#Dubgaill>.
 
 <#Dubgaill>
     a foaf:Person;
     irishRel:genName "Dubgaill";
     irishRel:nomName "Dubgall";
+    agrelon:hasParent <#Ruaidri-85a6de20>;
     rel:childOf <#Ruaidri-85a6de20>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q3041001>.
 
@@ -114,6 +124,7 @@
     a foaf:Person;
     irishRel:genName "Ruaidri";
     irishRel:nomName "Ruaidri";
+    agrelon:hasParent <#Ragnaill-a23162e0>;
     rel:childOf <#Ragnaill-a23162e0>;
     owl:sameAs <#Ruaidri-0c602f50>.
 
