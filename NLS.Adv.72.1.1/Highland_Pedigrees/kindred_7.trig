@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Cloinni Griogair"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2007.html>;
@@ -23,77 +21,90 @@
 <#MaelColaim>
     a foaf:Person;
     irishRel:nomName "Mael Colaim";
+    agrelon:hasParent <#Padraic>;
     rel:childOf <#Padraic>.
 
 <#Padraic>
     a foaf:Person;
     irishRel:genName "Padraic";
     irishRel:nomName "Padraic";
+    agrelon:hasParent <#Eoin>;
     rel:childOf <#Eoin>.
 
 <#Eoin>
     a foaf:Person;
     irishRel:genName "Eoin";
     irishRel:nomName "Eoin";
+    agrelon:hasParent <#Grigair>;
     rel:childOf <#Grigair>.
 
 <#Grigair>
     a foaf:Person;
     irishRel:genName "Grigair";
     irishRel:nomName "Grigar";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchaidh>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#MaeilColaim>;
     rel:childOf <#MaeilColaim>.
 
 <#MaeilColaim>
     a foaf:Person;
     irishRel:genName "Maeil Colaim";
     irishRel:nomName "Mael Colaim";
+    agrelon:hasParent <#GillaCrist>;
     rel:childOf <#GillaCrist>.
 
 <#GillaCrist>
     a foaf:Person;
     irishRel:genName "Gilla Crist";
     irishRel:nomName "Gilla Crist";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Muiredhaigh>;
     rel:childOf <#Muiredhaigh>.
 
 <#Muiredhaigh>
     a foaf:Person;
     irishRel:genName "Muiredhaigh";
     irishRel:nomName "Muiredhach";
+    agrelon:hasParent <#Ainnrias>;
     rel:childOf <#Ainnrias>.
 
 <#Ainnrias>
     a foaf:Person;
     irishRel:genName "Ainnrias";
     irishRel:nomName "Ainnrias";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Airbertaigh>;
     rel:childOf <#Airbertaigh>.
 
 <#Airbertaigh>
     a foaf:Person;
     irishRel:genName "Airbertaigh";
     irishRel:nomName "Airbertach";
+    agrelon:hasParent <#Ferchairdi>;
     rel:childOf <#Ferchairdi>.
 
 <#Ferchairdi>
     a foaf:Person;
     irishRel:genName "Ferchairdi";
+    agrelon:hasParent <#FerchairFhada>;
     rel:childOf <#FerchairFhada>.
     << <#Ferchairdi>
           rdfs:comment "Black suggests that this is an attempt by the scribe to correct 'Ferchair' to 'Feradaigh'." >>
@@ -103,6 +114,7 @@
     a foaf:Person;
     irishRel:genName "Ferchair Fhada";
     irishRel:nomName "Ferchar Fada";
+    agrelon:hasParent <#FeradhaighFinn>;
     rel:childOf <#FeradhaighFinn>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_2.trig#FercairFada>.
 
