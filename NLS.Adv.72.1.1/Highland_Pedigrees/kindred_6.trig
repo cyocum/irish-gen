@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Do Ghenelach Mhic an Aba Uaine"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2006.html>, <https://www.1467manuscript.co.uk/GreenAbbottBlack%20BLACKforWEB.pdf>;
@@ -23,114 +21,133 @@
 <#GillaMuire>
     a foaf:Person;
     irishRel:nomName "Gilla Muire";
+    agrelon:hasParent <#EoinMoir>;
     rel:childOf <#EoinMoir>.
 
 <#EoinMoir>
     a foaf:Person;
     irishRel:genName "Eoin Moir";
     irishRel:nomName "Eoin Mor";
+    agrelon:hasParent <#Aenghusa>;
     rel:childOf <#Aenghusa>.
 
 <#Aenghusa>
     a foaf:Person;
     irishRel:genName "Aenghusa";
     irishRel:nomName "Aenghus";
+    agrelon:hasParent <#MhicBethad>;
     rel:childOf <#MhicBethad>.
 
 <#MhicBethad>
     a foaf:Person;
     irishRel:genName "Mhic Bethad";
     irishRel:nomName "Mac Bethad";
+    agrelon:hasParent <#Aenghusa-166e0d30>;
     rel:childOf <#Aenghusa-166e0d30>.
 
 <#Aenghusa-166e0d30>
     a foaf:Person;
     irishRel:genName "Aenghusa";
     irishRel:nomName "Aenghus";
+    agrelon:hasParent <#GillaMuireLongaigh>;
     rel:childOf <#GillaMuireLongaigh>.
 
 <#GillaMuireLongaigh>
     a foaf:Person;
     irishRel:genName "Gilla Muire Longaigh";
     irishRel:nomName "Gilla Muire Longach";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Fhinnlaeich>;
     rel:childOf <#Fhinnlaeich>.
 
 <#Fhinnlaeich>
     a foaf:Person;
     irishRel:genName "Fhinnlaeich";
     irishRel:nomName "Finnlaech";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchaidh>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#FirThire>;
     rel:childOf <#FirThire>.
 
 <#FirThire>
     a foaf:Person;
     irishRel:genName "Fir Thire";
     irishRel:nomName "Fer Tire";
+    agrelon:hasParent <#GillaFaelain>;
     rel:childOf <#GillaFaelain>.
 
 <#GillaFaelain>
     a foaf:Person;
     irishRel:genName "Gilla Faelain";
     irishRel:nomName "Gilla Faelain";
+    agrelon:hasParent <#GillaMhartainn>;
     rel:childOf <#GillaMhartainn>.
 
 <#GillaMhartainn>
     a foaf:Person;
     irishRel:genName "Gilla Mhartainn";
     irishRel:nomName "Gilla Martainn";
+    agrelon:hasParent <#FirTheadh>;
     rel:childOf <#FirTheadh>.
 
 <#FirTheadh>
     a foaf:Person;
     irishRel:genName "Fir Theadh";
     irishRel:nomName "Fer Teadh";
+    agrelon:hasParent <#Loairn>;
     rel:childOf <#Loairn>.
 
 <#Loairn>
     a foaf:Person;
     irishRel:genName "Loairn";
     irishRel:nomName "Loarn";
+    agrelon:hasParent <#Ferchair-d5125f70>;
     rel:childOf <#Ferchair-d5125f70>.
 
 <#Ferchair-d5125f70>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Oirbertaigh>;
     rel:childOf <#Oirbertaigh>.
 
 <#Oirbertaigh>
     a foaf:Person;
     irishRel:genName "Oirbertaigh";
     irishRel:nomName "Oibertach";
+    agrelon:hasParent <#Erc>;
     rel:childOf <#Erc>.
 
 <#Erc>
     a foaf:Person;
     irishRel:genName "Erc";
     irishRel:nomName "Erc";
+    agrelon:hasParent <#DomnaillDuinn>;
     rel:childOf <#DomnaillDuinn>.
 
 <#DomnaillDuinn>
     a foaf:Person;
     irishRel:genName "Domnaill Duinn";
     irishRel:nomName "Domnall Donn";
+    agrelon:hasParent <#FerchairAbradruadh>;
     rel:childOf <#FerchairAbradruadh>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_4.trig#DomnaillDuinn>.
 
@@ -138,6 +155,7 @@
     a foaf:Person;
     irishRel:genName "Ferchair Abradruadh";
     irishRel:nomName "Ferchar Abradruadh";
+    agrelon:hasParent <#Feradhaigh>;
     rel:childOf <#Feradhaigh>.
 
 <#Feradhaigh>
