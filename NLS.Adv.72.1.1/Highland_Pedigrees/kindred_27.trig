@@ -9,12 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Do Genelach Mhic Lachlainn Oig"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2027.html>;
@@ -24,45 +22,52 @@
 <#Caineac>
     a foaf:Person;
     irishRel:nomName "Caineac";
+    agrelon:hasParent <#Eoin>;
     rel:childOf <#Eoin>.
 
 <#Eoin>
     a foaf:Person;
     irishRel:genName "Eoin";
     irishRel:nomName "Eoin";
+    agrelon:hasParent <#Laclain>;
     rel:childOf <#Laclain>.
 
 <#Laclain>
     a foaf:Person;
     irishRel:genName "Laclain";
     irishRel:nomName "Laclan";
+    agrelon:hasParent <#GillaPadruig>;
     rel:childOf <#GillaPadruig>.
 
 <#GillaPadruig>
     a foaf:Person;
     irishRel:genName "Gilla Padruig";
     irishRel:nomName "Gilla Padruig";
+    agrelon:hasParent <#LaclainnMoir>;
     rel:childOf <#LaclainnMoir>.
 
 <#LaclainnMoir>
     a foaf:Person;
     irishRel:genName "Laclainn Moir";
     irishRel:nomName "Lachlann Mor";
+    agrelon:hasParent <#GillaPhadruig>;
     rel:childOf <#GillaPhadruig>.
 
 <#GillaPhadruig>
     a foaf:Person;
     irishRel:genName "Gilla Phadruig";
     irishRel:nomName "Gilla Padruig";
+    agrelon:hasParent <#GillaCrist>;
     rel:childOf <#GillaCrist>.
     << <#GillaPhadruig>
-          rdfs:comment "This name is difficult to read in the MS." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+      rdfs:comment "This name is difficult to read in the MS." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#GillaCrist>
     a foaf:Person;
     irishRel:nomName "Gilla Crist";
     irishRel:genName "Gilla Crist";
+    agrelon:hasParent <#DedaAlainn>;
     rel:childOf <#DedaAlainn>.
 
 <#DedaAlainn>
@@ -70,11 +75,12 @@
     irishRel:genName "Deda Alainn";
     irishRel:nomName "Ded Alainn";
     rdfs:comment "renabartha Buirrce";
+    agrelon:hasParent <#Anradan>;
     rel:childOf <#Anradan>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_9.trig#AodaAlainn>.
     << <#DedaAlainn>
-          rdfs:comment "The reading 'deda' is fairly clear in the MS, but Black suggests amending to 'aeda'." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+      rdfs:comment "The reading 'deda' is fairly clear in the MS, but Black suggests amending to 'aeda'." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#Anradan>
     a foaf:Person;
@@ -86,16 +92,18 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Caitrina";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchaidh>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Laghmainn>;
     rel:childOf <#Laghmainn>.
     << <#Donnchaidh>
-          rdfs:comment "'mhic Laghmainn' could be a patronymic (i.e. Donnchadh's father is Laghmann), or it could be a surname (i.e. Donnchadh is a descendant of Laghmann)." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+      rdfs:comment "'mhic Laghmainn' could be a patronymic (i.e. Donnchadh's father is Laghmann), or it could be a surname (i.e. Donnchadh is a descendant of Laghmann)." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#Laghmainn>
     a foaf:Person;
@@ -106,6 +114,7 @@
     a foaf:Person;
     irishRel:genName "Cainnigh";
     irishRel:nomName "Cainneach";
+    agrelon:hasParent <#Caitrina>;
     rel:childOf <#Caitrina>;
     owl:sameAs <#Caineac>.
 
@@ -113,18 +122,21 @@
     a foaf:Person;
     irishRel:genName "Padruig";
     irishRel:nomName "Padraig";
+    agrelon:hasParent <#Caitrina>;
     rel:childOf <#Caitrina>.
 
 <#GillaEaspuig>
     a foaf:Person;
     irishRel:genName "Gilla Easpuig";
     irishRel:nomName "Gilla Easpuig";
+    agrelon:hasParent <#Caitrina>;
     rel:childOf <#Caitrina>.
 
 <#Agais>
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Agais";
+    agrelon:hasParent <#MhicDomnaill>;
     rel:childOf <#MhicDomnaill>.
 
 <#MhicDomnaill>
@@ -132,13 +144,14 @@
     irishRel:genName "Mhic Domnaill";
     irishRel:nomName "Mac Domnaill".
     << <#MhicDomnaill>
-          rdfs:comment "This is being taken as the head of Clann Domhnaill, at this period the Lord of the Isles, not 'the son of Domnall'; it is not possible to say which Lord of the Isles is meant without reference to other sources." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+      rdfs:comment "This is being taken as the head of Clann Domhnaill, at this period the Lord of the Isles, not 'the son of Domnall'; it is not possible to say which Lord of the Isles is meant without reference to other sources." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#Eoin-8d8024f0>
     a foaf:Person;
     irishRel:genName "Eoin";
     irishRel:nomName "Eoin";
+    agrelon:hasParent <#Agais>;
     rel:childOf <#Agais>;
     owl:sameAs <#Eoin>.
 
@@ -146,15 +159,18 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Ealasaid";
-    rel:childOf [
+    agrelon:hasParent _:missing-4b6ece41 ;
+    rel:childOf _:missing-4b6ece41.
+
+_:missing-4b6ece41
       a irishTitle:Mormaer;
-      foaf:title "mormair Comghuill"@sga, "mormaer of Cowall"@eng
-    ].
+    foaf:title "mormair Comghuill"@sga, "mormaer of Cowall"@eng .
 
 <#LaclainnOig>
     a foaf:Person;
     irishRel:genName "Laclainn Oig";
     irishRel:nomName "Lachlann Og";
+    agrelon:hasParent <#Ealasaid>;
     rel:childOf <#Ealasaid>;
     owl:sameAs <#Laclain>.
 
@@ -163,15 +179,19 @@
     irishRel:genName "Gilla Padruig";
     irishRel:nomName "Gilla Padruig";
     owl:sameAs <#GillaPadruig>;
-    rel:childOf [
+    agrelon:hasParent _:missing-b09a4bdb ;
+    rel:childOf _:missing-b09a4bdb.
+
+_:missing-b09a4bdb
       a foaf:Person;
       foaf:gender "female";
-      rel:childOf <#Enri>
-    ].
+      agrelon:hasParent <#Enri>;
+      rel:childOf <#Enri>.
 
 <#Enri>
     a irishTitle:Tigerna;
     irishRel:nomName "Enri";
+    agrelon:hasParent <#Ceinnedaigh>;
     rel:childOf <#Ceinnedaigh>;
     foaf:title "tigerna Cairrge"@sga, "lord of Carrick"@eng.
 
@@ -184,6 +204,7 @@
     a foaf:Person;
     irishRel:genName "Laclainn";
     irishRel:nomName "Laclann";
+    agrelon:hasParent <#Ruaidri>;
     rel:childOf <#Ruaidri>.
 
 <#Ruaidri>
@@ -196,12 +217,16 @@
     irishRel:genName "Gilla Padruig";
     irishRel:nomName "Gilla Padruig";
     owl:sameAs <#GillaPhadruig>;
-    rel:childOf [
-      a foaf:Person;
-      foaf:gender "female";
-      rel:childOf <#Laclainn>
-    ];
+    agrelon:hasChild _:missing-3f51c13a;
+    rel:childOf _:missing-3f51c13a;
+        agrelon:hasChild <#LachlainnMoir>;
     rel:parentOf <#LachlainnMoir>.
+
+_:missing-3f51c13a
+    a foaf:Person;
+    foaf:gender "female";
+    agrelon:hasParent <#Laclainn>;
+    rel:childOf <#Laclainn>.    
 
 <#LachlainnMoir>
     a foaf:Person;
