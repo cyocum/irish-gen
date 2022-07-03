@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelaigh Cloinni Ladmainn"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2021.html>, <https://www.1467manuscript.co.uk/lamont.pdf>;
@@ -23,18 +21,21 @@
 <#Raiberd>
     a foaf:Person;
     irishRel:nomName "Raiberd";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchaidh>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Eoin>;
     rel:childOf <#Eoin>.
 
 <#Eoin>
     a foaf:Person;
     irishRel:genName "Eoin";
     irishRel:nomName "Eoin";
+    agrelon:hasParent <#GillaColaim>;
     rel:childOf <#GillaColaim>;
     rdfs:seeAlso <https://www.poms.ac.uk/rdf/entity/Person/17672>.
 
@@ -42,12 +43,14 @@
     a foaf:Person;
     irishRel:genName "Gilla Colaim";
     irishRel:nomName "Gilla Colaim";
+    agrelon:hasParent <#Ladhmainn>;
     rel:childOf <#Ladhmainn>.
 
 <#Ladhmainn>
     a foaf:Person;
     irishRel:genName "Ladhmainn";
     irishRel:nomName "Ladhmann";
+    agrelon:hasParent <#GillaCholaim>;
     rel:childOf <#GillaCholaim>;
     rdfs:seeAlso <https://www.poms.ac.uk/rdf/entity/Person/3204>.
     << <#Ladhmainn>
@@ -58,6 +61,7 @@
     a foaf:Person;
     irishRel:genName "Gilla Cholaim";
     irishRel:nomName "Gilla Colaim";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
     << <#GillaCholaim>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -67,6 +71,7 @@
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Duinntsleibe>;
     rel:childOf <#Duinntsleibe>.
     << <#Ferchair>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -76,6 +81,7 @@
     a foaf:Person;
     irishRel:genName "Duinn tSleibe";
     irishRel:nomName "Donn Sleibe";
+    agrelon:hasParent <#Aeda>;
     rel:childOf <#Aeda>.
     << <#Duinntsleibe>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -86,6 +92,7 @@
     irishRel:genName "Aeda";
     irishRel:nomName "Aed";
     rdfs:comment ".i. buirce";
+    agrelon:hasParent <#Anradhain>;
     rel:childOf <#Anradhain>.
     << <#Aeda>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -95,6 +102,7 @@
     a foaf:Person;
     irishRel:genName "Anradhain";
     irishRel:nomName "Anradhan";
+    agrelon:hasParent <#Fleitbertaig>;
     rel:childOf <#Fleitbertaig>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q76048219>.
 
@@ -103,6 +111,7 @@
     irishRel:genName "Fleitbertaig";
     irishRel:nomName "Flaithbertach";
     rdfs:comment "in Trosdan";
+    agrelon:hasParent <#Muircertaig>;
     rel:childOf <#Muircertaig>;
     rdfs:seeAlso <#https://www.wikidata.org/entity/Q3073239>.
     << <#Fleitbertaig>
@@ -114,6 +123,7 @@
     irishRel:genName "Muircertaig";
     irishRel:nomName "Muirchertach";
     rdfs:comment "Mighig";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q75675831>.
     << <#Muircertaig>
@@ -124,6 +134,7 @@
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Murachaidh>;
     rel:childOf <#Murachaidh>;
     rdfs:comment "Arda Mhachad";
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1152971>.
@@ -136,6 +147,7 @@
     irishRel:genName "Murachaidh";
     irishRel:nomName "Murachadh";
     rdfs:comment "na cCochaill gCroicend";
+    agrelon:hasParent <#NeillGlunduibh>;
     rel:childOf <#NeillGlunduibh>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q733929>.
     << <#Murachaidh>
