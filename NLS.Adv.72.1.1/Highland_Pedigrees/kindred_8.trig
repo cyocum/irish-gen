@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Cloinni Mhaeil Anfaigh"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2008.html>;
@@ -23,12 +21,14 @@
 <#Eoghan>
     a foaf:Person;
     irishRel:nomName "Eoghan";
+    agrelon:hasParent <#DomnaillDhuib>;
     rel:childOf <#DomnaillDhuib>.
 
 <#DomnaillDhuib>
     a foaf:Person;
     irishRel:genName "Domnaill Dhuib";
     irishRel:nomName "Domnall Dub";
+    agrelon:hasParent <#Ailin>;
     rel:childOf <#Ailin>.
 
 <#Ailin>
@@ -36,50 +36,58 @@
     irishRel:genName "Ailin";
     irishRel:nomName "Ailin".
     << <#Ailin>
-          rdfs:comment "The lack of rel:childOf is intentional. There is no 'mhic' or equivalent at this point in this MS. Black suggests that the connection with the pedigree that follows may be through an unspecified female." >>
+          rdfs:comment "The lack of agrelon:hasParent is intentional. There is no 'mhic' or equivalent at this point in this MS. Black suggests that the connection with the pedigree that follows may be through an unspecified female; rel:childOf is intentional. There is no 'mhic' or equivalent at this point in this MS. Black suggests that the connection with the pedigree that follows may be through an unspecified female." >>
           prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#MaelAnfhaid>
     a foaf:Person;
     irishRel:nomName "Mael Anfhaid";
+    agrelon:hasParent <#Foil>;
     rel:childOf <#Foil>.
 
 <#Foil>
     a foaf:Person;
     irishRel:genName "Foil";
     irishRel:nomName "Pol";
+    agrelon:hasParent <#GillaPadraig>;
     rel:childOf <#GillaPadraig>.
 
 <#GillaPadraig>
     a foaf:Person;
     irishRel:genName "Gilla Padraig";
     irishRel:nomName "Gilla Padraig";
+    agrelon:hasParent <#GillaMhartain>;
     rel:childOf <#GillaMhartain>.
 
 <#GillaMhartain>
     a foaf:Person;
     irishRel:genName "Gilla Mhartain";
     irishRel:nomName "Gilla Martain";
+    agrelon:hasParent <#Pfoil>;
     rel:childOf <#Pfoil>.
 
 <#Pfoil>
     a foaf:Person;
     irishRel:genName "Pfoil";
     irishRel:nomName "Pol";
+    agrelon:hasParent <#MhailAnfaid>;
     rel:childOf <#MhailAnfaid>.
 
 <#MhailAnfaid>
     a foaf:Person;
     irishRel:genName "Mhail Anfaid";
     irishRel:nomName "Mael Anfaid";
+    agrelon:hasParent <#GillaAnfoid>;
     rel:childOf <#GillaAnfoid>.
 
 <#GillaAnfoid>
     a foaf:Person;
     irishRel:genName "Gilla Anfoid";
     irishRel:nomName "Gilla Anfoid";
+    agrelon:hasParent <#GillaAnfoid>;
     rel:childOf <#GillaAnfoid>;
-    rdfs:comment "a quo Clann Gilla Camsronich 7 Clann M[aol Anfaigh] o bfuilid genelaigh b'inme i tighib ut";
+        rdfs:comment "a quo Clann Gilla Camsronich 7 Clann M[aol Anfaigh] o bfuilid genelaigh b'inme i tighib ut";
+        agrelon:hasOffspring <#Ailin>; 
     rel:ancestorOf <#Ailin>;
     irishRel:ancestorOfGroup <#ClannGillaCamsronich>, <#ClannMaolAnfaigh>.
     << <#GillaAnfoid>
@@ -97,23 +105,27 @@
 <#Eoin>
     a foaf:Person;
     irishRel:nomName "Eoin";
+    agrelon:hasParent <#GillaAnfad>;
     rel:childOf <#GillaAnfad>.
 
 <#GillaAnfad>
     a foaf:Person;
     irishRel:genName "Gilla Anfad";
     irishRel:nomName "Gilla Anfad";
+    agrelon:hasParent <#GillaMartainOig>;
     rel:childOf <#GillaMartainOig>.
 
 <#GillaMartainOig>
     a foaf:Person;
     irishRel:genName "Gilla Martain Oig";
     irishRel:nomName "Gilla Martain Oig";
+    agrelon:hasParent <#Gelgan>;
     rel:childOf <#Gelgan>.
 
 <#Gelgan>
     a foaf:Person;
     irishRel:genName "Gelgan";
+    agrelon:hasParent <#GillaMartainnMoir>;
     rel:childOf <#GillaMartainnMoir>;
     rdfs:comment "i. an Condainnec".
     << <#Gelgan>
@@ -124,6 +136,7 @@
     a foaf:Person;
     irishRel:genName "Gilla Martainn Moir";
     irishRel:nomName "Gilla Martainn Mor";
+    agrelon:hasParent <#GilleChamsroin>;
     rel:childOf <#GilleChamsroin>;
     rdfs:comment "si".
     << <#GillaMartainnMoir>
@@ -141,21 +154,24 @@
 <#Eogain>
     a foaf:Person;
     irishRel:nomName "Eogain";
+    agrelon:hasParent <#GillaFaill>;
     rel:childOf <#GillaFaill>.
     << <#Eogain>
-          rdfs:comment "Again, the lack of 'rel:childOf' on <#GilChamsroin> is intentional. This name begins another new pedigree. Black asserts that 'Eogain' is a valid ScG. nominative form.." >>
+          rdfs:comment "Again, the lack of 'agrelon:hasParent' on <#GilChamsroin> is intentional. This name begins another new pedigree. Black asserts that 'Eogain' is a valid ScG. nominative form.; rel:childOf' on <#GilChamsroin> is intentional. This name begins another new pedigree. Black asserts that 'Eogain' is a valid ScG. nominative form.." >>
           prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#GillaFaill>
     a foaf:Person;
     irishRel:genName "Gilla Faill";
     irishRel:nomName "Gilla Faill";
+    agrelon:hasParent <#Eacada>;
     rel:childOf <#Eacada>.
 
 <#Eacada>
     a foaf:Person;
     irishRel:genName "Eacada";
     irishRel:nomName "Eochaid";
+    agrelon:hasParent <#Gartnaidh>;
     rel:childOf <#Gartnaidh>.
     << <#Eacada>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -165,12 +181,14 @@
     a foaf:Person;
     irishRel:genName "Gartnaidh";
     irishRel:nomName "Gartnaidh";
+    agrelon:hasParent <#Conghgail>;
     rel:childOf <#Conghgail>.
 
 <#Conghgail>
     a foaf:Person;
     irishRel:genName "Conghgail";
     irishRel:nomName "Congal";
+    agrelon:hasParent <#Foailacha>;
     rel:childOf <#Foailacha>.
     << <#Conghgail>
           rdfs:comment "This name is difficult to read in the MS. Black suggests 'Dighail' (< Dícuill) as a possible alternative." >>
@@ -180,6 +198,7 @@
     a foaf:Person;
     irishRel:genName "Foailacha";
     irishRel:nomName "Faelchad";
+    agrelon:hasParent <#Airt>;
     rel:childOf <#Airt>.
     << <#Foailacha>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -189,12 +208,14 @@
     a foaf:Person;
     irishRel:genName "Airt";
     irishRel:nomName "Art";
+    agrelon:hasParent <#AengusMhoir>;
     rel:childOf <#AengusMhoir>.
 
 <#AengusMhoir>
     a foaf:Person;
     irishRel:genName "Aengus Mhoir";
     irishRel:nomName "Aengus Mor";
+    agrelon:hasParent <#Ena>;
     rel:childOf <#Ena>.
     << <#AengusMhoir>
           rdfs:comment "This name is difficult to read in the MS." >>
@@ -204,6 +225,7 @@
     a foaf:Person;
     irishRel:genName "Ena";
     irishRel:nomName "Enna";
+    agrelon:hasParent <#Cenit>;
     rel:childOf <#Cenit>.
     << <#Ena>
           rdfs:comment "This name is difficult to read in the MS. As Black points out, 'eifdh' would be the most faithful transcription, but it bears no resemblance to any known Gaelic word, let alone a name. 'ena' emerges from moderate emendation, 'erc' from more severe emendation. I have opted for the former of these two options." >>
