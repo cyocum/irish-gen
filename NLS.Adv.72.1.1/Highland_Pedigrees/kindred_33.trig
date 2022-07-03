@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Clann Domhnaill beos"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2033.html>;
@@ -23,6 +21,7 @@
 <#EoinDub>
     a foaf:Person;
     irishRel:nomName "Eoin Dub";
+    agrelon:hasParent <#Alasdair>;
     rel:childOf <#Alasdair>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q75446747>.
 
@@ -30,6 +29,7 @@
     a foaf:Person;
     irishRel:genName "Alasdair";
     irishRel:nomName "Alasdair";
+    agrelon:hasParent <#Aenghusa>;
     rel:childOf <#Aenghusa>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q75446745>.
 
@@ -37,6 +37,7 @@
     a foaf:Person;
     irishRel:genName "AenghusaMoir";
     irishRel:nomName "Aenghus Mor";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1967485>.
 
@@ -44,6 +45,7 @@
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Raghnaill>;
     rel:childOf <#Raghnaill>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q3036055>.
 
@@ -51,6 +53,7 @@
     a foaf:Person;
     irishRel:genName "Raghnaill";
     irishRel:nomName "Raghnall";
+    agrelon:hasParent <#Shomairle>;
     rel:childOf <#Shomairle>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Raghnaill>.
 
@@ -58,6 +61,7 @@
     a foaf:Person;
     irishRel:genName "Shomairle";
     irishRel:nomName "Somairle";
+    agrelon:hasParent <#GilleBride>;
     rel:childOf <#GilleBride>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Somhairle>.
 
@@ -65,6 +69,7 @@
     a foaf:Person;
     irishRel:genName "Gille Bride";
     irishRel:nomName "Gille Bride";
+    agrelon:hasParent <#GilleBride>;
     rel:childOf <#GilleBride>.
 
 }
