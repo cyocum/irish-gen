@@ -9,12 +9,10 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Kindred 28"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2028.html>;
@@ -24,24 +22,28 @@
 <#Alasdair>
     a foaf:Person;
     irishRel:nomName "Alasdair";
+    agrelon:hasParent <#Eoghain>;
     rel:childOf <#Eoghain>.
 
 <#Eoghain>
     a foaf:Person;
     irishRel:genName "Eoghain";
     irishRel:nomName "Eoghan";
+    agrelon:hasParent <#GillePedair>;
     rel:childOf <#GillePedair>.
 
 <#GillePedair>
     a foaf:Person;
     irishRel:genName "Gille Pedair";
     irishRel:nomName "Gille Pedair";
+    agrelon:hasParent <#AlasdairMoir>;
     rel:childOf <#AlasdairMoir>.
 
 <#AlasdairMoir>
     a foaf:Person;
     irishRel:genName "Alasdair Moir";
     irishRel:nomName "Alasdair Mor";
+    agrelon:hasParent <#Eoghain-63373510>;
     rel:childOf <#Eoghain-63373510>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q4275634>.
 
@@ -49,6 +51,7 @@
     a foaf:Person;
     irishRel:genName "Eoghain";
     irishRel:nomName "Eoghan";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q3061707>.
 
@@ -56,6 +59,7 @@
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Dubghaill>;
     rel:childOf <#Dubghaill>;
     rdfs:seeAlso <https://www.wikidata.org/entity/Q1216304>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_31.trig#Donnchaidh>.
@@ -70,18 +74,21 @@
 <#Donnchadh>
     a foaf:Person;
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Dubghuill>;
     rel:childOf <#Dubghuill>.
 
 <#Dubghuill>
     a foaf:Person;
     irishRel:genName "Dubghuill";
     irishRel:nomName "Dubghall";
+    agrelon:hasParent <#Laclainn>;
     rel:childOf <#Laclainn>.
 
 <#Laclainn>
     a foaf:Person;
     irishRel:genName "Laclainn";
     irishRel:nomName "Laclann";
+    agrelon:hasParent <#AlasdairMoir-07196680>;
     rel:childOf <#AlasdairMoir-07196680>.
 
 <#AlasdairMoir-07196680>
@@ -93,40 +100,46 @@
 <#Ragnall>
     a foaf:Person;
     irishRel:nomName "Ragnall";
+    agrelon:hasParent <#Colaim>;
     rel:childOf <#Colaim>.
 
 <#Colaim>
     a foaf:Person;
     irishRel:genName "Colaim";
     irishRel:nomName "Colam";
+    agrelon:hasParent <#MaeilColaim>;
     rel:childOf <#MaeilColaim>.
 
 <#MaeilColaim>
     a foaf:Person;
     irishRel:genName "Maeil Colaim";
     irishRel:nomName "Mael Colam";
+    agrelon:hasParent <#Dubghaill-820d3b00>;
     rel:childOf <#Dubghaill-820d3b00>.
 
 <#Dubghaill-820d3b00>
     a foaf:Person;
     irishRel:genName "Dubghaill";
     irishRel:nomName "Dubghall";
+    agrelon:hasParent <#GillaEspaig>;
     rel:childOf <#GillaEspaig>.
 
 <#GillaEspaig>
     a foaf:Person;
     irishRel:genName "Gilla Espaig";
     irishRel:nomName "Gilla Espaig";
+    agrelon:hasParent <#Domhnaill>;
     rel:childOf <#Domhnaill>.
 
 <#Domhnaill>
     a foaf:Person;
     irishRel:genName "Domhnaill";
     irishRel:nomName "Domhnall";
+    agrelon:hasParent <#Donnchaidh-d7309460>;
     rel:childOf <#Donnchaidh-d7309460>.
     << <#Domhnaill>
-          rdfs:comment "'domnaill mhic' has been inserted from the upper margin." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+      rdfs:comment "'domnaill mhic' has been inserted from the upper margin." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#Donnchaidh-d7309460>
     a foaf:Person;
@@ -138,39 +151,46 @@
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
-    rel:childOf [
+    agrelon:hasParent _:missing-511d11b7 ;
+    rel:childOf _:missing-511d11b7.
+
+_:missing-511d11b7
       a foaf:Person;
       foaf:gender "female";
-      rel:parentOf <#Donnchadh-107a9b20>
-    ].
+      rel:parentOf <#Donnchadh-107a9b20>.
 
 <#Donnchadh-107a9b20>
     a foaf:Person;
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#GillaEspaig-25b0c050>;
     rel:childOf <#GillaEspaig-25b0c050>.
 
 <#GillaEspaig-25b0c050>
     a foaf:Person;
     irishRel:genName "Gilla Espaig";
     irishRel:nomName "Gilla Espaig";
+    agrelon:hasParent <#Donnchaidh-ac80a9f0>;
     rel:childOf <#Donnchaidh-ac80a9f0>.
 
 <#Donnchaidh-ac80a9f0>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#GillaColaim>;
     rel:childOf <#GillaColaim>.
 
 <#GillaColaim>
     a foaf:Person;
     irishRel:genName "Gilla Colaim";
     irishRel:nomName "Gilla Colaim";
+    agrelon:hasParent <#Imhair>;
     rel:childOf <#Imhair>.
 
 <#Imhair>
     a foaf:Person;
     irishRel:genName "Imhair";
     irishRel:nomName "Imhar";
+    agrelon:hasParent <#Donnchaidh>;
     rel:childOf <#Donnchaidh>.
 
 <#Donnchaidh-110934a0>
@@ -178,24 +198,27 @@
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh".
     << <#Donnchaidh-110934a0>
-          rdfs:comment "There are several instances of 'Donnchadh' in this section with which this could be identified." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
+      rdfs:comment "There are several instances of 'Donnchadh' in this section with which this could be identified." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 
 <#Niall>
     a foaf:Person;
     irishRel:nomName "Niall";
+    agrelon:hasParent <#Cailin>;
     rel:childOf <#Cailin>.
 
 <#Cailin>
     a foaf:Person;
     irishRel:genName "Cailin";
     irishRel:nomName "Cailin";
+    agrelon:hasParent <#Donnchaidh-41de1f00>;
     rel:childOf <#Donnchaidh-41de1f00>.
 
 <#Donnchaidh-41de1f00>
     a foaf:Person;
     irishRel:genName "Donnchaidh";
     irishRel:nomName "Donnchadh";
+    agrelon:hasParent <#Dubghaill-67d3ae50>;
     rel:childOf <#Dubghaill-67d3ae50>.
 
 <#Dubghaill-67d3ae50>
@@ -203,11 +226,13 @@
     irishRel:genName "Dubghaill";
     irishRel:nomName "Dubghall";
     foaf:title "persuin"@sga, "parson"@eng;
+    agrelon:hasParent <#Dubhagan>;
     rel:childOf <#Dubhagan>.
 
 <#Dubhagan>
     a foaf:Person;
     irishRel:genName "Dubhagan";
+    agrelon:hasParent <#Donnchaidh-a92d1cb0>;
     rel:childOf <#Donnchaidh-a92d1cb0>.
 
 <#Donnchaidh-a92d1cb0>
@@ -216,7 +241,6 @@
     irishRel:nomName "Donnchadh";
     owl:sameAs <#Donnchaidh>.
     << <#Donnchaidh-a92d1cb0>
-          rdfs:comment "There are several instances of 'Donnchadh' in this section with which this could be identified. The highest-level Donnchadh (son of Dubghall) has been selected on the basis that he seems least likely to need further specification within the text." >>
-          prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
-
+      rdfs:comment "There are several instances of 'Donnchadh' in this section with which this could be identified. The highest-level Donnchadh (son of Dubghall) has been selected on the basis that he seems least likely to need further specification within the text." >>
+      prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519>.
 }
