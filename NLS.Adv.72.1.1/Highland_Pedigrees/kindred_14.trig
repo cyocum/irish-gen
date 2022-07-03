@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Cloinne Ainnrias"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2014.html>, <https://www.1467manuscript.co.uk/Gillanders2web.pdf>;
@@ -23,6 +21,7 @@
 <#PalMacTire>
     a foaf:Person;
     irishRel:nomName "Pal Mac Tire";
+    agrelon:hasParent <#Eoghain>;
     rel:childOf <#Eoghain>.
     << <#PalMacTire>
           rdfs:comment "As Black points out, 'Mac Tire' is a kenning for 'wolf' and is probably Pal's nickname." >>
@@ -32,57 +31,67 @@
     a foaf:Person;
     irishRel:genName "Eoghain";
     irishRel:nomName "Eoghan";
+    agrelon:hasParent <#Muiredhaigh>;
     rel:childOf <#Muiredhaigh>.
 
 <#Muiredhaigh>
     a foaf:Person;
     irishRel:genName "Fail";
     irishRel:nomName "Pal";
+    agrelon:hasParent <#GilleAinnrias>;
     rel:childOf <#GilleAinnrias>.
 
 <#GilleAinnrias>
     a foaf:Person;
     irishRel:genName "Gille Ainnrias";
     irishRel:nomName "Gille Ainnrias";
+    agrelon:hasParent <#Martain>;
     rel:childOf <#Martain>.
 
 <#Martain>
     a foaf:Person;
     irishRel:genName "Martain";
     irishRel:nomName "Martan";
+    agrelon:hasParent <#Foil>;
     rel:childOf <#Foil>.
 
 <#Foil>
     a foaf:Person;
     irishRel:genName "Foil";
     irishRel:nomName "Fol";
+    agrelon:hasParent <#Cainnigh>;
     rel:childOf <#Cainnigh>.
 
 <#Cainnigh>
     a foaf:Person;
     irishRel:genName "Cainnigh";
+    agrelon:hasParent <#Cristin>;
     rel:childOf <#Cristin>.
 
 <#Cristin>
     a foaf:Person;
     irishRel:genName "Cristin";
+    agrelon:hasParent <#Eoghain-637fa6e0>;
     rel:childOf <#Eoghain-637fa6e0>.
 
 <#Eoghain-637fa6e0>
     a foaf:Person;
     irishRel:genName "Eoghain";
     irishRel:nomName "Eoghan";
+    agrelon:hasParent <#Cainnigh-821d5430>;
     rel:childOf <#Cainnigh-821d5430>.
 
 <#Cainnigh-821d5430>
     a foaf:Person;
     irishRel:genName "Cainnigh";
+    agrelon:hasParent <#Cristin-99514530>;
     rel:childOf <#Cristin-99514530>;
     owl:SameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_12.trig#Cainnigh-c1dc1f10>.
 
 <#Cristin-99514530>
     a foaf:Person;
     irishRel:genName "Cristin";
+    agrelon:hasParent <#GilleEoinNahAirde>;
     rel:childOf <#GilleEoinNahAirde>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_12.trig#Cristin>.
 
@@ -91,30 +100,35 @@
     irishRel:genName "Gilla Eoin na hAirde";
     irishRel:nomName "Gilla Eoin na hAirde";
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_11.trig#GillaEoinNahAird>;
+    agrelon:hasParent <#Eirc>;
     rel:childOf <#Eirc>.
 
 <#Eirc>
     a foaf:Person;
     irishRel:genName "Eirc";
     irishRel:nomName "Erc";
+    agrelon:hasParent <#Loairn>;
     rel:childOf <#Loairn>.
 
 <#Loairn>
     a foaf:Person;
     irishRel:genName "Loairn";
     irishRel:nomName "Loarn";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#Cormaic>;
     rel:childOf <#Cormaic>.
 
 <#Cormaic>
     a foaf:Person;
     irishRel:genName "Cormaic";
     irishRel:nomName "Cormac";
+    agrelon:hasParent <#Airbertaigh>;
     rel:childOf <#Airbertaigh>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Cormaic>.
 
@@ -122,6 +136,7 @@
     a foaf:Person;
     irishRel:genName "Airbertaigh";
     irishRel:nomName "Airbertach";
+    agrelon:hasParent <#Airbertaigh>;
     rel:childOf <#Airbertaigh>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_7.trig#Airbertaigh>.
 
