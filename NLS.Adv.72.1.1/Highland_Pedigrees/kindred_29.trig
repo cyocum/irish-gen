@@ -8,12 +8,10 @@
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-
-
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees> {
 <>
-
     a dctype:Dataset;
     dcterms:title "Genelach Cloinni Somairle"@sga;
     dcterms:isFormatOf <https://www.1467manuscript.co.uk/kindred%2029.html>, <https://www.1467manuscript.co.uk/Macsorley.pdf>;
@@ -23,42 +21,49 @@
 <#Domnall>
     a foaf:Person;
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#GillaEspaig>;
     rel:childOf <#GillaEspaig>.
 
 <#GillaEspaig>
     a foaf:Person;
     irishRel:genName "Gilla Espaig";
     irishRel:nomName "Gilla Espaig";
+    agrelon:hasParent <#Aengus>;
     rel:childOf <#Aengus>.
 
 <#Aengus>
     a foaf:Person;
     irishRel:genName "Aengus";
     irishRel:nomName "Aengus";
+    agrelon:hasParent <#Domnaill>;
     rel:childOf <#Domnaill>.
 
 <#Domnaill>
     a foaf:Person;
     irishRel:genName "Domnaill";
     irishRel:nomName "Domnall";
+    agrelon:hasParent <#Shomairle>;
     rel:childOf <#Shomairle>.
 
 <#Shomairle>
     a foaf:Person;
     irishRel:genName "Shomairle";
     irishRel:nomName "Somairle";
+    agrelon:hasParent <#Ferchair>;
     rel:childOf <#Ferchair>.
 
 <#Ferchair>
     a foaf:Person;
     irishRel:genName "Ferchair";
     irishRel:nomName "Ferchar";
+    agrelon:hasParent <#DuinSleibe>;
     rel:childOf <#DuinSleibe>.
 
 <#DuinSleibe>
     a foaf:Person;
     irishRel:genName "Duin Sleibe";
     irishRel:nomName "Don Sleibe";
+    agrelon:hasParent <#Buirrce>;
     rel:childOf <#Buirrce>;
     owl:sameAs <http://example.com/NLS.Adv.72.1.1/Highland_Pedigrees/kindred_9.trig#DonnSleibe>.
 
