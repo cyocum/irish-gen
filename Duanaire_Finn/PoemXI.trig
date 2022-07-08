@@ -9,6 +9,7 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Duanaire_Finn> {
 <>
@@ -32,26 +33,31 @@
 <#FerghusLuaithfhionn>
     a foaf:Person;
     irishRel:nomName "Fearghus Luaithfhionn";
+    agrelon:hasParent <#FiondFile>;
     rel:childOf <#FiondFile>.
 
 <#Eogan>
     a foaf:Person;
     irishRel:nomName "Eoghan";
+    agrelon:hasParent <#FiondFile>;
     rel:childOf <#FiondFile>.
 
 <#Oilill>
     a foaf:Person;
     irishRel:nomName "Oilill";
+    agrelon:hasParent <#Eogan>;
     rel:childOf <#Eogan>.
 
 <#Dáire>
     a foaf:Person;
     irishRel:nomName "Dáire";
+    agrelon:hasParent <#Oilill>;
     rel:childOf <#Oilill>.
 
 <#Dorchaidhe>
     a foaf:Person;
     irishRel:nomName "Dorchaidhe";
+    agrelon:hasParent <#Oilill>;
     rel:childOf <#Oilill>.
 
 <#Baoiscne>
@@ -64,38 +70,45 @@
 <#Cumhall>
     a foaf:Person;
     irishRel:nomName "Cumhall";
+    agrelon:hasParent <#Baoiscne>;
     rel:childOf <#Baoiscne>.
 
 <#Criomhall>
     a foaf:Person;
     irishRel:nomName "Criomhall";
+    agrelon:hasParent <#Baoiscne>;
     rel:childOf <#Baoiscne>.
 
 <#ÁodhOllach>
     a foaf:Person;
     irishRel:nomName "Aodh Ollach";
+    agrelon:hasParent <#Baoiscne>;
     rel:childOf <#Baoiscne>;
     irishRel:numChild 1.
 
 <#Lughaidh>
     a foaf:Person;
     irishRel:nomName "Lughaidh";
+    agrelon:hasParent <#ÁodhOllach>;
     rel:childOf <#ÁodhOllach>.
 
 <#Feardhomhann>
     a foaf:Person;
     irishRel:nomName "Feardhomhann";
+    agrelon:hasParent <#Lughaidh>;
     rel:childOf <#Lughaidh>;
     irishRel:numChild 2.
 
 <#Morann>
     a foaf:Person;
     irishRel:nomName "Morann";
+    agrelon:hasParent <#Feardhomhann>;
     rel:childOf <#Feardhomhann>.
 
 <#Aodh>
     a foaf:Person;
     irishRel:nomName "Aodh";
+    agrelon:hasParent <#Feardhomhann>;
     rel:childOf <#Feardhomhann>.
 
 <#Oisin>
@@ -110,30 +123,35 @@
 <#Fearghus>
     a foaf:Person;
     irishRel:nomName "Fearghus";
+    agrelon:hasSibling <#Oisin>;
     rel:siblingOf <#Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
 <#Caoinche>
     a foaf:Person;
     irishRel:nomName "Caoinche";
+    agrelon:hasSibling <#Oisin>;
     rel:siblingOf <#Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
 <#Uilleann>
     a foaf:Person;
     irishRel:nomName "Uilleann";
+    agrelon:hasSibling <#Oisin>;
     rel:siblingOf <#Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
 <#Fáobhar>
     a foaf:Person;
     irishRel:nomName "Fáobhar";
+    agrelon:hasSibling <#Oisin>;
     rel:siblingOf <#Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
 <#Ráighne>
     a foaf:Person;
     irishRel:nomName "Raighne";
+    agrelon:hasSibling <#Oisin>;
     rel:siblingOf <#Oisin>;
     rdfs:comment "[No indication is given of the relationships of Fearghus, Caoinche, Uilleann, Faobhar, and Raighne to Oisín in the text; MacNeill supposes that they are brothers.]".
 
@@ -146,31 +164,37 @@
 <#Osgar>
     a foaf:Person;
     irishRel:nomName "Osgar";
+    agrelon:hasParent <#Oisin-18c1f630>;
     rel:childOf <#Oisin-18c1f630>.
 
 <#FearLogha>
     a foaf:Person;
     irishRel:nomName "Fear Logha";
+    agrelon:hasParent <#Oisin-18c1f630>;
     rel:childOf <#Oisin-18c1f630>.
 
 <#Eachtach>
     a foaf:Person;
     irishRel:nomName "Eachtach";
+    agrelon:hasParent <#Oisin-18c1f630>;
     rel:childOf <#Oisin-18c1f630>.
 
 <#Uladhach>
     a foaf:Person;
     irishRel:nomName "Uladhach";
+    agrelon:hasParent <#Oisin-18c1f630>;
     rel:childOf <#Oisin-18c1f630>.
 
 <#DolbhSgéine>
     a foaf:Person;
     irishRel:nomName "Dolbh Sgéine";
+    agrelon:hasParent <#Oisin-18c1f630>;
     rel:childOf <#Oisin-18c1f630>.
 
 <#Lughach>
     a foaf:Person;
     foaf:gender "female";
+    agrelon:hasParent <#Finn>;
     rel:childOf <#Finn>;
     irishRel:spouseOf <#Dáire-0ec0f7c0>.
 
@@ -183,6 +207,8 @@
     a foaf:Person;
     irishRel:nomName "Gaoine";
     irishRel:nomName "Mac Lughach";
+    agrelon:hasParent <#Lughach>;
     rel:childOf <#Lughach>;
+    agrelon:hasParent <#Dáire-0ec0f7c0>;
     rel:childOf <#Dáire-0ec0f7c0>.
 }
