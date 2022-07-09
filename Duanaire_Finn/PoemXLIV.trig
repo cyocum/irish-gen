@@ -11,6 +11,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix nsl: <http://www.dbpedia.org/resource/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#>.
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Duanaire_Finn> {
 <>
@@ -24,6 +25,7 @@
     a foaf:Person;
     irishRel:genName "Logha";
     irishRel:nomName "Lug";
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>.
 
 <#Eithne>
@@ -34,6 +36,7 @@
 <#Tadhg>
     a foaf:Person;
     irishRel:nomName "Tadhg";
+    agrelon:hasSpouse <#Eithne>;
     rel:spouseOf <#Eithne>.
 
 <#Uirne>
@@ -41,33 +44,39 @@
     foaf:gender "female";
     irishRel:nomName "Uirne";
     irishRel:nomName "Tuirn";
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>.
 
 <#Muirn>
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Muirn";
+    agrelon:hasParent <#Eithne>;
     rel:childOf <#Eithne>.
 
 <#Conall>
     a foaf:Person;
     irishRel:nomName "Conall";
+    agrelon:hasSpouse <#Uirne>;
     rel:spouseOf <#Uirne>.
 
 <#Dáire>
     a foaf:Person;
     irishRel:nomName "Dáire";
+    agrelon:hasParent <#Uirne>;
     rel:childOf <#Uirne>.
 
 <#MacLughach>
     a foaf:Person;
     irishRel:nomName "Mac Lughach";
+    agrelon:hasParent <#Dáire>;
     rel:childOf <#Dáire>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.trig#Gaoine>.
 
 <#Gaoine>
     a foaf:Person;
     irishRel:nomName "Gaoine";
+    agrelon:hasParent <#Uirne>;
     rel:childOf <#Uirne>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.trig#Gaoine>.
 
@@ -75,25 +84,32 @@
     a foaf:Person;
     irishRel:nomName "Uirne";
     owl:sameAs <#Uirne>;
-    rel:spouseOf [
-      a foaf:Person;
-      foaf:title "triath"@sga, "lord"@eng;
-      foaf:title "righ"@sga, "king"@eng;
-      rdfs:comment "deaghtriath Uladh";
-      rel:spouseOf [
-        a foaf:Person;
-        foaf:gender "female";
-        rel:childOf <#Buidhph>;
-        rel:antagonistOf <#Uirne-46dd6060>
-      ]
-    ];
+    agrelon:hasSpouse _:missing-0a3fe0a3 ;
+    rel:spouseOf _:missing-0a3fe0a3;
+    agrelon:hasCohabitee <#FeargusaFhinnleith>;
     rel:livesWith <#FeargusaFhinnleith>;
     rel:spouseOf <#LughaidhLagha>;
     irishRel:numChild 7.
 
+_:missing-0a3fe0a3
+      a foaf:Person;
+      foaf:title "triath"@sga, "lord"@eng;
+      foaf:title "righ"@sga, "king"@eng;
+      rdfs:comment "deaghtriath Uladh";
+      agrelon:hasSpouse _:missing-d669ee79 ;
+      rel:spouseOf _:missing-d669ee79 .    
+
+_:missing-d669ee79
+    a foaf:Person;
+    foaf:gender "female";
+    agrelon:hasParent <#Buidhph>;
+    rel:childOf <#Buidhph>;
+    agrelon:hasVitalLethalContact <#Uirne-46dd6060>;
+    rel:antagonistOf <#Uirne-46dd6060>.
+
 << <#Uirne-46dd6060>
-        rdfs:comment "In MS as 'Tuirn'; Murphy corrects to 'Uirne'." >>
-        prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
+    rdfs:comment "In MS as 'Tuirn'; Murphy corrects to 'Uirne'." >>
+    prov:wasAttributedTo <https://orcid.org/0000-0003-2819-5519> .
 
 <#Buidhph>
     a foaf:Person;
@@ -123,33 +139,39 @@
 <#Sgiath>
     a foaf:Person;
     irishRel:nomName "Sgiath";
+    agrelon:hasParent <#Uirne-46dd6060>;
     rel:childOf <#Uirne-46dd6060>.
 
 <#Caol>
     a foaf:Person;
     irishRel:nomName "Caol";
+    agrelon:hasParent <#Uirne-46dd6060>;
     rel:childOf <#Uirne-46dd6060>.
 
 <#Sgiath-987a11c0>
     a foaf:Person;
     irishRel:nomName "Sgiath";
+    agrelon:hasParent <#LughaidhLagha>;
     rel:childOf <#LughaidhLagha>;
     owl:sameAs <#Sgiath>.
 
 <#Caol-a356fbd0>
     a foaf:Person;
     irishRel:nomName "Caol";
+    agrelon:hasParent <#LughaidhLagha>;
     rel:childOf <#LughaidhLagha>;
     owl:sameAs <#Caol>.
 
 <#Aodh>
     a foaf:Person;
     irishRel:nomName "Caol";
+    agrelon:hasParent <#LughaidhLagha>;
     rel:childOf <#LughaidhLagha>.
 
 <#Iollann>
     a foaf:Person;
     irishRel:nomName "Iollann";
+    agrelon:hasParent <#LughaidhLagha>;
     rel:childOf <#LughaidhLagha>.
 
 <#Muirn-c6d7abb0>
@@ -161,6 +183,7 @@
 <#Fionn>
     a foaf:Person;
     irishRel:nomName "Fionn";
+    agrelon:hasParent <#Muirn-c6d7abb0>;
     rel:childOf <#Muirn-c6d7abb0>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.trig#Fionn>.
 
@@ -168,6 +191,7 @@
     a foaf:Person;
     irishRel:genName "Cumaill";
     irishRel:nomName "Cumall";
+    agrelon:hasParent <#Trénmhóir>;
     rel:childOf <#Trénmhóir>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIII.trig#Cumaill>.
 
@@ -182,6 +206,7 @@
     irishRel:genName "Taidg";
     irishRel:nomName "Tadg";
     owl:sameAs <#Tadhg>;
+    agrelon:hasParent <#Nuadat>;
     rel:childOf <#Nuadat>.
 
 <#Nuadat>
