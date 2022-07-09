@@ -9,6 +9,7 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Duanaire_Finn> {
 <>
@@ -21,6 +22,7 @@
 <#Fiamhain>
     a foaf:Person;
     irishRel:nomName "Fiamhain";
+    agrelon:hasParent <#Foraigh>;
     rel:childOf <#Foraigh>.
 
 <#Foraigh>
@@ -31,26 +33,34 @@
 <#Oisin>
     a foaf:Person;
     irishRel:nomName "Oisin";
-    rel:childOf [
+    agrelon:hasParent _:missing-4991a4fb ;
+    rel:childOf _:missing-4991a4fb;
+    agrelon:hasParent _:missing-2016d951;
+    rel:childOf _:missing-2016d951;
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.trig#Oisin>.
+
+_:missing-4991a4fb
       a foaf:Person;
-      foaf:title "in riogh"@sga, "the king"@eng
-    ];
-    rel:childOf [
+        foaf:title "in riogh"@sga, "the king"@eng .
+
+_:missing-2016d951
       a foaf:Person;
       foaf:gender "female";
-      rel:siblingOf [
-        a foaf:Person;
-        foaf:gender "female";
-        rel:parentOf <#Fiamhain>;
-        owl:sameAs <#Righlinn>
-      ]
-    ];
-    owl:sameAs <http://example.com/Duanaire_Finn/PoemXI.trig#Oisin>.
+      agrelon:hasSibling _:missing-2113b2b0 ;
+      rel:siblingOf _:missing-2113b2b0 .
+
+_:missing-2113b2b0
+    a foaf:Person;
+    foaf:gender "female";
+    agrelon:hasChild <#Fiamhain>;
+    rel:parentOf <#Fiamhain>;
+    owl:sameAs <#Righlinn>.
 
 <#Righlinn>
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Righlinn";
+    agrelon:hasParent <#InDeirg>;
     rel:childOf <#InDeirg>.
 
 <#InDeirg>
@@ -64,6 +74,7 @@
     foaf:gender "female";
     irishRel:genName "Fiamhoin";
     irishRel:nomName "Fiamhain";
+    agrelon:hasParent <#Righlinn>;
     rel:childOf <#Righlinn>;
     owl:sameAs <#Fiamhain>.
 
@@ -71,11 +82,13 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Cruithgheal";
+    agrelon:hasParent <#InDeirg>;
     rel:childOf <#InDeirg>.
 
 <#Oisin-cd2ebea0>
     a foaf:Person;
     irishRel:nomName "Oisin";
+    agrelon:hasParent <#Cruithgheal>;
     rel:childOf <#Cruithgheal>;
     owl:sameAs <#Oisin>.
 }
