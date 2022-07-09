@@ -9,6 +9,7 @@
 @prefix irishRel: <http://example.com/earlyIrishRelationship.ttl#> .
 @prefix irishTitle: <http://example.com/earlyIrishTitles.ttl#>.
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix agrelon: <https://d-nb.info/standards/elementset/agrelon#> .
 
 <http://example.com/Duanaire_Finn> {
 <>
@@ -24,12 +25,14 @@
 <#CnúDeireoil>
     a foaf:Person;
     irishRel:nomName "Cnú Deireoil";
+    agrelon:hasParent <#Logha>;
     rel:childOf <#Logha>.
 
 <#Logha>
     a foaf:Person;
     irishRel:genName "Logha";
     irishRel:nomName "Lugh";
+    agrelon:hasParent <#Eithlinn>;
     rel:childOf <#Eithlinn>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIV.trig#Logha>;
     owl:sameAs <http://example.com/LL/fergus_mc_do_roig.trig#Loga>.
@@ -44,6 +47,7 @@
 <#Lugh>
     a foaf:Person;
     irishRel:nomName "Lugh";
+    agrelon:hasParent <#Cein>;
     rel:childOf <#Cein>;
     owl:sameAs <#Logha>.
 
@@ -51,6 +55,7 @@
     a foaf:Person;
     irishRel:genName "Cein";
     irishRel:nomName "Cian";
+    agrelon:hasParent <#Cáinti>;
     rel:childOf <#Cáinti>.
 
 <#Cáinti>
@@ -63,12 +68,14 @@
     foaf:gender "female";
     irishRel:nomName "Eithne";
     owl:sameAs <#Eithlinn>;
+    agrelon:hasParent <#Bhaloir>;
     rel:childOf <#Bhaloir>.
 
 <#Bhaloir>
     a foaf:Person;
     irishRel:genName "Bhaloir";
     irishRel:nomName "Balor";
+    agrelon:hasVitalLethalContact <#Lugh>;
     rel:antagonistOf <#Lugh>.
 
 <#Taidg>
@@ -76,6 +83,7 @@
     irishRel:genName "Taidg";
     irishRel:nomName "Tadg";
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIV.trig#Taidg>;
+    agrelon:hasParent <#Nuadhat>;
     rel:childOf <#Nuadhat>.
 
 <#Nuadhat>
@@ -88,6 +96,7 @@
     a foaf:Person;
     foaf:gender "female";
     irishRel:nomName "Muirn";
+    agrelon:hasParent <#Taidg>, <#Muirn>;
     rel:childOf <#Taidg>, <#Muirn>;
     owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIV.trig#Muirn>.
 
@@ -96,17 +105,22 @@
     foaf:gender "female";
     irishRel:nomName "Eithne";
     owl:sameAs <#Eithlinn>;
+    agrelon:hasParent <#Bhaloir>;
     rel:childOf <#Bhaloir>;
-    rel:parentOf [
+    agrelon:hasChild _:missing-9fea7a0c ;
+    rel:parentOf _:missing-9fea7a0c.
+
+_:missing-9fea7a0c
       a foaf:Person;
       foaf:gender "female";
       owl:sameAs <#Muirn>;
-      rel:parentOf [
-        a foaf:Person;
-        owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIV.trig#Fionn>;
-        rel:childOf <#Cumaill>
-      ]
-    ].
+      agrelon:hasChild _:missing-47e3f668 ;
+    rel:parentOf _:missing-47e3f668 .
+
+_:missing-47e3f668
+    a foaf:Person;
+    owl:sameAs <http://example.com/Duanaire_Finn/PoemXLIV.trig#Fionn>;
+    rel:childOf <#Cumaill>.
 
 <#Cumaill>
     a foaf:Person;
