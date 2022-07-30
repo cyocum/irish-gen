@@ -42,13 +42,13 @@ by `uuidgen -r` are appended to differentiate between the different
 instances is added.  For example,
 
 ```turtle
-<#CindFhaelad>
+<CindFhaelad>
     a foaf:Person;
     irishRel:genName "Cind Fhaelad";
     irishRel:nomName "Cenn Faelad";
     rel:childOf <#Airnelaig>.
 
-<#CindFhaelad-6e827350>
+<CindFhaelad-6e827350>
     a foaf:Person;
     irishRel:genName "Cind Fhaelad";
     irishRel:nomName "Cenn Faelad";
@@ -57,8 +57,8 @@ instances is added.  For example,
 
 At the present moment, all URLs are prefixed with `http://example.com`
 because a permanent URL has not been purchased at this time.  For
-example, a full URL for `<#CindFhaelad-6e827350>` would be
-`http://example.com/LL/ceniuil_lugdach.trig#CindFhaelad-6e827350`.
+example, a full URL for `<CindFhaelad-6e827350>` would be
+`http://example.com/LL/ceniuil_lugdach/CindFhaelad-6e827350`.
 
 ## Named Graph (RDF Dataset)
 
@@ -83,13 +83,13 @@ is the named graph for the triples.  For instance, from
         dcterms:format "application/trig" ;
         prov:asDerivedFrom <http://www.ucc.ie/celt/published/G800011F/text028.html> .
 
-     <#Conchobuir>
+     <Conchobuir>
         a foaf:Person;
         irishRel:genName "Conchobuir";
         irishRel:nomName "Conchobar";
-        rel:childOf <#Fhactnai>.
+        rel:childOf <Fhactnai>.
 
-     <#Fhactnai>
+     <Fhactnai>
         a foaf:Person;
         irishRel:nomName "Fhactnai".
 }
@@ -127,27 +127,15 @@ uses a `_:missing` plus a UUID fragment like above. For instance,
 _:missing-04015614
     a foaf:Person ;
     foaf:gender "female" ;
-    rel:parentOf <#Conmáel>, <#h-Ér>, <#Orbba>, <#Ferón>, <#Fergna>;
-    rel:childOf <#Militis>;
-    rel:siblingOf <#Díl>.
+	agrelon:hasChild <Conmáel>, <h-Ér>, <Orbba>, <Ferón>, <#ergna>;
+    rel:parentOf <Conmáel>, <h-Ér>, <Orbba>, <Ferón>, <#ergna>;
+	agrelon:hasParent <Militis>;
+    rel:childOf <Militis>;
+	agrelon:hasSibling <Díl>;
+    rel:siblingOf <Díl>.
 ```
 
-The alternate form of the blank node is used where convenient.  For
-instance,
-
-```turtle
-<#FiachachLabrinne>
-    a foaf:Person ;
-    irishRel:genName "Fiachach Labrinne" ;
-    irishRel:nomName "Fiachu Labrainne" ;
-    rel:spouseOf [
-        a foaf:Person ;
-        foaf:gender "female" ;
-        rel:childOf <#MugáethMórólach>;
-        rel:parentOf <#ÓengusaÓlmugáetha>
-    ] ;
-    owl:sameAs <http://example.com/LL/senchas_síl_ébir.trig#FhiachachLabrainne>.
-```
+The alternate form of the blank node is used where convenient.
 
 ## Population Groups
 
@@ -157,14 +145,15 @@ which is constructed using the same principles as for a person, as
 above.  For instance:
 
 ```turtle
-<#Coscrach>
+<Coscrach>
     a foaf:Person;
     irishRel:nomName "Coscrach";
-    rel:childOf <#Lorcan>;
+	agrelon:hasParent <Lorcan>;
+    rel:childOf <Lorcan>;
     irishRel:numChild 12 ;
-    irishRel:ancestorOfGroup <#ClandCosraig>.
+    irishRel:ancestorOfGroup <ClandCosraig>.
 
-<#ClandCosraig>
+<ClandCosraig>
     a irishRel:PopulationGroup ;
     irishRel:PopulationGroup "Cland Cosraig" .
 ```
@@ -178,28 +167,20 @@ relevant non-structured information to capture the context of an
 entry.  For instance,
 
 ```turtle
-<#Lachtna-32e54830>
+#Lachtna-32e54830>
     a foaf:Person;
     irishRel:nomName "Lachtna";
+	agrelon:hasParent <#Cennétig>;
     rel:childOf <#Cennétig>;
     irishRel:numChild 0;
     rdfs:comment "is é ro gab ríge dar éis Cennetig. Unde dicitur Grianan Lactnai i Creicc Léith...".
 ```
 
-# Irish Narr
-
-There is a supplemental database named [Irish
-Narr](https://github.com/cyocum/irish-narr) which contains some
-geneaological information which is extracted from early Irish
-narrative sources.  This is sometimes useful for explicating some of
-the information in the genealogies and thus can be added to a
-triplestore to enhance IrishGen with narrative source information.
-
 # Utilities
 
-There are several utility Perl and Python scripts which ease the
-creation and curation of the database.  Look in the `utils` directory
-for more information.
+There are several utility Perl scripts which ease the creation and
+curation of the database.  Look in the `utils` directory for more
+information.
 
 # Blog
 
