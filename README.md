@@ -46,13 +46,13 @@ instances is added.  For example,
     a foaf:Person;
     irishRel:genName "Cind Fhaelad";
     irishRel:nomName "Cenn Faelad";
-    rel:childOf <#Airnelaig>.
+    rel:childOf <Airnelaig>.
 
 <CindFhaelad-6e827350>
     a foaf:Person;
     irishRel:genName "Cind Fhaelad";
     irishRel:nomName "Cenn Faelad";
-    rel:childOf <#Gairb>.
+    rel:childOf <Gairb>.
 ```
 
 At the present moment, all URLs are prefixed with `http://example.com`
@@ -131,8 +131,8 @@ uses a `_:missing` plus a UUID fragment like above. For instance,
 _:missing-04015614
     a foaf:Person ;
     foaf:gender "female" ;
-	agrelon:hasChild <Conmáel>, <h-Ér>, <Orbba>, <Ferón>, <#ergna>;
-    rel:parentOf <Conmáel>, <h-Ér>, <Orbba>, <Ferón>, <#ergna>;
+	agrelon:hasChild <Conmáel>, <h-Ér>, <Orbba>, <Ferón>, </Fergna>;
+    rel:parentOf <Conmáel>, <h-Ér>, <Orbba>, <Ferón>, </Fergna>;
 	agrelon:hasParent <Militis>;
     rel:childOf <Militis>;
 	agrelon:hasSibling <Díl>;
@@ -171,11 +171,11 @@ relevant non-structured information to capture the context of an
 entry.  For instance,
 
 ```turtle
-#Lachtna-32e54830>
+<Lachtna-32e54830>
     a foaf:Person;
     irishRel:nomName "Lachtna";
-	agrelon:hasParent <#Cennétig>;
-    rel:childOf <#Cennétig>;
+	agrelon:hasParent <Cennétig>;
+    rel:childOf <Cennétig>;
     irishRel:numChild 0;
     rdfs:comment "is é ro gab ríge dar éis Cennetig. Unde dicitur Grianan Lactnai i Creicc Léith...".
 ```
