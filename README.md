@@ -58,7 +58,11 @@ instances is added.  For example,
 At the present moment, all URLs are prefixed with `http://example.com`
 because a permanent URL has not been purchased at this time.  For
 example, a full URL for `<CindFhaelad-6e827350>` would be
-`http://example.com/LL/ceniuil_lugdach/CindFhaelad-6e827350`.
+`http://example.com/LL/ceniuil_lugdach/CindFhaelad-6e827350`.  This
+URL can be read thus: `<slug>/<manuscript>/<item>/<individual>`.
+There are a few permutations of this in the database but the structure
+should be similar enough for most users who are familiar with the
+source texts to understand the structure.
 
 ## Named Graph (RDF Dataset)
 
